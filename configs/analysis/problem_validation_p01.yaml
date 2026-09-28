@@ -1,0 +1,24 @@
+# P0.0/P0.1 analysis protocol. Kept separate from formal NC/LP configs.
+analysis:
+  datasets: [Movies, Toys, Grocery, ele-fashion, Reddit-S]
+  run_seeds: [42, 43, 44]
+  data_split_seed: 42
+  probe_split_seed: 42
+  probe_train_fraction: 0.8
+  probe_calib_fraction: 0.2
+  hidden_dim: 128
+  dropout: 0.2
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 300
+  patience: 30
+  min_epoch: 30
+  min_delta: 0.0001
+  gradient_clip: 1.0
+  max_targets: 10000
+  max_incoming_edges_per_target: 64
+  analysis_sampling_seed: 42
+  edge_sampling_seed: 42
+  bootstrap_replicates: 1000
+  bootstrap_seed: 42
+  test_set_evaluated: false
