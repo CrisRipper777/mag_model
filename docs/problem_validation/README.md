@@ -4,7 +4,7 @@ This analysis tests the limited hypothesis that semantic similarity is not an ad
 
 ## Protocol
 
-The fixed NC datasets are Movies, Toys, Grocery, ele-fashion, and Reddit-S. MAGB data are always loaded with split seed 42; ele-fashion uses its official split. A stratified 80/20 `probe_train` / `probe_calib` split is made once inside original `train_idx` with seed 42 and cached under `outputs/problem_validation/splits/`. Model initialization, dropout, and optimizer randomness use run seeds 42, 43, and 44. One runner invocation processes the requested seeds together for each dataset; the seeds remain independent model fits and each has its own output directory.
+The fixed NC datasets are Movies, Toys, Grocery, ele-fashion, and Reddit-S. MAGB data are always loaded with split seed 42; ele-fashion uses its official split. A stratified 80/20 `probe_train` / `probe_calib` split is made once inside original `train_idx` with seed 42 and cached under `outputs/problem_validation/splits/`. Model initialization, dropout, and optimizer randomness use run seeds 42, 43, and 44. Run the experiment once with all three seeds in the same runner invocation (`--seeds 42 43 44`); this is one run containing three independent seeded model fits, each with its own output directory, rather than three one-seed runner invocations.
 
 P0.0 uses independent Text and Visual `Linear → LayerNorm → GELU → Dropout(0.2)` projectors to 128 dimensions, concatenates the two outputs, and applies one linear classifier. It uses AdamW (lr 1e-3, weight decay 1e-4), cross-entropy, gradient clipping at 1.0, at most 300 epochs, and calibration-accuracy early stopping (patience 30, minimum epoch 30, minimum improvement 1e-4). Original validation metrics are computed only after the checkpoint is frozen and are marked `heldout_analysis_val`.
 
@@ -41,4 +41,4 @@ python scripts/summarize_problem_validation_p01.py
 
 ## Outputs
 
-Raw run artifacts are under `outputs/problem_validation/<dataset>/seed<seed>/`. Probe split caches are under `outputs/problem_validation/splits/`. Aggregate CSVs, figures, and the generated report are under `outputs/problem_validation/summaries/` and `docs/problem_validation/p0_p1_report.md`. Run artifacts stay ignored by Git.
+The tracked result bundle is under `results/problem_validation/`: it contains aggregate CSVs, all per-seed metrics JSON files, the split audit, diagnostic figures, and a self-contained report. The report and figure links are also maintained in `docs/problem_validation/p0_p1_report.md`. Raw tensor run artifacts are under `outputs/problem_validation/<dataset>/seed<seed>/`; probe split caches are under `outputs/problem_validation/splits/`. These large intermediates stay ignored by Git. After regenerating outputs, refresh the tracked result bundle before publishing updated results.

@@ -392,7 +392,8 @@ def generate_report(
         "", "## Diagnostic Figures", "",
     ])
     for path in plot_paths:
-        lines.append(f"- `{path.relative_to(ROOT)}`")
+        rel = f"../../results/problem_validation/plots/{path.name}"
+        lines.append(f"- [{path.name}]({rel})")
     lines.append("")
     report_path = ROOT / "docs/problem_validation/p0_p1_report.md"
     report_path.parent.mkdir(parents=True, exist_ok=True)
