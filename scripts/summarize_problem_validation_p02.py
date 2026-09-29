@@ -98,9 +98,9 @@ def _collect(config: dict[str, Any]) -> dict[str, Any]:
                     "p01_uniform_probe_val_acc": p01_val.get("acc"),
                     "p01_uniform_probe_val_macro_f1": p01_val.get("macro_f1"),
                     "p01_uniform_probe_val_ce": p01_val.get("ce"),
-                    "p02_minus_p01_val_acc": float(val["acc"] - p01_val["acc"]) if p01_val else None,
-                    "p02_minus_p01_val_macro_f1": float(val["macro_f1"] - p01_val["macro_f1"]) if p01_val else None,
-                    "p02_minus_p01_val_ce": float(val["ce"] - p01_val["ce"]) if p01_val else None,
+                    "p02_minus_p01_val_acc": float(val["acc"] - p01_val["acc"]) if p01_val and p01_val.get("acc") is not None else None,
+                    "p02_minus_p01_val_macro_f1": float(val["macro_f1"] - p01_val["macro_f1"]) if p01_val and p01_val.get("macro_f1") is not None else None,
+                    "p02_minus_p01_val_ce": float(val["ce"] - p01_val["ce"]) if p01_val and p01_val.get("ce") is not None else None,
                     "best_epoch": int(metrics["best_epoch"]),
                     "probe_train_acc": train["acc"],
                     "probe_train_macro_f1": train["macro_f1"],
@@ -373,11 +373,11 @@ def _generate_report(config: dict[str, Any], data: dict[str, Any], coverage: dic
                 params = rows[0]["total_trainable_parameter_count"]
                 lines.append(f"| {ds} | {variant} | {pair('heldout_original_val_acc')} | {pair('heldout_original_val_macro_f1')} | {pair('heldout_original_val_ce')} | {params:,} |")
 
-    lines += ["", "V0 is structurally the P0.1 uniform one-hop mean with a newly fitted classifier. The following paired differences provide the requested smoke/pilot alignment check; only original-val values are compared.", "", "| Dataset | P0.2 V0 − P0.1 Acc | Macro-F1 | CE |", "|---|---:|---:|---:|"]
+    lines += ["", "V0 is structurally the P0.1 uniform one-hop mean with a newly fitted classifier. The following paired differences provide the smoke/pilot alignment check on the original-val Acc and Macro-F1 fields saved by P0.1 (P0.1 did not save CE in that metrics block).", "", "| Dataset | P0.2 V0 − P0.1 Acc | Macro-F1 |", "|---|---:|---:|"]
     for ds in datasets:
         rows = [r for r in data["immediate"] if r["dataset"] == ds and r["variant"] == "uniform" and r["p02_minus_p01_val_acc"] is not None]
         if rows:
-            cells = [_fmt(*_mean_sd([r[key] for r in rows])) for key in ("p02_minus_p01_val_acc", "p02_minus_p01_val_macro_f1", "p02_minus_p01_val_ce")]
+            cells = [_fmt(*_mean_sd([r[key] for r in rows])) for key in ("p02_minus_p01_val_acc", "p02_minus_p01_val_macro_f1")]
             lines.append(f"| {ds} | " + " | ".join(cells) + " |")
 
     pairs = _pairwise_rows(data)
