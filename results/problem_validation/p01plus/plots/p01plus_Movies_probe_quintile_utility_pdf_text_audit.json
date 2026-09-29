@@ -1,0 +1,10 @@
+{
+  "pdf": "results/problem_validation/p01plus/plots/p01plus_Movies_probe_quintile_utility.pdf",
+  "auditable": true,
+  "minimum_required_pt": 5.0,
+  "minimum_found_pt": 6.7,
+  "text_run_count": 29,
+  "below_minimum_count": 0,
+  "below_minimum": [],
+  "warnings": []
+}
