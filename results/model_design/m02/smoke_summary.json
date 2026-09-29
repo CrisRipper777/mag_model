@@ -1,0 +1,11 @@
+{
+  "dataset": "Movies",
+  "seed": 42,
+  "checkpoint": "outputs/model_design/m02/smoke/checkpoints/Movies_seed42.pt",
+  "finite_diagnostics": true,
+  "context_off": {
+    "acc": 0.3302339532093581,
+    "macro_f1": 0.027622289729488735
+  },
+  "peak_gpu_process_memory_mb": 9430
+}

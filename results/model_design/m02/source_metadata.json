@@ -1,0 +1,33 @@
+{
+  "source_branch": "exp/relation_transport_m0",
+  "source_sha": "749d1b4f20c13886a308cddb4770e1e25a865ffd",
+  "new_branch": "exp/contextual_relation_m02",
+  "working_tree_status_before_branch_creation": "clean",
+  "m01_model_sha256_before_work": "951572639c77205c04bc481c8aadfb6bc25031b138ed9f52575ed0922a229045",
+  "required_orthogonal_checkpoints": [
+    {
+      "path": "outputs/model_design/m0/checkpoints/Movies_orthogonal_transport_seed42.pt",
+      "exists": true
+    },
+    {
+      "path": "outputs/model_design/m0/checkpoints/Movies_orthogonal_transport_seed43.pt",
+      "exists": true
+    },
+    {
+      "path": "outputs/model_design/m0/checkpoints/Movies_orthogonal_transport_seed44.pt",
+      "exists": true
+    },
+    {
+      "path": "outputs/model_design/m0/checkpoints/Grocery_orthogonal_transport_seed42.pt",
+      "exists": true
+    },
+    {
+      "path": "outputs/model_design/m0/checkpoints/Grocery_orthogonal_transport_seed43.pt",
+      "exists": true
+    },
+    {
+      "path": "outputs/model_design/m0/checkpoints/Grocery_orthogonal_transport_seed44.pt",
+      "exists": true
+    }
+  ]
+}

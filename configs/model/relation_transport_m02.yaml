@@ -1,0 +1,26 @@
+name: relation_transport_m02
+
+hidden_dim: 128
+relation_dim: 64
+max_order: 3
+
+dropout: 0.2
+relation_dropout: 0.1
+
+transport_mode: orthogonal
+transport_group_dim: 8
+transport_sweeps: 2
+transport_max_angle: 1.57079632679
+
+response_hidden_dim: 64
+
+compatibility_scale: 2.0
+anchor_beta: 0.1
+
+aggregation: pna
+readout: gpr
+
+relation_context: true
+context_residual_scale: 0.5
+
+edge_chunk_size: 65536
