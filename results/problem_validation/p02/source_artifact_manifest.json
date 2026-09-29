@@ -1,0 +1,518 @@
+{
+  "source_branch": "exp/problem_validation_p01plus",
+  "source_sha": "f7d68272038e5d866075e91d81707ac42e6a2a17",
+  "analysis_branch": "exp/problem_validation_p02",
+  "initial_sha": "f7d68272038e5d866075e91d81707ac42e6a2a17",
+  "all_frozen_sources_verified_before_training": true,
+  "test_metrics_or_labels_accessed": false,
+  "datasets": {
+    "Movies": {
+      "split_cache_path": "outputs/problem_validation/splits/Movies.pt",
+      "split_cache_sha256": "66edc126e91f748421670a260db5bb4956e6179be56275d75c6b63da461e8a12",
+      "source_split_hashes": {
+        "original_train_sha256": "260d595d024da09e8a1b6180c1a28ec4dc1991bace34dcc4c880813da14746e1",
+        "original_val_sha256": "c875f204548401feffe16b7ef2b8dbe40ef6c2e45b15abbbc2cea7d8fa078c75"
+      },
+      "probe_train_sha256": "7d63d6ea023431b0e3b194396ffe9293970f5792edba8b14eff3bee07e239d34",
+      "probe_calib_sha256": "361b1f59e044f8204f089b8a243ff3f0d9cefcc8f967b8ee8d18086913412374",
+      "original_val_sha256": "c875f204548401feffe16b7ef2b8dbe40ef6c2e45b15abbbc2cea7d8fa078c75",
+      "original_test_index_sha256": "f9807e3c375b4711ef3d1ed6bef06ba0632320b50eba71f8cb760e24efb6c31f",
+      "split_audit": {
+        "probe_train_size": 8002,
+        "probe_calib_size": 2001,
+        "original_train_size": 10003,
+        "original_val_size": 3334,
+        "original_test_index_count": 3335,
+        "probe_train_calib_overlap": 0,
+        "probe_train_original_val_overlap": 0,
+        "probe_calib_original_val_overlap": 0,
+        "train_val_test_index_overlap": 0
+      },
+      "physical_graph_num_nodes": 16672,
+      "physical_graph_directed_edge_count": 160802,
+      "physical_graph_edge_sha256": "447756b8bb9fcf4a701885b86322d9ba01a58644786d4bc05f674a8fc46f8cb2",
+      "sampled_relation_count": 30552,
+      "seeds": {
+        "42": {
+          "frozen_embedding_path": "outputs/problem_validation/Movies/seed42/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "e549fdf478998c15e3206be51635a57f924c194ec72705872aee6116d3804ef4",
+          "h_text_sha256": "257c63e0fe7e965f408d057c9735611327f26b412ff31ec317ebc3642d4f293b",
+          "h_visual_sha256": "be989b9ddfe2edc0da6cb0e10be06fb482b21bc218e9cf00c54a426057361652",
+          "run_seed_metadata": 42,
+          "h_text_shape": [
+            16672,
+            128
+          ],
+          "h_visual_shape": [
+            16672,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Movies/seed42/edge_analysis.pt",
+          "p01_reference_sha256": "224d51e022c2dc1b80aba287a32ab455e78c8d45666f58e9bab9889e9e8c47cf",
+          "ordered_population_sha256": "7b899a6421f643d7078f1aa8999094bd077767af09cf68071c805242cae60788",
+          "p01_metrics_sha256": "57899816a21c6e8a5b9ab8385c5c16899109f38a63f0ade3175ca014a8c81436",
+          "p00_metrics_sha256": "635c5eee62bae5173358ebe8b404e189f69372b2c00dd19220e851daf0821778",
+          "p00_checkpoint_sha256": "bc066b242cd7eaca98968be289a222a12df5a5c16de21c238a64d434e1c7fa18",
+          "p01_population_count": 30552,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        },
+        "43": {
+          "frozen_embedding_path": "outputs/problem_validation/Movies/seed43/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "e3079dc074d034e1d32e109c52bb217c48319ca46862a131b9820b314097cd51",
+          "h_text_sha256": "fd448ddb41587710265782522e39633c1b73f7f0a0297b1e6e039d6ae6eacbd8",
+          "h_visual_sha256": "d99fde6812c5bb3a068b485d601678dd12a4922c8ca073559d66979f5ad26289",
+          "run_seed_metadata": 43,
+          "h_text_shape": [
+            16672,
+            128
+          ],
+          "h_visual_shape": [
+            16672,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Movies/seed43/edge_analysis.pt",
+          "p01_reference_sha256": "e8cc1935c443297c63f1356430162718d469d60c813a39606f2fb1c96c021216",
+          "ordered_population_sha256": "7b899a6421f643d7078f1aa8999094bd077767af09cf68071c805242cae60788",
+          "p01_metrics_sha256": "d8239f810252bfbcdd53f3504e6ac6a2b082dbdd8c13556609edce3826dbc474",
+          "p00_metrics_sha256": "8a082a250b10b92f981d554b1d0a08d03d9622502191f1845396ea295eaef098",
+          "p00_checkpoint_sha256": "bb6a100acc6230e9e5a45fa52aa21d84cab9949baffe889e8c8f75b404fe709d",
+          "p01_population_count": 30552,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        },
+        "44": {
+          "frozen_embedding_path": "outputs/problem_validation/Movies/seed44/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "f8a9225108a2b49bbf51c02b74d85a719a74be0b8eeea7f687bfa7e107a9c74f",
+          "h_text_sha256": "58337ee5b4748f567a7d39814865ed17990a2e97a242fd0bf7047618373c335f",
+          "h_visual_sha256": "10e1d685b404e3f938041136be3a00a4907e862e3c106816a99b97cbe188430c",
+          "run_seed_metadata": 44,
+          "h_text_shape": [
+            16672,
+            128
+          ],
+          "h_visual_shape": [
+            16672,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Movies/seed44/edge_analysis.pt",
+          "p01_reference_sha256": "db11da82739a631ae82ba33d53e107141df50f23c2d706c77ca75ac17c9e9a6d",
+          "ordered_population_sha256": "7b899a6421f643d7078f1aa8999094bd077767af09cf68071c805242cae60788",
+          "p01_metrics_sha256": "a5ac75c3a5839910b30bf0aa8d971e34cb6e0b06662077cf1b8978299474932e",
+          "p00_metrics_sha256": "7969a072333a767e53964faed1be2492383c5365c5c5cdf36c63f2d13e110dab",
+          "p00_checkpoint_sha256": "7c594efa8208f4a54ac0444c315544717d86918ff97cc59fc05a1039f1000847",
+          "p01_population_count": 30552,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        }
+      }
+    },
+    "Toys": {
+      "split_cache_path": "outputs/problem_validation/splits/Toys.pt",
+      "split_cache_sha256": "2e548eac7bdc32b86db0b2dea86b0e1c4462d6be2d2892238e64c503f9824917",
+      "source_split_hashes": {
+        "original_train_sha256": "ff1198e6115713fe8b446d9017194d52874bf81a9a76a758b8f3f0e456b98139",
+        "original_val_sha256": "4db652625621d8f9c2f6f73ce4dad95b8c482665d55a8d81d7573a2f88a0bdbc"
+      },
+      "probe_train_sha256": "3c9200125215c82922b191f09dc1901fddda59cd728eb57456a20b379f4295f9",
+      "probe_calib_sha256": "1d8282badf1cc8fb5652db25397f9aef49882b4cd39fcea3220450c7cbe8c191",
+      "original_val_sha256": "4db652625621d8f9c2f6f73ce4dad95b8c482665d55a8d81d7573a2f88a0bdbc",
+      "original_test_index_sha256": "e236a71435604c5c06086a20fb2e4c7af4f07ae0ee1e7c5718cbebbb7e3dc255",
+      "split_audit": {
+        "probe_train_size": 9933,
+        "probe_calib_size": 2484,
+        "original_train_size": 12417,
+        "original_val_size": 4139,
+        "original_test_index_count": 4139,
+        "probe_train_calib_overlap": 0,
+        "probe_train_original_val_overlap": 0,
+        "probe_calib_original_val_overlap": 0,
+        "train_val_test_index_overlap": 0
+      },
+      "physical_graph_num_nodes": 20695,
+      "physical_graph_directed_edge_count": 113402,
+      "physical_graph_edge_sha256": "1a0d63df7dc694c151d44f961ebcf9faab4ef07b2fd5f5b092333aea446afd0b",
+      "sampled_relation_count": 22528,
+      "seeds": {
+        "42": {
+          "frozen_embedding_path": "outputs/problem_validation/Toys/seed42/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "b5bf451cefcbcfcbc486d4f69fd8a0b806161cedafb7d36b58340ad4d0654d76",
+          "h_text_sha256": "648920417b18258733ed5738820b24d2f5533cea09e987d92d7007ba27dcc448",
+          "h_visual_sha256": "3a75bcbcd2b1c9018b479896f643f7dbefb5985e00256b1e47d5e01bf4a14c44",
+          "run_seed_metadata": 42,
+          "h_text_shape": [
+            20695,
+            128
+          ],
+          "h_visual_shape": [
+            20695,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Toys/seed42/edge_analysis.pt",
+          "p01_reference_sha256": "9312cd589fb5b075b1ecbe6baa34a71b638854363fe842a18f66ddc137991f23",
+          "ordered_population_sha256": "0b2f6cf6171185a0d9318a86080095e48ad3fb55f822b7e8eac213ad19bbf26f",
+          "p01_metrics_sha256": "e1572d145dfdb672324e53661880e7ca92975828c8445b422a1da6625d40fa0e",
+          "p00_metrics_sha256": "e987ccac348c3b9f3656f3aae25e9bd8f0bdc7d67ed16af840abe1fce7a2b58b",
+          "p00_checkpoint_sha256": "3bc9749d42280856100d131cebca7738183d06b817b7a15c0cd5237d2953a28b",
+          "p01_population_count": 22528,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        },
+        "43": {
+          "frozen_embedding_path": "outputs/problem_validation/Toys/seed43/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "510022ab6357155f45a79c894f69ec0f172829ea97f561f8dc78a5795e0e6e9c",
+          "h_text_sha256": "fb37809c45b747608eb8d5f2d502bef8d8059eda9b823b96715833b1c5c4f335",
+          "h_visual_sha256": "468f95259347880ad6ccc878e087b40d2b2d68e247b74c5fbe6be64eedc4e74e",
+          "run_seed_metadata": 43,
+          "h_text_shape": [
+            20695,
+            128
+          ],
+          "h_visual_shape": [
+            20695,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Toys/seed43/edge_analysis.pt",
+          "p01_reference_sha256": "c89a5b4f338fb17af72ea56cb9dc30a4138d0df664002b3ae87e62564d661f70",
+          "ordered_population_sha256": "0b2f6cf6171185a0d9318a86080095e48ad3fb55f822b7e8eac213ad19bbf26f",
+          "p01_metrics_sha256": "eb3f31b060eeefcd513c3f55e00dda4f7d1ff6e115155e7a6609deb1f96554d7",
+          "p00_metrics_sha256": "5be19441f0ee7317d0c39ec47e06ca3347ab651698d74df693d64dbae920ff9b",
+          "p00_checkpoint_sha256": "1d7cdaf074dea27821092705b4a12b6a41cfa39dd4d0494d4adc7187d576ce7f",
+          "p01_population_count": 22528,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        },
+        "44": {
+          "frozen_embedding_path": "outputs/problem_validation/Toys/seed44/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "dff1ae0e31c6f8c91d54c31536c8dc54061e236f3be8437e04eefec62025786f",
+          "h_text_sha256": "434fe478c43326d639bc812ab7e9a2cde832f9597709805a43237364ced62ec0",
+          "h_visual_sha256": "e5cd30eab3f02d653aef7ff1c6bdc7fe79996ad69b369cf92c156694bc7b7e4c",
+          "run_seed_metadata": 44,
+          "h_text_shape": [
+            20695,
+            128
+          ],
+          "h_visual_shape": [
+            20695,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Toys/seed44/edge_analysis.pt",
+          "p01_reference_sha256": "3f593f203a9e17ce27d3baa5f0852e4153d44bfc09e9279aa392f205e6aa3c8a",
+          "ordered_population_sha256": "0b2f6cf6171185a0d9318a86080095e48ad3fb55f822b7e8eac213ad19bbf26f",
+          "p01_metrics_sha256": "f79084f8978e5626b9da09051b63ed9fca15a4d81ce5940a0ab252495ec02024",
+          "p00_metrics_sha256": "37206e6b54f7a372f8f57183649b60e90acde3c9cfcecc9dbd29c46f761d1e82",
+          "p00_checkpoint_sha256": "0dc981e8bd66c8acf459af7a23cdcb4d2b1e81e3548d7e81b9120c51cbeb60dc",
+          "p01_population_count": 22528,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        }
+      }
+    },
+    "Grocery": {
+      "split_cache_path": "outputs/problem_validation/splits/Grocery.pt",
+      "split_cache_sha256": "799e907928cd93ced7fd035f4e1d2798e9abb17592cee229f446ca03900f9594",
+      "source_split_hashes": {
+        "original_train_sha256": "78a7ffae928464c7ea90fc9e25f97c5ab26bab855121a5cbf5aedd47cb7bda78",
+        "original_val_sha256": "cb95fb79d273739e1e38037edddc536481294c23c471ae26987851ae38966d22"
+      },
+      "probe_train_sha256": "86e31844eff01ba5b5212a4080c32f8f1d7c2aeae2b9c4df05a4ab8547a69ac4",
+      "probe_calib_sha256": "5db45852bd93c0e429b46a5e7d25bd67ed730964b413ffae46e56b0eaac515df",
+      "original_val_sha256": "cb95fb79d273739e1e38037edddc536481294c23c471ae26987851ae38966d22",
+      "original_test_index_sha256": "f5f08ee0f35624bda3533f53ef6950707b7c3208ef2c0dc236bf11859a4f80cb",
+      "split_audit": {
+        "probe_train_size": 8195,
+        "probe_calib_size": 2049,
+        "original_train_size": 10244,
+        "original_val_size": 3415,
+        "original_test_index_count": 3415,
+        "probe_train_calib_overlap": 0,
+        "probe_train_original_val_overlap": 0,
+        "probe_calib_original_val_overlap": 0,
+        "train_val_test_index_overlap": 0
+      },
+      "physical_graph_num_nodes": 17074,
+      "physical_graph_directed_edge_count": 142262,
+      "physical_graph_edge_sha256": "0bca303020f1006497ec0148f1fc3d69eab32d6a16006afc9a469ce5f6c5405a",
+      "sampled_relation_count": 26053,
+      "seeds": {
+        "42": {
+          "frozen_embedding_path": "outputs/problem_validation/Grocery/seed42/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "5fa8a176c080b08cb1bc2a1fb811d6cad17a2f26c456810989c704fccb237767",
+          "h_text_sha256": "b35f5f93b47ebf857adff435c362c0ec9a41cf6e921c9cdb6506c80047d519c4",
+          "h_visual_sha256": "5bf12d819e7399c5924e4733ab4026c16be296d7cd1c1925db5dccdb039c333e",
+          "run_seed_metadata": 42,
+          "h_text_shape": [
+            17074,
+            128
+          ],
+          "h_visual_shape": [
+            17074,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Grocery/seed42/edge_analysis.pt",
+          "p01_reference_sha256": "c84ed3d7efc74b4b2a78f8c7c875ac616be0e24a9a45abe00e41fb88454f537a",
+          "ordered_population_sha256": "17eea6a70cb12cd1f34b411e7eeafc583fba74fae2cabea3973e23e6758665f8",
+          "p01_metrics_sha256": "d3962d3238db71c5c4f4f2b2fa2f50c51ec5ef14679149285a5d2c805eec5e38",
+          "p00_metrics_sha256": "c11f06183eef4075c31ee05a7fe21aae759342903acb64eb2322da5271ce0f10",
+          "p00_checkpoint_sha256": "cdf83a3b54172b1e96be3d641690db9183c5d85210e49d49e7e48689a69d13e9",
+          "p01_population_count": 26053,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        },
+        "43": {
+          "frozen_embedding_path": "outputs/problem_validation/Grocery/seed43/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "53306063985481422cd7f80b57e2e30540d2b96e032328016ae07fb817b42c4d",
+          "h_text_sha256": "5f4d7eea55870220fdcfcf162ecdc07ce3dfb439d8c33fff5858142b2f91136b",
+          "h_visual_sha256": "0f9322bd770b9cef39c2c25d3a136c62c8649cd56f53c55c13796d521c959a9e",
+          "run_seed_metadata": 43,
+          "h_text_shape": [
+            17074,
+            128
+          ],
+          "h_visual_shape": [
+            17074,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Grocery/seed43/edge_analysis.pt",
+          "p01_reference_sha256": "ac3556fc15de8801a5063b70470023bb0e28fe04b7281ed94c27f943dae9b3c8",
+          "ordered_population_sha256": "17eea6a70cb12cd1f34b411e7eeafc583fba74fae2cabea3973e23e6758665f8",
+          "p01_metrics_sha256": "89e4b607e33ef48e271fdb166d7d82d17253dfd8096ee2c3f71f8d8f44fa38f6",
+          "p00_metrics_sha256": "6c8c216bb97b10e573acaf9ab2ae183f753280515f314a4975c19c621d435729",
+          "p00_checkpoint_sha256": "9cc2f7ef5d100ef89e3a9f35403be12a8f3024757df6913126bf9de15ecd5da4",
+          "p01_population_count": 26053,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        },
+        "44": {
+          "frozen_embedding_path": "outputs/problem_validation/Grocery/seed44/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "69187d75d29a77aeae05791e20d5f775213cba2d5a42b28fa1b0233f9755b498",
+          "h_text_sha256": "7820ac37e1f0eb39590f0f7a1c768851cf558973c649ba58871e5f30c5400440",
+          "h_visual_sha256": "6e7ef7985fdf9749292776475b5caea8abf4c7cdbd76f15c5a87476ad2d460b6",
+          "run_seed_metadata": 44,
+          "h_text_shape": [
+            17074,
+            128
+          ],
+          "h_visual_shape": [
+            17074,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Grocery/seed44/edge_analysis.pt",
+          "p01_reference_sha256": "994fe00dbe1a09fc3d4cd92355a21bb053666bef63389ffbce6e59d61adf0f91",
+          "ordered_population_sha256": "17eea6a70cb12cd1f34b411e7eeafc583fba74fae2cabea3973e23e6758665f8",
+          "p01_metrics_sha256": "1db07b6c04ead0e6fd0ca2ed2843413efebc291f1df2d7c532fe2f3f765cbead",
+          "p00_metrics_sha256": "c4ef479a494c5186da8299dc9bbc08702ebd961f70cd55f1432d6bd890ddfd43",
+          "p00_checkpoint_sha256": "e6f605af0c812be61a1c5cb6b2f4b33663f7a13ccb7955718960fd8d3d5cf1e6",
+          "p01_population_count": 26053,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        }
+      }
+    },
+    "ele-fashion": {
+      "split_cache_path": "outputs/problem_validation/splits/ele-fashion.pt",
+      "split_cache_sha256": "113398490b54b3366f0846d736d7320c626d7447a971d58d92f424c7f8a846aa",
+      "source_split_hashes": {
+        "original_train_sha256": "bc06e13e693cd7d16dd55525414382892ba765024d325351a51c185e972aa203",
+        "original_val_sha256": "7c9bfbddeae578e645f237fbcbe2ed3510fc06754dcff2519e233f38e60a1a35"
+      },
+      "probe_train_sha256": "f23c0f1881408aebf0aa18414ed4e9eca76685fab92d223641f214589fe60d1e",
+      "probe_calib_sha256": "974a9bbe93cce354a79977cd2ec33b52df77d6db9e320e773172c980969042d5",
+      "original_val_sha256": "7c9bfbddeae578e645f237fbcbe2ed3510fc06754dcff2519e233f38e60a1a35",
+      "original_test_index_sha256": "0688cc9d334662725abc0f12b4309c8561978304103dc7298b4794aad9024b48",
+      "split_audit": {
+        "probe_train_size": 46927,
+        "probe_calib_size": 11732,
+        "original_train_size": 58659,
+        "original_val_size": 9777,
+        "original_test_index_count": 29330,
+        "probe_train_calib_overlap": 0,
+        "probe_train_original_val_overlap": 0,
+        "probe_calib_original_val_overlap": 0,
+        "train_val_test_index_overlap": 0
+      },
+      "physical_graph_num_nodes": 97766,
+      "physical_graph_directed_edge_count": 399172,
+      "physical_graph_edge_sha256": "b29f1534c4ab2da983d42e32784eba2d05ce9bc5cdca23c4262bd32c6be7ebe3",
+      "sampled_relation_count": 37264,
+      "seeds": {
+        "42": {
+          "frozen_embedding_path": "outputs/problem_validation/ele-fashion/seed42/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "28f1f6a981c069416501e433129b3b2bed2bddf41fabeb5448ca8366f00f6e78",
+          "h_text_sha256": "ec31b88387d05d14e929b924af72dad80f521245d995b96e26f7364d31b4787b",
+          "h_visual_sha256": "e9dc9c8136155b11c2099517503370dbbe1187cb96227b5b93815ec60f203071",
+          "run_seed_metadata": 42,
+          "h_text_shape": [
+            97766,
+            128
+          ],
+          "h_visual_shape": [
+            97766,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/ele-fashion/seed42/edge_analysis.pt",
+          "p01_reference_sha256": "bed121de059aa650e8ecb0aa4f0e5cf3b5bc73dd1087d2be83aba48e0b04608c",
+          "ordered_population_sha256": "409afe7c169d8f1b537646c517c9ee8ee452981287f3a546ab07f2d908d94e08",
+          "p01_metrics_sha256": "ac9928da252ad3a94ab7cb666f62d26f4c34d34b7adcac6cadfdfe9974b0c183",
+          "p00_metrics_sha256": "b0091f352724fa52d5ddac06f0f14313c906feda513d9140c313e6318bda2fcd",
+          "p00_checkpoint_sha256": "0e985134ef7128919c3b914b3424c49703594136a35939792263360dd4429c84",
+          "p01_population_count": 37264,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        },
+        "43": {
+          "frozen_embedding_path": "outputs/problem_validation/ele-fashion/seed43/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "f9887af0f73b8cb800bc2669fdffe467184d29e8d3aa9fcb2a0b59f82e5702a5",
+          "h_text_sha256": "19cfb858c4b76a034fe68718988037db3c4053a9e0cd56805015a646701db4ac",
+          "h_visual_sha256": "4badb314a0253f04fd3b4acc4e7a97d1cd448b0537abbc23e9b49c646938f0c7",
+          "run_seed_metadata": 43,
+          "h_text_shape": [
+            97766,
+            128
+          ],
+          "h_visual_shape": [
+            97766,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/ele-fashion/seed43/edge_analysis.pt",
+          "p01_reference_sha256": "24b03345a636ce8d69e1ced928cb83c18a9ce7d443c807a9621394e8d446df58",
+          "ordered_population_sha256": "409afe7c169d8f1b537646c517c9ee8ee452981287f3a546ab07f2d908d94e08",
+          "p01_metrics_sha256": "fa05e6d612100b3382a08b91a65e95eb0e8a06bc26a7407848eb778c76e46768",
+          "p00_metrics_sha256": "fbaa557f9908da7daae3229a4cb8c0371e6f6bdcb00811ecc7464f484499f8ee",
+          "p00_checkpoint_sha256": "2ce5b6e40ea55dfff6c8d9aedc3b35a296809538adb3d425ca5d5401626b8253",
+          "p01_population_count": 37264,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        },
+        "44": {
+          "frozen_embedding_path": "outputs/problem_validation/ele-fashion/seed44/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "7718d20dee73b7322469bd3b3a886cfcecf7b6076b445be311125716c244af30",
+          "h_text_sha256": "e39f0ec97ddb01b76be41d950932aeadff750672e3d1548d307a08483fd8921a",
+          "h_visual_sha256": "77d44b27124d347db64fd8cae9d09c0691cee2947d225fc650c9f8c245801e9f",
+          "run_seed_metadata": 44,
+          "h_text_shape": [
+            97766,
+            128
+          ],
+          "h_visual_shape": [
+            97766,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/ele-fashion/seed44/edge_analysis.pt",
+          "p01_reference_sha256": "35535d3dad0b4bb591ca3a022550179d657d0b70282ff08aa1907de7489d0d29",
+          "ordered_population_sha256": "409afe7c169d8f1b537646c517c9ee8ee452981287f3a546ab07f2d908d94e08",
+          "p01_metrics_sha256": "b90a6ed17ea97598856f058d21a3175f0eeb91ae8c140f793e380d2830209d94",
+          "p00_metrics_sha256": "de1253c079fe9382476daf63c4ab046e20267cc8791d8ace17e9cf2eded0dffe",
+          "p00_checkpoint_sha256": "ef96a51a59e153e62ad3642bb9acfa9dfa0cc4838ed2b41d388bdff314dc5b04",
+          "p01_population_count": 37264,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        }
+      }
+    },
+    "Reddit-S": {
+      "split_cache_path": "outputs/problem_validation/splits/Reddit-S.pt",
+      "split_cache_sha256": "275d36be78ccec2fd59d9a21ce478187317a6ee9c170fa7b77502eff19a59b67",
+      "source_split_hashes": {
+        "original_train_sha256": "6a1281bfdcbb32c3c9b353e2aa1b1e6521a26a1cd4fef69cc0baaf140347ae44",
+        "original_val_sha256": "8bbd32a9eaf05b1173bd827e1f10ec46ec347123c4ef9e93d79635fdfc24a7fa"
+      },
+      "probe_train_sha256": "2b3d7e5115c85eccb5b9384e9b8e83ebd9cb594588123fb84373a71fd2e7ffa4",
+      "probe_calib_sha256": "896670aca29e8a614873d5fcce3563492006ca2ef2f0578b68d957f4d874d903",
+      "original_val_sha256": "8bbd32a9eaf05b1173bd827e1f10ec46ec347123c4ef9e93d79635fdfc24a7fa",
+      "original_test_index_sha256": "67bcf958359513dd41027a992409e2ae52bf57af9d133d99bb6e829e11274178",
+      "split_audit": {
+        "probe_train_size": 7628,
+        "probe_calib_size": 1908,
+        "original_train_size": 9536,
+        "original_val_size": 3179,
+        "original_test_index_count": 3179,
+        "probe_train_calib_overlap": 0,
+        "probe_train_original_val_overlap": 0,
+        "probe_calib_original_val_overlap": 0,
+        "train_val_test_index_overlap": 0
+      },
+      "physical_graph_num_nodes": 15894,
+      "physical_graph_directed_edge_count": 283080,
+      "physical_graph_edge_sha256": "6872df76ca1acb577c7ed823f91584e8d3a3da0592b20c0bf3a77987a2a31bea",
+      "sampled_relation_count": 39613,
+      "seeds": {
+        "42": {
+          "frozen_embedding_path": "outputs/problem_validation/Reddit-S/seed42/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "6d7878b58007ad791b0b4fbac563eedf2073d12a4326d6d463225b4635f32e38",
+          "h_text_sha256": "8b28563d940d967152eedc082e2f104cde3c8582cf012a50356c41b0ffdf64de",
+          "h_visual_sha256": "a854543d005110b1ea0ff9bf08b453861f39aa1a2b0c875a1e511bd15edfbdf1",
+          "run_seed_metadata": 42,
+          "h_text_shape": [
+            15894,
+            128
+          ],
+          "h_visual_shape": [
+            15894,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Reddit-S/seed42/edge_analysis.pt",
+          "p01_reference_sha256": "4b2eeadf172030319c8d6f8c94060152433f68d17486e7052b7a23f0e9ea1954",
+          "ordered_population_sha256": "9d6cfdbbd0c21e5a576bda60412710e6271a6ca7e20c5ef4cb5d768e8046183b",
+          "p01_metrics_sha256": "1386f709ee40898f7e45133f1b222abcbe474d676476597a42d172079894e5d2",
+          "p00_metrics_sha256": "c64770a0dc5b06e6e2698a7c7f765a32fefef1752304a37f76915b27dac68cab",
+          "p00_checkpoint_sha256": "7e19d5334c24e89c2ed11a278bebfafa9a5072763b2cbd4a39e6ab6a5186a751",
+          "p01_population_count": 39613,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        },
+        "43": {
+          "frozen_embedding_path": "outputs/problem_validation/Reddit-S/seed43/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "e43dc6dbfc007013d295f56dd38bd47440f50ffe1f1cdf60dbf1fd1036cd4443",
+          "h_text_sha256": "aebf421b3e93d0839149e65e979cb2f15d495d10e32e942f3e0e58feada4b45b",
+          "h_visual_sha256": "a9641a8a71f15afebff60414077214dd50f64f66139a98924c2e3c68a930ed26",
+          "run_seed_metadata": 43,
+          "h_text_shape": [
+            15894,
+            128
+          ],
+          "h_visual_shape": [
+            15894,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Reddit-S/seed43/edge_analysis.pt",
+          "p01_reference_sha256": "27fb17630d7092b24a535ca014da3ff5a56fcb76b90ddab4af2aacdadcba7113",
+          "ordered_population_sha256": "9d6cfdbbd0c21e5a576bda60412710e6271a6ca7e20c5ef4cb5d768e8046183b",
+          "p01_metrics_sha256": "3adf7a0678049bfd71ca115c2f346dac8b66ff21f98bad963c0b22b1d7a527f2",
+          "p00_metrics_sha256": "e454e90410caa1b7dc81eb7a18c2da2734894b4c58f066d98f07e6fa2240b17e",
+          "p00_checkpoint_sha256": "0b905e11f4b86a7a9d6e0276cc224f401aa5ec5127a59b0cf222cce14916fd06",
+          "p01_population_count": 39613,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        },
+        "44": {
+          "frozen_embedding_path": "outputs/problem_validation/Reddit-S/seed44/semantic_embeddings.pt",
+          "frozen_embedding_sha256": "749af74b9431b7530cb7d0228fb7cd2aee2bc70513c6329846bfeb522423775e",
+          "h_text_sha256": "663aa399aa5de77a619ab7a45618aef70c76247165953abb2e459f1731d883ba",
+          "h_visual_sha256": "d974387844921478eaf08ecf6520bfd74b2fca92f70ba402703ccae3fdfff837",
+          "run_seed_metadata": 44,
+          "h_text_shape": [
+            15894,
+            128
+          ],
+          "h_visual_shape": [
+            15894,
+            128
+          ],
+          "p01_reference_path": "outputs/problem_validation/Reddit-S/seed44/edge_analysis.pt",
+          "p01_reference_sha256": "86c7bf73e8293ec73c04732277a650317427a1e0397c5a4e2079c9091088c44f",
+          "ordered_population_sha256": "9d6cfdbbd0c21e5a576bda60412710e6271a6ca7e20c5ef4cb5d768e8046183b",
+          "p01_metrics_sha256": "54e62d90cf427c825a3c1dd570938d127fbd5003c8b33fd68a4370bf26747c7e",
+          "p00_metrics_sha256": "28ab06703557ba03915bc2d5a82ed3f2686429c76866f7cdbe3c0cf551449c36",
+          "p00_checkpoint_sha256": "338ea826dee6db04845fbcdf58f45467f12927199d3d50d38a82348bc9e37573",
+          "p01_population_count": 39613,
+          "test_evaluation": false,
+          "test_labels_accessed": false
+        }
+      }
+    }
+  },
+  "config_fingerprint": "9871e3af468169604ee2de65d6034a0f2531f4ee951799af2ee34542e3e6b63a",
+  "config_sha256": "db6d70a9225f739378dd6b362db4420d267b3bf26c5c8e700789eac404d95bac",
+  "config_path": "configs/analysis/problem_validation_p02.yaml"
+}
