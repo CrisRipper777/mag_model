@@ -103,7 +103,7 @@ def test_plot_uses_three_seed_text_visual_profiles(tmp_path: Path) -> None:
     rows = []
     for modality in ("Text", "Visual"):
         for seed in (42, 43, 44):
-            row = {"dataset": "Movies", "modality": modality, "similarity_space": "probe", "seed": seed}
+            row = {"dataset": "Movies", "modality": modality, "similarity_space": "probe", "seed": seed, "sampled_relation_count": 1000}
             row["overall_beneficial_rate"] = 0.6
             row["overall_harmful_rate"] = 0.4
             for q in range(1, 6):

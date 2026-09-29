@@ -11,6 +11,7 @@ from typing import Any
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import numpy as np
 import torch
 from threadpoolctl import threadpool_limits
@@ -18,6 +19,7 @@ from threadpoolctl import threadpool_limits
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from src.analysis.problem_validation.common import DATASETS, OUTPUT_ROOT  # noqa: E402
+from scripts.audit_panel_alignment import require_matplotlib_panel_alignment  # noqa: E402
 from src.analysis.problem_validation.p01plus_statistics import (  # noqa: E402
     BOOTSTRAP_METRICS,
     node_bootstrap_metric_samples,
@@ -208,32 +210,113 @@ def aggregate_seeds(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 def make_dataset_plot(dataset: str, per_seed: list[dict[str, Any]], output_dir: Path) -> Path:
     rows = [row for row in per_seed if row["dataset"] == dataset and row["similarity_space"] == "probe"]
-    colors = {"beneficial": "#2171A5", "harmful": "#B34A3C"}
-    fig, axes = plt.subplots(1, 2, figsize=(11.5, 4.6), sharey=True, constrained_layout=True)
+    colors = {"beneficial": "#1F6F8B", "harmful": "#B85C38"}
+    matplotlib.rcParams.update({
+        "font.family": "sans-serif",
+        "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
+        "font.size": 7,
+        "axes.titlesize": 8.5,
+        "axes.labelsize": 7.5,
+        "xtick.labelsize": 7,
+        "ytick.labelsize": 7,
+        "legend.fontsize": 7,
+        "axes.spines.right": False,
+        "axes.spines.top": False,
+        "axes.linewidth": 0.75,
+        "pdf.fonttype": 42,
+        "svg.fonttype": "none",
+    })
+    # One two-panel comparison: modality-specific CE sign stratification. Both
+    # panels use the same quintile, uncertainty, and overall-base-rate encoding.
+    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.65), sharey=True)
     q = np.arange(1, 6)
-    for ax, modality in zip(axes, MODALITIES, strict=True):
+    for panel_id, ax, modality in zip(("a", "b"), axes, MODALITIES, strict=True):
         seeds = [row for row in rows if row["modality"].lower() == modality.lower()]
         if len(seeds) != len(SEEDS):
             raise AssertionError(f"Expected three {modality} seeds for {dataset}, got {len(seeds)}")
         for outcome, color in colors.items():
-            metric = f"q{{i}}_{outcome}_rate"
-            values = np.asarray([[row[metric.format(i=i)] for i in q] for row in seeds], dtype=np.float64)
+            values = np.asarray(
+                [[row[f"q{i}_{outcome}_rate"] for i in q] for row in seeds],
+                dtype=np.float64,
+            )
             mean = values.mean(axis=0)
             std = values.std(axis=0, ddof=0)
-            ax.plot(q, mean, color=color, marker="o", linewidth=2, label=f"P(U {('>' if outcome == 'beneficial' else '<')} 0 | Qq)")
-            ax.fill_between(q, np.clip(mean - std, 0, 1), np.clip(mean + std, 0, 1), color=color, alpha=0.16, linewidth=0)
+            ax.plot(q, mean, color=color, marker="o", markersize=3.2, linewidth=1.7, zorder=3)
+            ax.fill_between(
+                q,
+                np.clip(mean - std, 0, 1),
+                np.clip(mean + std, 0, 1),
+                color=color,
+                alpha=0.16,
+                linewidth=0,
+                zorder=2,
+            )
             base = np.asarray([row[f"overall_{outcome}_rate"] for row in seeds], dtype=np.float64)
-            ax.axhline(base.mean(), color=color, linestyle="--", linewidth=1.3, label=f"overall P(U {('>' if outcome == 'beneficial' else '<')} 0)")
-        ax.set(title=modality, xlabel="Probe-similarity quintile", xticks=q, ylim=(0, 1))
-        ax.grid(axis="y", alpha=0.2)
-        ax.legend(frameon=False, fontsize=7.7, loc="best")
-    axes[0].set_ylabel("Conditional relation proportion")
-    fig.suptitle(f"{dataset}: CE utility by probe-similarity quintile (mean ± seed SD)")
+            ax.axhline(float(base.mean()), color=color, linestyle=(0, (4, 2)), linewidth=1.15, zorder=1)
+        ax.set_title(modality, pad=7)
+        ax.set_xlabel("Probe-similarity quintile")
+        ax.set_xticks(q, labels=[f"Q{i}" for i in q])
+        ax.set_ylim(0, 1)
+        ax.set_xlim(0.8, 5.2)
+        ax.grid(axis="y", color="#D7DDE0", linewidth=0.5, alpha=0.8)
+        ax.tick_params(direction="out", length=2.5, width=0.65, pad=2)
+        ax.text(
+            -0.13, 1.06, panel_id,
+            transform=ax.transAxes,
+            fontsize=8,
+            fontweight="bold",
+            va="bottom",
+            ha="left",
+            clip_on=False,
+        )
+    axes[0].set_ylabel("Share of sampled relations")
+    handles = [
+        Line2D([0], [0], color=colors["beneficial"], marker="o", markersize=3.2, linewidth=1.7, label="Beneficial by quintile"),
+        Line2D([0], [0], color=colors["harmful"], marker="o", markersize=3.2, linewidth=1.7, label="Harmful by quintile"),
+        Line2D([0], [0], color=colors["beneficial"], linestyle=(0, (4, 2)), linewidth=1.15, label="Overall beneficial base rate"),
+        Line2D([0], [0], color=colors["harmful"], linestyle=(0, (4, 2)), linewidth=1.15, label="Overall harmful base rate"),
+    ]
+    relation_count = int(rows[0]["sampled_relation_count"])
+    fig.suptitle(
+        f"{dataset}: CE utility-sign rates by probe similarity",
+        fontsize=9,
+        y=0.985,
+    )
+    fig.text(
+        0.5, 0.925,
+        f"n = {relation_count:,} sampled relations per seed; line = mean, band = population SD across 3 seeds",
+        ha="center", va="center", fontsize=6.7, color="#40494D",
+    )
+    fig.legend(
+        handles=handles,
+        loc="lower center",
+        bbox_to_anchor=(0.5, 0.015),
+        ncol=2,
+        frameon=False,
+        columnspacing=1.5,
+        handlelength=2.2,
+        handletextpad=0.5,
+    )
+    fig.subplots_adjust(left=0.105, right=0.99, bottom=0.19, top=0.84, wspace=0.2)
+    fig.canvas.draw()
+
     output_dir.mkdir(parents=True, exist_ok=True)
-    path = output_dir / f"p01plus_{dataset}_probe_quintile_utility.png"
-    fig.savefig(path, dpi=180)
+    stem = output_dir / f"p01plus_{dataset}_probe_quintile_utility"
+    alignment_path = output_dir / f"p01plus_{dataset}_alignment.json"
+    require_matplotlib_panel_alignment(
+        fig,
+        json_out=alignment_path,
+        tolerance_pt=1.5,
+        gutter_tolerance_pt=1.5,
+        require_panel_labels=True,
+        strict=True,
+    )
+    # Fixed canvas dimensions preserve the geometry measured by the alignment gate.
+    fig.savefig(stem.with_suffix(".pdf"), format="pdf")
+    fig.savefig(stem.with_suffix(".svg"), format="svg")
+    fig.savefig(stem.with_suffix(".png"), format="png", dpi=300)
     plt.close(fig)
-    return path
+    return stem.with_suffix(".png")
 
 
 def _finite(values: list[Any]) -> list[float]:
@@ -356,8 +439,20 @@ def generate_report(
             ) + " |")
 
     lines.extend(["", "## 7. Raw vs Task-Aware Similarity", "",
-                  "The per-seed and cross-dataset CSVs retain both raw semantic and frozen-probe similarity, for Text and Visual separately. Compare their beneficial/harmful ranges, Q1/Q5 lifts, and five-bin Spearman values there. Differences are dataset- and modality-specific; this audit does not force raw and probe similarity to agree.", "",
-                  "## 8. Dataset-Specific Interpretation", ""])
+                  "Both similarity spaces are analyzed separately. Probe similarity has a larger mean beneficial-rate range than raw similarity in all 10 dataset × modality pairs. Probe Q1 beneficial lift is negative in all 10 pairs; raw Q1 lift is positive only for ele-fashion Visual and negative elsewhere. Probe Q5 harmful lift is negative in all 10 pairs; raw Q5 harmful lift is positive for both ele-fashion modalities and negative in the other eight pairs. The table below gives mean ± population SD over seeds; raw/probe differences do not force consistency.", "",
+                  "| Dataset | Modality | Raw Q1 beneficial lift | Probe Q1 beneficial lift | Raw Q5 harmful lift | Probe Q5 harmful lift | Raw sign range | Probe sign range | Raw ρQ beneficial | Probe ρQ beneficial |", "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|"])
+    for dataset in DATASETS:
+        for modality in MODALITIES:
+            raw = cross_by_key[(dataset, modality.title(), "raw")]
+            probe = cross_by_key[(dataset, modality.title(), "probe")]
+            metrics = (
+                (raw, "q1_beneficial_lift"), (probe, "q1_beneficial_lift"),
+                (raw, "q5_harmful_lift"), (probe, "q5_harmful_lift"),
+                (raw, "beneficial_stratification_range"), (probe, "beneficial_stratification_range"),
+                (raw, "beneficial_quantile_spearman"), (probe, "beneficial_quantile_spearman"),
+            )
+            lines.append(f"| {dataset} | {modality.title()} | " + " | ".join(_fmt_agg(row, metric) for row, metric in metrics) + " |")
+    lines.extend(["", "## 8. Dataset-Specific Interpretation", ""])
     for dataset in DATASETS:
         lines.append(f"### {dataset}")
         for modality in MODALITIES:
@@ -371,12 +466,33 @@ def generate_report(
             h_rho = crossrow["harmful_quantile_spearman_mean"]
             base = crossrow["overall_beneficial_rate_mean"]
             low_rate = crossrow["q1_beneficial_rate_mean"]
+            high_harm_rate = crossrow["q5_harmful_rate_mean"]
+            harm_base = crossrow["overall_harmful_rate_mean"]
             lines.append(
                 f"- {modality.title()}: probe Q1 beneficial `{_fmt(low_rate)}` vs overall beneficial base `{_fmt(base)}` "
-                f"(lift `{_fmt(low_b)}`); Q5 harmful lift `{_fmt(high_h)}`. Beneficial/harmful ranges are "
+                f"(lift `{_fmt(low_b)}`); Q5 harmful `{_fmt(high_harm_rate)}` vs overall harmful base `{_fmt(harm_base)}` "
+                f"(lift `{_fmt(high_h)}`). Beneficial/harmful ranges are "
                 f"`{_fmt(b_range)}` / `{_fmt(h_range)}`, with quantile Spearman `{_fmt(b_rho)}` / `{_fmt(h_rho)}`. "
                 f"Node-bootstrap Q1 beneficial lift: {_sign_summary(runrows, 'q1_beneficial_lift')}; "
                 f"Q5 harmful lift: {_sign_summary(runrows, 'q5_harmful_lift')}."
+            )
+        if dataset == "ele-fashion":
+            text_base = cross_by_key[(dataset, "Text", "probe")]
+            visual_base = cross_by_key[(dataset, "Visual", "probe")]
+            lines.append(
+                f"- Seed-spread note: Text/Visual CE beneficial base rates are "
+                f"`{_fmt_agg(text_base, 'overall_beneficial_rate')}` / `{_fmt_agg(visual_base, 'overall_beneficial_rate')}`, "
+                f"and Q1 conditional rates are `{_fmt_agg(text_base, 'q1_beneficial_rate')}` / `{_fmt_agg(visual_base, 'q1_beneficial_rate')}`. "
+                "Visual seed SD is notably wider; all three seed rows and their node-bootstrap intervals remain separate in the per-seed CSV."
+            )
+        if dataset == "Reddit-S":
+            textrow = cross_by_key[(dataset, "Text", "probe")]
+            visualrow = cross_by_key[(dataset, "Visual", "probe")]
+            lines.append(
+                f"- Base-rate check: Q1 beneficial remains high (`{_fmt_agg(textrow, 'q1_beneficial_rate')}` Text; "
+                f"`{_fmt_agg(visualrow, 'q1_beneficial_rate')}` Visual), but the overall beneficial base is even higher "
+                f"(`{_fmt_agg(textrow, 'overall_beneficial_rate')}`; `{_fmt_agg(visualrow, 'overall_beneficial_rate')}`). "
+                "Thus the high Q1 conditional proportions reflect a high population-wide beneficial rate; Q1 is depleted relative to that base in both modalities."
             )
         lines.append("")
 
@@ -387,13 +503,18 @@ def generate_report(
     q1_pos, q1_neg = sum(value > 0.0 for value in q1_lifts), sum(value < 0.0 for value in q1_lifts)
     q5h_pos, q5h_neg = sum(value > 0.0 for value in q5_harm_lifts), sum(value < 0.0 for value in q5_harm_lifts)
     q1_ci_pos = sum(_ci_sign_counts(seed_by_key[(dataset, modality.title(), "probe")], "q1_beneficial_lift")[0] == 3 for dataset in DATASETS for modality in MODALITIES)
+    q1_ci_neg = sum(_ci_sign_counts(seed_by_key[(dataset, modality.title(), "probe")], "q1_beneficial_lift")[1] == 3 for dataset in DATASETS for modality in MODALITIES)
     q5h_ci_pos = sum(_ci_sign_counts(seed_by_key[(dataset, modality.title(), "probe")], "q5_harmful_lift")[0] == 3 for dataset in DATASETS for modality in MODALITIES)
+    q5h_ci_neg = sum(_ci_sign_counts(seed_by_key[(dataset, modality.title(), "probe")], "q5_harmful_lift")[1] == 3 for dataset in DATASETS for modality in MODALITIES)
+    q5h_ci_mixed = sum(_ci_sign_counts(seed_by_key[(dataset, modality.title(), "probe")], "q5_harmful_lift")[2] > 0 for dataset in DATASETS for modality in MODALITIES)
     lines.extend(["## 9. Revised Interpretation of P0.1", "",
                   f"1. **Does low-sim beneficial existence remain true?** Yes: `P(U > 0 | Q1) > 0` in {q1_nonzero}/{len(probe_rows)} probe-similarity dataset × seed × modality rows. This is counterexample existence in the fixed sampled population.",
-                  f"2. **Is low-sim beneficial enriched or depleted?** Across 10 dataset × modality mean lifts, Q1 beneficial lift is positive in {q1_pos} and negative in {q1_neg}; all-three-seed node-bootstrap CIs are positive in {q1_ci_pos}/10 comparisons. Interpret each row in Section 5 and its run-specific intervals in the CSV.",
-                  f"3. **Are high-sim harmful relations enriched?** Q5 harmful lift is positive in {q5h_pos} and negative in {q5h_neg} of 10 dataset × modality mean comparisons; all-three-seed node-bootstrap CIs are positive in {q5h_ci_pos}/10. A nonzero Q5 harmful rate by itself is not enrichment.",
+                  f"2. **Is low-sim beneficial enriched or depleted?** Across 10 dataset × modality mean lifts, Q1 beneficial lift is positive in {q1_pos} and negative in {q1_neg}; all-three-seed node-bootstrap CIs are negative in {q1_ci_neg}/10 comparisons (positive in {q1_ci_pos}/10). Interpret each run-specific interval in the CSV.",
+                  f"3. **Are high-sim harmful relations enriched?** Q5 harmful lift is positive in {q5h_pos} and negative in {q5h_neg} of 10 dataset × modality mean comparisons; all-three-seed node-bootstrap CIs are negative in {q5h_ci_neg}/10, while {q5h_ci_mixed}/10 have at least one interval spanning zero (positive in {q5h_ci_pos}/10). A nonzero Q5 harmful rate by itself is not enrichment.",
                   "4. **Where is similarity informative?** Use the sign-rate ranges and five-bin monotonic profiles in Section 6. These are descriptive properties, not significance claims.",
-                  "5. **Where is similarity insufficient?** Flat or seed/modality-inconsistent profiles mean similarity does not consistently separate beneficial from harmful sampled relations, even when some endpoint lift is present.",
+                  "5. **Where is similarity insufficient?** Probe similarity stratifies CE utility sign in every dataset and modality, but strength differs: Grocery is strongest, Movies weakest, and Reddit-S Visual is less monotone. This sign result does not establish that similarity predicts the magnitude of utility.",
+                  "",
+                  "**Updated P0.1 reading.** Counterexample existence is upheld: beneficial edges occur in every Q1 and harmful edges occur in every Q5. The enrichment interpretation changes: Q1-beneficial and Q5-harmful are depleted relative to overall base rates in every dataset × modality mean. Conversely, high-sim beneficial and low-sim harmful are enriched. The earlier weak continuous Spearman findings therefore do not imply weak utility-sign stratification; the five-bin sign profiles are strongly ordered in most dataset × modality pairs.",
                   "", "### Requested dataset regime labels (descriptive only)", "",
                   "These relative labels use observed probe-CE profiles across the five datasets. `Strong` is assigned only to a dataset with the largest non-weak mean sign-rate range composite among datasets whose beneficial-quantile Spearman direction is shared by both modalities and all three seeds. `Weak` is the dataset with the smallest mean composite range. Remaining datasets are `intermediate`. If no dataset meets the consistency condition for `Strong`, none is labeled strong. No threshold test or significance claim is implied.", ""])
     # Assign the regime from observed per-seed ranges and directions, not dataset names.
@@ -424,7 +545,7 @@ def generate_report(
         lines.append(f"- {dataset}: **{label}** (mean probe sign-rate range composite `{score:.3f}`; monotonic direction shared across modality × seed: `{str(consistent).lower()}`).")
 
     lines.extend(["", "## 10. Implications for P0.2", "",
-                  "This audit can prioritize controls for a later, separately specified P0.2 comparison: datasets with little or inconsistent quantile separation are useful tests of a scalar similarity-reliability baseline versus a relation-conditioned alternative, while datasets with clearer separation test whether a learned method adds value beyond similarity alone. Freeze the dataset-specific interpretation and evaluation protocol before any P0.2 implementation. No P0.2 work was started here.",
+                  "A later P0.2 should treat a scalar similarity-reliability baseline as a serious comparator: probe-similarity utility-sign stratification is strongest in Grocery, weaker but monotone in Movies, and non-monotone for Reddit-S Visual; ele-fashion Visual also has wider seed spread. Compare the scalar baseline and a relation-conditioned alternative on a predeclared high-, low-, and boundary-separation set, and evaluate continuous CE utility as well as sign rates. Freeze controls and selection rules first. No P0.2 was implemented or run here.",
                   "",
                   "## 11. What This Still Does Not Prove", "",
                   "This audit does not prove that a scalar learned relation is insufficient; vector relation state is necessary; semantic transformation is necessary; MoE, basis routing, or FiLM is necessary; or context heterogeneity is established. It reports only how the existing sampled validation relation utilities are distributed across observed similarity quintiles.",
