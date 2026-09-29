@@ -156,9 +156,11 @@ def preflight_all_sources(config: dict[str, Any], device: torch.device) -> dict[
             reference = load_p01_reference(reference_path, split, graph, int(seed))
             p01_metrics = json.loads(metrics_path.read_text())
             p00_metrics_path = embedding_path.with_name("p00_metrics.json")
-            if not p00_metrics_path.exists():
-                raise FileNotFoundError(f"P0.0 semantic-probe metadata missing: {p00_metrics_path}; STOP")
+            p00_checkpoint_path = embedding_path.with_name("semantic_probe.pt")
+            if not p00_metrics_path.exists() or not p00_checkpoint_path.exists():
+                raise FileNotFoundError(f"P0.0 semantic-probe checkpoint/metadata missing beside {embedding_path}; STOP")
             p00_metrics = json.loads(p00_metrics_path.read_text())
+            p00_checkpoint = torch.load(p00_checkpoint_path, map_location="cpu", weights_only=False)
             if int(p01_metrics.get("run_seed", -1)) != int(seed) or int(p00_metrics.get("run_seed", -1)) != int(seed):
                 raise RuntimeError(f"P0.0/P0.1 metrics seed mismatch for {dataset} seed{seed}")
             p01_split_audit = p01_metrics.get("split_audit", {})
@@ -167,9 +169,9 @@ def preflight_all_sources(config: dict[str, Any], device: torch.device) -> dict[
                                          ("original_test_size", split["split_audit"]["original_test_index_count"])):
                 if int(p01_split_audit.get(field, -1)) != int(expected_size):
                     raise RuntimeError(f"P0.1 split_audit.{field} mismatch for {dataset} seed{seed}")
-            p00_split = p00_metrics.get("split_metadata", {})
-            if int(p00_split.get("probe_train_size", -1)) != split["split_audit"]["probe_train_size"] or int(p00_split.get("probe_calib_size", -1)) != split["split_audit"]["probe_calib_size"] or int(p00_split.get("original_val_size", -1)) != split["split_audit"]["original_val_size"]:
-                raise RuntimeError(f"P0.0 probe/original-val split metadata mismatch for {dataset} seed{seed}")
+            p00_split = p00_checkpoint.get("split_metadata", {})
+            if int(p00_checkpoint.get("run_seed", -1)) != int(seed) or int(p00_split.get("probe_train_size", -1)) != split["split_audit"]["probe_train_size"] or int(p00_split.get("probe_calib_size", -1)) != split["split_audit"]["probe_calib_size"] or int(p00_split.get("original_val_size", -1)) != split["split_audit"]["original_val_size"]:
+                raise RuntimeError(f"P0.0 checkpoint probe/original-val split metadata mismatch for {dataset} seed{seed}")
             if p01_metrics.get("test_set_evaluated", False) or p01_metrics.get("test_labels_indexed", False) or p00_metrics.get("test_set_evaluated", False):
                 raise RuntimeError(f"P0.0/P0.1 metrics flags indicate test access for {dataset} seed{seed}")
             dataset_entries["seeds"][str(seed)] = {
@@ -185,6 +187,7 @@ def preflight_all_sources(config: dict[str, Any], device: torch.device) -> dict[
                 "ordered_population_sha256": _torch_hash(split_pairs),
                 "p01_metrics_sha256": tensor_sha256(metrics_path),
                 "p00_metrics_sha256": tensor_sha256(p00_metrics_path),
+                "p00_checkpoint_sha256": tensor_sha256(p00_checkpoint_path),
                 "p01_population_count": int(reference["target_node"].numel()),
                 "test_evaluation": False,
                 "test_labels_accessed": False,
