@@ -253,7 +253,7 @@ def make_dataset_plot(dataset: str, per_seed: list[dict[str, Any]], output_dir: 
             )
             base = np.asarray([row[f"overall_{outcome}_rate"] for row in seeds], dtype=np.float64)
             ax.axhline(float(base.mean()), color=color, linestyle=(0, (4, 2)), linewidth=1.15, zorder=1)
-        ax.set_title(modality, pad=7)
+        ax.set_title(modality.title(), pad=7)
         ax.set_xlabel("Probe-similarity quintile")
         ax.set_xticks(q, labels=[f"Q{i}" for i in q])
         ax.set_ylim(0, 1)
