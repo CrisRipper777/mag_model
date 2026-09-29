@@ -13,6 +13,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
+from threadpoolctl import threadpool_limits
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -472,14 +473,18 @@ def main() -> None:
     parser.add_argument("--bootstrap-replicates", type=int, default=1000)
     parser.add_argument("--bootstrap-seed", type=int, default=42)
     args = parser.parse_args()
-    paths = summarize(
-        args.input_root,
-        args.output_root,
-        source_commit=args.source_commit,
-        analysis_code_commit=args.analysis_code_commit,
-        bootstrap_replicates=args.bootstrap_replicates,
-        bootstrap_seed=args.bootstrap_seed,
-    )
+    # The bootstrap uses many short vector operations; large BLAS pools make
+    # these much slower through oversubscription. Keep this deterministic CPU
+    # analysis single-threaded at the BLAS layer.
+    with threadpool_limits(limits=1, user_api="blas"):
+        paths = summarize(
+            args.input_root,
+            args.output_root,
+            source_commit=args.source_commit,
+            analysis_code_commit=args.analysis_code_commit,
+            bootstrap_replicates=args.bootstrap_replicates,
+            bootstrap_seed=args.bootstrap_seed,
+        )
     for path in paths:
         print(path.relative_to(ROOT))
 
