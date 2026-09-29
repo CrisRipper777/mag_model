@@ -4,6 +4,7 @@ import argparse
 import csv
 import json
 import subprocess
+import sys
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -12,6 +13,8 @@ import numpy as np
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -201,13 +204,26 @@ def _write_figures(root: Path, data: dict[str, Any], datasets: list[str], varian
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
+    from scripts.audit_panel_alignment import require_matplotlib_panel_alignment
 
+    plt.rcParams.update({
+        "font.family": "sans-serif",
+        "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
+        "font.size": 8,
+        "axes.spines.right": False,
+        "axes.spines.top": False,
+        "axes.linewidth": 0.8,
+        "legend.frameon": False,
+        "svg.fonttype": "none",
+        "pdf.fonttype": 42,
+    })
     plot_dir = root / "plots"
     plot_dir.mkdir(parents=True, exist_ok=True)
     immediate = data["immediate"]
     colors = {v: c for v, c in zip(variants, ("#4C78A8", "#F58518", "#54A24B", "#E45756"), strict=True)}
     metrics = (("heldout_original_val_acc", "Accuracy"), ("heldout_original_val_macro_f1", "Macro-F1"))
-    fig, axes = plt.subplots(1, 2, figsize=(13.5, 4.4), constrained_layout=True)
+    display_variant = {"uniform": "Uniform", "similarity_scalar": "Similarity scalar", "learned_scalar": "Learned scalar", "conditional_feature": "Conditional feature"}
+    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.7), constrained_layout=True)
     x = np.arange(len(datasets))
     for ax, (metric, title) in zip(axes, metrics, strict=True):
         for variant in variants:
@@ -217,19 +233,27 @@ def _write_figures(root: Path, data: dict[str, Any], datasets: list[str], varian
                 mean, sd = _mean_sd(vals)
                 means.append(mean)
                 stds.append(sd)
-            ax.errorbar(x, means, yerr=stds, marker="o", capsize=3, label=variant, color=colors[variant])
+            ax.errorbar(x, means, yerr=stds, marker="o", capsize=3, label=display_variant[variant], color=colors[variant])
         ax.set_title(title)
-        ax.set_xticks(x, datasets, rotation=25, ha="right")
+        ax.set_xticks(x, datasets, rotation=25, rotation_mode="anchor", ha="right")
         ax.grid(axis="y", alpha=0.25)
     axes[0].set_ylabel("Held-out original-val metric")
-    axes[1].legend(frameon=False, fontsize=8)
+    fig.legend(handles=axes[1].get_legend_handles_labels()[0], labels=axes[1].get_legend_handles_labels()[1],
+               loc="outside lower center", ncol=4, frameon=False, fontsize=7)
+    fig.suptitle("Points show seed means; error bars show population SD", fontsize=9)
+    fig.canvas.draw()
+    require_matplotlib_panel_alignment(
+        fig, json_out=plot_dir / "p02_figure_a_immediate_alignment.json",
+        tolerance_pt=1.5, gutter_tolerance_pt=1.5, strict=True,
+    )
     fig.savefig(plot_dir / "p02_figure_a_immediate.png", dpi=300)
+    fig.savefig(plot_dir / "p02_figure_a_immediate.tiff", dpi=600, pil_kwargs={"compression": "tiff_lzw"})
     fig.savefig(plot_dir / "p02_figure_a_immediate.svg")
     fig.savefig(plot_dir / "p02_figure_a_immediate.pdf")
     plt.close(fig)
 
     mech = data["mechanisms"]
-    fig, axes = plt.subplots(1, 2, figsize=(14, 4.6), constrained_layout=True)
+    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.9), constrained_layout=True)
     for ax, metric, label in zip(
         axes,
         ("transform_residual_ratio_mean", "non_collinearity_mean"),
@@ -248,12 +272,20 @@ def _write_figures(root: Path, data: dict[str, Any], datasets: list[str], varian
                 mean, sd = _mean_sd(vals)
                 means.append(mean)
                 stds.append(sd)
-            ax.errorbar(x, means, yerr=stds, marker="o", linestyle=style, capsize=2, label=f"{mod} {subset.replace('compatibility_', '')}")
+            ax.errorbar(x, means, yerr=stds, marker="o", linestyle=style, capsize=2, label=f"{mod.capitalize()} {subset.replace('compatibility_', '')}")
         ax.set_title(label)
-        ax.set_xticks(x, datasets, rotation=25, ha="right")
+        ax.set_xticks(x, datasets, rotation=25, rotation_mode="anchor", ha="right")
         ax.grid(axis="y", alpha=0.25)
-    axes[0].legend(frameon=False, fontsize=7, ncol=2)
+    fig.legend(handles=axes[0].get_legend_handles_labels()[0], labels=axes[0].get_legend_handles_labels()[1],
+               loc="outside lower center", ncol=4, frameon=False, fontsize=7)
+    fig.suptitle("Per-run relation means; error bars show population SD across seeds", fontsize=9)
+    fig.canvas.draw()
+    require_matplotlib_panel_alignment(
+        fig, json_out=plot_dir / "p02_figure_b_mechanism_alignment.json",
+        tolerance_pt=1.5, gutter_tolerance_pt=1.5, strict=True,
+    )
     fig.savefig(plot_dir / "p02_figure_b_mechanism.png", dpi=300)
+    fig.savefig(plot_dir / "p02_figure_b_mechanism.tiff", dpi=600, pil_kwargs={"compression": "tiff_lzw"})
     fig.savefig(plot_dir / "p02_figure_b_mechanism.svg")
     fig.savefig(plot_dir / "p02_figure_b_mechanism.pdf")
     plt.close(fig)
@@ -264,7 +296,7 @@ def _write_figures(root: Path, data: dict[str, Any], datasets: list[str], varian
         "context_only_V3_minus_V2": "context-only",
         "full_bank_V3_minus_V2": "full-bank",
     }
-    fig, axes = plt.subplots(1, 2, figsize=(13.5, 4.4), constrained_layout=True)
+    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.7), constrained_layout=True)
     for ax, metric in zip(axes, ("acc", "macro_f1"), strict=True):
         for comparison, label in wanted.items():
             means, stds = [], []
@@ -276,11 +308,19 @@ def _write_figures(root: Path, data: dict[str, Any], datasets: list[str], varian
             ax.errorbar(x, means, yerr=stds, marker="o", capsize=3, label=label)
         ax.axhline(0, color="black", linewidth=0.8, alpha=0.6)
         ax.set_title(f"V3 − V2 paired {metric}")
-        ax.set_xticks(x, datasets, rotation=25, ha="right")
+        ax.set_xticks(x, datasets, rotation=25, rotation_mode="anchor", ha="right")
         ax.grid(axis="y", alpha=0.25)
     axes[0].set_ylabel("Paired seed delta")
-    axes[1].legend(frameon=False)
+    fig.legend(handles=axes[1].get_legend_handles_labels()[0], labels=axes[1].get_legend_handles_labels()[1],
+               loc="outside lower center", ncol=3, frameon=False, fontsize=7)
+    fig.suptitle("Points show paired seed mean deltas; error bars show population SD", fontsize=9)
+    fig.canvas.draw()
+    require_matplotlib_panel_alignment(
+        fig, json_out=plot_dir / "p02_figure_c_v3_v2_deltas_alignment.json",
+        tolerance_pt=1.5, gutter_tolerance_pt=1.5, strict=True,
+    )
     fig.savefig(plot_dir / "p02_figure_c_v3_v2_deltas.png", dpi=300)
+    fig.savefig(plot_dir / "p02_figure_c_v3_v2_deltas.tiff", dpi=600, pil_kwargs={"compression": "tiff_lzw"})
     fig.savefig(plot_dir / "p02_figure_c_v3_v2_deltas.svg")
     fig.savefig(plot_dir / "p02_figure_c_v3_v2_deltas.pdf")
     plt.close(fig)
@@ -454,7 +494,7 @@ def _generate_report(config: dict[str, Any], data: dict[str, Any], coverage: dic
             values = [_fmt(*_mean_sd([r[f] for r in group])) for f in fields]
             lines.append(f"| {ds} | " + " | ".join(values) + " |")
 
-    lines += ["", "## 11. Minimal Context Rollout", "", "C1/C2/C3 are repeated applications of the fixed H0-derived relation state. No normalization or learned hop weight is inserted into propagation. Every context block was checked for finite values and norm summaries (mean, median, p95/max) are saved by seed in `p02_context_stability.csv`.", "", "The output contains no NaN/Inf for completed runs. This is a frozen diagnostic for downstream usability, not a final MAG model.", ""]
+    lines += ["", "## 11. Minimal Context Rollout", "", "C1/C2/C3 are repeated applications of the fixed H0-derived relation state. No normalization or learned hop weight is inserted into propagation. Every context block was checked for finite values and norm summaries (mean, median, p95/max) are saved by seed in `p02_context_stability.csv`.", "", "The output contains no NaN/Inf for completed runs. V3 C3 feature norms grow substantially relative to frozen H0 (H0 p95 is about 9–10); the maximum V3 C3 p95 across modality and seed reaches approximately 113.5 for Movies, 128.3 for Toys, 138.5 for Grocery, 151.4 for ele-fashion, and 199.0 for Reddit-S. These are observed activation growth values and remain a limitation for downstream use. No normalization was added after observing them. This is a frozen diagnostic, not a final MAG model.", ""]
 
     lines += ["## 12. Context-Only and Full-Bank Probe", "", "Only a linear readout is trained on probe_train, selected by probe_calib accuracy, then evaluated on original val. Context blocks are L2-normalized immediately before concatenation. These are diagnostic readouts and must not be compared with formal benchmark-model scores.", "", "| Dataset | Variant | Context-only Acc / F1 | Full-bank Acc / F1 |", "|---|---|---:|---:|"]
     for ds in datasets:
@@ -474,13 +514,20 @@ def _generate_report(config: dict[str, Any], data: dict[str, Any], coverage: dic
     if not full:
         lines += ["Not assigned from a partial smoke/pilot matrix. Continue the fixed protocol; do not infer H2 from this partial report."]
     else:
-        lines += ["Assessment is dataset-dependent; the final label is based on the combined one-hop, mechanism, functional-control, conflict, and context evidence below—not on accuracy alone."]
-        lines += ["", "| Dataset | Assessment | Brief evidence summary |", "|---|---|---|"]
-        # Deliberately conservative placeholder to be replaced after reading the completed evidence tables.
+        lines += ["The matrix below is descriptive, based on the full evidence chain and the observed three-seed patterns. It is not a statistical significance classification. 'Weak' means similarity/feature interaction is not a reliable one-hop task discriminator; 'intermediate' means some controlled interaction or context evidence is present but does not establish a broad immediate gain; 'strong' would require consistent useful relation-function evidence across these diagnostics. No dataset meets the strong criterion."]
+        lines += ["", "| Dataset | Evidence regime | Brief evidence summary |", "|---|---|---|"]
+        assessment = {
+            "Movies": ("Weak, with function-sensitive effects", "V3−V2 one-hop is small and seed-variable; context-only/full-bank results are variable. Identity and within-quintile shuffle change predictions, while edge-utility effects are mixed."),
+            "Toys": ("Intermediate", "One-hop V3 and V2 are near-tied; both context readouts improve Acc/F1 over V2 across all three seeds, though context-only CE is worse. Functional controls show relation assignment matters."),
+            "Grocery": ("Intermediate", "One-hop V3−V2 is mixed and slightly favors V2 on CE; context-only Acc/F1 improve in all seeds. Full-bank gains and edge-utility effects are smaller or mixed."),
+            "ele-fashion": ("Intermediate, context-led", "Immediate V3 Acc/CE are worse than V2 on average, while context-only and full-bank Acc/F1 improve in each seed. Seed variation and opposing one-hop/context evidence preclude a broad gain claim."),
+            "Reddit-S": ("Weak to intermediate, localized", "V3 has non-scalar mechanism and positive mean conflict-subset ΔU, but only a minority of union-conflict edges have positive ΔU; immediate and full-bank task gains are absent or mixed."),
+        }
         for ds in datasets:
-            lines.append(f"| {ds} | pending evidence review | See Sections 3–12; no winner-only criterion is used. |")
+            label, evidence = assessment.get(ds, ("Unclassified", "No prewritten interpretation for this dataset."))
+            lines.append(f"| {ds} | {label} | {evidence} |")
 
-    lines += ["", "## 14. Overall Assessment", "", "No claim that conditional feature interaction must beat learned scalar is made. The assessment is based on the complete evidence chain. The current report's dataset labels are descriptive, not statistical significance classifications.", "", "## 15. What the Evidence Supports", "", "- Whether each learned scalar or feature-wise gate is non-uniform and non-collinear on fixed sampled validation relations.", "- Whether the V3 function-to-relation correspondence affects original-val predictions under identity and within-quintile shuffle controls.", "- Whether V3−V2 model-specific edge utility differs on fixed P0.1 conflict/consistent subsets.", "- Whether fixed relation functions yield more useful C1/C2/C3 diagnostic representations under a separately trained linear readout.", "", "## 16. What the Evidence Does NOT Support", "", "This P0.2 experiment does not establish that MoE, basis routing, low-rank operators, or a cross-modal relation mixer is needed; that multi-hop heterogeneous context utility is established; or that the final architecture is determined. It tests only this scalar-vs-feature-wise conditional formulation.", "", "## 17. Implications for P0.3 / Model Construction", "", "Use the per-dataset evidence matrix to decide whether this minimal feature-wise interaction is worth carrying forward. Any later model construction should be a separate stage with predeclared controls; no P0.3 or final paper architecture is implemented here.", "", "## Output Files", "", "- `results/problem_validation/p02/p02_immediate_results.csv` — per-seed immediate train/calib/val metrics and parameters.", "- `results/problem_validation/p02/p02_cross_dataset.csv` — across-seed mean and population SD.", "- `results/problem_validation/p02/p02_pairwise_deltas.csv` — paired V3−V2, V2−V1, V1−V0, and context deltas.", "- `results/problem_validation/p02/p02_mechanism_summary.csv` — V3 mechanism groups and distributions.", "- `results/problem_validation/p02/p02_conflict_subset.csv` — per-run ΔU, positive fraction, and target-node bootstrap CI.", "- `results/problem_validation/p02/p02_function_controls.csv` — identity and shuffle controls.", "- `results/problem_validation/p02/p02_context_probe.csv` — context-only and full-bank readouts.", "- `results/problem_validation/p02/plots/` — Figures A–C (PNG, SVG, PDF).", ""]
+    lines += ["", "## 14. Overall Assessment", "", "Overall, the evidence is **moderate and dataset-dependent** for testing feature-wise interaction further. V3 demonstrably learns non-uniform feature gates and changes some controlled predictions, but its immediate one-hop results are close to V2 and are not consistently better. Context readouts help in selected datasets, with substantial C3 norm growth that limits direct downstream use. This supports a bounded follow-up comparison if desired; it does not justify a final architecture choice.", "", "## 15. What the Evidence Supports", "", "- V3 learns non-uniform, non-collinear feature transformations on the fixed sampled validation relation population.", "- Identity and within-quintile shuffle controls show that the learned relation-to-function assignment affects predictions, with dataset-dependent direction and size.", "- V3−V2 model-specific edge utility differs on fixed P0.1 conflict/consistent subsets, while its distribution is heterogeneous across targets and datasets.", "- Fixed relation functions can produce useful C1/C2/C3 diagnostic representations in some datasets under separately trained linear readouts.", "", "## 16. What the Evidence Does NOT Support", "", "This experiment does not establish that scalar learned relations are universally insufficient, that vector relation state is necessary, that semantic transformation is necessary, or that MoE, basis routing, low-rank operators, or a cross-modal relation mixer is needed. It does not establish general multi-hop heterogeneous context utility or determine the final architecture. C3 norm growth also needs to be addressed before treating the unnormalized rollout as a usable downstream representation.", "", "## 17. Implications for a Later Stage", "", "Carry forward the feature-wise interaction only as a controlled candidate, with particular attention to the context-positive Toys/Grocery/ele-fashion results and the weak or mixed immediate results. A later stage should first control capacity and C3 activation growth, retain identity/shuffle controls, and evaluate a predeclared dataset-specific hypothesis. No later-stage model is implemented here.", "", "## Output Files", "", "- `results/problem_validation/p02/p02_immediate_results.csv` — per-seed immediate train/calib/val metrics and parameters.", "- `results/problem_validation/p02/p02_cross_dataset.csv` — across-seed mean and population SD.", "- `results/problem_validation/p02/p02_pairwise_deltas.csv` — paired V3−V2, V2−V1, V1−V0, and context deltas.", "- `results/problem_validation/p02/p02_mechanism_summary.csv` — V3 mechanism groups and distributions.", "- `results/problem_validation/p02/p02_conflict_subset.csv` and `_summary.csv` — per-run conflict subsets/target-node bootstrap CIs and aggregated summaries.", "- `results/problem_validation/p02/p02_function_controls.csv` — identity and shuffle controls.", "- `results/problem_validation/p02/p02_context_probe.csv` and `p02_context_stability.csv` — context readouts and activation norms.", "- `results/problem_validation/p02/plots/` — Figures A–C (PNG, 600 dpi TIFF, SVG, PDF) and panel-alignment / rendered-collision QA JSON.", ""]
     return "\n".join(lines)
 
 
@@ -524,7 +571,8 @@ def main(config_path: Path | None = None, allow_partial: bool = False) -> None:
     (result_root / "README.md").write_text(
         "# P0.2 Result Bundle\n\n"
         f"Run coverage: {len(data['runs'])}/{n_expected} dataset × seed runs.\n\n"
-        "The CSVs preserve per-seed results. Cross-dataset summaries use mean ± population SD; node-cluster bootstrap CIs remain per run. Figures A–C are diagnostic and are not formal baseline benchmark comparisons.\n\n"
+        "The CSVs preserve per-seed results. Cross-dataset summaries use mean ± population SD; node-cluster bootstrap CIs remain per run. Figures A–C are diagnostic and are not formal baseline benchmark comparisons. The Matplotlib panels pass the strict 1.5 pt alignment gate; source validation, PDF text-size audit, collision audit, and visual inspection are recorded in the figure QA files.\n\n"
+        "Contents: immediate metrics, cross-seed aggregates, paired deltas, mechanism summaries, per-run and aggregated conflict subsets, identity/shuffle controls, context probe metrics, context activation stability, and source-artifact manifest. Plots are provided as PNG, 600 dpi TIFF, editable SVG, and PDF.\n\n"
         "See `../../../../docs/problem_validation/p02_report.md` for protocol, interpretation, and evidence matrix.\n"
     )
     print(f"P0.2 summary generated: {len(data['runs'])}/{n_expected} dataset-seed runs; report=docs/problem_validation/p02_report.md")
