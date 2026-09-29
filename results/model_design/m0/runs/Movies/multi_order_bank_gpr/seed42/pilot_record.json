@@ -1,0 +1,24 @@
+{
+  "dataset": "Movies",
+  "variant": "multi_order_bank_gpr",
+  "seed": 42,
+  "best_epoch": 153,
+  "val_acc": 0.5743851065635681,
+  "val_macro_f1": 0.5055711281290074,
+  "params": 230280,
+  "checkpoint": "outputs/model_design/m0/checkpoints/Movies_multi_order_bank_gpr_seed42.pt",
+  "diagnostics": {
+    "gamma_text": [
+      0.3732500374317169,
+      0.3219520151615143,
+      0.31104958057403564,
+      0.2832632064819336
+    ],
+    "gamma_visual": [
+      0.36364367604255676,
+      0.3415205776691437,
+      0.33591586351394653,
+      0.32807132601737976
+    ]
+  }
+}

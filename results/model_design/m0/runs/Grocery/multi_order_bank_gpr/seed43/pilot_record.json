@@ -1,0 +1,24 @@
+{
+  "dataset": "Grocery",
+  "variant": "multi_order_bank_gpr",
+  "seed": 43,
+  "best_epoch": 96,
+  "val_acc": 0.838067352771759,
+  "val_macro_f1": 0.7498254306943462,
+  "params": 230280,
+  "checkpoint": "outputs/model_design/m0/checkpoints/Grocery_multi_order_bank_gpr_seed43.pt",
+  "diagnostics": {
+    "gamma_text": [
+      0.336249977350235,
+      0.32031190395355225,
+      0.3219510018825531,
+      0.3162344992160797
+    ],
+    "gamma_visual": [
+      0.31425797939300537,
+      0.3056879937648773,
+      0.3057834804058075,
+      0.303249716758728
+    ]
+  }
+}

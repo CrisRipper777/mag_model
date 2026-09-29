@@ -1,0 +1,9 @@
+Dataset,Variant,Modality,γ0/γ1/γ2/γ3
+Movies,identity_transport,text,0.253/0.257/0.245/0.244
+Movies,identity_transport,visual,0.252/0.257/0.247/0.245
+Movies,orthogonal_transport,text,0.252/0.258/0.247/0.244
+Movies,orthogonal_transport,visual,0.246/0.258/0.250/0.246
+Grocery,identity_transport,text,0.231/0.259/0.260/0.250
+Grocery,identity_transport,visual,0.233/0.255/0.261/0.252
+Grocery,orthogonal_transport,text,0.238/0.258/0.256/0.249
+Grocery,orthogonal_transport,visual,0.240/0.255/0.256/0.249

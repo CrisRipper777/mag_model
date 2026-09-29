@@ -1,0 +1,7 @@
+Dataset,Variant,Val Acc (%) mean ± population SD,Val Macro-F1 (%) mean ± population SD,Encoder params,Encoder + NC head params,Best epoch mean ± population SD,Best epoch seed42/43/44
+Movies,identity_transport,50.71 ± 0.86,29.81 ± 2.17,745420,748000,39.3 ± 4.9,45/33/40
+Movies,orthogonal_transport,52.96 ± 0.26,38.03 ± 2.44,746460,749040,64.3 ± 12.1,77/48/68
+Movies,multi_order_bank_gpr,57.64 ± 0.19,49.73 ± 0.72,230280,232860,125.7 ± 20.7,153/121/103
+Grocery,identity_transport,81.00 ± 0.13,72.47 ± 0.64,745420,748000,132.7 ± 19.9,160/125/113
+Grocery,orthogonal_transport,81.52 ± 0.21,72.19 ± 0.30,746460,749040,95.0 ± 22.1,69/123/93
+Grocery,multi_order_bank_gpr,83.57 ± 0.19,75.52 ± 0.72,230280,232860,130.0 ± 28.2,165/96/129

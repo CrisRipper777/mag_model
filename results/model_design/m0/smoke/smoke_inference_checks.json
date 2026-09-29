@@ -1,0 +1,14 @@
+[
+  {
+    "mode": "identity_transport",
+    "max_abs_forward_inference_error": 9.417533874511719e-06,
+    "output_finite": true,
+    "checkpoint_finite": true
+  },
+  {
+    "mode": "orthogonal_transport",
+    "max_abs_forward_inference_error": 6.474554538726807e-06,
+    "output_finite": true,
+    "checkpoint_finite": true
+  }
+]
