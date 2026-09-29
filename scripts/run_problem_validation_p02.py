@@ -161,11 +161,12 @@ def preflight_all_sources(config: dict[str, Any], device: torch.device) -> dict[
             p00_metrics = json.loads(p00_metrics_path.read_text())
             if int(p01_metrics.get("run_seed", -1)) != int(seed) or int(p00_metrics.get("run_seed", -1)) != int(seed):
                 raise RuntimeError(f"P0.0/P0.1 metrics seed mismatch for {dataset} seed{seed}")
+            p01_split_audit = p01_metrics.get("split_audit", {})
             for field, expected_size in (("original_train_size", split["split_audit"]["original_train_size"]),
                                          ("original_val_size", split["split_audit"]["original_val_size"]),
                                          ("original_test_size", split["split_audit"]["original_test_index_count"])):
-                if int(p01_metrics.get(field, -1)) != int(expected_size):
-                    raise RuntimeError(f"P0.1 {field} mismatch for {dataset} seed{seed}")
+                if int(p01_split_audit.get(field, -1)) != int(expected_size):
+                    raise RuntimeError(f"P0.1 split_audit.{field} mismatch for {dataset} seed{seed}")
             p00_split = p00_metrics.get("split_metadata", {})
             if int(p00_split.get("probe_train_size", -1)) != split["split_audit"]["probe_train_size"] or int(p00_split.get("probe_calib_size", -1)) != split["split_audit"]["probe_calib_size"] or int(p00_split.get("original_val_size", -1)) != split["split_audit"]["original_val_size"]:
                 raise RuntimeError(f"P0.0 probe/original-val split metadata mismatch for {dataset} seed{seed}")
