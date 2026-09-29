@@ -97,3 +97,18 @@ def test_no_test_artifact_access(tmp_path: Path, monkeypatch) -> None:
     result = summarize.load_existing_edge_artifacts(tmp_path, datasets=("Movies",), seeds=(42,))
     assert list(result) == [("Movies", 42)]
     assert loaded_names == ["edge_analysis.pt"]
+
+
+def test_plot_uses_three_seed_text_visual_profiles(tmp_path: Path) -> None:
+    rows = []
+    for modality in ("Text", "Visual"):
+        for seed in (42, 43, 44):
+            row = {"dataset": "Movies", "modality": modality, "similarity_space": "probe", "seed": seed}
+            row["overall_beneficial_rate"] = 0.6
+            row["overall_harmful_rate"] = 0.4
+            for q in range(1, 6):
+                row[f"q{q}_beneficial_rate"] = 0.5 + q * 0.02
+                row[f"q{q}_harmful_rate"] = 0.5 - q * 0.02
+            rows.append(row)
+    path = summarize.make_dataset_plot("Movies", rows, tmp_path)
+    assert path.is_file() and path.stat().st_size > 0

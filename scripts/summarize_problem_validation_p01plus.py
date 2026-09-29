@@ -153,6 +153,24 @@ def _percentile_ci(samples: np.ndarray) -> tuple[float, float]:
     return float(low), float(high)
 
 
+def read_csv_rows(path: Path) -> list[dict[str, Any]]:
+    string_fields = {"dataset", "modality", "similarity_space", "bootstrap_resampling_unit"}
+    int_fields = {"seed", "sampled_relation_count", "bootstrap_replicates", "bootstrap_seed"}
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        rows = []
+        for raw in csv.DictReader(handle):
+            row: dict[str, Any] = {}
+            for key, value in raw.items():
+                if key in string_fields:
+                    row[key] = value
+                elif key in int_fields:
+                    row[key] = int(value)
+                else:
+                    row[key] = float(value) if value else float("nan")
+            rows.append(row)
+    return rows
+
+
 def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str] | None = None) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if fieldnames is None:
@@ -194,7 +212,9 @@ def make_dataset_plot(dataset: str, per_seed: list[dict[str, Any]], output_dir: 
     fig, axes = plt.subplots(1, 2, figsize=(11.5, 4.6), sharey=True, constrained_layout=True)
     q = np.arange(1, 6)
     for ax, modality in zip(axes, MODALITIES, strict=True):
-        seeds = [row for row in rows if row["modality"] == modality]
+        seeds = [row for row in rows if row["modality"].lower() == modality.lower()]
+        if len(seeds) != len(SEEDS):
+            raise AssertionError(f"Expected three {modality} seeds for {dataset}, got {len(seeds)}")
         for outcome, color in colors.items():
             metric = f"q{{i}}_{outcome}_rate"
             values = np.asarray([[row[metric.format(i=i)] for i in q] for row in seeds], dtype=np.float64)
@@ -428,27 +448,36 @@ def summarize(
     analysis_code_commit: str,
     bootstrap_replicates: int = 1000,
     bootstrap_seed: int = 42,
+    reuse_existing_csv: bool = False,
 ) -> tuple[Path, Path, Path]:
-    artifacts = load_existing_edge_artifacts(input_root)
-    if len(artifacts) != len(DATASETS) * len(SEEDS):
-        raise AssertionError(f"Expected 15 edge artifacts, got {len(artifacts)}")
-    rows: list[dict[str, Any]] = []
-    for dataset in DATASETS:
-        for seed in SEEDS:
-            rows.extend(analyze_run(
-                dataset,
-                seed,
-                artifacts[(dataset, seed)],
-                bootstrap_replicates=bootstrap_replicates,
-                bootstrap_seed=bootstrap_seed,
-            ))
-    if len(rows) != 5 * 3 * 2 * 2:
-        raise AssertionError(f"Expected 60 per-seed result rows, got {len(rows)}")
-    cross = aggregate_seeds(rows)
     output_root.mkdir(parents=True, exist_ok=True)
     per_seed_path = output_root / "p01plus_per_seed.csv"
     cross_path = output_root / "p01plus_cross_dataset.csv"
-    write_csv(per_seed_path, rows)
+    if reuse_existing_csv:
+        if not per_seed_path.is_file():
+            raise FileNotFoundError(f"Cannot reuse missing statistics CSV: {per_seed_path}")
+        rows = read_csv_rows(per_seed_path)
+        if len(rows) != 5 * 3 * 2 * 2:
+            raise AssertionError(f"Expected 60 per-seed result rows, got {len(rows)}")
+        cross = aggregate_seeds(rows)
+    else:
+        artifacts = load_existing_edge_artifacts(input_root)
+        if len(artifacts) != len(DATASETS) * len(SEEDS):
+            raise AssertionError(f"Expected 15 edge artifacts, got {len(artifacts)}")
+        rows: list[dict[str, Any]] = []
+        for dataset in DATASETS:
+            for seed in SEEDS:
+                rows.extend(analyze_run(
+                    dataset,
+                    seed,
+                    artifacts[(dataset, seed)],
+                    bootstrap_replicates=bootstrap_replicates,
+                    bootstrap_seed=bootstrap_seed,
+                ))
+        if len(rows) != 5 * 3 * 2 * 2:
+            raise AssertionError(f"Expected 60 per-seed result rows, got {len(rows)}")
+        cross = aggregate_seeds(rows)
+        write_csv(per_seed_path, rows)
     write_csv(cross_path, cross)
     plot_dir = output_root / "plots"
     plot_paths = [make_dataset_plot(dataset, rows, plot_dir) for dataset in DATASETS]
@@ -472,6 +501,7 @@ def main() -> None:
     parser.add_argument("--analysis-code-commit", default="unknown (supply the implementation commit)")
     parser.add_argument("--bootstrap-replicates", type=int, default=1000)
     parser.add_argument("--bootstrap-seed", type=int, default=42)
+    parser.add_argument("--reuse-existing-csv", action="store_true", help="Regenerate plots/report from the existing per-seed CSV without reloading artifacts or rerunning bootstrap.")
     args = parser.parse_args()
     # The bootstrap uses many short vector operations; large BLAS pools make
     # these much slower through oversubscription. Keep this deterministic CPU
@@ -484,6 +514,7 @@ def main() -> None:
             analysis_code_commit=args.analysis_code_commit,
             bootstrap_replicates=args.bootstrap_replicates,
             bootstrap_seed=args.bootstrap_seed,
+            reuse_existing_csv=args.reuse_existing_csv,
         )
     for path in paths:
         print(path.relative_to(ROOT))
