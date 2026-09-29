@@ -1,0 +1,48 @@
+# Source of truth for the P0.2 local problem-validation experiment.
+analysis:
+  datasets: [Movies, Toys, Grocery, ele-fashion, Reddit-S]
+  run_seeds: [42, 43, 44]
+  variants: [uniform, similarity_scalar, learned_scalar, conditional_feature]
+
+  data_split_seed: 42
+  probe_split_seed: 42
+  split_cache: outputs/problem_validation/splits/{dataset}.pt
+  frozen_embedding: outputs/problem_validation/{dataset}/seed{seed}/semantic_embeddings.pt
+  p01_reference: outputs/problem_validation/{dataset}/seed{seed}/edge_analysis.pt
+  p01_metrics: outputs/problem_validation/{dataset}/seed{seed}/metrics.json
+  output_root: outputs/problem_validation/p02
+  results_root: results/problem_validation/p02
+
+  semantic_dim: 128
+  relation_dim: 64
+  relation_dropout: 0.1
+  scalar_gate_scale: 2.0
+  feature_modulation_scale: 0.5
+  similarity_init_alpha: 1.0
+  similarity_init_beta: 0.0
+
+  context_max_order: 3
+  target_batch_size: 4096
+  relation_edge_chunk_size: 32768
+  inference_edge_chunk_size: 32768
+  edge_contribution_audit_edges: 256
+  edge_contribution_audit_seed: 42
+
+  optimizer:
+    name: adamw
+    lr: 0.001
+    weight_decay: 0.0001
+  epochs: 300
+  patience: 30
+  min_epoch: 30
+  min_delta: 0.0001
+  grad_clip: 1.0
+
+  function_shuffle_repeats: 5
+  shuffle_seed_base: 100
+  context_probe_seed_offset: 10000
+  node_bootstrap_replicates: 1000
+  node_bootstrap_seed: 42
+
+  device: cuda:0
+  evaluate_test: false
