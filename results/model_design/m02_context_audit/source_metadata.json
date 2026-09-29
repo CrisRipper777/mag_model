@@ -1,0 +1,145 @@
+{
+  "source_branch": "exp/contextual_relation_m02",
+  "source_sha": "8e2ddc540d6662063539f4c63abbfa7a1b2d659d",
+  "new_branch": "exp/m02_context_specificity_audit",
+  "audit_branch_base_sha": "8e2ddc540d6662063539f4c63abbfa7a1b2d659d",
+  "working_tree_status_before_branch_creation": "clean",
+  "training_performed": false,
+  "test_metrics_read": false,
+  "test_labels_used_for_evaluation": false,
+  "link_prediction_performed": false,
+  "checkpoint_presence_preflight": "passed",
+  "checkpoints": [
+    {
+      "path": "outputs/model_design/m02/pilot/checkpoints/Movies_seed42.pt",
+      "exists": true,
+      "size_bytes": 3295146,
+      "sha256": "07908b92a436d4a46d6999fafccbd3cbcb85a0d74431ae54d50589de28955e0d"
+    },
+    {
+      "path": "outputs/model_design/m02/pilot/checkpoints/Movies_seed43.pt",
+      "exists": true,
+      "size_bytes": 3295146,
+      "sha256": "5fb0164e15227cf4a1d55ccd2c07e5732517d8d39f5d7c2a869dc77dc1110cec"
+    },
+    {
+      "path": "outputs/model_design/m02/pilot/checkpoints/Movies_seed44.pt",
+      "exists": true,
+      "size_bytes": 3295146,
+      "sha256": "5b669fe97fc05a351acdcf9ca62e5f65b434fee3245c6227d56f0ffcce56961c"
+    },
+    {
+      "path": "outputs/model_design/m02/pilot/checkpoints/Grocery_seed42.pt",
+      "exists": true,
+      "size_bytes": 3295254,
+      "sha256": "bb14ce41ebe49b0a5130e350000cb479eab5401d21d8c44a2d17bc7966e6e423"
+    },
+    {
+      "path": "outputs/model_design/m02/pilot/checkpoints/Grocery_seed43.pt",
+      "exists": true,
+      "size_bytes": 3295254,
+      "sha256": "481106ace2abfc9693eb70d1e71cce66a87dde40d669e14e32506473e4dea131"
+    },
+    {
+      "path": "outputs/model_design/m02/pilot/checkpoints/Grocery_seed44.pt",
+      "exists": true,
+      "size_bytes": 3295254,
+      "sha256": "c9872ec40e5517a5a62717b0f00e403a8cade6fa824cb5b5ac8c166410939d8d"
+    }
+  ],
+  "frozen_source_sha256_before": {
+    "src/models/relation_transport_m0.py": "951572639c77205c04bc481c8aadfb6bc25031b138ed9f52575ed0922a229045",
+    "src/models/relation_transport_m02.py": "af6aeff4516ffdc556ad2c1d0c6ebbd167e2ed9f7acb48b73e90cab9e169ee65",
+    "src/tasks/nc.py": "3b1bf13fbb627f4e96db5e29d4799f761147be3609714b554dc76ffe598897e3",
+    "src/tasks/lp.py": "0b69db942ff287538302daca6d42650d641a71b5dcf52aab43b8f59d30a2db59"
+  },
+  "stale_context_diagnostics_before": {
+    "path": "results/model_design/m02/context_diagnostics.csv",
+    "data_rows": 24,
+    "modalities": [
+      "text"
+    ]
+  },
+  "corrected_context_diagnostics": {
+    "rows": 48,
+    "modalities": [
+      "text",
+      "visual"
+    ],
+    "original_file_repaired": "/hdd1/DataInHere/YHF/mag_model/results/model_design/m02/context_diagnostics.csv",
+    "audit_copy": "/hdd1/DataInHere/YHF/mag_model/results/model_design/m02_context_audit/corrected_context_diagnostics.csv"
+  },
+  "post_audit_model_and_task_hashes": {
+    "src/models/relation_transport_m0.py": "951572639c77205c04bc481c8aadfb6bc25031b138ed9f52575ed0922a229045",
+    "src/models/relation_transport_m02.py": "af6aeff4516ffdc556ad2c1d0c6ebbd167e2ed9f7acb48b73e90cab9e169ee65",
+    "src/tasks/nc.py": "3b1bf13fbb627f4e96db5e29d4799f761147be3609714b554dc76ffe598897e3",
+    "src/tasks/lp.py": "0b69db942ff287538302daca6d42650d641a71b5dcf52aab43b8f59d30a2db59"
+  },
+  "per_run_state_hashes": [
+    {
+      "dataset": "Movies",
+      "seed": 42,
+      "model_state_sha256": "a721a80ea7887a057adec0954d48b52f216114a3b5feaf04f0ff7bef20159747",
+      "head_state_sha256": "f2d5d82f9f49eb5d471c044797e37ae6e9bbfda04f657199e38ec04ce898583f"
+    },
+    {
+      "dataset": "Movies",
+      "seed": 43,
+      "model_state_sha256": "a1335a21e52df246e99bb43a3f5b9697143623699816bc17925c0c247c5fe167",
+      "head_state_sha256": "c237dd07ad4d2df63d8bcc3f2febe0bc7a4907503b48297e5c40acdfd75b2595"
+    },
+    {
+      "dataset": "Movies",
+      "seed": 44,
+      "model_state_sha256": "24ed558190277bb3b3afb4297da461a214557d54955d225d03fa11345bcb2593",
+      "head_state_sha256": "3991711ef120663c5829f5322630d01fdc9f069d2600cf2bfba461ea8125ff02"
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 42,
+      "model_state_sha256": "cf311c911e2dbbc8fb35175ee73b879c2f43b693f30c359fbd38569182734058",
+      "head_state_sha256": "4b0e90b376ae743ef94fee66c43928d675a4d004c77d640d375d6e3f13b32e8d"
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 43,
+      "model_state_sha256": "4ffe0f89fe819e64ebfe8a23b450ffdd3d5e6edc1b7cd8255322547a87c631d7",
+      "head_state_sha256": "d15afe4e8f57616473ab915546ee4a98b80f31cda3078a243b4def2ee75e17c3"
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 44,
+      "model_state_sha256": "56747284559557206a2cb62fee14e707f399efd954c0974ca201ac5c3aa00fbe",
+      "head_state_sha256": "f79715c3f3dce93d0cf765fe0b0842999e4dae6bd744a60a9a17e69588c3c63e"
+    }
+  ],
+  "checkpoint_sha256_after": [
+    {
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/model_design/m02/pilot/checkpoints/Movies_seed42.pt",
+      "sha256": "07908b92a436d4a46d6999fafccbd3cbcb85a0d74431ae54d50589de28955e0d"
+    },
+    {
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/model_design/m02/pilot/checkpoints/Movies_seed43.pt",
+      "sha256": "5fb0164e15227cf4a1d55ccd2c07e5732517d8d39f5d7c2a869dc77dc1110cec"
+    },
+    {
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/model_design/m02/pilot/checkpoints/Movies_seed44.pt",
+      "sha256": "5b669fe97fc05a351acdcf9ca62e5f65b434fee3245c6227d56f0ffcce56961c"
+    },
+    {
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/model_design/m02/pilot/checkpoints/Grocery_seed42.pt",
+      "sha256": "bb14ce41ebe49b0a5130e350000cb479eab5401d21d8c44a2d17bc7966e6e423"
+    },
+    {
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/model_design/m02/pilot/checkpoints/Grocery_seed43.pt",
+      "sha256": "481106ace2abfc9693eb70d1e71cce66a87dde40d669e14e32506473e4dea131"
+    },
+    {
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/model_design/m02/pilot/checkpoints/Grocery_seed44.pt",
+      "sha256": "c9872ec40e5517a5a62717b0f00e403a8cade6fa824cb5b5ac8c166410939d8d"
+    }
+  ],
+  "all_model_and_classifier_state_dicts_unchanged": true,
+  "validation_rows_evaluated": true,
+  "test_split_metrics_or_labels_used": false
+}
