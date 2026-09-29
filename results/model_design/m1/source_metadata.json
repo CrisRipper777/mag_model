@@ -1,0 +1,8 @@
+{
+  "source_branch": "exp/relation_transport_m0",
+  "source_sha": "749d1b4f20c13886a308cddb4770e1e25a865ffd",
+  "new_branch": "exp/interaction_provenance_m1",
+  "initial_head": "749d1b4f20c13886a308cddb4770e1e25a865ffd",
+  "initial_git_status": "clean after branch creation; git status --porcelain was empty",
+  "m02_branch_excluded": "exp/m02_context_specificity_audit @ d25b14d4fff34c630fc2ba3622dd921cf2cc5983"
+}
