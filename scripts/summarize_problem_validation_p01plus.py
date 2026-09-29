@@ -394,12 +394,14 @@ def generate_report(
     for dataset in DATASETS:
         for modality in MODALITIES:
             row = cross_by_key[(dataset, modality.title(), "probe")]
+            base_metrics = (
+                "overall_beneficial_rate", "overall_harmful_rate", "overall_zero_rate",
+                "margin_overall_beneficial_rate", "margin_overall_harmful_rate", "margin_overall_zero_rate",
+            )
             lines.append(
                 f"| {dataset} | {modality.title()} | "
-                + " | ".join(_fmt_agg(row, metric) for metric in (
-                    "overall_beneficial_rate", "overall_harmful_rate", "overall_zero_rate",
-                    "margin_overall_beneficial_rate", "margin_overall_harmful_rate", "margin_overall_zero_rate",
-                )) + " |"
+                + " | ".join(_fmt_agg(row, metric, digits=6 if metric.endswith("zero_rate") else 3) for metric in base_metrics)
+                + " |"
             )
 
     lines.extend(["", "## 4. Probe-Similarity Quintile Utility Profiles", "",
@@ -498,6 +500,7 @@ def generate_report(
 
     probe_rows = [row for row in per_seed if row["similarity_space"] == "probe"]
     q1_nonzero = sum(float(row["q1_beneficial_rate"]) > 0.0 for row in probe_rows)
+    q5_harm_nonzero = sum(float(row["q5_harmful_rate"]) > 0.0 for row in probe_rows)
     q1_lifts = [cross_by_key[(dataset, modality.title(), "probe")]["q1_beneficial_lift_mean"] for dataset in DATASETS for modality in MODALITIES]
     q5_harm_lifts = [cross_by_key[(dataset, modality.title(), "probe")]["q5_harmful_lift_mean"] for dataset in DATASETS for modality in MODALITIES]
     q1_pos, q1_neg = sum(value > 0.0 for value in q1_lifts), sum(value < 0.0 for value in q1_lifts)
@@ -510,7 +513,7 @@ def generate_report(
     lines.extend(["## 9. Revised Interpretation of P0.1", "",
                   f"1. **Does low-sim beneficial existence remain true?** Yes: `P(U > 0 | Q1) > 0` in {q1_nonzero}/{len(probe_rows)} probe-similarity dataset × seed × modality rows. This is counterexample existence in the fixed sampled population.",
                   f"2. **Is low-sim beneficial enriched or depleted?** Across 10 dataset × modality mean lifts, Q1 beneficial lift is positive in {q1_pos} and negative in {q1_neg}; all-three-seed node-bootstrap CIs are negative in {q1_ci_neg}/10 comparisons (positive in {q1_ci_pos}/10). Interpret each run-specific interval in the CSV.",
-                  f"3. **Are high-sim harmful relations enriched?** Q5 harmful lift is positive in {q5h_pos} and negative in {q5h_neg} of 10 dataset × modality mean comparisons; all-three-seed node-bootstrap CIs are negative in {q5h_ci_neg}/10, while {q5h_ci_mixed}/10 have at least one interval spanning zero (positive in {q5h_ci_pos}/10). A nonzero Q5 harmful rate by itself is not enrichment.",
+                  f"3. **Are high-sim harmful relations enriched?** Q5 harmful rate is nonzero in {q5_harm_nonzero}/{len(probe_rows)} probe dataset × seed × modality rows, so harmful counterexamples exist. Its lift is positive in {q5h_pos} and negative in {q5h_neg} of 10 dataset × modality mean comparisons; all-three-seed node-bootstrap CIs are negative in {q5h_ci_neg}/10, while {q5h_ci_mixed}/10 have at least one interval spanning zero (positive in {q5h_ci_pos}/10). A nonzero Q5 harmful rate by itself is not enrichment.",
                   "4. **Where is similarity informative?** Use the sign-rate ranges and five-bin monotonic profiles in Section 6. These are descriptive properties, not significance claims.",
                   "5. **Where is similarity insufficient?** Probe similarity stratifies CE utility sign in every dataset and modality, but strength differs: Grocery is strongest, Movies weakest, and Reddit-S Visual is less monotone. This sign result does not establish that similarity predicts the magnitude of utility.",
                   "",
