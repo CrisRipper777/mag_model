@@ -1,0 +1,24 @@
+{
+  "source_branch": "exp/provenance_evidence_m2",
+  "source_sha": "5ee0a5d5f095a5e43425188a6e8ea695d0b7c658",
+  "experiment_branch": "exp/adaptive_evidence_assimilation_m21",
+  "working_tree_clean_at_branch_creation": true,
+  "source_checkpoint": "frozen M2 commit; no source files modified",
+  "frozen_files": [
+    "src/models/relation_transport_m0.py",
+    "src/models/interaction_provenance_m1.py",
+    "src/models/provenance_evidence_m2.py",
+    "src/tasks/nc.py",
+    "src/tasks/lp.py",
+    "dataset splits"
+  ],
+  "protocol": {
+    "datasets": ["Movies", "Grocery"],
+    "seeds": [42, 43, 44],
+    "task": "NC only",
+    "training_split": "original train",
+    "selection_split": "original validation",
+    "test_evaluation": false,
+    "link_prediction": false
+  }
+}

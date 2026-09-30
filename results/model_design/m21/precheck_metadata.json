@@ -1,0 +1,13 @@
+{
+  "source": "six existing formal M2-P validation checkpoints; M2-S used only for historical per-class F1",
+  "test_evaluation": false,
+  "training": false,
+  "descriptive_correlations_not_causal": true,
+  "device": "cuda:0",
+  "output_files": [
+    "precheck_summary.csv",
+    "precheck_correctness.csv",
+    "precheck_classwise.csv",
+    "precheck_correlations.csv"
+  ]
+}
