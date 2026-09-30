@@ -1,0 +1,216 @@
+{
+  "source_branch": "exp/interaction_provenance_m1",
+  "source_sha": "fdc05a1af05a93a0c6d4c9d68b903f6cf018d811",
+  "source_working_tree_status_at_start": "clean",
+  "new_branch": "exp/m11_corrected_provenance_audit",
+  "current_head_at_audit_start": "fdc05a1af05a93a0c6d4c9d68b903f6cf018d811",
+  "current_working_tree_status_at_audit_start": "?? scripts/audit_interaction_provenance_m11.py\n?? tests/test_interaction_provenance_m11_audit.py",
+  "protocol": {
+    "audit": "M1.1 corrected interaction-provenance attribution",
+    "training": false,
+    "fine_tuning": false,
+    "task": "original NC validation only",
+    "test_evaluation": false,
+    "LP": false,
+    "datasets": [
+      "Movies",
+      "Grocery"
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "semantic_invariance_tolerance": 2e-06,
+    "max_component_geometry_edges_per_order": 8192
+  },
+  "device": "cuda:0",
+  "deterministic_algorithms": true,
+  "cublas_workspace_config": ":4096:8",
+  "cuda_memory_fraction_cap": 0.3,
+  "checkpoint_hashes_at_start": {
+    "outputs/model_design/m1/pilot/Movies/seed42/best_checkpoint.pt": "70de77b3e8ddcf7c4a408ebe6602c83a15bd463652d3b2bea75360a96a273b15",
+    "outputs/model_design/m1/pilot/Movies/seed43/best_checkpoint.pt": "4e6dfe5bcfc0c8644a19dc0fe9366071f26ba19541adcd3ba81850c9008d0323",
+    "outputs/model_design/m1/pilot/Movies/seed44/best_checkpoint.pt": "2e5af4d3aaf72c70718dcb82605a3e80d0152541951cbbd7fa944a0242cf5284",
+    "outputs/model_design/m1/pilot/Grocery/seed42/best_checkpoint.pt": "e43d85102c40d78b74884afbc694427846aa44df1a25a569ce23df8534ec1ad7",
+    "outputs/model_design/m1/pilot/Grocery/seed43/best_checkpoint.pt": "36a9839206d77385e5054e3a9806ee769880dd918a1598030cd13005d392fedc",
+    "outputs/model_design/m1/pilot/Grocery/seed44/best_checkpoint.pt": "33c63e1ae0c647e563ceecf7001034774ee8fb47df44141616e96723e934d448"
+  },
+  "checkpoint_runs": [
+    {
+      "dataset": "Movies",
+      "seed": 42,
+      "checkpoint": "outputs/model_design/m1/pilot/Movies/seed42/best_checkpoint.pt",
+      "checkpoint_sha256_before": "70de77b3e8ddcf7c4a408ebe6602c83a15bd463652d3b2bea75360a96a273b15",
+      "checkpoint_sha256_after": "70de77b3e8ddcf7c4a408ebe6602c83a15bd463652d3b2bea75360a96a273b15",
+      "model_tensor_sha256_before": "d166bbb82f07c9af17cc456c7b90f4157b5b6ba319d84d59c131b4636a5b72c2",
+      "model_tensor_sha256_after": "d166bbb82f07c9af17cc456c7b90f4157b5b6ba319d84d59c131b4636a5b72c2",
+      "head_tensor_sha256_before": "407f2a0f16ce7137f24cc7930329f37dc907584b3dbd1ef8f9720c7d9d104605",
+      "head_tensor_sha256_after": "407f2a0f16ce7137f24cc7930329f37dc907584b3dbd1ef8f9720c7d9d104605",
+      "full_validation": {
+        "val_acc": 0.5302939414978027,
+        "val_macro_f1": 0.4141271449102183
+      },
+      "checkpoint_metrics": {
+        "val_acc": 0.5302939414978027,
+        "val_macro_f1": 0.4141271449102183
+      },
+      "num_nodes": 16672,
+      "num_directed_edges": 160802,
+      "sampled_edges_per_order": 8192,
+      "semantic_max_abs_error": 0.0,
+      "full_atom_reconstruction_max_abs_error": 0.0,
+      "full_provenance_step_max_abs_error": 0.0,
+      "model_head_unchanged": true,
+      "checkpoint_unchanged": true
+    },
+    {
+      "dataset": "Movies",
+      "seed": 43,
+      "checkpoint": "outputs/model_design/m1/pilot/Movies/seed43/best_checkpoint.pt",
+      "checkpoint_sha256_before": "4e6dfe5bcfc0c8644a19dc0fe9366071f26ba19541adcd3ba81850c9008d0323",
+      "checkpoint_sha256_after": "4e6dfe5bcfc0c8644a19dc0fe9366071f26ba19541adcd3ba81850c9008d0323",
+      "model_tensor_sha256_before": "bdff2e63cf8f683a3cbf66a90342e5421cde25ae28c282b1e9b5a2d1b8d32db3",
+      "model_tensor_sha256_after": "bdff2e63cf8f683a3cbf66a90342e5421cde25ae28c282b1e9b5a2d1b8d32db3",
+      "head_tensor_sha256_before": "43915d7dd3fe18accdc2e3ca28389a345461711c9883f8586a838a29a1b8dbbb",
+      "head_tensor_sha256_after": "43915d7dd3fe18accdc2e3ca28389a345461711c9883f8586a838a29a1b8dbbb",
+      "full_validation": {
+        "val_acc": 0.5284942984580994,
+        "val_macro_f1": 0.3275735012599355
+      },
+      "checkpoint_metrics": {
+        "val_acc": 0.5284942984580994,
+        "val_macro_f1": 0.3275735012599355
+      },
+      "num_nodes": 16672,
+      "num_directed_edges": 160802,
+      "sampled_edges_per_order": 8192,
+      "semantic_max_abs_error": 0.0,
+      "full_atom_reconstruction_max_abs_error": 0.0,
+      "full_provenance_step_max_abs_error": 0.0,
+      "model_head_unchanged": true,
+      "checkpoint_unchanged": true
+    },
+    {
+      "dataset": "Movies",
+      "seed": 44,
+      "checkpoint": "outputs/model_design/m1/pilot/Movies/seed44/best_checkpoint.pt",
+      "checkpoint_sha256_before": "2e5af4d3aaf72c70718dcb82605a3e80d0152541951cbbd7fa944a0242cf5284",
+      "checkpoint_sha256_after": "2e5af4d3aaf72c70718dcb82605a3e80d0152541951cbbd7fa944a0242cf5284",
+      "model_tensor_sha256_before": "359c911b1b705d901661754e11b0bd977030591607350d5d49610b43d4044c62",
+      "model_tensor_sha256_after": "359c911b1b705d901661754e11b0bd977030591607350d5d49610b43d4044c62",
+      "head_tensor_sha256_before": "4e777dd72e97556643131ab4131b7135493015bacd4c582a9571eea21acf7fa5",
+      "head_tensor_sha256_after": "4e777dd72e97556643131ab4131b7135493015bacd4c582a9571eea21acf7fa5",
+      "full_validation": {
+        "val_acc": 0.531193733215332,
+        "val_macro_f1": 0.38509696229288215
+      },
+      "checkpoint_metrics": {
+        "val_acc": 0.531193733215332,
+        "val_macro_f1": 0.38509696229288215
+      },
+      "num_nodes": 16672,
+      "num_directed_edges": 160802,
+      "sampled_edges_per_order": 8192,
+      "semantic_max_abs_error": 0.0,
+      "full_atom_reconstruction_max_abs_error": 0.0,
+      "full_provenance_step_max_abs_error": 0.0,
+      "model_head_unchanged": true,
+      "checkpoint_unchanged": true
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 42,
+      "checkpoint": "outputs/model_design/m1/pilot/Grocery/seed42/best_checkpoint.pt",
+      "checkpoint_sha256_before": "e43d85102c40d78b74884afbc694427846aa44df1a25a569ce23df8534ec1ad7",
+      "checkpoint_sha256_after": "e43d85102c40d78b74884afbc694427846aa44df1a25a569ce23df8534ec1ad7",
+      "model_tensor_sha256_before": "d9b0aebcf32fbc42e2942c235c65b91009ab71fadcbe5cc413e42b4b877b4ce9",
+      "model_tensor_sha256_after": "d9b0aebcf32fbc42e2942c235c65b91009ab71fadcbe5cc413e42b4b877b4ce9",
+      "head_tensor_sha256_before": "2b99d3213587118d8b2ec2c1e9908ef6fb8535274fc2be823ec447f4c1077f74",
+      "head_tensor_sha256_after": "2b99d3213587118d8b2ec2c1e9908ef6fb8535274fc2be823ec447f4c1077f74",
+      "full_validation": {
+        "val_acc": 0.8084919452667236,
+        "val_macro_f1": 0.7254566239243061
+      },
+      "checkpoint_metrics": {
+        "val_acc": 0.8084919452667236,
+        "val_macro_f1": 0.7254566239243061
+      },
+      "num_nodes": 17074,
+      "num_directed_edges": 142262,
+      "sampled_edges_per_order": 8192,
+      "semantic_max_abs_error": 0.0,
+      "full_atom_reconstruction_max_abs_error": 0.0,
+      "full_provenance_step_max_abs_error": 0.0,
+      "model_head_unchanged": true,
+      "checkpoint_unchanged": true
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 43,
+      "checkpoint": "outputs/model_design/m1/pilot/Grocery/seed43/best_checkpoint.pt",
+      "checkpoint_sha256_before": "36a9839206d77385e5054e3a9806ee769880dd918a1598030cd13005d392fedc",
+      "checkpoint_sha256_after": "36a9839206d77385e5054e3a9806ee769880dd918a1598030cd13005d392fedc",
+      "model_tensor_sha256_before": "8863f501823d273b9387665ddd370c30d03347743c46b59d11a6721e2b8814be",
+      "model_tensor_sha256_after": "8863f501823d273b9387665ddd370c30d03347743c46b59d11a6721e2b8814be",
+      "head_tensor_sha256_before": "c85148ff48f74005a192d3f5ef7664cbac3f495e17b3e084a8baf174d10380a5",
+      "head_tensor_sha256_after": "c85148ff48f74005a192d3f5ef7664cbac3f495e17b3e084a8baf174d10380a5",
+      "full_validation": {
+        "val_acc": 0.810834527015686,
+        "val_macro_f1": 0.6973653939950953
+      },
+      "checkpoint_metrics": {
+        "val_acc": 0.810834527015686,
+        "val_macro_f1": 0.6973653939950953
+      },
+      "num_nodes": 17074,
+      "num_directed_edges": 142262,
+      "sampled_edges_per_order": 8192,
+      "semantic_max_abs_error": 0.0,
+      "full_atom_reconstruction_max_abs_error": 0.0,
+      "full_provenance_step_max_abs_error": 0.0,
+      "model_head_unchanged": true,
+      "checkpoint_unchanged": true
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 44,
+      "checkpoint": "outputs/model_design/m1/pilot/Grocery/seed44/best_checkpoint.pt",
+      "checkpoint_sha256_before": "33c63e1ae0c647e563ceecf7001034774ee8fb47df44141616e96723e934d448",
+      "checkpoint_sha256_after": "33c63e1ae0c647e563ceecf7001034774ee8fb47df44141616e96723e934d448",
+      "model_tensor_sha256_before": "d49f31f449ca4f61e2833f2b3823d21c527ca9b1b59f44d359c8659097da3a22",
+      "model_tensor_sha256_after": "d49f31f449ca4f61e2833f2b3823d21c527ca9b1b59f44d359c8659097da3a22",
+      "head_tensor_sha256_before": "7824b4b1a34dbdf7ab0c35143d3a71cbe3b15a5ccbeb4b948c29b59d7f8cb5e0",
+      "head_tensor_sha256_after": "7824b4b1a34dbdf7ab0c35143d3a71cbe3b15a5ccbeb4b948c29b59d7f8cb5e0",
+      "full_validation": {
+        "val_acc": 0.8193265199661255,
+        "val_macro_f1": 0.7116923965607235
+      },
+      "checkpoint_metrics": {
+        "val_acc": 0.8193265199661255,
+        "val_macro_f1": 0.7116923965607235
+      },
+      "num_nodes": 17074,
+      "num_directed_edges": 142262,
+      "sampled_edges_per_order": 8192,
+      "semantic_max_abs_error": 0.0,
+      "full_atom_reconstruction_max_abs_error": 0.0,
+      "full_provenance_step_max_abs_error": 0.0,
+      "model_head_unchanged": true,
+      "checkpoint_unchanged": true
+    }
+  ],
+  "checkpoint_hashes_at_end": {
+    "outputs/model_design/m1/pilot/Movies/seed42/best_checkpoint.pt": "70de77b3e8ddcf7c4a408ebe6602c83a15bd463652d3b2bea75360a96a273b15",
+    "outputs/model_design/m1/pilot/Movies/seed43/best_checkpoint.pt": "4e6dfe5bcfc0c8644a19dc0fe9366071f26ba19541adcd3ba81850c9008d0323",
+    "outputs/model_design/m1/pilot/Movies/seed44/best_checkpoint.pt": "2e5af4d3aaf72c70718dcb82605a3e80d0152541951cbbd7fa944a0242cf5284",
+    "outputs/model_design/m1/pilot/Grocery/seed42/best_checkpoint.pt": "e43d85102c40d78b74884afbc694427846aa44df1a25a569ce23df8534ec1ad7",
+    "outputs/model_design/m1/pilot/Grocery/seed43/best_checkpoint.pt": "36a9839206d77385e5054e3a9806ee769880dd918a1598030cd13005d392fedc",
+    "outputs/model_design/m1/pilot/Grocery/seed44/best_checkpoint.pt": "33c63e1ae0c647e563ceecf7001034774ee8fb47df44141616e96723e934d448"
+  },
+  "all_checkpoints_unchanged": true,
+  "all_model_head_states_unchanged": true,
+  "all_semantic_invariance_checks_passed": true,
+  "maximum_full_atom_reconstruction_error": 0.0,
+  "maximum_full_provenance_step_error": 0.0
+}
