@@ -90,13 +90,16 @@ def test_cross_off_equals_tanh_norm_relation_plus_effect():
 
 def test_corrected_component_off_does_not_include_cross_bias():
     model = _model()
+    relation, effect = torch.randn(7, 64), torch.randn(7, 128)
+    before = interaction_atom_components(model, relation, effect, "text")
     with torch.no_grad():
         model.text_interaction_cross.bias.fill_(1.25)
-    relation, effect, components = _components(model)
-    expected = torch.tanh(model.text_atom_norm(components["e"]))
+    after = interaction_atom_components(model, relation, effect, "text")
+    for key in ("relation_off_corrected", "effect_off_corrected", "cross_off"):
+        assert torch.allclose(before[key], after[key], atol=1e-7, rtol=1e-7)
     buggy_legacy = model._interaction_atom(relation, effect, "text", "relation_off")
-    assert torch.allclose(components["relation_off_corrected"], expected, atol=1e-7, rtol=1e-7)
-    assert not torch.allclose(components["relation_off_corrected"], buggy_legacy)
+    assert not torch.allclose(after["relation_off_corrected"], buggy_legacy)
+    assert not torch.allclose(before["full"], after["full"])
 
 
 def test_local_source_history_off_keeps_target_memory_full():
@@ -178,14 +181,23 @@ def test_all_counterfactuals_preserve_semantic_states():
     x, edge_index = _inputs()
     full = model._compute(x, edge_index)
     semantic = full["semantic_cache"]
+    permutation = torch.tensor([1, 0, 3, 2, 4])
+    cases = (
+        {"source_history_mode": "off"},
+        {"target_memory_mode": "off"},
+        {"source_history_mode": "shuffle", "permutation": permutation},
+        {"atom_mode": "relation_off_corrected"},
+        {"atom_mode": "effect_off_corrected"},
+        {"atom_mode": "cross_off"},
+    )
     for modality in ("text", "visual"):
-        current, _, _, _ = provenance_step(
-            model, semantic, full[f"G_{modality}"][1], modality, 2,
-            source_history_mode="off", target_memory_mode="full",
-        )
-        candidate = {f"S_{name}": semantic[f"S_{name}"] for name in ("text", "visual")}
-        assert_semantic_invariance(full, candidate)
-        assert torch.isfinite(current).all()
+        for kwargs in cases:
+            current, _, _, _ = provenance_step(
+                model, semantic, full[f"G_{modality}"][1], modality, 2, **kwargs
+            )
+            candidate = {f"S_{name}": semantic[f"S_{name}"] for name in ("text", "visual")}
+            assert assert_semantic_invariance(full, candidate) <= TOLERANCE
+            assert torch.isfinite(current).all()
 
 
 def test_counterfactuals_are_finite():
