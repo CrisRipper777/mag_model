@@ -1,0 +1,2812 @@
+{
+  "runs": [
+    {
+      "dataset": "Movies",
+      "seed": 42,
+      "variant": "M2-S",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-S",
+        "provenance_conditioning": false,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 11.64865493774414,
+              "p50": 11.691099166870117,
+              "p90": 12.353843688964844
+            },
+            "k2": {
+              "mean": 8.898250579833984,
+              "p50": 8.167835235595703,
+              "p90": 13.575175285339355
+            },
+            "k3": {
+              "mean": 4.7062506675720215,
+              "p50": 4.032530784606934,
+              "p90": 8.23385238647461
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 11.540252685546875,
+              "p50": 11.60312557220459,
+              "p90": 12.60867691040039
+            },
+            "k2": {
+              "mean": 8.061915397644043,
+              "p50": 7.277574062347412,
+              "p90": 12.701560974121094
+            },
+            "k3": {
+              "mean": 3.88386869430542,
+              "p50": 3.0302367210388184,
+              "p90": 7.706082820892334
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          },
+          "visual": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.5730876326560974,
+            "p50": 0.5392118096351624,
+            "p90": 0.81312495470047
+          },
+          "visual": {
+            "mean": 0.4586477279663086,
+            "p50": 0.437886118888855,
+            "p90": 0.6633945107460022
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.20410557091236115,
+            "p50": 0.1996648609638214,
+            "p90": 0.25655800104141235
+          },
+          "visual": {
+            "mean": 0.1895473450422287,
+            "p50": 0.18260735273361206,
+            "p90": 0.25239136815071106
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.314983993768692,
+              "text-k2": 0.06394408643245697,
+              "text-k3": 0.09451577067375183,
+              "visual-k1": 0.14618781208992004,
+              "visual-k2": 0.1800374537706375,
+              "visual-k3": 0.13426202535629272,
+              "null": 0.06606884300708771
+            },
+            "same_modality_mass": 0.4734438359737396,
+            "cross_modality_mass": 0.4604873061180115,
+            "null_mass": 0.06606884300708771,
+            "order_mass": {
+              "order1": 0.46117180585861206,
+              "order2": 0.24398155510425568,
+              "order3": 0.22877782583236694
+            },
+            "entropy": {
+              "mean": 1.661205530166626,
+              "p50": 1.7125893831253052,
+              "p90": 1.8351330757141113
+            },
+            "effective_tokens": {
+              "mean": 5.3395771980285645,
+              "p50": 5.543296813964844,
+              "p90": 6.265967845916748
+            },
+            "nodewise_attention_weight_variance_mean": 0.008201797492802143,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.03154905512928963,
+              "text-k2": 0.0006197898183017969,
+              "text-k3": 0.005251916125416756,
+              "visual-k1": 0.004751984495669603,
+              "visual-k2": 0.009576864540576935,
+              "visual-k3": 0.005378328263759613,
+              "null": 0.00028464311617426574
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.14461326599121094,
+              "text-k2": 0.13424603641033173,
+              "text-k3": 0.08233129978179932,
+              "visual-k1": 0.073590487241745,
+              "visual-k2": 0.27872851490974426,
+              "visual-k3": 0.17291998863220215,
+              "null": 0.11357039213180542
+            },
+            "same_modality_mass": 0.5252389907836914,
+            "cross_modality_mass": 0.3611906170845032,
+            "null_mass": 0.11357039213180542,
+            "order_mass": {
+              "order1": 0.21820378303527832,
+              "order2": 0.4129745364189148,
+              "order3": 0.25525128841400146
+            },
+            "entropy": {
+              "mean": 1.75665283203125,
+              "p50": 1.7831807136535645,
+              "p90": 1.8879928588867188
+            },
+            "effective_tokens": {
+              "mean": 5.833803176879883,
+              "p50": 5.948747634887695,
+              "p90": 6.6060967445373535
+            },
+            "nodewise_attention_weight_variance_mean": 0.004458968993276358,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.007268171291798353,
+              "text-k2": 0.004245580639690161,
+              "text-k3": 0.0018024321179836988,
+              "visual-k1": 0.001660119160078466,
+              "visual-k2": 0.011085081845521927,
+              "visual-k3": 0.004639610182493925,
+              "null": 0.0005117850378155708
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.314983993768692
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.27872851490974426
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 16672
+      },
+      "training_resources": {
+        "total_training_seconds": 61.125702472170815,
+        "epoch_wall_time_seconds": 0.8732243210310117,
+        "peak_memory": {
+          "allocated_bytes": 7822649856,
+          "reserved_bytes": 8508145664,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1606691328,
+          "reserved_bytes": 1755316224
+        }
+      }
+    },
+    {
+      "dataset": "Movies",
+      "seed": 42,
+      "variant": "M2-P",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-P",
+        "provenance_conditioning": true,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 11.589713096618652,
+              "p50": 11.614154815673828,
+              "p90": 12.413269996643066
+            },
+            "k2": {
+              "mean": 8.96540641784668,
+              "p50": 8.1910400390625,
+              "p90": 13.69349193572998
+            },
+            "k3": {
+              "mean": 5.088251113891602,
+              "p50": 4.537446975708008,
+              "p90": 8.76317310333252
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 11.247787475585938,
+              "p50": 11.253532409667969,
+              "p90": 12.331469535827637
+            },
+            "k2": {
+              "mean": 8.180397033691406,
+              "p50": 7.460788249969482,
+              "p90": 13.047079086303711
+            },
+            "k3": {
+              "mean": 4.849346160888672,
+              "p50": 3.9872918128967285,
+              "p90": 9.019404411315918
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.5273671746253967,
+                "p50": 0.5312619805335999,
+                "p90": 0.5921276211738586
+              },
+              "value_relative_change": {
+                "mean": 0.28416773676872253,
+                "p50": 0.27691709995269775,
+                "p90": 0.4098796248435974
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.4800158441066742,
+                "p50": 0.4771692454814911,
+                "p90": 0.5300161242485046
+              },
+              "value_relative_change": {
+                "mean": 0.17869675159454346,
+                "p50": 0.1725425124168396,
+                "p90": 0.23897796869277954
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.42685791850090027,
+                "p50": 0.4238572120666504,
+                "p90": 0.5164340138435364
+              },
+              "value_relative_change": {
+                "mean": 0.1872461438179016,
+                "p50": 0.17028221487998962,
+                "p90": 0.2738778591156006
+              }
+            }
+          },
+          "visual": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.577854573726654,
+                "p50": 0.5760256052017212,
+                "p90": 0.717949390411377
+              },
+              "value_relative_change": {
+                "mean": 0.2726626396179199,
+                "p50": 0.2661430835723877,
+                "p90": 0.3860708475112915
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.5494711399078369,
+                "p50": 0.530465841293335,
+                "p90": 0.7146640419960022
+              },
+              "value_relative_change": {
+                "mean": 0.20676876604557037,
+                "p50": 0.19985780119895935,
+                "p90": 0.27613335847854614
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.39984816312789917,
+                "p50": 0.3834359049797058,
+                "p90": 0.48753225803375244
+              },
+              "value_relative_change": {
+                "mean": 0.1940118968486786,
+                "p50": 0.17623646557331085,
+                "p90": 0.2965467870235443
+              }
+            }
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.5863763093948364,
+            "p50": 0.5522060394287109,
+            "p90": 0.8187006711959839
+          },
+          "visual": {
+            "mean": 0.5050212144851685,
+            "p50": 0.48341214656829834,
+            "p90": 0.7202379703521729
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.217107892036438,
+            "p50": 0.20920830965042114,
+            "p90": 0.2808457016944885
+          },
+          "visual": {
+            "mean": 0.2015528380870819,
+            "p50": 0.19434404373168945,
+            "p90": 0.269145131111145
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.21730566024780273,
+              "text-k2": 0.05315504968166351,
+              "text-k3": 0.0816332995891571,
+              "visual-k1": 0.1904969960451126,
+              "visual-k2": 0.2724475860595703,
+              "visual-k3": 0.10728009045124054,
+              "null": 0.07768132537603378
+            },
+            "same_modality_mass": 0.35209405422210693,
+            "cross_modality_mass": 0.5702246427536011,
+            "null_mass": 0.07768132537603378,
+            "order_mass": {
+              "order1": 0.4078027009963989,
+              "order2": 0.32560259103775024,
+              "order3": 0.18891340494155884
+            },
+            "entropy": {
+              "mean": 1.6117875576019287,
+              "p50": 1.6574280261993408,
+              "p90": 1.7994009256362915
+            },
+            "effective_tokens": {
+              "mean": 5.091438293457031,
+              "p50": 5.2458014488220215,
+              "p90": 6.046024799346924
+            },
+            "nodewise_attention_weight_variance_mean": 0.010729800909757614,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.031216615810990334,
+              "text-k2": 0.0008250343962572515,
+              "text-k3": 0.006093206815421581,
+              "visual-k1": 0.010988566093146801,
+              "visual-k2": 0.021186133846640587,
+              "visual-k3": 0.004278516862541437,
+              "null": 0.0005205305642448366
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.14637911319732666,
+              "text-k2": 0.13888084888458252,
+              "text-k3": 0.0902770459651947,
+              "visual-k1": 0.0920887142419815,
+              "visual-k2": 0.2715524435043335,
+              "visual-k3": 0.15839335322380066,
+              "null": 0.10242848843336105
+            },
+            "same_modality_mass": 0.5220345258712769,
+            "cross_modality_mass": 0.3755370080471039,
+            "null_mass": 0.10242848843336105,
+            "order_mass": {
+              "order1": 0.23846781253814697,
+              "order2": 0.410433292388916,
+              "order3": 0.24867039918899536
+            },
+            "entropy": {
+              "mean": 1.755105972290039,
+              "p50": 1.7856080532073975,
+              "p90": 1.8931026458740234
+            },
+            "effective_tokens": {
+              "mean": 5.8321533203125,
+              "p50": 5.963204383850098,
+              "p90": 6.639938831329346
+            },
+            "nodewise_attention_weight_variance_mean": 0.0053467354737222195,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.009607234969735146,
+              "text-k2": 0.004462109878659248,
+              "text-k3": 0.002048282651230693,
+              "visual-k1": 0.004418812692165375,
+              "visual-k2": 0.012466143816709518,
+              "visual-k3": 0.0039020285475999117,
+              "null": 0.0005225315107963979
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.2724475860595703
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.2715524435043335
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 16672
+      },
+      "training_resources": {
+        "total_training_seconds": 93.55408943397924,
+        "epoch_wall_time_seconds": 1.1137391599283244,
+        "peak_memory": {
+          "allocated_bytes": 8176637952,
+          "reserved_bytes": 9082765312,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1811438592,
+          "reserved_bytes": 1950351360
+        }
+      }
+    },
+    {
+      "dataset": "Movies",
+      "seed": 43,
+      "variant": "M2-S",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-S",
+        "provenance_conditioning": false,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 12.048773765563965,
+              "p50": 12.10995101928711,
+              "p90": 12.822816848754883
+            },
+            "k2": {
+              "mean": 8.58303451538086,
+              "p50": 8.267929077148438,
+              "p90": 11.586688041687012
+            },
+            "k3": {
+              "mean": 5.194665431976318,
+              "p50": 4.627148628234863,
+              "p90": 8.450217247009277
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 11.012080192565918,
+              "p50": 11.021722793579102,
+              "p90": 11.948738098144531
+            },
+            "k2": {
+              "mean": 7.721330642700195,
+              "p50": 7.2118988037109375,
+              "p90": 11.340652465820312
+            },
+            "k3": {
+              "mean": 4.65518045425415,
+              "p50": 3.9798808097839355,
+              "p90": 7.950593948364258
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          },
+          "visual": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.5494615435600281,
+            "p50": 0.5406363010406494,
+            "p90": 0.7050694823265076
+          },
+          "visual": {
+            "mean": 0.43953219056129456,
+            "p50": 0.4295732378959656,
+            "p90": 0.5973193645477295
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.21205057203769684,
+            "p50": 0.2059449553489685,
+            "p90": 0.2686498463153839
+          },
+          "visual": {
+            "mean": 0.1794002652168274,
+            "p50": 0.1732560694217682,
+            "p90": 0.23200374841690063
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.1700606495141983,
+              "text-k2": 0.05594760552048683,
+              "text-k3": 0.03147619217634201,
+              "visual-k1": 0.2896631062030792,
+              "visual-k2": 0.24136567115783691,
+              "visual-k3": 0.12452387064695358,
+              "null": 0.08696291595697403
+            },
+            "same_modality_mass": 0.25748443603515625,
+            "cross_modality_mass": 0.6555526256561279,
+            "null_mass": 0.08696291595697403,
+            "order_mass": {
+              "order1": 0.4597237706184387,
+              "order2": 0.29731327295303345,
+              "order3": 0.1560000628232956
+            },
+            "entropy": {
+              "mean": 1.575354814529419,
+              "p50": 1.5789110660552979,
+              "p90": 1.7459439039230347
+            },
+            "effective_tokens": {
+              "mean": 4.87451171875,
+              "p50": 4.849672317504883,
+              "p90": 5.731309413909912
+            },
+            "nodewise_attention_weight_variance_mean": 0.007912520319223404,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.013766329735517502,
+              "text-k2": 0.006560635752975941,
+              "text-k3": 0.002853149315342307,
+              "visual-k1": 0.01509338989853859,
+              "visual-k2": 0.011938639916479588,
+              "visual-k3": 0.004601033870130777,
+              "null": 0.0005744597292505205
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.14616632461547852,
+              "text-k2": 0.12125261127948761,
+              "text-k3": 0.10178786516189575,
+              "visual-k1": 0.10067114233970642,
+              "visual-k2": 0.2190852165222168,
+              "visual-k3": 0.18508785963058472,
+              "null": 0.12594899535179138
+            },
+            "same_modality_mass": 0.5048441886901855,
+            "cross_modality_mass": 0.3692067861557007,
+            "null_mass": 0.12594899535179138,
+            "order_mass": {
+              "order1": 0.24683746695518494,
+              "order2": 0.3403378129005432,
+              "order3": 0.28687572479248047
+            },
+            "entropy": {
+              "mean": 1.8201212882995605,
+              "p50": 1.8427014350891113,
+              "p90": 1.9147104024887085
+            },
+            "effective_tokens": {
+              "mean": 6.198437690734863,
+              "p50": 6.313570976257324,
+              "p90": 6.784973621368408
+            },
+            "nodewise_attention_weight_variance_mean": 0.0036553244572132826,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.004897443111985922,
+              "text-k2": 0.0032132791820913553,
+              "text-k3": 0.0026325194630771875,
+              "visual-k1": 0.00362878548912704,
+              "visual-k2": 0.006117934826761484,
+              "visual-k3": 0.004652798175811768,
+              "null": 0.000444509758381173
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.2896631062030792
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.2190852165222168
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 16672
+      },
+      "training_resources": {
+        "total_training_seconds": 63.013773451093584,
+        "epoch_wall_time_seconds": 0.8751912979318553,
+        "peak_memory": {
+          "allocated_bytes": 7822649856,
+          "reserved_bytes": 8508145664,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1606691328,
+          "reserved_bytes": 1755316224
+        }
+      }
+    },
+    {
+      "dataset": "Movies",
+      "seed": 43,
+      "variant": "M2-P",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-P",
+        "provenance_conditioning": true,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 11.751343727111816,
+              "p50": 11.849475860595703,
+              "p90": 12.66595458984375
+            },
+            "k2": {
+              "mean": 8.481755256652832,
+              "p50": 7.8885087966918945,
+              "p90": 12.811436653137207
+            },
+            "k3": {
+              "mean": 4.678457736968994,
+              "p50": 3.82906436920166,
+              "p90": 8.691059112548828
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 10.752037048339844,
+              "p50": 10.736339569091797,
+              "p90": 11.678027153015137
+            },
+            "k2": {
+              "mean": 7.827834129333496,
+              "p50": 7.223133563995361,
+              "p90": 11.408439636230469
+            },
+            "k3": {
+              "mean": 4.577615261077881,
+              "p50": 3.9668049812316895,
+              "p90": 7.319637775421143
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.502733051776886,
+                "p50": 0.5168182849884033,
+                "p90": 0.5978657603263855
+              },
+              "value_relative_change": {
+                "mean": 0.17565754055976868,
+                "p50": 0.17393247783184052,
+                "p90": 0.20828261971473694
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.4163232445716858,
+                "p50": 0.41244176030158997,
+                "p90": 0.4682309329509735
+              },
+              "value_relative_change": {
+                "mean": 0.14113354682922363,
+                "p50": 0.1336347758769989,
+                "p90": 0.1818813681602478
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.4441972076892853,
+                "p50": 0.45802003145217896,
+                "p90": 0.5043562650680542
+              },
+              "value_relative_change": {
+                "mean": 0.16357459127902985,
+                "p50": 0.1622811257839203,
+                "p90": 0.20248879492282867
+              }
+            }
+          },
+          "visual": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.561957061290741,
+                "p50": 0.5762226581573486,
+                "p90": 0.6755043268203735
+              },
+              "value_relative_change": {
+                "mean": 0.2165730595588684,
+                "p50": 0.2117140144109726,
+                "p90": 0.29623115062713623
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.5432738065719604,
+                "p50": 0.5476445555686951,
+                "p90": 0.6352498531341553
+              },
+              "value_relative_change": {
+                "mean": 0.18197961151599884,
+                "p50": 0.17836672067642212,
+                "p90": 0.2367410510778427
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.38566693663597107,
+                "p50": 0.38915884494781494,
+                "p90": 0.4593444764614105
+              },
+              "value_relative_change": {
+                "mean": 0.1622697114944458,
+                "p50": 0.1584174931049347,
+                "p90": 0.21387554705142975
+              }
+            }
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.6648394465446472,
+            "p50": 0.6515297889709473,
+            "p90": 0.8753986954689026
+          },
+          "visual": {
+            "mean": 0.4407581686973572,
+            "p50": 0.4200853705406189,
+            "p90": 0.6114870309829712
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.2545584440231323,
+            "p50": 0.24639728665351868,
+            "p90": 0.3298896551132202
+          },
+          "visual": {
+            "mean": 0.18074510991573334,
+            "p50": 0.17314791679382324,
+            "p90": 0.2358354777097702
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.11058831959962845,
+              "text-k2": 0.05919831246137619,
+              "text-k3": 0.01816543936729431,
+              "visual-k1": 0.2681792378425598,
+              "visual-k2": 0.3486044406890869,
+              "visual-k3": 0.11482521891593933,
+              "null": 0.0804390236735344
+            },
+            "same_modality_mass": 0.18795207142829895,
+            "cross_modality_mass": 0.7316089272499084,
+            "null_mass": 0.0804390236735344,
+            "order_mass": {
+              "order1": 0.37876754999160767,
+              "order2": 0.4078027606010437,
+              "order3": 0.13299065828323364
+            },
+            "entropy": {
+              "mean": 1.4496358633041382,
+              "p50": 1.461803674697876,
+              "p90": 1.6992883682250977
+            },
+            "effective_tokens": {
+              "mean": 4.34536075592041,
+              "p50": 4.313733100891113,
+              "p90": 5.470053672790527
+            },
+            "nodewise_attention_weight_variance_mean": 0.010854619555175304,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.012435385957360268,
+              "text-k2": 0.010099978186190128,
+              "text-k3": 0.0004923621308989823,
+              "visual-k1": 0.019418936222791672,
+              "visual-k2": 0.029395941644906998,
+              "visual-k3": 0.0031606415286660194,
+              "null": 0.000979084288701415
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.16251248121261597,
+              "text-k2": 0.10740604251623154,
+              "text-k3": 0.08015580475330353,
+              "visual-k1": 0.09437276422977448,
+              "visual-k2": 0.27498960494995117,
+              "visual-k3": 0.16290941834449768,
+              "null": 0.11765386164188385
+            },
+            "same_modality_mass": 0.5322718024253845,
+            "cross_modality_mass": 0.3500743508338928,
+            "null_mass": 0.11765386164188385,
+            "order_mass": {
+              "order1": 0.25688523054122925,
+              "order2": 0.3823956847190857,
+              "order3": 0.24306520819664001
+            },
+            "entropy": {
+              "mean": 1.7664408683776855,
+              "p50": 1.798921823501587,
+              "p90": 1.894091010093689
+            },
+            "effective_tokens": {
+              "mean": 5.894540309906006,
+              "p50": 6.043128490447998,
+              "p90": 6.646503925323486
+            },
+            "nodewise_attention_weight_variance_mean": 0.004332179669290781,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.0062066614627838135,
+              "text-k2": 0.0027709370478987694,
+              "text-k3": 0.0025306937750428915,
+              "visual-k1": 0.003414798527956009,
+              "visual-k2": 0.01150492113083601,
+              "visual-k3": 0.003365306183695793,
+              "null": 0.0005319377523846924
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.3486044406890869
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.27498960494995117
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 16672
+      },
+      "training_resources": {
+        "total_training_seconds": 79.00488390307873,
+        "epoch_wall_time_seconds": 1.1127448437053342,
+        "peak_memory": {
+          "allocated_bytes": 8176637952,
+          "reserved_bytes": 9082765312,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1811438592,
+          "reserved_bytes": 1950351360
+        }
+      }
+    },
+    {
+      "dataset": "Movies",
+      "seed": 44,
+      "variant": "M2-S",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-S",
+        "provenance_conditioning": false,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 11.737242698669434,
+              "p50": 11.80076789855957,
+              "p90": 12.53083324432373
+            },
+            "k2": {
+              "mean": 8.944317817687988,
+              "p50": 8.166873931884766,
+              "p90": 14.031547546386719
+            },
+            "k3": {
+              "mean": 5.689692497253418,
+              "p50": 4.440340995788574,
+              "p90": 11.059778213500977
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 10.86892318725586,
+              "p50": 10.848557472229004,
+              "p90": 11.855659484863281
+            },
+            "k2": {
+              "mean": 8.097545623779297,
+              "p50": 7.902951717376709,
+              "p90": 11.654723167419434
+            },
+            "k3": {
+              "mean": 5.558281421661377,
+              "p50": 5.161349296569824,
+              "p90": 9.0443115234375
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          },
+          "visual": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.6186204552650452,
+            "p50": 0.6152760982513428,
+            "p90": 0.7968906164169312
+          },
+          "visual": {
+            "mean": 0.4790359139442444,
+            "p50": 0.45532429218292236,
+            "p90": 0.6854731440544128
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.2312573790550232,
+            "p50": 0.22699865698814392,
+            "p90": 0.28920605778694153
+          },
+          "visual": {
+            "mean": 0.1939483880996704,
+            "p50": 0.18712681531906128,
+            "p90": 0.25704246759414673
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.15799742937088013,
+              "text-k2": 0.07021112740039825,
+              "text-k3": 0.050852954387664795,
+              "visual-k1": 0.2439136505126953,
+              "visual-k2": 0.27109336853027344,
+              "visual-k3": 0.12726552784442902,
+              "null": 0.07866593450307846
+            },
+            "same_modality_mass": 0.279061496257782,
+            "cross_modality_mass": 0.6422725915908813,
+            "null_mass": 0.07866593450307846,
+            "order_mass": {
+              "order1": 0.40191107988357544,
+              "order2": 0.3413044810295105,
+              "order3": 0.178118497133255
+            },
+            "entropy": {
+              "mean": 1.6914739608764648,
+              "p50": 1.701269507408142,
+              "p90": 1.8337290287017822
+            },
+            "effective_tokens": {
+              "mean": 5.463165283203125,
+              "p50": 5.480900764465332,
+              "p90": 6.257175922393799
+            },
+            "nodewise_attention_weight_variance_mean": 0.004525180906057358,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.005677579436451197,
+              "text-k2": 0.005360229406505823,
+              "text-k3": 0.0009221271029673517,
+              "visual-k1": 0.006543050054460764,
+              "visual-k2": 0.00986326951533556,
+              "visual-k3": 0.0028513814322650433,
+              "null": 0.0004586277937050909
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.172410786151886,
+              "text-k2": 0.12934069335460663,
+              "text-k3": 0.09872304648160934,
+              "visual-k1": 0.1258912980556488,
+              "visual-k2": 0.19737641513347626,
+              "visual-k3": 0.1644972711801529,
+              "null": 0.11176051199436188
+            },
+            "same_modality_mass": 0.48776495456695557,
+            "cross_modality_mass": 0.40047451853752136,
+            "null_mass": 0.11176051199436188,
+            "order_mass": {
+              "order1": 0.2983020544052124,
+              "order2": 0.3267171382904053,
+              "order3": 0.26322031021118164
+            },
+            "entropy": {
+              "mean": 1.792938232421875,
+              "p50": 1.8202396631240845,
+              "p90": 1.9069514274597168
+            },
+            "effective_tokens": {
+              "mean": 6.041769027709961,
+              "p50": 6.173337936401367,
+              "p90": 6.732532978057861
+            },
+            "nodewise_attention_weight_variance_mean": 0.0057721976190805435,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.01031030248850584,
+              "text-k2": 0.007216089405119419,
+              "text-k3": 0.002050782321020961,
+              "visual-k1": 0.005105005111545324,
+              "visual-k2": 0.009605590254068375,
+              "visual-k3": 0.005520515609532595,
+              "null": 0.0005970977945253253
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.27109336853027344
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.19737641513347626
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 16672
+      },
+      "training_resources": {
+        "total_training_seconds": 76.04505868791603,
+        "epoch_wall_time_seconds": 0.8740811343438624,
+        "peak_memory": {
+          "allocated_bytes": 7822649856,
+          "reserved_bytes": 8508145664,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1606691328,
+          "reserved_bytes": 1755316224
+        }
+      }
+    },
+    {
+      "dataset": "Movies",
+      "seed": 44,
+      "variant": "M2-P",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-P",
+        "provenance_conditioning": true,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 11.469405174255371,
+              "p50": 11.57990837097168,
+              "p90": 12.204445838928223
+            },
+            "k2": {
+              "mean": 7.539189338684082,
+              "p50": 6.134054183959961,
+              "p90": 13.254351615905762
+            },
+            "k3": {
+              "mean": 5.389324188232422,
+              "p50": 4.033448219299316,
+              "p90": 10.898231506347656
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 10.786337852478027,
+              "p50": 10.783736228942871,
+              "p90": 11.769474983215332
+            },
+            "k2": {
+              "mean": 7.633647441864014,
+              "p50": 6.979784965515137,
+              "p90": 12.053770065307617
+            },
+            "k3": {
+              "mean": 4.752283573150635,
+              "p50": 4.049103736877441,
+              "p90": 8.294939041137695
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.5628302097320557,
+                "p50": 0.5617672204971313,
+                "p90": 0.6440685391426086
+              },
+              "value_relative_change": {
+                "mean": 0.1771891862154007,
+                "p50": 0.16770437359809875,
+                "p90": 0.23700955510139465
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.48204919695854187,
+                "p50": 0.4687424302101135,
+                "p90": 0.575106143951416
+              },
+              "value_relative_change": {
+                "mean": 0.21013309061527252,
+                "p50": 0.1904636174440384,
+                "p90": 0.324137806892395
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.5004552602767944,
+                "p50": 0.4988550543785095,
+                "p90": 0.5801103115081787
+              },
+              "value_relative_change": {
+                "mean": 0.21555672585964203,
+                "p50": 0.1983443647623062,
+                "p90": 0.3329836130142212
+              }
+            }
+          },
+          "visual": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.5396502017974854,
+                "p50": 0.5291435718536377,
+                "p90": 0.6777723431587219
+              },
+              "value_relative_change": {
+                "mean": 0.22645491361618042,
+                "p50": 0.22362995147705078,
+                "p90": 0.2938136160373688
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.63968825340271,
+                "p50": 0.6461519598960876,
+                "p90": 0.7793288230895996
+              },
+              "value_relative_change": {
+                "mean": 0.19469141960144043,
+                "p50": 0.19533497095108032,
+                "p90": 0.2486378401517868
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.46965843439102173,
+                "p50": 0.4783715009689331,
+                "p90": 0.5832282900810242
+              },
+              "value_relative_change": {
+                "mean": 0.16827544569969177,
+                "p50": 0.16556969285011292,
+                "p90": 0.21679042279720306
+              }
+            }
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.735197901725769,
+            "p50": 0.7331793904304504,
+            "p90": 0.9405844211578369
+          },
+          "visual": {
+            "mean": 0.4640083909034729,
+            "p50": 0.4353686571121216,
+            "p90": 0.675245463848114
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.26882848143577576,
+            "p50": 0.2626795768737793,
+            "p90": 0.34129807353019714
+          },
+          "visual": {
+            "mean": 0.18879593908786774,
+            "p50": 0.18076348304748535,
+            "p90": 0.2534378170967102
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.06875836849212646,
+              "text-k2": 0.061127789318561554,
+              "text-k3": 0.06072606146335602,
+              "visual-k1": 0.29327476024627686,
+              "visual-k2": 0.3234825134277344,
+              "visual-k3": 0.12845969200134277,
+              "null": 0.06417082250118256
+            },
+            "same_modality_mass": 0.19061221182346344,
+            "cross_modality_mass": 0.745216965675354,
+            "null_mass": 0.06417082250118256,
+            "order_mass": {
+              "order1": 0.3620331287384033,
+              "order2": 0.38461029529571533,
+              "order3": 0.18918576836585999
+            },
+            "entropy": {
+              "mean": 1.6076469421386719,
+              "p50": 1.6120295524597168,
+              "p90": 1.7792760133743286
+            },
+            "effective_tokens": {
+              "mean": 5.034584999084473,
+              "p50": 5.012975215911865,
+              "p90": 5.925565242767334
+            },
+            "nodewise_attention_weight_variance_mean": 0.003804480889812112,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.0019060606136918068,
+              "text-k2": 0.002585776848718524,
+              "text-k3": 0.0014981479616835713,
+              "visual-k1": 0.005904319230467081,
+              "visual-k2": 0.011477657593786716,
+              "visual-k3": 0.0029846474062651396,
+              "null": 0.00027475415845401585
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.16583558917045593,
+              "text-k2": 0.13157057762145996,
+              "text-k3": 0.08511964231729507,
+              "visual-k1": 0.16037540137767792,
+              "visual-k2": 0.19239889085292816,
+              "visual-k3": 0.1416683942079544,
+              "null": 0.12303147464990616
+            },
+            "same_modality_mass": 0.4944427013397217,
+            "cross_modality_mass": 0.38252580165863037,
+            "null_mass": 0.12303147464990616,
+            "order_mass": {
+              "order1": 0.32621097564697266,
+              "order2": 0.3239694833755493,
+              "order3": 0.22678804397583008
+            },
+            "entropy": {
+              "mean": 1.8041859865188599,
+              "p50": 1.8305004835128784,
+              "p90": 1.9037145376205444
+            },
+            "effective_tokens": {
+              "mean": 6.102839946746826,
+              "p50": 6.2370076179504395,
+              "p90": 6.710775852203369
+            },
+            "nodewise_attention_weight_variance_mean": 0.00528418505564332,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.007573652546852827,
+              "text-k2": 0.006339695304632187,
+              "text-k3": 0.0012292246101424098,
+              "visual-k1": 0.007297268137335777,
+              "visual-k2": 0.008269000798463821,
+              "visual-k3": 0.004935431759804487,
+              "null": 0.001345018739812076
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.3234825134277344
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.19239889085292816
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 16672
+      },
+      "training_resources": {
+        "total_training_seconds": 81.31304589798674,
+        "epoch_wall_time_seconds": 1.1138773410683116,
+        "peak_memory": {
+          "allocated_bytes": 8176637952,
+          "reserved_bytes": 9082765312,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1811438592,
+          "reserved_bytes": 1950351360
+        }
+      }
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 42,
+      "variant": "M2-S",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-S",
+        "provenance_conditioning": false,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 11.347400665283203,
+              "p50": 11.348209381103516,
+              "p90": 12.313774108886719
+            },
+            "k2": {
+              "mean": 11.33315658569336,
+              "p50": 11.347749710083008,
+              "p90": 13.35095500946045
+            },
+            "k3": {
+              "mean": 8.309514999389648,
+              "p50": 8.313304901123047,
+              "p90": 10.449091911315918
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 9.934399604797363,
+              "p50": 9.943164825439453,
+              "p90": 10.913313865661621
+            },
+            "k2": {
+              "mean": 8.393266677856445,
+              "p50": 8.182645797729492,
+              "p90": 10.546109199523926
+            },
+            "k3": {
+              "mean": 5.864830017089844,
+              "p50": 5.6128950119018555,
+              "p90": 7.71726131439209
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          },
+          "visual": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.9603784680366516,
+            "p50": 0.9418561458587646,
+            "p90": 1.271527886390686
+          },
+          "visual": {
+            "mean": 1.2605630159378052,
+            "p50": 1.1663122177124023,
+            "p90": 1.927173376083374
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.3169538378715515,
+            "p50": 0.30818629264831543,
+            "p90": 0.41432103514671326
+          },
+          "visual": {
+            "mean": 0.3657969832420349,
+            "p50": 0.34418147802352905,
+            "p90": 0.531964898109436
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.26153481006622314,
+              "text-k2": 0.13119731843471527,
+              "text-k3": 0.05369933694601059,
+              "visual-k1": 0.08869682997465134,
+              "visual-k2": 0.2502208650112152,
+              "visual-k3": 0.15713460743427277,
+              "null": 0.05751621723175049
+            },
+            "same_modality_mass": 0.4464314579963684,
+            "cross_modality_mass": 0.4960523247718811,
+            "null_mass": 0.05751621723175049,
+            "order_mass": {
+              "order1": 0.3502316474914551,
+              "order2": 0.3814181983470917,
+              "order3": 0.21083395183086395
+            },
+            "entropy": {
+              "mean": 1.5564442873001099,
+              "p50": 1.5704519748687744,
+              "p90": 1.7831342220306396
+            },
+            "effective_tokens": {
+              "mean": 4.817636013031006,
+              "p50": 4.808821678161621,
+              "p90": 5.948471546173096
+            },
+            "nodewise_attention_weight_variance_mean": 0.011511984281241894,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.03323529288172722,
+              "text-k2": 0.013570733368396759,
+              "text-k3": 0.003043818986043334,
+              "visual-k1": 0.007457498926669359,
+              "visual-k2": 0.01654907502233982,
+              "visual-k3": 0.006270425859838724,
+              "null": 0.0004570414312183857
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.1611785590648651,
+              "text-k2": 0.17423629760742188,
+              "text-k3": 0.05550183355808258,
+              "visual-k1": 0.0954480916261673,
+              "visual-k2": 0.27643924951553345,
+              "visual-k3": 0.18578702211380005,
+              "null": 0.05140896141529083
+            },
+            "same_modality_mass": 0.5576744079589844,
+            "cross_modality_mass": 0.39091670513153076,
+            "null_mass": 0.05140896141529083,
+            "order_mass": {
+              "order1": 0.2566266655921936,
+              "order2": 0.4506755471229553,
+              "order3": 0.24128885567188263
+            },
+            "entropy": {
+              "mean": 1.564603567123413,
+              "p50": 1.5965341329574585,
+              "p90": 1.7726539373397827
+            },
+            "effective_tokens": {
+              "mean": 4.857318878173828,
+              "p50": 4.9358954429626465,
+              "p90": 5.886455535888672
+            },
+            "nodewise_attention_weight_variance_mean": 0.01090417243540287,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.019774742424488068,
+              "text-k2": 0.010485961101949215,
+              "text-k3": 0.0032986565493047237,
+              "visual-k1": 0.010347059927880764,
+              "visual-k2": 0.019608359783887863,
+              "visual-k3": 0.012210448272526264,
+              "null": 0.0006039715372025967
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.26153481006622314
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.27643924951553345
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 17074
+      },
+      "training_resources": {
+        "total_training_seconds": 126.23938059085049,
+        "epoch_wall_time_seconds": 0.804072487839812,
+        "peak_memory": {
+          "allocated_bytes": 7430336000,
+          "reserved_bytes": 8038383616,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1616804864,
+          "reserved_bytes": 1801453568
+        }
+      }
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 42,
+      "variant": "M2-P",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-P",
+        "provenance_conditioning": true,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 11.602407455444336,
+              "p50": 11.583757400512695,
+              "p90": 12.521333694458008
+            },
+            "k2": {
+              "mean": 11.353558540344238,
+              "p50": 11.388538360595703,
+              "p90": 13.828655242919922
+            },
+            "k3": {
+              "mean": 8.092158317565918,
+              "p50": 7.970388412475586,
+              "p90": 11.022069931030273
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 10.020905494689941,
+              "p50": 10.017099380493164,
+              "p90": 10.881848335266113
+            },
+            "k2": {
+              "mean": 8.68091869354248,
+              "p50": 8.424737930297852,
+              "p90": 10.909181594848633
+            },
+            "k3": {
+              "mean": 5.865917682647705,
+              "p50": 5.629908084869385,
+              "p90": 7.851256370544434
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.6051726341247559,
+                "p50": 0.6095701456069946,
+                "p90": 0.6940746307373047
+              },
+              "value_relative_change": {
+                "mean": 0.33774423599243164,
+                "p50": 0.32570701837539673,
+                "p90": 0.46031469106674194
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.5503079295158386,
+                "p50": 0.5531227588653564,
+                "p90": 0.6375499367713928
+              },
+              "value_relative_change": {
+                "mean": 0.2723531126976013,
+                "p50": 0.2598690092563629,
+                "p90": 0.36407792568206787
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.5673295259475708,
+                "p50": 0.5813382267951965,
+                "p90": 0.6304174065589905
+              },
+              "value_relative_change": {
+                "mean": 0.2623303532600403,
+                "p50": 0.26145243644714355,
+                "p90": 0.3195541203022003
+              }
+            }
+          },
+          "visual": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.65326327085495,
+                "p50": 0.6538056135177612,
+                "p90": 0.7602494359016418
+              },
+              "value_relative_change": {
+                "mean": 0.3702954649925232,
+                "p50": 0.3688914179801941,
+                "p90": 0.4606778025627136
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.6306222677230835,
+                "p50": 0.636139988899231,
+                "p90": 0.7357504367828369
+              },
+              "value_relative_change": {
+                "mean": 0.409618616104126,
+                "p50": 0.39103519916534424,
+                "p90": 0.5787282586097717
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.5364914536476135,
+                "p50": 0.5385286211967468,
+                "p90": 0.6216816902160645
+              },
+              "value_relative_change": {
+                "mean": 0.370357483625412,
+                "p50": 0.3659178614616394,
+                "p90": 0.48308423161506653
+              }
+            }
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 1.0854133367538452,
+            "p50": 1.0221375226974487,
+            "p90": 1.5728033781051636
+          },
+          "visual": {
+            "mean": 1.4261239767074585,
+            "p50": 1.3072400093078613,
+            "p90": 2.255730628967285
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.34486186504364014,
+            "p50": 0.3280802369117737,
+            "p90": 0.4762859344482422
+          },
+          "visual": {
+            "mean": 0.3898175358772278,
+            "p50": 0.36759069561958313,
+            "p90": 0.570387065410614
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.2105676531791687,
+              "text-k2": 0.1168634444475174,
+              "text-k3": 0.04440838098526001,
+              "visual-k1": 0.07426474988460541,
+              "visual-k2": 0.34369957447052,
+              "visual-k3": 0.16544806957244873,
+              "null": 0.04474811628460884
+            },
+            "same_modality_mass": 0.3718394935131073,
+            "cross_modality_mass": 0.5834124088287354,
+            "null_mass": 0.04474811628460884,
+            "order_mass": {
+              "order1": 0.2848323881626129,
+              "order2": 0.4605630338191986,
+              "order3": 0.20985645055770874
+            },
+            "entropy": {
+              "mean": 1.4474120140075684,
+              "p50": 1.4660664796829224,
+              "p90": 1.7182797193527222
+            },
+            "effective_tokens": {
+              "mean": 4.353487014770508,
+              "p50": 4.332160949707031,
+              "p90": 5.574929714202881
+            },
+            "nodewise_attention_weight_variance_mean": 0.012810615822672844,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.034290384501218796,
+              "text-k2": 0.010478969663381577,
+              "text-k3": 0.002054409123957157,
+              "visual-k1": 0.01008347887545824,
+              "visual-k2": 0.025840817019343376,
+              "visual-k3": 0.0064810942858457565,
+              "null": 0.00044515705667436123
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.14516764879226685,
+              "text-k2": 0.1623649299144745,
+              "text-k3": 0.03953384608030319,
+              "visual-k1": 0.08766074478626251,
+              "visual-k2": 0.34554845094680786,
+              "visual-k3": 0.18101918697357178,
+              "null": 0.03870521858334541
+            },
+            "same_modality_mass": 0.614228367805481,
+            "cross_modality_mass": 0.34706640243530273,
+            "null_mass": 0.03870521858334541,
+            "order_mass": {
+              "order1": 0.23282837867736816,
+              "order2": 0.50791335105896,
+              "order3": 0.22055304050445557
+            },
+            "entropy": {
+              "mean": 1.434577465057373,
+              "p50": 1.4610943794250488,
+              "p90": 1.7128468751907349
+            },
+            "effective_tokens": {
+              "mean": 4.30678653717041,
+              "p50": 4.31067419052124,
+              "p90": 5.544724464416504
+            },
+            "nodewise_attention_weight_variance_mean": 0.012867782264947891,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.02074030414223671,
+              "text-k2": 0.01306893303990364,
+              "text-k3": 0.0036294537130743265,
+              "visual-k1": 0.013037248514592648,
+              "visual-k2": 0.02891501784324646,
+              "visual-k3": 0.010252472013235092,
+              "null": 0.00043104711221531034
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.34369957447052
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.34554845094680786
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 17074
+      },
+      "training_resources": {
+        "total_training_seconds": 155.26191207394004,
+        "epoch_wall_time_seconds": 1.028224583271126,
+        "peak_memory": {
+          "allocated_bytes": 7791579648,
+          "reserved_bytes": 8608808960,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1826610176,
+          "reserved_bytes": 1965031424
+        }
+      }
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 43,
+      "variant": "M2-S",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-S",
+        "provenance_conditioning": false,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 10.509770393371582,
+              "p50": 10.467828750610352,
+              "p90": 11.464461326599121
+            },
+            "k2": {
+              "mean": 8.018522262573242,
+              "p50": 7.636264324188232,
+              "p90": 11.050250053405762
+            },
+            "k3": {
+              "mean": 5.392658710479736,
+              "p50": 5.25272798538208,
+              "p90": 7.774048328399658
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 10.322298049926758,
+              "p50": 10.383316040039062,
+              "p90": 11.26106071472168
+            },
+            "k2": {
+              "mean": 8.752620697021484,
+              "p50": 8.411701202392578,
+              "p90": 11.494715690612793
+            },
+            "k3": {
+              "mean": 5.657109260559082,
+              "p50": 5.2636399269104,
+              "p90": 8.09814167022705
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          },
+          "visual": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.8726553320884705,
+            "p50": 0.8435215950012207,
+            "p90": 1.2461341619491577
+          },
+          "visual": {
+            "mean": 0.9843960404396057,
+            "p50": 0.919474720954895,
+            "p90": 1.4435513019561768
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.2998884320259094,
+            "p50": 0.2955295443534851,
+            "p90": 0.39276665449142456
+          },
+          "visual": {
+            "mean": 0.31580355763435364,
+            "p50": 0.2965346574783325,
+            "p90": 0.4509826898574829
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.08886386454105377,
+              "text-k2": 0.15899978578090668,
+              "text-k3": 0.09368758648633957,
+              "visual-k1": 0.07413622736930847,
+              "visual-k2": 0.2902044355869293,
+              "visual-k3": 0.1910286247730255,
+              "null": 0.10307945311069489
+            },
+            "same_modality_mass": 0.3415512442588806,
+            "cross_modality_mass": 0.5553692579269409,
+            "null_mass": 0.10307945311069489,
+            "order_mass": {
+              "order1": 0.16300007700920105,
+              "order2": 0.4492042660713196,
+              "order3": 0.2847162187099457
+            },
+            "entropy": {
+              "mean": 1.6490342617034912,
+              "p50": 1.6860275268554688,
+              "p90": 1.8649424314498901
+            },
+            "effective_tokens": {
+              "mean": 5.294489860534668,
+              "p50": 5.3979949951171875,
+              "p90": 6.455564498901367
+            },
+            "nodewise_attention_weight_variance_mean": 0.008400291204452515,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.006856957450509071,
+              "text-k2": 0.014349272474646568,
+              "text-k3": 0.005870705004781485,
+              "visual-k1": 0.004368665628135204,
+              "visual-k2": 0.01914597675204277,
+              "visual-k3": 0.007097871508449316,
+              "null": 0.001112583326175809
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.1333196610212326,
+              "text-k2": 0.1233142539858818,
+              "text-k3": 0.07508543878793716,
+              "visual-k1": 0.06620143353939056,
+              "visual-k2": 0.3080494999885559,
+              "visual-k3": 0.19468462467193604,
+              "null": 0.0993451178073883
+            },
+            "same_modality_mass": 0.5689355134963989,
+            "cross_modality_mass": 0.3317193388938904,
+            "null_mass": 0.0993451178073883,
+            "order_mass": {
+              "order1": 0.19952109456062317,
+              "order2": 0.43136370182037354,
+              "order3": 0.2697700560092926
+            },
+            "entropy": {
+              "mean": 1.5891485214233398,
+              "p50": 1.6100270748138428,
+              "p90": 1.8337329626083374
+            },
+            "effective_tokens": {
+              "mean": 4.996264934539795,
+              "p50": 5.002946853637695,
+              "p90": 6.257201194763184
+            },
+            "nodewise_attention_weight_variance_mean": 0.010008891113102436,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.01872864179313183,
+              "text-k2": 0.013735922984778881,
+              "text-k3": 0.006009088363498449,
+              "visual-k1": 0.00338518968783319,
+              "visual-k2": 0.018789848312735558,
+              "visual-k3": 0.008253315463662148,
+              "null": 0.0011602286249399185
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.2902044355869293
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.3080494999885559
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 17074
+      },
+      "training_resources": {
+        "total_training_seconds": 92.59246477880515,
+        "epoch_wall_time_seconds": 0.834166349358605,
+        "peak_memory": {
+          "allocated_bytes": 7430336000,
+          "reserved_bytes": 8038383616,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1616804864,
+          "reserved_bytes": 1801453568
+        }
+      }
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 43,
+      "variant": "M2-P",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-P",
+        "provenance_conditioning": true,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 10.799954414367676,
+              "p50": 10.747322082519531,
+              "p90": 11.71193790435791
+            },
+            "k2": {
+              "mean": 7.6502532958984375,
+              "p50": 7.205596923828125,
+              "p90": 11.192960739135742
+            },
+            "k3": {
+              "mean": 4.9540252685546875,
+              "p50": 4.869065284729004,
+              "p90": 7.642563343048096
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 10.376435279846191,
+              "p50": 10.401111602783203,
+              "p90": 11.310905456542969
+            },
+            "k2": {
+              "mean": 9.503418922424316,
+              "p50": 9.190084457397461,
+              "p90": 12.292722702026367
+            },
+            "k3": {
+              "mean": 6.260490417480469,
+              "p50": 5.778766632080078,
+              "p90": 9.122180938720703
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.6494926810264587,
+                "p50": 0.6545437574386597,
+                "p90": 0.7907694578170776
+              },
+              "value_relative_change": {
+                "mean": 0.361808180809021,
+                "p50": 0.3661690950393677,
+                "p90": 0.49872031807899475
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.5616099238395691,
+                "p50": 0.5609588623046875,
+                "p90": 0.6607250571250916
+              },
+              "value_relative_change": {
+                "mean": 0.24861763417720795,
+                "p50": 0.2452685832977295,
+                "p90": 0.3171539902687073
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.5310213565826416,
+                "p50": 0.5474649667739868,
+                "p90": 0.6304976344108582
+              },
+              "value_relative_change": {
+                "mean": 0.2300495058298111,
+                "p50": 0.22362719476222992,
+                "p90": 0.30428940057754517
+              }
+            }
+          },
+          "visual": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.7219424843788147,
+                "p50": 0.7374832034111023,
+                "p90": 0.8531764149665833
+              },
+              "value_relative_change": {
+                "mean": 0.2790515124797821,
+                "p50": 0.27511513233184814,
+                "p90": 0.3601716458797455
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.7155478000640869,
+                "p50": 0.7328842878341675,
+                "p90": 0.8985550999641418
+              },
+              "value_relative_change": {
+                "mean": 0.3042522370815277,
+                "p50": 0.2884829640388489,
+                "p90": 0.41359764337539673
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.6272750496864319,
+                "p50": 0.6300667524337769,
+                "p90": 0.7701151967048645
+              },
+              "value_relative_change": {
+                "mean": 0.3081498146057129,
+                "p50": 0.28728538751602173,
+                "p90": 0.44056829810142517
+              }
+            }
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.8944295644760132,
+            "p50": 0.8896199464797974,
+            "p90": 1.2337435483932495
+          },
+          "visual": {
+            "mean": 1.0857312679290771,
+            "p50": 1.0096354484558105,
+            "p90": 1.5482686758041382
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.3072342574596405,
+            "p50": 0.3046327829360962,
+            "p90": 0.397577702999115
+          },
+          "visual": {
+            "mean": 0.3391936123371124,
+            "p50": 0.3153916597366333,
+            "p90": 0.4995800852775574
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.11440093070268631,
+              "text-k2": 0.12988173961639404,
+              "text-k3": 0.07088762521743774,
+              "visual-k1": 0.05660979449748993,
+              "visual-k2": 0.35165977478027344,
+              "visual-k3": 0.20930208265781403,
+              "null": 0.06725805997848511
+            },
+            "same_modality_mass": 0.3151702880859375,
+            "cross_modality_mass": 0.6175716519355774,
+            "null_mass": 0.06725805997848511,
+            "order_mass": {
+              "order1": 0.17101073265075684,
+              "order2": 0.4815415143966675,
+              "order3": 0.28018972277641296
+            },
+            "entropy": {
+              "mean": 1.543313980102539,
+              "p50": 1.5771703720092773,
+              "p90": 1.8249144554138184
+            },
+            "effective_tokens": {
+              "mean": 4.806241512298584,
+              "p50": 4.8412370681762695,
+              "p90": 6.202264308929443
+            },
+            "nodewise_attention_weight_variance_mean": 0.009465758688747883,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.012250149622559547,
+              "text-k2": 0.010868022218346596,
+              "text-k3": 0.0028490216936916113,
+              "visual-k1": 0.002902112901210785,
+              "visual-k2": 0.02779875509440899,
+              "visual-k3": 0.00894850678741932,
+              "null": 0.0006437433767132461
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.192793607711792,
+              "text-k2": 0.09983444213867188,
+              "text-k3": 0.06367382407188416,
+              "visual-k1": 0.023523932322859764,
+              "visual-k2": 0.36676374077796936,
+              "visual-k3": 0.19669266045093536,
+              "null": 0.05671779811382294
+            },
+            "same_modality_mass": 0.5869803428649902,
+            "cross_modality_mass": 0.356301873922348,
+            "null_mass": 0.05671779811382294,
+            "order_mass": {
+              "order1": 0.2163175344467163,
+              "order2": 0.46659818291664124,
+              "order3": 0.2603664994239807
+            },
+            "entropy": {
+              "mean": 1.4097514152526855,
+              "p50": 1.423326015472412,
+              "p90": 1.7516437768936157
+            },
+            "effective_tokens": {
+              "mean": 4.241246223449707,
+              "p50": 4.150903701782227,
+              "p90": 5.764069557189941
+            },
+            "nodewise_attention_weight_variance_mean": 0.013237363658845425,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.035432957112789154,
+              "text-k2": 0.008362611755728722,
+              "text-k3": 0.00435801362618804,
+              "visual-k1": 0.0011049677850678563,
+              "visual-k2": 0.030965466052293777,
+              "visual-k3": 0.011691691353917122,
+              "null": 0.0007458354812115431
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.35165977478027344
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.36676374077796936
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 17074
+      },
+      "training_resources": {
+        "total_training_seconds": 136.28955309209414,
+        "epoch_wall_time_seconds": 1.1851265486269056,
+        "peak_memory": {
+          "allocated_bytes": 7791579648,
+          "reserved_bytes": 8608808960,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1826610176,
+          "reserved_bytes": 1965031424
+        }
+      }
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 44,
+      "variant": "M2-S",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-S",
+        "provenance_conditioning": false,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 10.573393821716309,
+              "p50": 10.54878044128418,
+              "p90": 11.544801712036133
+            },
+            "k2": {
+              "mean": 9.406451225280762,
+              "p50": 9.192597389221191,
+              "p90": 11.655773162841797
+            },
+            "k3": {
+              "mean": 7.208998680114746,
+              "p50": 7.1595892906188965,
+              "p90": 9.38766860961914
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 10.352843284606934,
+              "p50": 10.339399337768555,
+              "p90": 11.249214172363281
+            },
+            "k2": {
+              "mean": 9.480732917785645,
+              "p50": 9.307657241821289,
+              "p90": 11.82975959777832
+            },
+            "k3": {
+              "mean": 6.4688401222229,
+              "p50": 6.243869304656982,
+              "p90": 8.919760704040527
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          },
+          "visual": {
+            "k1": null,
+            "k2": null,
+            "k3": null
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.9782630801200867,
+            "p50": 0.9270614385604858,
+            "p90": 1.4446746110916138
+          },
+          "visual": {
+            "mean": 1.1243904829025269,
+            "p50": 1.063888669013977,
+            "p90": 1.6984113454818726
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.32181522250175476,
+            "p50": 0.31476157903671265,
+            "p90": 0.42766499519348145
+          },
+          "visual": {
+            "mean": 0.3413943946361542,
+            "p50": 0.3265782296657562,
+            "p90": 0.4954710900783539
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.1729012429714203,
+              "text-k2": 0.1570640504360199,
+              "text-k3": 0.08657859265804291,
+              "visual-k1": 0.07007287442684174,
+              "visual-k2": 0.26730722188949585,
+              "visual-k3": 0.17189288139343262,
+              "null": 0.07418310642242432
+            },
+            "same_modality_mass": 0.4165439009666443,
+            "cross_modality_mass": 0.5092729926109314,
+            "null_mass": 0.07418310642242432,
+            "order_mass": {
+              "order1": 0.24297410249710083,
+              "order2": 0.42437130212783813,
+              "order3": 0.2584714889526367
+            },
+            "entropy": {
+              "mean": 1.60683274269104,
+              "p50": 1.672300934791565,
+              "p90": 1.845033049583435
+            },
+            "effective_tokens": {
+              "mean": 5.110933303833008,
+              "p50": 5.324404716491699,
+              "p90": 6.328309059143066
+            },
+            "nodewise_attention_weight_variance_mean": 0.011289184913039207,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.0207284614443779,
+              "text-k2": 0.015976963564753532,
+              "text-k3": 0.005047083832323551,
+              "visual-k1": 0.0044165486469864845,
+              "visual-k2": 0.0208276454359293,
+              "visual-k3": 0.011242716573178768,
+              "null": 0.0007848746608942747
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.17296825349330902,
+              "text-k2": 0.1434745192527771,
+              "text-k3": 0.06801420450210571,
+              "visual-k1": 0.0639808177947998,
+              "visual-k2": 0.29486581683158875,
+              "visual-k3": 0.1844043880701065,
+              "null": 0.07229198515415192
+            },
+            "same_modality_mass": 0.5432510375976562,
+            "cross_modality_mass": 0.384456992149353,
+            "null_mass": 0.07229198515415192,
+            "order_mass": {
+              "order1": 0.23694907128810883,
+              "order2": 0.43834030628204346,
+              "order3": 0.2524186074733734
+            },
+            "entropy": {
+              "mean": 1.5174002647399902,
+              "p50": 1.5532267093658447,
+              "p90": 1.7994201183319092
+            },
+            "effective_tokens": {
+              "mean": 4.684455394744873,
+              "p50": 4.72669792175293,
+              "p90": 6.046140193939209
+            },
+            "nodewise_attention_weight_variance_mean": 0.013586698099970818,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.025002773851156235,
+              "text-k2": 0.022016266360878944,
+              "text-k3": 0.00548312533646822,
+              "visual-k1": 0.004616560414433479,
+              "visual-k2": 0.023440763354301453,
+              "visual-k3": 0.013552900403738022,
+              "null": 0.0009944953490048647
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.26730722188949585
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.29486581683158875
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 17074
+      },
+      "training_resources": {
+        "total_training_seconds": 179.2306996891275,
+        "epoch_wall_time_seconds": 1.1638357122670617,
+        "peak_memory": {
+          "allocated_bytes": 7430336000,
+          "reserved_bytes": 8038383616,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1616804864,
+          "reserved_bytes": 1801453568
+        }
+      }
+    },
+    {
+      "dataset": "Grocery",
+      "seed": 44,
+      "variant": "M2-P",
+      "model_parameter_counts": {
+        "trainable": 1032468,
+        "legacy_frozen": 41096,
+        "all": 1073564
+      },
+      "analysis": {
+        "variant": "M2-P",
+        "provenance_conditioning": true,
+        "parameter_counts": {
+          "trainable": 1032468,
+          "legacy_frozen": 41096,
+          "all": 1073564
+        },
+        "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+        "delta_s_norms": {
+          "text": {
+            "k1": {
+              "mean": 11.08450698852539,
+              "p50": 11.042530059814453,
+              "p90": 12.018129348754883
+            },
+            "k2": {
+              "mean": 9.936572074890137,
+              "p50": 9.710430145263672,
+              "p90": 12.870255470275879
+            },
+            "k3": {
+              "mean": 6.497104644775391,
+              "p50": 6.304991245269775,
+              "p90": 9.50252914428711
+            }
+          },
+          "visual": {
+            "k1": {
+              "mean": 10.497298240661621,
+              "p50": 10.493188858032227,
+              "p90": 11.368273735046387
+            },
+            "k2": {
+              "mean": 9.849116325378418,
+              "p50": 9.572591781616211,
+              "p90": 12.586211204528809
+            },
+            "k3": {
+              "mean": 6.668310165405273,
+              "p50": 6.278922080993652,
+              "p90": 9.52564525604248
+            }
+          }
+        },
+        "provenance_conditioned_token_change": {
+          "text": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.6079971194267273,
+                "p50": 0.6106456518173218,
+                "p90": 0.6800066828727722
+              },
+              "value_relative_change": {
+                "mean": 0.27470651268959045,
+                "p50": 0.26386579871177673,
+                "p90": 0.36177849769592285
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.6077812910079956,
+                "p50": 0.6155868172645569,
+                "p90": 0.6946821808815002
+              },
+              "value_relative_change": {
+                "mean": 0.3535190522670746,
+                "p50": 0.3532841205596924,
+                "p90": 0.4652930200099945
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.6039093732833862,
+                "p50": 0.6091622114181519,
+                "p90": 0.6857067942619324
+              },
+              "value_relative_change": {
+                "mean": 0.29599735140800476,
+                "p50": 0.2890462875366211,
+                "p90": 0.3980213701725006
+              }
+            }
+          },
+          "visual": {
+            "k1": {
+              "key_relative_change": {
+                "mean": 0.7360671162605286,
+                "p50": 0.7470167875289917,
+                "p90": 0.8474571108818054
+              },
+              "value_relative_change": {
+                "mean": 0.302290141582489,
+                "p50": 0.29835623502731323,
+                "p90": 0.3917504549026489
+              }
+            },
+            "k2": {
+              "key_relative_change": {
+                "mean": 0.6318411827087402,
+                "p50": 0.6244834661483765,
+                "p90": 0.8236768841743469
+              },
+              "value_relative_change": {
+                "mean": 0.3422447741031647,
+                "p50": 0.3186885416507721,
+                "p90": 0.5076990127563477
+              }
+            },
+            "k3": {
+              "key_relative_change": {
+                "mean": 0.5886611938476562,
+                "p50": 0.5820222496986389,
+                "p90": 0.7031674385070801
+              },
+              "value_relative_change": {
+                "mean": 0.32283416390419006,
+                "p50": 0.30674150586128235,
+                "p90": 0.4604266881942749
+              }
+            }
+          }
+        },
+        "retrieval_residual_ratio": {
+          "text": {
+            "mean": 0.9155563712120056,
+            "p50": 0.8559378385543823,
+            "p90": 1.3908764123916626
+          },
+          "visual": {
+            "mean": 1.0643715858459473,
+            "p50": 0.984531044960022,
+            "p90": 1.6401039361953735
+          }
+        },
+        "final_structural_change": {
+          "text": {
+            "mean": 0.3114241063594818,
+            "p50": 0.29810479283332825,
+            "p90": 0.4307584762573242
+          },
+          "visual": {
+            "mean": 0.33376774191856384,
+            "p50": 0.3154486119747162,
+            "p90": 0.5007521510124207
+          }
+        },
+        "attention": {
+          "text": {
+            "token_mass": {
+              "text-k1": 0.13981950283050537,
+              "text-k2": 0.12983891367912292,
+              "text-k3": 0.05847202241420746,
+              "visual-k1": 0.05872783809900284,
+              "visual-k2": 0.3389580547809601,
+              "visual-k3": 0.19726680219173431,
+              "null": 0.0769168883562088
+            },
+            "same_modality_mass": 0.32813042402267456,
+            "cross_modality_mass": 0.5949527025222778,
+            "null_mass": 0.0769168883562088,
+            "order_mass": {
+              "order1": 0.1985473334789276,
+              "order2": 0.468796968460083,
+              "order3": 0.2557387948036194
+            },
+            "entropy": {
+              "mean": 1.4917526245117188,
+              "p50": 1.5472701787948608,
+              "p90": 1.7877949476242065
+            },
+            "effective_tokens": {
+              "mean": 4.593329429626465,
+              "p50": 4.698626518249512,
+              "p90": 5.976259708404541
+            },
+            "nodewise_attention_weight_variance_mean": 0.013018411584198475,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.016471199691295624,
+              "text-k2": 0.01899849623441696,
+              "text-k3": 0.007684826850891113,
+              "visual-k1": 0.0031278464011847973,
+              "visual-k2": 0.032607100903987885,
+              "visual-k3": 0.011212092824280262,
+              "null": 0.0010273184161633253
+            }
+          },
+          "visual": {
+            "token_mass": {
+              "text-k1": 0.10893447697162628,
+              "text-k2": 0.16646987199783325,
+              "text-k3": 0.07494338601827621,
+              "visual-k1": 0.03572973608970642,
+              "visual-k2": 0.35388076305389404,
+              "visual-k3": 0.19383174180984497,
+              "null": 0.06621001660823822
+            },
+            "same_modality_mass": 0.5834422707557678,
+            "cross_modality_mass": 0.35034772753715515,
+            "null_mass": 0.06621001660823822,
+            "order_mass": {
+              "order1": 0.1446641981601715,
+              "order2": 0.5203506946563721,
+              "order3": 0.2687751054763794
+            },
+            "entropy": {
+              "mean": 1.3984291553497314,
+              "p50": 1.4499409198760986,
+              "p90": 1.7570586204528809
+            },
+            "effective_tokens": {
+              "mean": 4.231873989105225,
+              "p50": 4.2628631591796875,
+              "p90": 5.795366287231445
+            },
+            "nodewise_attention_weight_variance_mean": 0.015889886766672134,
+            "nodewise_attention_weight_variance_by_token": {
+              "text-k1": 0.017051976174116135,
+              "text-k2": 0.024338455870747566,
+              "text-k3": 0.009016389027237892,
+              "visual-k1": 0.0034466085489839315,
+              "visual-k2": 0.043314456939697266,
+              "visual-k3": 0.01286268513649702,
+              "null": 0.0011986345052719116
+            }
+          }
+        },
+        "collapse_checks": {
+          "text": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.3389580547809601
+          },
+          "visual": {
+            "null_collapse": false,
+            "single_token_collapse": false,
+            "node_invariant_retrieval": false,
+            "max_mean_token_mass": 0.35388076305389404
+          }
+        },
+        "attention_sampled_nodes": 8192,
+        "num_nodes": 17074
+      },
+      "training_resources": {
+        "total_training_seconds": 189.9310091410298,
+        "epoch_wall_time_seconds": 1.6660614836932437,
+        "peak_memory": {
+          "allocated_bytes": 7791579648,
+          "reserved_bytes": 8608808960,
+          "device": "cuda:0"
+        },
+        "audit_peak_memory": {
+          "allocated_bytes": 1826610176,
+          "reserved_bytes": 1965031424
+        }
+      }
+    }
+  ]
+}

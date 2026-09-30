@@ -1,0 +1,207 @@
+{
+  "dataset": "Grocery",
+  "seed": 44,
+  "variant": "M2-S",
+  "checkpoint": "/hdd1/DataInHere/YHF/mag_model/outputs/model_design/m2/pilot/M2-S/Grocery/seed44/best_checkpoint.pt",
+  "protocol": {
+    "task": "NC",
+    "training_split": "original train",
+    "selection_split": "original validation",
+    "test_evaluation": false,
+    "link_prediction": false
+  },
+  "model_parameter_counts": {
+    "trainable": 1032468,
+    "legacy_frozen": 41096,
+    "all": 1073564
+  },
+  "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+  "full_validation": {
+    "acc": 0.8175695538520813,
+    "macro_f1": 0.7096749133338314
+  },
+  "analysis": {
+    "variant": "M2-S",
+    "provenance_conditioning": false,
+    "parameter_counts": {
+      "trainable": 1032468,
+      "legacy_frozen": 41096,
+      "all": 1073564
+    },
+    "legacy_readout_frozen_statement": "Legacy parameters remain only because M2 inherits the frozen M1 implementation for correctness; they are not part of the M2 conceptual architecture and should be removed in the later architecture-freeze refactor.",
+    "delta_s_norms": {
+      "text": {
+        "k1": {
+          "mean": 10.573393821716309,
+          "p50": 10.54878044128418,
+          "p90": 11.544801712036133
+        },
+        "k2": {
+          "mean": 9.406451225280762,
+          "p50": 9.192597389221191,
+          "p90": 11.655773162841797
+        },
+        "k3": {
+          "mean": 7.208998680114746,
+          "p50": 7.1595892906188965,
+          "p90": 9.38766860961914
+        }
+      },
+      "visual": {
+        "k1": {
+          "mean": 10.352843284606934,
+          "p50": 10.339399337768555,
+          "p90": 11.249214172363281
+        },
+        "k2": {
+          "mean": 9.480732917785645,
+          "p50": 9.307657241821289,
+          "p90": 11.82975959777832
+        },
+        "k3": {
+          "mean": 6.4688401222229,
+          "p50": 6.243869304656982,
+          "p90": 8.919760704040527
+        }
+      }
+    },
+    "provenance_conditioned_token_change": {
+      "text": {
+        "k1": null,
+        "k2": null,
+        "k3": null
+      },
+      "visual": {
+        "k1": null,
+        "k2": null,
+        "k3": null
+      }
+    },
+    "retrieval_residual_ratio": {
+      "text": {
+        "mean": 0.9782630801200867,
+        "p50": 0.9270614385604858,
+        "p90": 1.4446746110916138
+      },
+      "visual": {
+        "mean": 1.1243904829025269,
+        "p50": 1.063888669013977,
+        "p90": 1.6984113454818726
+      }
+    },
+    "final_structural_change": {
+      "text": {
+        "mean": 0.32181522250175476,
+        "p50": 0.31476157903671265,
+        "p90": 0.42766499519348145
+      },
+      "visual": {
+        "mean": 0.3413943946361542,
+        "p50": 0.3265782296657562,
+        "p90": 0.4954710900783539
+      }
+    },
+    "attention": {
+      "text": {
+        "token_mass": {
+          "text-k1": 0.1729012429714203,
+          "text-k2": 0.1570640504360199,
+          "text-k3": 0.08657859265804291,
+          "visual-k1": 0.07007287442684174,
+          "visual-k2": 0.26730722188949585,
+          "visual-k3": 0.17189288139343262,
+          "null": 0.07418310642242432
+        },
+        "same_modality_mass": 0.4165439009666443,
+        "cross_modality_mass": 0.5092729926109314,
+        "null_mass": 0.07418310642242432,
+        "order_mass": {
+          "order1": 0.24297410249710083,
+          "order2": 0.42437130212783813,
+          "order3": 0.2584714889526367
+        },
+        "entropy": {
+          "mean": 1.60683274269104,
+          "p50": 1.672300934791565,
+          "p90": 1.845033049583435
+        },
+        "effective_tokens": {
+          "mean": 5.110933303833008,
+          "p50": 5.324404716491699,
+          "p90": 6.328309059143066
+        },
+        "nodewise_attention_weight_variance_mean": 0.011289184913039207,
+        "nodewise_attention_weight_variance_by_token": {
+          "text-k1": 0.0207284614443779,
+          "text-k2": 0.015976963564753532,
+          "text-k3": 0.005047083832323551,
+          "visual-k1": 0.0044165486469864845,
+          "visual-k2": 0.0208276454359293,
+          "visual-k3": 0.011242716573178768,
+          "null": 0.0007848746608942747
+        }
+      },
+      "visual": {
+        "token_mass": {
+          "text-k1": 0.17296825349330902,
+          "text-k2": 0.1434745192527771,
+          "text-k3": 0.06801420450210571,
+          "visual-k1": 0.0639808177947998,
+          "visual-k2": 0.29486581683158875,
+          "visual-k3": 0.1844043880701065,
+          "null": 0.07229198515415192
+        },
+        "same_modality_mass": 0.5432510375976562,
+        "cross_modality_mass": 0.384456992149353,
+        "null_mass": 0.07229198515415192,
+        "order_mass": {
+          "order1": 0.23694907128810883,
+          "order2": 0.43834030628204346,
+          "order3": 0.2524186074733734
+        },
+        "entropy": {
+          "mean": 1.5174002647399902,
+          "p50": 1.5532267093658447,
+          "p90": 1.7994201183319092
+        },
+        "effective_tokens": {
+          "mean": 4.684455394744873,
+          "p50": 4.72669792175293,
+          "p90": 6.046140193939209
+        },
+        "nodewise_attention_weight_variance_mean": 0.013586698099970818,
+        "nodewise_attention_weight_variance_by_token": {
+          "text-k1": 0.025002773851156235,
+          "text-k2": 0.022016266360878944,
+          "text-k3": 0.00548312533646822,
+          "visual-k1": 0.004616560414433479,
+          "visual-k2": 0.023440763354301453,
+          "visual-k3": 0.013552900403738022,
+          "null": 0.0009944953490048647
+        }
+      }
+    },
+    "collapse_checks": {
+      "text": {
+        "null_collapse": false,
+        "single_token_collapse": false,
+        "node_invariant_retrieval": false,
+        "max_mean_token_mass": 0.26730722188949585
+      },
+      "visual": {
+        "null_collapse": false,
+        "single_token_collapse": false,
+        "node_invariant_retrieval": false,
+        "max_mean_token_mass": 0.29486581683158875
+      }
+    },
+    "attention_sampled_nodes": 8192,
+    "num_nodes": 17074
+  },
+  "counterfactuals": [],
+  "counterfactual_invariant_tolerance": 2e-06,
+  "peak_memory": {
+    "allocated_bytes": 1616804864,
+    "reserved_bytes": 1801453568
+  }
+}

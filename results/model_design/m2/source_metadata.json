@@ -1,0 +1,7 @@
+{
+  "source_branch": "exp/m11_corrected_provenance_audit",
+  "source_sha": "1793ba2136909255637e4ebd2a6d1231921434b7",
+  "experiment_branch": "exp/provenance_evidence_m2",
+  "status_at_branch_creation": "clean",
+  "frozen_m1_sha": "fdc05a1af05a93a0c6d4c9d68b903f6cf018d811"
+}
