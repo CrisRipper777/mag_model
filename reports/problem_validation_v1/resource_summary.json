@@ -1,0 +1,124 @@
+{
+  "actual_attempt_count": 162,
+  "aggregate_recorded_gpu_hours": 0.09452887039217683,
+  "device": "single NVIDIA GPU per sequential job (recorded in each training record)",
+  "failed_training_attempt_count": 0,
+  "hard_attempt_cap": 180,
+  "locked_evaluation_inference_seconds": 1.5552563550882041,
+  "peak_gpu_memory_max_bytes": 2143803904,
+  "profiling": {
+    "datasets": [
+      {
+        "dataset": "Movies",
+        "device": "cuda:1",
+        "edges": 160802,
+        "estimated_300_epoch_seconds": 5.937605118378997,
+        "gradient_checks": {
+          "adapter_i.bias": true,
+          "adapter_i.weight": true,
+          "adapter_t.bias": true,
+          "adapter_t.weight": true,
+          "head.weight": true,
+          "phi.layers.0.bias": true,
+          "phi.layers.0.weight": true,
+          "phi.layers.1.bias": true,
+          "phi.layers.1.weight": true,
+          "phi.layers.4.bias": true,
+          "phi.layers.4.weight": true,
+          "router.0.bias": true,
+          "router.0.weight": true,
+          "router.2.bias": true,
+          "router.2.weight": true
+        },
+        "losses": [
+          2.939347267150879,
+          2.7496044635772705
+        ],
+        "num_nodes": 16672,
+        "operator_rebuilds": 1,
+        "parameters_with_head": 249400,
+        "peak_gpu_memory_bytes": 453831168,
+        "requested_device": "cuda:1",
+        "split_path": "/hdd1/DataInHere/YHF/data/MAGB_split/Movies_nc_seed42_train0.6_val0.2.pt",
+        "step_seconds": [
+          0.6009991252794862,
+          0.016825847793370485
+        ],
+        "test_evaluation": false,
+        "validation_inference_seconds": 0.0029661692678928375
+      },
+      {
+        "dataset": "ele-fashion",
+        "device": "cuda:1",
+        "edges": 399172,
+        "estimated_300_epoch_seconds": 14.267221558839083,
+        "gradient_checks": {
+          "adapter_i.bias": true,
+          "adapter_i.weight": true,
+          "adapter_t.bias": true,
+          "adapter_t.weight": true,
+          "head.weight": true,
+          "phi.layers.0.bias": true,
+          "phi.layers.0.weight": true,
+          "phi.layers.1.bias": true,
+          "phi.layers.1.weight": true,
+          "phi.layers.4.bias": true,
+          "phi.layers.4.weight": true,
+          "router.0.bias": true,
+          "router.0.weight": true,
+          "router.2.bias": true,
+          "router.2.weight": true
+        },
+        "losses": [
+          2.4228079319000244,
+          2.2008047103881836
+        ],
+        "num_nodes": 97766,
+        "operator_rebuilds": 1,
+        "parameters_with_head": 182832,
+        "peak_gpu_memory_bytes": 2140107264,
+        "requested_device": "cuda:1",
+        "split_path": "/hdd1/DataInHere/YHF/data/ele-fashion/split.pt",
+        "step_seconds": [
+          0.0358503726311028,
+          0.03433850221335888
+        ],
+        "test_evaluation": false,
+        "validation_inference_seconds": 0.013218902982771397
+      }
+    ],
+    "device": "cuda:1",
+    "requested_device": "cuda:1",
+    "source_commit": "63867331e9d3373f19136e47ab192cc9fb014c97",
+    "source_hashes": {
+      "configs/config.yaml": "1b06934c68b88e931909de4cb65b1fa51725df94ff6139d127a6ba85355fe399",
+      "configs/dataset/Grocery.yaml": "18969c97a0f06ab33fd3094624d524f03de48139405159bb06d19cf107105e56",
+      "configs/dataset/Movies.yaml": "81b803b0ed79ad86d483aee5dceadac149ca9ba2263e31160b22951a7812f5c8",
+      "configs/dataset/Reddit-S.yaml": "010129b2a4b7de2969286de9a74108a7cd08a481feaac067dc5cae62db36246a",
+      "configs/dataset/Toys.yaml": "d27227abdd6a9f4f4b8138e506deaadbf613b52d50cf5847fe9d8f3714856a73",
+      "configs/dataset/ele-fashion.yaml": "50e683dcae43c505c999ecbc22a6b5b380a8b897d4942933c01f266f8169b917",
+      "configs/model/mag_probe.yaml": "0fa6fb4e7672dae98aad9c9b22a6734155e566dcb7cdff710c1b5fca1884383d",
+      "configs/task/nc.yaml": "f959a73d5256d2e51b2ce3600c4f7252e7d79122c267aa70dc84abeddedb3852",
+      "scripts/evaluate_locked_probe.py": "9971f5a2cd40645acafb5482341c9c4dffc2a16a54632397848b41623d928099",
+      "scripts/run_problem_validation.py": "8b1b66277eeb66f651e6a3cbf8ba33e14dc2525576a987a3873c04624153aeb1",
+      "src/analysis/problem_validation.py": "adb8650dfa7ba848d487df716808dea26bdfa092bccb06caed9341916e033030",
+      "src/data/graph_utils.py": "8fa1c35c1897e25f2f30628ddc0312598fe9e581692a48cccb131a12a50f10df",
+      "src/data/loaders.py": "08fe47584069a8f690d87d20a2b892d008c43a1dad6bdb3d08bb2f7e22ddd173",
+      "src/data/splits.py": "b352a1c558752cc82075e7405723d42a408cb416386ad412669f0339aacd1d22",
+      "src/data/types.py": "531968f22725acc211d5906c66bf0189d35857cbbdb972d12ee4ebdd29d3d2f8",
+      "src/models/factory.py": "018ed8270319dc179831e598673f89550dca7473d322daf6c14654f9fb9bea0b",
+      "src/models/mag_probe.py": "f0327f3f92574cdc1a822b9d56b78454c6a83234a2534df54a7cf21bb87432b2",
+      "src/tasks/nc.py": "ebbf2b241ced977332d930ad831e53b0dfc43d488c86cbcacedd8d5b9a9c3b57",
+      "src/utils/seeds.py": "3e423b11a7e59e9b51c48e176d08b05b8fbd6294f364e1895ed2f1413d2e02f4"
+    }
+  },
+  "raw_checkpoint_directory": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints",
+  "raw_log_directory": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs",
+  "raw_prediction_directory": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions",
+  "soft_planning_target_gpu_hours": 12,
+  "successful_locked_evaluations": 150,
+  "successful_unique_training_job_count": 162,
+  "training_gpu_hours": 0.06379845366606282,
+  "training_gpu_seconds": 229.67443319782615,
+  "validation_inference_seconds": 109.07424385892227
+}

@@ -1,0 +1,1416 @@
+{
+  "engineering_screen": {
+    "J_CONCAT": {
+      "criterion": "mean test Acc gain >=0.3pp; at least 2/3 seeds positive; mean Macro-F1 delta >=-0.3pp",
+      "graphs": {
+        "Grocery": {
+          "ddof0_seed_accuracy_difference_sd": 0.007220397075219888,
+          "mean_accuracy_difference": -0.023718887262079047,
+          "mean_accuracy_difference_pp": -2.3718887262079047,
+          "mean_macro_f1_difference": -0.015919363349784943,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 0,
+          "seed_differences": [
+            {
+              "acc_difference": -0.02254758418740843,
+              "macro_f1_difference": -0.01870948227062519,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.015519765739385072,
+              "macro_f1_difference": 0.007640776329483678,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.03308931185944364,
+              "macro_f1_difference": -0.03668938410821332,
+              "seed": 44
+            }
+          ]
+        },
+        "Movies": {
+          "ddof0_seed_accuracy_difference_sd": 0.0032387509737170704,
+          "mean_accuracy_difference": -0.0065967016491754,
+          "mean_accuracy_difference_pp": -0.65967016491754,
+          "mean_macro_f1_difference": -0.0017875917522663005,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 0,
+          "seed_differences": [
+            {
+              "acc_difference": -0.0020989505247376306,
+              "macro_f1_difference": 0.0017212228948642605,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.009595202398800629,
+              "macro_f1_difference": -0.003549748099518857,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.00809595202398794,
+              "macro_f1_difference": -0.0035342500521443054,
+              "seed": 44
+            }
+          ]
+        },
+        "Reddit-S": {
+          "ddof0_seed_accuracy_difference_sd": 0.013425506610187052,
+          "mean_accuracy_difference": 0.00010485477613505119,
+          "mean_accuracy_difference_pp": 0.010485477613505118,
+          "mean_macro_f1_difference": 0.0036157799672133692,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 2,
+          "seed_differences": [
+            {
+              "acc_difference": 0.010066058508965137,
+              "macro_f1_difference": 0.013237950254812225,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.018873859704309548,
+              "macro_f1_difference": -0.01964300031271604,
+              "seed": 43
+            },
+            {
+              "acc_difference": 0.009122365523749565,
+              "macro_f1_difference": 0.017252389959543923,
+              "seed": 44
+            }
+          ]
+        },
+        "Toys": {
+          "ddof0_seed_accuracy_difference_sd": 0.007342366961450552,
+          "mean_accuracy_difference": -0.009100426834178962,
+          "mean_accuracy_difference_pp": -0.9100426834178962,
+          "mean_macro_f1_difference": -0.0033394031716183306,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 0,
+          "seed_differences": [
+            {
+              "acc_difference": -0.007972940323749733,
+              "macro_f1_difference": -0.0035517503283089003,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.0007248127567045515,
+              "macro_f1_difference": 0.0013289460082664961,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.0186035274220826,
+              "macro_f1_difference": -0.007795405194812588,
+              "seed": 44
+            }
+          ]
+        },
+        "ele-fashion": {
+          "ddof0_seed_accuracy_difference_sd": 0.0008892284415055742,
+          "mean_accuracy_difference": -0.00018183884532333808,
+          "mean_accuracy_difference_pp": -0.018183884532333806,
+          "mean_macro_f1_difference": 0.00453742621884512,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 1,
+          "seed_differences": [
+            {
+              "acc_difference": 0.0010569382884418888,
+              "macro_f1_difference": 0.011943306252451658,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.0006137061029662938,
+              "macro_f1_difference": 0.006251581900290071,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.0009887487214456092,
+              "macro_f1_difference": -0.004582609496206369,
+              "seed": 44
+            }
+          ]
+        }
+      },
+      "pass_count": 0,
+      "passing_graphs": []
+    },
+    "J_GLOBAL": {
+      "criterion": "mean test Acc gain >=0.3pp; at least 2/3 seeds positive; mean Macro-F1 delta >=-0.3pp",
+      "graphs": {
+        "Grocery": {
+          "ddof0_seed_accuracy_difference_sd": 0.0046382057083520604,
+          "mean_accuracy_difference": -0.04060517325524645,
+          "mean_accuracy_difference_pp": -4.060517325524645,
+          "mean_macro_f1_difference": -0.03933870478997085,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 0,
+          "seed_differences": [
+            {
+              "acc_difference": -0.03777452415812588,
+              "macro_f1_difference": -0.03758628126631702,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.036896046852123,
+              "macro_f1_difference": -0.028232644885004654,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.04714494875549047,
+              "macro_f1_difference": -0.05219718821859087,
+              "seed": 44
+            }
+          ]
+        },
+        "Movies": {
+          "ddof0_seed_accuracy_difference_sd": 0.0058775374024944505,
+          "mean_accuracy_difference": -0.014492753623188396,
+          "mean_accuracy_difference_pp": -1.4492753623188395,
+          "mean_macro_f1_difference": -0.026120419299996683,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 0,
+          "seed_differences": [
+            {
+              "acc_difference": -0.020689655172413834,
+              "macro_f1_difference": -0.01646002464344437,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.006596701649175363,
+              "macro_f1_difference": -0.02118719046758538,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.01619190404797599,
+              "macro_f1_difference": -0.04071404278896029,
+              "seed": 44
+            }
+          ]
+        },
+        "Reddit-S": {
+          "ddof0_seed_accuracy_difference_sd": 0.010665333849178081,
+          "mean_accuracy_difference": -0.004194191045402122,
+          "mean_accuracy_difference_pp": -0.4194191045402122,
+          "mean_macro_f1_difference": -0.0030283043182151768,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 2,
+          "seed_differences": [
+            {
+              "acc_difference": 0.004718464926077415,
+              "macro_f1_difference": 0.004950993934062287,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.0191884240327147,
+              "macro_f1_difference": -0.019816744643742945,
+              "seed": 43
+            },
+            {
+              "acc_difference": 0.0018873859704309215,
+              "macro_f1_difference": 0.005780837755035129,
+              "seed": 44
+            }
+          ]
+        },
+        "Toys": {
+          "ddof0_seed_accuracy_difference_sd": 0.008836097276600983,
+          "mean_accuracy_difference": -0.024965772730933405,
+          "mean_accuracy_difference_pp": -2.4965772730933407,
+          "mean_macro_f1_difference": -0.027846748663602445,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 0,
+          "seed_differences": [
+            {
+              "acc_difference": -0.016670693404203907,
+              "macro_f1_difference": -0.019733530063156257,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.021019569944430994,
+              "macro_f1_difference": -0.02738389393994589,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.03720705484416531,
+              "macro_f1_difference": -0.03642282198770519,
+              "seed": 44
+            }
+          ]
+        },
+        "ele-fashion": {
+          "ddof0_seed_accuracy_difference_sd": 0.001404936773135766,
+          "mean_accuracy_difference": 0.0011933174224343368,
+          "mean_accuracy_difference_pp": 0.11933174224343368,
+          "mean_macro_f1_difference": 0.0002922159167294917,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 2,
+          "seed_differences": [
+            {
+              "acc_difference": 0.0031367200818274155,
+              "macro_f1_difference": 0.0066175766118478085,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.00013637913399244805,
+              "macro_f1_difference": -0.00230701245231546,
+              "seed": 43
+            },
+            {
+              "acc_difference": 0.000579611319468043,
+              "macro_f1_difference": -0.0034339164093438734,
+              "seed": 44
+            }
+          ]
+        }
+      },
+      "pass_count": 0,
+      "passing_graphs": []
+    },
+    "J_GLOBAL_WIDE": {
+      "criterion": "mean test Acc gain >=0.3pp; at least 2/3 seeds positive; mean Macro-F1 delta >=-0.3pp",
+      "graphs": {
+        "Grocery": {
+          "ddof0_seed_accuracy_difference_sd": 0.0078585523505594,
+          "mean_accuracy_difference": -0.03709126403123475,
+          "mean_accuracy_difference_pp": -3.709126403123475,
+          "mean_macro_f1_difference": -0.03802586590474403,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 0,
+          "seed_differences": [
+            {
+              "acc_difference": -0.03543191800878476,
+              "macro_f1_difference": -0.041884396546125524,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.028404099560761398,
+              "macro_f1_difference": -0.018175133874957172,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.047437774524158094,
+              "macro_f1_difference": -0.0540180672931494,
+              "seed": 44
+            }
+          ]
+        },
+        "Movies": {
+          "ddof0_seed_accuracy_difference_sd": 0.001771118955189349,
+          "mean_accuracy_difference": -0.008195902048975504,
+          "mean_accuracy_difference_pp": -0.8195902048975504,
+          "mean_macro_f1_difference": -0.0190700243468865,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 0,
+          "seed_differences": [
+            {
+              "acc_difference": -0.0056971514242878385,
+              "macro_f1_difference": -0.016381110279022115,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.009595202398800629,
+              "macro_f1_difference": -0.0069860345566987725,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.009295352323838046,
+              "macro_f1_difference": -0.033842928204938616,
+              "seed": 44
+            }
+          ]
+        },
+        "Reddit-S": {
+          "ddof0_seed_accuracy_difference_sd": 0.010235029331582237,
+          "mean_accuracy_difference": -0.0025165146272412655,
+          "mean_accuracy_difference_pp": -0.25165146272412653,
+          "mean_macro_f1_difference": -0.00230876201998557,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 2,
+          "seed_differences": [
+            {
+              "acc_difference": 0.005033029254482568,
+              "macro_f1_difference": 0.005155068642041627,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.016986473733878626,
+              "macro_f1_difference": -0.01599261073248537,
+              "seed": 43
+            },
+            {
+              "acc_difference": 0.004403900597672261,
+              "macro_f1_difference": 0.003911256030487031,
+              "seed": 44
+            }
+          ]
+        },
+        "Toys": {
+          "ddof0_seed_accuracy_difference_sd": 0.005759220159066135,
+          "mean_accuracy_difference": -0.024482564226463704,
+          "mean_accuracy_difference_pp": -2.4482564226463706,
+          "mean_macro_f1_difference": -0.022569054880910582,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 0,
+          "seed_differences": [
+            {
+              "acc_difference": -0.020053152935491703,
+              "macro_f1_difference": -0.0179769158522467,
+              "seed": 42
+            },
+            {
+              "acc_difference": -0.020777965692196143,
+              "macro_f1_difference": -0.01836224911509643,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.03261657405170326,
+              "macro_f1_difference": -0.031367999675388614,
+              "seed": 44
+            }
+          ]
+        },
+        "ele-fashion": {
+          "ddof0_seed_accuracy_difference_sd": 0.001309287039337646,
+          "mean_accuracy_difference": 0.0016706443914080715,
+          "mean_accuracy_difference_pp": 0.16706443914080715,
+          "mean_macro_f1_difference": 0.0010028249811701029,
+          "passes_engineering_screen": false,
+          "same_direction_seeds": 2,
+          "seed_differences": [
+            {
+              "acc_difference": 0.0024207296283668134,
+              "macro_f1_difference": 0.004411499069802427,
+              "seed": 42
+            },
+            {
+              "acc_difference": 0.0027616774633481,
+              "macro_f1_difference": 0.0067532619800572125,
+              "seed": 43
+            },
+            {
+              "acc_difference": -0.00017047391749069885,
+              "macro_f1_difference": -0.00815628610634933,
+              "seed": 44
+            }
+          ]
+        }
+      },
+      "pass_count": 0,
+      "passing_graphs": []
+    },
+    "overall_exploratory_screen_pass": false,
+    "same_graphs_pass_both_capacity_controls": []
+  },
+  "paired_counts": {
+    "test": {
+      "Grocery/seed42/I_M_vs_I_E": {
+        "a_only_correct": 523,
+        "accuracy_difference_a_minus_b": 0.11595898866653442,
+        "b_only_correct": 127,
+        "both_correct": 2071,
+        "both_wrong": 694,
+        "n": 3415
+      },
+      "Grocery/seed42/J_FIXED_vs_J_N": {
+        "a_only_correct": 396,
+        "accuracy_difference_a_minus_b": 0.08228403329849243,
+        "b_only_correct": 115,
+        "both_correct": 2410,
+        "both_wrong": 494,
+        "n": 3415
+      },
+      "Grocery/seed42/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 153,
+        "accuracy_difference_a_minus_b": -0.022547602653503418,
+        "b_only_correct": 230,
+        "both_correct": 2506,
+        "both_wrong": 526,
+        "n": 3415
+      },
+      "Grocery/seed42/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 132,
+        "accuracy_difference_a_minus_b": -0.03777456283569336,
+        "b_only_correct": 261,
+        "both_correct": 2527,
+        "both_wrong": 495,
+        "n": 3415
+      },
+      "Grocery/seed42/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 144,
+        "accuracy_difference_a_minus_b": -0.03543192148208618,
+        "b_only_correct": 265,
+        "both_correct": 2515,
+        "both_wrong": 491,
+        "n": 3415
+      },
+      "Grocery/seed42/T_M_vs_T_E": {
+        "a_only_correct": 338,
+        "accuracy_difference_a_minus_b": 0.04978036880493164,
+        "b_only_correct": 168,
+        "both_correct": 2402,
+        "both_wrong": 507,
+        "n": 3415
+      },
+      "Grocery/seed43/I_M_vs_I_E": {
+        "a_only_correct": 516,
+        "accuracy_difference_a_minus_b": 0.10893118381500244,
+        "b_only_correct": 144,
+        "both_correct": 2070,
+        "both_wrong": 685,
+        "n": 3415
+      },
+      "Grocery/seed43/J_FIXED_vs_J_N": {
+        "a_only_correct": 398,
+        "accuracy_difference_a_minus_b": 0.08199119567871094,
+        "b_only_correct": 118,
+        "both_correct": 2409,
+        "both_wrong": 490,
+        "n": 3415
+      },
+      "Grocery/seed43/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 180,
+        "accuracy_difference_a_minus_b": -0.015519797801971436,
+        "b_only_correct": 233,
+        "both_correct": 2495,
+        "both_wrong": 507,
+        "n": 3415
+      },
+      "Grocery/seed43/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 140,
+        "accuracy_difference_a_minus_b": -0.03689604997634888,
+        "b_only_correct": 266,
+        "both_correct": 2535,
+        "both_wrong": 474,
+        "n": 3415
+      },
+      "Grocery/seed43/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 152,
+        "accuracy_difference_a_minus_b": -0.0284041166305542,
+        "b_only_correct": 249,
+        "both_correct": 2523,
+        "both_wrong": 491,
+        "n": 3415
+      },
+      "Grocery/seed43/T_M_vs_T_E": {
+        "a_only_correct": 352,
+        "accuracy_difference_a_minus_b": 0.054758429527282715,
+        "b_only_correct": 165,
+        "both_correct": 2409,
+        "both_wrong": 489,
+        "n": 3415
+      },
+      "Grocery/seed44/I_M_vs_I_E": {
+        "a_only_correct": 532,
+        "accuracy_difference_a_minus_b": 0.11244505643844604,
+        "b_only_correct": 148,
+        "both_correct": 2047,
+        "both_wrong": 688,
+        "n": 3415
+      },
+      "Grocery/seed44/J_FIXED_vs_J_N": {
+        "a_only_correct": 388,
+        "accuracy_difference_a_minus_b": 0.07759881019592285,
+        "b_only_correct": 123,
+        "both_correct": 2404,
+        "both_wrong": 500,
+        "n": 3415
+      },
+      "Grocery/seed44/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 148,
+        "accuracy_difference_a_minus_b": -0.033089280128479004,
+        "b_only_correct": 261,
+        "both_correct": 2478,
+        "both_wrong": 528,
+        "n": 3415
+      },
+      "Grocery/seed44/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 126,
+        "accuracy_difference_a_minus_b": -0.047144949436187744,
+        "b_only_correct": 287,
+        "both_correct": 2500,
+        "both_wrong": 502,
+        "n": 3415
+      },
+      "Grocery/seed44/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 121,
+        "accuracy_difference_a_minus_b": -0.04743778705596924,
+        "b_only_correct": 283,
+        "both_correct": 2505,
+        "both_wrong": 506,
+        "n": 3415
+      },
+      "Grocery/seed44/T_M_vs_T_E": {
+        "a_only_correct": 328,
+        "accuracy_difference_a_minus_b": 0.05387997627258301,
+        "b_only_correct": 144,
+        "both_correct": 2414,
+        "both_wrong": 529,
+        "n": 3415
+      },
+      "Movies/seed42/I_M_vs_I_E": {
+        "a_only_correct": 339,
+        "accuracy_difference_a_minus_b": 0.03868067264556885,
+        "b_only_correct": 210,
+        "both_correct": 1408,
+        "both_wrong": 1378,
+        "n": 3335
+      },
+      "Movies/seed42/J_FIXED_vs_J_N": {
+        "a_only_correct": 521,
+        "accuracy_difference_a_minus_b": 0.05397304892539978,
+        "b_only_correct": 341,
+        "both_correct": 1272,
+        "both_wrong": 1201,
+        "n": 3335
+      },
+      "Movies/seed42/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 314,
+        "accuracy_difference_a_minus_b": -0.002098977565765381,
+        "b_only_correct": 321,
+        "both_correct": 1454,
+        "both_wrong": 1246,
+        "n": 3335
+      },
+      "Movies/seed42/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 224,
+        "accuracy_difference_a_minus_b": -0.020689666271209717,
+        "b_only_correct": 293,
+        "both_correct": 1544,
+        "both_wrong": 1274,
+        "n": 3335
+      },
+      "Movies/seed42/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 252,
+        "accuracy_difference_a_minus_b": -0.005697190761566162,
+        "b_only_correct": 271,
+        "both_correct": 1516,
+        "both_wrong": 1296,
+        "n": 3335
+      },
+      "Movies/seed42/T_M_vs_T_E": {
+        "a_only_correct": 380,
+        "accuracy_difference_a_minus_b": 0.04557719826698303,
+        "b_only_correct": 228,
+        "both_correct": 1273,
+        "both_wrong": 1454,
+        "n": 3335
+      },
+      "Movies/seed43/I_M_vs_I_E": {
+        "a_only_correct": 430,
+        "accuracy_difference_a_minus_b": 0.06266865134239197,
+        "b_only_correct": 221,
+        "both_correct": 1369,
+        "both_wrong": 1315,
+        "n": 3335
+      },
+      "Movies/seed43/J_FIXED_vs_J_N": {
+        "a_only_correct": 465,
+        "accuracy_difference_a_minus_b": 0.047676146030426025,
+        "b_only_correct": 306,
+        "both_correct": 1334,
+        "both_wrong": 1230,
+        "n": 3335
+      },
+      "Movies/seed43/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 310,
+        "accuracy_difference_a_minus_b": -0.009595215320587158,
+        "b_only_correct": 342,
+        "both_correct": 1448,
+        "both_wrong": 1235,
+        "n": 3335
+      },
+      "Movies/seed43/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 280,
+        "accuracy_difference_a_minus_b": -0.006596684455871582,
+        "b_only_correct": 302,
+        "both_correct": 1478,
+        "both_wrong": 1275,
+        "n": 3335
+      },
+      "Movies/seed43/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 279,
+        "accuracy_difference_a_minus_b": -0.009595215320587158,
+        "b_only_correct": 311,
+        "both_correct": 1479,
+        "both_wrong": 1266,
+        "n": 3335
+      },
+      "Movies/seed43/T_M_vs_T_E": {
+        "a_only_correct": 310,
+        "accuracy_difference_a_minus_b": 0.03388306498527527,
+        "b_only_correct": 197,
+        "both_correct": 1325,
+        "both_wrong": 1503,
+        "n": 3335
+      },
+      "Movies/seed44/I_M_vs_I_E": {
+        "a_only_correct": 374,
+        "accuracy_difference_a_minus_b": 0.04797598719596863,
+        "b_only_correct": 214,
+        "both_correct": 1377,
+        "both_wrong": 1370,
+        "n": 3335
+      },
+      "Movies/seed44/J_FIXED_vs_J_N": {
+        "a_only_correct": 491,
+        "accuracy_difference_a_minus_b": 0.05517241358757019,
+        "b_only_correct": 307,
+        "both_correct": 1332,
+        "both_wrong": 1205,
+        "n": 3335
+      },
+      "Movies/seed44/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 294,
+        "accuracy_difference_a_minus_b": -0.008095979690551758,
+        "b_only_correct": 321,
+        "both_correct": 1480,
+        "both_wrong": 1240,
+        "n": 3335
+      },
+      "Movies/seed44/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 238,
+        "accuracy_difference_a_minus_b": -0.01619189977645874,
+        "b_only_correct": 292,
+        "both_correct": 1536,
+        "both_wrong": 1269,
+        "n": 3335
+      },
+      "Movies/seed44/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 254,
+        "accuracy_difference_a_minus_b": -0.009295344352722168,
+        "b_only_correct": 285,
+        "both_correct": 1520,
+        "both_wrong": 1276,
+        "n": 3335
+      },
+      "Movies/seed44/T_M_vs_T_E": {
+        "a_only_correct": 382,
+        "accuracy_difference_a_minus_b": 0.03988003730773926,
+        "b_only_correct": 249,
+        "both_correct": 1282,
+        "both_wrong": 1422,
+        "n": 3335
+      },
+      "Reddit-S/seed42/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 72,
+        "accuracy_difference_a_minus_b": 0.010066092014312744,
+        "b_only_correct": 40,
+        "both_correct": 2972,
+        "both_wrong": 95,
+        "n": 3179
+      },
+      "Reddit-S/seed42/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 61,
+        "accuracy_difference_a_minus_b": 0.004718482494354248,
+        "b_only_correct": 46,
+        "both_correct": 2983,
+        "both_wrong": 89,
+        "n": 3179
+      },
+      "Reddit-S/seed42/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 68,
+        "accuracy_difference_a_minus_b": 0.00503307580947876,
+        "b_only_correct": 52,
+        "both_correct": 2976,
+        "both_wrong": 83,
+        "n": 3179
+      },
+      "Reddit-S/seed43/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 60,
+        "accuracy_difference_a_minus_b": -0.018873870372772217,
+        "b_only_correct": 120,
+        "both_correct": 2913,
+        "both_wrong": 86,
+        "n": 3179
+      },
+      "Reddit-S/seed43/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 61,
+        "accuracy_difference_a_minus_b": -0.01918846368789673,
+        "b_only_correct": 122,
+        "both_correct": 2912,
+        "both_wrong": 84,
+        "n": 3179
+      },
+      "Reddit-S/seed43/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 60,
+        "accuracy_difference_a_minus_b": -0.016986489295959473,
+        "b_only_correct": 114,
+        "both_correct": 2913,
+        "both_wrong": 92,
+        "n": 3179
+      },
+      "Reddit-S/seed44/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 81,
+        "accuracy_difference_a_minus_b": 0.009122371673583984,
+        "b_only_correct": 52,
+        "both_correct": 2953,
+        "both_wrong": 93,
+        "n": 3179
+      },
+      "Reddit-S/seed44/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 66,
+        "accuracy_difference_a_minus_b": 0.0018874406814575195,
+        "b_only_correct": 60,
+        "both_correct": 2968,
+        "both_wrong": 85,
+        "n": 3179
+      },
+      "Reddit-S/seed44/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 68,
+        "accuracy_difference_a_minus_b": 0.004403948783874512,
+        "b_only_correct": 54,
+        "both_correct": 2966,
+        "both_wrong": 91,
+        "n": 3179
+      },
+      "Toys/seed42/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 221,
+        "accuracy_difference_a_minus_b": -0.007972955703735352,
+        "b_only_correct": 254,
+        "both_correct": 2920,
+        "both_wrong": 744,
+        "n": 4139
+      },
+      "Toys/seed42/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 192,
+        "accuracy_difference_a_minus_b": -0.016670703887939453,
+        "b_only_correct": 261,
+        "both_correct": 2949,
+        "both_wrong": 737,
+        "n": 4139
+      },
+      "Toys/seed42/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 179,
+        "accuracy_difference_a_minus_b": -0.02005314826965332,
+        "b_only_correct": 262,
+        "both_correct": 2962,
+        "both_wrong": 736,
+        "n": 4139
+      },
+      "Toys/seed43/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 211,
+        "accuracy_difference_a_minus_b": -0.00072479248046875,
+        "b_only_correct": 214,
+        "both_correct": 2954,
+        "both_wrong": 760,
+        "n": 4139
+      },
+      "Toys/seed43/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 149,
+        "accuracy_difference_a_minus_b": -0.021019577980041504,
+        "b_only_correct": 236,
+        "both_correct": 3016,
+        "both_wrong": 738,
+        "n": 4139
+      },
+      "Toys/seed43/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 131,
+        "accuracy_difference_a_minus_b": -0.02077794075012207,
+        "b_only_correct": 217,
+        "both_correct": 3034,
+        "both_wrong": 757,
+        "n": 4139
+      },
+      "Toys/seed44/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 201,
+        "accuracy_difference_a_minus_b": -0.018603503704071045,
+        "b_only_correct": 278,
+        "both_correct": 2903,
+        "both_wrong": 757,
+        "n": 4139
+      },
+      "Toys/seed44/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 145,
+        "accuracy_difference_a_minus_b": -0.03720700740814209,
+        "b_only_correct": 299,
+        "both_correct": 2959,
+        "both_wrong": 736,
+        "n": 4139
+      },
+      "Toys/seed44/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 159,
+        "accuracy_difference_a_minus_b": -0.03261655569076538,
+        "b_only_correct": 294,
+        "both_correct": 2945,
+        "both_wrong": 741,
+        "n": 4139
+      },
+      "ele-fashion/seed42/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 557,
+        "accuracy_difference_a_minus_b": 0.0010569095611572266,
+        "b_only_correct": 526,
+        "both_correct": 25052,
+        "both_wrong": 3195,
+        "n": 29330
+      },
+      "ele-fashion/seed42/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 575,
+        "accuracy_difference_a_minus_b": 0.0031366944313049316,
+        "b_only_correct": 483,
+        "both_correct": 25034,
+        "both_wrong": 3238,
+        "n": 29330
+      },
+      "ele-fashion/seed42/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 521,
+        "accuracy_difference_a_minus_b": 0.0024207234382629395,
+        "b_only_correct": 450,
+        "both_correct": 25088,
+        "both_wrong": 3271,
+        "n": 29330
+      },
+      "ele-fashion/seed43/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 492,
+        "accuracy_difference_a_minus_b": -0.0006136894226074219,
+        "b_only_correct": 510,
+        "both_correct": 25096,
+        "both_wrong": 3232,
+        "n": 29330
+      },
+      "ele-fashion/seed43/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 475,
+        "accuracy_difference_a_minus_b": -0.00013637542724609375,
+        "b_only_correct": 479,
+        "both_correct": 25113,
+        "both_wrong": 3263,
+        "n": 29330
+      },
+      "ele-fashion/seed43/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 596,
+        "accuracy_difference_a_minus_b": 0.002761662006378174,
+        "b_only_correct": 515,
+        "both_correct": 24992,
+        "both_wrong": 3227,
+        "n": 29330
+      },
+      "ele-fashion/seed44/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 522,
+        "accuracy_difference_a_minus_b": -0.000988781452178955,
+        "b_only_correct": 551,
+        "both_correct": 25034,
+        "both_wrong": 3223,
+        "n": 29330
+      },
+      "ele-fashion/seed44/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 512,
+        "accuracy_difference_a_minus_b": 0.0005795955657958984,
+        "b_only_correct": 495,
+        "both_correct": 25044,
+        "both_wrong": 3279,
+        "n": 29330
+      },
+      "ele-fashion/seed44/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 532,
+        "accuracy_difference_a_minus_b": -0.0001704692840576172,
+        "b_only_correct": 537,
+        "both_correct": 25024,
+        "both_wrong": 3237,
+        "n": 29330
+      }
+    },
+    "val": {
+      "Grocery/seed42/I_M_vs_I_E": {
+        "a_only_correct": 487,
+        "accuracy_difference_a_minus_b": 0.11215221881866455,
+        "b_only_correct": 104,
+        "both_correct": 2121,
+        "both_wrong": 703,
+        "n": 3415
+      },
+      "Grocery/seed42/J_FIXED_vs_J_N": {
+        "a_only_correct": 414,
+        "accuracy_difference_a_minus_b": 0.07964855432510376,
+        "b_only_correct": 142,
+        "both_correct": 2380,
+        "both_wrong": 479,
+        "n": 3415
+      },
+      "Grocery/seed42/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 178,
+        "accuracy_difference_a_minus_b": -0.017862379550933838,
+        "b_only_correct": 239,
+        "both_correct": 2477,
+        "both_wrong": 521,
+        "n": 3415
+      },
+      "Grocery/seed42/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 123,
+        "accuracy_difference_a_minus_b": -0.03601759672164917,
+        "b_only_correct": 246,
+        "both_correct": 2532,
+        "both_wrong": 514,
+        "n": 3415
+      },
+      "Grocery/seed42/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 116,
+        "accuracy_difference_a_minus_b": -0.04216688871383667,
+        "b_only_correct": 260,
+        "both_correct": 2539,
+        "both_wrong": 500,
+        "n": 3415
+      },
+      "Grocery/seed42/T_M_vs_T_E": {
+        "a_only_correct": 372,
+        "accuracy_difference_a_minus_b": 0.06237185001373291,
+        "b_only_correct": 159,
+        "both_correct": 2393,
+        "both_wrong": 491,
+        "n": 3415
+      },
+      "Grocery/seed43/I_M_vs_I_E": {
+        "a_only_correct": 492,
+        "accuracy_difference_a_minus_b": 0.1144949197769165,
+        "b_only_correct": 101,
+        "both_correct": 2120,
+        "both_wrong": 702,
+        "n": 3415
+      },
+      "Grocery/seed43/J_FIXED_vs_J_N": {
+        "a_only_correct": 427,
+        "accuracy_difference_a_minus_b": 0.08814054727554321,
+        "b_only_correct": 126,
+        "both_correct": 2386,
+        "both_wrong": 476,
+        "n": 3415
+      },
+      "Grocery/seed43/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 165,
+        "accuracy_difference_a_minus_b": -0.014348447322845459,
+        "b_only_correct": 214,
+        "both_correct": 2502,
+        "both_wrong": 534,
+        "n": 3415
+      },
+      "Grocery/seed43/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 115,
+        "accuracy_difference_a_minus_b": -0.037188827991485596,
+        "b_only_correct": 242,
+        "both_correct": 2552,
+        "both_wrong": 506,
+        "n": 3415
+      },
+      "Grocery/seed43/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 125,
+        "accuracy_difference_a_minus_b": -0.03162515163421631,
+        "b_only_correct": 233,
+        "both_correct": 2542,
+        "both_wrong": 515,
+        "n": 3415
+      },
+      "Grocery/seed43/T_M_vs_T_E": {
+        "a_only_correct": 367,
+        "accuracy_difference_a_minus_b": 0.0629575252532959,
+        "b_only_correct": 152,
+        "both_correct": 2389,
+        "both_wrong": 507,
+        "n": 3415
+      },
+      "Grocery/seed44/I_M_vs_I_E": {
+        "a_only_correct": 526,
+        "accuracy_difference_a_minus_b": 0.11713027954101562,
+        "b_only_correct": 126,
+        "both_correct": 2087,
+        "both_wrong": 676,
+        "n": 3415
+      },
+      "Grocery/seed44/J_FIXED_vs_J_N": {
+        "a_only_correct": 424,
+        "accuracy_difference_a_minus_b": 0.08286964893341064,
+        "b_only_correct": 141,
+        "both_correct": 2380,
+        "both_wrong": 470,
+        "n": 3415
+      },
+      "Grocery/seed44/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 153,
+        "accuracy_difference_a_minus_b": -0.026354312896728516,
+        "b_only_correct": 243,
+        "both_correct": 2479,
+        "both_wrong": 540,
+        "n": 3415
+      },
+      "Grocery/seed44/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 110,
+        "accuracy_difference_a_minus_b": -0.04568082094192505,
+        "b_only_correct": 266,
+        "both_correct": 2522,
+        "both_wrong": 517,
+        "n": 3415
+      },
+      "Grocery/seed44/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 119,
+        "accuracy_difference_a_minus_b": -0.04275256395339966,
+        "b_only_correct": 265,
+        "both_correct": 2513,
+        "both_wrong": 518,
+        "n": 3415
+      },
+      "Grocery/seed44/T_M_vs_T_E": {
+        "a_only_correct": 339,
+        "accuracy_difference_a_minus_b": 0.05446559190750122,
+        "b_only_correct": 153,
+        "both_correct": 2385,
+        "both_wrong": 538,
+        "n": 3415
+      },
+      "Movies/seed42/I_M_vs_I_E": {
+        "a_only_correct": 363,
+        "accuracy_difference_a_minus_b": 0.04109179973602295,
+        "b_only_correct": 226,
+        "both_correct": 1390,
+        "both_wrong": 1355,
+        "n": 3334
+      },
+      "Movies/seed42/J_FIXED_vs_J_N": {
+        "a_only_correct": 542,
+        "accuracy_difference_a_minus_b": 0.07138574123382568,
+        "b_only_correct": 304,
+        "both_correct": 1305,
+        "both_wrong": 1183,
+        "n": 3334
+      },
+      "Movies/seed42/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 299,
+        "accuracy_difference_a_minus_b": -0.026694655418395996,
+        "b_only_correct": 388,
+        "both_correct": 1428,
+        "both_wrong": 1219,
+        "n": 3334
+      },
+      "Movies/seed42/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 221,
+        "accuracy_difference_a_minus_b": -0.0377923846244812,
+        "b_only_correct": 347,
+        "both_correct": 1506,
+        "both_wrong": 1260,
+        "n": 3334
+      },
+      "Movies/seed42/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 243,
+        "accuracy_difference_a_minus_b": -0.0305938720703125,
+        "b_only_correct": 345,
+        "both_correct": 1484,
+        "both_wrong": 1262,
+        "n": 3334
+      },
+      "Movies/seed42/T_M_vs_T_E": {
+        "a_only_correct": 374,
+        "accuracy_difference_a_minus_b": 0.042591482400894165,
+        "b_only_correct": 232,
+        "both_correct": 1290,
+        "both_wrong": 1438,
+        "n": 3334
+      },
+      "Movies/seed43/I_M_vs_I_E": {
+        "a_only_correct": 385,
+        "accuracy_difference_a_minus_b": 0.03989201784133911,
+        "b_only_correct": 252,
+        "both_correct": 1363,
+        "both_wrong": 1334,
+        "n": 3334
+      },
+      "Movies/seed43/J_FIXED_vs_J_N": {
+        "a_only_correct": 521,
+        "accuracy_difference_a_minus_b": 0.07648468017578125,
+        "b_only_correct": 266,
+        "both_correct": 1337,
+        "both_wrong": 1210,
+        "n": 3334
+      },
+      "Movies/seed43/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 300,
+        "accuracy_difference_a_minus_b": -0.01769644021987915,
+        "b_only_correct": 359,
+        "both_correct": 1456,
+        "both_wrong": 1219,
+        "n": 3334
+      },
+      "Movies/seed43/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 255,
+        "accuracy_difference_a_minus_b": -0.0305938720703125,
+        "b_only_correct": 357,
+        "both_correct": 1501,
+        "both_wrong": 1221,
+        "n": 3334
+      },
+      "Movies/seed43/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 248,
+        "accuracy_difference_a_minus_b": -0.027294576168060303,
+        "b_only_correct": 339,
+        "both_correct": 1508,
+        "both_wrong": 1239,
+        "n": 3334
+      },
+      "Movies/seed43/T_M_vs_T_E": {
+        "a_only_correct": 284,
+        "accuracy_difference_a_minus_b": 0.029094189405441284,
+        "b_only_correct": 187,
+        "both_correct": 1351,
+        "both_wrong": 1512,
+        "n": 3334
+      },
+      "Movies/seed44/I_M_vs_I_E": {
+        "a_only_correct": 368,
+        "accuracy_difference_a_minus_b": 0.03959205746650696,
+        "b_only_correct": 236,
+        "both_correct": 1377,
+        "both_wrong": 1353,
+        "n": 3334
+      },
+      "Movies/seed44/J_FIXED_vs_J_N": {
+        "a_only_correct": 529,
+        "accuracy_difference_a_minus_b": 0.06958609819412231,
+        "b_only_correct": 297,
+        "both_correct": 1312,
+        "both_wrong": 1196,
+        "n": 3334
+      },
+      "Movies/seed44/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 274,
+        "accuracy_difference_a_minus_b": -0.01949608325958252,
+        "b_only_correct": 339,
+        "both_correct": 1487,
+        "both_wrong": 1234,
+        "n": 3334
+      },
+      "Movies/seed44/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 261,
+        "accuracy_difference_a_minus_b": -0.020995795726776123,
+        "b_only_correct": 331,
+        "both_correct": 1500,
+        "both_wrong": 1242,
+        "n": 3334
+      },
+      "Movies/seed44/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 227,
+        "accuracy_difference_a_minus_b": -0.028494298458099365,
+        "b_only_correct": 322,
+        "both_correct": 1534,
+        "both_wrong": 1251,
+        "n": 3334
+      },
+      "Movies/seed44/T_M_vs_T_E": {
+        "a_only_correct": 393,
+        "accuracy_difference_a_minus_b": 0.04409116506576538,
+        "b_only_correct": 246,
+        "both_correct": 1288,
+        "both_wrong": 1407,
+        "n": 3334
+      },
+      "Reddit-S/seed42/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 72,
+        "accuracy_difference_a_minus_b": 0.008493244647979736,
+        "b_only_correct": 45,
+        "both_correct": 2965,
+        "both_wrong": 97,
+        "n": 3179
+      },
+      "Reddit-S/seed42/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 49,
+        "accuracy_difference_a_minus_b": -0.0009437203407287598,
+        "b_only_correct": 52,
+        "both_correct": 2988,
+        "both_wrong": 90,
+        "n": 3179
+      },
+      "Reddit-S/seed42/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 53,
+        "accuracy_difference_a_minus_b": 0.001258254051208496,
+        "b_only_correct": 49,
+        "both_correct": 2984,
+        "both_wrong": 93,
+        "n": 3179
+      },
+      "Reddit-S/seed43/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 66,
+        "accuracy_difference_a_minus_b": -0.01635730266571045,
+        "b_only_correct": 118,
+        "both_correct": 2904,
+        "both_wrong": 91,
+        "n": 3179
+      },
+      "Reddit-S/seed43/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 44,
+        "accuracy_difference_a_minus_b": -0.02359229326248169,
+        "b_only_correct": 119,
+        "both_correct": 2926,
+        "both_wrong": 90,
+        "n": 3179
+      },
+      "Reddit-S/seed43/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 56,
+        "accuracy_difference_a_minus_b": -0.019188404083251953,
+        "b_only_correct": 117,
+        "both_correct": 2914,
+        "both_wrong": 92,
+        "n": 3179
+      },
+      "Reddit-S/seed44/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 72,
+        "accuracy_difference_a_minus_b": 0.0081787109375,
+        "b_only_correct": 46,
+        "both_correct": 2970,
+        "both_wrong": 91,
+        "n": 3179
+      },
+      "Reddit-S/seed44/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 55,
+        "accuracy_difference_a_minus_b": 0.0015728473663330078,
+        "b_only_correct": 50,
+        "both_correct": 2987,
+        "both_wrong": 87,
+        "n": 3179
+      },
+      "Reddit-S/seed44/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 56,
+        "accuracy_difference_a_minus_b": 0.001258254051208496,
+        "b_only_correct": 52,
+        "both_correct": 2986,
+        "both_wrong": 85,
+        "n": 3179
+      },
+      "Toys/seed42/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 199,
+        "accuracy_difference_a_minus_b": -0.008456110954284668,
+        "b_only_correct": 234,
+        "both_correct": 3006,
+        "both_wrong": 700,
+        "n": 4139
+      },
+      "Toys/seed42/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 178,
+        "accuracy_difference_a_minus_b": -0.01763707399368286,
+        "b_only_correct": 251,
+        "both_correct": 3027,
+        "both_wrong": 683,
+        "n": 4139
+      },
+      "Toys/seed42/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 171,
+        "accuracy_difference_a_minus_b": -0.015462636947631836,
+        "b_only_correct": 235,
+        "both_correct": 3034,
+        "both_wrong": 699,
+        "n": 4139
+      },
+      "Toys/seed43/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 182,
+        "accuracy_difference_a_minus_b": -0.004348874092102051,
+        "b_only_correct": 200,
+        "both_correct": 3040,
+        "both_wrong": 717,
+        "n": 4139
+      },
+      "Toys/seed43/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 150,
+        "accuracy_difference_a_minus_b": -0.01618748903274536,
+        "b_only_correct": 217,
+        "both_correct": 3072,
+        "both_wrong": 700,
+        "n": 4139
+      },
+      "Toys/seed43/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 150,
+        "accuracy_difference_a_minus_b": -0.014013051986694336,
+        "b_only_correct": 208,
+        "both_correct": 3072,
+        "both_wrong": 709,
+        "n": 4139
+      },
+      "Toys/seed44/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 197,
+        "accuracy_difference_a_minus_b": -0.020294785499572754,
+        "b_only_correct": 281,
+        "both_correct": 2960,
+        "both_wrong": 701,
+        "n": 4139
+      },
+      "Toys/seed44/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 151,
+        "accuracy_difference_a_minus_b": -0.027301311492919922,
+        "b_only_correct": 264,
+        "both_correct": 3006,
+        "both_wrong": 718,
+        "n": 4139
+      },
+      "Toys/seed44/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 168,
+        "accuracy_difference_a_minus_b": -0.02367722988128662,
+        "b_only_correct": 266,
+        "both_correct": 2989,
+        "both_wrong": 716,
+        "n": 4139
+      },
+      "ele-fashion/seed42/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 182,
+        "accuracy_difference_a_minus_b": 0.002250194549560547,
+        "b_only_correct": 160,
+        "both_correct": 8352,
+        "both_wrong": 1083,
+        "n": 9777
+      },
+      "ele-fashion/seed42/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 188,
+        "accuracy_difference_a_minus_b": 0.0040912628173828125,
+        "b_only_correct": 148,
+        "both_correct": 8346,
+        "both_wrong": 1095,
+        "n": 9777
+      },
+      "ele-fashion/seed42/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 170,
+        "accuracy_difference_a_minus_b": 0.001943349838256836,
+        "b_only_correct": 151,
+        "both_correct": 8364,
+        "both_wrong": 1092,
+        "n": 9777
+      },
+      "ele-fashion/seed43/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 153,
+        "accuracy_difference_a_minus_b": -0.00020456314086914062,
+        "b_only_correct": 155,
+        "both_correct": 8356,
+        "both_wrong": 1113,
+        "n": 9777
+      },
+      "ele-fashion/seed43/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 161,
+        "accuracy_difference_a_minus_b": 0.00030684471130371094,
+        "b_only_correct": 158,
+        "both_correct": 8348,
+        "both_wrong": 1110,
+        "n": 9777
+      },
+      "ele-fashion/seed43/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 169,
+        "accuracy_difference_a_minus_b": 0.00030684471130371094,
+        "b_only_correct": 166,
+        "both_correct": 8340,
+        "both_wrong": 1102,
+        "n": 9777
+      },
+      "ele-fashion/seed44/J_NODE_vs_J_CONCAT": {
+        "a_only_correct": 148,
+        "accuracy_difference_a_minus_b": -0.0021479129791259766,
+        "b_only_correct": 169,
+        "both_correct": 8365,
+        "both_wrong": 1095,
+        "n": 9777
+      },
+      "ele-fashion/seed44/J_NODE_vs_J_GLOBAL": {
+        "a_only_correct": 139,
+        "accuracy_difference_a_minus_b": 0.00030684471130371094,
+        "b_only_correct": 136,
+        "both_correct": 8374,
+        "both_wrong": 1128,
+        "n": 9777
+      },
+      "ele-fashion/seed44/J_NODE_vs_J_GLOBAL_WIDE": {
+        "a_only_correct": 155,
+        "accuracy_difference_a_minus_b": -0.00010228157043457031,
+        "b_only_correct": 156,
+        "both_correct": 8358,
+        "both_wrong": 1108,
+        "n": 9777
+      }
+    }
+  }
+}

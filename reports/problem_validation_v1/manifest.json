@@ -1,0 +1,1940 @@
+{
+  "aggregation_code": {
+    "analysis_module_sha256": "e362574cde8993178f0753d3cb8400de0aadb242d5b9b17073edda1c7c65ac71",
+    "commit": "4e27cc6a322cbd2117c637ee5971e7b586002f5c",
+    "note": "aggregate-only implementation; locked test predictions were computed under the frozen evaluation source and were not rerun",
+    "script_sha256": "f8e7dde85435d4dc5b3cba2a9538f8cfad1fdaee2754be5a9b77c3082d9990c7"
+  },
+  "branch": "codex/mag-problem-validation-v1",
+  "final_commit_ref": "The final feature-branch commit containing this report package; exact SHA is returned in the handoff.",
+  "missing_or_unevaluated_primary_slots": [],
+  "post_evaluation_note": "Locked test inference was completed under the frozen evaluation source. Follow-up commits only repaired aggregate generation and lossless report encoding; they consumed existing argmax predictions and did not rerun test inference. Recreate aggregates on this checkout with the summary-only command.",
+  "protocol_lock_sha256": "3b949712c738dd99865f9bdce882cf65f91756e775cd4af6077cbd065d3b368f",
+  "raw_evidence": {
+    "checkpoints": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints",
+    "directory": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1",
+    "files": [
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_FIXED/seed42/cal-Movies-J_FIXED-s42-lr0.001.pt",
+        "sha256": "858d0c6302daeef4bc7cda586cc8dac33bed1fc204f9f27c4ffb2c203d6cdce6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_FIXED/seed42/cal-Movies-J_FIXED-s42-lr0.0003.pt",
+        "sha256": "32b485f5093fc2b85e21b4664def228f83ad1ae9c80c1438c601cb2e9d949df9"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_FIXED/seed42/cal-Movies-J_FIXED-s42-lr0.003.pt",
+        "sha256": "7d5be3dfe9bf95f5d7ccbf9fd53c47fb5bedc46cb083faa002c54a4ed38db272"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL/seed42/cal-Movies-J_GLOBAL-s42-lr0.0003.pt",
+        "sha256": "fa4411ff15762615ff19e82e7d9b217a1ba8182852b02ed8014f02f5d026ecde"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL/seed42/cal-Movies-J_GLOBAL-s42-lr0.001.pt",
+        "sha256": "9021669ab20a807ab2c7ad7963f06f2f83d2cbf4bcca85acc925abbdb959332b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL/seed42/cal-Movies-J_GLOBAL-s42-lr0.003.pt",
+        "sha256": "26d8c289dde9022af2cefb4f4e227ce36b97eeb6eb4319dd05c142ae0fc4cfb9"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE/seed42/cal-Movies-J_NODE-s42-lr0.0003.pt",
+        "sha256": "a0757717d7620893caaf152505abcad9b1acbf68302eea6831e8c781883110a4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE/seed42/cal-Movies-J_NODE-s42-lr0.001.pt",
+        "sha256": "7b9e02c1476e6dd4ab23a91742abc6408a15b38b43f183af9eff6a1285326f52"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE/seed42/cal-Movies-J_NODE-s42-lr0.003.pt",
+        "sha256": "e6950f3f20bccfa11a062f2eaf48de63ab09a768ab6975c31eee72820e83e545"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_FIXED/seed42/cal-Grocery-J_FIXED-s42-lr0.0003.pt",
+        "sha256": "0bbc8f6749bcfbe4fb23a71abad414e28a435899852990f804cf017385c0c38d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_FIXED/seed42/cal-Grocery-J_FIXED-s42-lr0.001.pt",
+        "sha256": "80914b10bbf9b7b79e53dffec5ce8730598d4cf3ecd715112521332bcc5ecc9b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_FIXED/seed42/cal-Grocery-J_FIXED-s42-lr0.003.pt",
+        "sha256": "e7175d7aedd15b2889f938df1a71fd87843141363b1de95418b803e5c723683e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL/seed42/cal-Grocery-J_GLOBAL-s42-lr0.0003.pt",
+        "sha256": "1f5e2667aeee515a439f97b0845494a046884f04bc07b68c70a4e51e4b7a693c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL/seed42/cal-Grocery-J_GLOBAL-s42-lr0.001.pt",
+        "sha256": "0b12829bb56e2d93067b2d811d3a2ab415688e6cf3b2f3395030126cd32e3b38"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL/seed42/cal-Grocery-J_GLOBAL-s42-lr0.003.pt",
+        "sha256": "4aa2400a59a1f695903c170430596456ef0ba5a33642ef7b225084a9046c6878"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE/seed42/cal-Grocery-J_NODE-s42-lr0.0003.pt",
+        "sha256": "aa70f68c3132cdb74ea20da0b8a4cb14d2a741f0496a2d385607be7be4095e5f"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE/seed42/cal-Grocery-J_NODE-s42-lr0.001.pt",
+        "sha256": "7d6e354c5aef970f43cc2456ba0ccbe5cd07919647697e1048a7915f7f61a442"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE/seed42/cal-Grocery-J_NODE-s42-lr0.003.pt",
+        "sha256": "9d5a5c5ce8bfa107624634829871d8a2664140d2646063857963c08517b30e28"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/T_E/seed42/P1-Movies-T_E-s42.pt",
+        "sha256": "2b95726f93a78879dcab970fdb400444460e74a60c4f7410658a2a9d6219d61b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/T_E/seed43/P1-Movies-T_E-s43.pt",
+        "sha256": "b89457605549bb19b591f541b9af81ec0b7f93f5baedf4209ce0f9478c42e480"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/T_E/seed44/P1-Movies-T_E-s44.pt",
+        "sha256": "7b5136468dc9cf034bcd0ae0db9bd383a49ffcb240aa0d085541fd137aca7657"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/I_E/seed42/P1-Movies-I_E-s42.pt",
+        "sha256": "cb8e8bde46fe10f97b095db1ac530f4bd22d982d91c8113617e727a552136bea"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/I_E/seed43/P1-Movies-I_E-s43.pt",
+        "sha256": "d64502b8cdaf436972548635c0476296139d5716214615fe33c4be59447c91b7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/I_E/seed44/P1-Movies-I_E-s44.pt",
+        "sha256": "a42ca0f925df2726d729790fbffef06250ebcd154fcfd9718b9b002271efc90c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/T_M/seed42/P1-Movies-T_M-s42.pt",
+        "sha256": "83fa9e7ed5a06810700d353612b7552e0aac17966c0729078518275269dc2c89"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/T_M/seed43/P1-Movies-T_M-s43.pt",
+        "sha256": "828bbcedc95ab219c0c40a21bddcf54f7be6215bb10f931729c887d397266c72"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/T_M/seed44/P1-Movies-T_M-s44.pt",
+        "sha256": "2eb62309c8e9aa97ffbf6f1ffc26c9ef9e70439049606e01fa1b8c297dd931a9"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/I_M/seed42/P1-Movies-I_M-s42.pt",
+        "sha256": "a493cd5a7ea24c3595a2b452fb1dc00b5c656ec55cd56ccd4724daceff83106e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/I_M/seed43/P1-Movies-I_M-s43.pt",
+        "sha256": "731d47008b98da731a0697ac146ec92848faae981b1ff1c76b442161f04c5884"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/I_M/seed44/P1-Movies-I_M-s44.pt",
+        "sha256": "206056ee487e18a1bf4d61598c8d6bba0d947c5ed0a91fce958b78cacdcb349f"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_E/seed42/P1-Movies-J_E-s42.pt",
+        "sha256": "456a710b81e9a81f12e3926a9e2fd1ceb10bebf9cb345d7130143b736990ce67"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_E/seed43/P1-Movies-J_E-s43.pt",
+        "sha256": "3ff86654682e866d5a5dcd86f99958c6ea09c51b58ea94343154e91dceab2249"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_E/seed44/P1-Movies-J_E-s44.pt",
+        "sha256": "ff9e9539646b81dea5b929b118b681a2f64f33901cdd6e938e18dab682b535ea"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_EARLY/seed42/P1-Movies-J_EARLY-s42.pt",
+        "sha256": "9f0ae1b6c708b8e912ff7175b3656c54ab2cf0297350bebf143e361dd3506519"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_EARLY/seed43/P1-Movies-J_EARLY-s43.pt",
+        "sha256": "80540b46ebfd4d2784b00a13570dd9c454ed9001cb0595d7162c644d516ed3f4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_EARLY/seed44/P1-Movies-J_EARLY-s44.pt",
+        "sha256": "e0d303e669e177b40f521d884d927859285e7965d7184962a495771104d9c970"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_N/seed42/P1-Movies-J_N-s42.pt",
+        "sha256": "5e21a26c1d3088649792ad56d3096a47aa31269300514abff581062c3223c47d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_N/seed43/P1-Movies-J_N-s43.pt",
+        "sha256": "8ddb7b78a2f118f07117a15177108e6444c97eb82a706e952098d37b05eedebf"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_N/seed44/P1-Movies-J_N-s44.pt",
+        "sha256": "7375a61ba0ef1fbeee603adef41bc8fd96b1641cbf007a51d031bedb40c63c29"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_FIXED/seed43/P1-Movies-J_FIXED-s43.pt",
+        "sha256": "2d0df980152e1d03ce200d71d1e7a0b911d0e6fdfd5ddddc2087daf1a48400de"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_FIXED/seed44/P1-Movies-J_FIXED-s44.pt",
+        "sha256": "a19c827f028f30d4dcf47e9e4407996ee6b73f9c75452f6c46502a4d6e587710"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL/seed43/P1-Movies-J_GLOBAL-s43.pt",
+        "sha256": "9017b86428324328f0ec884bfd74a142876d6f96c0cfe8c13500bdcb5903f43a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL/seed44/P1-Movies-J_GLOBAL-s44.pt",
+        "sha256": "994b366bc4ba4bd385826e378d67017b59ae22ef55d999a7cf849f234824c0cc"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/T_E/seed42/P1-Grocery-T_E-s42.pt",
+        "sha256": "b6054d0f6cdc298fba4abd5e0bdfdc28764acf82104e7a55768f0dde4be5a112"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/T_E/seed43/P1-Grocery-T_E-s43.pt",
+        "sha256": "adc9fc23e8a3a5bd56b053ee8b9ccdf969164b9152e689193b8e26b0e75c4f54"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/T_E/seed44/P1-Grocery-T_E-s44.pt",
+        "sha256": "f016e97704cc7cda9df10833cb3c9c550beed3616fefc3af2544c5b814f0e873"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/I_E/seed42/P1-Grocery-I_E-s42.pt",
+        "sha256": "775a7a43a9b15eda0a68fb6ff46f51db17b1c008fe6bd07dde93dcd1b82ecd5e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/I_E/seed43/P1-Grocery-I_E-s43.pt",
+        "sha256": "af9b19ea7714d5d35e983b348ced0e6526f1696552c9c23c13d407729528f051"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/I_E/seed44/P1-Grocery-I_E-s44.pt",
+        "sha256": "52b4617537dea1a7839d1214b8f2b6ccc92467642c7dad8fd7f3c0bbede3fe25"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/T_M/seed42/P1-Grocery-T_M-s42.pt",
+        "sha256": "51bee6dc45405a5c1bd6bb6fbc0cafa823a9d9600104ce1f48f51003b975dc4b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/T_M/seed43/P1-Grocery-T_M-s43.pt",
+        "sha256": "2df7100db47df4228edc9f91b94ab3b7e8041b974ba0a849af7cf6cb493e2d3e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/T_M/seed44/P1-Grocery-T_M-s44.pt",
+        "sha256": "7cc98b55cf8018d2f24cc573f941088e89a005d3f2a698f731f3f773734f9c27"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/I_M/seed42/P1-Grocery-I_M-s42.pt",
+        "sha256": "aa9cb8426393c6e55591d3dccea7fa33bdb313abec0ee7cbd213c4465880fe50"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/I_M/seed43/P1-Grocery-I_M-s43.pt",
+        "sha256": "be9eaee5df086517d54f6f339a6f29bd2d9384890c9bb5638b0a71a26d11bc02"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/I_M/seed44/P1-Grocery-I_M-s44.pt",
+        "sha256": "daa460f2b11585eff0f997ff7f544887ffc0c7219250959153a377179874f39e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_E/seed42/P1-Grocery-J_E-s42.pt",
+        "sha256": "82b4b3ad1627e3e772d4c7f9151e8806001433c4853c7a497c92a584ad77186e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_E/seed43/P1-Grocery-J_E-s43.pt",
+        "sha256": "ebc791de84faf05d2ede995c7759fe51278f8e2dd9ca707a2db31a82f73fbcd0"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_E/seed44/P1-Grocery-J_E-s44.pt",
+        "sha256": "fa43aa6e89313d62da108bfab29742c5435b05900dfb3af7a29cc2abbf53fe37"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_EARLY/seed42/P1-Grocery-J_EARLY-s42.pt",
+        "sha256": "ce418727c2e0d4f941ed9e2d06d739ae8db8b5a05ddf9cdc5af156361de89fb8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_EARLY/seed43/P1-Grocery-J_EARLY-s43.pt",
+        "sha256": "0642f6755231904cb4eef5ba88fa8feb7131ea855486010ae74215ed09419d9d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_EARLY/seed44/P1-Grocery-J_EARLY-s44.pt",
+        "sha256": "4062cb1d35c535ee2e3d6790d90cc922b34785a344b0042d615c671df1724175"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_N/seed42/P1-Grocery-J_N-s42.pt",
+        "sha256": "fead33c04db6827f493c56e45a9631c0ac69a4c39d4b140513b2d97f9dcec8ef"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_N/seed43/P1-Grocery-J_N-s43.pt",
+        "sha256": "31a9b6e08233e50d3655afb605ea47619e9753c49f8368e5618117edab7f355c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_N/seed44/P1-Grocery-J_N-s44.pt",
+        "sha256": "7b76c87ad7f7ec2b4b825c98e3327557347dd4a4291abf901ee098d5319fdc17"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_FIXED/seed43/P1-Grocery-J_FIXED-s43.pt",
+        "sha256": "b66ff02caa4bb664376f77db5b97a76c83682c48e94482bbf44cfdd3f3fd3381"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_FIXED/seed44/P1-Grocery-J_FIXED-s44.pt",
+        "sha256": "b3606bb5100049802fc2cdce306a24e2300a411d8aa68867e2ae736229ed0b45"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL/seed43/P1-Grocery-J_GLOBAL-s43.pt",
+        "sha256": "be1db4d3fa8ee26db53b15f198eec31f81113b80f1512d4a9e4328f3c1a9ea73"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL/seed44/P1-Grocery-J_GLOBAL-s44.pt",
+        "sha256": "6ab65cfe7346c1cdced5687a06ce49071f79617cc64e24302d300568f53766d7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE/seed43/P2-Movies-J_NODE-s43.pt",
+        "sha256": "de1348703c91b002e49103e8dee7aa0072bf256a9bbc8f4dde36567a9d3442e1"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE/seed44/P2-Movies-J_NODE-s44.pt",
+        "sha256": "932ed5c7872fa3d900a2f35b0ff9d9f441b73f2b081d7919d57cd36a8c54c7ec"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE_SHUFFLE/seed42/P2-Movies-J_NODE_SHUFFLE-s42.pt",
+        "sha256": "88a6dc341109e2e48d2e6ce9dd6fbad7f9d231db7985e2e5298582f39bc3b30e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE_SHUFFLE/seed43/P2-Movies-J_NODE_SHUFFLE-s43.pt",
+        "sha256": "4dfbf038b5d4993b3e1ba836e7617f7ca6467a04568df936969dd08c71ee094b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE_SHUFFLE/seed44/P2-Movies-J_NODE_SHUFFLE-s44.pt",
+        "sha256": "bc90eb55dc33dfcf3630d5c86fc608f404b90e395970d0fb7f25df0d814d22a2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL_WIDE/seed42/P2-Movies-J_GLOBAL_WIDE-s42.pt",
+        "sha256": "99a035a845dfb8e0bed62123f9e5d42f2c5eb8439b7b0d618f67d80008b08e50"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL_WIDE/seed43/P2-Movies-J_GLOBAL_WIDE-s43.pt",
+        "sha256": "3f5f8f02d19e31d3086603702232f2453f099743a071984d22a56515210ec72b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL_WIDE/seed44/P2-Movies-J_GLOBAL_WIDE-s44.pt",
+        "sha256": "4804f4bf71a24b5d9a850ae2388fdf696c415f4e6739ca70c4d63f984176f019"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_CONCAT/seed42/P2-Movies-J_CONCAT-s42.pt",
+        "sha256": "4f006b3fd48650bb799eb95c56088fb9e602029c06f33e29fad743b5c2332734"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_CONCAT/seed43/P2-Movies-J_CONCAT-s43.pt",
+        "sha256": "0ec3b24d1d6577d2baf455b7cdfe43505f759352de676af3d523a52d0069ffa4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_CONCAT/seed44/P2-Movies-J_CONCAT-s44.pt",
+        "sha256": "bcbde3394c3f6164cdf2b0afd6966eb76819268682b8bde44636308005f1b84e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE/seed43/P2-Grocery-J_NODE-s43.pt",
+        "sha256": "04cc9cf239f633b06060604e2d58d26c0d03c6e981f4829d16dcbae5dced186e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE/seed44/P2-Grocery-J_NODE-s44.pt",
+        "sha256": "a777ba66e1e03b124e8fe7aa5778fd33404822a04997e46245af8c0dcc142abb"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE_SHUFFLE/seed42/P2-Grocery-J_NODE_SHUFFLE-s42.pt",
+        "sha256": "8519859fc515dd95c330d40f344425bc8902b1b366a3527e0517b56ab08f7c01"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE_SHUFFLE/seed43/P2-Grocery-J_NODE_SHUFFLE-s43.pt",
+        "sha256": "61771c87f3992eefdd707d9f16252178b011037b63e8156cf40b351c29f89f79"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE_SHUFFLE/seed44/P2-Grocery-J_NODE_SHUFFLE-s44.pt",
+        "sha256": "b5b0cd7907a3504afc90de730a09c4be51d97646fc5ccae4ff77bba49e0f61e7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL_WIDE/seed42/P2-Grocery-J_GLOBAL_WIDE-s42.pt",
+        "sha256": "6b0f1e1f2d9f7ce86f916530e8c37bca00c10b3287719219c2f5a7c031c7cde3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL_WIDE/seed43/P2-Grocery-J_GLOBAL_WIDE-s43.pt",
+        "sha256": "ccbe3402137533efbeebbfcb71d49266f32e62a271fc5e438810d5b20d56a061"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL_WIDE/seed44/P2-Grocery-J_GLOBAL_WIDE-s44.pt",
+        "sha256": "85b12832f5d2849415969503bee924b8cd9c3680ece365f558752abb5b450705"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_CONCAT/seed42/P2-Grocery-J_CONCAT-s42.pt",
+        "sha256": "f9bd7021f2234448857029756424977afbbb0247226ce1422f58bab9efae1037"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_CONCAT/seed43/P2-Grocery-J_CONCAT-s43.pt",
+        "sha256": "85a5873c4975f7d6e26a3c9e0bd1f611d48f00d3b52cb4d28fd88c83163ad06a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_CONCAT/seed44/P2-Grocery-J_CONCAT-s44.pt",
+        "sha256": "73b63e7cac24f39b51b106a3ca9a963e17004fc34945929558063b7eb1ec09b4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/T_E/seed42/P3-Toys-T_E-s42.pt",
+        "sha256": "27bbb9573486053e15b649904633c033426d0804457d1627e1d8003497ac2ff5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/T_E/seed43/P3-Toys-T_E-s43.pt",
+        "sha256": "578dcf2b862ba1d47078214f129e28a5180943aaafd469ed54798ac6a907e16e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/T_E/seed44/P3-Toys-T_E-s44.pt",
+        "sha256": "56459b2e3002d1061001464b4dc376e696f04ecf02d6dc5c58061d27e3804bd7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/I_E/seed42/P3-Toys-I_E-s42.pt",
+        "sha256": "42a7acf736ec68133939f799e8a32b66d2ffd9e9ba4b0c9e2fcae40ea0c790df"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/I_E/seed43/P3-Toys-I_E-s43.pt",
+        "sha256": "b9c6d0d028f9ef7bebdf2ca4ee77da73982a8bebfb5322a67b5084b59a31763c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/I_E/seed44/P3-Toys-I_E-s44.pt",
+        "sha256": "83e6d60c4bffbd1aa748381cc998c4e40750b6f77e4cef75cb410975a0c76942"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_E/seed42/P3-Toys-J_E-s42.pt",
+        "sha256": "f785ad5955a4f27ff5eaa75f693f5ecc9ee01fe5cf126f9c2e0dc5d274f2c0fa"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_E/seed43/P3-Toys-J_E-s43.pt",
+        "sha256": "c50931b1acb28a6b0d5b95f18d4a3624c33679566e0e6644516603e5873f206e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_E/seed44/P3-Toys-J_E-s44.pt",
+        "sha256": "b04fc7143264367d17c3e302c89279b51ad6150261d5691e78595fba324aa08e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_FIXED/seed42/P3-Toys-J_FIXED-s42.pt",
+        "sha256": "e0c0fde08f5784a8b5e04323419a902fba24e100ed5e93f770803fca0ecf4955"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_FIXED/seed43/P3-Toys-J_FIXED-s43.pt",
+        "sha256": "bb6904a32d474a69c3f5d3824e140afb7a5c25137c69acbe28d2092d05828092"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_FIXED/seed44/P3-Toys-J_FIXED-s44.pt",
+        "sha256": "ce929bf7708f14286973a07651426880b30fdee1a2bacdbf51b2e3ea80a3f2c6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_GLOBAL/seed42/P3-Toys-J_GLOBAL-s42.pt",
+        "sha256": "432dee9be13db8cbd1fdd2fa5bac0129547d401c9959554e8a2d553db2c324ee"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_GLOBAL/seed43/P3-Toys-J_GLOBAL-s43.pt",
+        "sha256": "c2fcb9eac04b0d78213fb734b7ca6a66387b900a863ea005ab8714363814ff99"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_GLOBAL/seed44/P3-Toys-J_GLOBAL-s44.pt",
+        "sha256": "380d08eac83619f9e0da48abe7e418dd655f2309449cebf0fe40c3ca37015cbd"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_NODE/seed42/P3-Toys-J_NODE-s42.pt",
+        "sha256": "821f083a0907c68cd098db1422ad0eb9d95e5db18ed6c1a5c6c049f2525bb4a4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_NODE/seed43/P3-Toys-J_NODE-s43.pt",
+        "sha256": "0af63d6372360caf73050f7dd003f44c95b47a1d3723621d6e8bc9aab1897bdd"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_NODE/seed44/P3-Toys-J_NODE-s44.pt",
+        "sha256": "76bb9374d246410f0752217dc0620e3a107b5072c4c70a3e85d40e405a09cb7d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_GLOBAL_WIDE/seed42/P3-Toys-J_GLOBAL_WIDE-s42.pt",
+        "sha256": "ef0a027b44830bbb587e23fd10d054a025f7d0735d4859b61abd4cf9604448f3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_GLOBAL_WIDE/seed43/P3-Toys-J_GLOBAL_WIDE-s43.pt",
+        "sha256": "bf9c343c055ba74f08aa1a0908e23df3c323b2e52bbfba7977f5f04ee2705c82"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_GLOBAL_WIDE/seed44/P3-Toys-J_GLOBAL_WIDE-s44.pt",
+        "sha256": "d63fdc2a9ed726a7488efec4237312c62b58152a68e2cefd18d969770c9eb968"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_CONCAT/seed42/P3-Toys-J_CONCAT-s42.pt",
+        "sha256": "7b34736ca90785c6c5609248c438ccd7b07d49d005d9bbac0d2b5c0948d0907d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_CONCAT/seed43/P3-Toys-J_CONCAT-s43.pt",
+        "sha256": "c0d3eb1b8eb4ae0fa7e360d23263395f7c084bc6631c3898f1dc2c431d95a4c8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_CONCAT/seed44/P3-Toys-J_CONCAT-s44.pt",
+        "sha256": "6893175355a4f099144bbe77b3b058197a62bd27dc7f0456f7da19e1c7762a50"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/T_E/seed42/P3-Reddit-S-T_E-s42.pt",
+        "sha256": "08f267f75a1d22597665b0bd7dcd78a8e9ba26b6b8fb32bf977b32350da4f73d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/T_E/seed43/P3-Reddit-S-T_E-s43.pt",
+        "sha256": "a8ab70a02634539c45a068d721efc735ef0eb17db631befe7ef3d135103432af"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/T_E/seed44/P3-Reddit-S-T_E-s44.pt",
+        "sha256": "c489458686d28522f72a42b0c7128b98ced4af7bb8c0200cf13c82832f573879"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/I_E/seed42/P3-Reddit-S-I_E-s42.pt",
+        "sha256": "57834ab1b2460deb2d1d03651f56c51d49ad6bf2f793e329dfe959f84cf03f34"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/I_E/seed43/P3-Reddit-S-I_E-s43.pt",
+        "sha256": "d7fccf2816e42c9b1bedb38fd9dbfaf1b956f3fcd2adef48b6de3d90d9a9701e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/I_E/seed44/P3-Reddit-S-I_E-s44.pt",
+        "sha256": "9488352a8ad3e606c07e74f5ef7e8fec8d7d6eafd6714cc55bc846e777e5189f"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_E/seed42/P3-Reddit-S-J_E-s42.pt",
+        "sha256": "9c9f953606136a1bf56ad0f8a31e1bfe5f1b10c5ad89452580f75ed7519d50fc"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_E/seed43/P3-Reddit-S-J_E-s43.pt",
+        "sha256": "7cd4851114128d9ce9521ccd00fcb481be09143a2b958525e2491d53bc545337"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_E/seed44/P3-Reddit-S-J_E-s44.pt",
+        "sha256": "a3aba0e6db12522ce31045c4f9b71fa70c940ab4650fb21a58d403687ff54c1d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_FIXED/seed42/P3-Reddit-S-J_FIXED-s42.pt",
+        "sha256": "e3e378630647e2d9d4da1496a1da0f66027d3fc45d4ca6ae5d0d9f0067e0e206"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_FIXED/seed43/P3-Reddit-S-J_FIXED-s43.pt",
+        "sha256": "b5ec44118dbaa9a77018f5b4e796c3edae82f16c6f7f1e8f9a7fc217219ba4c5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_FIXED/seed44/P3-Reddit-S-J_FIXED-s44.pt",
+        "sha256": "af98756de8ae4e516c8e826ae1fae00fa75ec0fdfb61b2a688e0a0719f77e9ab"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_GLOBAL/seed42/P3-Reddit-S-J_GLOBAL-s42.pt",
+        "sha256": "816ab0eb64175346fd2522be583a33f4ff08ecc1bb84895505367c0455617d12"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_GLOBAL/seed43/P3-Reddit-S-J_GLOBAL-s43.pt",
+        "sha256": "675d13b5332ef95e8e22bd8f94b794916cbc948a0abf7c2979adb3a8c5b357a4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_GLOBAL/seed44/P3-Reddit-S-J_GLOBAL-s44.pt",
+        "sha256": "3c514059ec2985b9d2cae76f422996bef2b91587cda07105b00795c44463da31"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_NODE/seed42/P3-Reddit-S-J_NODE-s42.pt",
+        "sha256": "89ee2aca99cca2d5d10e170da0570ae97f36909c344afb20240a2e2791583ef2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_NODE/seed43/P3-Reddit-S-J_NODE-s43.pt",
+        "sha256": "9b90ca05ce14762af30b7e115a802d955ef2495d068088e3d2f9cc21b00dc0c9"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_NODE/seed44/P3-Reddit-S-J_NODE-s44.pt",
+        "sha256": "072493a8164aa646dd1587fe8741267519542eac4d19331d20097219eba4808d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_GLOBAL_WIDE/seed42/P3-Reddit-S-J_GLOBAL_WIDE-s42.pt",
+        "sha256": "e985efcf6361677dd0a63757827afac016eb0c2b46605d4611748b6e6700ccc6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_GLOBAL_WIDE/seed43/P3-Reddit-S-J_GLOBAL_WIDE-s43.pt",
+        "sha256": "398349c486d1c4e85829835dae4a76deb8c0e364f2118b9f76944e18d94e3cc0"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_GLOBAL_WIDE/seed44/P3-Reddit-S-J_GLOBAL_WIDE-s44.pt",
+        "sha256": "e0946fdf5a45e9627c6e847a3a5d0145fff808be5ccfd307b6eb8f487f190818"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_CONCAT/seed42/P3-Reddit-S-J_CONCAT-s42.pt",
+        "sha256": "07f60d267967d46e9d9002279d5917bbc0829f515b0a307be8fe1be05223cb7c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_CONCAT/seed43/P3-Reddit-S-J_CONCAT-s43.pt",
+        "sha256": "14c13f210068974f658d66be71861ed473ae9a19a045b42f34b1162c4b025c10"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_CONCAT/seed44/P3-Reddit-S-J_CONCAT-s44.pt",
+        "sha256": "6cdd7c290957e95a9c9a965477bcbc13558d3ac004e627e6dbd033149807a202"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/T_E/seed42/P3-ele-fashion-T_E-s42.pt",
+        "sha256": "49cb33fbf0093e6f8eb962655ce1950bcbd7f2554fc36ae6cf15165679bf544d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/T_E/seed43/P3-ele-fashion-T_E-s43.pt",
+        "sha256": "037aba4db6c713415ec0a95cbf2d58073534bdbf5be606d4c4c038c939df70dc"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/T_E/seed44/P3-ele-fashion-T_E-s44.pt",
+        "sha256": "3171b50557e3e85675ef4a8a4edb69927393c73638552cbe497d7ee7db7de536"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/I_E/seed42/P3-ele-fashion-I_E-s42.pt",
+        "sha256": "363657037c4d259e2548928028263745314b42ce180b7dd74edcf2e09edab00e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/I_E/seed43/P3-ele-fashion-I_E-s43.pt",
+        "sha256": "15aac6435c872aaa6abb9d7ba4114c8b9d4efbb1c3626e163fac333595945458"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/I_E/seed44/P3-ele-fashion-I_E-s44.pt",
+        "sha256": "7ae132643376aae466c3b88cec3147547990d87634ef2bf8ff3a3a527745ef26"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_E/seed42/P3-ele-fashion-J_E-s42.pt",
+        "sha256": "609119042175b104b0ac422d4721aa48bae2a193a8d7b807132f0e6885bf0c71"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_E/seed43/P3-ele-fashion-J_E-s43.pt",
+        "sha256": "e0d85bbaa1c90598d6598308faa31a54c696328c995c8a50b31ed56a88ce43bd"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_E/seed44/P3-ele-fashion-J_E-s44.pt",
+        "sha256": "28ae95055ed6a9d31d383448ac5e3ae82dc4038ed3d9401e3eff70d1f344950a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_FIXED/seed42/P3-ele-fashion-J_FIXED-s42.pt",
+        "sha256": "be6793ebe073862ba0f6fa179f5a5fd75a835eceea773a8b7dd0b7b7bd2c6fce"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_FIXED/seed43/P3-ele-fashion-J_FIXED-s43.pt",
+        "sha256": "1fad4d7e5d1963a12c3d2cf0bb8f81aadef874ad54805c77fdfbe15fd4ea13dd"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_FIXED/seed44/P3-ele-fashion-J_FIXED-s44.pt",
+        "sha256": "f06aca45fa92482048eefeff9f8f399e54470eeb6c6020cba477ceb78dfea5e5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_GLOBAL/seed42/P3-ele-fashion-J_GLOBAL-s42.pt",
+        "sha256": "546df9107c69f5e53d858831fb38039f28f599cf9b97421ee753a8702a7bc0e3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_GLOBAL/seed43/P3-ele-fashion-J_GLOBAL-s43.pt",
+        "sha256": "4c8865d6a17a52d985cdf206e322671096bf32566a8d9e1bde05867608413294"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_GLOBAL/seed44/P3-ele-fashion-J_GLOBAL-s44.pt",
+        "sha256": "12a00a768321217cb873166a4d5df2ab706d01d270c49658666a582c23e683f4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_NODE/seed42/P3-ele-fashion-J_NODE-s42.pt",
+        "sha256": "22bd7543748f15ed702be0028ecd39b42f7b8d8c8f565aab8a82d31becbc09b0"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_NODE/seed43/P3-ele-fashion-J_NODE-s43.pt",
+        "sha256": "fa214f65a8fae4df096f839d698f917c37398e26e5c7bdd57e26e01684741428"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_NODE/seed44/P3-ele-fashion-J_NODE-s44.pt",
+        "sha256": "e162f3b84b183ceab8e95a20c85f5a0be7cbd18457a5800f55b69becc6e05d67"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_GLOBAL_WIDE/seed42/P3-ele-fashion-J_GLOBAL_WIDE-s42.pt",
+        "sha256": "31014429dfd4af41f0397f69c2c7c2467332ee7caef78c289b4c4fbb3c7a9b62"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_GLOBAL_WIDE/seed43/P3-ele-fashion-J_GLOBAL_WIDE-s43.pt",
+        "sha256": "08fb6e54180528b17011a8b90638623e468ff285beb470d9fb8effef4cde709e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_GLOBAL_WIDE/seed44/P3-ele-fashion-J_GLOBAL_WIDE-s44.pt",
+        "sha256": "2261c9677a827a570ead02be2933cc18324c7b8ced9d7e71508388f2dc915498"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_CONCAT/seed42/P3-ele-fashion-J_CONCAT-s42.pt",
+        "sha256": "4c7d95e757aaed73db52178d17a4079e6c3dfcc87e9e25c930f0557581c23958"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_CONCAT/seed43/P3-ele-fashion-J_CONCAT-s43.pt",
+        "sha256": "138b06bb4cff4536cbd023044f8ac24fac1adea31b683a97b4102b465bd736b5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_CONCAT/seed44/P3-ele-fashion-J_CONCAT-s44.pt",
+        "sha256": "8a517cc1cfcc2fb87c92a9a71a71381256d537efec2340b0abe0d470cbbee66d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-T_E-s42-42cf01c0eab81ed3.pt",
+        "sha256": "af821b58fd584067afdef7e8aa3c00c2a61768d4e51ca664c3245c0e9896738c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-T_E-s43-492bf13f14430070.pt",
+        "sha256": "57b386fa3b41f72bd7c372b51e9804f5d18f913c7617abfe522cabaf2f965001"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-T_E-s44-953dbb3f2b441b40.pt",
+        "sha256": "f66849f834bcf6323e2647186d218030d3dd8c91ef43e834e6df21e1b377bc80"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-I_E-s42-a65f0f9dc12379f4.pt",
+        "sha256": "e7c5d227be7e83ddaacc5bddcd604a01d27d4acd07918113ad73faf55756c4a2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-I_E-s43-45e775079efb66cd.pt",
+        "sha256": "4b94cff608f4be62338a61294eb4f14b75c410c57f8cfa1b68bc1d6145145927"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-I_E-s44-628e8b3b3e320809.pt",
+        "sha256": "3fc36c584f914addefd90caef567cc481f6f7222273a8d2d14b6a20cb74012bc"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-T_M-s42-6c1bda2c9e8dcea4.pt",
+        "sha256": "0ace09b648c634479606f3b5241b828b0c0ab0123022b7ca717a9dc2b2607452"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-T_M-s43-58cc39fbe539c7bd.pt",
+        "sha256": "798c3137185898f3f435434d0a13a8d0a4f5923903931156fbe56472ccc37920"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-T_M-s44-572c7a1c3bbc0a0e.pt",
+        "sha256": "113fbd2ca58e16b1e7020497481e0e16c849e4d5d82e337a42322b2885ec5f9d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-I_M-s42-1f49ff3224e45bdd.pt",
+        "sha256": "152ab3f8adedf9501914b724a0b4305da94d35e4027340dd32fd6743a73c500c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-I_M-s43-c91724bfea884706.pt",
+        "sha256": "3eb5b1c1de7c0922492ae74607290430d6e5c1736065f985f5cc9a2fcd868cb2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-I_M-s44-c7964f423b5ac494.pt",
+        "sha256": "f8934f7246421bd2e6d76e579949afe8cd5c51e51295ffc5b3e04529a3c6188c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_E-s42-5b1b2c6dde2f1f18.pt",
+        "sha256": "19ca31e03cf0c08975a9078ae1ca522a385fd1caeb75772ee074a75ebd8d955d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_E-s43-0736ab068c2e78a8.pt",
+        "sha256": "044e26f5036eed9d07bcf3503d2e396eafa84ef142e0a9dc26a4488fcdd5c94b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_E-s44-3e15d914e98c22c0.pt",
+        "sha256": "a1cbe732075ff390f3a94cdebc0217e3f548b4d320339c24c92415f32b7b4176"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_EARLY-s42-082fbac66de83e44.pt",
+        "sha256": "f1d417818049a2420e784b5bde96c8076d6ed3d6af8b9c356007b96afc0c26bb"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_EARLY-s43-03e6599cf1edf4ba.pt",
+        "sha256": "20306911805630d44c498d2346a3dd42162bacb32ca01157293c61cf11fdf342"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_EARLY-s44-57cd4bfbe9b548e9.pt",
+        "sha256": "0d188682cbee9c406539bfb57495d9f5600fcc3dd099e193022fb35e8a640f96"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_N-s42-3e121d6915e1ea04.pt",
+        "sha256": "64162d88a6c4c6ff23f25401b6ea368ecd280101613dd3453220ae4a49263326"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_N-s43-6b943ffc7d8895a1.pt",
+        "sha256": "466bdb997a34ee9df9eb749da8f5d0386bbc76e56e15d2efb937cd2170b0ad50"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_N-s44-6491d2bc6f57c5bb.pt",
+        "sha256": "d717419be0cf63827ab81098f7b8d64354e18c52e837fcdc01f670fdb8fbff2b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_FIXED-s42-4a7286fd174d75fc.pt",
+        "sha256": "e3cb5c3a43f4c7f65d0ca1d67a2b3437ed29c06380e43a2b1b14d28b8699aff2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_FIXED-s43-5f8e2e8c17a126dd.pt",
+        "sha256": "ef10e399836e1ce8e7c26d8716d8259eb3287403b5efbbe2e1117a2074961030"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_FIXED-s44-d3ecc7def7808989.pt",
+        "sha256": "377e0f78a56cdbd608faa788accf5dd596a5dab3d64d3a4dd5c1f532f67ed8d7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_GLOBAL-s42-5e48c09a34cebd29.pt",
+        "sha256": "758ba7bd1f199ae300f71d291c679c474752a3450b77220e756fe2fe387b23ee"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_GLOBAL-s43-86df6755bace4181.pt",
+        "sha256": "1f35129e15ba457a4b2f741e5bba3f26137e391e629eae7dd40f3ba07b84c8f1"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_GLOBAL-s44-2ff7abe1f4293143.pt",
+        "sha256": "7726e28cb68206dbcda8a05c5088cd320c2216df7f02a6198c085d498a239a30"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-T_E-s42-769fa81f6ecad6a3.pt",
+        "sha256": "ea143d458e77e5d78f3cb617e4a709c3b62046fd506ee6bbdfa75e85818b0aa4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-T_E-s43-de13997bd8bc05a8.pt",
+        "sha256": "a19d496cb52fa2def8affed13acadab539c3ffb5d3a8fff1b59faf345b4c70b5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-T_E-s44-a8174cfc779beb02.pt",
+        "sha256": "65efbee2f7f37bf5ae5f15c6e4e45ffe165ad3c89c56edd5f168352ebe65ea76"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-I_E-s42-3ddd28dccd06f62f.pt",
+        "sha256": "34e9cd3a304d70d5e79856e17d3166ed2dd1668e25749dff113b1d9badc4482a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-I_E-s43-f7b3668092c79ac9.pt",
+        "sha256": "18a4ce577664bbe2edd67fee3e0d9a3b491a43c8978ac7c8aafd2c9c0ae17d0d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-I_E-s44-ab11033d70560982.pt",
+        "sha256": "5e594c0ecf506a014e94450a35c547d58316fdca308144319500875f4b77e271"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-T_M-s42-c23cf20df701bfd5.pt",
+        "sha256": "75034cef7c59187719ce83c4e2f4f5bcdfc221482d4131445d6d39e568542176"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-T_M-s43-baa265dd6f52f0c7.pt",
+        "sha256": "a0005f94299bd3b19bf8125673e1d3cee3032bf05427b9825dc3fee232f1b292"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-T_M-s44-c3ba551eb43d07e8.pt",
+        "sha256": "524ec5ad1cdb4884a1800f985688c728eb67e85d2351e74b5ce9c78c7cea54a6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-I_M-s42-4c2053db9406da10.pt",
+        "sha256": "1cdae72fb55925d5fecfd3089ec87b7a9efc3f391f227c4d1540ef981b3a3e70"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-I_M-s43-75076bfbefdd4d78.pt",
+        "sha256": "2c63caa6742eb203204522f8232a3292666428ee2fbac68db9d8588c076fa457"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-I_M-s44-8745ac740075e963.pt",
+        "sha256": "546120b937be29761fac926f5bf968f2909a4654807c5f38b2ac21543e2ffac2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_E-s42-e527a12cfdc9889c.pt",
+        "sha256": "ee0accade76849ca04754cfbe0aa3b5f6b1bb4c267d2f2b5477dfa21d2fc8166"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_E-s43-7162a6bc250dae97.pt",
+        "sha256": "2053aff07306aee2ab50556771d6f62a74eda3080eb400eb776d1987056fe745"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_E-s44-f00a24eb29346246.pt",
+        "sha256": "0789c4ba584ea2872904a58112b4bcdee360f63758b00a859f9c6e5da1d98d91"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_EARLY-s42-5c6f06ccac74b926.pt",
+        "sha256": "bc8c9a6de626952762baf1c44bd2b063762f043c24bd2ec1edf228a69d687d87"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_EARLY-s43-b08d2c6b42e8449e.pt",
+        "sha256": "43839b38fa668b8c62df2e4a3af10fd9d4a35e14ec86cd02d91494f254e2e200"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_EARLY-s44-4bcdf04f7f697136.pt",
+        "sha256": "43bda45295ec74ddc9ba785aba48b0bab717024786b3d09f97bb71fb41028785"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_N-s42-04eb32f58fed4ddb.pt",
+        "sha256": "44a86b543ca5ece4e4422c9e04cecf223ee7ff3f117cc4d54a1b9a42f6e912c5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_N-s43-1dc3fd1ed54d9a49.pt",
+        "sha256": "af9859b3292e531d6f6c7df18fadb75dd953d4444dfe5c9d5460dc9baa5852b0"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_N-s44-7353f8509899c9ad.pt",
+        "sha256": "04df365152a826880d4df324515a202a6cc0c1d0d6a0826b4ca86f238ee6cc52"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_FIXED-s42-81ae2e26cc310340.pt",
+        "sha256": "41780edb3cf71f57e67133e0920ace844a6ad633a34a9d66978c2d6f5230636d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_FIXED-s43-d4f73dd3aa73e6a2.pt",
+        "sha256": "00d0755c4df0c402659d23e79d8db84bffea863892bf96be943af1526a230b62"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_FIXED-s44-8facad5c11c93340.pt",
+        "sha256": "5f8e1166266e0e6dbdaf85bfcfc797913cebab906a36bf89848ca72f714374e2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_GLOBAL-s42-07fd61df0e5ee510.pt",
+        "sha256": "419cf575c5be1c3197c8d165c613f98614c8977bc7746e8f6dc16b396189e747"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_GLOBAL-s43-7d15bbdf49199f28.pt",
+        "sha256": "876f9ca1ba8af8bdc422424d6af10d6ea0109a7c9449d9e75e134af5dbd24792"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_GLOBAL-s44-4c539f4c94ac5f37.pt",
+        "sha256": "f07bf5ee72d85f92576152b956c644fc686b6d35335588889b9f242992a86c71"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_NODE-s42-09318cd92af06531.pt",
+        "sha256": "6e86e4d83d0c52fafb205dcf27997051c5b9793073823ea6a3c2e7ae191f3ad4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_NODE-s43-d5b6c08d838acc05.pt",
+        "sha256": "c4cd13e6c262a4ed1fb517edcaf8b1e1a35561cc4c181ee71cc1c63908ab9579"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_NODE-s44-c54fd782458412e0.pt",
+        "sha256": "f663eb81d58a8a335d5e0fc828e517c737887259e1b16ddd9b2b80f8e634074f"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_NODE_SHUFFLE-s42-5d5670feb72f7b24.pt",
+        "sha256": "704fed7cfb18a41692f2406ad235bea291f7d7be4fcd7e9d1a27aa1c8dd4963a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_NODE_SHUFFLE-s43-7790c1a8c21630d0.pt",
+        "sha256": "6b5a453ea0e6aa86ce91ab4b58aeea14ac0060c14f523adf7b976bde2a6fdb4a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_NODE_SHUFFLE-s44-820e9c9cce58e22e.pt",
+        "sha256": "9ae59479dd742ac6d037659218b53d8176a57ada33a88c1e3f01540599021987"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_GLOBAL_WIDE-s42-666e7c632d63ccf8.pt",
+        "sha256": "cbe31204e597b9aabde60a22842901939d6acc5b20802427313b1608907fb4d4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_GLOBAL_WIDE-s43-a1c382bef687eece.pt",
+        "sha256": "76bb64c087cd472a832fe5cd7e79ee3529bd909a70022af61990a49170efccca"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_GLOBAL_WIDE-s44-cdd68fb29ce4b561.pt",
+        "sha256": "a3a10f448a4acb619f8bc84f1c7174031b4e08e76be6dba0100e89557f08df8a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_CONCAT-s42-7214f0927d5d1c9a.pt",
+        "sha256": "8426a49b165625f481e5966e0cee22e8fbd77671047a8f21c8943a8e448fc3a7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_CONCAT-s43-6d39d7bb5a1d99f9.pt",
+        "sha256": "7f4ad4a0e9a0b44bdf37af64c47caa9134eecf974a1e9f39da8d527aac1292d6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_CONCAT-s44-76e6e8d6369f1dc1.pt",
+        "sha256": "98c69cf532e85d62eb0e990e4a90519717b60d34ce196e28dfd868e09f79a855"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_NODE-s42-aba84ff56370aae9.pt",
+        "sha256": "31d9e26391fe58a6cd7a5fa9d8f60015657dd37959b25f3b518a27fddeaa3e26"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_NODE-s43-aac7680ab503a469.pt",
+        "sha256": "b8b402fef2fc7cbfcd415274f5bf6e58c89d95b2e9679a543dbc672d71c12689"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_NODE-s44-fc2703452d39671b.pt",
+        "sha256": "269ad800ee83d71b5563c9530f168901308f20737eb8ab172956c2c58a13879b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_NODE_SHUFFLE-s42-e7c65bf3130192e4.pt",
+        "sha256": "8508fbe3634872cf2b6a9004137de5b22557f1b1e08604a0d520912985b96fdf"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_NODE_SHUFFLE-s43-d5ebd9b6df9f757c.pt",
+        "sha256": "a836fcc5122d4b5ba82309bab0824e136f1d8ec2e6e8e305e543a63bea46816c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_NODE_SHUFFLE-s44-b75ae5f7f4695641.pt",
+        "sha256": "197cc8e6801a03e0a7ed02474a1140a8256b0892638b081ebf29d78c4481d84a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_GLOBAL_WIDE-s42-6a73f4f3b697f8b4.pt",
+        "sha256": "3a6bcb73ae527881250f0efffb215e1157bf43540d44985335bda5f392be751c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_GLOBAL_WIDE-s43-008e444a3d80e638.pt",
+        "sha256": "47ce9b1c2a05a3a07d68407126dd203ed296e45b1e9c8f06376a5c5e27cccfa8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_GLOBAL_WIDE-s44-26a4581fe248d0e1.pt",
+        "sha256": "8a46882592dbb71d934fd0344ee6ace3daa5455065f9e70a21f583a273df9444"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_CONCAT-s42-1556aa14ad6bd092.pt",
+        "sha256": "329a75bad2df036d137649587c5e6b97c0895109792b17fd00ca217e36aa0ba6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_CONCAT-s43-4bd3e38f36c3bd20.pt",
+        "sha256": "e5104519437167b656612f80574e3a1d970f41a32e03f42244e1274382a202ed"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_CONCAT-s44-4cacd4e253ebbe4c.pt",
+        "sha256": "b0ee04e7138cbc341907dfa0230afd0a6a64c7982968937efa4c9c71c7f48666"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-T_E-s42-f0feb0c88417e2a2.pt",
+        "sha256": "b47a7dac3efd9f0ff6f0af1581dbc124473c7642d8cd0afef2d877605db3d2f0"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-T_E-s43-43d0dec2b6dabee8.pt",
+        "sha256": "f97e258811aaf9f8ea8e4ff16f0ca0f61f78c5e708acd0474c80c458b167ee00"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-T_E-s44-b21dffab79497f5b.pt",
+        "sha256": "f21015aa11db5bcaa3756e8565081f11eddec6e54240232ce4f23ddcd3181a0e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-I_E-s42-57a5ff64a7246684.pt",
+        "sha256": "8cc18ff984354fc04cb784273678529cf966a33652856c95c2187988ba3ef179"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-I_E-s43-c03112868994b238.pt",
+        "sha256": "fd07a16167b1cc710a25696bdb2635ae8a51caec835ecf60904f9fdaf76a6ad1"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-I_E-s44-95b7ea3208aa3899.pt",
+        "sha256": "3338581a4db0ee4d4d513ce176e74e81969235d319454e68b802a47b39d06a49"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_E-s42-93e429b5f07f2d82.pt",
+        "sha256": "e15ea0d346e8d67f7d24d86221b2afe1bee352d47278430d715ed3a621e31a4e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_E-s43-75ee623186302f17.pt",
+        "sha256": "898f55a3219d025ef4899a66297c00fe0f6985ddf96e75af8f7e1149d2977735"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_E-s44-3dfa0a9d5c66b3dd.pt",
+        "sha256": "56fb2596543cf6bbdbc02528b0cc40c11de5ab03c44ade7a65292cb6611e6a5a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_FIXED-s42-8125adae10100a1c.pt",
+        "sha256": "700628bef1d2c11ebaa926cc3aa12c55c5fb8c67ce3d1a86e93fb9c29d16b483"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_FIXED-s43-1503e32903a60235.pt",
+        "sha256": "a740e125c122e31012d1ebc2631d5758a924bc0d3025c0702a8310e3709cc213"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_FIXED-s44-9ff08243c71447d1.pt",
+        "sha256": "dcc14bab9fbdef786af3a31f2a69537e4e76ec6f3deced941fc1d16ead26db5b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_GLOBAL-s42-04d6e4afee9bff8e.pt",
+        "sha256": "89acae772326edf23f9c8a67f1403a61ac10e591f965c471ad1dbc37b7bb9e6a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_GLOBAL-s43-ed24bfe5b6019406.pt",
+        "sha256": "3072f5ba59b82f9ea29e216ded988b1702e55b4cbb7fa0dd031f9faf772f9822"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_GLOBAL-s44-53f6db357e9050c9.pt",
+        "sha256": "253a244c9b0495a9a6a158dc26998001cd27abf543e0af67ad72412f5feb1728"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_NODE-s42-c8e922366ec21ec8.pt",
+        "sha256": "318ec816b18ac315514851bb01a61c10cc6e65ed6273356941faa72984bb0994"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_NODE-s43-ec574a840c921d57.pt",
+        "sha256": "fe473ce8f812d6ee7d53ad6a469bb064438e857d3d1c0642b571809109b4570f"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_NODE-s44-49f2f182331685f1.pt",
+        "sha256": "3b7d0a0c7c3fcb7b285032a3aa49b3552074004e3caa213b2e41d91d09af2696"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_GLOBAL_WIDE-s42-cacec1bff79c6f6d.pt",
+        "sha256": "ac6bc5656a7655597042bce45bdd5d24a5b6246d9473add996dae643fc9a91f1"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_GLOBAL_WIDE-s43-73b34dbd89e45833.pt",
+        "sha256": "1fa6f83647f0d7ea95109b56936814e7c1d4f6e8a5c5e024d5fdb621b70a7b66"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_GLOBAL_WIDE-s44-b6f1c5e5c6119d54.pt",
+        "sha256": "5f70c9a9c148270f5edddf6f9f2f24800e270876b2663878d0faef0a8cef8c82"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_CONCAT-s42-959d114499ab6fd5.pt",
+        "sha256": "cfe01e7d60ab2978e5295a6937218cae0d2a7692c661fededf380def0d878694"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_CONCAT-s43-90996c4ad9fbf3f8.pt",
+        "sha256": "9d7ebac256126a0926191b513cb3f12f5bf27dd4e702ec8a4e82e53a98ca2918"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_CONCAT-s44-6a57b33dd46aec67.pt",
+        "sha256": "e9b46ec660fc0a535d131c236a56b1611735ef8ca6859b640aa18e0489da6b02"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-T_E-s42-1dfab9942ba3022b.pt",
+        "sha256": "534ab1fda9d8fcab1f5726c7761c23930e9be328e34daa513df97174e8f68ae9"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-T_E-s43-a52e9d758f0f88e1.pt",
+        "sha256": "8089ec266fb143dbc70b349dd3c1687fbdc1b339effec11f3fc5dfc79b041283"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-T_E-s44-29d399d1c39467d5.pt",
+        "sha256": "9c66dfeaa159940cc0a61ca9ff8b912acdafa5844b8f7f10bebb40b58252a476"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-I_E-s42-c9c7c5d486abdc42.pt",
+        "sha256": "e59126f370cd813ba1bc7c076a45dcc37cbd1a05440fb7eab1190e83b4117ab7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-I_E-s43-213018345b8a3c86.pt",
+        "sha256": "40f39113a879304568eef3b320a9d55539e4044d81af6cbf810377a07a85ec55"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-I_E-s44-e2fa18cbac219237.pt",
+        "sha256": "88ef4548c137d446eddbddd76a59d10cf3fd5f599aa7dbe5c9cdf9ea4d172e07"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_E-s42-e3a54198c0132ed4.pt",
+        "sha256": "b447ef1777b5540cfe0089ae6c506cead85d0bef50573071896fa24907428ca5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_E-s43-9812ce4bc22edbb9.pt",
+        "sha256": "0d722102f3959e3a31dcbb3ad147619333dd1f186159c4a8c9e5c4dfa5ccb687"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_E-s44-f534f033a73bf9b8.pt",
+        "sha256": "32e3b8b3e8b11ea3bcc845efd7e5dc2d8e22d6d2a6ce3fc2e2eeacd15cc560ec"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_FIXED-s42-ed0687f46359ea76.pt",
+        "sha256": "1b4bfb6a8ec7523431bcad08fd75545d3111620e68181bcf069ee3512f4779c8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_FIXED-s43-1f0f64e14b5c2e80.pt",
+        "sha256": "98f0bde7e0e52340bec039662fa7c9e54ba58a4aca0485beccc951f8dd5eca5c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_FIXED-s44-5b2ea73454afc5a2.pt",
+        "sha256": "a30c841b1c3a9ec17d563a5bed6d30526577c8b90be6f5bf5738d16e04e2f453"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_GLOBAL-s42-0b8720a7400def83.pt",
+        "sha256": "9bf6144729e26484aae5374959e72b08c81b5c902cfca75a504d60a866139c1f"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_GLOBAL-s43-6e8d9d1992f64cfc.pt",
+        "sha256": "7bed83c18ef8ad9dfd1433280665a31d267dd07bd5dfcf859ee63d1c2a0b0b0d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_GLOBAL-s44-c817837ccddd93de.pt",
+        "sha256": "b8f00f5b6fda7448b8bce33b6636a6b7124b826741cda8b5641cca1207dfa34b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_NODE-s42-193e35351198204a.pt",
+        "sha256": "8390453ebbdbc86506728bfed6444361bc42d52f07e1d5c85bf71b34e25e557d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_NODE-s43-26191f3a7bedf84a.pt",
+        "sha256": "efea8afb3839fb1e6015b83fff659899a94614b3665d391342cff3ba29c61525"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_NODE-s44-292f5797491623a7.pt",
+        "sha256": "738d7be0c1868d6f3b5a447f361ea6bcec9df2576d6b353d0710af67d3693728"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_GLOBAL_WIDE-s42-abb77d75f076adcb.pt",
+        "sha256": "4338c3473c566ef0c7003709c0324ac702f5d5452ea5e8ab161f3de0797ca4bb"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_GLOBAL_WIDE-s43-5df22cdbe780f910.pt",
+        "sha256": "aa9fabdec0ba69deb0d3c0196016758e99fcd1ccd7e5635a5b613faae1e4fd93"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_GLOBAL_WIDE-s44-178e9f1a7225d2ba.pt",
+        "sha256": "19e1382ffed91a05e6ff826c17cda293e2d3b74e695ad31f494281f78aae3a42"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_CONCAT-s42-06c77684d4a902f6.pt",
+        "sha256": "0856312da6cfd0b173fe9662eb734c065228becb8c0631a0ca8e1b6acd957593"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_CONCAT-s43-7a08b9db68ae2f7d.pt",
+        "sha256": "37fb67db12f6ed3129e0b27371e803c050a9f5a1de8337481be252a1e930bbde"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_CONCAT-s44-c143aabd282e89c8.pt",
+        "sha256": "eed369a133b3077cf5d445ac311d2e3bd3b57ed7288489506fe4021ff60ba0c6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-T_E-s42-77120f9642992c6a.pt",
+        "sha256": "f5a3b27f9ff049dc73423b4464139246539241d48b1e13e18de544d483039443"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-T_E-s43-6fb8de382307fd75.pt",
+        "sha256": "5c7c31959d34705e22b61bf2bb54f9406a9c023784b2627048d14a4cc89c2a36"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-T_E-s44-3befe600766b8f29.pt",
+        "sha256": "f4c62f4dd0d0a4a9cd6099f7ebabdb0ed61d35fa73649a49cac9980a66ee22c2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-I_E-s42-5d9f1036b0187932.pt",
+        "sha256": "d28188558949f742219a29be717b005d4148807e9f1f8691fde725022a10aa6d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-I_E-s43-dd1575e8995e46eb.pt",
+        "sha256": "ad87f66da4c27e86a724ffbd50a42e42ddb08924396c8800e05f173e9eb39248"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-I_E-s44-d44aaf7f686a5ebe.pt",
+        "sha256": "6c832d3be1b2a39ae52b1dc788236cff44099524a1256425b8088f89d62b84f8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_E-s42-fcf72be5963504e8.pt",
+        "sha256": "7df2cc7caaa80bc3e243db7980aad0801bc55f35f65caf652205c301421955c3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_E-s43-199130e6233bda4d.pt",
+        "sha256": "eff7165024ffe83d66910a5fb0c31d09586516415c3393c56f602608a1d70197"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_E-s44-f0b4623222478bc5.pt",
+        "sha256": "28a557b3f894ee3c306414046316fd5890b46e77254dacacb366d09f21c0a4be"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_FIXED-s42-1374adf93b33c2bb.pt",
+        "sha256": "d33bfecb6a7fdb06b19087fd0fddb317300aba8824c2ba518bc3c4dc2bc2da0b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_FIXED-s43-bc4114e4e1041d60.pt",
+        "sha256": "2d78777c751bcc4de49adb7117a20bf67ce38c9fdd63a8ee10eb34367e3efdf9"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_FIXED-s44-88c8bddcb5815905.pt",
+        "sha256": "14ad5b778039216631b7f76d8400bebc925cd3fcc7fbec53ec9760fde81f9575"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_GLOBAL-s42-dbc4efdb7c152340.pt",
+        "sha256": "fcd3bd0d60f0f2a68ba86c3d4af48967cb2752561010539051a1280bb12a8329"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_GLOBAL-s43-b49e91e859ae011a.pt",
+        "sha256": "de0c078bbb8202fc695b78db0bc9e396d54893c888471ad89722dea56fea314d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_GLOBAL-s44-0cc5c17fe2f01277.pt",
+        "sha256": "18d895424d04912d00f1101bd1c992860a753d94ea3c9072d3ed43197ba911b7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_NODE-s42-087f38828e18c519.pt",
+        "sha256": "0d576692d43162b3f498e38866bc93f08db65b89419ff2da916421ed0c426a1b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_NODE-s43-643e1fb6c373c49e.pt",
+        "sha256": "3f0e63e43d12ed9dacb4485335dd8a91fef0506ca709415afc29274c986eb4fd"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_NODE-s44-1f0c969f102f95a3.pt",
+        "sha256": "9aeb89953b49574f55fd028ea2f9d486b091b1af0dfc6477a6f029ee3cbb0931"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_GLOBAL_WIDE-s42-e99354d56d12b179.pt",
+        "sha256": "b9b26d32e9785d2ab98c322f73bfd20add2b89a4d96f406bc6fae6e95462c79a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_GLOBAL_WIDE-s43-b436ced7fda1098f.pt",
+        "sha256": "4407e26de09a047481d2d1d5f92cefea626a54549a559f0c5fd2eed2537dfa62"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_GLOBAL_WIDE-s44-c5cef36bba7f06f4.pt",
+        "sha256": "9b826fae904d499db274505901228fccae6428054dbb9b38eac0c809ef569d10"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_CONCAT-s42-bc602f42ed01a51f.pt",
+        "sha256": "0efbbbb2770220f8ea4c920c79cc0fcf12f9e1385447fa79193b6a2181edc6e7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_CONCAT-s43-c7296b371692b986.pt",
+        "sha256": "6790164b4ee7f19624689b84c4431ad522b20f77b188716a781dae42dde33bdc"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_CONCAT-s44-da3b02ee2860fce5.pt",
+        "sha256": "18d0b26dc09a163f3314f27e47f2689a817fa0268863c79992dd32a18a2319b5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Movies-J_FIXED-s42-lr0.001.log",
+        "sha256": "1ffb50ec9d77bb741a346aa7e5bc6404fc8ac20867ab3ea1a78bd0b9d5b050b8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Movies-J_FIXED-s42-lr0.0003.log",
+        "sha256": "3e0af3a4eb50d9aae3d82810839b8195c2fa376777c61bfcc62365261503c4f6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Movies-J_FIXED-s42-lr0.003.log",
+        "sha256": "2eed6550ff07252fe58d20ed8b72e873a70d0f3265382a6af526f6152a4e4d88"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Movies-J_GLOBAL-s42-lr0.0003.log",
+        "sha256": "7c942dfa5f874d69a2f46e159c48888d03fe37e8d861b120069b1f27d08045e6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Movies-J_GLOBAL-s42-lr0.001.log",
+        "sha256": "49ef487cd9a0b3c780444a0bcccb43a849f44a100ffe8893d138f913be41daf2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Movies-J_GLOBAL-s42-lr0.003.log",
+        "sha256": "e4ec1490cfafe80d11fab49fcab93e28edc8b97d6233109b80c7ca4083c748e8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Movies-J_NODE-s42-lr0.0003.log",
+        "sha256": "e4c2aef78d0787dea0ef2a4183397abd61ef50aa28516017039ba21ae1b116e3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Movies-J_NODE-s42-lr0.001.log",
+        "sha256": "abc03e7edd44b5ca21e7c560938018f3fbe1b21ab27166d4781c24083644662b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Movies-J_NODE-s42-lr0.003.log",
+        "sha256": "5847a7ca5d7e5efd0cfaa2c5126f0403fb3aca94f7d75299385545649a7a83f1"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Grocery-J_FIXED-s42-lr0.0003.log",
+        "sha256": "4a97956c02e5ceeb82f98ea26a588215ca9794699e93740f7292ab47b755afda"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Grocery-J_FIXED-s42-lr0.001.log",
+        "sha256": "fedaaf0ef424d5fd4e26886cfbcaa7b2def44d1b1f282ca7152a12e7c5ab67cf"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Grocery-J_FIXED-s42-lr0.003.log",
+        "sha256": "66128e2a91b9637e33bf9dfb934d25a77cf8bcd0677594d6a8e5c05ef69941b2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Grocery-J_GLOBAL-s42-lr0.0003.log",
+        "sha256": "42d8b8f066af4fd2950999635a228575c7009b4fed104c6ff6126556381b1bcd"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Grocery-J_GLOBAL-s42-lr0.001.log",
+        "sha256": "695d65857ee5ee71bc7a26e3700d1d26a386d19a977f5b3609bbffa6f439d882"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Grocery-J_GLOBAL-s42-lr0.003.log",
+        "sha256": "e1e3407c8b491786c55d6f71a734228e0e4a9a002f80f78ac2fa7a2a45bc025c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Grocery-J_NODE-s42-lr0.0003.log",
+        "sha256": "b6be25abaad57ecb520a73418026de85226eafcdaa7cb90f1eebe23308dddce3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Grocery-J_NODE-s42-lr0.001.log",
+        "sha256": "6d702d420aa46294afb8519d5eeb6a01a1bcb51e0680df4fe382725fc513dcad"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/cal-Grocery-J_NODE-s42-lr0.003.log",
+        "sha256": "e37527601d76f83bd143dd583562ae52f17a10b043934f9a36e1246c5d919b15"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-T_E-s42.log",
+        "sha256": "f1901878690d2391a7928bf1f965237cc3cbf222794f206f22a5d45c250adbf6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-T_E-s43.log",
+        "sha256": "d1c0606ba3fb59cf74d8caf6d94e5ad8251d13501e9bafb76d668dde6f7010e3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-T_E-s44.log",
+        "sha256": "fc281c7b94228e958d663d4238d0de310a2bd785fa28a114c1f3c70ff51f6619"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-I_E-s42.log",
+        "sha256": "bbd34522261ef1bf44391fd41dcd94da2d47b873656f2cb4ef41343b4debfb67"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-I_E-s43.log",
+        "sha256": "a20cb61e0bca5b1f0dcf47475c744c9c21a8257ea179c297f291002f35b65125"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-I_E-s44.log",
+        "sha256": "921567bfb195608534183fd7a750edc2a6ebfd328731f9071a074c1e45db36e3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-T_M-s42.log",
+        "sha256": "cf5e2eebb563544acfeab824abe5de2f191fa2df712298aad4d0f2891237eeaf"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-T_M-s43.log",
+        "sha256": "76bff64e962b3871114d8725260093439e67b2b45245fac9e3f4cbefd6f651a0"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-T_M-s44.log",
+        "sha256": "182e29468601ec6087f8b777de762099ac15e945e05249387cf32b6bd63d1e37"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-I_M-s42.log",
+        "sha256": "0ab7fc26ef4e8dc7233f16d77695ee21485bf65be4be68654790aa5401d99b45"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-I_M-s43.log",
+        "sha256": "1f652e7883c32e6b0f2167280b569bf9ab2e981a267791d1dcf57984b26fce78"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-I_M-s44.log",
+        "sha256": "ff1c9f295df5b7f272bd0b118d1ee7a5c20c8fb802adaaca3526eafc0be516bc"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_E-s42.log",
+        "sha256": "289a86e12c8232b2ea6549a868cdae631150e735e6c1678bb5979546c057cf8d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_E-s43.log",
+        "sha256": "cdb9a4ad0b66a0c0ffbdc05de3e4e6f335a6efeebb88f5f4e20b3894b4909a24"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_E-s44.log",
+        "sha256": "4e4a0a67a26cbf943994b91d85bdfcff6f0dcbf327b965a8051a17beab6d71db"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_EARLY-s42.log",
+        "sha256": "ec6c1da7515de78633858a36d058ba9825b7aabe1c039091fa115946d265af44"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_EARLY-s43.log",
+        "sha256": "6f78b4af567403bd55a13f973f047061fe49c2d62e187161f5502de4665498d8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_EARLY-s44.log",
+        "sha256": "6179504621be899917075d08970549602d7f1520a602226c9157f0ee22c024b5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_N-s42.log",
+        "sha256": "1945ea1e757fe74327fcdb145b20458403a1647de4131075ab36ce593a5b4b29"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_N-s43.log",
+        "sha256": "d6d3b69e472608dbdfeea6b691ccb48b4d8b524f165da5046bcd5c2d41c52bc2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_N-s44.log",
+        "sha256": "efd520873b2117650f685684152cab0e76a639fd22c855812e3d5754e1f89938"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_FIXED-s43.log",
+        "sha256": "c7d938c823e8b68cf76147b4be43515668111ed59dc385e85f729e8a46d070b1"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_FIXED-s44.log",
+        "sha256": "82b77c83de6be033cae9d23ace367b03c1c4a31692acf3e545501987a8ace863"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_GLOBAL-s43.log",
+        "sha256": "01e2729abc07011ffd04ba67a9cb18385026c6ccb14eed0ed7d1a4f2bd0ea4ae"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Movies-J_GLOBAL-s44.log",
+        "sha256": "989bcc1c0949affece5b251186a1460fb87fb203433738a203f4dbaba1aa728c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-T_E-s42.log",
+        "sha256": "450f4e0682a853aea8c5e84f833b901e42f482e5c13c45a2f951315b2cd7ff5b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-T_E-s43.log",
+        "sha256": "457f49aad80a3d3f9b17c6e7bb56f896706e871291c2dd70476559899809d0d1"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-T_E-s44.log",
+        "sha256": "beb424f5444e8ac2247b3b78a7f0e38fdaa493216ce07bc6f35431b089b5b940"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-I_E-s42.log",
+        "sha256": "617ee3906a4bde5d8b6fdbdec1c9951a719ae4eada6ef54b370db961547a7b3d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-I_E-s43.log",
+        "sha256": "b4be2849a7220b0f7538293d4653e1f92eba6de07460d320c1ff6678d60790cb"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-I_E-s44.log",
+        "sha256": "ea8b537f04c15f0626f08dc7418bb9965c3b4a4af8598e4d368b4033972b09f5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-T_M-s42.log",
+        "sha256": "05bad14e4286e5465207944dc1af1c36c1630b485d7941ce7978419efa1d51ad"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-T_M-s43.log",
+        "sha256": "f5c283b578432883c286ef499d96d12a0964df4776c5daeaff2757f8e0b1a6ea"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-T_M-s44.log",
+        "sha256": "50c137f3b67ca24956ea97e40747e855f355bd36f3ba75a691c151de101195b9"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-I_M-s42.log",
+        "sha256": "a4d0456ce2b064a9ffd4f5e84bd1cd8df9e0bda32fd875edd91bf9b730d7c2f8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-I_M-s43.log",
+        "sha256": "00738fe351efba6a89d0709553ead5ae2ee6f4952b535380ad55997059bb34bd"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-I_M-s44.log",
+        "sha256": "17f0b1d74e4beae778c589ed985d320543c13c62b459b148282cc72316953e1f"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_E-s42.log",
+        "sha256": "c700fb3810557379bd007ad7759574c134c3d26f5f49abe3faca5a7535713d64"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_E-s43.log",
+        "sha256": "e908f5b9fd75cd3feaef2c4ee34622ed5ac150fb705c0b71d500606bfbcc4a2d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_E-s44.log",
+        "sha256": "3128f7d4e017b8abd1bdf0aa44458f9eec670260f41982be8babc00dc56476c1"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_EARLY-s42.log",
+        "sha256": "1a64053be919ac65a55ef54dc4433b761bf9bfc5c8a455333e6487fb7c024f76"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_EARLY-s43.log",
+        "sha256": "dbc64c0d3bca010166e8ed96466fc89ea330f2e372bec34261c4b19caad57062"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_EARLY-s44.log",
+        "sha256": "c744255e0bb241df62ceed92e560ced64493676890c9e1644615d0c097164670"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_N-s42.log",
+        "sha256": "aca8cc4642428e0a263e307302433d297d9002629153b40ccf020f8b2399dc55"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_N-s43.log",
+        "sha256": "23faa9adb905bac030173836d0bd0292c7ef327bf6179fbfe0a098fb74d8bc9b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_N-s44.log",
+        "sha256": "c5273d892c36f198ef87a5e9b1311135438d25cba36b2f1619ab23fc32793da7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_FIXED-s43.log",
+        "sha256": "532df53409317c57918bebcd05766d2c45b3c80fe62d5d8599620c3e4cae0497"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_FIXED-s44.log",
+        "sha256": "485f482f9c7b063ad6d36bd583cf1833ebff5d4fbda8ac12cd44b5f630b44b76"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_GLOBAL-s43.log",
+        "sha256": "ac13737b05c339b5e493d4e3e97db9b3eaf58ae107a65a60f74646adc62f4f36"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P1-Grocery-J_GLOBAL-s44.log",
+        "sha256": "73c3f0181dfb6e235fcdf7b93577c8c44139d97213fafe6609f087197dbceffe"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_NODE-s43.log",
+        "sha256": "56b7d89866b1336a1f6ff49da0a13ef1925dd530007a82686d90a8fd15773c7e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_NODE-s44.log",
+        "sha256": "810366cdc7177b0be6bccbacfd09a4ac734f4ae09e78230c90c1e3c62de2936f"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_NODE_SHUFFLE-s42.log",
+        "sha256": "4bc7a0e52a70592d321ab5e7d86ed6c87c9a093cd7a4bd98dc4f615ea3e91bae"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_NODE_SHUFFLE-s43.log",
+        "sha256": "aea417dc5861196002fd6befc5bacf0ae1c910d9da2cb030e0eead66093fe010"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_NODE_SHUFFLE-s44.log",
+        "sha256": "dfc9d3d421a4bdf74bb0195086ebcf8bd062a6d31b00d38be66bfc1d9a5368f6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_GLOBAL_WIDE-s42.log",
+        "sha256": "dbe10380091c79217081626ec86cdce39ac6672baf659c09428a4d9bfb4bd5ee"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_GLOBAL_WIDE-s43.log",
+        "sha256": "9f920da30dc9fad901fc2e7aa2d444cdca1ed0883d9b583ed797f66eb4cfb95c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_GLOBAL_WIDE-s44.log",
+        "sha256": "8bf60f8ae4233a8d4f84d1399f3a06045e7a6021ea270adfa2a501fd228fd26a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_CONCAT-s42.log",
+        "sha256": "d91a3e2f70ea8a4b7fea476a1c8754793eb58ff3c54a4c1deddad196323850c8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_CONCAT-s43.log",
+        "sha256": "382a64533442c403420427d89cd43218a32fe2041f80e2d9291f8e7bcc5f28fa"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Movies-J_CONCAT-s44.log",
+        "sha256": "7a555c4bc7029de1fdff3cdcf852db040cc2bb92ed24caf992a8444dfc3bf6ca"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_NODE-s43.log",
+        "sha256": "95cbbcc61b9f763c60c6754fdb731cf9189a88ca7df5e146d2b2a3e4ce688b80"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_NODE-s44.log",
+        "sha256": "b59a75ca38cc4b4496555be72a2a6ead52f8ca8ee73c0652097c1649929067ea"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_NODE_SHUFFLE-s42.log",
+        "sha256": "0c7b70c241ddbbc2dbd497e5c6846035038f42df89b9beab72b809d04ddcad62"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_NODE_SHUFFLE-s43.log",
+        "sha256": "5e09c414870e1f73c591f33c620fe176a0b3f3d98ea36dbfa988998f75c92cbd"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_NODE_SHUFFLE-s44.log",
+        "sha256": "5839b185a87df9a0819774b032901fac1df9873a1524fdfc506e58ef88b04938"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_GLOBAL_WIDE-s42.log",
+        "sha256": "ee0bf2435c70fd0ad5d76f848015bfa3bf44de98554f725507c0f6d2f449a258"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_GLOBAL_WIDE-s43.log",
+        "sha256": "d05a57737bf81411c6b8286f9e39e134dfba5d77c2b7ee4ec1aaa29f08395291"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_GLOBAL_WIDE-s44.log",
+        "sha256": "6a95aaff5a5c7d96c6fac250a0f771ca93a70a4e43199afb55e8f96464c4e914"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_CONCAT-s42.log",
+        "sha256": "1b7ee50c322c4a8118c28b774551718b2135b1102d95ec71675e0a7adf20061b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_CONCAT-s43.log",
+        "sha256": "5a625600fe3e9048d46cf8a6b31b5a3466c75357a2d4f98ed793276a17785316"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P2-Grocery-J_CONCAT-s44.log",
+        "sha256": "293cd79138394851d71ee6ceb2525e1c61205da146ac299995596f679084f212"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-T_E-s42.log",
+        "sha256": "6347e5853b090368fbbbbba20bf9553452ee1b45fdfbb6ee7b5b6b66a3f21add"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-T_E-s43.log",
+        "sha256": "bca5cd3bc27ce62780aac96a78cf40afc6419380e0575c13f513ad41a24c8e95"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-T_E-s44.log",
+        "sha256": "4d88d0c1d5429f326cc1de3708958259d8390bfb8dccdc4712e08c5693a69947"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-I_E-s42.log",
+        "sha256": "1d552626dc9d320bec3fca7e3b996eea50d2e10eb1f85d422768d98fa325bc30"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-I_E-s43.log",
+        "sha256": "b34a433277172649bc5661983e5cc93abe32fb8b7318c6968ce936fbcefff313"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-I_E-s44.log",
+        "sha256": "695cf095f4ad4629b510c6c1fa1792de469aa6c2b628ddcf868769ff0c4f109c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_E-s42.log",
+        "sha256": "1c6ca82db3b026d6c38b7be780562624bdca564e9b52d7bd51837cf271db8651"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_E-s43.log",
+        "sha256": "d21129596a65d86a50e80a10bc6ea8fd01f0b305668ff2863bf3cf680304f428"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_E-s44.log",
+        "sha256": "0744fb1d0d0174b22843e382491ed9bfd8cd92013f58ba3b8515ab97181739d2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_FIXED-s42.log",
+        "sha256": "2769e1cf3647072b15adf9f9c79089aae5cdf67d1b525d6c208474a4d4b8744d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_FIXED-s43.log",
+        "sha256": "195ab4677f477d6492c445d06bf3b44bed02a5ae07177915ef6aa32c4ec933dd"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_FIXED-s44.log",
+        "sha256": "499643d0b9513d999ab44faa946d49a85da36df934018f53af17ba599ff594d3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_GLOBAL-s42.log",
+        "sha256": "ee18aff1b6ea11495fd27f1521d1014347ce8fafa8550e468b9780f74a828065"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_GLOBAL-s43.log",
+        "sha256": "d8ba866ddb64a0301b26d4c80819e6f358f66cd7246e8cc4798b1f62280fe8e4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_GLOBAL-s44.log",
+        "sha256": "a2bbb8c9428d81814392a0be69973709890b3f96a7ffd9cbf41862b6ed0398a6"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_NODE-s42.log",
+        "sha256": "1af53f4871997174c900eadc2e65bba65b36e81823a3753517344272e696c8b4"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_NODE-s43.log",
+        "sha256": "be67a858496bcb98937dfa97907ed2d44b03423228a90a8211fe42385072dfed"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_NODE-s44.log",
+        "sha256": "cd3fe6815c012ebe65098914d31e3a6cdaa8d4b651416df39aea2bc410507e42"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_GLOBAL_WIDE-s42.log",
+        "sha256": "7b335a698e298f84519e4a609a21a55aa7f449c15f74d075c0cf62a1fefaa310"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_GLOBAL_WIDE-s43.log",
+        "sha256": "09ba7889045e731b11391d4513ee94bc6c78542da04c5581c5717c112be36646"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_GLOBAL_WIDE-s44.log",
+        "sha256": "da48163aeb912211fa8bde4e7c82cf41ad213e87aab480d92822674e31d0cd09"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_CONCAT-s42.log",
+        "sha256": "7b7f0c15f4c484a2a90077a6ceae0f31fcf34fb2a7d05b10ec7f3da84b1fea62"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_CONCAT-s43.log",
+        "sha256": "a043656ab4a72c4aa5384ef72bfa09ae838d346e95f11406da4b81e537c40eb7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Toys-J_CONCAT-s44.log",
+        "sha256": "af675afe1798cb70d4851581827d7ac32a4086c2695288fac5ef0b04558e5cbd"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-T_E-s42.log",
+        "sha256": "c78f26e4d5354c9e7ce6a99519bc1073cd8161a7fae1ed6e6e98f5db07e9aeee"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-T_E-s43.log",
+        "sha256": "8ea648148aa4f3553c388e4f3da53265e2ea83919dffcbf31c096a6586b1e5ed"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-T_E-s44.log",
+        "sha256": "dd814b09695d9a608a00b1dc1651c2831a379ae6f2b473d3fdd20f355c1fcc6a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-I_E-s42.log",
+        "sha256": "1ccae69cfaff5270b080a2cd92f789e6af52bae0052244915cb4e9b84616d8c3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-I_E-s43.log",
+        "sha256": "f0ae6f2a1dcdc11d61253eaca95dd074861b4594d838fcc9b307510a860600d2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-I_E-s44.log",
+        "sha256": "cb5ae3da5cfdc4452a4ef33a6483a5baf46d6402c8dec04c1b6a3dfba93c631d"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_E-s42.log",
+        "sha256": "80f5dc5ed6cd3a76fea0f00e3bfce0505ba6723f09d59ad88739ce5b6053e5e8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_E-s43.log",
+        "sha256": "14d603ff3e145b9f068b18c0434cda9c8d24a9c379cf7fc35fd2ac005a7e2cb5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_E-s44.log",
+        "sha256": "22473e86486be51e46ae6a53ffa6bb000d4143f738a99e82b292d4bc4d383904"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_FIXED-s42.log",
+        "sha256": "6ec3f639b0b863060c5da700f25eaaf96c2dcef1c7452e80eecfb1c22b253ba9"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_FIXED-s43.log",
+        "sha256": "449e2da2b22bcced8ba45cd9dadad92690327ca871f20b9e6bbb7da6718ce72c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_FIXED-s44.log",
+        "sha256": "77fabe6738c67008a4323c75b8741dff09bb6862ecaebe840bb411429b414c74"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_GLOBAL-s42.log",
+        "sha256": "c07311cef9cf22a1ce8d80985d0d90f596ed7af9ab18f3554b15e6c185d4be01"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_GLOBAL-s43.log",
+        "sha256": "a550dbbf7b6dec6f868559bc260d951f1d64938de7decc3211ff6b333156558b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_GLOBAL-s44.log",
+        "sha256": "d6ac963f5ad504d7d8719f872cf1b25a1a60f0d484e960ea7a1233710db12d59"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_NODE-s42.log",
+        "sha256": "3e81a1f9c97c318613642d968c3fedfd93fc602e143199ab913e77515e5618f0"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_NODE-s43.log",
+        "sha256": "c4a97c90afa91f5bff47a5a28ee5b2e7375e5526e4e8864470fc54161467c171"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_NODE-s44.log",
+        "sha256": "8a47a9e377033718a3888b9c654d4cab0caaaf76ec7d02fc0f6885cb14394b80"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_GLOBAL_WIDE-s42.log",
+        "sha256": "a354f203ac1d34c3a4ed76a456ef262ca5a074fcb1dc37fef4689c2dea36c00e"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_GLOBAL_WIDE-s43.log",
+        "sha256": "2968baffd028a6b9ae340ebd284875dfca06928091abdf343b1692985a7a7cd5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_GLOBAL_WIDE-s44.log",
+        "sha256": "d39241a2eee3207c0c37b64f72da7d53de21b6a8ac8e1f76d9b9c0d2baa460f2"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_CONCAT-s42.log",
+        "sha256": "1c85aac1b53186d5f9aee89170a61b1b3ebb5090f196205d2cd61ffb11953b6b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_CONCAT-s43.log",
+        "sha256": "0049f54d15a2b8ff32d9b073246d1b2e41f791bfa649e22725f7600c98f8f8b1"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-Reddit-S-J_CONCAT-s44.log",
+        "sha256": "abb911f18ccb3589fbcad8b55f461c896fe9e089022cd8a1ecc01124ff2f54a1"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-T_E-s42.log",
+        "sha256": "8244fbf8f53d1fa16845a6bf39d3d46728fa556bff224788d54f7f16853fa714"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-T_E-s43.log",
+        "sha256": "599403e693184e41fae4cc1a95e3fe2d5a62a84178b6ff72630dd0697f976d09"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-T_E-s44.log",
+        "sha256": "30b12e4d6348bc85ce2f5608fa679f425368a34eb461ede1f71a988662fa745f"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-I_E-s42.log",
+        "sha256": "f8c368054fa51dab054a1c0549370cf93723c04e3b3a609e85f025594f1106a0"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-I_E-s43.log",
+        "sha256": "4e26eb4c24b297782241713757803a41284d34ed3e8cc11d87610b863b1fb128"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-I_E-s44.log",
+        "sha256": "b462ccf69331baf224622a5d11392c0b51071a9d953275d0dfa2603ef1e06f50"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_E-s42.log",
+        "sha256": "d8cb609da6317c214100e9e841e5454e096b9fe82868318c1a10deb257633cbf"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_E-s43.log",
+        "sha256": "39eb193670ca1966bc31304c23451637fb398e76b030d3e74c07c45a1c833b1a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_E-s44.log",
+        "sha256": "6b583480408997193c14a9492b969f9ce3f1863660a2571044109441aaeee787"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_FIXED-s42.log",
+        "sha256": "04c66106c8d86227e632102156b1b3da543b1388333467d540307b5a3f6c39f8"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_FIXED-s43.log",
+        "sha256": "34bb293352670dde4831c9c6e314c42b1ecada122fd6db6bcb603cbc8aaf2096"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_FIXED-s44.log",
+        "sha256": "aff50770343bdb9e762c8c191a90e01a23ef7684987bbb6188aa62005113dcd5"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_GLOBAL-s42.log",
+        "sha256": "3f3d03fd0237e6c547de3c295344f0030505f2a57c91f7f3d6dbee550fa7b6c3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_GLOBAL-s43.log",
+        "sha256": "c450dc64cfe86f24fde3e42cb4e75513dc85f9c6268153b329dc600e9017dcca"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_GLOBAL-s44.log",
+        "sha256": "a1f3b27186a9c5d5bd53dce75920a954311d70f6cbd1b401d49e5507f074eb58"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_NODE-s42.log",
+        "sha256": "548e6499293374f2715de39b765ad283908576aa2e54f094f1a2e33d826d797a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_NODE-s43.log",
+        "sha256": "c1a691472d126442e6f46024b3eb3f963b0fb920e34ffc3ca63b918943cedbc3"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_NODE-s44.log",
+        "sha256": "1539cad4d12d463f9d4d945033319ed33e70c1af7282a2a09a5841328b41212b"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_GLOBAL_WIDE-s42.log",
+        "sha256": "39b246d4c159278d6da309d1b138d50fd8a7a2edc63d2c29b7d3f432a5174e8c"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_GLOBAL_WIDE-s43.log",
+        "sha256": "adec52a7a2f36412a94c2f98dd3434da539aa67903a34ce38699707f2b9e9430"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_GLOBAL_WIDE-s44.log",
+        "sha256": "ad4a68d0061e7f0bd7110ceecdd66cdf4a4761ba1914427ec7f6c159fc42a7b7"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_CONCAT-s42.log",
+        "sha256": "bcc21d85b590637c4a0068942ae2464b56b6e7bb5ea08f505aa99b73c72da514"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_CONCAT-s43.log",
+        "sha256": "af78b31e70e0e40d9f1c3ca3f87f1b9edf1d8fe783b4127a6162d5314b3717a9"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs/P3-ele-fashion-J_CONCAT-s44.log",
+        "sha256": "81409f794456faa8431cb1edd776c96be0b341dab2a378aa88670217e1a59c7a"
+      },
+      {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/smoke.json",
+        "sha256": "2f8506c2896e29d2c6fede5df338740a82ffd71ee99992a1c923277e5f7f6022"
+      }
+    ],
+    "logs": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/logs",
+    "predictions": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions",
+    "tracked_input_audit": {
+      "path": "/hdd1/DataInHere/YHF/mag_model/reports/problem_validation_v1/data_audit.json",
+      "sha256": "fdba2c75f22ded5d67fcdbcde806015aafce22cbfd03d505eede4c4130d28fc7"
+    }
+  },
+  "resume_commands": {
+    "calibration_resume": "conda run --no-capture-output -n yhf_env python scripts/run_problem_validation.py --stage calibration --resume --device cuda:1",
+    "evaluate_resume": "conda run --no-capture-output -n yhf_env python scripts/evaluate_locked_probe.py --resume --device cuda:1",
+    "locked_test_resume_note": "The registered --resume evaluation command is tied to the pinned source hashes. After aggregate-only code fixes, use a checkout containing the pinned evaluator source to resume locked evaluation; use summary-only on the final checkout to rebuild reports without rerunning tests.",
+    "main_resume": "conda run --no-capture-output -n yhf_env python scripts/run_problem_validation.py --stage main --resume --device cuda:1",
+    "pinned_source_commit": "63867331e9d3373f19136e47ab192cc9fb014c97",
+    "summarize": "conda run --no-capture-output -n yhf_env python scripts/evaluate_locked_probe.py --summary-only",
+    "summary_only_current_checkout": "conda run --no-capture-output -n yhf_env python scripts/evaluate_locked_probe.py --summary-only"
+  },
+  "selected_common_lr": 0.003,
+  "source_commit": "63867331e9d3373f19136e47ab192cc9fb014c97",
+  "study": "mag_problem_validation_v1",
+  "successful_locked_evaluations": 150,
+  "successful_training_rows": 162,
+  "training_attempt_count": 162
+}

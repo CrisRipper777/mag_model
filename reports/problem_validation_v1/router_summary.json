@@ -1,0 +1,2529 @@
+{
+  "interpretation": "descriptive fusion weights/frequencies; not causal utilities or mature MoE load",
+  "runs": [
+    {
+      "dataset": "Movies",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.9677177715292657e-08,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.9677177715292657e-08,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.9677177715292657e-08,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.9677177715292657e-08,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.9677177715292657e-08,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.9677177715292657e-08,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.9677177715292657e-08,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.9677177715292657e-08,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.9677177715292657e-08,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.9677177715292657e-08,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.6491477489471436,
+              0.35085228085517883
+            ],
+            "mean_entropy": 0.6681177616119385,
+            "mean_weights": [
+              0.0002832847530953586,
+              0.00026340625481680036,
+              0.5461359620094299,
+              0.4533172845840454
+            ],
+            "n": 704
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.6331169009208679,
+              0.36688312888145447
+            ],
+            "mean_entropy": 0.6742922067642212,
+            "mean_weights": [
+              0.00022238073870539665,
+              0.00020156755635980517,
+              0.5335453748703003,
+              0.46603068709373474
+            ],
+            "n": 924
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.5787037014961243,
+              0.42129629850387573
+            ],
+            "mean_entropy": 0.6766284704208374,
+            "mean_weights": [
+              0.00022233865456655622,
+              0.00020112564379815012,
+              0.519455075263977,
+              0.4801214635372162
+            ],
+            "n": 864
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.47387173771858215,
+              0.5261282920837402
+            ],
+            "mean_entropy": 0.6788226962089539,
+            "mean_weights": [
+              0.0002362992090638727,
+              0.0002133567031705752,
+              0.49678996205329895,
+              0.5027604103088379
+            ],
+            "n": 842
+          }
+        },
+        "choice_frequency": [
+          0.0,
+          0.0,
+          0.5821835398674011,
+          0.4178164303302765
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.6747380495071411,
+        "mean_weights": [
+          0.00023874528415035456,
+          0.00021748810831923038,
+          0.5232699513435364,
+          0.476273775100708
+        ],
+        "n_val": 3334,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 42
+    },
+    {
+      "dataset": "Movies",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": 5.649390399931065e-09,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5266946610677864,
+          "val_macro_f1": 0.4171576346412659
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 5.649390399931065e-09,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5266946610677864,
+          "val_macro_f1": 0.4171576346412659
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 5.649390399931065e-09,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5266946610677864,
+          "val_macro_f1": 0.4171576346412659
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 5.649390399931065e-09,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5266946610677864,
+          "val_macro_f1": 0.4171576346412659
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 5.649390399931065e-09,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5266946610677864,
+          "val_macro_f1": 0.4171576346412659
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 5.649390399931065e-09,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5266946610677864,
+          "val_macro_f1": 0.4171576346412659
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 5.649390399931065e-09,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5266946610677864,
+          "val_macro_f1": 0.4171576346412659
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 5.649390399931065e-09,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5266946610677864,
+          "val_macro_f1": 0.4171576346412659
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 5.649390399931065e-09,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5266946610677864,
+          "val_macro_f1": 0.4171576346412659
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 5.649390399931065e-09,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5266946610677864,
+          "val_macro_f1": 0.4171576346412659
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.5383522510528564,
+              0.46164771914482117
+            ],
+            "mean_entropy": 0.6074283719062805,
+            "mean_weights": [
+              7.54612472064764e-07,
+              4.066330063778878e-07,
+              0.5500717759132385,
+              0.44992712140083313
+            ],
+            "n": 704
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.4740259647369385,
+              0.5259740352630615
+            ],
+            "mean_entropy": 0.6344869136810303,
+            "mean_weights": [
+              9.032734737957071e-07,
+              5.328647034730238e-07,
+              0.5140669345855713,
+              0.4859316945075989
+            ],
+            "n": 924
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.3923611044883728,
+              0.6076388955116272
+            ],
+            "mean_entropy": 0.6343933939933777,
+            "mean_weights": [
+              4.997065730094619e-07,
+              2.8221052161825355e-07,
+              0.4697466194629669,
+              0.5302525758743286
+            ],
+            "n": 864
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.2802850306034088,
+              0.7197149395942688
+            ],
+            "mean_entropy": 0.6398317813873291,
+            "mean_weights": [
+              3.6817942827838124e-07,
+              2.0431905056739197e-07,
+              0.4326448142528534,
+              0.567354679107666
+            ],
+            "n": 842
+          }
+        },
+        "choice_frequency": [
+          0.0,
+          0.0,
+          0.4175164997577667,
+          0.5824835300445557
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.6300989985466003,
+        "mean_weights": [
+          6.321611749626754e-07,
+          3.582792942324886e-07,
+          0.48962098360061646,
+          0.5103780627250671
+        ],
+        "n_val": 3334,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 43
+    },
+    {
+      "dataset": "Movies",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": -6.757815196323236e-09,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5281943611277744,
+          "val_macro_f1": 0.41385137096321667
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -6.757815196323236e-09,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5281943611277744,
+          "val_macro_f1": 0.41385137096321667
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -6.757815196323236e-09,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5281943611277744,
+          "val_macro_f1": 0.41385137096321667
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -6.757815196323236e-09,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5281943611277744,
+          "val_macro_f1": 0.41385137096321667
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -6.757815196323236e-09,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5281943611277744,
+          "val_macro_f1": 0.41385137096321667
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -6.757815196323236e-09,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5281943611277744,
+          "val_macro_f1": 0.41385137096321667
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -6.757815196323236e-09,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5281943611277744,
+          "val_macro_f1": 0.41385137096321667
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -6.757815196323236e-09,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5281943611277744,
+          "val_macro_f1": 0.41385137096321667
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -6.757815196323236e-09,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5281943611277744,
+          "val_macro_f1": 0.41385137096321667
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -6.757815196323236e-09,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.5281943611277744,
+          "val_macro_f1": 0.41385137096321667
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.5213068127632141,
+              0.4786931872367859
+            ],
+            "mean_entropy": 0.6528270244598389,
+            "mean_weights": [
+              1.3533461242332123e-05,
+              1.2908963981317356e-05,
+              0.5238253474235535,
+              0.47614821791648865
+            ],
+            "n": 704
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.48917749524116516,
+              0.5108225345611572
+            ],
+            "mean_entropy": 0.6658543348312378,
+            "mean_weights": [
+              2.8052612833562307e-05,
+              2.6934201741823927e-05,
+              0.5109111666679382,
+              0.4890338182449341
+            ],
+            "n": 924
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.4513888955116272,
+              0.5486111044883728
+            ],
+            "mean_entropy": 0.6686565279960632,
+            "mean_weights": [
+              4.194045322947204e-05,
+              4.076888217241503e-05,
+              0.49557578563690186,
+              0.5043415427207947
+            ],
+            "n": 864
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.33847981691360474,
+              0.6615201830863953
+            ],
+            "mean_entropy": 0.6700043678283691,
+            "mean_weights": [
+              1.1407850251998752e-05,
+              1.0876004125748295e-05,
+              0.46168094873428345,
+              0.5382968187332153
+            ],
+            "n": 842
+          }
+        },
+        "choice_frequency": [
+          0.0,
+          0.0,
+          0.4481103718280792,
+          0.5518895983695984
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.664877712726593,
+        "mean_weights": [
+          2.4382163246627897e-05,
+          2.3502405383624136e-05,
+          0.4972308874130249,
+          0.5027211904525757
+        ],
+        "n_val": 3334,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 44
+    },
+    {
+      "dataset": "Toys",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.4443937823571673e-08,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7743416284126601,
+          "val_macro_f1": 0.7504132136056024
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.4443937823571673e-08,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7743416284126601,
+          "val_macro_f1": 0.7504132136056024
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.4443937823571673e-08,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7743416284126601,
+          "val_macro_f1": 0.7504132136056024
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.4443937823571673e-08,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7743416284126601,
+          "val_macro_f1": 0.7504132136056024
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.4443937823571673e-08,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7743416284126601,
+          "val_macro_f1": 0.7504132136056024
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.4443937823571673e-08,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7743416284126601,
+          "val_macro_f1": 0.7504132136056024
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.4443937823571673e-08,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7743416284126601,
+          "val_macro_f1": 0.7504132136056024
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.4443937823571673e-08,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7743416284126601,
+          "val_macro_f1": 0.7504132136056024
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.4443937823571673e-08,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7743416284126601,
+          "val_macro_f1": 0.7504132136056024
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.4443937823571673e-08,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7743416284126601,
+          "val_macro_f1": 0.7504132136056024
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean_entropy": 0.6931138038635254,
+            "mean_weights": [
+              0.5040822625160217,
+              0.0,
+              0.49591779708862305,
+              0.0
+            ],
+            "n": 1
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.12472885102033615,
+              0.0,
+              0.3259219229221344,
+              0.5493492484092712
+            ],
+            "mean_entropy": 0.9201300740242004,
+            "mean_weights": [
+              0.12914271652698517,
+              0.035300955176353455,
+              0.3821336030960083,
+              0.45342275500297546
+            ],
+            "n": 1844
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.08317756652832031,
+              0.0,
+              0.2018691599369049,
+              0.7149532437324524
+            ],
+            "mean_entropy": 0.8674980998039246,
+            "mean_weights": [
+              0.09946791082620621,
+              0.024103138595819473,
+              0.3446643352508545,
+              0.5317646861076355
+            ],
+            "n": 1070
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.03267974033951759,
+              0.0,
+              0.10702614486217499,
+              0.8602941036224365
+            ],
+            "mean_entropy": 0.7931919693946838,
+            "mean_weights": [
+              0.06956443190574646,
+              0.01415626984089613,
+              0.30219119787216187,
+              0.6140881180763245
+            ],
+            "n": 1224
+          },
+          "isolated": {
+            "choice_frequency": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean_entropy": 0.6931138038635254,
+            "mean_weights": [
+              0.5040822625160217,
+              0.0,
+              0.49591779708862305,
+              0.0
+            ],
+            "n": 1
+          }
+        },
+        "choice_frequency": [
+          0.0869775339961052,
+          0.0,
+          0.22904083132743835,
+          0.6839816570281982
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.868930459022522,
+        "mean_weights": [
+          0.10394318401813507,
+          0.026144620031118393,
+          0.34883376955986023,
+          0.5210784077644348
+        ],
+        "n_val": 4139,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 42
+    },
+    {
+      "dataset": "Toys",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.0981871795555662e-08,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7784489007006523,
+          "val_macro_f1": 0.7431220197194245
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.0981871795555662e-08,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7784489007006523,
+          "val_macro_f1": 0.7431220197194245
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.0981871795555662e-08,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7784489007006523,
+          "val_macro_f1": 0.7431220197194245
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.0981871795555662e-08,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7784489007006523,
+          "val_macro_f1": 0.7431220197194245
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.0981871795555662e-08,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7784489007006523,
+          "val_macro_f1": 0.7431220197194245
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.0981871795555662e-08,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7784489007006523,
+          "val_macro_f1": 0.7431220197194245
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.0981871795555662e-08,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7784489007006523,
+          "val_macro_f1": 0.7431220197194245
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.0981871795555662e-08,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7784489007006523,
+          "val_macro_f1": 0.7431220197194245
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.0981871795555662e-08,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7784489007006523,
+          "val_macro_f1": 0.7431220197194245
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.0981871795555662e-08,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7784489007006523,
+          "val_macro_f1": 0.7431220197194245
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            "mean_entropy": 0.6931314468383789,
+            "mean_weights": [
+              0.4971987307071686,
+              0.0,
+              0.5028012990951538,
+              0.0
+            ],
+            "n": 1
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.1892624795436859,
+              0.0,
+              0.2885032594203949,
+              0.5222342610359192
+            ],
+            "mean_entropy": 1.0399709939956665,
+            "mean_weights": [
+              0.18180669844150543,
+              0.04994886368513107,
+              0.3633410632610321,
+              0.404903382062912
+            ],
+            "n": 1844
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.11962617188692093,
+              0.0,
+              0.237383171916008,
+              0.6429906487464905
+            ],
+            "mean_entropy": 1.0042991638183594,
+            "mean_weights": [
+              0.14642351865768433,
+              0.03890248388051987,
+              0.3575162887573242,
+              0.45715776085853577
+            ],
+            "n": 1070
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.06781046092510223,
+              0.0,
+              0.12826797366142273,
+              0.8039215803146362
+            ],
+            "mean_entropy": 0.9591676592826843,
+            "mean_weights": [
+              0.12001089751720428,
+              0.0288871880620718,
+              0.3361561894416809,
+              0.5149458050727844
+            ],
+            "n": 1224
+          },
+          "isolated": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            "mean_entropy": 0.6931314468383789,
+            "mean_weights": [
+              0.4971987307071686,
+              0.0,
+              0.5028012990951538,
+              0.0
+            ],
+            "n": 1
+          }
+        },
+        "choice_frequency": [
+          0.13529838621616364,
+          0.0,
+          0.22807441651821136,
+          0.636627197265625
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 1.006770133972168,
+        "mean_weights": [
+          0.15446127951145172,
+          0.040852684527635574,
+          0.3538297116756439,
+          0.4508562982082367
+        ],
+        "n_val": 4139,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 43
+    },
+    {
+      "dataset": "Toys",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": 1.8764158560280464e-08,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7627446243053878,
+          "val_macro_f1": 0.7244056853235461
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 1.8764158560280464e-08,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7627446243053878,
+          "val_macro_f1": 0.7244056853235461
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 1.8764158560280464e-08,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7627446243053878,
+          "val_macro_f1": 0.7244056853235461
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 1.8764158560280464e-08,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7627446243053878,
+          "val_macro_f1": 0.7244056853235461
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 1.8764158560280464e-08,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7627446243053878,
+          "val_macro_f1": 0.7244056853235461
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 1.8764158560280464e-08,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7627446243053878,
+          "val_macro_f1": 0.7244056853235461
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 1.8764158560280464e-08,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7627446243053878,
+          "val_macro_f1": 0.7244056853235461
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 1.8764158560280464e-08,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7627446243053878,
+          "val_macro_f1": 0.7244056853235461
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 1.8764158560280464e-08,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7627446243053878,
+          "val_macro_f1": 0.7244056853235461
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 1.8764158560280464e-08,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7627446243053878,
+          "val_macro_f1": 0.7244056853235461
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            "mean_entropy": 0.01838376186788082,
+            "mean_weights": [
+              0.0026524136774241924,
+              0.0,
+              0.9973475933074951,
+              0.0
+            ],
+            "n": 1
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.20281995832920074,
+              0.7971800565719604
+            ],
+            "mean_entropy": 0.6368898153305054,
+            "mean_weights": [
+              0.00041253131348639727,
+              0.0003841614816337824,
+              0.3915470838546753,
+              0.6076563000679016
+            ],
+            "n": 1844
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.0635514035820961,
+              0.9364485740661621
+            ],
+            "mean_entropy": 0.618165910243988,
+            "mean_weights": [
+              0.00020520022371783853,
+              0.00018724205438047647,
+              0.3361988663673401,
+              0.6634086966514587
+            ],
+            "n": 1070
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.02777777798473835,
+              0.9722222089767456
+            ],
+            "mean_entropy": 0.5922483205795288,
+            "mean_weights": [
+              2.019065505010076e-05,
+              1.8125196220353246e-05,
+              0.2991553544998169,
+              0.7008063793182373
+            ],
+            "n": 1224
+          },
+          "isolated": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            "mean_entropy": 0.01838376186788082,
+            "mean_weights": [
+              0.0026524136774241924,
+              0.0,
+              0.9973475933074951,
+              0.0
+            ],
+            "n": 1
+          }
+        },
+        "choice_frequency": [
+          0.0,
+          0.0,
+          0.11524523049592972,
+          0.8847547769546509
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.6186983585357666,
+        "mean_weights": [
+          0.0002434495690977201,
+          0.00022491614799946547,
+          0.35006260871887207,
+          0.6494690179824829
+        ],
+        "n_val": 4139,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 44
+    },
+    {
+      "dataset": "Grocery",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": 6.545165964766397e-09,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 6.545165964766397e-09,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 6.545165964766397e-09,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 6.545165964766397e-09,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 6.545165964766397e-09,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 6.545165964766397e-09,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 6.545165964766397e-09,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 6.545165964766397e-09,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 6.545165964766397e-09,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 6.545165964766397e-09,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              0.0011627906933426857,
+              0.0,
+              0.40813952684402466,
+              0.5906976461410522
+            ],
+            "mean_entropy": 0.6353461146354675,
+            "mean_weights": [
+              0.0013894191943109035,
+              0.0013391249813139439,
+              0.46699073910713196,
+              0.5302807688713074
+            ],
+            "n": 860
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.2976190447807312,
+              0.7023809552192688
+            ],
+            "mean_entropy": 0.6326304078102112,
+            "mean_weights": [
+              0.0007113564061000943,
+              0.0006775169167667627,
+              0.4191208481788635,
+              0.5794903635978699
+            ],
+            "n": 840
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.1894218921661377,
+              0.8105781078338623
+            ],
+            "mean_entropy": 0.6147231459617615,
+            "mean_weights": [
+              0.0003061319002881646,
+              0.00028929984546266496,
+              0.36499014496803284,
+              0.6344144344329834
+            ],
+            "n": 813
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.08536585420370102,
+              0.9146341681480408
+            ],
+            "mean_entropy": 0.5752975344657898,
+            "mean_weights": [
+              0.0002177748247049749,
+              0.00020716464496217668,
+              0.2978692948818207,
+              0.7017057538032532
+            ],
+            "n": 902
+          }
+        },
+        "choice_frequency": [
+          0.00029282577452249825,
+          0.0,
+          0.2436310350894928,
+          0.7560761570930481
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.6139079332351685,
+        "mean_weights": [
+          0.0006552730919793248,
+          0.0006274743936955929,
+          0.3862631618976593,
+          0.6124541163444519
+        ],
+        "n_val": 3415,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 42
+    },
+    {
+      "dataset": "Grocery",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.6458910678807115e-08,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7809663250366032,
+          "val_macro_f1": 0.7077361344268651
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.6458910678807115e-08,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7809663250366032,
+          "val_macro_f1": 0.7077361344268651
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.6458910678807115e-08,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7809663250366032,
+          "val_macro_f1": 0.7077361344268651
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.6458910678807115e-08,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7809663250366032,
+          "val_macro_f1": 0.7077361344268651
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.6458910678807115e-08,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7809663250366032,
+          "val_macro_f1": 0.7077361344268651
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.6458910678807115e-08,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7809663250366032,
+          "val_macro_f1": 0.7077361344268651
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.6458910678807115e-08,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7809663250366032,
+          "val_macro_f1": 0.7077361344268651
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.6458910678807115e-08,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7809663250366032,
+          "val_macro_f1": 0.7077361344268651
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.6458910678807115e-08,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7809663250366032,
+          "val_macro_f1": 0.7077361344268651
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.6458910678807115e-08,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7809663250366032,
+          "val_macro_f1": 0.7077361344268651
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              0.0011627906933426857,
+              0.0,
+              0.3348837196826935,
+              0.6639534831047058
+            ],
+            "mean_entropy": 0.5828551054000854,
+            "mean_weights": [
+              0.005229029338806868,
+              0.0015929487999528646,
+              0.4076828956604004,
+              0.5854950547218323
+            ],
+            "n": 860
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.24285714328289032,
+              0.7571428418159485
+            ],
+            "mean_entropy": 0.5634921193122864,
+            "mean_weights": [
+              0.0028918737079948187,
+              0.0007872854475863278,
+              0.34427013993263245,
+              0.6520507335662842
+            ],
+            "n": 840
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.13038130104541779,
+              0.8696187138557434
+            ],
+            "mean_entropy": 0.5217066407203674,
+            "mean_weights": [
+              0.0017498861998319626,
+              0.0004443917714525014,
+              0.274757981300354,
+              0.7230477333068848
+            ],
+            "n": 813
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.03215077519416809,
+              0.9678491950035095
+            ],
+            "mean_entropy": 0.44841963052749634,
+            "mean_weights": [
+              0.0017941624391824007,
+              0.0004417546733748168,
+              0.19467903673648834,
+              0.8030850291252136
+            ],
+            "n": 902
+          }
+        },
+        "choice_frequency": [
+          0.00029282577452249825,
+          0.0,
+          0.1836017519235611,
+          0.8161054253578186
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.5280265808105469,
+        "mean_weights": [
+          0.0029186327010393143,
+          0.0008172792731784284,
+          0.30417948961257935,
+          0.6920846104621887
+        ],
+        "n_val": 3415,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 43
+    },
+    {
+      "dataset": "Grocery",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.890243928048818e-08,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7707174231332358,
+          "val_macro_f1": 0.6774028428607917
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.890243928048818e-08,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7707174231332358,
+          "val_macro_f1": 0.6774028428607917
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.890243928048818e-08,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7707174231332358,
+          "val_macro_f1": 0.6774028428607917
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.890243928048818e-08,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7707174231332358,
+          "val_macro_f1": 0.6774028428607917
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.890243928048818e-08,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7707174231332358,
+          "val_macro_f1": 0.6774028428607917
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.890243928048818e-08,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7707174231332358,
+          "val_macro_f1": 0.6774028428607917
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.890243928048818e-08,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7707174231332358,
+          "val_macro_f1": 0.6774028428607917
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.890243928048818e-08,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7707174231332358,
+          "val_macro_f1": 0.6774028428607917
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.890243928048818e-08,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7707174231332358,
+          "val_macro_f1": 0.6774028428607917
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.890243928048818e-08,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.7707174231332358,
+          "val_macro_f1": 0.6774028428607917
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.3499999940395355,
+              0.6499999761581421
+            ],
+            "mean_entropy": 0.6452439427375793,
+            "mean_weights": [
+              0.0001955873449333012,
+              0.00017095096700359136,
+              0.4439360499382019,
+              0.5556974411010742
+            ],
+            "n": 860
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.3261904716491699,
+              0.6738095283508301
+            ],
+            "mean_entropy": 0.6449045538902283,
+            "mean_weights": [
+              9.977362788049504e-05,
+              8.548671030439436e-05,
+              0.4316638708114624,
+              0.5681509375572205
+            ],
+            "n": 840
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.23001229763031006,
+              0.7699877023696899
+            ],
+            "mean_entropy": 0.6386722326278687,
+            "mean_weights": [
+              5.265410436550155e-05,
+              4.575962884700857e-05,
+              0.39692163467407227,
+              0.6029799580574036
+            ],
+            "n": 813
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.11086474359035492,
+              0.8891352415084839
+            ],
+            "mean_entropy": 0.6142593622207642,
+            "mean_weights": [
+              1.9338283891556785e-05,
+              1.6815905837574974e-05,
+              0.34470534324645996,
+              0.6552585363388062
+            ],
+            "n": 902
+          }
+        },
+        "choice_frequency": [
+          0.0,
+          0.0,
+          0.25241580605506897,
+          0.7475841641426086
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.6354120373725891,
+        "mean_weights": [
+          9.143950592260808e-05,
+          7.941353396745399e-05,
+          0.40351516008377075,
+          0.5963139533996582
+        ],
+        "n_val": 3415,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 44
+    },
+    {
+      "dataset": "Reddit-S",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": 3.3936585763783e-09,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9553318653664674,
+          "val_macro_f1": 0.9221220766445525
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 3.3936585763783e-09,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9553318653664674,
+          "val_macro_f1": 0.9221220766445525
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 3.3936585763783e-09,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9553318653664674,
+          "val_macro_f1": 0.9221220766445525
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 3.3936585763783e-09,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9553318653664674,
+          "val_macro_f1": 0.9221220766445525
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 3.3936585763783e-09,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9553318653664674,
+          "val_macro_f1": 0.9221220766445525
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 3.3936585763783e-09,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9553318653664674,
+          "val_macro_f1": 0.9221220766445525
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 3.3936585763783e-09,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9553318653664674,
+          "val_macro_f1": 0.9221220766445525
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 3.3936585763783e-09,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9553318653664674,
+          "val_macro_f1": 0.9221220766445525
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 3.3936585763783e-09,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9553318653664674,
+          "val_macro_f1": 0.9221220766445525
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 3.3936585763783e-09,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9553318653664674,
+          "val_macro_f1": 0.9221220766445525
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q2": {
+            "choice_frequency": [
+              0.05060584470629692,
+              0.021382750943303108,
+              0.6621525287628174,
+              0.26585888862609863
+            ],
+            "mean_entropy": 0.7243918776512146,
+            "mean_weights": [
+              0.04004871845245361,
+              0.0378539077937603,
+              0.5223650336265564,
+              0.399732381105423
+            ],
+            "n": 1403
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.01741022802889347,
+              0.03046789951622486,
+              0.6039173007011414,
+              0.3482045829296112
+            ],
+            "mean_entropy": 0.6883403062820435,
+            "mean_weights": [
+              0.026625068858265877,
+              0.028237581253051758,
+              0.505129873752594,
+              0.4400074779987335
+            ],
+            "n": 919
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.015169194899499416,
+              0.011668611317873001,
+              0.6312718987464905,
+              0.3418903052806854
+            ],
+            "mean_entropy": 0.6856163740158081,
+            "mean_weights": [
+              0.01806052029132843,
+              0.01803707331418991,
+              0.5172759890556335,
+              0.4466263949871063
+            ],
+            "n": 857
+          }
+        },
+        "choice_frequency": [
+          0.03145643323659897,
+          0.02139037474989891,
+          0.6369927525520325,
+          0.31016042828559875
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.7035167217254639,
+        "mean_weights": [
+          0.030240532010793686,
+          0.02973172254860401,
+          0.5160107016563416,
+          0.4240170419216156
+        ],
+        "n_val": 3179,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 42
+    },
+    {
+      "dataset": "Reddit-S",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.1449422349384406e-08,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9342560553633218,
+          "val_macro_f1": 0.900657504502161
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.1449422349384406e-08,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9342560553633218,
+          "val_macro_f1": 0.900657504502161
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.1449422349384406e-08,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9342560553633218,
+          "val_macro_f1": 0.900657504502161
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.1449422349384406e-08,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9342560553633218,
+          "val_macro_f1": 0.900657504502161
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.1449422349384406e-08,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9342560553633218,
+          "val_macro_f1": 0.900657504502161
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.1449422349384406e-08,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9342560553633218,
+          "val_macro_f1": 0.900657504502161
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.1449422349384406e-08,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9342560553633218,
+          "val_macro_f1": 0.900657504502161
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.1449422349384406e-08,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9342560553633218,
+          "val_macro_f1": 0.900657504502161
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.1449422349384406e-08,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9342560553633218,
+          "val_macro_f1": 0.900657504502161
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.1449422349384406e-08,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9342560553633218,
+          "val_macro_f1": 0.900657504502161
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q2": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.7049180269241333,
+              0.2950819730758667
+            ],
+            "mean_entropy": 0.6598781943321228,
+            "mean_weights": [
+              0.00021688290871679783,
+              0.0002172449167119339,
+              0.5509871244430542,
+              0.44857871532440186
+            ],
+            "n": 1403
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.5952121615409851,
+              0.4047878086566925
+            ],
+            "mean_entropy": 0.6607956290245056,
+            "mean_weights": [
+              3.5939890949521214e-05,
+              3.6053010262548923e-05,
+              0.5226107835769653,
+              0.4773172438144684
+            ],
+            "n": 919
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              0.604434072971344,
+              0.395565927028656
+            ],
+            "mean_entropy": 0.662031888961792,
+            "mean_weights": [
+              3.9974194805836305e-05,
+              4.0345275920117274e-05,
+              0.5102737545967102,
+              0.48964589834213257
+            ],
+            "n": 857
+          }
+        },
+        "choice_frequency": [
+          0.0,
+          0.0,
+          0.6461151242256165,
+          0.35388487577438354
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.6607239246368408,
+        "mean_weights": [
+          0.00011688375525409356,
+          0.00011717622692231089,
+          0.5318083763122559,
+          0.4679575264453888
+        ],
+        "n_val": 3179,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 43
+    },
+    {
+      "dataset": "Reddit-S",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.233064866352663e-08,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9569046870084932,
+          "val_macro_f1": 0.9230734784706822
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.233064866352663e-08,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9569046870084932,
+          "val_macro_f1": 0.9230734784706822
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.233064866352663e-08,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9569046870084932,
+          "val_macro_f1": 0.9230734784706822
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.233064866352663e-08,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9569046870084932,
+          "val_macro_f1": 0.9230734784706822
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.233064866352663e-08,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9569046870084932,
+          "val_macro_f1": 0.9230734784706822
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.233064866352663e-08,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9569046870084932,
+          "val_macro_f1": 0.9230734784706822
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.233064866352663e-08,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9569046870084932,
+          "val_macro_f1": 0.9230734784706822
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.233064866352663e-08,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9569046870084932,
+          "val_macro_f1": 0.9230734784706822
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.233064866352663e-08,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9569046870084932,
+          "val_macro_f1": 0.9230734784706822
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -2.233064866352663e-08,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.9569046870084932,
+          "val_macro_f1": 0.9230734784706822
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q2": {
+            "choice_frequency": [
+              0.023521026596426964,
+              0.05488239601254463,
+              0.6928011178970337,
+              0.22879543900489807
+            ],
+            "mean_entropy": 0.7125592231750488,
+            "mean_weights": [
+              0.04287569224834442,
+              0.04420801252126694,
+              0.543954074382782,
+              0.3689621686935425
+            ],
+            "n": 1403
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.023939063772559166,
+              0.044613711535930634,
+              0.6343852281570435,
+              0.2970620095729828
+            ],
+            "mean_entropy": 0.6919501423835754,
+            "mean_weights": [
+              0.03837095946073532,
+              0.0383576899766922,
+              0.5204445719718933,
+              0.402826726436615
+            ],
+            "n": 919
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.01866977848112583,
+              0.0175029169768095,
+              0.6301050186157227,
+              0.3337222933769226
+            ],
+            "mean_entropy": 0.7005814909934998,
+            "mean_weights": [
+              0.02905551716685295,
+              0.02918144129216671,
+              0.5176122784614563,
+              0.424150675535202
+            ],
+            "n": 857
+          }
+        },
+        "choice_frequency": [
+          0.022334067150950432,
+          0.04183705523610115,
+          0.6590122580528259,
+          0.27681660652160645
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.7033723592758179,
+        "mean_weights": [
+          0.03784777596592903,
+          0.038465891033411026,
+          0.5300566554069519,
+          0.39362967014312744
+        ],
+        "n_val": 3179,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 44
+    },
+    {
+      "dataset": "ele-fashion",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.5039854583953627e-08,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8728648869796461,
+          "val_macro_f1": 0.7426537854355307
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.5039854583953627e-08,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8728648869796461,
+          "val_macro_f1": 0.7426537854355307
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.5039854583953627e-08,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8728648869796461,
+          "val_macro_f1": 0.7426537854355307
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.5039854583953627e-08,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8728648869796461,
+          "val_macro_f1": 0.7426537854355307
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.5039854583953627e-08,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8728648869796461,
+          "val_macro_f1": 0.7426537854355307
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.5039854583953627e-08,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8728648869796461,
+          "val_macro_f1": 0.7426537854355307
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.5039854583953627e-08,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8728648869796461,
+          "val_macro_f1": 0.7426537854355307
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.5039854583953627e-08,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8728648869796461,
+          "val_macro_f1": 0.7426537854355307
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.5039854583953627e-08,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8728648869796461,
+          "val_macro_f1": 0.7426537854355307
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.5039854583953627e-08,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8728648869796461,
+          "val_macro_f1": 0.7426537854355307
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            "mean_entropy": 0.6930344104766846,
+            "mean_weights": [
+              0.4924905598163605,
+              0.0,
+              0.5075094103813171,
+              0.0
+            ],
+            "n": 1
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.7141299843788147,
+              0.03488879278302193,
+              0.24291321635246277,
+              0.008068033494055271
+            ],
+            "mean_entropy": 0.9088984727859497,
+            "mean_weights": [
+              0.5300418734550476,
+              0.11394134908914566,
+              0.32371222972869873,
+              0.0323045551776886
+            ],
+            "n": 4586
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.775926947593689,
+              0.02364320307970047,
+              0.19613111019134521,
+              0.004298764280974865
+            ],
+            "mean_entropy": 0.897014319896698,
+            "mean_weights": [
+              0.5588093996047974,
+              0.1123790293931961,
+              0.30240529775619507,
+              0.026406308636069298
+            ],
+            "n": 1861
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.8014418482780457,
+              0.040552716702222824,
+              0.1534995436668396,
+              0.004505857825279236
+            ],
+            "mean_entropy": 0.9656582474708557,
+            "mean_weights": [
+              0.5393384099006653,
+              0.15074893832206726,
+              0.27600014209747314,
+              0.033912524580955505
+            ],
+            "n": 3329
+          },
+          "isolated": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            "mean_entropy": 0.6930344104766846,
+            "mean_weights": [
+              0.4924905598163605,
+              0.0,
+              0.5075094103813171,
+              0.0
+            ],
+            "n": 1
+          }
+        },
+        "choice_frequency": [
+          0.7555487155914307,
+          0.034673213958740234,
+          0.20364120602607727,
+          0.006136851850897074
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.9259406924247742,
+        "mean_weights": [
+          0.5386791229248047,
+          0.12616506218910217,
+          0.3034297525882721,
+          0.03172605112195015
+        ],
+        "n_val": 9777,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 42
+    },
+    {
+      "dataset": "ele-fashion",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.6397475316741748e-09,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.870307865398384,
+          "val_macro_f1": 0.7311511860640549
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.6397475316741748e-09,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.870307865398384,
+          "val_macro_f1": 0.7311511860640549
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.6397475316741748e-09,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.870307865398384,
+          "val_macro_f1": 0.7311511860640549
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.6397475316741748e-09,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.870307865398384,
+          "val_macro_f1": 0.7311511860640549
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.6397475316741748e-09,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.870307865398384,
+          "val_macro_f1": 0.7311511860640549
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.6397475316741748e-09,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.870307865398384,
+          "val_macro_f1": 0.7311511860640549
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.6397475316741748e-09,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.870307865398384,
+          "val_macro_f1": 0.7311511860640549
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.6397475316741748e-09,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.870307865398384,
+          "val_macro_f1": 0.7311511860640549
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.6397475316741748e-09,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.870307865398384,
+          "val_macro_f1": 0.7311511860640549
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": 2.6397475316741748e-09,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.870307865398384,
+          "val_macro_f1": 0.7311511860640549
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean_entropy": 0.6726726293563843,
+            "mean_weights": [
+              0.6008326411247253,
+              0.0,
+              0.39916738867759705,
+              0.0
+            ],
+            "n": 1
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.6426079273223877,
+              0.006105538457632065,
+              0.3456170856952667,
+              0.005669428501278162
+            ],
+            "mean_entropy": 0.987588107585907,
+            "mean_weights": [
+              0.49482110142707825,
+              0.1336999386548996,
+              0.3315836489200592,
+              0.039895303547382355
+            ],
+            "n": 4586
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.6926383376121521,
+              0.004836109466850758,
+              0.2982267737388611,
+              0.004298764280974865
+            ],
+            "mean_entropy": 0.9709133505821228,
+            "mean_weights": [
+              0.5191861391067505,
+              0.13118876516819,
+              0.3138100504875183,
+              0.03581506758928299
+            ],
+            "n": 1861
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.695103645324707,
+              0.011114449240267277,
+              0.29197958111763,
+              0.0018023430602625012
+            ],
+            "mean_entropy": 1.0208539962768555,
+            "mean_weights": [
+              0.5035586953163147,
+              0.15709905326366425,
+              0.29272225499153137,
+              0.04662001505494118
+            ],
+            "n": 3329
+          },
+          "isolated": {
+            "choice_frequency": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean_entropy": 0.6726726293563843,
+            "mean_weights": [
+              0.6008326411247253,
+              0.0,
+              0.39916738867759705,
+              0.0
+            ],
+            "n": 1
+          }
+        },
+        "choice_frequency": [
+          0.6700419187545776,
+          0.007568784058094025,
+          0.3182980418205261,
+          0.004091234412044287
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.9957088232040405,
+        "mean_weights": [
+          0.5024447441101074,
+          0.14117549359798431,
+          0.31497541069984436,
+          0.04140428453683853
+        ],
+        "n_val": 9777,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 43
+    },
+    {
+      "dataset": "ele-fashion",
+      "perturbations": [
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.889888245898419e-10,
+          "permutation_id": 0,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8707169888513859,
+          "val_macro_f1": 0.7306923710104002
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.889888245898419e-10,
+          "permutation_id": 1,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8707169888513859,
+          "val_macro_f1": 0.7306923710104002
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.889888245898419e-10,
+          "permutation_id": 2,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8707169888513859,
+          "val_macro_f1": 0.7306923710104002
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.889888245898419e-10,
+          "permutation_id": 3,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8707169888513859,
+          "val_macro_f1": 0.7306923710104002
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.889888245898419e-10,
+          "permutation_id": 4,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8707169888513859,
+          "val_macro_f1": 0.7306923710104002
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.889888245898419e-10,
+          "permutation_id": 5,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8707169888513859,
+          "val_macro_f1": 0.7306923710104002
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.889888245898419e-10,
+          "permutation_id": 6,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8707169888513859,
+          "val_macro_f1": 0.7306923710104002
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.889888245898419e-10,
+          "permutation_id": 7,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8707169888513859,
+          "val_macro_f1": 0.7306923710104002
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.889888245898419e-10,
+          "permutation_id": 8,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8707169888513859,
+          "val_macro_f1": 0.7306923710104002
+        },
+        {
+          "accuracy_delta_vs_fixed_validation_context": -1.889888245898419e-10,
+          "permutation_id": 9,
+          "seed_namespace": "node_validation_perturbation",
+          "val_acc": 0.8707169888513859,
+          "val_macro_f1": 0.7306923710104002
+        }
+      ],
+      "router_diagnostics": {
+        "buckets": {
+          "degree_q1": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            "mean_entropy": 0.6926208734512329,
+            "mean_weights": [
+              0.48378002643585205,
+              0.0,
+              0.516219973564148,
+              0.0
+            ],
+            "n": 1
+          },
+          "degree_q2": {
+            "choice_frequency": [
+              0.779110312461853,
+              0.007195813115686178,
+              0.21369385719299316,
+              0.0
+            ],
+            "mean_entropy": 0.9355494379997253,
+            "mean_weights": [
+              0.5227550268173218,
+              0.11475232243537903,
+              0.33774271607398987,
+              0.024749940261244774
+            ],
+            "n": 4586
+          },
+          "degree_q3": {
+            "choice_frequency": [
+              0.8178398609161377,
+              0.0,
+              0.1821601241827011,
+              0.0
+            ],
+            "mean_entropy": 0.9251861572265625,
+            "mean_weights": [
+              0.5467404127120972,
+              0.10960210114717484,
+              0.3203747272491455,
+              0.02328280173242092
+            ],
+            "n": 1861
+          },
+          "degree_q4": {
+            "choice_frequency": [
+              0.9059777855873108,
+              0.0018023430602625012,
+              0.09221988916397095,
+              0.0
+            ],
+            "mean_entropy": 0.9861018061637878,
+            "mean_weights": [
+              0.5523041486740112,
+              0.13389746844768524,
+              0.279070109128952,
+              0.0347282774746418
+            ],
+            "n": 3329
+          },
+          "isolated": {
+            "choice_frequency": [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            "mean_entropy": 0.6926208734512329,
+            "mean_weights": [
+              0.48378002643585205,
+              0.0,
+              0.516219973564148,
+              0.0
+            ],
+            "n": 1
+          }
+        },
+        "choice_frequency": [
+          0.8296000957489014,
+          0.003988953772932291,
+          0.16641096770763397,
+          0.0
+        ],
+        "inactive_neighborhood_mask_violations": 0,
+        "mean_entropy": 0.9507647752761841,
+        "mean_weights": [
+          0.5373777747154236,
+          0.12027905136346817,
+          0.31447744369506836,
+          0.027865702286362648
+        ],
+        "n_val": 9777,
+        "path_order": [
+          "E_t",
+          "N_t",
+          "E_i",
+          "N_i"
+        ]
+      },
+      "seed": 44
+    }
+  ],
+  "shuffle_perturbations_are_separate_not_ensembled": true
+}

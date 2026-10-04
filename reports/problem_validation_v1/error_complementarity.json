@@ -1,0 +1,309 @@
+{
+  "label_free_selector": "none; oracle columns are diagnostics only",
+  "partitions": {
+    "test": {
+      "Grocery/seed42": {
+        "both_correct": 1876,
+        "both_wrong": 523,
+        "image_only_correct": 322,
+        "n": 3415,
+        "oracle_accuracy_label_using_upper_bound": 0.8468521229868229,
+        "prediction_disagreement": 1355,
+        "prediction_disagreement_rate": 0.3967789113521576,
+        "text_only_correct": 694
+      },
+      "Grocery/seed43": {
+        "both_correct": 1883,
+        "both_wrong": 510,
+        "image_only_correct": 331,
+        "n": 3415,
+        "oracle_accuracy_label_using_upper_bound": 0.8506588579795022,
+        "prediction_disagreement": 1352,
+        "prediction_disagreement_rate": 0.3959004282951355,
+        "text_only_correct": 691
+      },
+      "Grocery/seed44": {
+        "both_correct": 1862,
+        "both_wrong": 524,
+        "image_only_correct": 333,
+        "n": 3415,
+        "oracle_accuracy_label_using_upper_bound": 0.8465592972181553,
+        "prediction_disagreement": 1368,
+        "prediction_disagreement_rate": 0.4005856513977051,
+        "text_only_correct": 696
+      },
+      "Movies/seed42": {
+        "both_correct": 1016,
+        "both_wrong": 1232,
+        "image_only_correct": 602,
+        "n": 3335,
+        "oracle_accuracy_label_using_upper_bound": 0.6305847076461769,
+        "prediction_disagreement": 1694,
+        "prediction_disagreement_rate": 0.5079460144042969,
+        "text_only_correct": 485
+      },
+      "Movies/seed43": {
+        "both_correct": 1059,
+        "both_wrong": 1282,
+        "image_only_correct": 531,
+        "n": 3335,
+        "oracle_accuracy_label_using_upper_bound": 0.615592203898051,
+        "prediction_disagreement": 1582,
+        "prediction_disagreement_rate": 0.4743628203868866,
+        "text_only_correct": 463
+      },
+      "Movies/seed44": {
+        "both_correct": 1014,
+        "both_wrong": 1227,
+        "image_only_correct": 577,
+        "n": 3335,
+        "oracle_accuracy_label_using_upper_bound": 0.6320839580209895,
+        "prediction_disagreement": 1699,
+        "prediction_disagreement_rate": 0.5094452500343323,
+        "text_only_correct": 517
+      },
+      "Reddit-S/seed42": {
+        "both_correct": 1992,
+        "both_wrong": 161,
+        "image_only_correct": 858,
+        "n": 3179,
+        "oracle_accuracy_label_using_upper_bound": 0.9493551431267694,
+        "prediction_disagreement": 1136,
+        "prediction_disagreement_rate": 0.3573450744152069,
+        "text_only_correct": 168
+      },
+      "Reddit-S/seed43": {
+        "both_correct": 1979,
+        "both_wrong": 162,
+        "image_only_correct": 882,
+        "n": 3179,
+        "oracle_accuracy_label_using_upper_bound": 0.9490405787983642,
+        "prediction_disagreement": 1151,
+        "prediction_disagreement_rate": 0.36206352710723877,
+        "text_only_correct": 156
+      },
+      "Reddit-S/seed44": {
+        "both_correct": 1992,
+        "both_wrong": 164,
+        "image_only_correct": 853,
+        "n": 3179,
+        "oracle_accuracy_label_using_upper_bound": 0.9484114501415539,
+        "prediction_disagreement": 1138,
+        "prediction_disagreement_rate": 0.35797420144081116,
+        "text_only_correct": 170
+      },
+      "Toys/seed42": {
+        "both_correct": 2203,
+        "both_wrong": 750,
+        "image_only_correct": 517,
+        "n": 4139,
+        "oracle_accuracy_label_using_upper_bound": 0.8187968108238706,
+        "prediction_disagreement": 1557,
+        "prediction_disagreement_rate": 0.3761778175830841,
+        "text_only_correct": 669
+      },
+      "Toys/seed43": {
+        "both_correct": 2235,
+        "both_wrong": 775,
+        "image_only_correct": 500,
+        "n": 4139,
+        "oracle_accuracy_label_using_upper_bound": 0.8127567045179995,
+        "prediction_disagreement": 1525,
+        "prediction_disagreement_rate": 0.3684464991092682,
+        "text_only_correct": 629
+      },
+      "Toys/seed44": {
+        "both_correct": 2213,
+        "both_wrong": 773,
+        "image_only_correct": 505,
+        "n": 4139,
+        "oracle_accuracy_label_using_upper_bound": 0.8132399130224692,
+        "prediction_disagreement": 1523,
+        "prediction_disagreement_rate": 0.3679632842540741,
+        "text_only_correct": 648
+      },
+      "ele-fashion/seed42": {
+        "both_correct": 23445,
+        "both_wrong": 2980,
+        "image_only_correct": 720,
+        "n": 29330,
+        "oracle_accuracy_label_using_upper_bound": 0.8983975451755881,
+        "prediction_disagreement": 3249,
+        "prediction_disagreement_rate": 0.1107739508152008,
+        "text_only_correct": 2185
+      },
+      "ele-fashion/seed43": {
+        "both_correct": 23580,
+        "both_wrong": 3000,
+        "image_only_correct": 737,
+        "n": 29330,
+        "oracle_accuracy_label_using_upper_bound": 0.8977156495056257,
+        "prediction_disagreement": 3131,
+        "prediction_disagreement_rate": 0.10675076395273209,
+        "text_only_correct": 2013
+      },
+      "ele-fashion/seed44": {
+        "both_correct": 23583,
+        "both_wrong": 3003,
+        "image_only_correct": 732,
+        "n": 29330,
+        "oracle_accuracy_label_using_upper_bound": 0.8976133651551312,
+        "prediction_disagreement": 3106,
+        "prediction_disagreement_rate": 0.10589839518070221,
+        "text_only_correct": 2012
+      }
+    },
+    "val": {
+      "Grocery/seed42": {
+        "both_correct": 1904,
+        "both_wrong": 542,
+        "image_only_correct": 321,
+        "n": 3415,
+        "oracle_accuracy_label_using_upper_bound": 0.8412884333821377,
+        "prediction_disagreement": 1306,
+        "prediction_disagreement_rate": 0.38243046402931213,
+        "text_only_correct": 648
+      },
+      "Grocery/seed43": {
+        "both_correct": 1897,
+        "both_wrong": 550,
+        "image_only_correct": 324,
+        "n": 3415,
+        "oracle_accuracy_label_using_upper_bound": 0.8389458272327965,
+        "prediction_disagreement": 1312,
+        "prediction_disagreement_rate": 0.38418740034103394,
+        "text_only_correct": 644
+      },
+      "Grocery/seed44": {
+        "both_correct": 1886,
+        "both_wrong": 550,
+        "image_only_correct": 327,
+        "n": 3415,
+        "oracle_accuracy_label_using_upper_bound": 0.8389458272327965,
+        "prediction_disagreement": 1323,
+        "prediction_disagreement_rate": 0.3874084949493408,
+        "text_only_correct": 652
+      },
+      "Movies/seed42": {
+        "both_correct": 1051,
+        "both_wrong": 1247,
+        "image_only_correct": 565,
+        "n": 3334,
+        "oracle_accuracy_label_using_upper_bound": 0.6259748050389922,
+        "prediction_disagreement": 1621,
+        "prediction_disagreement_rate": 0.48620274662971497,
+        "text_only_correct": 471
+      },
+      "Movies/seed43": {
+        "both_correct": 1094,
+        "both_wrong": 1275,
+        "image_only_correct": 521,
+        "n": 3334,
+        "oracle_accuracy_label_using_upper_bound": 0.6175764847030594,
+        "prediction_disagreement": 1559,
+        "prediction_disagreement_rate": 0.46760648488998413,
+        "text_only_correct": 444
+      },
+      "Movies/seed44": {
+        "both_correct": 1057,
+        "both_wrong": 1244,
+        "image_only_correct": 556,
+        "n": 3334,
+        "oracle_accuracy_label_using_upper_bound": 0.626874625074985,
+        "prediction_disagreement": 1635,
+        "prediction_disagreement_rate": 0.4904019236564636,
+        "text_only_correct": 477
+      },
+      "Reddit-S/seed42": {
+        "both_correct": 2042,
+        "both_wrong": 165,
+        "image_only_correct": 796,
+        "n": 3179,
+        "oracle_accuracy_label_using_upper_bound": 0.9480968858131488,
+        "prediction_disagreement": 1090,
+        "prediction_disagreement_rate": 0.3428751230239868,
+        "text_only_correct": 176
+      },
+      "Reddit-S/seed43": {
+        "both_correct": 2023,
+        "both_wrong": 161,
+        "image_only_correct": 813,
+        "n": 3179,
+        "oracle_accuracy_label_using_upper_bound": 0.9493551431267694,
+        "prediction_disagreement": 1100,
+        "prediction_disagreement_rate": 0.34602075815200806,
+        "text_only_correct": 182
+      },
+      "Reddit-S/seed44": {
+        "both_correct": 2021,
+        "both_wrong": 166,
+        "image_only_correct": 815,
+        "n": 3179,
+        "oracle_accuracy_label_using_upper_bound": 0.9477823214847436,
+        "prediction_disagreement": 1097,
+        "prediction_disagreement_rate": 0.3450770676136017,
+        "text_only_correct": 177
+      },
+      "Toys/seed42": {
+        "both_correct": 2340,
+        "both_wrong": 716,
+        "image_only_correct": 416,
+        "n": 4139,
+        "oracle_accuracy_label_using_upper_bound": 0.827011355399855,
+        "prediction_disagreement": 1440,
+        "prediction_disagreement_rate": 0.3479101359844208,
+        "text_only_correct": 667
+      },
+      "Toys/seed43": {
+        "both_correct": 2338,
+        "both_wrong": 699,
+        "image_only_correct": 420,
+        "n": 4139,
+        "oracle_accuracy_label_using_upper_bound": 0.8311186276878473,
+        "prediction_disagreement": 1451,
+        "prediction_disagreement_rate": 0.3505677580833435,
+        "text_only_correct": 682
+      },
+      "Toys/seed44": {
+        "both_correct": 2335,
+        "both_wrong": 703,
+        "image_only_correct": 434,
+        "n": 4139,
+        "oracle_accuracy_label_using_upper_bound": 0.830152210678908,
+        "prediction_disagreement": 1439,
+        "prediction_disagreement_rate": 0.34766852855682373,
+        "text_only_correct": 667
+      },
+      "ele-fashion/seed42": {
+        "both_correct": 7835,
+        "both_wrong": 1026,
+        "image_only_correct": 248,
+        "n": 9777,
+        "oracle_accuracy_label_using_upper_bound": 0.8950598343050016,
+        "prediction_disagreement": 1037,
+        "prediction_disagreement_rate": 0.10606525838375092,
+        "text_only_correct": 668
+      },
+      "ele-fashion/seed43": {
+        "both_correct": 7860,
+        "both_wrong": 1015,
+        "image_only_correct": 263,
+        "n": 9777,
+        "oracle_accuracy_label_using_upper_bound": 0.8961849238007569,
+        "prediction_disagreement": 1014,
+        "prediction_disagreement_rate": 0.10371279716491699,
+        "text_only_correct": 639
+      },
+      "ele-fashion/seed44": {
+        "both_correct": 7875,
+        "both_wrong": 1024,
+        "image_only_correct": 235,
+        "n": 9777,
+        "oracle_accuracy_label_using_upper_bound": 0.8952643960315025,
+        "prediction_disagreement": 1000,
+        "prediction_disagreement_rate": 0.1022808626294136,
+        "text_only_correct": 643
+      }
+    }
+  }
+}

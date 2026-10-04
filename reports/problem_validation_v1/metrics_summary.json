@@ -1,0 +1,2840 @@
+{
+  "aggregation": "mean and population standard deviation (ddof=0)",
+  "calibration": {
+    "equal_weight_scores": {
+      "0.0003": {
+        "cell_best_val_acc": [
+          0.5410917816436712,
+          0.5416916616676665,
+          0.5098980203959208,
+          0.821376281112738,
+          0.8193265007320644,
+          0.7701317715959004
+        ],
+        "equal_weight_mean": 0.6672526695246602
+      },
+      "0.001": {
+        "cell_best_val_acc": [
+          0.5458908218356329,
+          0.5461907618476305,
+          0.5182963407318536,
+          0.8219619326500732,
+          0.8166910688140556,
+          0.7724743777452416
+        ],
+        "equal_weight_mean": 0.6702508839374146
+      },
+      "0.003": {
+        "cell_best_val_acc": [
+          0.553989202159568,
+          0.5557888422315537,
+          0.517996400719856,
+          0.8181551976573939,
+          0.8134699853587115,
+          0.7774524158125915
+        ],
+        "equal_weight_mean": 0.6728086739899458
+      }
+    },
+    "selected_common_lr": 0.003,
+    "slots_by_lr": {
+      "0.0003": [
+        {
+          "dataset": "Movies",
+          "seed": 42,
+          "val_acc": 0.5410917816436712,
+          "val_macro_f1": 0.3742698148390173,
+          "variant": "J_FIXED"
+        },
+        {
+          "dataset": "Movies",
+          "seed": 42,
+          "val_acc": 0.5416916616676665,
+          "val_macro_f1": 0.3822261467315841,
+          "variant": "J_GLOBAL"
+        },
+        {
+          "dataset": "Movies",
+          "seed": 42,
+          "val_acc": 0.5098980203959208,
+          "val_macro_f1": 0.33028387501818546,
+          "variant": "J_NODE"
+        },
+        {
+          "dataset": "Grocery",
+          "seed": 42,
+          "val_acc": 0.821376281112738,
+          "val_macro_f1": 0.707367357514484,
+          "variant": "J_FIXED"
+        },
+        {
+          "dataset": "Grocery",
+          "seed": 42,
+          "val_acc": 0.8193265007320644,
+          "val_macro_f1": 0.7068682957894245,
+          "variant": "J_GLOBAL"
+        },
+        {
+          "dataset": "Grocery",
+          "seed": 42,
+          "val_acc": 0.7701317715959004,
+          "val_macro_f1": 0.668985745878085,
+          "variant": "J_NODE"
+        }
+      ],
+      "0.001": [
+        {
+          "dataset": "Movies",
+          "seed": 42,
+          "val_acc": 0.5458908218356329,
+          "val_macro_f1": 0.41809273911860007,
+          "variant": "J_FIXED"
+        },
+        {
+          "dataset": "Movies",
+          "seed": 42,
+          "val_acc": 0.5461907618476305,
+          "val_macro_f1": 0.41557470092301196,
+          "variant": "J_GLOBAL"
+        },
+        {
+          "dataset": "Movies",
+          "seed": 42,
+          "val_acc": 0.5182963407318536,
+          "val_macro_f1": 0.3804828305565529,
+          "variant": "J_NODE"
+        },
+        {
+          "dataset": "Grocery",
+          "seed": 42,
+          "val_acc": 0.8219619326500732,
+          "val_macro_f1": 0.7264832073782888,
+          "variant": "J_FIXED"
+        },
+        {
+          "dataset": "Grocery",
+          "seed": 42,
+          "val_acc": 0.8166910688140556,
+          "val_macro_f1": 0.7165717263240693,
+          "variant": "J_GLOBAL"
+        },
+        {
+          "dataset": "Grocery",
+          "seed": 42,
+          "val_acc": 0.7724743777452416,
+          "val_macro_f1": 0.6885882826033296,
+          "variant": "J_NODE"
+        }
+      ],
+      "0.003": [
+        {
+          "dataset": "Movies",
+          "seed": 42,
+          "val_acc": 0.553989202159568,
+          "val_macro_f1": 0.4799611670504973,
+          "variant": "J_FIXED"
+        },
+        {
+          "dataset": "Movies",
+          "seed": 42,
+          "val_acc": 0.5557888422315537,
+          "val_macro_f1": 0.46148666780009273,
+          "variant": "J_GLOBAL"
+        },
+        {
+          "dataset": "Movies",
+          "seed": 42,
+          "val_acc": 0.517996400719856,
+          "val_macro_f1": 0.39914574981977,
+          "variant": "J_NODE"
+        },
+        {
+          "dataset": "Grocery",
+          "seed": 42,
+          "val_acc": 0.8181551976573939,
+          "val_macro_f1": 0.7456447265890879,
+          "variant": "J_FIXED"
+        },
+        {
+          "dataset": "Grocery",
+          "seed": 42,
+          "val_acc": 0.8134699853587115,
+          "val_macro_f1": 0.735403031232069,
+          "variant": "J_GLOBAL"
+        },
+        {
+          "dataset": "Grocery",
+          "seed": 42,
+          "val_acc": 0.7774524158125915,
+          "val_macro_f1": 0.7005319830923405,
+          "variant": "J_NODE"
+        }
+      ]
+    },
+    "test_metrics": null
+  },
+  "internal_units": "fractions in [0,1]; report displays percentages and percentage-point deltas",
+  "primary": {
+    "Grocery": {
+      "I_E": {
+        "seeds": [
+          {
+            "best_epoch": 63,
+            "seed": 42,
+            "test_acc": 0.6436310395314788,
+            "test_macro_f1": 0.5592208028570028,
+            "val_acc": 0.6515373352855052,
+            "val_macro_f1": 0.5780245106816793
+          },
+          {
+            "best_epoch": 63,
+            "seed": 43,
+            "test_acc": 0.6483162518301611,
+            "test_macro_f1": 0.5584139648421045,
+            "val_acc": 0.6503660322108346,
+            "val_macro_f1": 0.5662156596883948
+          },
+          {
+            "best_epoch": 41,
+            "seed": 44,
+            "test_acc": 0.6427525622254758,
+            "test_macro_f1": 0.5387222340354999,
+            "val_acc": 0.6480234260614934,
+            "val_macro_f1": 0.5443991542751647
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.6448999511957053,
+          "n": 3,
+          "std_ddof0": 0.0024421661304434923,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.5521190005782024,
+          "n": 3,
+          "std_ddof0": 0.009478669465184308,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.649975597852611,
+          "n": 3,
+          "std_ddof0": 0.0014608716004973965,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.5628797748817463,
+          "n": 3,
+          "std_ddof0": 0.013928681295530782,
+          "units": "fraction [0,1]"
+        }
+      },
+      "I_M": {
+        "seeds": [
+          {
+            "best_epoch": 70,
+            "seed": 42,
+            "test_acc": 0.7595900439238653,
+            "test_macro_f1": 0.6665047596187172,
+            "val_acc": 0.7636896046852123,
+            "val_macro_f1": 0.6886748585392478
+          },
+          {
+            "best_epoch": 89,
+            "seed": 43,
+            "test_acc": 0.7572474377745242,
+            "test_macro_f1": 0.6708616922086715,
+            "val_acc": 0.7648609077598829,
+            "val_macro_f1": 0.6906633392313457
+          },
+          {
+            "best_epoch": 96,
+            "seed": 44,
+            "test_acc": 0.7551976573938507,
+            "test_macro_f1": 0.6690190731307656,
+            "val_acc": 0.7651537335285505,
+            "val_macro_f1": 0.6914352600938913
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.7573450463640801,
+          "n": 3,
+          "std_ddof0": 0.001794512085002452,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6687951749860513,
+          "n": 3,
+          "std_ddof0": 0.0017857422700857041,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7645680819912153,
+          "n": 3,
+          "std_ddof0": 0.0006325759588490013,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.6902578192881617,
+          "n": 3,
+          "std_ddof0": 0.0011628381956688592,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_CONCAT": {
+        "seeds": [
+          {
+            "best_epoch": 111,
+            "seed": 42,
+            "test_acc": 0.8011713030746705,
+            "test_macro_f1": 0.7034345178596512,
+            "val_acc": 0.7953147877013177,
+            "val_macro_f1": 0.6997355299236255
+          },
+          {
+            "best_epoch": 103,
+            "seed": 43,
+            "test_acc": 0.7988286969253294,
+            "test_macro_f1": 0.6914849261297629,
+            "val_acc": 0.7953147877013177,
+            "val_macro_f1": 0.7140910600669523
+          },
+          {
+            "best_epoch": 110,
+            "seed": 44,
+            "test_acc": 0.8020497803806735,
+            "test_macro_f1": 0.7081765736183925,
+            "val_acc": 0.7970717423133236,
+            "val_macro_f1": 0.7240389526337424
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8006832601268913,
+          "n": 3,
+          "std_ddof0": 0.0013595303345226184,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7010320058692688,
+          "n": 3,
+          "std_ddof0": 0.007022906419667808,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7959004392386531,
+          "n": 3,
+          "std_ddof0": 0.000828236346924219,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7126218475414401,
+          "n": 3,
+          "std_ddof0": 0.009976072304619613,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_E": {
+        "seeds": [
+          {
+            "best_epoch": 80,
+            "seed": 42,
+            "test_acc": 0.7674963396778917,
+            "test_macro_f1": 0.6564685421021206,
+            "val_acc": 0.7619326500732064,
+            "val_macro_f1": 0.6602356453802626
+          },
+          {
+            "best_epoch": 82,
+            "seed": 43,
+            "test_acc": 0.780380673499268,
+            "test_macro_f1": 0.6763429654843707,
+            "val_acc": 0.770424597364568,
+            "val_macro_f1": 0.6755880434210144
+          },
+          {
+            "best_epoch": 88,
+            "seed": 44,
+            "test_acc": 0.7780380673499268,
+            "test_macro_f1": 0.6817400093313065,
+            "val_acc": 0.7651537335285505,
+            "val_macro_f1": 0.6756608000307425
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.7753050268423621,
+          "n": 3,
+          "std_ddof0": 0.005603787250134637,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6715171723059327,
+          "n": 3,
+          "std_ddof0": 0.010866706763619767,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7658369936554417,
+          "n": 3,
+          "std_ddof0": 0.003500326222946024,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.6704948296106732,
+          "n": 3,
+          "std_ddof0": 0.0072543995472262,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_EARLY": {
+        "seeds": [
+          {
+            "best_epoch": 84,
+            "seed": 42,
+            "test_acc": 0.8099560761346999,
+            "test_macro_f1": 0.7249827832494383,
+            "val_acc": 0.807320644216691,
+            "val_macro_f1": 0.740800311751358
+          },
+          {
+            "best_epoch": 89,
+            "seed": 43,
+            "test_acc": 0.8146412884333821,
+            "test_macro_f1": 0.7296323350700133,
+            "val_acc": 0.8090775988286969,
+            "val_macro_f1": 0.7352485139549753
+          },
+          {
+            "best_epoch": 72,
+            "seed": 44,
+            "test_acc": 0.8017569546120058,
+            "test_macro_f1": 0.7081798469586827,
+            "val_acc": 0.8043923865300147,
+            "val_macro_f1": 0.7277679168655575
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8087847730600292,
+          "n": 3,
+          "std_ddof0": 0.005324814718198502,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7209316550927115,
+          "n": 3,
+          "std_ddof0": 0.009214519016145626,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8069302098584675,
+          "n": 3,
+          "std_ddof0": 0.0019325514761564786,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.734605580857297,
+          "n": 3,
+          "std_ddof0": 0.005339840905303393,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_FIXED": {
+        "seeds": [
+          {
+            "best_epoch": 138,
+            "seed": 42,
+            "test_acc": 0.8216691068814056,
+            "test_macro_f1": 0.7328589416000181,
+            "val_acc": 0.8181551976573939,
+            "val_macro_f1": 0.7456447265890879
+          },
+          {
+            "best_epoch": 117,
+            "seed": 43,
+            "test_acc": 0.8219619326500732,
+            "test_macro_f1": 0.735776410332046,
+            "val_acc": 0.8237188872620791,
+            "val_macro_f1": 0.7516978073612146
+          },
+          {
+            "best_epoch": 114,
+            "seed": 44,
+            "test_acc": 0.8175695461200586,
+            "test_macro_f1": 0.7242853199281478,
+            "val_acc": 0.8210834553440702,
+            "val_macro_f1": 0.7498933763284905
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8204001952171791,
+          "n": 3,
+          "std_ddof0": 0.0020051379779574465,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7309735572867373,
+          "n": 3,
+          "std_ddof0": 0.004876972775141981,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8209858467545144,
+          "n": 3,
+          "std_ddof0": 0.002272415173611097,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7490786367595977,
+          "n": 3,
+          "std_ddof0": 0.0025374261411007797,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_GLOBAL": {
+        "seeds": [
+          {
+            "best_epoch": 104,
+            "seed": 42,
+            "test_acc": 0.816398243045388,
+            "test_macro_f1": 0.722311316855343,
+            "val_acc": 0.8134699853587115,
+            "val_macro_f1": 0.735403031232069
+          },
+          {
+            "best_epoch": 104,
+            "seed": 43,
+            "test_acc": 0.8202049780380674,
+            "test_macro_f1": 0.7273583473442512,
+            "val_acc": 0.8181551976573939,
+            "val_macro_f1": 0.7354065561017772
+          },
+          {
+            "best_epoch": 101,
+            "seed": 44,
+            "test_acc": 0.8161054172767204,
+            "test_macro_f1": 0.72368437772877,
+            "val_acc": 0.816398243045388,
+            "val_macro_f1": 0.7384733920319146
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8175695461200586,
+          "n": 3,
+          "std_ddof0": 0.0018673622713234724,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7244513473094547,
+          "n": 3,
+          "std_ddof0": 0.002130619775599578,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8160078086871644,
+          "n": 3,
+          "std_ddof0": 0.0019325514761565274,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7364276597885869,
+          "n": 3,
+          "std_ddof0": 0.0014465518575148733,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_GLOBAL_WIDE": {
+        "seeds": [
+          {
+            "best_epoch": 125,
+            "seed": 42,
+            "test_acc": 0.8140556368960469,
+            "test_macro_f1": 0.7266094321351515,
+            "val_acc": 0.8196193265007321,
+            "val_macro_f1": 0.7577431603025226
+          },
+          {
+            "best_epoch": 100,
+            "seed": 43,
+            "test_acc": 0.8117130307467058,
+            "test_macro_f1": 0.7173008363342037,
+            "val_acc": 0.8125915080527086,
+            "val_macro_f1": 0.7389335066083028
+          },
+          {
+            "best_epoch": 118,
+            "seed": 44,
+            "test_acc": 0.816398243045388,
+            "test_macro_f1": 0.7255052568033286,
+            "val_acc": 0.8134699853587115,
+            "val_macro_f1": 0.735193752893621
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8140556368960469,
+          "n": 3,
+          "std_ddof0": 0.0019127299113972903,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.723138508424228,
+          "n": 3,
+          "std_ddof0": 0.004152397890684151,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8152269399707174,
+          "n": 3,
+          "std_ddof0": 0.0031265236462756705,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7439568066014822,
+          "n": 3,
+          "std_ddof0": 0.009867255638027015,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_N": {
+        "seeds": [
+          {
+            "best_epoch": 102,
+            "seed": 42,
+            "test_acc": 0.739385065885798,
+            "test_macro_f1": 0.6093907971572029,
+            "val_acc": 0.738506588579795,
+            "val_macro_f1": 0.612683548030442
+          },
+          {
+            "best_epoch": 93,
+            "seed": 43,
+            "test_acc": 0.7399707174231333,
+            "test_macro_f1": 0.6124388930702568,
+            "val_acc": 0.7355783308931186,
+            "val_macro_f1": 0.6222476376080237
+          },
+          {
+            "best_epoch": 126,
+            "seed": 44,
+            "test_acc": 0.7399707174231333,
+            "test_macro_f1": 0.6177543741937533,
+            "val_acc": 0.7382137628111274,
+            "val_macro_f1": 0.6218275090404548
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.7397755002440215,
+          "n": 3,
+          "std_ddof0": 0.00027607878230805554,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6131946881404043,
+          "n": 3,
+          "std_ddof0": 0.0034559875436333174,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7374328940946803,
+          "n": 3,
+          "std_ddof0": 0.0013168118656155987,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.6189195648929735,
+          "n": 3,
+          "std_ddof0": 0.004412864280385609,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_NODE": {
+        "seeds": [
+          {
+            "best_epoch": 82,
+            "seed": 42,
+            "test_acc": 0.7786237188872621,
+            "test_macro_f1": 0.684725035589026,
+            "val_acc": 0.7774524158125915,
+            "val_macro_f1": 0.7005319830923405
+          },
+          {
+            "best_epoch": 91,
+            "seed": 43,
+            "test_acc": 0.7833089311859444,
+            "test_macro_f1": 0.6991257024592465,
+            "val_acc": 0.7809663250366032,
+            "val_macro_f1": 0.7077361344268651
+          },
+          {
+            "best_epoch": 56,
+            "seed": 44,
+            "test_acc": 0.7689604685212299,
+            "test_macro_f1": 0.6714871895101792,
+            "val_acc": 0.7707174231332358,
+            "val_macro_f1": 0.6774028428607917
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.776964372864812,
+          "n": 3,
+          "std_ddof0": 0.005974092239375041,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6851126425194839,
+          "n": 3,
+          "std_ddof0": 0.011286703943382397,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7763787213274768,
+          "n": 3,
+          "std_ddof0": 0.004252419894737314,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.695223653459999,
+          "n": 3,
+          "std_ddof0": 0.012939884515772705,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_NODE_SHUFFLE": {
+        "seeds": [
+          {
+            "best_epoch": 89,
+            "seed": 42,
+            "test_acc": 0.7610541727672036,
+            "test_macro_f1": 0.6802491623131961,
+            "val_acc": 0.7639824304538799,
+            "val_macro_f1": 0.6823010765413008
+          },
+          {
+            "best_epoch": 130,
+            "seed": 43,
+            "test_acc": 0.7604685212298682,
+            "test_macro_f1": 0.6748703715526924,
+            "val_acc": 0.7698389458272328,
+            "val_macro_f1": 0.693799563696817
+          },
+          {
+            "best_epoch": 56,
+            "seed": 44,
+            "test_acc": 0.7569546120058566,
+            "test_macro_f1": 0.6418740995518379,
+            "val_acc": 0.7645680819912152,
+            "val_macro_f1": 0.6660331879706983
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.7594924353343094,
+          "n": 3,
+          "std_ddof0": 0.0018103696428493129,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6656645444725755,
+          "n": 3,
+          "std_ddof0": 0.01696509749763328,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7661298194241093,
+          "n": 3,
+          "std_ddof0": 0.0026336237312312495,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.6807112760696054,
+          "n": 3,
+          "std_ddof0": 0.01139118092783037,
+          "units": "fraction [0,1]"
+        }
+      },
+      "T_E": {
+        "seeds": [
+          {
+            "best_epoch": 283,
+            "seed": 42,
+            "test_acc": 0.7525622254758418,
+            "test_macro_f1": 0.6740642440592142,
+            "val_acc": 0.7472913616398243,
+            "val_macro_f1": 0.6875538662371445
+          },
+          {
+            "best_epoch": 212,
+            "seed": 43,
+            "test_acc": 0.7537335285505125,
+            "test_macro_f1": 0.674181003112177,
+            "val_acc": 0.7440702781844802,
+            "val_macro_f1": 0.6706120855759987
+          },
+          {
+            "best_epoch": 189,
+            "seed": 44,
+            "test_acc": 0.7490483162518302,
+            "test_macro_f1": 0.6558096277885879,
+            "val_acc": 0.7431918008784774,
+            "val_macro_f1": 0.6651760510990629
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.7517813567593948,
+          "n": 3,
+          "std_ddof0": 0.001990832411358797,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6680182916533264,
+          "n": 3,
+          "std_ddof0": 0.008632960604209134,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7448511469009272,
+          "n": 3,
+          "std_ddof0": 0.0017623689687913922,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.6744473343040687,
+          "n": 3,
+          "std_ddof0": 0.009529725501228992,
+          "units": "fraction [0,1]"
+        }
+      },
+      "T_M": {
+        "seeds": [
+          {
+            "best_epoch": 300,
+            "seed": 42,
+            "test_acc": 0.8023426061493412,
+            "test_macro_f1": 0.7228501238866983,
+            "val_acc": 0.8096632503660323,
+            "val_macro_f1": 0.736070151207968
+          },
+          {
+            "best_epoch": 297,
+            "seed": 43,
+            "test_acc": 0.8084919472913616,
+            "test_macro_f1": 0.7083587871791572,
+            "val_acc": 0.8070278184480234,
+            "val_macro_f1": 0.736632983946105
+          },
+          {
+            "best_epoch": 164,
+            "seed": 44,
+            "test_acc": 0.8029282576866764,
+            "test_macro_f1": 0.6834145866056034,
+            "val_acc": 0.7976573938506588,
+            "val_macro_f1": 0.7006938750307363
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8045876037091264,
+          "n": 3,
+          "std_ddof0": 0.002771121438082652,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7048744992238197,
+          "n": 3,
+          "std_ddof0": 0.016286919026812903,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8047828208882382,
+          "n": 3,
+          "std_ddof0": 0.00515203249210219,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7244656700616031,
+          "n": 3,
+          "std_ddof0": 0.016810767866954346,
+          "units": "fraction [0,1]"
+        }
+      }
+    },
+    "Movies": {
+      "I_E": {
+        "seeds": [
+          {
+            "best_epoch": 45,
+            "seed": 42,
+            "test_acc": 0.4851574212893553,
+            "test_macro_f1": 0.34319242021994945,
+            "val_acc": 0.48470305938812236,
+            "val_macro_f1": 0.32936551888886073
+          },
+          {
+            "best_epoch": 35,
+            "seed": 43,
+            "test_acc": 0.4767616191904048,
+            "test_macro_f1": 0.3259103741790974,
+            "val_acc": 0.4844031193761248,
+            "val_macro_f1": 0.3317566749725591
+          },
+          {
+            "best_epoch": 56,
+            "seed": 44,
+            "test_acc": 0.4770614692653673,
+            "test_macro_f1": 0.3558981458777115,
+            "val_acc": 0.4838032393521296,
+            "val_macro_f1": 0.36599493867378463
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.47966016991504246,
+          "n": 3,
+          "std_ddof0": 0.0038890707562905954,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.34166698009225277,
+          "n": 3,
+          "std_ddof0": 0.012289883062894745,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.48430313937212555,
+          "n": 3,
+          "std_ddof0": 0.0003740909204932799,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.3423723775117348,
+          "n": 3,
+          "std_ddof0": 0.016732173673200977,
+          "units": "fraction [0,1]"
+        }
+      },
+      "I_M": {
+        "seeds": [
+          {
+            "best_epoch": 58,
+            "seed": 42,
+            "test_acc": 0.5238380809595202,
+            "test_macro_f1": 0.42587140350900743,
+            "val_acc": 0.5257948410317936,
+            "val_macro_f1": 0.41970643711720557
+          },
+          {
+            "best_epoch": 75,
+            "seed": 43,
+            "test_acc": 0.5394302848575712,
+            "test_macro_f1": 0.4517019904152876,
+            "val_acc": 0.5242951409718056,
+            "val_macro_f1": 0.43512813750213
+          },
+          {
+            "best_epoch": 72,
+            "seed": 44,
+            "test_acc": 0.5250374812593703,
+            "test_macro_f1": 0.4344689349460573,
+            "val_acc": 0.5233953209358129,
+            "val_macro_f1": 0.42619188135307917
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.5294352823588205,
+          "n": 3,
+          "std_ddof0": 0.007084475820757338,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.43734744295678407,
+          "n": 3,
+          "std_ddof0": 0.01073993051673944,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.524495100979804,
+          "n": 3,
+          "std_ddof0": 0.0009897515433524829,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.4270088186574716,
+          "n": 3,
+          "std_ddof0": 0.006322328189840372,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_CONCAT": {
+        "seeds": [
+          {
+            "best_epoch": 94,
+            "seed": 42,
+            "test_acc": 0.5322338830584707,
+            "test_macro_f1": 0.42180423093240976,
+            "val_acc": 0.5446910617876425,
+            "val_macro_f1": 0.43076879384504113
+          },
+          {
+            "best_epoch": 134,
+            "seed": 43,
+            "test_acc": 0.5367316341829086,
+            "test_macro_f1": 0.42800172462506525,
+            "val_acc": 0.5443911217756449,
+            "val_macro_f1": 0.4356528498131073
+          },
+          {
+            "best_epoch": 94,
+            "seed": 44,
+            "test_acc": 0.5400299850074962,
+            "test_macro_f1": 0.43244577087405994,
+            "val_acc": 0.5476904619076185,
+            "val_macro_f1": 0.43523430830990606
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.5363318340829585,
+          "n": 3,
+          "std_ddof0": 0.003195275834711796,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.42741724214384497,
+          "n": 3,
+          "std_ddof0": 0.004364004881648207,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.5455908818236352,
+          "n": 3,
+          "std_ddof0": 0.00148966850887337,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.4338853173226848,
+          "n": 3,
+          "std_ddof0": 0.0022103292646879244,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_E": {
+        "seeds": [
+          {
+            "best_epoch": 103,
+            "seed": 42,
+            "test_acc": 0.5007496251874063,
+            "test_macro_f1": 0.38973564532706834,
+            "val_acc": 0.5110977804439112,
+            "val_macro_f1": 0.39689087661560485
+          },
+          {
+            "best_epoch": 44,
+            "seed": 43,
+            "test_acc": 0.5052473763118441,
+            "test_macro_f1": 0.3577312688226876,
+            "val_acc": 0.5116976604679064,
+            "val_macro_f1": 0.3448319162544464
+          },
+          {
+            "best_epoch": 92,
+            "seed": 44,
+            "test_acc": 0.5106446776611694,
+            "test_macro_f1": 0.3975166511824541,
+            "val_acc": 0.517996400719856,
+            "val_macro_f1": 0.3982879338018744
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.5055472263868066,
+          "n": 3,
+          "std_ddof0": 0.004045198669634786,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.38166118844407,
+          "n": 3,
+          "std_ddof0": 0.0172165966990141,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.5135972805438912,
+          "n": 3,
+          "std_ddof0": 0.003120273252214984,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.38000357555730857,
+          "n": 3,
+          "std_ddof0": 0.024876657811194317,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_EARLY": {
+        "seeds": [
+          {
+            "best_epoch": 109,
+            "seed": 42,
+            "test_acc": 0.5430284857571215,
+            "test_macro_f1": 0.4631814908259254,
+            "val_acc": 0.5512897420515896,
+            "val_macro_f1": 0.46331446111810043
+          },
+          {
+            "best_epoch": 89,
+            "seed": 43,
+            "test_acc": 0.5409295352323839,
+            "test_macro_f1": 0.44371980446636405,
+            "val_acc": 0.5479904019196161,
+            "val_macro_f1": 0.45125287075100157
+          },
+          {
+            "best_epoch": 92,
+            "seed": 44,
+            "test_acc": 0.5511244377811094,
+            "test_macro_f1": 0.46526082635581306,
+            "val_acc": 0.5497900419916016,
+            "val_macro_f1": 0.45139346350872867
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.5450274862568716,
+          "n": 3,
+          "std_ddof0": 0.004395528920998674,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.45738737388270084,
+          "n": 3,
+          "std_ddof0": 0.00970164073320425,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.5496900619876025,
+          "n": 3,
+          "std_ddof0": 0.0013488039955240664,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.45532026512594354,
+          "n": 3,
+          "std_ddof0": 0.0056530415855327604,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_FIXED": {
+        "seeds": [
+          {
+            "best_epoch": 151,
+            "seed": 42,
+            "test_acc": 0.5376311844077961,
+            "test_macro_f1": 0.4627749698819441,
+            "val_acc": 0.553989202159568,
+            "val_macro_f1": 0.4799611670504973
+          },
+          {
+            "best_epoch": 100,
+            "seed": 43,
+            "test_acc": 0.5394302848575712,
+            "test_macro_f1": 0.4369425749504773,
+            "val_acc": 0.5572885422915417,
+            "val_macro_f1": 0.4538574003633832
+          },
+          {
+            "best_epoch": 107,
+            "seed": 44,
+            "test_acc": 0.5466266866566717,
+            "test_macro_f1": 0.4533649491137567,
+            "val_acc": 0.5521895620875825,
+            "val_macro_f1": 0.45298317610522404
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.5412293853073463,
+          "n": 3,
+          "std_ddof0": 0.0038865011684605017,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.4510274979820594,
+          "n": 3,
+          "std_ddof0": 0.010674765112751448,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.554489102179564,
+          "n": 3,
+          "std_ddof0": 0.00211144891841059,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.46226724783970147,
+          "n": 3,
+          "std_ddof0": 0.012516579665707793,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_GLOBAL": {
+        "seeds": [
+          {
+            "best_epoch": 101,
+            "seed": 42,
+            "test_acc": 0.550824587706147,
+            "test_macro_f1": 0.4399854784707184,
+            "val_acc": 0.5557888422315537,
+            "val_macro_f1": 0.46148666780009273
+          },
+          {
+            "best_epoch": 118,
+            "seed": 43,
+            "test_acc": 0.5337331334332833,
+            "test_macro_f1": 0.4456391669931318,
+            "val_acc": 0.5572885422915417,
+            "val_macro_f1": 0.47595113904324826
+          },
+          {
+            "best_epoch": 97,
+            "seed": 44,
+            "test_acc": 0.5481259370314843,
+            "test_macro_f1": 0.46962556361087593,
+            "val_acc": 0.5491901619676065,
+            "val_macro_f1": 0.46538887607282986
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.5442278860569715,
+          "n": 3,
+          "std_ddof0": 0.0075022464786787665,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.45175006969157533,
+          "n": 3,
+          "std_ddof0": 0.01284889127827328,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.5540891821635673,
+          "n": 3,
+          "std_ddof0": 0.0035178188533811403,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.46760889430539027,
+          "n": 3,
+          "std_ddof0": 0.006110187820391659,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_GLOBAL_WIDE": {
+        "seeds": [
+          {
+            "best_epoch": 86,
+            "seed": 42,
+            "test_acc": 0.535832083958021,
+            "test_macro_f1": 0.43990656410629614,
+            "val_acc": 0.5485902819436113,
+            "val_macro_f1": 0.43620916264913295
+          },
+          {
+            "best_epoch": 75,
+            "seed": 43,
+            "test_acc": 0.5367316341829086,
+            "test_macro_f1": 0.43143801108224517,
+            "val_acc": 0.553989202159568,
+            "val_macro_f1": 0.43842599311733704
+          },
+          {
+            "best_epoch": 101,
+            "seed": 44,
+            "test_acc": 0.5412293853073463,
+            "test_macro_f1": 0.46275444902685425,
+            "val_acc": 0.5566886622675465,
+            "val_macro_f1": 0.4647179777307942
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.5379310344827587,
+          "n": 3,
+          "std_ddof0": 0.002361021851277905,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.4446996747384652,
+          "n": 3,
+          "std_ddof0": 0.013226494963614936,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.5530893821235753,
+          "n": 3,
+          "std_ddof0": 0.003366818284439682,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.44645104449908807,
+          "n": 3,
+          "std_ddof0": 0.012948338930789463,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_N": {
+        "seeds": [
+          {
+            "best_epoch": 83,
+            "seed": 42,
+            "test_acc": 0.4836581709145427,
+            "test_macro_f1": 0.36142442780126477,
+            "val_acc": 0.48260347930413916,
+            "val_macro_f1": 0.3391742899990143
+          },
+          {
+            "best_epoch": 81,
+            "seed": 43,
+            "test_acc": 0.4917541229385307,
+            "test_macro_f1": 0.3703531938761555,
+            "val_acc": 0.4808038392321536,
+            "val_macro_f1": 0.337570554538302
+          },
+          {
+            "best_epoch": 106,
+            "seed": 44,
+            "test_acc": 0.49145427286356824,
+            "test_macro_f1": 0.3592679340567294,
+            "val_acc": 0.48260347930413916,
+            "val_macro_f1": 0.34126208046051787
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.48895552223888056,
+          "n": 3,
+          "std_ddof0": 0.0037477927554728043,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.3636818519113832,
+          "n": 3,
+          "std_ddof0": 0.004798799782289579,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.48200359928014397,
+          "n": 3,
+          "std_ddof0": 0.0008483584657306979,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.3393356416659447,
+          "n": 3,
+          "std_ddof0": 0.0015113717122565375,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_NODE": {
+        "seeds": [
+          {
+            "best_epoch": 77,
+            "seed": 42,
+            "test_acc": 0.5301349325337331,
+            "test_macro_f1": 0.423525453827274,
+            "val_acc": 0.517996400719856,
+            "val_macro_f1": 0.39914574981977
+          },
+          {
+            "best_epoch": 83,
+            "seed": 43,
+            "test_acc": 0.527136431784108,
+            "test_macro_f1": 0.4244519765255464,
+            "val_acc": 0.5266946610677864,
+            "val_macro_f1": 0.4171576346412659
+          },
+          {
+            "best_epoch": 62,
+            "seed": 44,
+            "test_acc": 0.5319340329835083,
+            "test_macro_f1": 0.42891152082191564,
+            "val_acc": 0.5281943611277744,
+            "val_macro_f1": 0.41385137096321667
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.5297351324337831,
+          "n": 3,
+          "std_ddof0": 0.001978909532556058,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.4256296503915787,
+          "n": 3,
+          "std_ddof0": 0.0023512572833477158,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.5242951409718056,
+          "n": 3,
+          "std_ddof0": 0.004495766277927841,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.41005158514141754,
+          "n": 3,
+          "std_ddof0": 0.007828826132712682,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_NODE_SHUFFLE": {
+        "seeds": [
+          {
+            "best_epoch": 59,
+            "seed": 42,
+            "test_acc": 0.5262368815592204,
+            "test_macro_f1": 0.42795465487937256,
+            "val_acc": 0.5164967006598681,
+            "val_macro_f1": 0.4051825341562864
+          },
+          {
+            "best_epoch": 67,
+            "seed": 43,
+            "test_acc": 0.5283358320839581,
+            "test_macro_f1": 0.4374565305938584,
+            "val_acc": 0.5221955608878225,
+            "val_macro_f1": 0.42306383843274525
+          },
+          {
+            "best_epoch": 70,
+            "seed": 44,
+            "test_acc": 0.5229385307346327,
+            "test_macro_f1": 0.44446690432134606,
+            "val_acc": 0.5233953209358129,
+            "val_macro_f1": 0.435057674209338
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.5258370814592704,
+          "n": 3,
+          "std_ddof0": 0.002221500326925837,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.43662602993152566,
+          "n": 3,
+          "std_ddof0": 0.00676662860027502,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.5206958608278345,
+          "n": 3,
+          "std_ddof0": 0.0030093815123560038,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.4211013489327899,
+          "n": 3,
+          "std_ddof0": 0.012275165228363541,
+          "units": "fraction [0,1]"
+        }
+      },
+      "T_E": {
+        "seeds": [
+          {
+            "best_epoch": 97,
+            "seed": 42,
+            "test_acc": 0.45007496251874063,
+            "test_macro_f1": 0.2879539368596876,
+            "val_acc": 0.45650869826034796,
+            "val_macro_f1": 0.30218648158738437
+          },
+          {
+            "best_epoch": 109,
+            "seed": 43,
+            "test_acc": 0.4563718140929535,
+            "test_macro_f1": 0.2667684567918909,
+            "val_acc": 0.46130773845230955,
+            "val_macro_f1": 0.2729000133126677
+          },
+          {
+            "best_epoch": 81,
+            "seed": 44,
+            "test_acc": 0.4590704647676162,
+            "test_macro_f1": 0.288197386791622,
+            "val_acc": 0.46010797840431916,
+            "val_macro_f1": 0.29102457971611095
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.45517241379310347,
+          "n": 3,
+          "std_ddof0": 0.0037690569984937176,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.2809732601477335,
+          "n": 3,
+          "std_ddof0": 0.010044804486265792,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.4593081383723256,
+          "n": 3,
+          "std_ddof0": 0.0020391999654440197,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.28870369153872105,
+          "n": 3,
+          "std_ddof0": 0.012068255810194984,
+          "units": "fraction [0,1]"
+        }
+      },
+      "T_M": {
+        "seeds": [
+          {
+            "best_epoch": 183,
+            "seed": 42,
+            "test_acc": 0.4956521739130435,
+            "test_macro_f1": 0.3860027498170904,
+            "val_acc": 0.4991001799640072,
+            "val_macro_f1": 0.3975161502937578
+          },
+          {
+            "best_epoch": 144,
+            "seed": 43,
+            "test_acc": 0.49025487256371814,
+            "test_macro_f1": 0.3416330591888085,
+            "val_acc": 0.49040191961607676,
+            "val_macro_f1": 0.3390804371960498
+          },
+          {
+            "best_epoch": 214,
+            "seed": 44,
+            "test_acc": 0.4989505247376312,
+            "test_macro_f1": 0.3975188322306321,
+            "val_acc": 0.5041991601679664,
+            "val_macro_f1": 0.42139847550980336
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.4949525237381309,
+          "n": 3,
+          "std_ddof0": 0.003584292069373539,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.37505154707884364,
+          "n": 3,
+          "std_ddof0": 0.024093588886965927,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.4979004199160168,
+          "n": 3,
+          "std_ddof0": 0.0056962285675841344,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.3859983543332037,
+          "n": 3,
+          "std_ddof0": 0.034578987606135106,
+          "units": "fraction [0,1]"
+        }
+      }
+    },
+    "Reddit-S": {
+      "I_E": {
+        "seeds": [
+          {
+            "best_epoch": 45,
+            "seed": 42,
+            "test_acc": 0.8965083359547027,
+            "test_macro_f1": 0.8440191435726643,
+            "val_acc": 0.8927335640138409,
+            "val_macro_f1": 0.8402512753875605
+          },
+          {
+            "best_epoch": 32,
+            "seed": 43,
+            "test_acc": 0.8999685435671595,
+            "test_macro_f1": 0.841552068618349,
+            "val_acc": 0.8921044353570305,
+            "val_macro_f1": 0.8359022552673206
+          },
+          {
+            "best_epoch": 40,
+            "seed": 44,
+            "test_acc": 0.8949355143126769,
+            "test_macro_f1": 0.8403656538513251,
+            "val_acc": 0.8921044353570305,
+            "val_macro_f1": 0.8386720689655949
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.897137464611513,
+          "n": 3,
+          "std_ddof0": 0.0021023317244168566,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.8419789553474462,
+          "n": 3,
+          "std_ddof0": 0.0015217689258649357,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8923141449093007,
+          "n": 3,
+          "std_ddof0": 0.0002965740929795683,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.838275199873492,
+          "n": 3,
+          "std_ddof0": 0.0017975210353451934,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_CONCAT": {
+        "seeds": [
+          {
+            "best_epoch": 91,
+            "seed": 42,
+            "test_acc": 0.9474677571563385,
+            "test_macro_f1": 0.9033298689515501,
+            "val_acc": 0.9468386284995282,
+            "val_macro_f1": 0.9053009576507638
+          },
+          {
+            "best_epoch": 113,
+            "seed": 43,
+            "test_acc": 0.9540736080528468,
+            "test_macro_f1": 0.914230868568656,
+            "val_acc": 0.9506134004403901,
+            "val_macro_f1": 0.9104437400645198
+          },
+          {
+            "best_epoch": 74,
+            "seed": 44,
+            "test_acc": 0.9452658068575024,
+            "test_macro_f1": 0.8950459889605572,
+            "val_acc": 0.9487260144699591,
+            "val_macro_f1": 0.9086169269809801
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.9489357240222293,
+          "n": 3,
+          "std_ddof0": 0.0037425958472422547,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.9042022421602544,
+          "n": 3,
+          "std_ddof0": 0.007856448631782682,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.9487260144699592,
+          "n": 3,
+          "std_ddof0": 0.001541044191747851,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.9081205415654212,
+          "n": 3,
+          "std_ddof0": 0.0021286696313885995,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_E": {
+        "seeds": [
+          {
+            "best_epoch": 40,
+            "seed": 42,
+            "test_acc": 0.9235608681975463,
+            "test_macro_f1": 0.8656784375808714,
+            "val_acc": 0.9213589178987103,
+            "val_macro_f1": 0.8696523454073365
+          },
+          {
+            "best_epoch": 39,
+            "seed": 43,
+            "test_acc": 0.9235608681975463,
+            "test_macro_f1": 0.8619577824817902,
+            "val_acc": 0.9204152249134948,
+            "val_macro_f1": 0.8645067153578644
+          },
+          {
+            "best_epoch": 36,
+            "seed": 44,
+            "test_acc": 0.9238754325259516,
+            "test_macro_f1": 0.860924734827995,
+            "val_acc": 0.9257628184963825,
+            "val_macro_f1": 0.8713469132842244
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.9236657229736814,
+          "n": 3,
+          "std_ddof0": 0.0001482870464898365,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.8628536516302189,
+          "n": 3,
+          "std_ddof0": 0.0020414633010017984,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.9225123204361959,
+          "n": 3,
+          "std_ddof0": 0.0023305138692348735,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.8685019913498083,
+          "n": 3,
+          "std_ddof0": 0.002908557805419321,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_FIXED": {
+        "seeds": [
+          {
+            "best_epoch": 83,
+            "seed": 42,
+            "test_acc": 0.9531299150676313,
+            "test_macro_f1": 0.9130551657284055,
+            "val_acc": 0.9534444793960365,
+            "val_macro_f1": 0.9173186696923041
+          },
+          {
+            "best_epoch": 124,
+            "seed": 43,
+            "test_acc": 0.9512425290972004,
+            "test_macro_f1": 0.9066016225507546,
+            "val_acc": 0.9553318653664674,
+            "val_macro_f1": 0.9206308458780968
+          },
+          {
+            "best_epoch": 46,
+            "seed": 44,
+            "test_acc": 0.9518716577540107,
+            "test_macro_f1": 0.8965522135692657,
+            "val_acc": 0.9534444793960365,
+            "val_macro_f1": 0.910192619373437
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.9520813673062808,
+          "n": 3,
+          "std_ddof0": 0.0007846612953284845,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.905403000616142,
+          "n": 3,
+          "std_ddof0": 0.006790403934883156,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.9540736080528468,
+          "n": 3,
+          "std_ddof0": 0.0008897222789387048,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.9160473783146127,
+          "n": 3,
+          "std_ddof0": 0.004355171597529421,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_GLOBAL": {
+        "seeds": [
+          {
+            "best_epoch": 141,
+            "seed": 42,
+            "test_acc": 0.9528153507392262,
+            "test_macro_f1": 0.9116168252723,
+            "val_acc": 0.9562755583516829,
+            "val_macro_f1": 0.9210104896806797
+          },
+          {
+            "best_epoch": 142,
+            "seed": 43,
+            "test_acc": 0.954388172381252,
+            "test_macro_f1": 0.9144046128996829,
+            "val_acc": 0.9578483799937088,
+            "val_macro_f1": 0.9236058614804457
+          },
+          {
+            "best_epoch": 82,
+            "seed": 44,
+            "test_acc": 0.952500786410821,
+            "test_macro_f1": 0.906517541165066,
+            "val_acc": 0.9553318653664674,
+            "val_macro_f1": 0.9184344980890179
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.9532347698437663,
+          "n": 3,
+          "std_ddof0": 0.0008256273329151388,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.9108463264456829,
+          "n": 3,
+          "std_ddof0": 0.0032656522031708434,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.956485267903953,
+          "n": 3,
+          "std_ddof0": 0.0010380093254285375,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.9210169497500478,
+          "n": 3,
+          "std_ddof0": 0.0021112052057094457,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_GLOBAL_WIDE": {
+        "seeds": [
+          {
+            "best_epoch": 70,
+            "seed": 42,
+            "test_acc": 0.952500786410821,
+            "test_macro_f1": 0.9114127505643207,
+            "val_acc": 0.9540736080528468,
+            "val_macro_f1": 0.9192022295951693
+          },
+          {
+            "best_epoch": 125,
+            "seed": 43,
+            "test_acc": 0.9521862220824159,
+            "test_macro_f1": 0.9105804789884253,
+            "val_acc": 0.9534444793960365,
+            "val_macro_f1": 0.9179344793456039
+          },
+          {
+            "best_epoch": 67,
+            "seed": 44,
+            "test_acc": 0.9499842717835797,
+            "test_macro_f1": 0.9083871228896141,
+            "val_acc": 0.9556464296948726,
+            "val_macro_f1": 0.9215328700037757
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.9515570934256056,
+          "n": 3,
+          "std_ddof0": 0.001119542649893219,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.9101267841474533,
+          "n": 3,
+          "std_ddof0": 0.001276188325452278,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.9543881723812518,
+          "n": 3,
+          "std_ddof0": 0.0009260523085171122,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.9195565263148496,
+          "n": 3,
+          "std_ddof0": 0.001490245719422743,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_NODE": {
+        "seeds": [
+          {
+            "best_epoch": 85,
+            "seed": 42,
+            "test_acc": 0.9575338156653036,
+            "test_macro_f1": 0.9165678192063623,
+            "val_acc": 0.9553318653664674,
+            "val_macro_f1": 0.9221220766445525
+          },
+          {
+            "best_epoch": 61,
+            "seed": 43,
+            "test_acc": 0.9351997483485373,
+            "test_macro_f1": 0.8945878682559399,
+            "val_acc": 0.9342560553633218,
+            "val_macro_f1": 0.900657504502161
+          },
+          {
+            "best_epoch": 71,
+            "seed": 44,
+            "test_acc": 0.954388172381252,
+            "test_macro_f1": 0.9122983789201011,
+            "val_acc": 0.9569046870084932,
+            "val_macro_f1": 0.9230734784706822
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.9490405787983643,
+          "n": 3,
+          "std_ddof0": 0.009870839497336548,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.9078180221274678,
+          "n": 3,
+          "std_ddof0": 0.00951611821026883,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.9488308692460942,
+          "n": 3,
+          "std_ddof0": 0.010325933106100584,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.9152843532057986,
+          "n": 3,
+          "std_ddof0": 0.01035003441565998,
+          "units": "fraction [0,1]"
+        }
+      },
+      "T_E": {
+        "seeds": [
+          {
+            "best_epoch": 85,
+            "seed": 42,
+            "test_acc": 0.6794589493551432,
+            "test_macro_f1": 0.6103954704504696,
+            "val_acc": 0.6977036804026423,
+            "val_macro_f1": 0.6317480354509513
+          },
+          {
+            "best_epoch": 90,
+            "seed": 43,
+            "test_acc": 0.6715948411450141,
+            "test_macro_f1": 0.6036733259391012,
+            "val_acc": 0.6936143441333753,
+            "val_macro_f1": 0.6320750639119124
+          },
+          {
+            "best_epoch": 87,
+            "seed": 44,
+            "test_acc": 0.6800880780119535,
+            "test_macro_f1": 0.6183003426283465,
+            "val_acc": 0.6914123938345391,
+            "val_macro_f1": 0.6305975671282413
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.677047289504037,
+          "n": 3,
+          "std_ddof0": 0.003864008760131796,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6107897130059724,
+          "n": 3,
+          "std_ddof0": 0.005977958107430593,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.6942434727901855,
+          "n": 3,
+          "std_ddof0": 0.002606648399843984,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.631473555497035,
+          "n": 3,
+          "std_ddof0": 0.0006336421809749181,
+          "units": "fraction [0,1]"
+        }
+      }
+    },
+    "Toys": {
+      "I_E": {
+        "seeds": [
+          {
+            "best_epoch": 38,
+            "seed": 42,
+            "test_acc": 0.657163566078763,
+            "test_macro_f1": 0.622084596982385,
+            "val_acc": 0.6658613191592172,
+            "val_macro_f1": 0.6277410531551462
+          },
+          {
+            "best_epoch": 30,
+            "seed": 43,
+            "test_acc": 0.6607876298622856,
+            "test_macro_f1": 0.6142896110917229,
+            "val_acc": 0.6663445276636869,
+            "val_macro_f1": 0.621342735856679
+          },
+          {
+            "best_epoch": 41,
+            "seed": 44,
+            "test_acc": 0.6566803575742933,
+            "test_macro_f1": 0.6262940469175655,
+            "val_acc": 0.6690021744382701,
+            "val_macro_f1": 0.6333833886143521
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.6582105178384473,
+          "n": 3,
+          "std_ddof0": 0.001832939788474015,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6208894183305578,
+          "n": 3,
+          "std_ddof0": 0.004973125032380299,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.6670693404203915,
+          "n": 3,
+          "std_ddof0": 0.0013808833212114356,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.6274890592087258,
+          "n": 3,
+          "std_ddof0": 0.004918804422451285,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_CONCAT": {
+        "seeds": [
+          {
+            "best_epoch": 129,
+            "seed": 42,
+            "test_acc": 0.76685189659338,
+            "test_macro_f1": 0.7345061726623398,
+            "val_acc": 0.7827977772408794,
+            "val_macro_f1": 0.7504482611648363
+          },
+          {
+            "best_epoch": 109,
+            "seed": 43,
+            "test_acc": 0.765402271079971,
+            "test_macro_f1": 0.7296183024689387,
+            "val_acc": 0.7827977772408794,
+            "val_macro_f1": 0.75170040775988
+          },
+          {
+            "best_epoch": 93,
+            "seed": 44,
+            "test_acc": 0.7685431263590239,
+            "test_macro_f1": 0.7267688387803517,
+            "val_acc": 0.7830393814931143,
+            "val_macro_f1": 0.7426621625909985
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.766932431344125,
+          "n": 3,
+          "std_ddof0": 0.0012835127205048592,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7302977713038766,
+          "n": 3,
+          "std_ddof0": 0.003195083965884581,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7828783119916244,
+          "n": 3,
+          "std_ddof0": 0.00011389333674584524,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7482702771719049,
+          "n": 3,
+          "std_ddof0": 0.003998347962038115,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_E": {
+        "seeds": [
+          {
+            "best_epoch": 57,
+            "seed": 42,
+            "test_acc": 0.72940323749698,
+            "test_macro_f1": 0.6968046093814579,
+            "val_acc": 0.742933075622131,
+            "val_macro_f1": 0.7156450797029199
+          },
+          {
+            "best_epoch": 63,
+            "seed": 43,
+            "test_acc": 0.732302488523798,
+            "test_macro_f1": 0.7029612818683467,
+            "val_acc": 0.745832326648949,
+            "val_macro_f1": 0.7230906291626698
+          },
+          {
+            "best_epoch": 48,
+            "seed": 44,
+            "test_acc": 0.7272287992268663,
+            "test_macro_f1": 0.6948990792421388,
+            "val_acc": 0.7407586373520174,
+            "val_macro_f1": 0.7054851312592871
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.7296448417492147,
+          "n": 3,
+          "std_ddof0": 0.0020783583636246996,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6982216568306479,
+          "n": 3,
+          "std_ddof0": 0.0034405227704958044,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7431746798743658,
+          "n": 3,
+          "std_ddof0": 0.002078358363624704,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7147402800416257,
+          "n": 3,
+          "std_ddof0": 0.0072158337899747085,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_FIXED": {
+        "seeds": [
+          {
+            "best_epoch": 95,
+            "seed": 42,
+            "test_acc": 0.7811065474752356,
+            "test_macro_f1": 0.7427996732973666,
+            "val_acc": 0.7929451558347427,
+            "val_macro_f1": 0.7562970265174926
+          },
+          {
+            "best_epoch": 83,
+            "seed": 43,
+            "test_acc": 0.7883546750422807,
+            "test_macro_f1": 0.7629867465931348,
+            "val_acc": 0.7975356366272046,
+            "val_macro_f1": 0.7708256914577087
+          },
+          {
+            "best_epoch": 92,
+            "seed": 44,
+            "test_acc": 0.7876298622855762,
+            "test_macro_f1": 0.7581135011110929,
+            "val_acc": 0.7922203430780381,
+            "val_macro_f1": 0.7608619126090789
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.7856970282676975,
+          "n": 3,
+          "std_ddof0": 0.00325941956106113,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7546333070005314,
+          "n": 3,
+          "std_ddof0": 0.008600902873054246,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7942337118466618,
+          "n": 3,
+          "std_ddof0": 0.002353489441282514,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7626615435280933,
+          "n": 3,
+          "std_ddof0": 0.006066274519547723,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_GLOBAL": {
+        "seeds": [
+          {
+            "best_epoch": 107,
+            "seed": 42,
+            "test_acc": 0.7755496496738342,
+            "test_macro_f1": 0.7506879523971871,
+            "val_acc": 0.7919787388258034,
+            "val_macro_f1": 0.7656707568755756
+          },
+          {
+            "best_epoch": 74,
+            "seed": 43,
+            "test_acc": 0.7856970282676975,
+            "test_macro_f1": 0.758331142417151,
+            "val_acc": 0.7946363856003865,
+            "val_macro_f1": 0.7655893474970551
+          },
+          {
+            "best_epoch": 81,
+            "seed": 44,
+            "test_acc": 0.7871466537811066,
+            "test_macro_f1": 0.7553962555732443,
+            "val_acc": 0.7900459048079246,
+            "val_macro_f1": 0.7575386601399416
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.7827977772408795,
+          "n": 3,
+          "std_ddof0": 0.005159255014269811,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7548051167958608,
+          "n": 3,
+          "std_ddof0": 0.0031481923078611244,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7922203430780382,
+          "n": 3,
+          "std_ddof0": 0.0018818267609805707,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7629329215041908,
+          "n": 3,
+          "std_ddof0": 0.0038144635814315172,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_GLOBAL_WIDE": {
+        "seeds": [
+          {
+            "best_epoch": 102,
+            "seed": 42,
+            "test_acc": 0.778932109205122,
+            "test_macro_f1": 0.7489313381862776,
+            "val_acc": 0.7898043005556897,
+            "val_macro_f1": 0.7575402699212859
+          },
+          {
+            "best_epoch": 74,
+            "seed": 43,
+            "test_acc": 0.7854554240154626,
+            "test_macro_f1": 0.7493094975923016,
+            "val_acc": 0.792461947330273,
+            "val_macro_f1": 0.7597138607099001
+          },
+          {
+            "best_epoch": 62,
+            "seed": 44,
+            "test_acc": 0.7825561729886445,
+            "test_macro_f1": 0.7503414332609277,
+            "val_acc": 0.786421841024402,
+            "val_macro_f1": 0.7491406697715415
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.7823145687364098,
+          "n": 3,
+          "std_ddof0": 0.002668606189221358,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.749527423013169,
+          "n": 3,
+          "std_ddof0": 0.000595936599918333,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.789562696303455,
+          "n": 3,
+          "std_ddof0": 0.0024717740602758576,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7554649334675757,
+          "n": 3,
+          "std_ddof0": 0.004559119630061678,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_NODE": {
+        "seeds": [
+          {
+            "best_epoch": 86,
+            "seed": 42,
+            "test_acc": 0.7588789562696303,
+            "test_macro_f1": 0.7309544223340309,
+            "val_acc": 0.7743416284126601,
+            "val_macro_f1": 0.7504132136056024
+          },
+          {
+            "best_epoch": 71,
+            "seed": 43,
+            "test_acc": 0.7646774583232665,
+            "test_macro_f1": 0.7309472484772052,
+            "val_acc": 0.7784489007006523,
+            "val_macro_f1": 0.7431220197194245
+          },
+          {
+            "best_epoch": 63,
+            "seed": 44,
+            "test_acc": 0.7499395989369413,
+            "test_macro_f1": 0.7189734335855391,
+            "val_acc": 0.7627446243053878,
+            "val_macro_f1": 0.7244056853235461
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.7578320045099461,
+          "n": 3,
+          "std_ddof0": 0.0060620791709942255,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7269583681322583,
+          "n": 3,
+          "std_ddof0": 0.005646202124885866,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7718450511395667,
+          "n": 3,
+          "std_ddof0": 0.006649849513841654,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7393136395495242,
+          "n": 3,
+          "std_ddof0": 0.010953711744559662,
+          "units": "fraction [0,1]"
+        }
+      },
+      "T_E": {
+        "seeds": [
+          {
+            "best_epoch": 125,
+            "seed": 42,
+            "test_acc": 0.6938874124184585,
+            "test_macro_f1": 0.6737345633584195,
+            "val_acc": 0.7265039864701619,
+            "val_macro_f1": 0.697865937980169
+          },
+          {
+            "best_epoch": 177,
+            "seed": 43,
+            "test_acc": 0.6919545784005798,
+            "test_macro_f1": 0.6672858500598267,
+            "val_acc": 0.7296448417492147,
+            "val_macro_f1": 0.7003086902186788
+          },
+          {
+            "best_epoch": 160,
+            "seed": 44,
+            "test_acc": 0.6912297656438753,
+            "test_macro_f1": 0.6597874139316565,
+            "val_acc": 0.7252959652089876,
+            "val_macro_f1": 0.6955150626474416
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.6923572521543045,
+          "n": 3,
+          "std_ddof0": 0.0011217192781818584,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6669359424499676,
+          "n": 3,
+          "std_ddof0": 0.005699273098954046,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.7271482644761215,
+          "n": 3,
+          "std_ddof0": 0.001832939788474018,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.6978965636154298,
+          "n": 3,
+          "std_ddof0": 0.001957110075269626,
+          "units": "fraction [0,1]"
+        }
+      }
+    },
+    "ele-fashion": {
+      "I_E": {
+        "seeds": [
+          {
+            "best_epoch": 134,
+            "seed": 42,
+            "test_acc": 0.8239004432321855,
+            "test_macro_f1": 0.646139588841269,
+            "val_acc": 0.826736217653677,
+            "val_macro_f1": 0.6327950472808164
+          },
+          {
+            "best_epoch": 223,
+            "seed": 43,
+            "test_acc": 0.8290828503239004,
+            "test_macro_f1": 0.6710317327141428,
+            "val_acc": 0.8308274521836965,
+            "val_macro_f1": 0.6539543176052554
+          },
+          {
+            "best_epoch": 191,
+            "seed": 44,
+            "test_acc": 0.8290146607569042,
+            "test_macro_f1": 0.6700119603588567,
+            "val_acc": 0.8294978009614401,
+            "val_macro_f1": 0.6542582405577514
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8273326514376634,
+          "n": 3,
+          "std_ddof0": 0.002427097351237218,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.6623944273047562,
+          "n": 3,
+          "std_ddof0": 0.011501443793996716,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8290204902662711,
+          "n": 3,
+          "std_ddof0": 0.001703999045324045,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.647002535147941,
+          "n": 3,
+          "std_ddof0": 0.01004697718756358,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_CONCAT": {
+        "seeds": [
+          {
+            "best_epoch": 177,
+            "seed": 42,
+            "test_acc": 0.8720763723150358,
+            "test_macro_f1": 0.7392346831408662,
+            "val_acc": 0.8706147079881355,
+            "val_macro_f1": 0.7331184815075108
+          },
+          {
+            "best_epoch": 163,
+            "seed": 43,
+            "test_acc": 0.8730310262529833,
+            "test_macro_f1": 0.7426141196621333,
+            "val_acc": 0.870512427124885,
+            "val_macro_f1": 0.7322551456615567
+          },
+          {
+            "best_epoch": 173,
+            "seed": 44,
+            "test_acc": 0.8723150357995226,
+            "test_macro_f1": 0.7496794032421594,
+            "val_acc": 0.8728648869796461,
+            "val_macro_f1": 0.7411762531496694
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8724741447891806,
+          "n": 3,
+          "std_ddof0": 0.00040564992152691267,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7438427353483862,
+          "n": 3,
+          "std_ddof0": 0.004351640830535083,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8713306740308888,
+          "n": 3,
+          "std_ddof0": 0.0010856556767986575,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7355166267729123,
+          "n": 3,
+          "std_ddof0": 0.004017450704040299,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_E": {
+        "seeds": [
+          {
+            "best_epoch": 140,
+            "seed": 42,
+            "test_acc": 0.867780429594272,
+            "test_macro_f1": 0.7449383856930155,
+            "val_acc": 0.8679554055436228,
+            "val_macro_f1": 0.7331695291675561
+          },
+          {
+            "best_epoch": 165,
+            "seed": 43,
+            "test_acc": 0.8676099556767815,
+            "test_macro_f1": 0.741294660442308,
+            "val_acc": 0.8686713715863762,
+            "val_macro_f1": 0.7413372241684543
+          },
+          {
+            "best_epoch": 175,
+            "seed": 44,
+            "test_acc": 0.8711899079440846,
+            "test_macro_f1": 0.7412768297185099,
+            "val_acc": 0.8709215505778869,
+            "val_macro_f1": 0.7410044160137889
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8688600977383794,
+          "n": 3,
+          "std_ddof0": 0.001648893979832601,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7425032919512778,
+          "n": 3,
+          "std_ddof0": 0.0017218866846118537,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8691827759026287,
+          "n": 3,
+          "std_ddof0": 0.0012637655035866867,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7385037231165997,
+          "n": 3,
+          "std_ddof0": 0.00377429102671071,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_FIXED": {
+        "seeds": [
+          {
+            "best_epoch": 159,
+            "seed": 42,
+            "test_acc": 0.8589157858847596,
+            "test_macro_f1": 0.7185656546183029,
+            "val_acc": 0.8592615321673315,
+            "val_macro_f1": 0.7132902689093178
+          },
+          {
+            "best_epoch": 191,
+            "seed": 43,
+            "test_acc": 0.861472894647119,
+            "test_macro_f1": 0.7385814726429644,
+            "val_acc": 0.8579318809450752,
+            "val_macro_f1": 0.7176819824692452
+          },
+          {
+            "best_epoch": 244,
+            "seed": 44,
+            "test_acc": 0.8635526764405046,
+            "test_macro_f1": 0.747628336450624,
+            "val_acc": 0.8604889025263374,
+            "val_macro_f1": 0.7274155401811978
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.861313785657461,
+          "n": 3,
+          "std_ddof0": 0.001896343017394583,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7349251545706305,
+          "n": 3,
+          "std_ddof0": 0.012143211140557462,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.859227438546248,
+          "n": 3,
+          "std_ddof0": 0.001044178025373395,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7194625971865869,
+          "n": 3,
+          "std_ddof0": 0.0059024720078263366,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_GLOBAL": {
+        "seeds": [
+          {
+            "best_epoch": 153,
+            "seed": 42,
+            "test_acc": 0.8699965905216502,
+            "test_macro_f1": 0.74456041278147,
+            "val_acc": 0.8687736524496267,
+            "val_macro_f1": 0.7359160329393
+          },
+          {
+            "best_epoch": 188,
+            "seed": 43,
+            "test_acc": 0.8725536992840095,
+            "test_macro_f1": 0.7511727140147388,
+            "val_acc": 0.8700010228086325,
+            "val_macro_f1": 0.7369066176372718
+          },
+          {
+            "best_epoch": 163,
+            "seed": 44,
+            "test_acc": 0.870746675758609,
+            "test_macro_f1": 0.7485307101552969,
+            "val_acc": 0.8704101462616345,
+            "val_macro_f1": 0.7368321487986293
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8710989885214229,
+          "n": 3,
+          "std_ddof0": 0.001073248811712927,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7480879456505019,
+          "n": 3,
+          "std_ddof0": 0.002717555544345189,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8697282738399646,
+          "n": 3,
+          "std_ddof0": 0.0006953761567751283,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7365515997917337,
+          "n": 3,
+          "std_ddof0": 0.0004504407618593121,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_GLOBAL_WIDE": {
+        "seeds": [
+          {
+            "best_epoch": 164,
+            "seed": 42,
+            "test_acc": 0.8707125809751108,
+            "test_macro_f1": 0.7467664903235154,
+            "val_acc": 0.8709215505778869,
+            "val_macro_f1": 0.7366668263667365
+          },
+          {
+            "best_epoch": 210,
+            "seed": 43,
+            "test_acc": 0.869655642686669,
+            "test_macro_f1": 0.7421124395823662,
+            "val_acc": 0.8700010228086325,
+            "val_macro_f1": 0.7318882031556274
+          },
+          {
+            "best_epoch": 200,
+            "seed": 44,
+            "test_acc": 0.8714967609955677,
+            "test_macro_f1": 0.7532530798523024,
+            "val_acc": 0.8708192697146364,
+            "val_macro_f1": 0.741633873727066
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8706216615524491,
+          "n": 3,
+          "std_ddof0": 0.0007543778509047109,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7473773365860613,
+          "n": 3,
+          "std_ddof0": 0.0045686114793141025,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8705806143670519,
+          "n": 3,
+          "std_ddof0": 0.0004119547909582203,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7367296344164767,
+          "n": 3,
+          "std_ddof0": 0.003978901218517932,
+          "units": "fraction [0,1]"
+        }
+      },
+      "J_NODE": {
+        "seeds": [
+          {
+            "best_epoch": 162,
+            "seed": 42,
+            "test_acc": 0.8731333106034777,
+            "test_macro_f1": 0.7511779893933178,
+            "val_acc": 0.8728648869796461,
+            "val_macro_f1": 0.7426537854355307
+          },
+          {
+            "best_epoch": 117,
+            "seed": 43,
+            "test_acc": 0.872417320150017,
+            "test_macro_f1": 0.7488657015624234,
+            "val_acc": 0.870307865398384,
+            "val_macro_f1": 0.7311511860640549
+          },
+          {
+            "best_epoch": 122,
+            "seed": 44,
+            "test_acc": 0.871326287078077,
+            "test_macro_f1": 0.7450967937459531,
+            "val_acc": 0.8707169888513859,
+            "val_macro_f1": 0.7306923710104002
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8722923059438572,
+          "n": 3,
+          "std_ddof0": 0.0007429916639927872,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7483801615672313,
+          "n": 3,
+          "std_ddof0": 0.0025062650751773077,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8712965804098053,
+          "n": 3,
+          "std_ddof0": 0.0011214676760695882,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7348324475033285,
+          "n": 3,
+          "std_ddof0": 0.0055336921430236665,
+          "units": "fraction [0,1]"
+        }
+      },
+      "T_E": {
+        "seeds": [
+          {
+            "best_epoch": 193,
+            "seed": 42,
+            "test_acc": 0.8738493010569383,
+            "test_macro_f1": 0.7515220156924118,
+            "val_acc": 0.869694180218881,
+            "val_macro_f1": 0.7354975535932369
+          },
+          {
+            "best_epoch": 194,
+            "seed": 43,
+            "test_acc": 0.8725877940675076,
+            "test_macro_f1": 0.7527371677027915,
+            "val_acc": 0.8692850567658791,
+            "val_macro_f1": 0.7366828000645097
+          },
+          {
+            "best_epoch": 195,
+            "seed": 44,
+            "test_acc": 0.8726559836345039,
+            "test_macro_f1": 0.7525899690280095,
+            "val_acc": 0.8712283931676383,
+            "val_macro_f1": 0.7365707375167219
+          }
+        ],
+        "successful_seed_count": 3,
+        "test_acc": {
+          "mean": 0.8730310262529833,
+          "n": 3,
+          "std_ddof0": 0.0005792769604443462,
+          "units": "fraction [0,1]"
+        },
+        "test_macro_f1": {
+          "mean": 0.7522830508077375,
+          "n": 3,
+          "std_ddof0": 0.0005414780374330868,
+          "units": "fraction [0,1]"
+        },
+        "val_acc": {
+          "mean": 0.8700692100507995,
+          "n": 3,
+          "std_ddof0": 0.0008365104596764856,
+          "units": "fraction [0,1]"
+        },
+        "val_macro_f1": {
+          "mean": 0.7362503637248228,
+          "n": 3,
+          "std_ddof0": 0.0005342794676434197,
+          "units": "fraction [0,1]"
+        }
+      }
+    }
+  },
+  "test_evaluation": "one locked evaluation per successful primary slot; null for failures"
+}
