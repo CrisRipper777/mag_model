@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+import base64
+import json
 import torch
+import zlib
 from omegaconf import OmegaConf
 
 from src.analysis.problem_validation import bucket_metrics, confusion_metrics, correctness_pair
@@ -225,9 +228,7 @@ def test_bucket_pair_metrics_map_split_order_predictions_to_node_ids():
     assert q1["paired_regression"] == 0
     encoded = q1["a_confusion_matrix"]
     assert encoded["shape"] == [2, 2] and encoded["class_order"] == [0, 1]
-    decoded = torch.zeros(encoded["shape"], dtype=torch.long)
-    for row, column, count in encoded["nonzero_cells"]:
-        decoded[row, column] = count
+    decoded = torch.tensor(json.loads(zlib.decompress(base64.b64decode(encoded["data"]))))
     assert int(decoded.sum()) == q1["n"]
 
 

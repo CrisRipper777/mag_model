@@ -517,7 +517,7 @@ def build_summary(registry: dict[str, Any], lock: dict[str, Any], all_rows: list
     atomic_json(REPORTS / "error_complementarity.json", error)
     atomic_json(REPORTS / "paired_comparisons.json", pairs)
     atomic_json(REPORTS / "geometry_summary.json", {
-        "confusion_matrix_encoding": "sparse coordinates [true_class,predicted_class,count], shape and class_order explicit; unlisted cells are zero",
+        "confusion_matrix_encoding": "lossless base64(zlib(UTF-8 JSON dense matrix)); each matrix includes shape and class_order",
         "geometry": extra["geometry"]})
     atomic_json(REPORTS / "router_summary.json", extra["router"])
     times = [r for r in train_rows if r.get("status") == "succeeded"]

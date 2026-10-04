@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import hashlib
+import base64
 import json
 from pathlib import Path
 from typing import Any
+import zlib
 
 import numpy as np
 import torch
@@ -329,12 +331,12 @@ def bucket_metrics(y: torch.Tensor, pred_a: torch.Tensor, pred_b: torch.Tensor,
     else:
         raise ValueError("bucket predictions must align with all nodes or the supplied evaluation split")
 
-    def sparse_matrix(matrix: list[list[int]]) -> dict[str, Any]:
+    def compressed_matrix(matrix: list[list[int]]) -> dict[str, Any]:
         size = len(matrix)
+        payload = json.dumps(matrix, separators=(",", ":")).encode("utf-8")
+        encoded = base64.b64encode(zlib.compress(payload, level=9)).decode("ascii")
         return {"shape": [size, size], "class_order": list(range(size)),
-                "nonzero_cells": [[row, column, int(value)]
-                    for row, values in enumerate(matrix)
-                    for column, value in enumerate(values) if value]}
+                "encoding": "base64(zlib(UTF-8 JSON dense matrix))", "data": encoded}
 
     for bin_id, name in enumerate(bucket_names):
         picked = indices[bucket[indices] == bin_id]
@@ -347,8 +349,8 @@ def bucket_metrics(y: torch.Tensor, pred_a: torch.Tensor, pred_b: torch.Tensor,
                     "small_n": int(picked.numel()) < 100, "threshold_source": threshold_source,
                     "a_correct": int((y[picked] == pred_at_nodes[picked]).sum()),
                     "b_correct": int((y[picked] == pred_bt_nodes[picked]).sum()),
-                    "a_confusion_matrix": sparse_matrix(a["confusion_matrix"]),
-                    "b_confusion_matrix": sparse_matrix(b["confusion_matrix"]),
+                    "a_confusion_matrix": compressed_matrix(a["confusion_matrix"]),
+                    "b_confusion_matrix": compressed_matrix(b["confusion_matrix"]),
                     "paired_a_minus_b": {k: v for k, v in paired.items() if k != "accuracy_difference_a_minus_b"},
                     "paired_improvement": paired["a_only_correct"],
                     "paired_regression": paired["b_only_correct"]})
