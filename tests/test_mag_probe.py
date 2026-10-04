@@ -6,6 +6,7 @@ from omegaconf import OmegaConf
 from src.analysis.problem_validation import bucket_metrics, confusion_metrics, correctness_pair
 from src.analysis.problem_validation import compose_probe_config, fixed_split_path
 from src.models.mag_probe import Model, resolve_capacity_widths
+from scripts.evaluate_locked_probe import ATTEMPT_CAP as EVAL_ATTEMPT_CAP
 from scripts.evaluate_locked_probe import SEEDS as EVAL_SEEDS, eval_fingerprint
 from scripts.run_problem_validation import runtime_job
 
@@ -226,6 +227,7 @@ def test_bucket_pair_metrics_map_split_order_predictions_to_node_ids():
 
 def test_reused_calibration_training_identity_and_locked_test_fingerprint():
     assert EVAL_SEEDS == (42, 43, 44)
+    assert EVAL_ATTEMPT_CAP == 180
     common = {"dataset": "Movies", "variant": "J_FIXED", "seed": 42,
         "split_path": str(fixed_split_path("Movies")), "split_sha256": "split-hash",
         "lr": 1e-3, "code_commit": "source-commit", "source_hashes": {"model": "abc"}}

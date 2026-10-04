@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT))
 os.chdir(ROOT)
 
 from scripts.run_problem_validation import (  # noqa: E402
-    DATASETS, SEEDS, RAW, REGISTRY_PATH, REPORTS, RESULTS_PATH, _training_config_hash,
+    ATTEMPT_CAP, DATASETS, SEEDS, RAW, REGISTRY_PATH, REPORTS, RESULTS_PATH, _training_config_hash,
     append_result, atomic_json, config_for, read_registry, runtime_job, select_idle_gpu,
     source_hashes, verify_dataset_inputs,
 )
