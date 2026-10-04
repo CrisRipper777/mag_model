@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT))
 os.chdir(ROOT)
 
 from scripts.run_problem_validation import (  # noqa: E402
-    DATASETS, RAW, REGISTRY_PATH, REPORTS, RESULTS_PATH, _training_config_hash,
+    DATASETS, SEEDS, RAW, REGISTRY_PATH, REPORTS, RESULTS_PATH, _training_config_hash,
     append_result, atomic_json, config_for, read_registry, runtime_job, select_idle_gpu,
     source_hashes, verify_dataset_inputs,
 )
@@ -547,8 +547,12 @@ def build_summary(registry: dict[str, Any], lock: dict[str, Any], all_rows: list
         "superseded": [r for r in all_rows if r.get("record_type") == "superseded"],
         "attempt_count": registry["attempt_count"], "attempt_cap": ATTEMPT_CAP})
     write_report(registry, lock, metrics, pairs, resource, missing)
+    aggregation_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     manifest = {"study": registry["study"], "branch": registry["branch"],
         "source_commit": registry["source_commit"],
+        "aggregation_code": {"commit": aggregation_commit,
+            "script_sha256": sha256_file(Path(__file__)),
+            "note": "aggregate-only implementation; locked test predictions were computed under the frozen evaluation source and were not rerun"},
         "final_commit_ref": "the commit containing this report package; exact SHA is returned in the handoff",
         "protocol_lock_sha256": lock["protocol_lock_sha256"],
         "selected_common_lr": registry.get("selected_common_lr"),
