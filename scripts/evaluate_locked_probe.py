@@ -516,7 +516,9 @@ def build_summary(registry: dict[str, Any], lock: dict[str, Any], all_rows: list
     error, pairs, extra = diagnostics
     atomic_json(REPORTS / "error_complementarity.json", error)
     atomic_json(REPORTS / "paired_comparisons.json", pairs)
-    atomic_json(REPORTS / "geometry_summary.json", extra["geometry"])
+    atomic_json(REPORTS / "geometry_summary.json", {
+        "confusion_matrix_encoding": "sparse coordinates [true_class,predicted_class,count], shape and class_order explicit; unlisted cells are zero",
+        "geometry": extra["geometry"]})
     atomic_json(REPORTS / "router_summary.json", extra["router"])
     times = [r for r in train_rows if r.get("status") == "succeeded"]
     training_s = sum(r.get("timing_seconds", {}).get("training", 0) for r in times)
@@ -552,6 +554,7 @@ def build_summary(registry: dict[str, Any], lock: dict[str, Any], all_rows: list
         "source_commit": registry["source_commit"],
         "aggregation_code": {"commit": aggregation_commit,
             "script_sha256": sha256_file(Path(__file__)),
+            "analysis_module_sha256": sha256_file(ROOT / "src/analysis/problem_validation.py"),
             "note": "aggregate-only implementation; locked test predictions were computed under the frozen evaluation source and were not rerun"},
         "final_commit_ref": "the commit containing this report package; exact SHA is returned in the handoff",
         "protocol_lock_sha256": lock["protocol_lock_sha256"],

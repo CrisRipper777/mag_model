@@ -328,6 +328,14 @@ def bucket_metrics(y: torch.Tensor, pred_a: torch.Tensor, pred_b: torch.Tensor,
         pred_bt_nodes = pred_b[node_to_offset.clamp_min(0)]
     else:
         raise ValueError("bucket predictions must align with all nodes or the supplied evaluation split")
+
+    def sparse_matrix(matrix: list[list[int]]) -> dict[str, Any]:
+        size = len(matrix)
+        return {"shape": [size, size], "class_order": list(range(size)),
+                "nonzero_cells": [[row, column, int(value)]
+                    for row, values in enumerate(matrix)
+                    for column, value in enumerate(values) if value]}
+
     for bin_id, name in enumerate(bucket_names):
         picked = indices[bucket[indices] == bin_id]
         if not picked.numel():
@@ -339,8 +347,8 @@ def bucket_metrics(y: torch.Tensor, pred_a: torch.Tensor, pred_b: torch.Tensor,
                     "small_n": int(picked.numel()) < 100, "threshold_source": threshold_source,
                     "a_correct": int((y[picked] == pred_at_nodes[picked]).sum()),
                     "b_correct": int((y[picked] == pred_bt_nodes[picked]).sum()),
-                    "a_confusion_matrix": a["confusion_matrix"],
-                    "b_confusion_matrix": b["confusion_matrix"],
+                    "a_confusion_matrix": sparse_matrix(a["confusion_matrix"]),
+                    "b_confusion_matrix": sparse_matrix(b["confusion_matrix"]),
                     "paired_a_minus_b": {k: v for k, v in paired.items() if k != "accuracy_difference_a_minus_b"},
                     "paired_improvement": paired["a_only_correct"],
                     "paired_regression": paired["b_only_correct"]})

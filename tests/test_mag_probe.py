@@ -223,6 +223,12 @@ def test_bucket_pair_metrics_map_split_order_predictions_to_node_ids():
     assert q1["b_correct"] == 1
     assert q1["paired_improvement"] == 2
     assert q1["paired_regression"] == 0
+    encoded = q1["a_confusion_matrix"]
+    assert encoded["shape"] == [2, 2] and encoded["class_order"] == [0, 1]
+    decoded = torch.zeros(encoded["shape"], dtype=torch.long)
+    for row, column, count in encoded["nonzero_cells"]:
+        decoded[row, column] = count
+    assert int(decoded.sum()) == q1["n"]
 
 
 def test_reused_calibration_training_identity_and_locked_test_fingerprint():
