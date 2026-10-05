@@ -1,0 +1,31 @@
+{
+  "artifacts": [
+    {
+      "bytes": 2338941,
+      "path": "diagnostics.json",
+      "sha256": "614dc4b60b542348f09f36f44289805f7f3f16c7226927092b4a7c2ef1cd835e"
+    },
+    {
+      "bytes": 34319,
+      "path": "provenance.json",
+      "sha256": "c4a15be875ef59f5332c1d51930b6e24bd4adfb519ca85b002c9bf86b7174e61"
+    },
+    {
+      "bytes": 4882,
+      "path": "report.md",
+      "sha256": "ec137a52d6c5dc2cc6c17e3a016f889159f7829a4ebc924d52ca032d345136ee"
+    },
+    {
+      "bytes": 1907,
+      "path": "review.md",
+      "sha256": "1523580e74167c90c9923ca7bd99630aba5a34a202f60114b437e4cc0e352afa"
+    }
+  ],
+  "branch_at_generation": "codex/mag-problem-validation-v1-1-audit-fixes",
+  "diagnostic_script_sha256": "39207e1b9502d95d55935e5129eb67d8ba3d29f6a8544e7d7f437771ddacf766",
+  "generated_at_utc": "2026-10-05T03:24:12.188554+00:00",
+  "git_head_at_generation": "7a7ba1aaefb1cfff5132bd2a53d10657344cd237",
+  "schema_version": 1,
+  "v1_protocol_lock_sha256": "3b949712c738dd99865f9bdce882cf65f91756e775cd4af6077cbd065d3b368f",
+  "v1_raw_artifact_count_verified": 475
+}

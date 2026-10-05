@@ -131,14 +131,26 @@ class Model(nn.Module):
         return self._last_operator_rebuilds
 
     @staticmethod
-    def _signature(edge_index: torch.Tensor, num_nodes: int, dtype: torch.dtype) -> tuple[Any, ...]:
-        return (id(edge_index), edge_index.data_ptr(), int(getattr(edge_index, "_version", 0)),
+    def _signature(edge_index: torch.Tensor, num_nodes: int, dtype: torch.dtype) -> tuple[Any, ...] | None:
+        # Inference tensors deliberately do not expose a version counter.  A
+        # missing version must never be represented as zero: that would let a
+        # mutated graph reuse a stale sparse operator.  Callers use ``None``
+        # to request a conservative rebuild without caching.
+        try:
+            version = int(edge_index._version)
+        except RuntimeError:
+            return None
+        return (id(edge_index), edge_index.data_ptr(), version,
                 tuple(edge_index.shape), num_nodes, edge_index.device.type,
                 edge_index.device.index, str(dtype))
 
     def _operator(self, edge_index: torch.Tensor, num_nodes: int, dtype: torch.dtype):
         signature = self._signature(edge_index, num_nodes, dtype)
-        if self._operator_cache is not None and self._operator_cache["signature"] == signature:
+        # Even an ordinary input tensor can produce an inference-only sparse
+        # operator while inference_mode is active. Do not retain that object
+        # for later autograd-enabled forwards.
+        cacheable = signature is not None and not torch.is_inference_mode_enabled()
+        if cacheable and self._operator_cache is not None and self._operator_cache["signature"] == signature:
             p = self._operator_cache["p"]
             degree = torch.bincount(p.indices()[0], minlength=num_nodes)
             return p, degree, degree == 0
@@ -165,7 +177,7 @@ class Model(nn.Module):
         p = torch.sparse_coo_tensor(indices, values, (num_nodes, num_nodes),
                                     dtype=dtype, device=edge.device).coalesce()
         isolated = degree == 0
-        self._operator_cache = {"signature": signature, "p": p}
+        self._operator_cache = {"signature": signature, "p": p} if cacheable else None
         self._last_operator_rebuilds += 1
         return p, degree, isolated
 
@@ -270,7 +282,11 @@ class Model(nn.Module):
             structural = torch.stack((degree.to(x.dtype).log1p(), isolated.to(x.dtype),
                                       self._safe_cosine(et, nt), self._safe_cosine(ei, ni)), dim=1)
             context = torch.cat((*values, structural), dim=1)
-            if self.variant == "J_NODE_SHUFFLE":
+            # An explicit intervention applies to either routed variant.
+            # Without one, only J_NODE_SHUFFLE uses its frozen seed/epoch policy.
+            if self._custom_context_permutation is not None:
+                context = context[self._shuffle_permutation(n).to(context.device)]
+            elif self.variant == "J_NODE_SHUFFLE":
                 context = context[self._shuffle_permutation(n).to(context.device)]
             logits = self.router(context)
             weights = logits.softmax(dim=1)

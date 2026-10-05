@@ -309,6 +309,41 @@ def geometry_features(edge_index: torch.Tensor, x_t: torch.Tensor, x_i: torch.Te
     return result
 
 
+def geometry_features_l2_neighbor_mean(edge_index: torch.Tensor, x_t: torch.Tensor,
+                                       x_i: torch.Tensor, train_idx: torch.Tensor,
+                                       val_idx: torch.Tensor, eps: float = 1e-8) -> dict[str, Any]:
+    """Compute modality-local cos(L2(x_v), mean_neighbors(L2(x_u))).
+
+    Thresholds are fit on training nodes only. Isolates are represented by a
+    separate mask/bucket and excluded from cosine threshold fitting.
+    """
+    result: dict[str, Any] = {}
+    tr = train_idx.detach().cpu().long()
+    for name, x in (("text", x_t), ("image", x_i)):
+        unit = torch.nn.functional.normalize(x, p=2, dim=1, eps=eps)
+        neigh, degree = receiver_mean(edge_index, unit)
+        dot = (unit * neigh).sum(1)
+        den = unit.norm(dim=1) * neigh.norm(dim=1)
+        cosine = torch.where(den > 0, dot / den.clamp_min(eps), torch.zeros_like(den))
+        isolated = degree == 0
+        tr_degree = degree[tr][~isolated[tr]].to(torch.float64)
+        tr_cos = cosine[tr][~isolated[tr]].to(torch.float64)
+        q = torch.tensor([0.25, 0.5, 0.75], dtype=torch.float64)
+        degree_q = torch.quantile(tr_degree, q) if tr_degree.numel() else torch.zeros(3, dtype=torch.float64)
+        cosine_q = torch.quantile(tr_cos, q) if tr_cos.numel() else torch.zeros(3, dtype=torch.float64)
+        result[name] = {
+            "degree": degree.cpu(), "cosine": cosine.cpu(), "isolated": isolated.cpu(),
+            "degree_thresholds": [float(v) for v in degree_q],
+            "cosine_thresholds": [float(v) for v in cosine_q],
+            "threshold_source": "training nodes only; cosine excludes isolated nodes",
+            "cosine_definition": "cos(L2(x_v, eps=1e-8), mean_neighbors(L2(x_u, eps=1e-8)))",
+            "modality_independent": True,
+            "train_idx": tr,
+            "val_idx": val_idx.detach().cpu().long(),
+        }
+    return result
+
+
 def bucket_id(values: torch.Tensor, thresholds: list[float]) -> torch.Tensor:
     cuts = torch.tensor(thresholds, dtype=torch.float64)
     return torch.bucketize(values.cpu().to(torch.float64), cuts, right=True)

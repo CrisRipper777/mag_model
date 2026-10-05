@@ -1,0 +1,9 @@
+# v1.1 implementation review
+
+- Scope stayed within the routed context override, probe optimizer defaults, normalized geometry diagnostics, and sparse topology cache safety. No new model objective or real-data training was added.
+- No-override behavior retains the v1 path: J_NODE sends its local context rows unchanged; J_NODE_SHUFFLE still uses the same seed/epoch/namespace permutation. A strict state_dict round trip and the synthetic trained-style router test check this path, intervention rows, unchanged receiver masks/branch representations, and exact restoration after clearing the override.
+- The v1 run registry, protocol lock, checkpoints, predictions, reports, and source hashes were read-only. Preflight verified the complete registered raw artifact set and all 21 input hashes before inference.
+- All 30 selected model checkpoints load with strict state-dict matching. Baseline validation argmax and complete confusion matrices were compared against saved v1 records on each checkpoint's original logged CUDA device.
+- Synthetic/unit command: `conda run -n yhf_env python -m pytest -q tests/test_mag_probe.py` — 20 passed. It covers trained-style router override behavior, strict state loading, optimizer defaults/overrides, generic NC synthetic backward/head/epoch/seed/test-off integration, normalized geometry, and no_grad/inference_mode topology caching.
+- Frozen diagnostic command: `conda run -n yhf_env python scripts/diagnose_frozen_probe_v1_1.py --evidence-root /hdd1/DataInHere/YHF/mag_model` — completed on locked devices; 30/30 validation predictions and confusion matrices matched. No test inference, LP, or real-data optimizer step occurred.
+- The user-owned `CLAUDE.md` deletion remains unstaged and uncommitted. New outputs contain aggregates and provenance only; no per-node predictions, logits, embeddings, features, checkpoints, caches, or training logs are generated.

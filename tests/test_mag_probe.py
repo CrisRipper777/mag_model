@@ -2,13 +2,18 @@ from __future__ import annotations
 
 import base64
 import json
+import logging
 import torch
 import zlib
 from omegaconf import OmegaConf
 
-from src.analysis.problem_validation import bucket_metrics, confusion_metrics, correctness_pair
+from src.analysis.problem_validation import (bucket_metrics, confusion_metrics, correctness_pair,
+    geometry_features, geometry_features_l2_neighbor_mean)
 from src.analysis.problem_validation import compose_probe_config, fixed_split_path
 from src.models.mag_probe import Model, resolve_capacity_widths
+from src.tasks.common import build_optimizer
+from src.data.types import MAGData
+from src.tasks.nc import run_nc
 from scripts.evaluate_locked_probe import ATTEMPT_CAP as EVAL_ATTEMPT_CAP
 from scripts.evaluate_locked_probe import SEEDS as EVAL_SEEDS, eval_fingerprint
 from scripts.run_problem_validation import runtime_job
@@ -73,6 +78,32 @@ def test_graph_change_rebuilds_topology_and_cache_is_not_serialized():
     assert model.operator_rebuilds == 3
 
 
+def test_operator_cache_is_conservative_for_inference_tensors_and_works_in_no_grad():
+    model = make_model("J_FIXED").eval()
+    x = torch.randn(5, 5)
+    regular_edge = torch.tensor([[0, 1], [2, 2]])
+    with torch.no_grad():
+        model(x, regular_edge)
+        model(x, regular_edge)
+        assert model.operator_rebuilds == 1
+        regular_edge[0, 0] = 3
+        model(x, regular_edge)
+        assert model.operator_rebuilds == 2
+    with torch.inference_mode():
+        model(x, regular_edge)
+        assert model.operator_rebuilds == 3
+        model(x, regular_edge)
+        assert model.operator_rebuilds == 4
+        inference_edge = torch.tensor([[0, 1], [2, 2]])
+        assert inference_edge.is_inference()
+        first, *_ = model(x, inference_edge)
+        assert model.operator_rebuilds == 5
+        inference_edge[0, 0] = 3
+        second, *_ = model(x, inference_edge)
+        assert model.operator_rebuilds == 6
+        assert not torch.equal(first, second)
+
+
 def test_full_graph_forward_repeats_exactly_in_eval_and_active_weights_sum_to_one():
     torch.manual_seed(2)
     model = make_model("J_NODE").eval()
@@ -99,26 +130,68 @@ def test_neighbor_only_variant_keeps_isolates_zero():
     assert torch.equal(z[[0, 1, 3, 4]], torch.zeros((4, 128)))
 
 
-def test_shuffle_permutation_changes_context_rows_not_receiver_paths_or_mask():
-    torch.manual_seed(3)
-    model = make_model("J_NODE_SHUFFLE").eval()
-    x = torch.randn(5, 5)
-    edge = torch.tensor([[0, 1, 2, 3], [2, 2, 3, 4]])
-    captured = []
-    model.router.register_forward_pre_hook(lambda _m, args: captured.append(args[0].detach().clone()))
-    model.set_context_permutation(torch.arange(5))
-    z_identity, *_ = model(x, edge)
-    model.set_context_permutation(torch.tensor([2, 4, 1, 0, 3]))
-    z_shuffled, _, _, _, aux = model(x, edge)
-    assert len(captured) == 2
-    assert not torch.equal(captured[0], captured[1])
-    # The first 512 context columns are shuffled copies of complete rows.
-    assert torch.equal(torch.sort(captured[0][:, :512], dim=0).values,
-                       torch.sort(captured[1][:, :512], dim=0).values)
-    # Zero output initialization yields the same uniform fusion of receiver-owned branches.
-    assert torch.equal(z_identity, z_shuffled)
-    assert torch.equal(aux["activity_mask"], torch.tensor(
-        [[1, 0, 1, 0], [1, 0, 1, 0], [1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]], dtype=torch.bool))
+def test_explicit_context_override_intervenes_for_both_routed_variants_and_clears():
+    x = torch.randn(6, 5)
+    edge = torch.tensor([[0, 1, 2, 3, 4], [2, 2, 3, 4, 5]])
+    permutation = torch.tensor([2, 5, 1, 0, 4, 3])
+    expected_mask = torch.tensor([[1, 0, 1, 0], [1, 0, 1, 0], [1, 1, 1, 1],
+                                  [1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]], dtype=torch.bool)
+    for variant in ("J_NODE", "J_NODE_SHUFFLE"):
+        torch.manual_seed(31)
+        model = make_model(variant).eval()
+        # Model a trained router: its last layer is nonzero, unlike init-time uniform gates.
+        torch.nn.init.normal_(model.router[-1].weight, std=0.08)
+        torch.nn.init.normal_(model.router[-1].bias, std=0.04)
+        seen_context, seen_phi = [], []
+        model.router.register_forward_pre_hook(
+            lambda _m, args: seen_context.append(args[0].detach().clone()))
+        model.phi.register_forward_hook(
+            lambda _m, _args, output: seen_phi.append(output.detach().clone()))
+
+        model.set_context_permutation(None)
+        z_default, _, _, _, aux_default = model(x, edge)
+        default_context = seen_context[-1]
+
+        model.set_context_permutation(torch.arange(x.size(0)))
+        z_base, _, _, _, aux_base = model(x, edge)
+        base_context = seen_context[-1]
+        base_phi = seen_phi[-2:]
+        assert torch.equal(aux_base["activity_mask"], expected_mask)
+
+        model.set_context_permutation(permutation)
+        z_intervened, _, _, _, aux_intervened = model(x, edge)
+        assert torch.equal(seen_context[-1], base_context[permutation])
+        assert all(torch.equal(a, b) for a, b in zip(base_phi, seen_phi[-2:]))
+        assert torch.equal(aux_intervened["activity_mask"], aux_base["activity_mask"])
+        assert torch.equal(aux_intervened["degree"], aux_base["degree"])
+        assert not torch.allclose(aux_intervened["router_weights"], aux_base["router_weights"])
+        assert not torch.allclose(z_intervened, z_base)
+
+        model.set_context_permutation(None)
+        z_restored, _, _, _, aux_restored = model(x, edge)
+        assert torch.equal(seen_context[-1], default_context)
+        assert torch.equal(z_restored, z_default)
+        assert torch.equal(aux_restored["router_weights"], aux_default["router_weights"])
+
+
+def test_no_override_routed_default_and_state_dict_round_trip_are_unchanged():
+    torch.manual_seed(37)
+    node = make_model("J_NODE").eval()
+    torch.nn.init.normal_(node.router[-1].weight, std=0.05)
+    shuffle = make_model("J_NODE_SHUFFLE").eval()
+    shuffle.load_state_dict(node.state_dict(), strict=True)
+    x = torch.randn(6, 5)
+    edge = torch.tensor([[0, 1, 2, 3, 4], [2, 2, 3, 4, 5]])
+    captured = {"node": [], "shuffle": []}
+    node.router.register_forward_pre_hook(lambda _m, a: captured["node"].append(a[0].detach().clone()))
+    shuffle.router.register_forward_pre_hook(lambda _m, a: captured["shuffle"].append(a[0].detach().clone()))
+    z_node, *_ = node(x, edge)
+    z_shuffle, *_ = shuffle(x, edge)
+    p = shuffle._shuffle_permutation(x.size(0))
+    assert torch.equal(captured["node"][0][p], captured["shuffle"][0])
+    assert not torch.equal(captured["node"][0], captured["shuffle"][0])
+    assert z_node.shape == z_shuffle.shape
+    assert set(node.state_dict()) == set(shuffle.state_dict())
 
 
 def test_early_nonlinear_fusion_is_not_late_linear_fusion():
@@ -170,6 +243,77 @@ def test_training_seed_never_changes_fixed_split_and_test_is_disabled():
         assert cfg.task.scheduler is None
         assert cfg.num_runs == 1 and cfg.seed == seed
         assert cfg.task.lr == 3e-4
+
+
+def test_composed_probe_uses_task_optimizer_defaults_and_model_overrides():
+    cfg = compose_probe_config("Movies", 42, fixed_split_path("Movies"), 0.003, "J_NODE", "cpu")
+    assert "lr" not in cfg.model and "weight_decay" not in cfg.model
+    model = Model(cfg, {"text_dim": 3, "visual_dim": 2, "num_classes": 3, "num_nodes": 5})
+    optimizer = build_optimizer(model.parameters(), cfg, model=model)
+    assert optimizer.param_groups[0]["lr"] == 0.003
+    assert optimizer.param_groups[0]["weight_decay"] == 1e-4
+    cfg.model.lr = 0.007
+    cfg.model.weight_decay = 0.02
+    override_optimizer = build_optimizer(model.parameters(), cfg, model=model)
+    assert override_optimizer.param_groups[0]["lr"] == 0.007
+    assert override_optimizer.param_groups[0]["weight_decay"] == 0.02
+
+
+def test_normalized_neighbor_geometry_differs_from_raw_mean_for_unequal_norms():
+    edge = torch.tensor([[1, 2], [0, 0]])
+    text = torch.tensor([[0., 1.], [100., 0.], [0., 1.], [1., 1.]])
+    image = torch.tensor([[1., 0.], [0., 1.], [2., 0.], [1., -1.]])
+    train, val = torch.tensor([0, 1, 2]), torch.tensor([3])
+    raw = geometry_features(edge, text, image, train, val)
+    normalized = geometry_features_l2_neighbor_mean(edge, text, image, train, val)
+    assert abs(float(raw["text"]["cosine"][0]) - 0.01) < 1e-3
+    assert abs(float(normalized["text"]["cosine"][0]) - 2 ** -0.5) < 1e-6
+    assert normalized["text"]["cosine_thresholds"] != raw["text"]["cosine_thresholds"]
+    assert torch.equal(normalized["text"]["isolated"], torch.tensor([False, True, True, True]))
+
+
+def test_generic_nc_synthetic_integration_uses_external_head_seed_and_test_off(tmp_path, monkeypatch):
+    cfg = compose_probe_config("Movies", 17, fixed_split_path("Movies"), 0.003, "J_NODE", "cpu")
+    cfg.model.hidden_dim = 8
+    cfg.model.dropout = 0.0
+    cfg.task.epochs = 2
+    cfg.task.patience = 2
+    cfg.task.early_stop_min_epoch = 1
+    cfg.task.early_stop_min_delta = 0.0
+    cfg.task.eval_every = 1
+    cfg.task.grad_clip = 1.0
+    cfg.task.inference_batch_size = 32
+    cfg.task.evaluate_test = False
+    cfg.task.save_ckpt_path = str(tmp_path / "synthetic_nc.pt")
+
+    x_t = torch.randn(8, 3)
+    x_i = torch.randn(8, 2)
+    data = MAGData(name="synthetic", source="synthetic", task="nc", x=torch.cat((x_t, x_i), 1),
+        x_t=x_t, x_i=x_i, edge_index=torch.tensor([[0, 1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6]]),
+        num_nodes=8, y=torch.tensor([0, 1, 2, 0, 1, 2, 0, 1]),
+        train_idx=torch.tensor([0, 1, 2, 3]), val_idx=torch.tensor([4, 5]),
+        test_idx=torch.tensor([6, 7]), num_classes=3)
+    epochs = []
+    original_set_epoch = Model.set_epoch
+    def tracked_set_epoch(self, epoch):
+        epochs.append(int(epoch))
+        original_set_epoch(self, epoch)
+    monkeypatch.setattr(Model, "set_epoch", tracked_set_epoch)
+    logger = logging.getLogger("test-generic-nc-smoke")
+    logger.disabled = True
+
+    first = run_nc(cfg, data, torch.device("cpu"), logger)
+    checkpoint1 = torch.load(cfg.task.save_ckpt_path, map_location="cpu", weights_only=False)
+    second = run_nc(cfg, data, torch.device("cpu"), logger)
+    checkpoint2 = torch.load(cfg.task.save_ckpt_path, map_location="cpu", weights_only=False)
+    assert epochs == [1, 2, 1, 2]
+    assert set(first) == {"val_acc", "val_macro_f1"}
+    assert all(torch.isfinite(torch.tensor(pair)).all() for pair in first.values())
+    assert first == second
+    assert set(checkpoint1["head_state"]) == {"weight", "bias"}
+    assert all(torch.equal(checkpoint1["head_state"][k], checkpoint2["head_state"][k])
+               for k in checkpoint1["head_state"])
+    assert "test_acc" not in checkpoint2["metrics"] and "test_macro_f1" not in checkpoint2["metrics"]
 
 
 def test_single_modality_model_only_instantiates_one_adapter():

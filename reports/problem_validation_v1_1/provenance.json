@@ -1,0 +1,763 @@
+{
+  "device_policy": "locked per-checkpoint device from v1 training logs",
+  "diagnostic_script_path": "/hdd1/DataInHere/YHF/mag_model/scripts/diagnose_frozen_probe_v1_1.py",
+  "diagnostic_script_sha256": "39207e1b9502d95d55935e5129eb67d8ba3d29f6a8544e7d7f437771ddacf766",
+  "legacy_evaluator_hash_comparison": {
+    "current_checkout_sha256": "f8e7dde85435d4dc5b3cba2a9538f8cfad1fdaee2754be5a9b77c3082d9990c7",
+    "locked_source_sha256": "9971f5a2cd40645acafb5482341c9c4dffc2a16a54632397848b41623d928099",
+    "old_lock_was_not_rewritten_or_bypassed": true
+  },
+  "modified_code_hashes": {
+    "configs/model/mag_probe.yaml": "ef74ec7d335809d5fc7bae4fdcd0b145b24d08781058247180f88cbaa9378a23",
+    "src/analysis/problem_validation.py": "3ec6b358fccfa5953fc859673e9efea6f62390e73896919cb59e871f9bf2e954",
+    "src/models/mag_probe.py": "c0524e7dba3f25127dd0a3d6b730607b6c34d55eb8a17920e2ae5ee2c6e80a19",
+    "src/tasks/common.py": "137f7d76de29f290de1bff42396e3b3d65b45c064f0bcc30a000e9aa3e6855e1",
+    "tests/test_mag_probe.py": "5694900e45e6599ccd1e3e52c5013f37a1a554adb267f20252261c0d53cc3a76"
+  },
+  "new_diagnostic_code_is_not_a_resigned_v1_protocol": true,
+  "old_argmax_read_scope": "validation argmax slice and validation confusion only; test partition not accessed",
+  "old_result_jsonl_projection": "locked validation summary and training provenance retained; test-metric fields discarded",
+  "runtime_environment": {
+    "cuda_available": true,
+    "cuda_device_names": [
+      "NVIDIA GeForce RTX 3090",
+      "NVIDIA GeForce RTX 3090"
+    ],
+    "python": "3.12.13",
+    "torch": "2.4.0+cu121"
+  },
+  "v1_evaluation_code_commit": "63867331e9d3373f19136e47ab192cc9fb014c97",
+  "v1_evaluation_lock_sha256": "3b949712c738dd99865f9bdce882cf65f91756e775cd4af6077cbd065d3b368f",
+  "v1_locked_evaluation_source_hashes": {
+    "configs/config.yaml": "1b06934c68b88e931909de4cb65b1fa51725df94ff6139d127a6ba85355fe399",
+    "configs/dataset/Grocery.yaml": "18969c97a0f06ab33fd3094624d524f03de48139405159bb06d19cf107105e56",
+    "configs/dataset/Movies.yaml": "81b803b0ed79ad86d483aee5dceadac149ca9ba2263e31160b22951a7812f5c8",
+    "configs/dataset/Reddit-S.yaml": "010129b2a4b7de2969286de9a74108a7cd08a481feaac067dc5cae62db36246a",
+    "configs/dataset/Toys.yaml": "d27227abdd6a9f4f4b8138e506deaadbf613b52d50cf5847fe9d8f3714856a73",
+    "configs/dataset/ele-fashion.yaml": "50e683dcae43c505c999ecbc22a6b5b380a8b897d4942933c01f266f8169b917",
+    "configs/model/mag_probe.yaml": "0fa6fb4e7672dae98aad9c9b22a6734155e566dcb7cdff710c1b5fca1884383d",
+    "configs/task/nc.yaml": "f959a73d5256d2e51b2ce3600c4f7252e7d79122c267aa70dc84abeddedb3852",
+    "scripts/evaluate_locked_probe.py": "9971f5a2cd40645acafb5482341c9c4dffc2a16a54632397848b41623d928099",
+    "scripts/run_problem_validation.py": "8b1b66277eeb66f651e6a3cbf8ba33e14dc2525576a987a3873c04624153aeb1",
+    "src/analysis/problem_validation.py": "adb8650dfa7ba848d487df716808dea26bdfa092bccb06caed9341916e033030",
+    "src/data/graph_utils.py": "8fa1c35c1897e25f2f30628ddc0312598fe9e581692a48cccb131a12a50f10df",
+    "src/data/loaders.py": "08fe47584069a8f690d87d20a2b892d008c43a1dad6bdb3d08bb2f7e22ddd173",
+    "src/data/splits.py": "b352a1c558752cc82075e7405723d42a408cb416386ad412669f0339aacd1d22",
+    "src/data/types.py": "531968f22725acc211d5906c66bf0189d35857cbbdb972d12ee4ebdd29d3d2f8",
+    "src/models/factory.py": "018ed8270319dc179831e598673f89550dca7473d322daf6c14654f9fb9bea0b",
+    "src/models/mag_probe.py": "f0327f3f92574cdc1a822b9d56b78454c6a83234a2534df54a7cf21bb87432b2",
+    "src/tasks/nc.py": "ebbf2b241ced977332d930ad831e53b0dfc43d488c86cbcacedd8d5b9a9c3b57",
+    "src/utils/seeds.py": "3e423b11a7e59e9b51c48e176d08b05b8fbd6294f364e1895ed2f1413d2e02f4"
+  },
+  "v1_old_manifest_sha256": "c3e6652e8bdc5d90103b468209d167cae88b3c2271d1c358985842ca543585a1",
+  "v1_raw_artifact_count_verified": 475,
+  "v1_raw_artifacts_index_sha256": "e960c734137924ea048ed7ace2fe464ec0646460fd1302eceeacbd6a607adec1",
+  "v1_raw_evidence_directory": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1",
+  "v1_registry_path": "/hdd1/DataInHere/YHF/mag_model/reports/problem_validation_v1/run_registry.json",
+  "v1_registry_sha256": "15514b9aacfdbc36d68efa2c61cdeffc94fa7ab5f4deb820f00b9efbac97f548",
+  "v1_registry_source_hashes": {
+    "configs/config.yaml": "1b06934c68b88e931909de4cb65b1fa51725df94ff6139d127a6ba85355fe399",
+    "configs/dataset/Grocery.yaml": "18969c97a0f06ab33fd3094624d524f03de48139405159bb06d19cf107105e56",
+    "configs/dataset/Movies.yaml": "81b803b0ed79ad86d483aee5dceadac149ca9ba2263e31160b22951a7812f5c8",
+    "configs/dataset/Reddit-S.yaml": "010129b2a4b7de2969286de9a74108a7cd08a481feaac067dc5cae62db36246a",
+    "configs/dataset/Toys.yaml": "d27227abdd6a9f4f4b8138e506deaadbf613b52d50cf5847fe9d8f3714856a73",
+    "configs/dataset/ele-fashion.yaml": "50e683dcae43c505c999ecbc22a6b5b380a8b897d4942933c01f266f8169b917",
+    "configs/model/mag_probe.yaml": "0fa6fb4e7672dae98aad9c9b22a6734155e566dcb7cdff710c1b5fca1884383d",
+    "configs/task/nc.yaml": "f959a73d5256d2e51b2ce3600c4f7252e7d79122c267aa70dc84abeddedb3852",
+    "scripts/evaluate_locked_probe.py": "9971f5a2cd40645acafb5482341c9c4dffc2a16a54632397848b41623d928099",
+    "scripts/run_problem_validation.py": "8b1b66277eeb66f651e6a3cbf8ba33e14dc2525576a987a3873c04624153aeb1",
+    "src/analysis/problem_validation.py": "adb8650dfa7ba848d487df716808dea26bdfa092bccb06caed9341916e033030",
+    "src/data/graph_utils.py": "8fa1c35c1897e25f2f30628ddc0312598fe9e581692a48cccb131a12a50f10df",
+    "src/data/loaders.py": "08fe47584069a8f690d87d20a2b892d008c43a1dad6bdb3d08bb2f7e22ddd173",
+    "src/data/splits.py": "b352a1c558752cc82075e7405723d42a408cb416386ad412669f0339aacd1d22",
+    "src/data/types.py": "531968f22725acc211d5906c66bf0189d35857cbbdb972d12ee4ebdd29d3d2f8",
+    "src/models/factory.py": "018ed8270319dc179831e598673f89550dca7473d322daf6c14654f9fb9bea0b",
+    "src/models/mag_probe.py": "f0327f3f92574cdc1a822b9d56b78454c6a83234a2534df54a7cf21bb87432b2",
+    "src/tasks/nc.py": "ebbf2b241ced977332d930ad831e53b0dfc43d488c86cbcacedd8d5b9a9c3b57",
+    "src/utils/seeds.py": "3e423b11a7e59e9b51c48e176d08b05b8fbd6294f364e1895ed2f1413d2e02f4"
+  },
+  "v1_training_devices_from_locked_logs": {
+    "P1-Grocery-J_GLOBAL-s43": "cuda:1",
+    "P1-Grocery-J_GLOBAL-s44": "cuda:0",
+    "P1-Movies-J_GLOBAL-s43": "cuda:0",
+    "P1-Movies-J_GLOBAL-s44": "cuda:1",
+    "P2-Grocery-J_NODE-s43": "cuda:0",
+    "P2-Grocery-J_NODE-s44": "cuda:1",
+    "P2-Movies-J_NODE-s43": "cuda:1",
+    "P2-Movies-J_NODE-s44": "cuda:0",
+    "P3-Reddit-S-J_GLOBAL-s42": "cuda:0",
+    "P3-Reddit-S-J_GLOBAL-s43": "cuda:1",
+    "P3-Reddit-S-J_GLOBAL-s44": "cuda:0",
+    "P3-Reddit-S-J_NODE-s42": "cuda:1",
+    "P3-Reddit-S-J_NODE-s43": "cuda:0",
+    "P3-Reddit-S-J_NODE-s44": "cuda:1",
+    "P3-Toys-J_GLOBAL-s42": "cuda:1",
+    "P3-Toys-J_GLOBAL-s43": "cuda:0",
+    "P3-Toys-J_GLOBAL-s44": "cuda:1",
+    "P3-Toys-J_NODE-s42": "cuda:0",
+    "P3-Toys-J_NODE-s43": "cuda:1",
+    "P3-Toys-J_NODE-s44": "cuda:0",
+    "P3-ele-fashion-J_GLOBAL-s42": "cuda:1",
+    "P3-ele-fashion-J_GLOBAL-s43": "cuda:1",
+    "P3-ele-fashion-J_GLOBAL-s44": "cuda:1",
+    "P3-ele-fashion-J_NODE-s42": "cuda:1",
+    "P3-ele-fashion-J_NODE-s43": "cuda:1",
+    "P3-ele-fashion-J_NODE-s44": "cuda:1",
+    "cal-Grocery-J_GLOBAL-s42-lr0.003": "cuda:0",
+    "cal-Grocery-J_NODE-s42-lr0.003": "cuda:1",
+    "cal-Movies-J_GLOBAL-s42-lr0.003": "cuda:1",
+    "cal-Movies-J_NODE-s42-lr0.003": "cuda:0"
+  },
+  "v1_training_source_sha": "63867331e9d3373f19136e47ab192cc9fb014c97",
+  "verified_checkpoint_sources": [
+    {
+      "bytes": 939271,
+      "dataset": "Movies",
+      "job_id": "P1-Movies-J_GLOBAL-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL/seed42/cal-Movies-J_GLOBAL-s42-lr0.003.pt",
+      "seed": 42,
+      "sha256": "26d8c289dde9022af2cefb4f4e227ce36b97eeb6eb4319dd05c142ae0fc4cfb9",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 939118,
+      "dataset": "Movies",
+      "job_id": "P1-Movies-J_GLOBAL-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL/seed43/P1-Movies-J_GLOBAL-s43.pt",
+      "seed": 43,
+      "sha256": "9017b86428324328f0ec884bfd74a142876d6f96c0cfe8c13500bdcb5903f43a",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 939118,
+      "dataset": "Movies",
+      "job_id": "P1-Movies-J_GLOBAL-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_GLOBAL/seed44/P1-Movies-J_GLOBAL-s44.pt",
+      "seed": 44,
+      "sha256": "994b366bc4ba4bd385826e378d67017b59ae22ef55d999a7cf849f234824c0cc",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 939352,
+      "dataset": "Grocery",
+      "job_id": "P1-Grocery-J_GLOBAL-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL/seed42/cal-Grocery-J_GLOBAL-s42-lr0.003.pt",
+      "seed": 42,
+      "sha256": "4aa2400a59a1f695903c170430596456ef0ba5a33642ef7b225084a9046c6878",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 939135,
+      "dataset": "Grocery",
+      "job_id": "P1-Grocery-J_GLOBAL-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL/seed43/P1-Grocery-J_GLOBAL-s43.pt",
+      "seed": 43,
+      "sha256": "be1db4d3fa8ee26db53b15f198eec31f81113b80f1512d4a9e4328f3c1a9ea73",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 939135,
+      "dataset": "Grocery",
+      "job_id": "P1-Grocery-J_GLOBAL-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_GLOBAL/seed44/P1-Grocery-J_GLOBAL-s44.pt",
+      "seed": 44,
+      "sha256": "6ab65cfe7346c1cdced5687a06ce49071f79617cc64e24302d300568f53766d7",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 1006814,
+      "dataset": "Movies",
+      "job_id": "P2-Movies-J_NODE-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE/seed42/cal-Movies-J_NODE-s42-lr0.003.pt",
+      "seed": 42,
+      "sha256": "e6950f3f20bccfa11a062f2eaf48de63ab09a768ab6975c31eee72820e83e545",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 1006570,
+      "dataset": "Movies",
+      "job_id": "P2-Movies-J_NODE-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE/seed43/P2-Movies-J_NODE-s43.pt",
+      "seed": 43,
+      "sha256": "de1348703c91b002e49103e8dee7aa0072bf256a9bbc8f4dde36567a9d3442e1",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 1006570,
+      "dataset": "Movies",
+      "job_id": "P2-Movies-J_NODE-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Movies/J_NODE/seed44/P2-Movies-J_NODE-s44.pt",
+      "seed": 44,
+      "sha256": "932ed5c7872fa3d900a2f35b0ff9d9f441b73f2b081d7919d57cd36a8c54c7ec",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 1006834,
+      "dataset": "Grocery",
+      "job_id": "P2-Grocery-J_NODE-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE/seed42/cal-Grocery-J_NODE-s42-lr0.003.pt",
+      "seed": 42,
+      "sha256": "9d5a5c5ce8bfa107624634829871d8a2664140d2646063857963c08517b30e28",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 1006590,
+      "dataset": "Grocery",
+      "job_id": "P2-Grocery-J_NODE-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE/seed43/P2-Grocery-J_NODE-s43.pt",
+      "seed": 43,
+      "sha256": "04cc9cf239f633b06060604e2d58d26c0d03c6e981f4829d16dcbae5dced186e",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 1006590,
+      "dataset": "Grocery",
+      "job_id": "P2-Grocery-J_NODE-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Grocery/J_NODE/seed44/P2-Grocery-J_NODE-s44.pt",
+      "seed": 44,
+      "sha256": "a777ba66e1e03b124e8fe7aa5778fd33404822a04997e46245af8c0dcc142abb",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 937996,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_GLOBAL-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_GLOBAL/seed42/P3-Toys-J_GLOBAL-s42.pt",
+      "seed": 42,
+      "sha256": "432dee9be13db8cbd1fdd2fa5bac0129547d401c9959554e8a2d553db2c324ee",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 937996,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_GLOBAL-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_GLOBAL/seed43/P3-Toys-J_GLOBAL-s43.pt",
+      "seed": 43,
+      "sha256": "c2fcb9eac04b0d78213fb734b7ca6a66387b900a863ea005ab8714363814ff99",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 937996,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_GLOBAL-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_GLOBAL/seed44/P3-Toys-J_GLOBAL-s44.pt",
+      "seed": 44,
+      "sha256": "380d08eac83619f9e0da48abe7e418dd655f2309449cebf0fe40c3ca37015cbd",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 1005442,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_NODE-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_NODE/seed42/P3-Toys-J_NODE-s42.pt",
+      "seed": 42,
+      "sha256": "821f083a0907c68cd098db1422ad0eb9d95e5db18ed6c1a5c6c049f2525bb4a4",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 1005442,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_NODE-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_NODE/seed43/P3-Toys-J_NODE-s43.pt",
+      "seed": 43,
+      "sha256": "0af63d6372360caf73050f7dd003f44c95b47a1d3723621d6e8bc9aab1897bdd",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 1005442,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_NODE-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Toys/J_NODE/seed44/P3-Toys-J_NODE-s44.pt",
+      "seed": 44,
+      "sha256": "76bb9374d246410f0752217dc0620e3a107b5072c4c70a3e85d40e405a09cb7d",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 939152,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_GLOBAL-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_GLOBAL/seed42/P3-Reddit-S-J_GLOBAL-s42.pt",
+      "seed": 42,
+      "sha256": "816ab0eb64175346fd2522be583a33f4ff08ecc1bb84895505367c0455617d12",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 939152,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_GLOBAL-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_GLOBAL/seed43/P3-Reddit-S-J_GLOBAL-s43.pt",
+      "seed": 43,
+      "sha256": "675d13b5332ef95e8e22bd8f94b794916cbc948a0abf7c2979adb3a8c5b357a4",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 939152,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_GLOBAL-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_GLOBAL/seed44/P3-Reddit-S-J_GLOBAL-s44.pt",
+      "seed": 44,
+      "sha256": "3c514059ec2985b9d2cae76f422996bef2b91587cda07105b00795c44463da31",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 1006674,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_NODE-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_NODE/seed42/P3-Reddit-S-J_NODE-s42.pt",
+      "seed": 42,
+      "sha256": "89ee2aca99cca2d5d10e170da0570ae97f36909c344afb20240a2e2791583ef2",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 1006674,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_NODE-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_NODE/seed43/P3-Reddit-S-J_NODE-s43.pt",
+      "seed": 43,
+      "sha256": "9b90ca05ce14762af30b7e115a802d955ef2495d068088e3d2f9cc21b00dc0c9",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 1006674,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_NODE-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/Reddit-S/J_NODE/seed44/P3-Reddit-S-J_NODE-s44.pt",
+      "seed": 44,
+      "sha256": "072493a8164aa646dd1587fe8741267519542eac4d19331d20097219eba4808d",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 673027,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_GLOBAL-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_GLOBAL/seed42/P3-ele-fashion-J_GLOBAL-s42.pt",
+      "seed": 42,
+      "sha256": "546df9107c69f5e53d858831fb38039f28f599cf9b97421ee753a8702a7bc0e3",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 673027,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_GLOBAL-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_GLOBAL/seed43/P3-ele-fashion-J_GLOBAL-s43.pt",
+      "seed": 43,
+      "sha256": "4c8865d6a17a52d985cdf206e322671096bf32566a8d9e1bde05867608413294",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 673027,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_GLOBAL-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_GLOBAL/seed44/P3-ele-fashion-J_GLOBAL-s44.pt",
+      "seed": 44,
+      "sha256": "12a00a768321217cb873166a4d5df2ab706d01d270c49658666a582c23e683f4",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 740494,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_NODE-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_NODE/seed42/P3-ele-fashion-J_NODE-s42.pt",
+      "seed": 42,
+      "sha256": "22bd7543748f15ed702be0028ecd39b42f7b8d8c8f565aab8a82d31becbc09b0",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 740494,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_NODE-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_NODE/seed43/P3-ele-fashion-J_NODE-s43.pt",
+      "seed": 43,
+      "sha256": "fa214f65a8fae4df096f839d698f917c37398e26e5c7bdd57e26e01684741428",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 740494,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_NODE-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/checkpoints/ele-fashion/J_NODE/seed44/P3-ele-fashion-J_NODE-s44.pt",
+      "seed": 44,
+      "sha256": "e162f3b84b183ceab8e95a20c85f5a0be7cbd18457a5800f55b69becc6e05d67",
+      "variant": "J_NODE"
+    }
+  ],
+  "verified_data_and_split_inputs": [
+    {
+      "bytes": 135427,
+      "path": "/hdd1/DataInHere/YHF/data/MAGB_split/Movies_nc_seed42_train0.6_val0.2.pt",
+      "sha256": "9089d5eb1d5a3edeae46bd9296e4f85815fccf8e489452bc87a2126a88546211"
+    },
+    {
+      "bytes": 102432896,
+      "path": "/hdd1/DataInHere/YHF/data/Movies/ImageFeature/Movies_openai_clip-vit-large-patch14.npy",
+      "sha256": "c422191f1a7cdc85598f00b52e0f60a02f65d6a48548e9c42a8530b3e572dfeb"
+    },
+    {
+      "bytes": 1885413,
+      "path": "/hdd1/DataInHere/YHF/data/Movies/MoviesGraph.pt",
+      "sha256": "f6798e6951f29b1d76aa7938684f44d502600c31f3a5987722f5bc450511700f"
+    },
+    {
+      "bytes": 51216512,
+      "path": "/hdd1/DataInHere/YHF/data/Movies/TextFeature/Movies_roberta_base_512_mean.npy",
+      "sha256": "38cc09ef3192eac8a022303fd48a9954bea9c3064078846aa5d2db31e137eece"
+    },
+    {
+      "bytes": 1512229,
+      "path": "/hdd1/DataInHere/YHF/data/Grocery/GroceryGraph.pt",
+      "sha256": "af203035d655275a20da353f481e67f4b595eeb73ef1d397d0d9b603cefc70d7"
+    },
+    {
+      "bytes": 104902784,
+      "path": "/hdd1/DataInHere/YHF/data/Grocery/ImageFeature/Grocery_openai_clip-vit-large-patch14.npy",
+      "sha256": "ac50f63312488f3e94271532e7fd863c27a332c6ca8a4b9cc801afb9ce0b2470"
+    },
+    {
+      "bytes": 52451456,
+      "path": "/hdd1/DataInHere/YHF/data/Grocery/TextFeature/Grocery_roberta_base_256_mean.npy",
+      "sha256": "b67ab7600b842807b53805e31b9d969d860e9c48b1a56f76799d44367f33c516"
+    },
+    {
+      "bytes": 138634,
+      "path": "/hdd1/DataInHere/YHF/data/MAGB_split/Grocery_nc_seed42_train0.6_val0.2.pt",
+      "sha256": "3ca4581592fcb705b42672b18412375d33bf6109c72e4714786066878a54d58e"
+    },
+    {
+      "bytes": 167541,
+      "path": "/hdd1/DataInHere/YHF/data/MAGB_split/Toys_nc_seed42_train0.6_val0.2.pt",
+      "sha256": "cc0633526581d9281d0a92fa50d989309f8b81b982305409d3034f10a28e41d2"
+    },
+    {
+      "bytes": 127150208,
+      "path": "/hdd1/DataInHere/YHF/data/Toys/ImageFeature/Toys_openai_clip-vit-large-patch14.npy",
+      "sha256": "92bfa68be36f0b7d5c757ca18bf505173bc79eb2d5094600d7d03b22c2716552"
+    },
+    {
+      "bytes": 63575168,
+      "path": "/hdd1/DataInHere/YHF/data/Toys/TextFeature/Toys_roberta_base_512_mean.npy",
+      "sha256": "f799f191efc5a70a306c263b802aa450e55c31f623e29f9360fc45627de9c1f7"
+    },
+    {
+      "bytes": 1185565,
+      "path": "/hdd1/DataInHere/YHF/data/Toys/ToysGraph.pt",
+      "sha256": "13481ffe2d425085711ef21d8b738e035bde7293070cfc590a653c58ace87535"
+    },
+    {
+      "bytes": 129169,
+      "path": "/hdd1/DataInHere/YHF/data/MAGB_split/Reddit-S_nc_seed42_train0.6_val0.2.pt",
+      "sha256": "2154e82ef061de9d3c018aa19674ea6e2220953f272bedebb1559396e43750a5"
+    },
+    {
+      "bytes": 97652864,
+      "path": "/hdd1/DataInHere/YHF/data/Reddit-S/ImageFeature/RedditS_openai_clip-vit-large-patch14.npy",
+      "sha256": "936191dcf3c06e367674cfedd2e80fd87e3120485a9f45acb8ff48e7b3bad58b"
+    },
+    {
+      "bytes": 4661349,
+      "path": "/hdd1/DataInHere/YHF/data/Reddit-S/RedditSGraph.pt",
+      "sha256": "06af9e010df31f5a6537afa5c96f5cbdb9687b5722c1a1acc80d094bd216309b"
+    },
+    {
+      "bytes": 48826496,
+      "path": "/hdd1/DataInHere/YHF/data/Reddit-S/TextFeature/RedditS_roberta_base_100_mean.npy",
+      "sha256": "da41d78a8b65902ee902295949da437228d7b6d6de303a748f6c324072d65abd"
+    },
+    {
+      "bytes": 400450289,
+      "path": "/hdd1/DataInHere/YHF/data/ele-fashion/clip_feat.pt",
+      "sha256": "b2bd3cc6d9c4c2581a70567ee282580c44e486f0e55a83e62abf8935116a86c6"
+    },
+    {
+      "bytes": 196161,
+      "path": "/hdd1/DataInHere/YHF/data/ele-fashion/labels-w-missing.pt",
+      "sha256": "888e80c154a18d61a6b8f75ed2f02f0cb9440613e631810432362857b6a33065"
+    },
+    {
+      "bytes": 2923007,
+      "path": "/hdd1/DataInHere/YHF/data/ele-fashion/nc_edges-nodeid.pt",
+      "sha256": "6c732c72ea8e1c8e2a5ae1a53a81a80d0b122ea8bb2475801ed20776f3fdcff2"
+    },
+    {
+      "bytes": 2312703,
+      "path": "/hdd1/DataInHere/YHF/data/ele-fashion/node_mapping.pt",
+      "sha256": "ee6d00b8285a7c8204ee76c808331c85d987e3a04d24d52262e81a71f8e378f3"
+    },
+    {
+      "bytes": 358187,
+      "path": "/hdd1/DataInHere/YHF/data/ele-fashion/split.pt",
+      "sha256": "e48e74afd502df5bc5e4d638e611fc4fbfdecee461aa920f3f47a6446826c52f"
+    }
+  ],
+  "verified_old_argmax_sources": [
+    {
+      "bytes": 55530,
+      "dataset": "Movies",
+      "job_id": "P1-Movies-J_GLOBAL-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_GLOBAL-s42-5e48c09a34cebd29.pt",
+      "seed": 42,
+      "sha256": "758ba7bd1f199ae300f71d291c679c474752a3450b77220e756fe2fe387b23ee",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 55530,
+      "dataset": "Movies",
+      "job_id": "P1-Movies-J_GLOBAL-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_GLOBAL-s43-86df6755bace4181.pt",
+      "seed": 43,
+      "sha256": "1f35129e15ba457a4b2f741e5bba3f26137e391e629eae7dd40f3ba07b84c8f1",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 55530,
+      "dataset": "Movies",
+      "job_id": "P1-Movies-J_GLOBAL-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Movies-J_GLOBAL-s44-2ff7abe1f4293143.pt",
+      "seed": 44,
+      "sha256": "7726e28cb68206dbcda8a05c5088cd320c2216df7f02a6198c085d498a239a30",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 56816,
+      "dataset": "Grocery",
+      "job_id": "P1-Grocery-J_GLOBAL-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_GLOBAL-s42-07fd61df0e5ee510.pt",
+      "seed": 42,
+      "sha256": "419cf575c5be1c3197c8d165c613f98614c8977bc7746e8f6dc16b396189e747",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 56816,
+      "dataset": "Grocery",
+      "job_id": "P1-Grocery-J_GLOBAL-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_GLOBAL-s43-7d15bbdf49199f28.pt",
+      "seed": 43,
+      "sha256": "876f9ca1ba8af8bdc422424d6af10d6ea0109a7c9449d9e75e134af5dbd24792",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 56816,
+      "dataset": "Grocery",
+      "job_id": "P1-Grocery-J_GLOBAL-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P1-Grocery-J_GLOBAL-s44-4c539f4c94ac5f37.pt",
+      "seed": 44,
+      "sha256": "f07bf5ee72d85f92576152b956c644fc686b6d35335588889b9f242992a86c71",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 55518,
+      "dataset": "Movies",
+      "job_id": "P2-Movies-J_NODE-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_NODE-s42-09318cd92af06531.pt",
+      "seed": 42,
+      "sha256": "6e86e4d83d0c52fafb205dcf27997051c5b9793073823ea6a3c2e7ae191f3ad4",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 55518,
+      "dataset": "Movies",
+      "job_id": "P2-Movies-J_NODE-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_NODE-s43-d5b6c08d838acc05.pt",
+      "seed": 43,
+      "sha256": "c4cd13e6c262a4ed1fb517edcaf8b1e1a35561cc4c181ee71cc1c63908ab9579",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 55518,
+      "dataset": "Movies",
+      "job_id": "P2-Movies-J_NODE-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Movies-J_NODE-s44-c54fd782458412e0.pt",
+      "seed": 44,
+      "sha256": "f663eb81d58a8a335d5e0fc828e517c737887259e1b16ddd9b2b80f8e634074f",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 56804,
+      "dataset": "Grocery",
+      "job_id": "P2-Grocery-J_NODE-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_NODE-s42-aba84ff56370aae9.pt",
+      "seed": 42,
+      "sha256": "31d9e26391fe58a6cd7a5fa9d8f60015657dd37959b25f3b518a27fddeaa3e26",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 56804,
+      "dataset": "Grocery",
+      "job_id": "P2-Grocery-J_NODE-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_NODE-s43-aac7680ab503a469.pt",
+      "seed": 43,
+      "sha256": "b8b402fef2fc7cbfcd415274f5bf6e58c89d95b2e9679a543dbc672d71c12689",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 56804,
+      "dataset": "Grocery",
+      "job_id": "P2-Grocery-J_NODE-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P2-Grocery-J_NODE-s44-fc2703452d39671b.pt",
+      "seed": 44,
+      "sha256": "269ad800ee83d71b5563c9530f168901308f20737eb8ab172956c2c58a13879b",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 68318,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_GLOBAL-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_GLOBAL-s42-04d6e4afee9bff8e.pt",
+      "seed": 42,
+      "sha256": "89acae772326edf23f9c8a67f1403a61ac10e591f965c471ad1dbc37b7bb9e6a",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 68318,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_GLOBAL-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_GLOBAL-s43-ed24bfe5b6019406.pt",
+      "seed": 43,
+      "sha256": "3072f5ba59b82f9ea29e216ded988b1702e55b4cbb7fa0dd031f9faf772f9822",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 68318,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_GLOBAL-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_GLOBAL-s44-53f6db357e9050c9.pt",
+      "seed": 44,
+      "sha256": "253a244c9b0495a9a6a158dc26998001cd27abf543e0af67ad72412f5feb1728",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 68306,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_NODE-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_NODE-s42-c8e922366ec21ec8.pt",
+      "seed": 42,
+      "sha256": "318ec816b18ac315514851bb01a61c10cc6e65ed6273356941faa72984bb0994",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 68306,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_NODE-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_NODE-s43-ec574a840c921d57.pt",
+      "seed": 43,
+      "sha256": "fe473ce8f812d6ee7d53ad6a469bb064438e857d3d1c0642b571809109b4570f",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 68306,
+      "dataset": "Toys",
+      "job_id": "P3-Toys-J_NODE-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Toys-J_NODE-s44-49f2f182331685f1.pt",
+      "seed": 44,
+      "sha256": "3b7d0a0c7c3fcb7b285032a3aa49b3552074004e3caa213b2e41d91d09af2696",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 52982,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_GLOBAL-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_GLOBAL-s42-0b8720a7400def83.pt",
+      "seed": 42,
+      "sha256": "9bf6144729e26484aae5374959e72b08c81b5c902cfca75a504d60a866139c1f",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 52982,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_GLOBAL-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_GLOBAL-s43-6e8d9d1992f64cfc.pt",
+      "seed": 43,
+      "sha256": "7bed83c18ef8ad9dfd1433280665a31d267dd07bd5dfcf859ee63d1c2a0b0b0d",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 52982,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_GLOBAL-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_GLOBAL-s44-c817837ccddd93de.pt",
+      "seed": 44,
+      "sha256": "b8f00f5b6fda7448b8bce33b6636a6b7124b826741cda8b5641cca1207dfa34b",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 52970,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_NODE-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_NODE-s42-193e35351198204a.pt",
+      "seed": 42,
+      "sha256": "8390453ebbdbc86506728bfed6444361bc42d52f07e1d5c85bf71b34e25e557d",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 52970,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_NODE-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_NODE-s43-26191f3a7bedf84a.pt",
+      "seed": 43,
+      "sha256": "efea8afb3839fb1e6015b83fff659899a94614b3665d391342cff3ba29c61525",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 52970,
+      "dataset": "Reddit-S",
+      "job_id": "P3-Reddit-S-J_NODE-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-Reddit-S-J_NODE-s44-292f5797491623a7.pt",
+      "seed": 44,
+      "sha256": "738d7be0c1868d6f3b5a447f361ea6bcec9df2576d6b353d0710af67d3693728",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 315016,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_GLOBAL-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_GLOBAL-s42-dbc4efdb7c152340.pt",
+      "seed": 42,
+      "sha256": "fcd3bd0d60f0f2a68ba86c3d4af48967cb2752561010539051a1280bb12a8329",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 315016,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_GLOBAL-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_GLOBAL-s43-b49e91e859ae011a.pt",
+      "seed": 43,
+      "sha256": "de0c078bbb8202fc695b78db0bc9e396d54893c888471ad89722dea56fea314d",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 315016,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_GLOBAL-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_GLOBAL-s44-0cc5c17fe2f01277.pt",
+      "seed": 44,
+      "sha256": "18d895424d04912d00f1101bd1c992860a753d94ea3c9072d3ed43197ba911b7",
+      "variant": "J_GLOBAL"
+    },
+    {
+      "bytes": 315004,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_NODE-s42",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_NODE-s42-087f38828e18c519.pt",
+      "seed": 42,
+      "sha256": "0d576692d43162b3f498e38866bc93f08db65b89419ff2da916421ed0c426a1b",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 315004,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_NODE-s43",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_NODE-s43-643e1fb6c373c49e.pt",
+      "seed": 43,
+      "sha256": "3f0e63e43d12ed9dacb4485335dd8a91fef0506ca709415afc29274c986eb4fd",
+      "variant": "J_NODE"
+    },
+    {
+      "bytes": 315004,
+      "dataset": "ele-fashion",
+      "job_id": "P3-ele-fashion-J_NODE-s44",
+      "path": "/hdd1/DataInHere/YHF/mag_model/outputs/problem_validation_v1/predictions/P3-ele-fashion-J_NODE-s44-1f0c969f102f95a3.pt",
+      "seed": 44,
+      "sha256": "9aeb89953b49574f55fd028ea2f9d486b091b1af0dfc6477a6f029ee3cbb0931",
+      "variant": "J_NODE"
+    }
+  ]
+}
