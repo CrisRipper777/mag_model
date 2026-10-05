@@ -1,0 +1,191 @@
+{
+  "baseline_commit": "1bc436b3eab2298fee7994c468375ac06e8707c0",
+  "branch": "codex/mag-prior-context-pilot-v3",
+  "capacity_sha256": "27893830c775614c03104d9bd0f1326ef5816f2fa39672f4fd91be36e4e97f12",
+  "design_sha256": "44843bb08a22f1823c7ae4d0fa8d70432b24ba133429f2302c0423b9a50b4919",
+  "fixed_inputs": {
+    "Grocery": {
+      "/hdd1/DataInHere/YHF/data/Grocery/GroceryGraph.pt": {
+        "bytes": 1512229,
+        "sha256": "af203035d655275a20da353f481e67f4b595eeb73ef1d397d0d9b603cefc70d7"
+      },
+      "/hdd1/DataInHere/YHF/data/Grocery/ImageFeature/Grocery_openai_clip-vit-large-patch14.npy": {
+        "bytes": 104902784,
+        "sha256": "ac50f63312488f3e94271532e7fd863c27a332c6ca8a4b9cc801afb9ce0b2470"
+      },
+      "/hdd1/DataInHere/YHF/data/Grocery/TextFeature/Grocery_roberta_base_256_mean.npy": {
+        "bytes": 52451456,
+        "sha256": "b67ab7600b842807b53805e31b9d969d860e9c48b1a56f76799d44367f33c516"
+      },
+      "/hdd1/DataInHere/YHF/data/MAGB_split/Grocery_nc_seed42_train0.6_val0.2.pt": {
+        "bytes": 138634,
+        "sha256": "3ca4581592fcb705b42672b18412375d33bf6109c72e4714786066878a54d58e"
+      }
+    },
+    "Movies": {
+      "/hdd1/DataInHere/YHF/data/MAGB_split/Movies_nc_seed42_train0.6_val0.2.pt": {
+        "bytes": 135427,
+        "sha256": "9089d5eb1d5a3edeae46bd9296e4f85815fccf8e489452bc87a2126a88546211"
+      },
+      "/hdd1/DataInHere/YHF/data/Movies/ImageFeature/Movies_openai_clip-vit-large-patch14.npy": {
+        "bytes": 102432896,
+        "sha256": "c422191f1a7cdc85598f00b52e0f60a02f65d6a48548e9c42a8530b3e572dfeb"
+      },
+      "/hdd1/DataInHere/YHF/data/Movies/MoviesGraph.pt": {
+        "bytes": 1885413,
+        "sha256": "f6798e6951f29b1d76aa7938684f44d502600c31f3a5987722f5bc450511700f"
+      },
+      "/hdd1/DataInHere/YHF/data/Movies/TextFeature/Movies_roberta_base_512_mean.npy": {
+        "bytes": 51216512,
+        "sha256": "38cc09ef3192eac8a022303fd48a9954bea9c3064078846aa5d2db31e137eece"
+      }
+    }
+  },
+  "fixed_split_seed": 42,
+  "frozen_utc": "2026-10-05T15:42:22.099164+00:00",
+  "lp": false,
+  "macro_f1_label_sets": {
+    "Grocery": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "Movies": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "matrix_sha256": "304b2527cc3da533dda2c0226fc153e9668c8fbb13907a9b10caa65414c42364",
+  "protocol_sha256": "c1a96f84a2991fb530f4656e8939464ac39bbeef5e1565278363a5571ef0ca3d",
+  "study": "prior_context_mag_pilot_v3",
+  "test_evaluation": false,
+  "test_prediction": false,
+  "training_seeds": [
+    52,
+    53,
+    54
+  ],
+  "training_source_commit": "ced9e3a7e71d199a31896336cb3f35ef4f2f5570",
+  "training_source_files": {
+    "configs/config.yaml": {
+      "bytes": 352,
+      "sha256": "1b06934c68b88e931909de4cb65b1fa51725df94ff6139d127a6ba85355fe399"
+    },
+    "configs/dataset/Grocery.yaml": {
+      "bytes": 766,
+      "sha256": "18969c97a0f06ab33fd3094624d524f03de48139405159bb06d19cf107105e56"
+    },
+    "configs/dataset/Movies.yaml": {
+      "bytes": 757,
+      "sha256": "81b803b0ed79ad86d483aee5dceadac149ca9ba2263e31160b22951a7812f5c8"
+    },
+    "configs/model/mag_prior_context.yaml": {
+      "bytes": 96,
+      "sha256": "6d5ab26475141678157fea9b2bdc8665cbc140b211565301b1b040e637c1df68"
+    },
+    "configs/task/nc.yaml": {
+      "bytes": 670,
+      "sha256": "f959a73d5256d2e51b2ce3600c4f7252e7d79122c267aa70dc84abeddedb3852"
+    },
+    "docs/prior_context_pilot_v3/capacity.csv": {
+      "bytes": 799,
+      "sha256": "27893830c775614c03104d9bd0f1326ef5816f2fa39672f4fd91be36e4e97f12"
+    },
+    "docs/prior_context_pilot_v3/design.md": {
+      "bytes": 2950,
+      "sha256": "44843bb08a22f1823c7ae4d0fa8d70432b24ba133429f2302c0423b9a50b4919"
+    },
+    "docs/prior_context_pilot_v3/matrix.json": {
+      "bytes": 36561,
+      "sha256": "304b2527cc3da533dda2c0226fc153e9668c8fbb13907a9b10caa65414c42364"
+    },
+    "docs/prior_context_pilot_v3/protocol.md": {
+      "bytes": 11075,
+      "sha256": "c1a96f84a2991fb530f4656e8939464ac39bbeef5e1565278363a5571ef0ca3d"
+    },
+    "scripts/audit_prior_context_pilot_v3.py": {
+      "bytes": 23790,
+      "sha256": "092eb4c4eb2cd2e5d56fd5e7d561ccf814b28ba73c390c530d098b0e4d948093"
+    },
+    "scripts/run_prior_context_pilot_v3.py": {
+      "bytes": 86425,
+      "sha256": "fddae49dd57b1e0ca29fceb14fe9d6f4de750ac5844df17edb689abd8d6c4b96"
+    },
+    "src/data/graph_utils.py": {
+      "bytes": 1664,
+      "sha256": "8fa1c35c1897e25f2f30628ddc0312598fe9e581692a48cccb131a12a50f10df"
+    },
+    "src/data/loaders.py": {
+      "bytes": 9245,
+      "sha256": "08fe47584069a8f690d87d20a2b892d008c43a1dad6bdb3d08bb2f7e22ddd173"
+    },
+    "src/data/splits.py": {
+      "bytes": 6023,
+      "sha256": "b352a1c558752cc82075e7405723d42a408cb416386ad412669f0339aacd1d22"
+    },
+    "src/data/types.py": {
+      "bytes": 980,
+      "sha256": "531968f22725acc211d5906c66bf0189d35857cbbdb972d12ee4ebdd29d3d2f8"
+    },
+    "src/models/factory.py": {
+      "bytes": 197,
+      "sha256": "018ed8270319dc179831e598673f89550dca7473d322daf6c14654f9fb9bea0b"
+    },
+    "src/models/mag_prior_context.py": {
+      "bytes": 21961,
+      "sha256": "6f31ff3e7f77aa078322fc7673cc241b50d613b9b7dd141a956ce2995b0e1a60"
+    },
+    "src/tasks/common.py": {
+      "bytes": 4204,
+      "sha256": "137f7d76de29f290de1bff42396e3b3d65b45c064f0bcc30a000e9aa3e6855e1"
+    },
+    "src/tasks/prior_context_pilot.py": {
+      "bytes": 2849,
+      "sha256": "1add0aecb7934c9695bda2645c30979cc10840749d091a383fd6cac09996191e"
+    },
+    "tests/test_mag_prior_context.py": {
+      "bytes": 14432,
+      "sha256": "d6c73503731cd51bff71620a093349a302184ee8c16a5c276200ab38b64ef9da"
+    }
+  },
+  "training_source_sha256": "14b651cc76bb29e275a5be09bb107df9cd8cf4b57cd886d30f7c031d32340108",
+  "v1_protocol_lock_internal_sha256": "3b949712c738dd99865f9bdce882cf65f91756e775cd4af6077cbd065d3b368f",
+  "v1_protocol_lock_path": "/hdd1/DataInHere/YHF/mag_model/reports/problem_validation_v1/protocol_lock.json",
+  "v1_protocol_lock_sha256": "0942d4c9f8f509aaa6bd083b5acd8284665387872e75077b91e8c716491b3201",
+  "v2_manifest_sha256": "58b960c8d108698f37bd2548e1387ad697007cd44f9351d26978d5e8c2b39556"
+}
