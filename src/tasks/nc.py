@@ -41,12 +41,18 @@ def _resolve_training_mode(cfg, model=None) -> str:
     return "full_graph" if _uses_graph_encoder(cfg) else "feature_only"
 
 
-def _resolve_nc_eval_labels(data: MAGData) -> list[int]:
+def _resolve_nc_eval_labels(data: MAGData, cfg=None) -> list[int]:
     """Use one stable Macro-F1 label set across the supervised task splits."""
     if data.y is None:
         raise ValueError("NC data must contain labels")
     if data.num_classes is None:
         raise ValueError("NC data must define num_classes")
+    configured = cfg.task.get("eval_labels") if cfg is not None else None
+    if configured is not None:
+        labels = sorted({int(value) for value in configured})
+        if not labels or any(value < 0 or value >= int(data.num_classes) for value in labels):
+            raise ValueError("task.eval_labels must be a non-empty subset of the configured class schema")
+        return labels
     split_indices = [
         idx for idx in (data.train_idx, data.val_idx, data.test_idx) if idx is not None
     ]
@@ -121,8 +127,18 @@ def _run_single_nc(
     }
     model = build_model(cfg, data_info).to(device)
     classifier = nn.Linear(model.out_dim, int(data.num_classes)).to(device)
+    source_aux_weight = float(cfg.task.get("source_aux_weight", 0.0))
+    source_heads = nn.ModuleDict()
+    if source_aux_weight > 0:
+        source_heads = nn.ModuleDict({
+            "text": nn.Linear(model.out_dim, int(data.num_classes)),
+            "image": nn.Linear(model.out_dim, int(data.num_classes)),
+        }).to(device)
+    optimized_modules = [model, classifier, source_heads]
     optimizer = build_optimizer(
-        list(model.parameters()) + list(classifier.parameters()), cfg, model=model
+        [parameter for module in optimized_modules for parameter in module.parameters()],
+        cfg,
+        model=model,
     )
     criterion = nn.CrossEntropyLoss()
     training_mode = _resolve_training_mode(cfg, model)
@@ -171,6 +187,7 @@ def _run_single_nc(
     best_metrics: dict[str, float] = {}
     best_model_state = None
     best_head_state = None
+    best_source_head_state = None
     best_epoch: int | None = None
     patience_total = int(cfg.task.patience)
     patience_left = patience_total
@@ -192,13 +209,30 @@ def _run_single_nc(
         if full_graph_training:
             if hasattr(model, "_batch_n_id"):
                 model._batch_n_id = None
-            z, _, _, aux_loss, _ = model(x_all, edge_index_all)
+            z, _, _, aux_loss, extras = model(x_all, edge_index_all)
             logits = classifier(z[train_idx_all])
             labels = y_all[train_idx_all]
             loss = nn.functional.cross_entropy(logits, labels) + aux_weight * aux_loss
+            if source_aux_weight > 0:
+                source_states = extras.get("source_states") if isinstance(extras, dict) else None
+                if not isinstance(source_states, dict) or not {"text", "image"}.issubset(source_states):
+                    raise ValueError("task.source_aux_weight requires forward extras['source_states'] for text and image")
+                source_available = extras.get("source_available")
+                source_losses = []
+                for modality_index, modality in enumerate(("text", "image")):
+                    source_idx = train_idx_all
+                    if source_available is not None:
+                        source_idx = source_idx[source_available[source_idx, modality_index]]
+                    if source_idx.numel():
+                        source_logits = source_heads[modality](source_states[modality][source_idx])
+                        source_losses.append(nn.functional.cross_entropy(source_logits, y_all[source_idx]))
+                source_loss = torch.stack(source_losses).mean() if source_losses else loss.new_zeros(())
+                loss = loss + source_aux_weight * source_loss
+            else:
+                source_loss = loss.new_zeros(())
             loss.backward()
             torch.nn.utils.clip_grad_norm_(
-                list(model.parameters()) + list(classifier.parameters()),
+                [parameter for module in optimized_modules for parameter in module.parameters()],
                 max_norm=grad_clip,
                 error_if_nonfinite=True,
             )
@@ -211,13 +245,23 @@ def _run_single_nc(
             for batch_idx in train_loader:
                 batch_idx = batch_idx.to(device)
                 labels = y_all[batch_idx]
-                z, _, _, aux_loss, _ = model(x_all[batch_idx], None)
+                z, _, _, aux_loss, extras = model(x_all[batch_idx], None)
                 logits = classifier(z)
                 loss = nn.functional.cross_entropy(logits, labels) + aux_weight * aux_loss
+                if source_aux_weight > 0:
+                    source_states = extras.get("source_states") if isinstance(extras, dict) else None
+                    if not isinstance(source_states, dict) or not {"text", "image"}.issubset(source_states):
+                        raise ValueError("task.source_aux_weight requires forward extras['source_states'] for text and image")
+                    source_losses = [
+                        nn.functional.cross_entropy(source_heads[modality](source_states[modality]), labels)
+                        for modality in ("text", "image")
+                    ]
+                    source_loss = torch.stack(source_losses).mean()
+                    loss = loss + source_aux_weight * source_loss
                 optimizer.zero_grad(set_to_none=True)
                 loss.backward()
                 torch.nn.utils.clip_grad_norm_(
-                    list(model.parameters()) + list(classifier.parameters()),
+                    [parameter for module in optimized_modules for parameter in module.parameters()],
                     max_norm=grad_clip,
                     error_if_nonfinite=True,
                 )
@@ -262,6 +306,7 @@ def _run_single_nc(
             }
             best_model_state = clone_state_dict(model)
             best_head_state = clone_state_dict(classifier)
+            best_source_head_state = clone_state_dict(source_heads) if source_aux_weight > 0 else None
             patience_left = patience_total
         elif epoch >= min_epoch:
             patience_left -= 1
@@ -283,6 +328,8 @@ def _run_single_nc(
         raise RuntimeError("NC training finished without a validation-selected checkpoint")
     load_state_dict_cpu(model, best_model_state)
     load_state_dict_cpu(classifier, best_head_state)
+    if best_source_head_state is not None:
+        load_state_dict_cpu(source_heads, best_source_head_state)
 
     if bool(cfg.task.get("evaluate_test", True)):
         z = infer_all_embeddings(
@@ -318,24 +365,27 @@ def _run_single_nc(
             if cfg.model.get(name) is not None
         },
     }
+    if source_aux_weight > 0:
+        run_metadata["source_aux_parameters"] = count_parameters(source_heads)
+        run_metadata["source_aux_weight"] = source_aux_weight
     save_ckpt_path = cfg.task.get("save_ckpt_path")
     if save_ckpt_path:
         path = _checkpoint_path_for_run(save_ckpt_path, cfg, run_id)
-        torch.save(
-            {
-                "task": "nc",
-                "protocol_version": str(cfg.task.protocol_version),
-                "seed": seed,
-                "selection": "best_val_accuracy",
-                "epoch": best_epoch,
-                "metrics": dict(best_metrics),
-                "run_metadata": run_metadata,
-                "model_state": clone_state_dict(model),
-                "head_state": clone_state_dict(classifier),
-                "data_info": data_info,
-            },
-            path,
-        )
+        checkpoint_payload = {
+            "task": "nc",
+            "protocol_version": str(cfg.task.protocol_version),
+            "seed": seed,
+            "selection": "best_val_accuracy",
+            "epoch": best_epoch,
+            "metrics": dict(best_metrics),
+            "run_metadata": run_metadata,
+            "model_state": clone_state_dict(model),
+            "head_state": clone_state_dict(classifier),
+            "data_info": data_info,
+        }
+        if source_aux_weight > 0:
+            checkpoint_payload["source_head_state"] = clone_state_dict(source_heads)
+        torch.save(checkpoint_payload, path)
         logger.info("Saved checkpoint: %s | best_epoch=%s", path, best_epoch)
 
     logger.info(
@@ -364,7 +414,7 @@ def run_nc(
     if data.y is None or data.train_idx is None or data.val_idx is None or data.test_idx is None:
         raise ValueError("NC data must contain y/train_idx/val_idx/test_idx")
     _resolve_training_mode(cfg)
-    eval_labels = _resolve_nc_eval_labels(data)
+    eval_labels = _resolve_nc_eval_labels(data, cfg)
 
     run_results = []
     for run_id in range(int(cfg.num_runs)):
