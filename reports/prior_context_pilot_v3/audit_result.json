@@ -1,0 +1,126 @@
+{
+  "status": "PASSED",
+  "errors": [],
+  "completed_rows": 30,
+  "supplemental_auditor_path": "/hdd1/DataInHere/YHF/mag_model/scripts/audit_prior_context_pilot_v3_postrun.py",
+  "supplemental_auditor_sha256": "6e190d2dfac06fa92d7f57b1a4c91f0b52664417419ff121e3c49a43b89969c8",
+  "selected_seed_summary_table_repaired_from_frozen_rows": true,
+  "initial_frozen_audit_attempt": "/hdd1/DataInHere/YHF/mag_model/outputs/prior_context_pilot_v3/audit_attempts/frozen_auditor_attempt_001.json",
+  "initial_frozen_audit_attempt_sha256": "3c04a5d174b878b7da4b25b6a11bf5f64166f45eefa63f7b7e521a569fe90a75",
+  "metrics_recomputed": 30,
+  "raw_files_verified": 154,
+  "raw_files_declared": 154,
+  "stage_a_gate_recomputed": {
+    "comparisons": {
+      "R0": {
+        "pairs": [
+          {
+            "dataset": "Movies",
+            "seed": 53,
+            "delta_accuracy": -0.007498500299940036,
+            "delta_macro_f1": -0.010699391430209482
+          },
+          {
+            "dataset": "Movies",
+            "seed": 54,
+            "delta_accuracy": 0.0011997600479903836,
+            "delta_macro_f1": 0.010015571868793205
+          },
+          {
+            "dataset": "Grocery",
+            "seed": 53,
+            "delta_accuracy": 0.02752562225475852,
+            "delta_macro_f1": 0.0013573327158372672
+          },
+          {
+            "dataset": "Grocery",
+            "seed": 54,
+            "delta_accuracy": 0.0210834553440703,
+            "delta_macro_f1": -0.004402757580303729
+          }
+        ],
+        "by_dataset": {
+          "Movies": {
+            "mean_delta_accuracy": -0.0031493701259748264,
+            "mean_delta_macro_f1": -0.0003419097807081384
+          },
+          "Grocery": {
+            "mean_delta_accuracy": 0.02430453879941441,
+            "mean_delta_macro_f1": -0.0015227124322332308
+          }
+        },
+        "mean_delta_accuracy": 0.010577584336719792,
+        "mean_delta_macro_f1": -0.0009323111064706846,
+        "positive_accuracy_pairs": 3,
+        "positive_macro_f1_pairs": 2,
+        "accuracy_path_pass": false,
+        "macro_f1_path_pass": false,
+        "per_graph_floor_pass": false,
+        "metric_gate_pass": false
+      },
+      "R1": {
+        "pairs": [
+          {
+            "dataset": "Movies",
+            "seed": 53,
+            "delta_accuracy": -0.026694661067786396,
+            "delta_macro_f1": -0.061610354142583756
+          },
+          {
+            "dataset": "Movies",
+            "seed": 54,
+            "delta_accuracy": -0.012897420515896818,
+            "delta_macro_f1": -0.06324875248686135
+          },
+          {
+            "dataset": "Grocery",
+            "seed": 53,
+            "delta_accuracy": -0.0035139092240116243,
+            "delta_macro_f1": -0.04264915827125082
+          },
+          {
+            "dataset": "Grocery",
+            "seed": 54,
+            "delta_accuracy": -0.010834553440702721,
+            "delta_macro_f1": -0.046103539080462386
+          }
+        ],
+        "by_dataset": {
+          "Movies": {
+            "mean_delta_accuracy": -0.019796040791841607,
+            "mean_delta_macro_f1": -0.06242955331472255
+          },
+          "Grocery": {
+            "mean_delta_accuracy": -0.007174231332357173,
+            "mean_delta_macro_f1": -0.0443763486758566
+          }
+        },
+        "mean_delta_accuracy": -0.01348513606209939,
+        "mean_delta_macro_f1": -0.05340295099528958,
+        "positive_accuracy_pairs": 0,
+        "positive_macro_f1_pairs": 0,
+        "accuracy_path_pass": false,
+        "macro_f1_path_pass": false,
+        "per_graph_floor_pass": false,
+        "metric_gate_pass": false
+      }
+    },
+    "step_time_ratio_by_dataset": {
+      "Movies": 4.591468062262288,
+      "Grocery": 4.451970094628328
+    },
+    "peak_allocated_ratio_by_dataset": {
+      "Movies": 3.5203150349439305,
+      "Grocery": 3.3625299622523697
+    },
+    "mean_step_time_ratio": 4.521719078445308,
+    "mean_peak_allocated_ratio": 3.44142249859815,
+    "metric_pass": false,
+    "resource_pass": false,
+    "passed": false
+  },
+  "expected_success_count": 30,
+  "actual_success_count": 30,
+  "test_predictions": false,
+  "test_evaluation": false
+}
