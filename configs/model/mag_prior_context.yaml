@@ -1,0 +1,6 @@
+name: mag_prior_context
+variant: R4
+out_dim: 128
+dropout: 0.2
+width: 144
+edge_chunk_size: 16384
