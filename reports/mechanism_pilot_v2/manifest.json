@@ -1,0 +1,1540 @@
+{
+  "baseline_commit": "d1518bfe0087df35f399d8d6679b479b520977c2",
+  "design_document_sha256": "5f659d958ace4c8bd4864e18059b4c0a99d37b5eb808508a48ab382c8f021256",
+  "failed": 0,
+  "finalizing_head": "70f658b266ad941df176f1f2c720785c03efbe37",
+  "fixed_input_policy": "hashes checked against reports/problem_validation_v1/protocol_lock.json before each worker; fixed seed42 split reused for training seeds 42/43/44",
+  "fixed_inputs": {
+    "Grocery": {
+      "/hdd1/DataInHere/YHF/data/Grocery/GroceryGraph.pt": {
+        "bytes": 1512229,
+        "sha256": "af203035d655275a20da353f481e67f4b595eeb73ef1d397d0d9b603cefc70d7"
+      },
+      "/hdd1/DataInHere/YHF/data/Grocery/ImageFeature/Grocery_openai_clip-vit-large-patch14.npy": {
+        "bytes": 104902784,
+        "sha256": "ac50f63312488f3e94271532e7fd863c27a332c6ca8a4b9cc801afb9ce0b2470"
+      },
+      "/hdd1/DataInHere/YHF/data/Grocery/TextFeature/Grocery_roberta_base_256_mean.npy": {
+        "bytes": 52451456,
+        "sha256": "b67ab7600b842807b53805e31b9d969d860e9c48b1a56f76799d44367f33c516"
+      },
+      "/hdd1/DataInHere/YHF/data/MAGB_split/Grocery_nc_seed42_train0.6_val0.2.pt": {
+        "bytes": 138634,
+        "sha256": "3ca4581592fcb705b42672b18412375d33bf6109c72e4714786066878a54d58e"
+      }
+    },
+    "Movies": {
+      "/hdd1/DataInHere/YHF/data/MAGB_split/Movies_nc_seed42_train0.6_val0.2.pt": {
+        "bytes": 135427,
+        "sha256": "9089d5eb1d5a3edeae46bd9296e4f85815fccf8e489452bc87a2126a88546211"
+      },
+      "/hdd1/DataInHere/YHF/data/Movies/ImageFeature/Movies_openai_clip-vit-large-patch14.npy": {
+        "bytes": 102432896,
+        "sha256": "c422191f1a7cdc85598f00b52e0f60a02f65d6a48548e9c42a8530b3e572dfeb"
+      },
+      "/hdd1/DataInHere/YHF/data/Movies/MoviesGraph.pt": {
+        "bytes": 1885413,
+        "sha256": "f6798e6951f29b1d76aa7938684f44d502600c31f3a5987722f5bc450511700f"
+      },
+      "/hdd1/DataInHere/YHF/data/Movies/TextFeature/Movies_roberta_base_512_mean.npy": {
+        "bytes": 51216512,
+        "sha256": "38cc09ef3192eac8a022303fd48a9954bea9c3064078846aa5d2db31e137eece"
+      }
+    }
+  },
+  "formal_attempts": 70,
+  "protocol_sha256": "44b72416fbc32b29be3fb4319b227cb6db8232bea45fc63443c384f872b4aa63",
+  "raw_evidence_root": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2",
+  "raw_runs": [
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P0/calibration-Grocery-P0-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "c5b41a7fe414e8268876b5c7fd6d261948ae2e18e682c395bb627616bce393be"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P0/calibration-Grocery-P0-s42-lr0.0003/epochs.jsonl",
+        "sha256": "ccf8e1fad5e22bc6d12a4138274a16591718c28f601d5ff9b119f3d9b78e8fdc"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P0-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P0/calibration-Grocery-P0-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "635d24889f12ef6aeb7690b4c324d291ef4d633f333ee313b3b1da177460d63c"
+      },
+      "variant": "P0"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P0/calibration-Grocery-P0-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "3badffbd92e9f68a2dbf8653a0a5f7d120b9808ed59783ad3130013da396be13"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P0/calibration-Grocery-P0-s42-lr0.001/epochs.jsonl",
+        "sha256": "e74d9900ea37096c7744e4815db28bc2a4cd7c8925fcef0f85c25f646568d0ac"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P0-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P0/calibration-Grocery-P0-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "0e5705af7108f99f232acbafc4d3489090923658ff93e419f823064025534e7a"
+      },
+      "variant": "P0"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P0/calibration-Grocery-P0-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "d9829c4873e02e508e2baedeac9ee0d1130219103fbfe3664f4231441cb44166"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P0/calibration-Grocery-P0-s42-lr0.003/epochs.jsonl",
+        "sha256": "c6a31510eddaba244ad1bf1dee824806f380404223a475004beffecea443522a"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P0-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P0/calibration-Grocery-P0-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "531a248d4f7b6f0b64591aea492e13df48e5fbded564bcd3bb21b53b8457d932"
+      },
+      "variant": "P0"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P0/confirmation-Grocery-P0-s43-lr0.0003/best_checkpoint.pt",
+        "sha256": "cc8a64ad7afc0a1c07eeb72b3dd7be434283713247e97333c14e3223bf48cd52"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P0/confirmation-Grocery-P0-s43-lr0.0003/epochs.jsonl",
+        "sha256": "a8b4c052354392b273ff29fbc6cd092f6000ead3651835a16b5bd5dcae2b39d4"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P0-s43-lr0.0003",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P0/confirmation-Grocery-P0-s43-lr0.0003/train_val_predictions.pt",
+        "sha256": "58d10f789397309797e35254c16c75684a01bc70eb2d63c47622cd112afe70c6"
+      },
+      "variant": "P0"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P0/confirmation-Grocery-P0-s44-lr0.0003/best_checkpoint.pt",
+        "sha256": "26284cd784fd476170e3338193e27609c4840ae1f28223f73c238419a2ceec53"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P0/confirmation-Grocery-P0-s44-lr0.0003/epochs.jsonl",
+        "sha256": "6165465faf1f7eb038050b1d9523bdceb29628af8163ef29a663304d2ba44f05"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P0-s44-lr0.0003",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P0/confirmation-Grocery-P0-s44-lr0.0003/train_val_predictions.pt",
+        "sha256": "dafd1355b4488b15a67a714045fe131cfd3f4d53bb1f5f802d890d57556a182a"
+      },
+      "variant": "P0"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P1/calibration-Grocery-P1-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "90a08c1c35dfbab8ff4d45f51e4b99e76933d1119114bfd21e9ea609923e8c59"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P1/calibration-Grocery-P1-s42-lr0.0003/epochs.jsonl",
+        "sha256": "22723cc96023cc8396523b4163d3ebb4e79a150e263d762579aa057af2b9d200"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P1-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P1/calibration-Grocery-P1-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "6c982773dcdbf554fc9598c07bc8c651ee619c1391245f513f9b10f4c8069194"
+      },
+      "variant": "P1"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P1/calibration-Grocery-P1-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "d3fb0239eac7f436e59df197fc2024214c788f433aaab23e0694c37c85ea12db"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P1/calibration-Grocery-P1-s42-lr0.001/epochs.jsonl",
+        "sha256": "a20a38a1282151c01357c4e3232bd18bb2a8ad11ba7937e5e95e166d4f077ae4"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P1-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P1/calibration-Grocery-P1-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "37913cbdb3c1b333e6dfb3d5f2ba17e0491589ecb850077f1c5fd0a9072aacba"
+      },
+      "variant": "P1"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P1/calibration-Grocery-P1-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "eac443709133054a3039b8162b22de8174b07f8fea4b22a10e83bec5bacb1d42"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P1/calibration-Grocery-P1-s42-lr0.003/epochs.jsonl",
+        "sha256": "ef57f224e69c8c8320903d7f31956bcb0840c89ce203a6eade861b340e04d385"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P1-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P1/calibration-Grocery-P1-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "1215d9dd8754558936485cccd3a91dd7a47e200abe31530114cd1694e888ed5b"
+      },
+      "variant": "P1"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P1/confirmation-Grocery-P1-s43-lr0.0003/best_checkpoint.pt",
+        "sha256": "bb4061acf74d0bb5f30ba9f3d965c119e25d18ccaf97ff72ec1aa2c04894e6ea"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P1/confirmation-Grocery-P1-s43-lr0.0003/epochs.jsonl",
+        "sha256": "529e73ce7b0a530f48ad13dbc38270fdf8d45741a535234041beae0782bd32d4"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P1-s43-lr0.0003",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P1/confirmation-Grocery-P1-s43-lr0.0003/train_val_predictions.pt",
+        "sha256": "782eacc9fe2f6b74bf8cacb6ea3fa6254e3c48d57f1d48faf7e599008b97b69f"
+      },
+      "variant": "P1"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P1/confirmation-Grocery-P1-s44-lr0.0003/best_checkpoint.pt",
+        "sha256": "946c4c97a67e20032a3e17f30faa81c630633f547733ecb0aebfb1da453e7c62"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P1/confirmation-Grocery-P1-s44-lr0.0003/epochs.jsonl",
+        "sha256": "2791bde987e17eee8716c9af6eeeef455c38ba4eaf5042ad607ef04df20cdeb4"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P1-s44-lr0.0003",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P1/confirmation-Grocery-P1-s44-lr0.0003/train_val_predictions.pt",
+        "sha256": "fdbbed1455492eb3133bfd7500e2c4def56d796721ffaacbfa39bef0743c3af7"
+      },
+      "variant": "P1"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P2/calibration-Grocery-P2-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "971de9a1c0f12edceeb6dafe4b94f89248506ad2e6fb2208b542fb690319d8d0"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P2/calibration-Grocery-P2-s42-lr0.0003/epochs.jsonl",
+        "sha256": "c9a0db1036be6d39ff8a4742753ea79786ab99c2b78f808e90af0903d921585f"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P2-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P2/calibration-Grocery-P2-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "025e2259639800fac961ddb35510e7682163837bebadc91e79e05143f6e0363e"
+      },
+      "variant": "P2"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P2/calibration-Grocery-P2-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "095dc29e380f734fee175f8678152ece2765bf711b8e2d2edc1a56d4e4134175"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P2/calibration-Grocery-P2-s42-lr0.001/epochs.jsonl",
+        "sha256": "a18f9c12264acb25e95a5416fe0efa2e17ad01c19acec12f0d95c34502068fcd"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P2-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P2/calibration-Grocery-P2-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "41382e61aae53726b2bba77faff2a23c8f42e95d9dfe914cb942f43452b55ec7"
+      },
+      "variant": "P2"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P2/calibration-Grocery-P2-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "17dce767b61f512b7bbcd68b4a2073d2db67c3a6a0ea833a5ecbd0e7b18c7888"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P2/calibration-Grocery-P2-s42-lr0.003/epochs.jsonl",
+        "sha256": "8f8df96cab7a425a95b8f1fe29d13c562e3fa5503cbdfd6105b4d19c4a0aa99b"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P2-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P2/calibration-Grocery-P2-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "0ed74aa710dca35a008a229bf6aa1ae8ad33db67425db6f90c8ec6448e484662"
+      },
+      "variant": "P2"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P2/confirmation-Grocery-P2-s43-lr0.0003/best_checkpoint.pt",
+        "sha256": "e225fad76585d866124f5cd1b44ceae1b92c7f320b6eab43effdc87d4db6ef69"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P2/confirmation-Grocery-P2-s43-lr0.0003/epochs.jsonl",
+        "sha256": "ad345bbd38938228475b6e11c7c00049c9418d19edbd36db8137e771be8dfc8b"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P2-s43-lr0.0003",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P2/confirmation-Grocery-P2-s43-lr0.0003/train_val_predictions.pt",
+        "sha256": "8acd1a68032d89869b125790daf6222768d167c207a2b16aa1f0a3f023f2114f"
+      },
+      "variant": "P2"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P2/confirmation-Grocery-P2-s44-lr0.0003/best_checkpoint.pt",
+        "sha256": "deb43f6c1c1d732c6f7a6620733bf12e240e7900ea724d6d548eea638d94324a"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P2/confirmation-Grocery-P2-s44-lr0.0003/epochs.jsonl",
+        "sha256": "11ce64d539dfe6d85233b709350b213536a0fad629079502bbc05722d214bde5"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P2-s44-lr0.0003",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P2/confirmation-Grocery-P2-s44-lr0.0003/train_val_predictions.pt",
+        "sha256": "d54cc44096a76769225a1e39937d5ad1cdd9c3db46fe77cb8d78200f5598e0a0"
+      },
+      "variant": "P2"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P3/calibration-Grocery-P3-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "9219a75f43305eb1ef84ec0d1092a48c382f553185df9ae4f0acf76e20856399"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P3/calibration-Grocery-P3-s42-lr0.0003/epochs.jsonl",
+        "sha256": "92ef618f70358d094e86a03ec729fc2f888bc4a4d95498eb2d5bdfccad6a41ff"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P3-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P3/calibration-Grocery-P3-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "c379682eb857749d57b29d4bb483872b264a79e64a40778f12972a42ad730376"
+      },
+      "variant": "P3"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P3/calibration-Grocery-P3-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "97f0044fc161dbe199d182035509b5c8da8faf7ff190ea596152b32e7e8f1cb3"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P3/calibration-Grocery-P3-s42-lr0.001/epochs.jsonl",
+        "sha256": "a6c6c86e76fc1d42a376061509c2204fa90366b04f5c9d9393433b584576287b"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P3-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P3/calibration-Grocery-P3-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "ec85e0bcff97ef39cc43aae93f0d0e4aef3b07888e7484b3ab339e62ff7dd9b6"
+      },
+      "variant": "P3"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P3/calibration-Grocery-P3-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "68f5475eb945745a1e970888eeb67cf0ef492f0137494c401e1c0fd632376da5"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P3/calibration-Grocery-P3-s42-lr0.003/epochs.jsonl",
+        "sha256": "f672c38165dd6679ebd795cc156c1cee0beeeba970e0280e090942c5f92fbd09"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P3-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P3/calibration-Grocery-P3-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "ba5b03d669d1783d9874cbe50e4afa75d7531ffe01765a2cedbae7e334112fee"
+      },
+      "variant": "P3"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P3/confirmation-Grocery-P3-s43-lr0.0003/best_checkpoint.pt",
+        "sha256": "c653196240a92c6674dc665dedb0a3ddf92298caaeae681f258db1c01424e45d"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P3/confirmation-Grocery-P3-s43-lr0.0003/epochs.jsonl",
+        "sha256": "ce50f4515f426e231279687c6e53829406f61fb935825e257f2559f02eb47db2"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P3-s43-lr0.0003",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P3/confirmation-Grocery-P3-s43-lr0.0003/train_val_predictions.pt",
+        "sha256": "664690d53e3ac9b77591d6ab489bb26f7c2b9a76e14ce3fc276c46fe93483a08"
+      },
+      "variant": "P3"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P3/confirmation-Grocery-P3-s44-lr0.0003/best_checkpoint.pt",
+        "sha256": "8272bd5cda8021e58a71082262df4b84b6c27544f1e0574518493200466d610e"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P3/confirmation-Grocery-P3-s44-lr0.0003/epochs.jsonl",
+        "sha256": "7e7f4dd2fd7a7662fab5bfc06c5b3447d99577402e7e003dd9ee17ad179524f1"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P3-s44-lr0.0003",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P3/confirmation-Grocery-P3-s44-lr0.0003/train_val_predictions.pt",
+        "sha256": "47a0fe5d7bf0c8fbca735320fc9728b5f4dc41681c31369c2845a960be55a611"
+      },
+      "variant": "P3"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P4/calibration-Grocery-P4-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "03a69a5a21ab3b7ae119016402f13d9fdce474307a388790e3520c58c615b80f"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P4/calibration-Grocery-P4-s42-lr0.0003/epochs.jsonl",
+        "sha256": "0242bced40983c8c9997b44141c0d476e46b968f7cae2d871e3cc985a88e2991"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P4-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P4/calibration-Grocery-P4-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "f969a7c0c192b60192eee38d73c58421e6c07d974712acfee0a1803f521d7e90"
+      },
+      "variant": "P4"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P4/calibration-Grocery-P4-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "9f293222084c138d1aad47f29ff50a56df01656254dfe658494deab95144424a"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P4/calibration-Grocery-P4-s42-lr0.001/epochs.jsonl",
+        "sha256": "7cb984085ec93b95a47d0f51c4246f4c7eb04cbbcc72588487fc0fb321f3bca5"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P4-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P4/calibration-Grocery-P4-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "0cab7a1bd2c0a555a389e926b83543f0923bd792e083eb70d68430ed86969c2e"
+      },
+      "variant": "P4"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P4/calibration-Grocery-P4-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "762ce95198facd2bedf121d0813b3134ed5c4a3972a2280fdd8173cd5f9a2939"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P4/calibration-Grocery-P4-s42-lr0.003/epochs.jsonl",
+        "sha256": "3407d84e779b6481840e49080b2167df422e32e6f8c5e1339b144d6e2d9196b5"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P4-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P4/calibration-Grocery-P4-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "eee419bad7ab613410992415b8e615c773a70cf5fc2194784c1629c8b4b3312e"
+      },
+      "variant": "P4"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P4/confirmation-Grocery-P4-s43-lr0.001/best_checkpoint.pt",
+        "sha256": "b0eb451ba325656b37876f49dd6105c7e4c8bb99e67107475fb8d2fbe2eff743"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P4/confirmation-Grocery-P4-s43-lr0.001/epochs.jsonl",
+        "sha256": "c9ee5aadaf85a35deb60491bae4d70064c2b052e4b4e3b78f3b19fa45a700973"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P4-s43-lr0.001",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P4/confirmation-Grocery-P4-s43-lr0.001/train_val_predictions.pt",
+        "sha256": "58227ef38e88b81cbe064b967843540bbe3b983c0d635c3f4de2d2a4b0006b96"
+      },
+      "variant": "P4"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P4/confirmation-Grocery-P4-s44-lr0.001/best_checkpoint.pt",
+        "sha256": "bbc1a92b4d9b795476e931838dbe01116df0f9b9af59da19ab9c31934e329df1"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P4/confirmation-Grocery-P4-s44-lr0.001/epochs.jsonl",
+        "sha256": "397b5ff304d11afe1289cc1092e39ee05e437767cdbb5aa8d49250561f58d824"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P4-s44-lr0.001",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P4/confirmation-Grocery-P4-s44-lr0.001/train_val_predictions.pt",
+        "sha256": "d2a706299c3ca7e6743753876b8710ffba726e597e02cee578eb7f2df292af8b"
+      },
+      "variant": "P4"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P5/calibration-Grocery-P5-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "871980e730254ef19b3bcf6291ce5b532c98d740ac31f67978027efeb81be2e8"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P5/calibration-Grocery-P5-s42-lr0.0003/epochs.jsonl",
+        "sha256": "96b2b39dd606d4343a5dda1477ae0193a8f2128f8661c758fedad9470559af1b"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P5-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P5/calibration-Grocery-P5-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "5aaba9e2f2076abe4cddb28ddf788e2273061fae15868440b792fcc975f5b60f"
+      },
+      "variant": "P5"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P5/calibration-Grocery-P5-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "3fad5457872070b9314a9cd12b84d4ccedc2ab643058cfbcadaab2f555db80f3"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P5/calibration-Grocery-P5-s42-lr0.001/epochs.jsonl",
+        "sha256": "2cbec2588e2212e53aab240bae371c3509b41dc574f9d71416297412b8dd5396"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P5-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P5/calibration-Grocery-P5-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "2decccbf8732fb9b798b4712621e49e73a5367b9177e2b335983579e66492f2f"
+      },
+      "variant": "P5"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P5/calibration-Grocery-P5-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "f7a00c446418bed9fc54c2e8ebd95d6daa520306df26e06e1354cc74fec5582c"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P5/calibration-Grocery-P5-s42-lr0.003/epochs.jsonl",
+        "sha256": "717ee037ed7078198e382e4459d636354e6a04498937b48046dd2abd27a8fec5"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P5-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P5/calibration-Grocery-P5-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "f8b2891f548ef9b3c0918ae42c46318080ffbd4550f576eb6db334906e8ab3ee"
+      },
+      "variant": "P5"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P5/confirmation-Grocery-P5-s43-lr0.0003/best_checkpoint.pt",
+        "sha256": "59f84a8274219206d1e6cd4bb87467ac48cf6820e498dd42aed3658942067359"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P5/confirmation-Grocery-P5-s43-lr0.0003/epochs.jsonl",
+        "sha256": "7c91f7b837780b98f8eff907503bf91104cdd6c6ab4a2c1721891ae118c163ab"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P5-s43-lr0.0003",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P5/confirmation-Grocery-P5-s43-lr0.0003/train_val_predictions.pt",
+        "sha256": "02c2afa51ddf1bd93cb956441c955d5a63ffc652d045994ad41348ac43ea4874"
+      },
+      "variant": "P5"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P5/confirmation-Grocery-P5-s44-lr0.0003/best_checkpoint.pt",
+        "sha256": "436ad59afeeb8adae83ea468823eb033cf55c9f08ba5422cef533ed099456b8e"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P5/confirmation-Grocery-P5-s44-lr0.0003/epochs.jsonl",
+        "sha256": "610a6c2a4109353f476363aefac1579542f152d3bce2c8c26e8716dd20348ea3"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P5-s44-lr0.0003",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P5/confirmation-Grocery-P5-s44-lr0.0003/train_val_predictions.pt",
+        "sha256": "d021818ec578d5af75b764adca672a4263e2ecece1bcaff439ca5b7ce9336ed7"
+      },
+      "variant": "P5"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P6/calibration-Grocery-P6-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "36c4c37a88ef538fdf57404c34868e630e1aa67162216ba45759cc57c43f58ee"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P6/calibration-Grocery-P6-s42-lr0.0003/epochs.jsonl",
+        "sha256": "1a794e1a1f4e34814dd57c7c4dacb7e5150b7f685daeacbf06e7fccc0aec489a"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P6-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P6/calibration-Grocery-P6-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "fa9edb50ea80ef545a8bf60a3bdee85640144d4599b58ef8492e2cf55debc757"
+      },
+      "variant": "P6"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P6/calibration-Grocery-P6-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "d78df5295232f2968e35fc9c77aa70584796db6c307a3b549c0a17681bea40a5"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P6/calibration-Grocery-P6-s42-lr0.001/epochs.jsonl",
+        "sha256": "399e656e77b73189d05c3f293f8235a801e3cecc58c3e70479c3d1e36b3efad1"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P6-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P6/calibration-Grocery-P6-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "ce5d63461686794b4e4707eaca3d4afbe5d20a44d3b9ffdfd6a31b72257dcdae"
+      },
+      "variant": "P6"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P6/calibration-Grocery-P6-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "c3dfc1bfddcbc5ca9de26fac03a9c3e6a565d0cfbde2eb51da89aa20b680e6db"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P6/calibration-Grocery-P6-s42-lr0.003/epochs.jsonl",
+        "sha256": "ac8d4088e237a641278fd0479bbe01909e34ce807fcca1df65d8af5182d7c189"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Grocery-P6-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/calibration/P6/calibration-Grocery-P6-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "f390f30df810c1c0b3a8f2ec135552b6176fc4674f4345fae7fac4b793ca2c35"
+      },
+      "variant": "P6"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P6/confirmation-Grocery-P6-s43-lr0.001/best_checkpoint.pt",
+        "sha256": "f56c1ffd592d76b00b4a6405bf80d5926085d1facb22d290206e00c75b13dc86"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P6/confirmation-Grocery-P6-s43-lr0.001/epochs.jsonl",
+        "sha256": "45200a30be3d2f84bf6a696d987cefadaaf8ed739e69b108f91defb2dde21397"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P6-s43-lr0.001",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P6/confirmation-Grocery-P6-s43-lr0.001/train_val_predictions.pt",
+        "sha256": "3a1dde14255f4c5ca94fc8d1982495b10ae38bfdb2201e120622204ffdfec371"
+      },
+      "variant": "P6"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P6/confirmation-Grocery-P6-s44-lr0.001/best_checkpoint.pt",
+        "sha256": "afc237279a3356b70725701067caa72458674ac75cd502bb3029e94d9d26f4b3"
+      },
+      "dataset": "Grocery",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P6/confirmation-Grocery-P6-s44-lr0.001/epochs.jsonl",
+        "sha256": "5196e07fc3c5c534a70b4bf868dc85457fde95edb7d2aefb864d7a0461cfd6d1"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Grocery-P6-s44-lr0.001",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Grocery/confirmation/P6/confirmation-Grocery-P6-s44-lr0.001/train_val_predictions.pt",
+        "sha256": "80720bc6040285939722b965c7801ee6f623d5a9a661e8897ffcc9da4610a961"
+      },
+      "variant": "P6"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P0/calibration-Movies-P0-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "5bae04cea497fb49ecc971c29d2513bdb23ddb65551dfd30150aeae5622a8227"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P0/calibration-Movies-P0-s42-lr0.0003/epochs.jsonl",
+        "sha256": "ce827b9f0046f3a72aba6b239b882c74c08245d96745fdd806d18d0b4391cf75"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P0-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P0/calibration-Movies-P0-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "d7523fc1a55898ab2b1212d6e07e222cea2d452e04f1c3ea3f8479366006f84a"
+      },
+      "variant": "P0"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P0/calibration-Movies-P0-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "07e56b8598af11b85d96ed8d209c0c98dd785a91f59053a2a38e92f724392a6d"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P0/calibration-Movies-P0-s42-lr0.001/epochs.jsonl",
+        "sha256": "33862cc9cb19d8d20189b64f7277ec7d127acf5ae7c3a76762177a5adb7f3641"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P0-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P0/calibration-Movies-P0-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "718c246e2d1bad9943bc1d01fe424b7722bc07fa793c08b40afa8f9083bc1590"
+      },
+      "variant": "P0"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P0/calibration-Movies-P0-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "5d958b12e8fc3e93b5ccf480a6e122d08c4aeb2cdc44427deac0834ef9e3b160"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P0/calibration-Movies-P0-s42-lr0.003/epochs.jsonl",
+        "sha256": "acd01efa77d15b9b5c654f6caf24a829f35b8b8d7b0aa8e757466669a4397379"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P0-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P0/calibration-Movies-P0-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "bacec5d73514e853598750141f32676cf45e4ef74ccac447c2956b060d9999db"
+      },
+      "variant": "P0"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P0/confirmation-Movies-P0-s43-lr0.001/best_checkpoint.pt",
+        "sha256": "4d66eb2298a5ec292c3ce8985600685d33ce3a8429810ac51a830bdf1e6834aa"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P0/confirmation-Movies-P0-s43-lr0.001/epochs.jsonl",
+        "sha256": "5a54a380a69006acd425053166479ac247e5bbcdc93705e34cccfc08dc4a1328"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P0-s43-lr0.001",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P0/confirmation-Movies-P0-s43-lr0.001/train_val_predictions.pt",
+        "sha256": "92b6ba6883bb3599e0a019a176fe491368be1ab7442082fb802149d5bc783fc3"
+      },
+      "variant": "P0"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P0/confirmation-Movies-P0-s44-lr0.001/best_checkpoint.pt",
+        "sha256": "671c86b3720765bf6e13a9dc9a004fae9cf67c424880f35e89751eabd4f0374c"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P0/confirmation-Movies-P0-s44-lr0.001/epochs.jsonl",
+        "sha256": "f105b93a6e4db6fc3a23fd98dff610e330f7650f2b0b9a30634bc2731ec21e8b"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P0-s44-lr0.001",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P0/confirmation-Movies-P0-s44-lr0.001/train_val_predictions.pt",
+        "sha256": "e0792690df7f6ca5a982d8c82b6912eecf03d4520e7cf2189ea921b02bbcd9f4"
+      },
+      "variant": "P0"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P1/calibration-Movies-P1-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "b7a73b5aa2c02722bdf087cd7af6ed0a3618a8bf150a4b64886766b889b7baae"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P1/calibration-Movies-P1-s42-lr0.0003/epochs.jsonl",
+        "sha256": "4b76ccf118ddb217dea6a6e05d73b39bdaabfdb4b7a05d5a6df2f6366b52b74e"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P1-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P1/calibration-Movies-P1-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "c50883f629ddb359141aa011133d9a84ae07952836d0268d613a5ef66233b32f"
+      },
+      "variant": "P1"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P1/calibration-Movies-P1-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "6214cb1b299615ac9358e23811505328fc2fcca4a2f5f3f11716b855adfb72b8"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P1/calibration-Movies-P1-s42-lr0.001/epochs.jsonl",
+        "sha256": "a92eb8712745ec84df407acaa35e141e77b04b4655fc14aea6d5e5d20b2d4b7d"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P1-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P1/calibration-Movies-P1-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "348bd806e79706f62b41b6e52b35ca288a50f6d74a6bd5a1c7da4111308660ca"
+      },
+      "variant": "P1"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P1/calibration-Movies-P1-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "c3bf59c50754cec263bda61643e8ad869b396d942a3df5ea595778b84b46292e"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P1/calibration-Movies-P1-s42-lr0.003/epochs.jsonl",
+        "sha256": "a8a905ef795fca4bbebd1764f20c63861b26f19648efc32e0e2bca2a8bd658e0"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P1-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P1/calibration-Movies-P1-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "a1466f98b0086bc92554dc65504400a5897d04fde6e901139b6bd3efa8060870"
+      },
+      "variant": "P1"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P1/confirmation-Movies-P1-s43-lr0.001/best_checkpoint.pt",
+        "sha256": "68ae970dceb89f9615d3cf3729282317ab2e0824c9f80dda6cae2ac362a4fd87"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P1/confirmation-Movies-P1-s43-lr0.001/epochs.jsonl",
+        "sha256": "1df90a4de0624b65452cb9d82618a29107dc09303fd32fe8d3c804f4794ee5c1"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P1-s43-lr0.001",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P1/confirmation-Movies-P1-s43-lr0.001/train_val_predictions.pt",
+        "sha256": "2098b9b43c63bf3e43cf3e641f0150a90f086115957f2d4db26eee52105a59de"
+      },
+      "variant": "P1"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P1/confirmation-Movies-P1-s44-lr0.001/best_checkpoint.pt",
+        "sha256": "d35504099a2291cba2bcae69c75e169fe7d54462d82d1b5825c29f23378db2e2"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P1/confirmation-Movies-P1-s44-lr0.001/epochs.jsonl",
+        "sha256": "5ebbf6709359692bcd99fec90d3d266b5bb369c6587525fc5a8b7542b9d0aa9d"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P1-s44-lr0.001",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P1/confirmation-Movies-P1-s44-lr0.001/train_val_predictions.pt",
+        "sha256": "d5795d7e227c8219b4c741e52574260719b981e47505b36ba5a3acaebfbea89d"
+      },
+      "variant": "P1"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P2/calibration-Movies-P2-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "1979786dea873f382cdd3969c65d3cef3236951210598af65ce5c393e90edad8"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P2/calibration-Movies-P2-s42-lr0.0003/epochs.jsonl",
+        "sha256": "a777a9d9fa97d32418a35826ea6b91bf057761cb236f0d2eca92ed0120e9fff7"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P2-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P2/calibration-Movies-P2-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "af1cf8107b9f813177fb5e284b0227b762562675fa5d1f0936f648921a8f00c0"
+      },
+      "variant": "P2"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P2/calibration-Movies-P2-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "f8b1f219fa4c6966ebb6f4456eb7e26ce2d133402db98487dbe5c5f7d6a732ec"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P2/calibration-Movies-P2-s42-lr0.001/epochs.jsonl",
+        "sha256": "27e521fb86ed41540e18e7dcd54cbd26d1658df30fe9e703f858d784ef2e22dd"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P2-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P2/calibration-Movies-P2-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "c6854ca58497babb8f8c2913103f1c3e424d0ad9e22b01d477f4c17963049114"
+      },
+      "variant": "P2"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P2/calibration-Movies-P2-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "1e3b217ed7414d9cc77dd15e4ca62400cf97edcbfd37f406d40a7dcad61470d4"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P2/calibration-Movies-P2-s42-lr0.003/epochs.jsonl",
+        "sha256": "11516beaec622dc266ae0d643eb9fc2b4a2bc8d09e9eb0f1eb5b501c877dafec"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P2-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P2/calibration-Movies-P2-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "89499cab26575f0824d49b824f6aced83f6f050690376da6d98950e0db4badac"
+      },
+      "variant": "P2"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P2/confirmation-Movies-P2-s43-lr0.001/best_checkpoint.pt",
+        "sha256": "f6a1a6c5de85ae45e7cd93627fb76bc5c5ce4b1ea0d704ac3bb1e5cc1970e60f"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P2/confirmation-Movies-P2-s43-lr0.001/epochs.jsonl",
+        "sha256": "e067794a19b1c042cebcfc8bb3545db323e5ea74f44630b3264263a280cf379f"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P2-s43-lr0.001",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P2/confirmation-Movies-P2-s43-lr0.001/train_val_predictions.pt",
+        "sha256": "6e87c918e3ccf7f5c2e0d87ed476b2428b761cfb33d1c7738c0192a83b5fedde"
+      },
+      "variant": "P2"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P2/confirmation-Movies-P2-s44-lr0.001/best_checkpoint.pt",
+        "sha256": "be9f123c1d56fa3f814f0d4fdf0c1da7c35eb0ba1ff17f42ab47b0b22b980fa4"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P2/confirmation-Movies-P2-s44-lr0.001/epochs.jsonl",
+        "sha256": "2b0a16d1bf22e45716e69528dcb318ebcd84483d4e6dbaaa205b4e26841d740e"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P2-s44-lr0.001",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P2/confirmation-Movies-P2-s44-lr0.001/train_val_predictions.pt",
+        "sha256": "d40118a655b62361dcb51ae9f124dd0c713d9e4e1e0a1f871e2036e7fab85435"
+      },
+      "variant": "P2"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P3/calibration-Movies-P3-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "f33850236fd49f97f3a34dd80f3b8c904c30daa46f88a02df1bba24833b189d1"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P3/calibration-Movies-P3-s42-lr0.0003/epochs.jsonl",
+        "sha256": "666007f3ca48f368d35fc8f4c06491499e1b234c900225e4bfa674fcefd01233"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P3-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P3/calibration-Movies-P3-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "6f996a0c3c033269ad5ea6b581bcf5365224184d3d12e1bd121d9506473281ca"
+      },
+      "variant": "P3"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P3/calibration-Movies-P3-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "590610ae3a5bf3730d1b5ecb8c9db7a08133bcf3f079fd81cd4d123fd69cf3b0"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P3/calibration-Movies-P3-s42-lr0.001/epochs.jsonl",
+        "sha256": "9c68c28b6661359dd2cc79fd2befd44d117f921153c58404360806ddf182589a"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P3-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P3/calibration-Movies-P3-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "e86afe80bb5673b3d8ac645d9b884f3a9ba609d7f7e1cc193da1c67b8e059ebf"
+      },
+      "variant": "P3"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P3/calibration-Movies-P3-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "bc16e309c2ceebe73935c2455cc5850af166b8fa769bdd08640d9754324fd8cf"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P3/calibration-Movies-P3-s42-lr0.003/epochs.jsonl",
+        "sha256": "a2f64a3fcb37f0a959c5f61893da01e042a41b362c7e7cc7f8f2744a4502e76c"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P3-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P3/calibration-Movies-P3-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "7b71cfa3faae5cc1f904c933e1016df36f217c8684cfdc4fc2ad64fc40b36d37"
+      },
+      "variant": "P3"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P3/confirmation-Movies-P3-s43-lr0.0003/best_checkpoint.pt",
+        "sha256": "1f34edeae8fc5db15e570262a4c50aecfd4b91e0c8dd6b10d45598f6ae609a32"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P3/confirmation-Movies-P3-s43-lr0.0003/epochs.jsonl",
+        "sha256": "bac757f12e8a2ea7021d4b1c979f17d0622039cd80f4661191a01d8eaa9ef9c3"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P3-s43-lr0.0003",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P3/confirmation-Movies-P3-s43-lr0.0003/train_val_predictions.pt",
+        "sha256": "d1bb27f44562e6f19767ea14fb71670c2487d9fc3431d3cf563b049506d16a26"
+      },
+      "variant": "P3"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P3/confirmation-Movies-P3-s44-lr0.0003/best_checkpoint.pt",
+        "sha256": "ce9d57f9bf4b24f319c5bd6cf5f690a2522bd8a96abc8e82608e83f673e163c4"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P3/confirmation-Movies-P3-s44-lr0.0003/epochs.jsonl",
+        "sha256": "99cc62a2d4c913cbd5f8299748aac4ac9121d90ac9b706686a1d99f5ff5ddf76"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P3-s44-lr0.0003",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P3/confirmation-Movies-P3-s44-lr0.0003/train_val_predictions.pt",
+        "sha256": "fb2b419d9e542f2ddb45e9ad833f78c4d669bd0107a652742d89ef90e53ead3c"
+      },
+      "variant": "P3"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P4/calibration-Movies-P4-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "54aa97d0eac0d6af06b383e96b874b03d19939e2b8c800a122bacd53ca7095f1"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P4/calibration-Movies-P4-s42-lr0.0003/epochs.jsonl",
+        "sha256": "2031295ff7d8f81ac12a11ce84651b05efd09097edff5a34407450381ebb92d5"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P4-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P4/calibration-Movies-P4-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "4e66783caa53d122435cc495fcf32d9affd8fad06c4432090f89f75908db4aa1"
+      },
+      "variant": "P4"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P4/calibration-Movies-P4-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "5927574d932b90bccd829c59c156acd26c0e0175349995e8d3f94c6e390c0d3e"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P4/calibration-Movies-P4-s42-lr0.001/epochs.jsonl",
+        "sha256": "e406e1dcd767fbda6d5ad2050a0998f5a115be3b668612580c5b2dc56c0c98ce"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P4-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P4/calibration-Movies-P4-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "b201b38afea9f3deeda9851009a712866877342434c4ae841eacaeb11ab728fb"
+      },
+      "variant": "P4"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P4/calibration-Movies-P4-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "91040c233c53a54804329ae1c8b18f5ac3cae2894a822d75b362629d9a1483e6"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P4/calibration-Movies-P4-s42-lr0.003/epochs.jsonl",
+        "sha256": "5a0ff76ae455275398ce9ed2a5929abcea917dfcd9e91dacb19754f6e1999b80"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P4-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P4/calibration-Movies-P4-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "b43bbfd3c0bd162e2b496bd29f7267865403cda4c668bec9a6a4bf32fde4fd59"
+      },
+      "variant": "P4"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P4/confirmation-Movies-P4-s43-lr0.001/best_checkpoint.pt",
+        "sha256": "4be87f98a98510e2e949692b9d35638ba19f3e1e6af404f4f28c7f5aeb480cc7"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P4/confirmation-Movies-P4-s43-lr0.001/epochs.jsonl",
+        "sha256": "408b81289eaa09debb03c8ac6cf490662721751055932b6492ee7e6973575caa"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P4-s43-lr0.001",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P4/confirmation-Movies-P4-s43-lr0.001/train_val_predictions.pt",
+        "sha256": "1f5db3bac2eaf1e3684a85f189325115914fb11d4cd4dfe21338c523e261802d"
+      },
+      "variant": "P4"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P4/confirmation-Movies-P4-s44-lr0.001/best_checkpoint.pt",
+        "sha256": "232c7afcdb154ce4bf0759e185b384e35fee693865c3620e4f7a1c7191592080"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P4/confirmation-Movies-P4-s44-lr0.001/epochs.jsonl",
+        "sha256": "670cd2e405952182485219a395f9c0d80f9f4c5b72b5e7b50e7d5a1c9e001ae4"
+      },
+      "lr": 0.001,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P4-s44-lr0.001",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P4/confirmation-Movies-P4-s44-lr0.001/train_val_predictions.pt",
+        "sha256": "7f102ae7f2880f4c0ede6a82fc7ecd0984c83b081b64efa3b06a1a0cc2f2636d"
+      },
+      "variant": "P4"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P5/calibration-Movies-P5-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "cb75019c07b983608a2dff461fc77be29a6cae3f7a4307554bbafa0266138e76"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P5/calibration-Movies-P5-s42-lr0.0003/epochs.jsonl",
+        "sha256": "233cfcee4847d0b9e6d7b03ed3654981a032ce11c18be23c5dc7ea73daed027c"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P5-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P5/calibration-Movies-P5-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "0869cfe2ac867ac000b8081a36fb12e91551e503360249bdc3fe964e4f58fc81"
+      },
+      "variant": "P5"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P5/calibration-Movies-P5-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "78ee3fc57076c98092c41bf8ec34d21c2bc9fc02a00cbd78ef660202788e4312"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P5/calibration-Movies-P5-s42-lr0.001/epochs.jsonl",
+        "sha256": "e1b6d25b9ac09c01abd4ff404fd65e44d827558328e6ede5a1e8c23c09cc27ca"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P5-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P5/calibration-Movies-P5-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "2b8a47b7961a6d1179b0a8c550f8a5e0b6d453eeda6ad887afb6ee1955434a86"
+      },
+      "variant": "P5"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P5/calibration-Movies-P5-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "31f23d5e7948206914a5b7fd581b5043847050cbc7cdfa9c8cecdfd183010e45"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P5/calibration-Movies-P5-s42-lr0.003/epochs.jsonl",
+        "sha256": "1352e90a0276cc8e801c9a5075e91c5c6b1c9d3aeb5cc8a4c1361cc23617daf0"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P5-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P5/calibration-Movies-P5-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "32c4502f7cae856bbfa07e5cc3131310f3766402d9f03221e6f2eb2ee4d27aea"
+      },
+      "variant": "P5"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P5/confirmation-Movies-P5-s43-lr0.0003/best_checkpoint.pt",
+        "sha256": "3fc17ce5990eec455311ea8a0584951bd23b8d216b0efcb99651783657c8c67d"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P5/confirmation-Movies-P5-s43-lr0.0003/epochs.jsonl",
+        "sha256": "5f2f5156441d122a60810e99b9c27c5830c85b9bbb31998830477b4ec5432098"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P5-s43-lr0.0003",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P5/confirmation-Movies-P5-s43-lr0.0003/train_val_predictions.pt",
+        "sha256": "984d9bad1aa3f863564c63ff32068a96a596c21e9e5cbae30aed6a72a3c651c9"
+      },
+      "variant": "P5"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P5/confirmation-Movies-P5-s44-lr0.0003/best_checkpoint.pt",
+        "sha256": "de0e7309403a5574ef3f3ee5b07e8adbbfbdd276c93af77643524c4e16917985"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P5/confirmation-Movies-P5-s44-lr0.0003/epochs.jsonl",
+        "sha256": "d6687ec300a544297a66c7153cdab9e572dca40a210588ab7a110e92ff11ca84"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P5-s44-lr0.0003",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P5/confirmation-Movies-P5-s44-lr0.0003/train_val_predictions.pt",
+        "sha256": "f32cbd063e699233fa78d1f99a6a021b3b1f213a6ec58d3f70a93397ef245c37"
+      },
+      "variant": "P5"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P6/calibration-Movies-P6-s42-lr0.0003/best_checkpoint.pt",
+        "sha256": "97d65ead3d08cdf9be9594da304d00998bc591e3affbba9fb5ce7bc5e2c409fb"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P6/calibration-Movies-P6-s42-lr0.0003/epochs.jsonl",
+        "sha256": "0388e620adb84b529e23cce16b428906cced767e4c6d9b36b592097ad0d446fc"
+      },
+      "lr": 0.0003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P6-s42-lr0.0003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P6/calibration-Movies-P6-s42-lr0.0003/train_val_predictions.pt",
+        "sha256": "9077d55c2f245ebcf8488d2c8dad47da24458ad0cf7504df47d0cc4a6c6478b8"
+      },
+      "variant": "P6"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P6/calibration-Movies-P6-s42-lr0.001/best_checkpoint.pt",
+        "sha256": "400a30751c52ed7af69a387d1693fc861c42585f4447a37f46f3c56444dc3093"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P6/calibration-Movies-P6-s42-lr0.001/epochs.jsonl",
+        "sha256": "f814eba99bfb939545084e9e5e2096befb9e9a3d2e77e31426808f22299a5415"
+      },
+      "lr": 0.001,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P6-s42-lr0.001",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P6/calibration-Movies-P6-s42-lr0.001/train_val_predictions.pt",
+        "sha256": "a300a983508789dda27b5e2280866ef1b6fa71d3a89a85ada7dfad1d43dde5a9"
+      },
+      "variant": "P6"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P6/calibration-Movies-P6-s42-lr0.003/best_checkpoint.pt",
+        "sha256": "cd0bed8f7f104546449b269e6e4c8a26e14325b6649d0952dfbfe595a6997ecc"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P6/calibration-Movies-P6-s42-lr0.003/epochs.jsonl",
+        "sha256": "28f1477257f0cb33361636c457ccacbce6b0b98d314b761203cce22eb14712c5"
+      },
+      "lr": 0.003,
+      "phase": "calibration",
+      "run_id": "calibration-Movies-P6-s42-lr0.003",
+      "seed": 42,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/calibration/P6/calibration-Movies-P6-s42-lr0.003/train_val_predictions.pt",
+        "sha256": "58ae8ab4c9dabadc3a1d86ba681e81ba5190f797cff2c09da69cccce18c33537"
+      },
+      "variant": "P6"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P6/confirmation-Movies-P6-s43-lr0.0003/best_checkpoint.pt",
+        "sha256": "c94c72d5937cab9e53235fa1654ac776ba7822497ab78fe291dc2bc4c148bb2f"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P6/confirmation-Movies-P6-s43-lr0.0003/epochs.jsonl",
+        "sha256": "67863ef598c11a4ae143335fbd8c2a8f87b2f7121b9f4fbc5f62b60a43992665"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P6-s43-lr0.0003",
+      "seed": 43,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P6/confirmation-Movies-P6-s43-lr0.0003/train_val_predictions.pt",
+        "sha256": "592ccf63ad529f4568020b21e447d0176cf9fd752e99b90a3ebdad1b05cccc4c"
+      },
+      "variant": "P6"
+    },
+    {
+      "checkpoint": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P6/confirmation-Movies-P6-s44-lr0.0003/best_checkpoint.pt",
+        "sha256": "4b7f66b67db33ed7c2c8771721b10f7ea70cc8cfa75d47f423824b34a49f81db"
+      },
+      "dataset": "Movies",
+      "epoch_log": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P6/confirmation-Movies-P6-s44-lr0.0003/epochs.jsonl",
+        "sha256": "ce263d473f9e83cd236fa4ced621c3fba9602574e0d7dc773a9db9fc47ddcc1d"
+      },
+      "lr": 0.0003,
+      "phase": "confirmation",
+      "run_id": "confirmation-Movies-P6-s44-lr0.0003",
+      "seed": 44,
+      "train_val_predictions": {
+        "path": "/hdd1/DataInHere/YHF/mag_model/outputs/mechanism_pilot_v2/Movies/confirmation/P6/confirmation-Movies-P6-s44-lr0.0003/train_val_predictions.pt",
+        "sha256": "3bdfaf76c08327a5afc18ce2be04115d9c7c52ea48f586f05f4640e7f713b63f"
+      },
+      "variant": "P6"
+    }
+  ],
+  "registry_path": "/hdd1/DataInHere/YHF/mag_model/reports/mechanism_pilot_v2/run_registry.json",
+  "registry_sha256": "ba41e6c46efbfe200278e2796efea1b2a6f7d06abe6d78391123fa89132a65dd",
+  "report_path": "/hdd1/DataInHere/YHF/mag_model/reports/mechanism_pilot_v2/report.md",
+  "report_sha256": "06217f19d9469595f6efda339aa11764e6245624c45ae5994be808e8a54efde6",
+  "results_path": "/hdd1/DataInHere/YHF/mag_model/reports/mechanism_pilot_v2/run_results.jsonl",
+  "results_sha256": "2e1a762e7e9bf9605b06f3660acc8d58086031f71544e67aad6585d947d39cad",
+  "selection_path": "/hdd1/DataInHere/YHF/mag_model/reports/mechanism_pilot_v2/selection.json",
+  "selection_sha256": "a7c9e733f34773041cd0d9c3095af4fbb38c5f8a14761e93a756f33a9f484fed",
+  "source": {
+    "baseline_commit": "d1518bfe0087df35f399d8d6679b479b520977c2",
+    "source_commit": "70f658b266ad941df176f1f2c720785c03efbe37",
+    "source_files": {
+      "configs/config.yaml": {
+        "bytes": 352,
+        "sha256": "1b06934c68b88e931909de4cb65b1fa51725df94ff6139d127a6ba85355fe399"
+      },
+      "configs/dataset/Grocery.yaml": {
+        "bytes": 766,
+        "sha256": "18969c97a0f06ab33fd3094624d524f03de48139405159bb06d19cf107105e56"
+      },
+      "configs/dataset/Movies.yaml": {
+        "bytes": 757,
+        "sha256": "81b803b0ed79ad86d483aee5dceadac149ca9ba2263e31160b22951a7812f5c8"
+      },
+      "configs/model/mag_collaborative.yaml": {
+        "bytes": 62,
+        "sha256": "dd71c27f05168b877621a900590ef98a2db103317579942c29da5f8e29881c50"
+      },
+      "configs/task/nc.yaml": {
+        "bytes": 670,
+        "sha256": "f959a73d5256d2e51b2ce3600c4f7252e7d79122c267aa70dc84abeddedb3852"
+      },
+      "docs/mechanism_pilot_v2/protocol.md": {
+        "bytes": 10596,
+        "sha256": "44b72416fbc32b29be3fb4319b227cb6db8232bea45fc63443c384f872b4aa63"
+      },
+      "scripts/run_mechanism_pilot_v2.py": {
+        "bytes": 53105,
+        "sha256": "be2d6458e1253d04e4d4890b472dbb73a68ef30042dc3c670da7f8920c55ce87"
+      },
+      "src/data/__init__.py": {
+        "bytes": 126,
+        "sha256": "732a246f7862812c798d32cd42da38c23c8f72c41f7e6b5f2213fdb457aa285d"
+      },
+      "src/data/graph_utils.py": {
+        "bytes": 1664,
+        "sha256": "8fa1c35c1897e25f2f30628ddc0312598fe9e581692a48cccb131a12a50f10df"
+      },
+      "src/data/loaders.py": {
+        "bytes": 9245,
+        "sha256": "08fe47584069a8f690d87d20a2b892d008c43a1dad6bdb3d08bb2f7e22ddd173"
+      },
+      "src/data/types.py": {
+        "bytes": 980,
+        "sha256": "531968f22725acc211d5906c66bf0189d35857cbbdb972d12ee4ebdd29d3d2f8"
+      },
+      "src/models/__init__.py": {
+        "bytes": 114,
+        "sha256": "ea25cee58d09486940ab91fc9140fb40cf9d7fdf71a9a15a3485c006bcb9ae9c"
+      },
+      "src/models/mag_collaborative.py": {
+        "bytes": 20853,
+        "sha256": "bc22e10a7d1470c9c967131615b4ba34d0454340d1ea3e342e47b6b4b37882b6"
+      },
+      "src/tasks/common.py": {
+        "bytes": 4204,
+        "sha256": "137f7d76de29f290de1bff42396e3b3d65b45c064f0bcc30a000e9aa3e6855e1"
+      },
+      "src/tasks/nc.py": {
+        "bytes": 19181,
+        "sha256": "d3203346ed141bb7eb85bc23dfb9009184ed1cd449c93e8a866fb687b3f4e14a"
+      },
+      "src/utils/seeds.py": {
+        "bytes": 285,
+        "sha256": "3e423b11a7e59e9b51c48e176d08b05b8fbd6294f364e1895ed2f1413d2e02f4"
+      }
+    },
+    "source_sha256": "1a8fcefa21d1bd25b6a2ab487b879f5670b943d69e2242752b015b4b67e1420c"
+  },
+  "source_commit": "70f658b266ad941df176f1f2c720785c03efbe37",
+  "study": "mag_mechanism_pilot_v2",
+  "succeeded": 70,
+  "test_inference": false,
+  "v1_protocol_lock_internal_sha256": "3b949712c738dd99865f9bdce882cf65f91756e775cd4af6077cbd065d3b368f",
+  "v1_protocol_lock_path": "/hdd1/DataInHere/YHF/mag_model/reports/problem_validation_v1/protocol_lock.json",
+  "v1_protocol_lock_sha256": "0942d4c9f8f509aaa6bd083b5acd8284665387872e75077b91e8c716491b3201",
+  "review_path": "/hdd1/DataInHere/YHF/mag_model/reports/mechanism_pilot_v2/review.md",
+  "review_sha256": "0c94b0ed071de2b521eff30882125df595d0703fb0b5fe4deb5b6caa69bf3860",
+  "micro_attempts_path": "/hdd1/DataInHere/YHF/mag_model/reports/mechanism_pilot_v2/micro_attempts.json",
+  "micro_attempts_sha256": "8ad799a97c1b17fc7494c73a05d9dad7efd823f3b3e4c002a46b0e8fffa97984"
+}

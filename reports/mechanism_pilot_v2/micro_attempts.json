@@ -1,0 +1,49 @@
+{
+  "study": "mag_mechanism_pilot_v2",
+  "formal_training_cells": 0,
+  "attempts": [
+    {
+      "id": "synthetic_unit_initial_axis_assertion",
+      "status": "superseded",
+      "command": "conda run --no-capture-output -n yhf_env python -m pytest -q tests/test_mag_collaborative.py",
+      "result": "The first draft had one failing assertion: it expected the sender-modality selector to be zero when the receiver modality was unavailable.",
+      "resolution": "Separated sender_valid from neighbor_valid. Sender softmax normalizes over available source modalities; receiver availability masks the received aggregate. No model training cell had started.",
+      "affected_formal_cells": []
+    },
+    {
+      "id": "synthetic_unit_final",
+      "status": "passed",
+      "command": "conda run --no-capture-output -n yhf_env python -m pytest -q tests/test_mag_collaborative.py tests/test_mag_probe.py",
+      "result": "33 passed. Covers both softmax axes, directed/reciprocal and multi-incoming edges, modality masks, isolates, source-state independence, P0/P2/P6 wide updates, P4 static retraining, nonzero router/interaction gradients and updates, external NC source heads, optimizer persistence, checkpoint restoration, test-off, and old probe regressions."
+    },
+    {
+      "id": "python_compile_and_diff_check",
+      "status": "passed",
+      "command": "conda run --no-capture-output -n yhf_env python -m py_compile src/models/mag_collaborative.py src/tasks/nc.py scripts/run_mechanism_pilot_v2.py tests/test_mag_collaborative.py; git diff --cached --check",
+      "result": "Both commands exited successfully."
+    },
+    {
+      "id": "synthetic_cuda_forward_backward",
+      "status": "passed",
+      "device": "cuda:0 NVIDIA GeForce RTX 3090",
+      "synthetic_graph": {
+        "nodes": 32,
+        "directed_edges": 62
+      },
+      "training_steps": 2,
+      "result": "Finite loss and gradients; eval outputs were exactly repeatable; peak allocated memory was 40.32 MiB. No real data or test labels were used."
+    },
+    {
+      "id": "frozen_data_and_gpu_preflight",
+      "status": "passed",
+      "result": "Movies/Grocery feature, graph, and fixed split hashes matched reports/problem_validation_v1/protocol_lock.json. RTX 3090 devices 0 and 1 each had less than 100 MiB in use and 0% utilization at inventory time."
+    },
+    {
+      "id": "synthetic_cuda_forward_backward_finite_grad_audit",
+      "status": "passed",
+      "command": "yhf_env inline CUDA synthetic smoke: P3, 32 nodes, 62 directed edges, two optimizer steps",
+      "device": "NVIDIA GeForce RTX 3090",
+      "result": "All gradient tensors were finite after both optimizer steps; eval outputs were exactly repeatable; peak allocated memory was 41.375 MiB. No real data or test labels were used."
+    }
+  ]
+}
