@@ -1,0 +1,479 @@
+{
+  "created_utc": "2026-10-06T11:59:33.119897+00:00",
+  "protocol_lock_sha256": "805d81b8f362ccdc23f863d9cf8d17edf4cf2a96ee27635b30b3ddd9f4c2d2c9",
+  "rule": "R=(val correct desc, unrounded fixed-20 Macro-F1 desc, best step asc, config index asc); S=(unrounded U desc, Acc desc, Macro-F1 desc, best step asc, config index asc)",
+  "selected": {
+    "Grocery/S0": {
+      "best_step": 157,
+      "best_utility": 0.7706402499944189,
+      "best_val_accuracy": 0.8058565258979797,
+      "best_val_correct": 2752,
+      "best_val_macro_f1": 0.735423974090858,
+      "calibration_attempt_id": "s_calibration_Grocery_S0_seed72_cfg02_lr0p001_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Grocery_S0_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Grocery_S0_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Grocery_S0_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Grocery_S0_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Grocery_S0_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Grocery_S0_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 2,
+      "lr": 0.001,
+      "selection_key": [
+        0.7706402499944189,
+        0.8058565258979797,
+        0.735423974090858,
+        -157,
+        -2
+      ],
+      "weight_decay": 0.001
+    },
+    "Grocery/S1": {
+      "best_step": 112,
+      "best_utility": 0.7724481755303081,
+      "best_val_accuracy": 0.8073206543922424,
+      "best_val_correct": 2757,
+      "best_val_macro_f1": 0.7375756966683736,
+      "calibration_attempt_id": "s_calibration_Grocery_S1_seed72_cfg04_lr0p003_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Grocery_S1_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Grocery_S1_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Grocery_S1_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Grocery_S1_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Grocery_S1_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Grocery_S1_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 4,
+      "lr": 0.003,
+      "selection_key": [
+        0.7724481755303081,
+        0.8073206543922424,
+        0.7375756966683736,
+        -112,
+        -4
+      ],
+      "weight_decay": 0.001
+    },
+    "Grocery/S2": {
+      "best_step": 119,
+      "best_utility": 0.7529498659431374,
+      "best_val_accuracy": 0.7953147888183594,
+      "best_val_correct": 2716,
+      "best_val_macro_f1": 0.7105849430679154,
+      "calibration_attempt_id": "s_calibration_Grocery_S2_seed72_cfg02_lr0p001_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Grocery_S2_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Grocery_S2_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Grocery_S2_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Grocery_S2_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Grocery_S2_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Grocery_S2_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 2,
+      "lr": 0.001,
+      "selection_key": [
+        0.7529498659431374,
+        0.7953147888183594,
+        0.7105849430679154,
+        -119,
+        -2
+      ],
+      "weight_decay": 0.001
+    },
+    "Grocery/S3": {
+      "best_step": 164,
+      "best_utility": 0.7539923893954037,
+      "best_val_accuracy": 0.799414336681366,
+      "best_val_correct": 2730,
+      "best_val_macro_f1": 0.7085704421094414,
+      "calibration_attempt_id": "s_calibration_Grocery_S3_seed72_cfg04_lr0p003_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Grocery_S3_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Grocery_S3_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Grocery_S3_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Grocery_S3_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Grocery_S3_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Grocery_S3_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 4,
+      "lr": 0.003,
+      "selection_key": [
+        0.7539923893954037,
+        0.799414336681366,
+        0.7085704421094414,
+        -164,
+        -4
+      ],
+      "weight_decay": 0.001
+    },
+    "Grocery/S4": {
+      "best_step": 137,
+      "best_utility": 0.7590456780288052,
+      "best_val_accuracy": 0.7959004640579224,
+      "best_val_correct": 2718,
+      "best_val_macro_f1": 0.722190891999688,
+      "calibration_attempt_id": "s_calibration_Grocery_S4_seed72_cfg05_lr0p003_wd0p05",
+      "candidate_attempt_ids": [
+        "s_calibration_Grocery_S4_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Grocery_S4_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Grocery_S4_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Grocery_S4_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Grocery_S4_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Grocery_S4_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 5,
+      "lr": 0.003,
+      "selection_key": [
+        0.7590456780288052,
+        0.7959004640579224,
+        0.722190891999688,
+        -137,
+        -5
+      ],
+      "weight_decay": 0.05
+    },
+    "Grocery/S5": {
+      "best_step": 210,
+      "best_utility": 0.7574083306736129,
+      "best_val_accuracy": 0.8026354312896729,
+      "best_val_correct": 2741,
+      "best_val_macro_f1": 0.712181230057553,
+      "calibration_attempt_id": "s_calibration_Grocery_S5_seed72_cfg05_lr0p003_wd0p05",
+      "candidate_attempt_ids": [
+        "s_calibration_Grocery_S5_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Grocery_S5_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Grocery_S5_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Grocery_S5_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Grocery_S5_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Grocery_S5_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 5,
+      "lr": 0.003,
+      "selection_key": [
+        0.7574083306736129,
+        0.8026354312896729,
+        0.712181230057553,
+        -210,
+        -5
+      ],
+      "weight_decay": 0.05
+    },
+    "Movies/S0": {
+      "best_step": 45,
+      "best_utility": 0.4975452017132003,
+      "best_val_accuracy": 0.5374925136566162,
+      "best_val_correct": 1792,
+      "best_val_macro_f1": 0.45759788976978444,
+      "calibration_attempt_id": "s_calibration_Movies_S0_seed72_cfg04_lr0p003_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Movies_S0_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Movies_S0_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Movies_S0_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Movies_S0_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Movies_S0_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Movies_S0_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 4,
+      "lr": 0.003,
+      "selection_key": [
+        0.4975452017132003,
+        0.5374925136566162,
+        0.45759788976978444,
+        -45,
+        -4
+      ],
+      "weight_decay": 0.001
+    },
+    "Movies/S1": {
+      "best_step": 38,
+      "best_utility": 0.4932570702434286,
+      "best_val_accuracy": 0.5329933762550354,
+      "best_val_correct": 1777,
+      "best_val_macro_f1": 0.4535207642318217,
+      "calibration_attempt_id": "s_calibration_Movies_S1_seed72_cfg05_lr0p003_wd0p05",
+      "candidate_attempt_ids": [
+        "s_calibration_Movies_S1_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Movies_S1_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Movies_S1_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Movies_S1_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Movies_S1_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Movies_S1_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 5,
+      "lr": 0.003,
+      "selection_key": [
+        0.4932570702434286,
+        0.5329933762550354,
+        0.4535207642318217,
+        -38,
+        -5
+      ],
+      "weight_decay": 0.05
+    },
+    "Movies/S2": {
+      "best_step": 43,
+      "best_utility": 0.47444571035797817,
+      "best_val_accuracy": 0.5125974416732788,
+      "best_val_correct": 1709,
+      "best_val_macro_f1": 0.4362939790426775,
+      "calibration_attempt_id": "s_calibration_Movies_S2_seed72_cfg05_lr0p003_wd0p05",
+      "candidate_attempt_ids": [
+        "s_calibration_Movies_S2_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Movies_S2_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Movies_S2_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Movies_S2_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Movies_S2_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Movies_S2_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 5,
+      "lr": 0.003,
+      "selection_key": [
+        0.47444571035797817,
+        0.5125974416732788,
+        0.4362939790426775,
+        -43,
+        -5
+      ],
+      "weight_decay": 0.05
+    },
+    "Movies/S3": {
+      "best_step": 44,
+      "best_utility": 0.4736904792642035,
+      "best_val_accuracy": 0.5095980763435364,
+      "best_val_correct": 1699,
+      "best_val_macro_f1": 0.43778288218487055,
+      "calibration_attempt_id": "s_calibration_Movies_S3_seed72_cfg05_lr0p003_wd0p05",
+      "candidate_attempt_ids": [
+        "s_calibration_Movies_S3_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Movies_S3_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Movies_S3_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Movies_S3_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Movies_S3_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Movies_S3_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 5,
+      "lr": 0.003,
+      "selection_key": [
+        0.4736904792642035,
+        0.5095980763435364,
+        0.43778288218487055,
+        -44,
+        -5
+      ],
+      "weight_decay": 0.05
+    },
+    "Movies/S4": {
+      "best_step": 41,
+      "best_utility": 0.47566681644909686,
+      "best_val_accuracy": 0.5140971541404724,
+      "best_val_correct": 1714,
+      "best_val_macro_f1": 0.4372364787577213,
+      "calibration_attempt_id": "s_calibration_Movies_S4_seed72_cfg03_lr0p001_wd0p05",
+      "candidate_attempt_ids": [
+        "s_calibration_Movies_S4_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Movies_S4_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Movies_S4_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Movies_S4_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Movies_S4_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Movies_S4_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 3,
+      "lr": 0.001,
+      "selection_key": [
+        0.47566681644909686,
+        0.5140971541404724,
+        0.4372364787577213,
+        -41,
+        -3
+      ],
+      "weight_decay": 0.05
+    },
+    "Movies/S5": {
+      "best_step": 41,
+      "best_utility": 0.48032951529315804,
+      "best_val_accuracy": 0.5218955874443054,
+      "best_val_correct": 1740,
+      "best_val_macro_f1": 0.4387634431420107,
+      "calibration_attempt_id": "s_calibration_Movies_S5_seed72_cfg04_lr0p003_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Movies_S5_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Movies_S5_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Movies_S5_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Movies_S5_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Movies_S5_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Movies_S5_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 4,
+      "lr": 0.003,
+      "selection_key": [
+        0.48032951529315804,
+        0.5218955874443054,
+        0.4387634431420107,
+        -41,
+        -4
+      ],
+      "weight_decay": 0.001
+    },
+    "Reddit-S/S0": {
+      "best_step": 173,
+      "best_utility": 0.9453166090450531,
+      "best_val_accuracy": 0.9616231322288513,
+      "best_val_correct": 3057,
+      "best_val_macro_f1": 0.9290100858612549,
+      "calibration_attempt_id": "s_calibration_Reddit-S_S0_seed72_cfg02_lr0p001_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Reddit-S_S0_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Reddit-S_S0_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Reddit-S_S0_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Reddit-S_S0_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Reddit-S_S0_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Reddit-S_S0_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 2,
+      "lr": 0.001,
+      "selection_key": [
+        0.9453166090450531,
+        0.9616231322288513,
+        0.9290100858612549,
+        -173,
+        -2
+      ],
+      "weight_decay": 0.001
+    },
+    "Reddit-S/S1": {
+      "best_step": 204,
+      "best_utility": 0.9431018345609221,
+      "best_val_accuracy": 0.9606794714927673,
+      "best_val_correct": 3054,
+      "best_val_macro_f1": 0.9255241976290769,
+      "calibration_attempt_id": "s_calibration_Reddit-S_S1_seed72_cfg02_lr0p001_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Reddit-S_S1_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Reddit-S_S1_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Reddit-S_S1_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Reddit-S_S1_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Reddit-S_S1_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Reddit-S_S1_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 2,
+      "lr": 0.001,
+      "selection_key": [
+        0.9431018345609221,
+        0.9606794714927673,
+        0.9255241976290769,
+        -204,
+        -2
+      ],
+      "weight_decay": 0.001
+    },
+    "Reddit-S/S2": {
+      "best_step": 163,
+      "best_utility": 0.947091832860542,
+      "best_val_accuracy": 0.9631959795951843,
+      "best_val_correct": 3062,
+      "best_val_macro_f1": 0.9309876861258998,
+      "calibration_attempt_id": "s_calibration_Reddit-S_S2_seed72_cfg05_lr0p003_wd0p05",
+      "candidate_attempt_ids": [
+        "s_calibration_Reddit-S_S2_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Reddit-S_S2_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Reddit-S_S2_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Reddit-S_S2_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Reddit-S_S2_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Reddit-S_S2_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 5,
+      "lr": 0.003,
+      "selection_key": [
+        0.947091832860542,
+        0.9631959795951843,
+        0.9309876861258998,
+        -163,
+        -5
+      ],
+      "weight_decay": 0.05
+    },
+    "Reddit-S/S3": {
+      "best_step": 129,
+      "best_utility": 0.9415316281137998,
+      "best_val_accuracy": 0.9613085985183716,
+      "best_val_correct": 3056,
+      "best_val_macro_f1": 0.921754657709228,
+      "calibration_attempt_id": "s_calibration_Reddit-S_S3_seed72_cfg04_lr0p003_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Reddit-S_S3_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Reddit-S_S3_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Reddit-S_S3_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Reddit-S_S3_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Reddit-S_S3_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Reddit-S_S3_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 4,
+      "lr": 0.003,
+      "selection_key": [
+        0.9415316281137998,
+        0.9613085985183716,
+        0.921754657709228,
+        -129,
+        -4
+      ],
+      "weight_decay": 0.001
+    },
+    "Reddit-S/S4": {
+      "best_step": 180,
+      "best_utility": 0.9440060137299868,
+      "best_val_accuracy": 0.9619377255439758,
+      "best_val_correct": 3058,
+      "best_val_macro_f1": 0.9260743019159978,
+      "calibration_attempt_id": "s_calibration_Reddit-S_S4_seed72_cfg04_lr0p003_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Reddit-S_S4_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Reddit-S_S4_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Reddit-S_S4_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Reddit-S_S4_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Reddit-S_S4_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Reddit-S_S4_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 4,
+      "lr": 0.003,
+      "selection_key": [
+        0.9440060137299868,
+        0.9619377255439758,
+        0.9260743019159978,
+        -180,
+        -4
+      ],
+      "weight_decay": 0.001
+    },
+    "Reddit-S/S5": {
+      "best_step": 127,
+      "best_utility": 0.9387229212326741,
+      "best_val_accuracy": 0.9587920904159546,
+      "best_val_correct": 3048,
+      "best_val_macro_f1": 0.9186537520493936,
+      "calibration_attempt_id": "s_calibration_Reddit-S_S5_seed72_cfg04_lr0p003_wd0p001",
+      "candidate_attempt_ids": [
+        "s_calibration_Reddit-S_S5_seed72_cfg00_lr0p0003_wd0p001",
+        "s_calibration_Reddit-S_S5_seed72_cfg01_lr0p0003_wd0p05",
+        "s_calibration_Reddit-S_S5_seed72_cfg02_lr0p001_wd0p001",
+        "s_calibration_Reddit-S_S5_seed72_cfg03_lr0p001_wd0p05",
+        "s_calibration_Reddit-S_S5_seed72_cfg04_lr0p003_wd0p001",
+        "s_calibration_Reddit-S_S5_seed72_cfg05_lr0p003_wd0p05"
+      ],
+      "config_index": 4,
+      "lr": 0.003,
+      "selection_key": [
+        0.9387229212326741,
+        0.9587920904159546,
+        0.9186537520493936,
+        -127,
+        -4
+      ],
+      "weight_decay": 0.001
+    }
+  },
+  "selection_uses_calibration_only": true,
+  "stage": "S",
+  "study": "mag_collab_adapt_nc_v2",
+  "training_source_commit": "524ccfd0586bc44f99d9ad3bfabbf81a7df0f83c"
+}
