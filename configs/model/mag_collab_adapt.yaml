@@ -1,0 +1,13 @@
+name: mag_collab_adapt
+base_variant: M0
+out_dim: 640
+dropout: 0.2
+typed_value: false
+fusion: false
+collect_diagnostics: false
+optimize_cache: true
+num_layers: 2
+hidden_dim: 128
+message_dim: 64
+heads: 2
+head_dim: 32
