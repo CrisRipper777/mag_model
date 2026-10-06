@@ -1,0 +1,13 @@
+{
+  "cli_help": "passed",
+  "command": "CUDA_VISIBLE_DEVICES=1 conda run -n yhf_env python -m pytest tests/test_collab_nc_pilot.py -q",
+  "coverage": "synthetic sparse axes/masks/nulls, task train-index loss, M0/M1 initialization and checkpoint, recovery, B2 R1 adapter, LP endpoint-product interface, CUDA forward/backward and repeat-eval argmax consistency",
+  "created_utc": "2026-10-06T05:45:00+00:00",
+  "cuda_was_available_during_test": true,
+  "environment": "yhf_env",
+  "exit_code": 0,
+  "frozen_source_commit": "1bed18a05a6bf667f61640c29ec098aefcd411b3",
+  "frozen_source_verified": true,
+  "physical_gpu": "NVIDIA GeForce RTX 3090 index 1",
+  "result": "15 passed, 1 upstream deprecation warning, 23.62 s"
+}

@@ -1,0 +1,32 @@
+{
+  "dgl": "2.4.0+cu121",
+  "environment": "yhf_env",
+  "gpu_inventory_snapshot": {
+    "devices": [
+      {
+        "index": 0,
+        "memory_total_mib": 24576,
+        "memory_used_mib": 90,
+        "name": "NVIDIA GeForce RTX 3090",
+        "utilization_percent": 0
+      },
+      {
+        "index": 1,
+        "memory_total_mib": 24576,
+        "memory_used_mib": 12,
+        "name": "NVIDIA GeForce RTX 3090",
+        "utilization_percent": 0
+      }
+    ],
+    "queried_utc": "2026-10-06T05:40:31.492148+00:00",
+    "status": "observed"
+  },
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "numpy": "2.4.3",
+  "process_visible_gpu": 0,
+  "python": "3.12.13",
+  "selected_physical_gpu": 1,
+  "sklearn": "1.8.0",
+  "torch": "2.4.0+cu121",
+  "torch_cuda": "12.1"
+}

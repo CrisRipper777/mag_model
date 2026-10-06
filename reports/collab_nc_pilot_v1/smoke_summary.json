@@ -1,0 +1,150 @@
+{
+  "rows": [
+    {
+      "created_utc": "2026-10-06T05:41:04.669696+00:00",
+      "cuda_event_step_ms": [
+        1735.3902587890625,
+        266.356201171875,
+        265.2070007324219
+      ],
+      "dataset": "Movies",
+      "losses": [
+        {
+          "main_ce": 4.157439708709717,
+          "pair": 7.123691558837891,
+          "path_ce": 3.312774181365967,
+          "rec": 1.0080868005752563,
+          "source_ce": 3.312774181365967,
+          "step": 1,
+          "total": 4.4043965339660645
+        },
+        {
+          "main_ce": 2.831801414489746,
+          "pair": 7.130060195922852,
+          "path_ce": 2.99312162399292,
+          "rec": 0.9767676591873169,
+          "source_ce": 2.99312162399292,
+          "step": 2,
+          "total": 3.062525749206543
+        },
+        {
+          "main_ce": 2.5598654747009277,
+          "pair": 7.115501403808594,
+          "path_ce": 2.783970355987549,
+          "rec": 0.9463810324668884,
+          "source_ce": 2.783970355987549,
+          "step": 3,
+          "total": 2.7796828746795654
+        }
+      ],
+      "num_edges": 160802,
+      "num_nodes": 16672,
+      "peak_allocated_bytes": 4635287040,
+      "peak_reserved_bytes": 5150605312,
+      "seed": 20261006,
+      "steps": 3,
+      "test_evaluated": false,
+      "train_indices_only_for_labels": true,
+      "validation_evaluated": false,
+      "variant": "M0"
+    },
+    {
+      "created_utc": "2026-10-06T05:41:06.443948+00:00",
+      "cuda_event_step_ms": [
+        252.6351318359375,
+        249.15257263183594,
+        247.02706909179688
+      ],
+      "dataset": "Grocery",
+      "losses": [
+        {
+          "main_ce": 3.771566390991211,
+          "pair": 7.101803779602051,
+          "path_ce": 3.6619091033935547,
+          "rec": 1.003791332244873,
+          "source_ce": 3.6619091033935547,
+          "step": 1,
+          "total": 4.035717964172363
+        },
+        {
+          "main_ce": 2.860001564025879,
+          "pair": 7.062135219573975,
+          "path_ce": 3.3469066619873047,
+          "rec": 0.9649790525436401,
+          "source_ce": 3.3469066619873047,
+          "step": 2,
+          "total": 3.1076178550720215
+        },
+        {
+          "main_ce": 2.70894193649292,
+          "pair": 7.045175552368164,
+          "path_ce": 3.181837558746338,
+          "rec": 0.9279071092605591,
+          "source_ce": 3.181837558746338,
+          "step": 3,
+          "total": 2.9477646350860596
+        }
+      ],
+      "num_edges": 142262,
+      "num_nodes": 17074,
+      "peak_allocated_bytes": 4322732544,
+      "peak_reserved_bytes": 5150605312,
+      "seed": 20261006,
+      "steps": 3,
+      "test_evaluated": false,
+      "train_indices_only_for_labels": true,
+      "validation_evaluated": false,
+      "variant": "M0"
+    },
+    {
+      "created_utc": "2026-10-06T05:41:08.429659+00:00",
+      "cuda_event_step_ms": [
+        410.8687438964844,
+        408.7536315917969,
+        408.06005859375
+      ],
+      "dataset": "Reddit-S",
+      "losses": [
+        {
+          "main_ce": 3.451746940612793,
+          "pair": 7.208409309387207,
+          "path_ce": 3.9017038345336914,
+          "rec": 0.9852995872497559,
+          "source_ce": 3.9017038345336914,
+          "step": 1,
+          "total": 3.728769302368164
+        },
+        {
+          "main_ce": 2.610894203186035,
+          "pair": 7.1671013832092285,
+          "path_ce": 3.4152660369873047,
+          "rec": 0.9549529552459717,
+          "source_ce": 3.4152660369873047,
+          "step": 2,
+          "total": 2.8628780841827393
+        },
+        {
+          "main_ce": 2.160015344619751,
+          "pair": 7.149478912353516,
+          "path_ce": 3.1656787395477295,
+          "rec": 0.9290121793746948,
+          "source_ce": 3.1656787395477295,
+          "step": 3,
+          "total": 2.3990843296051025
+        }
+      ],
+      "num_edges": 283080,
+      "num_nodes": 15894,
+      "peak_allocated_bytes": 7116272128,
+      "peak_reserved_bytes": 9516875776,
+      "seed": 20261006,
+      "steps": 3,
+      "test_evaluated": false,
+      "train_indices_only_for_labels": true,
+      "validation_evaluated": false,
+      "variant": "M0"
+    }
+  ],
+  "test_evaluation": false,
+  "used_for_selection": false
+}
