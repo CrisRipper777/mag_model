@@ -1,0 +1,90 @@
+{
+  "boundary_lr_selected_cells": [
+    {
+      "best_step": 85,
+      "dataset_model": "Grocery/B2",
+      "lr": 0.003,
+      "status": "early_stopped_before_300",
+      "steps_completed": 125,
+      "weight_decay": 0.001
+    },
+    {
+      "best_step": 224,
+      "dataset_model": "Grocery/M0",
+      "lr": 0.003,
+      "status": "early_stopped_before_300",
+      "steps_completed": 264,
+      "weight_decay": 0.001
+    },
+    {
+      "best_step": 172,
+      "dataset_model": "Grocery/M1",
+      "lr": 0.003,
+      "status": "early_stopped_before_300",
+      "steps_completed": 212,
+      "weight_decay": 0.0001
+    },
+    {
+      "best_step": 35,
+      "dataset_model": "Movies/B0",
+      "lr": 0.003,
+      "status": "early_stopped_before_300",
+      "steps_completed": 75,
+      "weight_decay": 0.0001
+    },
+    {
+      "best_step": 69,
+      "dataset_model": "Movies/M0",
+      "lr": 0.0003,
+      "status": "early_stopped_before_300",
+      "steps_completed": 109,
+      "weight_decay": 0.001
+    },
+    {
+      "best_step": 72,
+      "dataset_model": "Movies/M1",
+      "lr": 0.0003,
+      "status": "early_stopped_before_300",
+      "steps_completed": 112,
+      "weight_decay": 0.0001
+    },
+    {
+      "best_step": 216,
+      "dataset_model": "Reddit-S/B1",
+      "lr": 0.003,
+      "status": "early_stopped_before_300",
+      "steps_completed": 256,
+      "weight_decay": 0.001
+    },
+    {
+      "best_step": 38,
+      "dataset_model": "Reddit-S/B2",
+      "lr": 0.003,
+      "status": "early_stopped_before_300",
+      "steps_completed": 78,
+      "weight_decay": 0.0001
+    },
+    {
+      "best_step": 60,
+      "dataset_model": "Reddit-S/M0",
+      "lr": 0.003,
+      "status": "early_stopped_before_300",
+      "steps_completed": 100,
+      "weight_decay": 0.0001
+    }
+  ],
+  "decision": "no_extension",
+  "extension_cells": 0,
+  "reached_300_step_cells": [
+    {
+      "best_step": 286,
+      "dataset_model": "Grocery/B1",
+      "lr": 0.001,
+      "weight_decay": 0.0001
+    }
+  ],
+  "reason": "Boundary-selected cells all stopped by patience before 300 steps; the only cell reaching the step cap uses an interior LR (Grocery/B1, LR=0.001). No observed boundary curve shows continued optimization at the cap, so the preregistered evidence condition for an LR extension is not met. A boundary winner by itself is insufficient.",
+  "selection_lock_sha256": "4fce7977b7f9d1d0dc846db73dc3a9a479d732d7bbc93423c2b52b30575806c9",
+  "standard_calibration_cells": 90,
+  "successful_cells": 90
+}
