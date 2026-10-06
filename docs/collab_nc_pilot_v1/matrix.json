@@ -1,0 +1,1131 @@
+{
+  "extension_count": 0,
+  "planned_standard_count": 135,
+  "standard_runs": [
+    {
+      "config_index": 0,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Movies",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Movies",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Movies",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Movies",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Movies",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Movies",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Movies",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Movies",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Movies",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Movies",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Grocery",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Grocery",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Grocery",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Grocery",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Grocery",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Grocery",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Grocery",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Grocery",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Grocery",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Grocery",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "B2",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M0",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 1,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.001
+    },
+    {
+      "config_index": 4,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.0001
+    },
+    {
+      "config_index": 5,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "phase": "calibration",
+      "training_seed": 62,
+      "variant": "M1",
+      "weight_decay": 0.001
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "B0"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "B0"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "B0"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "B1"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "B1"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "B1"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "B2"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "B2"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "B2"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "M0"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "M0"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "M0"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "M1"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "M1"
+    },
+    {
+      "dataset": "Movies",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "M1"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "B0"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "B0"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "B0"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "B1"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "B1"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "B1"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "B2"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "B2"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "B2"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "M0"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "M0"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "M0"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "M1"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "M1"
+    },
+    {
+      "dataset": "Grocery",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "M1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "B0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "B0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "B0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "B1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "B1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "B1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "B2"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "B2"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "B2"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "M0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "M0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "M0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 63,
+      "variant": "M1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 64,
+      "variant": "M1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "phase": "confirmation",
+      "selection_locked_lr_wd": true,
+      "training_seed": 65,
+      "variant": "M1"
+    }
+  ]
+}
