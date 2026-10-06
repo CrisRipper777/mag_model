@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-06",
+  "environment": {
+    "conda_env": "yhf_env",
+    "python": "3.12.13",
+    "torch": "2.4.0+cu121",
+    "dgl": "2.4.0+cu121",
+    "selected_physical_gpu": "GPU 1 (RTX 3090)",
+    "process_device": "cuda:0 with CUDA_VISIBLE_DEVICES=1"
+  },
+  "checks": [
+    {
+      "command": "conda run -n yhf_env python -m py_compile src/models/mag_collab_adapt.py scripts/run_collab_adapt_nc_v2.py scripts/audit_collab_adapt_nc_v2.py tests/test_collab_adapt.py",
+      "result": "passed"
+    },
+    {
+      "command": "conda run -n yhf_env python scripts/run_collab_adapt_nc_v2.py --help; conda run -n yhf_env python scripts/audit_collab_adapt_nc_v2.py --help",
+      "result": "passed; runner exposes prepare/smoke/profile/calibrate-R/lock-R/confirm-R/calibrate-S/lock-S/confirm-S/report only; no test or LP phase"
+    },
+    {
+      "command": "conda run -n yhf_env python -m pytest tests/test_collab_adapt.py -q",
+      "result": "13 passed; 1 PyG deprecation warning"
+    },
+    {
+      "command": "CUDA_VISIBLE_DEVICES=1 conda run -n yhf_env python -m pytest tests/test_collab_adapt.py -q",
+      "result": "13 passed on CUDA; 1 PyG deprecation warning"
+    },
+    {
+      "command": "conda run -n yhf_env python -m pytest tests/test_collab_nc_pilot.py -q",
+      "result": "15 passed; 1 PyG deprecation warning"
+    },
+    {
+      "command": "CUDA_VISIBLE_DEVICES=1 conda run -n yhf_env python scripts/run_collab_adapt_nc_v2.py smoke --device cuda:0",
+      "result": "6/6 smoke cells successful; 18 train-only optimizer steps across Movies, Grocery, Reddit-S and R-M0/S5"
+    },
+    {
+      "command": "CUDA_VISIBLE_DEVICES=1 conda run -n yhf_env python scripts/run_collab_adapt_nc_v2.py profile --device cuda:0",
+      "result": "matched train-only optimization profiles completed for Movies, Grocery, Reddit-S; speedups 2.23x, 1.86x, 2.72x respectively; see optimization_profile.json"
+    },
+    {
+      "command": "conda run -n yhf_env python scripts/audit_collab_adapt_nc_v2.py audit",
+      "result": "initial frozen auditor emitted 1718 accuracy-only mismatches from float32 serialization vs float64 reconstruction at atol=1e-10; counts, Macro-F1, and confusion matrices showed no mismatch; superseded by the recorded precision reconciliation"
+    },
+    {
+      "command": "conda run -n yhf_env python scripts/audit_collab_adapt_nc_v2_precision.py",
+      "result": "PASS; 0 issues across 1728 train/validation metric checks; audited formal attempt, selection, input, and raw artifact identities; test forward/metrics and real LP remain zero"
+    },
+    {
+      "command": "conda run -n yhf_env python scripts/audit_collab_adapt_nc_v2_precision.py manifest",
+      "result": "PASS; refreshed the manifest after recording the test/audit record and included the audit-only precision correction script and record"
+    },
+    {
+      "command": "conda run -n yhf_env python -m py_compile scripts/audit_collab_adapt_nc_v2_precision.py",
+      "result": "passed"
+    }
+  ],
+  "notes": [
+    "GPU execution required approved sandbox escalation because CUDA is hidden in the default shell sandbox.",
+    "The listed PyG deprecation warning did not affect pass status.",
+    "No new real test-set inference/metrics or LP training/evaluation was run.",
+    "The frozen auditor remains unchanged at its locked source hash; an audit-only wrapper records the float32 accuracy serialization tolerance correction. See audit_precision_correction.json."
+  ]
+}

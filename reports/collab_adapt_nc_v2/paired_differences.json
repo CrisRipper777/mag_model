@@ -1,0 +1,551 @@
+{
+  "calibration_interaction_by_common_config": [
+    {
+      "config_index": 0,
+      "dataset": "Movies",
+      "delta_accuracy_pp": 0.8998215198516846,
+      "delta_macro_f1_pp": -2.032662989192069
+    },
+    {
+      "config_index": 1,
+      "dataset": "Movies",
+      "delta_accuracy_pp": -1.4397144317626953,
+      "delta_macro_f1_pp": 0.7184842722554652
+    },
+    {
+      "config_index": 2,
+      "dataset": "Movies",
+      "delta_accuracy_pp": -0.029987096786499023,
+      "delta_macro_f1_pp": 0.7269087670481345
+    },
+    {
+      "config_index": 3,
+      "dataset": "Movies",
+      "delta_accuracy_pp": 0.3599226474761963,
+      "delta_macro_f1_pp": -0.5502327820556374
+    },
+    {
+      "config_index": 4,
+      "dataset": "Movies",
+      "delta_accuracy_pp": 0.23995041847229004,
+      "delta_macro_f1_pp": 0.883034388559989
+    },
+    {
+      "config_index": 5,
+      "dataset": "Movies",
+      "delta_accuracy_pp": 0.29993653297424316,
+      "delta_macro_f1_pp": 0.2632861873889447
+    },
+    {
+      "config_index": 0,
+      "dataset": "Grocery",
+      "delta_accuracy_pp": -0.20498037338256836,
+      "delta_macro_f1_pp": -2.087312867929081
+    },
+    {
+      "config_index": 1,
+      "dataset": "Grocery",
+      "delta_accuracy_pp": -0.35138726234436035,
+      "delta_macro_f1_pp": -1.7230971262685024
+    },
+    {
+      "config_index": 2,
+      "dataset": "Grocery",
+      "delta_accuracy_pp": 0.7320642471313477,
+      "delta_macro_f1_pp": 0.4941262819802006
+    },
+    {
+      "config_index": 3,
+      "dataset": "Grocery",
+      "delta_accuracy_pp": 0.6734967231750488,
+      "delta_macro_f1_pp": 0.7492430098053782
+    },
+    {
+      "config_index": 4,
+      "dataset": "Grocery",
+      "delta_accuracy_pp": -0.5563676357269287,
+      "delta_macro_f1_pp": -0.9795213100320721
+    },
+    {
+      "config_index": 5,
+      "dataset": "Grocery",
+      "delta_accuracy_pp": 1.0248899459838867,
+      "delta_macro_f1_pp": -0.5712817039980278
+    },
+    {
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "delta_accuracy_pp": 0.5347549915313721,
+      "delta_macro_f1_pp": 1.1842216837254282
+    },
+    {
+      "config_index": 1,
+      "dataset": "Reddit-S",
+      "delta_accuracy_pp": 0.47184228897094727,
+      "delta_macro_f1_pp": 0.6826436915390643
+    },
+    {
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "delta_accuracy_pp": -0.03145933151245117,
+      "delta_macro_f1_pp": -0.3111285061884628
+    },
+    {
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "delta_accuracy_pp": -0.2516508102416992,
+      "delta_macro_f1_pp": -0.40229424898857724
+    },
+    {
+      "config_index": 4,
+      "dataset": "Reddit-S",
+      "delta_accuracy_pp": -0.2831101417541504,
+      "delta_macro_f1_pp": -0.06079001404711848
+    },
+    {
+      "config_index": 5,
+      "dataset": "Reddit-S",
+      "delta_accuracy_pp": -0.0629127025604248,
+      "delta_macro_f1_pp": 0.2000369959590076
+    }
+  ],
+  "confirmation": {
+    "S1-S0": {
+      "Grocery": [
+        {
+          "delta_accuracy_pp": -0.7613480091094971,
+          "delta_macro_f1_pp": -2.1544965660365234,
+          "delta_utility_pp": -1.4579222875730102,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -1.0248899459838867,
+          "delta_macro_f1_pp": -1.4253290154738418,
+          "delta_utility_pp": -1.2251094807288587,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": -0.14641284942626953,
+          "delta_macro_f1_pp": -0.7733092683273157,
+          "delta_utility_pp": -0.4598610588767982,
+          "seed": 75
+        }
+      ],
+      "Movies": [
+        {
+          "delta_accuracy_pp": 0.41991472244262695,
+          "delta_macro_f1_pp": 1.0530473290404074,
+          "delta_utility_pp": 0.7364810257415144,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -0.059986114501953125,
+          "delta_macro_f1_pp": 0.2481007695414872,
+          "delta_utility_pp": 0.09405732751976426,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": 0.20995736122131348,
+          "delta_macro_f1_pp": 1.5633017394712123,
+          "delta_utility_pp": 0.8866295503462629,
+          "seed": 75
+        }
+      ],
+      "Reddit-S": [
+        {
+          "delta_accuracy_pp": -0.5347609519958496,
+          "delta_macro_f1_pp": -0.9506229681010447,
+          "delta_utility_pp": -0.7426919600484472,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -0.1258254051208496,
+          "delta_macro_f1_pp": -0.36551896809743356,
+          "delta_utility_pp": -0.24567218660914714,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": 0.09437203407287598,
+          "delta_macro_f1_pp": 0.3443490498865165,
+          "delta_utility_pp": 0.21936054197970734,
+          "seed": 75
+        }
+      ]
+    },
+    "S3-S2": {
+      "Grocery": [
+        {
+          "delta_accuracy_pp": 0.937044620513916,
+          "delta_macro_f1_pp": 0.5402786497638479,
+          "delta_utility_pp": 0.738661635138882,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -0.17569661140441895,
+          "delta_macro_f1_pp": 1.429063718071455,
+          "delta_utility_pp": 0.626683553333518,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": 0.26354193687438965,
+          "delta_macro_f1_pp": 1.0679120363281447,
+          "delta_utility_pp": 0.6657269866012783,
+          "seed": 75
+        }
+      ],
+      "Movies": [
+        {
+          "delta_accuracy_pp": -0.869828462600708,
+          "delta_macro_f1_pp": 0.6905566703116317,
+          "delta_utility_pp": -0.08963589614454093,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": 0.5098998546600342,
+          "delta_macro_f1_pp": -0.022905266836109606,
+          "delta_utility_pp": 0.2434972939119595,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": 1.9196152687072754,
+          "delta_macro_f1_pp": -0.7573899561524766,
+          "delta_utility_pp": 0.5811126562773994,
+          "seed": 75
+        }
+      ],
+      "Reddit-S": [
+        {
+          "delta_accuracy_pp": -0.1258254051208496,
+          "delta_macro_f1_pp": -0.1238502881968806,
+          "delta_utility_pp": -0.1248378466588651,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": 0.2516508102416992,
+          "delta_macro_f1_pp": 0.20380741216798892,
+          "delta_utility_pp": 0.22772911120485517,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": 0.28310418128967285,
+          "delta_macro_f1_pp": 0.6090760418880792,
+          "delta_utility_pp": 0.44609011158887046,
+          "seed": 75
+        }
+      ]
+    },
+    "S4-S2": {
+      "Grocery": [
+        {
+          "delta_accuracy_pp": -0.32210350036621094,
+          "delta_macro_f1_pp": -0.271643773004171,
+          "delta_utility_pp": -0.29687363668519096,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -0.08785128593444824,
+          "delta_macro_f1_pp": 2.050689003825701,
+          "delta_utility_pp": 0.9814188589456263,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": 0.7320642471313477,
+          "delta_macro_f1_pp": 1.2804050106802967,
+          "delta_utility_pp": 1.0062346289058333,
+          "seed": 75
+        }
+      ],
+      "Movies": [
+        {
+          "delta_accuracy_pp": -0.3899216651916504,
+          "delta_macro_f1_pp": 3.144130716329019,
+          "delta_utility_pp": 1.3771045255686842,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": 0.029993057250976562,
+          "delta_macro_f1_pp": -0.04963677300536817,
+          "delta_utility_pp": -0.009821857877195805,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": 0.6898641586303711,
+          "delta_macro_f1_pp": 0.9674610853436849,
+          "delta_utility_pp": 0.8286626219870252,
+          "seed": 75
+        }
+      ],
+      "Reddit-S": [
+        {
+          "delta_accuracy_pp": 0.09437203407287598,
+          "delta_macro_f1_pp": 0.2615915751642661,
+          "delta_utility_pp": 0.1779818046185655,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -0.25165677070617676,
+          "delta_macro_f1_pp": -0.004220210494332299,
+          "delta_utility_pp": -0.12793849060024343,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": 0.09436607360839844,
+          "delta_macro_f1_pp": 0.2736316884837442,
+          "delta_utility_pp": 0.18399888104607687,
+          "seed": 75
+        }
+      ]
+    },
+    "S5-S0": {
+      "Grocery": [
+        {
+          "delta_accuracy_pp": -1.6398251056671143,
+          "delta_macro_f1_pp": -2.9238625497161164,
+          "delta_utility_pp": -2.2818438276916098,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -2.079063653945923,
+          "delta_macro_f1_pp": -2.0020803524923525,
+          "delta_utility_pp": -2.040572003219132,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": -0.7027864456176758,
+          "delta_macro_f1_pp": -0.8315627427358585,
+          "delta_utility_pp": -0.7671745941767671,
+          "seed": 75
+        }
+      ],
+      "Movies": [
+        {
+          "delta_accuracy_pp": -0.5398929119110107,
+          "delta_macro_f1_pp": -1.8089815037867107,
+          "delta_utility_pp": -1.1744372078488663,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -1.109778881072998,
+          "delta_macro_f1_pp": -1.5207612502423806,
+          "delta_utility_pp": -1.3152700656576921,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": -0.4799067974090576,
+          "delta_macro_f1_pp": -2.547044004938892,
+          "delta_utility_pp": -1.5134754011739748,
+          "seed": 75
+        }
+      ],
+      "Reddit-S": [
+        {
+          "delta_accuracy_pp": -0.6920397281646729,
+          "delta_macro_f1_pp": -2.1059810640503884,
+          "delta_utility_pp": -1.3990103961075362,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -0.629127025604248,
+          "delta_macro_f1_pp": -1.2473816727427867,
+          "delta_utility_pp": -0.9382543491735174,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": -0.314563512802124,
+          "delta_macro_f1_pp": -1.0301244510396046,
+          "delta_utility_pp": -0.6723439819208643,
+          "seed": 75
+        }
+      ]
+    },
+    "S5-S1": {
+      "Grocery": [
+        {
+          "delta_accuracy_pp": -0.8784770965576172,
+          "delta_macro_f1_pp": -0.769365983679593,
+          "delta_utility_pp": -0.8239215401185995,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -1.0541737079620361,
+          "delta_macro_f1_pp": -0.5767513370185107,
+          "delta_utility_pp": -0.8154625224902734,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": -0.5563735961914062,
+          "delta_macro_f1_pp": -0.05825347440854278,
+          "delta_utility_pp": -0.30731353529996897,
+          "seed": 75
+        }
+      ],
+      "Movies": [
+        {
+          "delta_accuracy_pp": -0.9598076343536377,
+          "delta_macro_f1_pp": -2.862028832827118,
+          "delta_utility_pp": -1.9109182335903807,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -1.049792766571045,
+          "delta_macro_f1_pp": -1.7688620197838678,
+          "delta_utility_pp": -1.4093273931774564,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": -0.6898641586303711,
+          "delta_macro_f1_pp": -4.110345744410104,
+          "delta_utility_pp": -2.4001049515202375,
+          "seed": 75
+        }
+      ],
+      "Reddit-S": [
+        {
+          "delta_accuracy_pp": -0.15727877616882324,
+          "delta_macro_f1_pp": -1.1553580959493437,
+          "delta_utility_pp": -0.656318436059089,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -0.5033016204833984,
+          "delta_macro_f1_pp": -0.8818627046453531,
+          "delta_utility_pp": -0.6925821625643702,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": -0.408935546875,
+          "delta_macro_f1_pp": -1.374473500926121,
+          "delta_utility_pp": -0.8917045239005716,
+          "seed": 75
+        }
+      ]
+    },
+    "S5-S2": {
+      "Grocery": [
+        {
+          "delta_accuracy_pp": -0.5270838737487793,
+          "delta_macro_f1_pp": -0.4381344772066309,
+          "delta_utility_pp": -0.48260917547769955,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -0.17569661140441895,
+          "delta_macro_f1_pp": 1.4960017612781096,
+          "delta_utility_pp": 0.6601525749368453,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": 1.1420190334320068,
+          "delta_macro_f1_pp": 2.0641269590410904,
+          "delta_utility_pp": 1.6030729962365542,
+          "seed": 75
+        }
+      ],
+      "Movies": [
+        {
+          "delta_accuracy_pp": -0.11997818946838379,
+          "delta_macro_f1_pp": 0.7407773572494392,
+          "delta_utility_pp": 0.3103995838905249,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": 0.5998790264129639,
+          "delta_macro_f1_pp": 0.11491935724640134,
+          "delta_utility_pp": 0.3573991918296826,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": 1.3797223567962646,
+          "delta_macro_f1_pp": -1.0603018571085032,
+          "delta_utility_pp": 0.15971024984388071,
+          "seed": 75
+        }
+      ],
+      "Reddit-S": [
+        {
+          "delta_accuracy_pp": -0.15727877616882324,
+          "delta_macro_f1_pp": -0.31898517306412355,
+          "delta_utility_pp": -0.2381319746164845,
+          "seed": 73
+        },
+        {
+          "delta_accuracy_pp": -0.3460228443145752,
+          "delta_macro_f1_pp": -0.3177021310801331,
+          "delta_utility_pp": -0.33186248769734306,
+          "seed": 74
+        },
+        {
+          "delta_accuracy_pp": -0.03145933151245117,
+          "delta_macro_f1_pp": -0.08233610712838901,
+          "delta_utility_pp": -0.056897719320425644,
+          "seed": 75
+        }
+      ]
+    },
+    "S5-S3-S4+S2_interaction": [
+      {
+        "dataset": "Movies",
+        "delta_accuracy_pp": 1.1397719383239746,
+        "delta_macro_f1_pp": -3.0939100293912114,
+        "delta_utility_pp": -0.9770690455336184,
+        "seed": 73
+      },
+      {
+        "dataset": "Movies",
+        "delta_accuracy_pp": 0.059986114501953125,
+        "delta_macro_f1_pp": 0.18746139708787912,
+        "delta_utility_pp": 0.1237237557949189,
+        "seed": 74
+      },
+      {
+        "dataset": "Movies",
+        "delta_accuracy_pp": -1.2297570705413818,
+        "delta_macro_f1_pp": -1.2703729862997115,
+        "delta_utility_pp": -1.250065028420544,
+        "seed": 75
+      },
+      {
+        "dataset": "Grocery",
+        "delta_accuracy_pp": -1.1420249938964844,
+        "delta_macro_f1_pp": -0.7067693539663078,
+        "delta_utility_pp": -0.9243971739313905,
+        "seed": 73
+      },
+      {
+        "dataset": "Grocery",
+        "delta_accuracy_pp": 0.08785128593444824,
+        "delta_macro_f1_pp": -1.9837509606190462,
+        "delta_utility_pp": -0.947949837342299,
+        "seed": 74
+      },
+      {
+        "dataset": "Grocery",
+        "delta_accuracy_pp": 0.14641284942626953,
+        "delta_macro_f1_pp": -0.2841900879673509,
+        "delta_utility_pp": -0.06888861927055734,
+        "seed": 75
+      },
+      {
+        "dataset": "Reddit-S",
+        "delta_accuracy_pp": -0.1258254051208496,
+        "delta_macro_f1_pp": -0.4567264600315091,
+        "delta_utility_pp": -0.2912759325761849,
+        "seed": 73
+      },
+      {
+        "dataset": "Reddit-S",
+        "delta_accuracy_pp": -0.34601688385009766,
+        "delta_macro_f1_pp": -0.5172893327537897,
+        "delta_utility_pp": -0.4316531083019548,
+        "seed": 74
+      },
+      {
+        "dataset": "Reddit-S",
+        "delta_accuracy_pp": -0.40892958641052246,
+        "delta_macro_f1_pp": -0.9650438375002124,
+        "delta_utility_pp": -0.686986711955373,
+        "seed": 75
+      }
+    ]
+  }
+}

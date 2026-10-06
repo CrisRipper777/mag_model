@@ -1,0 +1,20 @@
+{
+  "corrected_accuracy_tolerance": 1e-07,
+  "corrected_audit_passed": true,
+  "correction_script": "/hdd1/DataInHere/YHF/mag_model/scripts/audit_collab_adapt_nc_v2_precision.py",
+  "correction_script_sha256": "5730faf1eae06751dea73487a17e66e66041c091ec31d93d0f0bcbec97694950",
+  "frozen_accuracy_tolerance": 1e-10,
+  "frozen_auditor": "scripts/audit_collab_adapt_nc_v2.py",
+  "frozen_auditor_sha256": "004762d24f25902a190f2faa2c37670070437c71ac023f991d3b6663eac073a1",
+  "frozen_source_hash_matches_protocol_lock": true,
+  "initial_audit_issue_count": 1718,
+  "initial_issue_kinds": {
+    "argmax accuracy mismatch": 1718
+  },
+  "purpose": "Post-run self-audit precision correction only; no model, training, checkpoint, selection, or protocol-lock changes.",
+  "real_lp_runs": 0,
+  "reason": "Accuracy had been serialized from a float32 tensor. Rebuilding accuracy from integer argmax counts yields float64, producing differences below 1e-7. Correct counts, confusion matrices, and Macro-F1 were already exact in the initial audit.",
+  "reconciled_prediction_metric_checks": 1728,
+  "test_head_forward_events": 0,
+  "test_metric_records": 0
+}

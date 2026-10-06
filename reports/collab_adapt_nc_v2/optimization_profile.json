@@ -1,0 +1,151 @@
+{
+  "comparison": {
+    "Grocery": {
+      "optimized_peak_allocated_bytes": 4179361280,
+      "optimized_step_median_ms": 125.27616119384766,
+      "reference_over_optimized_ratio": 1.8558034352450217,
+      "reference_peak_allocated_bytes": 4552246784,
+      "reference_step_median_ms": 232.48793029785156
+    },
+    "Movies": {
+      "optimized_peak_allocated_bytes": 4465266176,
+      "optimized_step_median_ms": 103.41478729248047,
+      "reference_over_optimized_ratio": 2.232198774410479,
+      "reference_peak_allocated_bytes": 4678337536,
+      "reference_step_median_ms": 230.8423614501953
+    },
+    "Reddit-S": {
+      "optimized_peak_allocated_bytes": 6363792384,
+      "optimized_step_median_ms": 132.79129028320312,
+      "reference_over_optimized_ratio": 2.7220213246370917,
+      "reference_peak_allocated_bytes": 7045339136,
+      "reference_step_median_ms": 361.4607238769531
+    }
+  },
+  "diagnostics": false,
+  "runs": [
+    {
+      "dataset": "Movies",
+      "diagnostic_flag": false,
+      "last_pre_clip_gradient_norm": 4.7316813468933105,
+      "path": "reference_no_cache_edge_space_relation",
+      "peak_allocated_bytes": 4678337536,
+      "same_model_seed": 20261007,
+      "selection_eligible": false,
+      "status": "success",
+      "step_median_ms": 230.8423614501953,
+      "step_samples_ms": [
+        232.31692504882812,
+        230.8423614501953,
+        230.4727020263672
+      ],
+      "test_evaluation": false,
+      "timed_steps": 3,
+      "train_labels_only": true,
+      "warmup_steps": 2
+    },
+    {
+      "dataset": "Movies",
+      "diagnostic_flag": false,
+      "last_pre_clip_gradient_norm": 4.7316813468933105,
+      "path": "optimized",
+      "peak_allocated_bytes": 4465266176,
+      "same_model_seed": 20261007,
+      "selection_eligible": false,
+      "status": "success",
+      "step_median_ms": 103.41478729248047,
+      "step_samples_ms": [
+        100.4031982421875,
+        103.41478729248047,
+        125.00685119628906
+      ],
+      "test_evaluation": false,
+      "timed_steps": 3,
+      "train_labels_only": true,
+      "warmup_steps": 2
+    },
+    {
+      "dataset": "Grocery",
+      "diagnostic_flag": false,
+      "last_pre_clip_gradient_norm": 2.0371458530426025,
+      "path": "reference_no_cache_edge_space_relation",
+      "peak_allocated_bytes": 4552246784,
+      "same_model_seed": 20261007,
+      "selection_eligible": false,
+      "status": "success",
+      "step_median_ms": 232.48793029785156,
+      "step_samples_ms": [
+        232.48793029785156,
+        232.44595336914062,
+        233.0040283203125
+      ],
+      "test_evaluation": false,
+      "timed_steps": 3,
+      "train_labels_only": true,
+      "warmup_steps": 2
+    },
+    {
+      "dataset": "Grocery",
+      "diagnostic_flag": false,
+      "last_pre_clip_gradient_norm": 2.0371458530426025,
+      "path": "optimized",
+      "peak_allocated_bytes": 4179361280,
+      "same_model_seed": 20261007,
+      "selection_eligible": false,
+      "status": "success",
+      "step_median_ms": 125.27616119384766,
+      "step_samples_ms": [
+        125.1809310913086,
+        126.69951629638672,
+        125.27616119384766
+      ],
+      "test_evaluation": false,
+      "timed_steps": 3,
+      "train_labels_only": true,
+      "warmup_steps": 2
+    },
+    {
+      "dataset": "Reddit-S",
+      "diagnostic_flag": false,
+      "last_pre_clip_gradient_norm": 3.2284016609191895,
+      "path": "reference_no_cache_edge_space_relation",
+      "peak_allocated_bytes": 7045339136,
+      "same_model_seed": 20261007,
+      "selection_eligible": false,
+      "status": "success",
+      "step_median_ms": 361.4607238769531,
+      "step_samples_ms": [
+        362.56768798828125,
+        361.31121826171875,
+        361.4607238769531
+      ],
+      "test_evaluation": false,
+      "timed_steps": 3,
+      "train_labels_only": true,
+      "warmup_steps": 2
+    },
+    {
+      "dataset": "Reddit-S",
+      "diagnostic_flag": false,
+      "last_pre_clip_gradient_norm": 3.2284016609191895,
+      "path": "optimized",
+      "peak_allocated_bytes": 6363792384,
+      "same_model_seed": 20261007,
+      "selection_eligible": false,
+      "status": "success",
+      "step_median_ms": 132.79129028320312,
+      "step_samples_ms": [
+        132.79129028320312,
+        132.88858032226562,
+        132.2547149658203
+      ],
+      "test_evaluation": false,
+      "timed_steps": 3,
+      "train_labels_only": true,
+      "warmup_steps": 2
+    }
+  ],
+  "selection_eligible": false,
+  "test_evaluation": false,
+  "warmup_and_timing_boundary": "both implementations: 2 warmup updates excluded, then 3 CUDA-event (or same CPU wall) timings cover forward, train-only loss, backward, one global clip and optimizer.step; diagnostics, validation and checkpointing excluded"
+}
