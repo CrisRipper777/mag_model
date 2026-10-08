@@ -1,0 +1,701 @@
+{
+  "comparisons": {
+    "M0_vs_A0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.004405068026648627,
+      "equal_graph_mean_validation_macro_f1_delta": -0.004618337576356417,
+      "left": "M0",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.013762831687927246,
+              "validation_macro_f1_delta": 0.017183809120288607
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.02371889352798462,
+              "validation_macro_f1_delta": 0.028798486881929763
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.018448054790496826,
+              "validation_macro_f1_delta": 0.0050210376967074755
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.01864326000213623,
+          "validation_accuracy_delta_population_sd": 0.0040668882983390005,
+          "validation_macro_f1_delta_mean": 0.01700111123297528,
+          "validation_macro_f1_delta_population_sd": 0.009707962584994463
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0017996430397033691,
+              "validation_macro_f1_delta": 0.016371284532683883
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.003899216651916504,
+              "validation_macro_f1_delta": -0.025910323462303264
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0005998611450195312,
+              "validation_macro_f1_delta": -0.04206150150249771
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0004999041557312012,
+          "validation_accuracy_delta_population_sd": 0.0024530747010971013,
+          "validation_macro_f1_delta_mean": -0.01720018014403903,
+          "validation_macro_f1_delta_population_sd": 0.024637337091318066
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.004718422889709473,
+              "validation_macro_f1_delta": -0.009198409081080605
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.004718482494354248,
+              "validation_macro_f1_delta": -0.012100485925289561
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.005347549915313721,
+              "validation_macro_f1_delta": -0.019668936447646335
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.004928151766459147,
+          "validation_accuracy_delta_population_sd": 0.0002965592760704687,
+          "validation_macro_f1_delta_mean": -0.0136559438180055,
+          "validation_macro_f1_delta_population_sd": 0.004413809599843783
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.004405068026648628,
+      "pooled_same_seed_validation_macro_f1_delta_mean": -0.004618337576356417,
+      "right": "A0"
+    },
+    "M0_vs_N0": {
+      "equal_graph_mean_validation_accuracy_delta": 5.7260195414225116e-05,
+      "equal_graph_mean_validation_macro_f1_delta": -0.007840835817640033,
+      "left": "M0",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0017569661140441895,
+              "validation_macro_f1_delta": 0.0031140500711220875
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.0020498037338256836,
+              "validation_macro_f1_delta": 0.006937662823445434
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0005856752395629883,
+              "validation_macro_f1_delta": -0.0067957137130774115
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.0014641483624776204,
+          "validation_accuracy_delta_population_sd": 0.000632573968614139,
+          "validation_macro_f1_delta_mean": 0.0010853330604967033,
+          "validation_macro_f1_delta_population_sd": 0.0057872375278354045
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0032992959022521973,
+              "validation_macro_f1_delta": -0.032954467449226976
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.005398929119110107,
+              "validation_macro_f1_delta": 0.009251336381463915
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0,
+              "validation_macro_f1_delta": -0.04312620238737791
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.0006998777389526367,
+          "validation_accuracy_delta_population_sd": 0.003585354586618029,
+          "validation_macro_f1_delta_mean": -0.02227644448504699,
+          "validation_macro_f1_delta_population_sd": 0.022676960006256696
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.001258254051208496,
+              "validation_macro_f1_delta": -0.00198899905696992
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.0031456947326660156,
+              "validation_macro_f1_delta": -0.001990008266478327
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.0015727877616882324,
+              "validation_macro_f1_delta": -0.0030151807616611848
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0019922455151875815,
+          "validation_accuracy_delta_population_sd": 0.0008256579948676276,
+          "validation_macro_f1_delta_mean": -0.0023313960283698107,
+          "validation_macro_f1_delta_population_sd": 0.0004835089973225074
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 5.726019541422526e-05,
+      "pooled_same_seed_validation_macro_f1_delta_mean": -0.007840835817640033,
+      "right": "N0"
+    },
+    "M1_vs_A0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.005992763572269015,
+      "equal_graph_mean_validation_macro_f1_delta": 0.0024251710838378046,
+      "left": "M1",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.013469994068145752,
+              "validation_macro_f1_delta": 0.02413648686734937
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.020497798919677734,
+              "validation_macro_f1_delta": 0.022107564375588473
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.025183022022247314,
+              "validation_macro_f1_delta": 0.020593529465384064
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.019716938336690266,
+          "validation_accuracy_delta_population_sd": 0.004813596257888607,
+          "validation_macro_f1_delta_mean": 0.022279193569440636,
+          "validation_macro_f1_delta_population_sd": 0.0014514887123621154
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0011997222900390625,
+              "validation_macro_f1_delta": 0.01713098928176976
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.005098998546600342,
+              "validation_macro_f1_delta": -0.03136082261697276
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0011997818946838379,
+              "validation_macro_f1_delta": -0.00026418848962012076
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0008998314539591471,
+          "validation_accuracy_delta_population_sd": 0.002969259526641696,
+          "validation_macro_f1_delta_mean": -0.004831340608274374,
+          "validation_macro_f1_delta_population_sd": 0.020058383353965373
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0009436607360839844,
+              "validation_macro_f1_delta": -0.007008017312907899
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.00031453371047973633,
+              "validation_macro_f1_delta": -0.008982397550685639
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.001258254051208496,
+              "validation_macro_f1_delta": -0.014526604265365006
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0008388161659240723,
+          "validation_accuracy_delta_population_sd": 0.00039234025054393296,
+          "validation_macro_f1_delta_mean": -0.010172339709652848,
+          "validation_macro_f1_delta_population_sd": 0.0031826885067691036
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.005992763572269016,
+      "pooled_same_seed_validation_macro_f1_delta_mean": 0.0024251710838378046,
+      "right": "A0"
+    },
+    "M1_vs_M0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.0015876955456203886,
+      "equal_graph_mean_validation_macro_f1_delta": 0.00704350866019422,
+      "left": "M1",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.00029283761978149414,
+              "validation_macro_f1_delta": 0.006952677747060765
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.0032210946083068848,
+              "validation_macro_f1_delta": -0.00669092250634129
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.006734967231750488,
+              "validation_macro_f1_delta": 0.015572491768676588
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.0010736783345540364,
+          "validation_accuracy_delta_population_sd": 0.0041778236942896325,
+          "validation_macro_f1_delta_mean": 0.005278082336465355,
+          "validation_macro_f1_delta_population_sd": 0.00916580988009817
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0005999207496643066,
+              "validation_macro_f1_delta": 0.0007597047490858766
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.0011997818946838379,
+              "validation_macro_f1_delta": -0.005450499154669497
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0005999207496643066,
+              "validation_macro_f1_delta": 0.04179731301287759
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.000399927298227946,
+          "validation_accuracy_delta_population_sd": 0.0007482113950310643,
+          "validation_macro_f1_delta_mean": 0.012368839535764656,
+          "validation_macro_f1_delta_population_sd": 0.020962950595855366
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0037747621536254883,
+              "validation_macro_f1_delta": 0.002190391768172706
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.004403948783874512,
+              "validation_macro_f1_delta": 0.0031180883746039223
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.004089295864105225,
+              "validation_macro_f1_delta": 0.005142332182281328
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.004089335600535075,
+          "validation_accuracy_delta_population_sd": 0.00025686436771867006,
+          "validation_macro_f1_delta_mean": 0.0034836041083526523,
+          "validation_macro_f1_delta_population_sd": 0.0012325283947575273
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.0015876955456203884,
+      "pooled_same_seed_validation_macro_f1_delta_mean": 0.007043508660194221,
+      "right": "M0"
+    },
+    "P0_vs_A0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.004692210091484918,
+      "equal_graph_mean_validation_macro_f1_delta": -0.00442864383080098,
+      "left": "P0",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.015519797801971436,
+              "validation_macro_f1_delta": 0.014243370543556289
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.024597346782684326,
+              "validation_macro_f1_delta": 0.036082148283056115
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.018740832805633545,
+              "validation_macro_f1_delta": 0.006175067656431832
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.019619325796763103,
+          "validation_accuracy_delta_population_sd": 0.003757595536679294,
+          "validation_macro_f1_delta_mean": 0.01883352882768141,
+          "validation_macro_f1_delta_population_sd": 0.012633567263625986
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0008997917175292969,
+              "validation_macro_f1_delta": 0.016303193737448984
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.0032993555068969727,
+              "validation_macro_f1_delta": -0.025224904080732635
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0014997124671936035,
+              "validation_macro_f1_delta": -0.041807723179675904
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.00029995044072469074,
+          "validation_accuracy_delta_population_sd": 0.0021349940342936806,
+          "validation_macro_f1_delta_mean": -0.01690981117431985,
+          "validation_macro_f1_delta_population_sd": 0.024441429905919375
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.006605863571166992,
+              "validation_macro_f1_delta": -0.015019426414698334
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.00408935546875,
+              "validation_macro_f1_delta": -0.01292019603005845
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.005033016204833984,
+              "validation_macro_f1_delta": -0.017689324992536726
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.005242745081583659,
+          "validation_accuracy_delta_population_sd": 0.0010380086411617207,
+          "validation_macro_f1_delta_mean": -0.015209649145764503,
+          "validation_macro_f1_delta_population_sd": 0.0019516294526622244
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.004692210091484917,
+      "pooled_same_seed_validation_macro_f1_delta_mean": -0.004428643830800981,
+      "right": "A0"
+    },
+    "P0_vs_M0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.00028714206483629014,
+      "equal_graph_mean_validation_macro_f1_delta": 0.00018969374555543542,
+      "left": "P0",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0017569661140441895,
+              "validation_macro_f1_delta": -0.0029404385767323182
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.000878453254699707,
+              "validation_macro_f1_delta": 0.007283661401126351
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.00029277801513671875,
+              "validation_macro_f1_delta": 0.0011540299597243564
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.0009760657946268717,
+          "validation_accuracy_delta_population_sd": 0.0006017241079923825,
+          "validation_macro_f1_delta_mean": 0.0018324175947061299,
+          "validation_macro_f1_delta_population_sd": 0.004201445182060139
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0008998513221740723,
+              "validation_macro_f1_delta": -6.809079523489858e-05
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.0005998611450195312,
+              "validation_macro_f1_delta": 0.0006854193815706289
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0008998513221740723,
+              "validation_macro_f1_delta": 0.0002537783228218071
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.0001999537150065104,
+          "validation_accuracy_delta_population_sd": 0.0007872639821784222,
+          "validation_macro_f1_delta_mean": 0.00029036896971917914,
+          "validation_macro_f1_delta_population_sd": 0.0003087054186087987
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0018874406814575195,
+              "validation_macro_f1_delta": -0.0058210173336177284
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.000629127025604248,
+              "validation_macro_f1_delta": -0.0008197101047688893
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.00031453371047973633,
+              "validation_macro_f1_delta": 0.001979611455109609
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0003145933151245117,
+          "validation_accuracy_delta_population_sd": 0.001119562077128305,
+          "validation_macro_f1_delta_mean": -0.001553705327759003,
+          "validation_macro_f1_delta_population_sd": 0.003226609584420326
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.00028714206483629014,
+      "pooled_same_seed_validation_macro_f1_delta_mean": 0.00018969374555543532,
+      "right": "M0"
+    },
+    "P1_vs_A0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.0049888160493638785,
+      "equal_graph_mean_validation_macro_f1_delta": 0.0038149734736034886,
+      "left": "P1",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.013469994068145752,
+              "validation_macro_f1_delta": 0.021204500963552086
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.019912123680114746,
+              "validation_macro_f1_delta": 0.030860657214261678
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.024597346782684326,
+              "validation_macro_f1_delta": 0.020032465089746432
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.01932648817698161,
+          "validation_accuracy_delta_population_sd": 0.004561558309418302,
+          "validation_macro_f1_delta_mean": 0.024032541089186732,
+          "validation_macro_f1_delta_population_sd": 0.004851858364620249
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.000299990177154541,
+              "validation_macro_f1_delta": 0.026402490520251565
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.0032993555068969727,
+              "validation_macro_f1_delta": -0.03043524534444153
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0008997917175292969,
+              "validation_macro_f1_delta": 0.0007045900296079877
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0008998513221740723,
+          "validation_accuracy_delta_population_sd": 0.0017659906375893423,
+          "validation_macro_f1_delta_mean": -0.0011093882648606594,
+          "validation_macro_f1_delta_population_sd": 0.023239333646438855
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.002516508102416992,
+              "validation_macro_f1_delta": -0.007214995826932524
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.004403889179229736,
+              "validation_macro_f1_delta": -0.009474966930798856
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.0034601688385009766,
+              "validation_macro_f1_delta": -0.017744734452815436
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.003460188706715902,
+          "validation_accuracy_delta_population_sd": 0.0007705200981907255,
+          "validation_macro_f1_delta_mean": -0.011478232403515606,
+          "validation_macro_f1_delta_population_sd": 0.004526120730308089
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.004988816049363878,
+      "pooled_same_seed_validation_macro_f1_delta_mean": 0.003814973473603489,
+      "right": "A0"
+    },
+    "P1_vs_P0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.0002966059578789605,
+      "equal_graph_mean_validation_macro_f1_delta": 0.00824361730440447,
+      "left": "P1",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0020498037338256836,
+              "validation_macro_f1_delta": 0.006961130419995798
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.00468522310256958,
+              "validation_macro_f1_delta": -0.005221491068794437
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.005856513977050781,
+              "validation_macro_f1_delta": 0.0138573974333146
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.00029283761978149414,
+          "validation_accuracy_delta_population_sd": 0.0044793788712562494,
+          "validation_macro_f1_delta_mean": 0.00519901226150532,
+          "validation_macro_f1_delta_population_sd": 0.00788795672411804
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0011997818946838379,
+              "validation_macro_f1_delta": 0.01009929678280258
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.0,
+              "validation_macro_f1_delta": -0.005210341263708895
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.0005999207496643066,
+              "validation_macro_f1_delta": 0.04251231320928389
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0005999008814493815,
+          "validation_accuracy_delta_population_sd": 0.000489808907635651,
+          "validation_macro_f1_delta_mean": 0.015800422909459193,
+          "validation_macro_f1_delta_population_sd": 0.019895394221128997
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.00408935546875,
+              "validation_macro_f1_delta": 0.007804430587765809
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.00031453371047973633,
+              "validation_macro_f1_delta": 0.0034452290992595946
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0015728473663330078,
+              "validation_macro_f1_delta": -5.54094602787103e-05
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.001782556374867757,
+          "validation_accuracy_delta_population_sd": 0.0018039851028449324,
+          "validation_macro_f1_delta_mean": 0.0037314167422488977,
+          "validation_macro_f1_delta_population_sd": 0.0032151411498782807
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.00029660595787896053,
+      "pooled_same_seed_validation_macro_f1_delta_mean": 0.00824361730440447,
+      "right": "P0"
+    }
+  },
+  "descriptive_interactions": {
+    "Grocery": {
+      "mean_accuracy": -0.0013665159543355305,
+      "mean_macro_f1": -7.907007496003408e-05,
+      "per_seed": [
+        {
+          "seed": 113,
+          "validation_accuracy_descriptive_interaction": -0.0017569661140441895,
+          "validation_macro_f1_descriptive_interaction": 8.452672935033156e-06
+        },
+        {
+          "seed": 114,
+          "validation_accuracy_descriptive_interaction": -0.0014641284942626953,
+          "validation_macro_f1_descriptive_interaction": 0.0014694314375468531
+        },
+        {
+          "seed": 115,
+          "validation_accuracy_descriptive_interaction": -0.000878453254699707,
+          "validation_macro_f1_descriptive_interaction": -0.0017150943353619885
+        }
+      ]
+    },
+    "Movies": {
+      "mean_accuracy": -0.00019997358322143555,
+      "mean_macro_f1": 0.0034315833736945356,
+      "per_seed": [
+        {
+          "seed": 113,
+          "validation_accuracy_descriptive_interaction": -0.0005998611450195312,
+          "validation_macro_f1_descriptive_interaction": 0.009339592033716704
+        },
+        {
+          "seed": 114,
+          "validation_accuracy_descriptive_interaction": 0.0011997818946838379,
+          "validation_macro_f1_descriptive_interaction": 0.0002401578909606017
+        },
+        {
+          "seed": 115,
+          "validation_accuracy_descriptive_interaction": -0.0011998414993286133,
+          "validation_macro_f1_descriptive_interaction": 0.0007150001964063013
+        }
+      ]
+    },
+    "Reddit-S": {
+      "mean_accuracy": -0.002306779225667318,
+      "mean_macro_f1": 0.0002478126338962457,
+      "per_seed": [
+        {
+          "seed": 113,
+          "validation_accuracy_descriptive_interaction": 0.0003145933151245117,
+          "validation_macro_f1_descriptive_interaction": 0.0056140388195931035
+        },
+        {
+          "seed": 114,
+          "validation_accuracy_descriptive_interaction": -0.004718482494354248,
+          "validation_macro_f1_descriptive_interaction": 0.00032714072465567234
+        },
+        {
+          "seed": 115,
+          "validation_accuracy_descriptive_interaction": -0.002516448497772217,
+          "validation_macro_f1_descriptive_interaction": -0.005197741642560039
+        }
+      ]
+    }
+  }
+}

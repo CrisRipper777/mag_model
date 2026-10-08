@@ -1,0 +1,396 @@
+{
+  "calibration_audit_sha256": "22f1f26e571fd071bf5890a6ff24b3ad3db8691258324ec0d2a69c67bf56761b",
+  "calibration_success_cells": 162,
+  "checks": [
+    "all expected cell statuses",
+    "train/validation ID hashes",
+    "saved train/validation argmax metrics",
+    "fixed-C macro-F1 and confusion matrices",
+    "source/protocol hashes",
+    "checkpoint/prediction/output evidence",
+    "runtime test/LP counters"
+  ],
+  "confirmation_configuration_lock_verified": true,
+  "confirmation_success_cells": 54,
+  "expected_cells": 54,
+  "implementation_versions": [
+    {
+      "cells": 36,
+      "models": [
+        "M0",
+        "M1",
+        "P0",
+        "P1"
+      ],
+      "protocol_lock_file": "protocol_lock_v3.json",
+      "protocol_lock_sha256": "4a710959c2a5dad34ab102d4f9a10ac046f6f6ab2818a7d7bdc230bb0f1694a9",
+      "source_commit": "deb7c5efac7e0e220302431cc9f36008f828c880"
+    },
+    {
+      "cells": 18,
+      "models": [
+        "A0",
+        "N0"
+      ],
+      "protocol_lock_file": "protocol_lock_v1.json",
+      "protocol_lock_sha256": "9f8b01c4e746b0a4e73f77e9717e044d6e24144697c50c78ee8923a61bafba5b",
+      "source_commit": "d1da4bbcfd6e660d4b4adef274eb2f5d524549b9"
+    }
+  ],
+  "independently_recomputed_train_validation_prediction_sets": 108,
+  "phase": "confirmation",
+  "protocol_amendment": {
+    "baseline_protocol_lock": "protocol_lock_v1.json",
+    "baseline_protocol_lock_sha256": "9f8b01c4e746b0a4e73f77e9717e044d6e24144697c50c78ee8923a61bafba5b",
+    "calibration_audit_sha256": "22f1f26e571fd071bf5890a6ff24b3ad3db8691258324ec0d2a69c67bf56761b",
+    "calibration_selection_lock_sha256": "ccf4dbd4b4f10fc90feb8faea4d4dc969f21ccab879300eae713ccb21dd314c0",
+    "change_scope": "confirmation audit expected-slot resolution and historical source/protocol verification only; no training, model, data, split, or selection changes",
+    "prior_confirmation_lineage": {
+      "protocol_lock_v1_A0_N0": 18,
+      "protocol_lock_v3_routed_models": 36
+    },
+    "rerun_policy": "do not rerun training; audit the completed confirmation attempts against their exact source and protocol lock versions",
+    "revision": 4,
+    "superseded_audit_invocation": {
+      "reason": "audit expected IDs omitted each selected config index and resolved not_started placeholders",
+      "status": "incomplete",
+      "training_attempts_changed": 0
+    },
+    "supersedes_protocol_lock": "protocol_lock_v3.json",
+    "supersedes_protocol_lock_sha256": "4a710959c2a5dad34ab102d4f9a10ac046f6f6ab2818a7d7bdc230bb0f1694a9"
+  },
+  "real_lp_runs": 0,
+  "results": [
+    {
+      "attempt_id": "confirmation_Movies_A0_seed113_cfg06",
+      "prediction_sha256": "d6831e35627a662b0e6ffef4cc0fcbd8564924aaa39e413df64fe62187e7ef63",
+      "train_correct": 6722,
+      "validation_correct": 1774
+    },
+    {
+      "attempt_id": "confirmation_Movies_A0_seed114_cfg06",
+      "prediction_sha256": "aeb890e7fa74167b68bad96da9e763dbed141c9b9934c10efa2c723ca0cf493e",
+      "train_correct": 7441,
+      "validation_correct": 1802
+    },
+    {
+      "attempt_id": "confirmation_Movies_A0_seed115_cfg06",
+      "prediction_sha256": "b6eb1936909eb26ce1c239945503b7df03703ff5e6218ea2c49a59784332ccff",
+      "train_correct": 6780,
+      "validation_correct": 1776
+    },
+    {
+      "attempt_id": "confirmation_Movies_N0_seed113_cfg06",
+      "prediction_sha256": "21069f003e1155add03434c3d646112744e04e99bb9014dcfdaea5d540a07e88",
+      "train_correct": 8726,
+      "validation_correct": 1791
+    },
+    {
+      "attempt_id": "confirmation_Movies_N0_seed114_cfg06",
+      "prediction_sha256": "924c2851fb97548a37b3b5db5e8c20c0559aad63c3036e19b35b7ceaebbabd38",
+      "train_correct": 6666,
+      "validation_correct": 1771
+    },
+    {
+      "attempt_id": "confirmation_Movies_N0_seed115_cfg06",
+      "prediction_sha256": "6221998b068731b69adc979514a9cc55445de90d515a44cb6536b17e020147fd",
+      "train_correct": 7230,
+      "validation_correct": 1778
+    },
+    {
+      "attempt_id": "confirmation_Movies_M0_seed113_cfg01_retry1",
+      "prediction_sha256": "e7c64b45711f2f9526601a89b315a644fa86da4ae7a3be6a3b0e446e1d37a902",
+      "train_correct": 8602,
+      "validation_correct": 1780
+    },
+    {
+      "attempt_id": "confirmation_Movies_M0_seed114_cfg01_retry1",
+      "prediction_sha256": "25be2a0b77b3f9c0e1ee85e9ddc98fceed4f7349a4d3be52a3a334205bae1ce4",
+      "train_correct": 7627,
+      "validation_correct": 1789
+    },
+    {
+      "attempt_id": "confirmation_Movies_M0_seed115_cfg01_retry1",
+      "prediction_sha256": "2480c50ccedf42b9dfabf4e55a5a80c276dfcd85e6a2d7549529eec361c520c4",
+      "train_correct": 7202,
+      "validation_correct": 1778
+    },
+    {
+      "attempt_id": "confirmation_Movies_M1_seed113_cfg01_retry1",
+      "prediction_sha256": "e4d87a83edeb0d06b30f73cbb096a2d9841b8939758df5b1073ededc8e0ead0e",
+      "train_correct": 8350,
+      "validation_correct": 1778
+    },
+    {
+      "attempt_id": "confirmation_Movies_M1_seed114_cfg01_retry1",
+      "prediction_sha256": "a9956f38252f86ce285e432fea9624cea2cf4a5d10b8bc02cc0131b09f3709ef",
+      "train_correct": 7758,
+      "validation_correct": 1785
+    },
+    {
+      "attempt_id": "confirmation_Movies_M1_seed115_cfg01_retry1",
+      "prediction_sha256": "4895116ceb870af9834638ce31a8f786936362c87711dd40e1b1394c30d359c6",
+      "train_correct": 9137,
+      "validation_correct": 1780
+    },
+    {
+      "attempt_id": "confirmation_Movies_P0_seed113_cfg01_retry1",
+      "prediction_sha256": "7d0f7ade636052e72f4c7c95a44964be3e2b6daa11d323b3fb862d2d27cc476e",
+      "train_correct": 8602,
+      "validation_correct": 1777
+    },
+    {
+      "attempt_id": "confirmation_Movies_P0_seed114_cfg01_retry1",
+      "prediction_sha256": "1153afcc52f5f78083459d4b32242f8d87ecc68585fab5db0e55a1d84c399d8d",
+      "train_correct": 7627,
+      "validation_correct": 1791
+    },
+    {
+      "attempt_id": "confirmation_Movies_P0_seed115_cfg01_retry1",
+      "prediction_sha256": "42ef0c53f37dbc683a995b415bd3650a14d6f603b56246addebf723da6f5e0bf",
+      "train_correct": 7206,
+      "validation_correct": 1781
+    },
+    {
+      "attempt_id": "confirmation_Movies_P1_seed113_cfg00_retry1",
+      "prediction_sha256": "bf575cabe2181b3f8fc966f75be3bdbcc43f3ec97560108f689687c9e8be6276",
+      "train_correct": 8704,
+      "validation_correct": 1773
+    },
+    {
+      "attempt_id": "confirmation_Movies_P1_seed114_cfg00_retry1",
+      "prediction_sha256": "7b4cf3ad658ddb63421c0185f95b29019a10f584f839d52f0399b72f04bd5632",
+      "train_correct": 7762,
+      "validation_correct": 1791
+    },
+    {
+      "attempt_id": "confirmation_Movies_P1_seed115_cfg00_retry1",
+      "prediction_sha256": "39d2ee27ea4e8747bbf20fb185f27cc6a01c5a32cb2ade4ddbdfe1d383dac1ac",
+      "train_correct": 9137,
+      "validation_correct": 1779
+    },
+    {
+      "attempt_id": "confirmation_Grocery_A0_seed113_cfg04",
+      "prediction_sha256": "823b5b065c147813cf68e8a04d68b7a5ad47f46baa918a30edd4495f8d7b3963",
+      "train_correct": 10242,
+      "validation_correct": 2772
+    },
+    {
+      "attempt_id": "confirmation_Grocery_A0_seed114_cfg04",
+      "prediction_sha256": "0651cc43f77e995169269a6a87956d6a50575b9fbc650c6cb0c57aa414718091",
+      "train_correct": 10233,
+      "validation_correct": 2744
+    },
+    {
+      "attempt_id": "confirmation_Grocery_A0_seed115_cfg04",
+      "prediction_sha256": "cd809870eb33ece86eed045d5bdc3678759be010577506dde5b2ec258a0daff7",
+      "train_correct": 10243,
+      "validation_correct": 2752
+    },
+    {
+      "attempt_id": "confirmation_Grocery_N0_seed113_cfg08",
+      "prediction_sha256": "a096488c2a736ab717d77c8721dc624cfd4a81bed76ceb29aee53b7776acdabd",
+      "train_correct": 10242,
+      "validation_correct": 2813
+    },
+    {
+      "attempt_id": "confirmation_Grocery_N0_seed114_cfg08",
+      "prediction_sha256": "4156618ea348f80bb4286b636b3cc06f8e827ae4d6a603065b570db331eec0d1",
+      "train_correct": 10242,
+      "validation_correct": 2818
+    },
+    {
+      "attempt_id": "confirmation_Grocery_N0_seed115_cfg08",
+      "prediction_sha256": "f2fe81c7831ed01a78dc33c6f2def2f622230d6c1f1cff9ecfd8d6779c1aded3",
+      "train_correct": 10243,
+      "validation_correct": 2813
+    },
+    {
+      "attempt_id": "confirmation_Grocery_M0_seed113_cfg06_retry1",
+      "prediction_sha256": "86bdf639e99f25256d8af83edd9295279d52a8263d4db0a1d9f92ebdb7912642",
+      "train_correct": 10242,
+      "validation_correct": 2819
+    },
+    {
+      "attempt_id": "confirmation_Grocery_M0_seed114_cfg06_retry1",
+      "prediction_sha256": "2626ab70e3eb31b2dc4b87bb460290b6756dc8a75002995ac5655e772b14baae",
+      "train_correct": 10242,
+      "validation_correct": 2825
+    },
+    {
+      "attempt_id": "confirmation_Grocery_M0_seed115_cfg06_retry1",
+      "prediction_sha256": "f80bd665abb6b4d808cc0a484ea28ba5e72b0f7d206384174453ddb43fe52a3f",
+      "train_correct": 10241,
+      "validation_correct": 2815
+    },
+    {
+      "attempt_id": "confirmation_Grocery_M1_seed113_cfg05_retry1",
+      "prediction_sha256": "03a98d5b041ab2f5174f5c023d6e163c1af00e0cc0b5bff9e6909838aa5cd57a",
+      "train_correct": 10239,
+      "validation_correct": 2818
+    },
+    {
+      "attempt_id": "confirmation_Grocery_M1_seed114_cfg05_retry1",
+      "prediction_sha256": "0eb5b663321935fadc8a0b018e33be681d81e27fa4bcca9129455af536523990",
+      "train_correct": 10243,
+      "validation_correct": 2814
+    },
+    {
+      "attempt_id": "confirmation_Grocery_M1_seed115_cfg05_retry1",
+      "prediction_sha256": "6cddd2a50c21adbbaee79e185600937d23f473b88afc21e559ad1ccc1699d3e9",
+      "train_correct": 10243,
+      "validation_correct": 2838
+    },
+    {
+      "attempt_id": "confirmation_Grocery_P0_seed113_cfg08_retry1",
+      "prediction_sha256": "2af62dfa84b29db8d9eb8c5b317d9f6c5f9529ae5110adce6d534df3ddb86c9f",
+      "train_correct": 10243,
+      "validation_correct": 2825
+    },
+    {
+      "attempt_id": "confirmation_Grocery_P0_seed114_cfg08_retry1",
+      "prediction_sha256": "5e61aa9f3712c43c2344fef7e2f6fb973957f750e0864a7b7954dfe6ce9edba0",
+      "train_correct": 10243,
+      "validation_correct": 2828
+    },
+    {
+      "attempt_id": "confirmation_Grocery_P0_seed115_cfg08_retry1",
+      "prediction_sha256": "88d6c49a6885a6a22ed95c749b95c8e13a0ce2c9c8cd16cfcc42d4f57d932f56",
+      "train_correct": 10242,
+      "validation_correct": 2816
+    },
+    {
+      "attempt_id": "confirmation_Grocery_P1_seed113_cfg04_retry1",
+      "prediction_sha256": "1cc413fc0edb7f200343f490b29d3a0b0f733ecbc60e17f1340f6ae3585a3822",
+      "train_correct": 10239,
+      "validation_correct": 2818
+    },
+    {
+      "attempt_id": "confirmation_Grocery_P1_seed114_cfg04_retry1",
+      "prediction_sha256": "0f364b8dd4931a0357743c62084c6b8be0f7d59af189bf87d90c859bfedbe235",
+      "train_correct": 10244,
+      "validation_correct": 2812
+    },
+    {
+      "attempt_id": "confirmation_Grocery_P1_seed115_cfg04_retry1",
+      "prediction_sha256": "93aac80b1b66b1343547df3683bfc5755d53a5ba3f3a24b48a4e274371f0f759",
+      "train_correct": 10243,
+      "validation_correct": 2836
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_A0_seed113_cfg06",
+      "prediction_sha256": "1247653fea37817a4914ab7ffc3a738bfc5eb33199c25690774aa83e01b5dec6",
+      "train_correct": 9533,
+      "validation_correct": 3055
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_A0_seed114_cfg06",
+      "prediction_sha256": "d3dd52c07c437d46813eb1835365e3b54d0af6bd1130c1d7c0ef1bafbef6251d",
+      "train_correct": 9533,
+      "validation_correct": 3047
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_A0_seed115_cfg06",
+      "prediction_sha256": "0e599c085dbfe43b2372d312b6a00d0451bcf116096363fe93f1b4ac322111e1",
+      "train_correct": 9533,
+      "validation_correct": 3057
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_N0_seed113_cfg03",
+      "prediction_sha256": "d47e36f2ec5e443458cb2ff8be89faaded05bf62c760171441b7293ab5c4997c",
+      "train_correct": 9533,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_N0_seed114_cfg03",
+      "prediction_sha256": "bb4a2ce5559e2a40a3bdeb73dee8ec2125860ede0cca560ba720e70564dd16a5",
+      "train_correct": 9533,
+      "validation_correct": 3042
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_N0_seed115_cfg03",
+      "prediction_sha256": "e29924b77312afe14a1299e80638b0255e7c4c9c843b5eb569946487d37bfb58",
+      "train_correct": 9533,
+      "validation_correct": 3045
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_M0_seed113_cfg00_retry1",
+      "prediction_sha256": "e8fc9e77ceb8d009c6ba73b09cbc212465251e7d8840cc165036ae8f5b6e3329",
+      "train_correct": 9533,
+      "validation_correct": 3040
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_M0_seed114_cfg00_retry1",
+      "prediction_sha256": "0aa75dbdb3057fcfe58530572fd4b02ea5467b50234b1c14eddd4beaa7ad24d8",
+      "train_correct": 9532,
+      "validation_correct": 3032
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_M0_seed115_cfg00_retry1",
+      "prediction_sha256": "29b6f8c40e2b85c599579ce6b790ffa1f78a2ef3288ca2876795eebfc9b3be1c",
+      "train_correct": 9533,
+      "validation_correct": 3040
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_M1_seed113_cfg08_retry1",
+      "prediction_sha256": "0f3dfb8a85e7cb9e16cd40b808b71f1c1f1e9e7b287ec12eba734f91f32eb271",
+      "train_correct": 9533,
+      "validation_correct": 3052
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_M1_seed114_cfg08_retry1",
+      "prediction_sha256": "68555b85181558b752acf50c98ec6711702ffc40a334763abbcdaa439fbc2a09",
+      "train_correct": 9533,
+      "validation_correct": 3046
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_M1_seed115_cfg08_retry1",
+      "prediction_sha256": "cc86ef8fb116b3d1c87a74072a017bd9342a0c77ebbb97ffbdd22d53928cff3e",
+      "train_correct": 9533,
+      "validation_correct": 3053
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_P0_seed113_cfg02_retry1",
+      "prediction_sha256": "78bf3ede0ae561c20c9ee5451c67cf5e61d41d30bd359ca1a2075605a47878fa",
+      "train_correct": 9532,
+      "validation_correct": 3034
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_P0_seed114_cfg02_retry1",
+      "prediction_sha256": "a76d5f00879087fba5fe26e116ea340e9b3e02692a1919b1165cbb629deef97a",
+      "train_correct": 9532,
+      "validation_correct": 3034
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_P0_seed115_cfg02_retry1",
+      "prediction_sha256": "63c158de6993e0aede7fd2c03ea974236727c803e56c55a30891047e57cb0d15",
+      "train_correct": 9533,
+      "validation_correct": 3041
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_P1_seed113_cfg02_retry1",
+      "prediction_sha256": "4c7e42a87ccf4912106397ab7f7f98dfa0d9d0322044fd6e8bf7b549e252299b",
+      "train_correct": 9533,
+      "validation_correct": 3047
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_P1_seed114_cfg02_retry1",
+      "prediction_sha256": "5eb1e207d9eee43f85d3dc83e1c993532a31ee6fb04d885239acef331b25555b",
+      "train_correct": 9460,
+      "validation_correct": 3033
+    },
+    {
+      "attempt_id": "confirmation_Reddit_S_P1_seed115_cfg02_retry1",
+      "prediction_sha256": "6d93c24ebad49f48656c9414672bdcc4a589c91fdf9f71a90d26167a99702ea4",
+      "train_correct": 9533,
+      "validation_correct": 3046
+    }
+  ],
+  "selection_lock_sha256": "ccf4dbd4b4f10fc90feb8faea4d4dc969f21ccab879300eae713ccb21dd314c0",
+  "self_audit_limitation": "The experiment implementer wrote this audit; it is not independent peer review.",
+  "status": "passed",
+  "study": "mvcge_coordinated_nc_v2",
+  "success_cells": 54,
+  "test_evaluations": 0,
+  "total_success_cells": 216
+}

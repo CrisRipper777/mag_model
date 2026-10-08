@@ -1,0 +1,210 @@
+{
+  "calibration_audit_sha256": "22f1f26e571fd071bf5890a6ff24b3ad3db8691258324ec0d2a69c67bf56761b",
+  "calibration_cells": 162,
+  "calibration_seed": 112,
+  "created_utc": "2026-10-08T09:47:39.870171+00:00",
+  "phase": "locked_after_162_successful_calibration_cells_and_prediction_audit",
+  "protocol_lock_sha256": "9f8b01c4e746b0a4e73f77e9717e044d6e24144697c50c78ee8923a61bafba5b",
+  "selection_rule": "correct descending, macro-F1 descending, config_index ascending",
+  "selections": {
+    "Grocery/A0": {
+      "attempt_id": "calibration_Grocery_A0_seed112_cfg04",
+      "best_step": 246,
+      "config_index": 4,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "model": "A0",
+      "validation_correct": 2787,
+      "validation_macro_f1": 0.7442783454949469,
+      "weight_decay": 0.001
+    },
+    "Grocery/M0": {
+      "attempt_id": "calibration_Grocery_M0_seed112_cfg06",
+      "best_step": 291,
+      "config_index": 6,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "model": "M0",
+      "validation_correct": 2786,
+      "validation_macro_f1": 0.7371676290997655,
+      "weight_decay": 0.0001
+    },
+    "Grocery/M1": {
+      "attempt_id": "calibration_Grocery_M1_seed112_cfg05",
+      "best_step": 701,
+      "config_index": 5,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "model": "M1",
+      "validation_correct": 2807,
+      "validation_macro_f1": 0.7486465648604239,
+      "weight_decay": 0.01
+    },
+    "Grocery/N0": {
+      "attempt_id": "calibration_Grocery_N0_seed112_cfg08",
+      "best_step": 136,
+      "config_index": 8,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "model": "N0",
+      "validation_correct": 2784,
+      "validation_macro_f1": 0.7382797701564103,
+      "weight_decay": 0.01
+    },
+    "Grocery/P0": {
+      "attempt_id": "calibration_Grocery_P0_seed112_cfg08",
+      "best_step": 216,
+      "config_index": 8,
+      "dataset": "Grocery",
+      "lr": 0.003,
+      "model": "P0",
+      "validation_correct": 2786,
+      "validation_macro_f1": 0.734668094158076,
+      "weight_decay": 0.01
+    },
+    "Grocery/P1": {
+      "attempt_id": "calibration_Grocery_P1_seed112_cfg04",
+      "best_step": 701,
+      "config_index": 4,
+      "dataset": "Grocery",
+      "lr": 0.001,
+      "model": "P1",
+      "validation_correct": 2811,
+      "validation_macro_f1": 0.7506694543195408,
+      "weight_decay": 0.001
+    },
+    "Movies/A0": {
+      "attempt_id": "calibration_Movies_A0_seed112_cfg06",
+      "best_step": 41,
+      "config_index": 6,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "model": "A0",
+      "validation_correct": 1800,
+      "validation_macro_f1": 0.44234374351664585,
+      "weight_decay": 0.0001
+    },
+    "Movies/M0": {
+      "attempt_id": "calibration_Movies_M0_seed112_cfg01",
+      "best_step": 136,
+      "config_index": 1,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "model": "M0",
+      "validation_correct": 1798,
+      "validation_macro_f1": 0.4377712192374026,
+      "weight_decay": 0.001
+    },
+    "Movies/M1": {
+      "attempt_id": "calibration_Movies_M1_seed112_cfg01",
+      "best_step": 126,
+      "config_index": 1,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "model": "M1",
+      "validation_correct": 1795,
+      "validation_macro_f1": 0.42825857952033053,
+      "weight_decay": 0.001
+    },
+    "Movies/N0": {
+      "attempt_id": "calibration_Movies_N0_seed112_cfg06",
+      "best_step": 46,
+      "config_index": 6,
+      "dataset": "Movies",
+      "lr": 0.003,
+      "model": "N0",
+      "validation_correct": 1804,
+      "validation_macro_f1": 0.4351794246444203,
+      "weight_decay": 0.0001
+    },
+    "Movies/P0": {
+      "attempt_id": "calibration_Movies_P0_seed112_cfg01",
+      "best_step": 136,
+      "config_index": 1,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "model": "P0",
+      "validation_correct": 1795,
+      "validation_macro_f1": 0.4372197196556268,
+      "weight_decay": 0.001
+    },
+    "Movies/P1": {
+      "attempt_id": "calibration_Movies_P1_seed112_cfg00",
+      "best_step": 126,
+      "config_index": 0,
+      "dataset": "Movies",
+      "lr": 0.0003,
+      "model": "P1",
+      "validation_correct": 1796,
+      "validation_macro_f1": 0.42839023019605565,
+      "weight_decay": 0.0001
+    },
+    "Reddit-S/A0": {
+      "attempt_id": "calibration_Reddit_S_A0_seed112_cfg06",
+      "best_step": 311,
+      "config_index": 6,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "model": "A0",
+      "validation_correct": 3065,
+      "validation_macro_f1": 0.9285141473653982,
+      "weight_decay": 0.0001
+    },
+    "Reddit-S/M0": {
+      "attempt_id": "calibration_Reddit_S_M0_seed112_cfg00",
+      "best_step": 446,
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "model": "M0",
+      "validation_correct": 3044,
+      "validation_macro_f1": 0.9110844153999954,
+      "weight_decay": 0.0001
+    },
+    "Reddit-S/M1": {
+      "attempt_id": "calibration_Reddit_S_M1_seed112_cfg08",
+      "best_step": 346,
+      "config_index": 8,
+      "dataset": "Reddit-S",
+      "lr": 0.003,
+      "model": "M1",
+      "validation_correct": 3044,
+      "validation_macro_f1": 0.9084775972774806,
+      "weight_decay": 0.01
+    },
+    "Reddit-S/N0": {
+      "attempt_id": "calibration_Reddit_S_N0_seed112_cfg03",
+      "best_step": 771,
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "lr": 0.001,
+      "model": "N0",
+      "validation_correct": 3049,
+      "validation_macro_f1": 0.9132067501879553,
+      "weight_decay": 0.0001
+    },
+    "Reddit-S/P0": {
+      "attempt_id": "calibration_Reddit_S_P0_seed112_cfg02",
+      "best_step": 581,
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "model": "P0",
+      "validation_correct": 3044,
+      "validation_macro_f1": 0.9120320384305393,
+      "weight_decay": 0.01
+    },
+    "Reddit-S/P1": {
+      "attempt_id": "calibration_Reddit_S_P1_seed112_cfg02",
+      "best_step": 916,
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "lr": 0.0003,
+      "model": "P1",
+      "validation_correct": 3046,
+      "validation_macro_f1": 0.9124427331245496,
+      "weight_decay": 0.01
+    }
+  },
+  "study": "mvcge_coordinated_nc_v2"
+}

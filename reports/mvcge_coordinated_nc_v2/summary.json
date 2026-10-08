@@ -1,0 +1,5447 @@
+{
+  "additional_datasets": 0,
+  "all_classes_macro_f1": true,
+  "created_utc": "2026-10-08T11:20:11.924468+00:00",
+  "descriptive_auxiliary_by_PC_interaction": {
+    "Grocery": {
+      "mean_accuracy": -0.0013665159543355305,
+      "mean_macro_f1": -7.907007496003408e-05,
+      "per_seed": [
+        {
+          "seed": 113,
+          "validation_accuracy_descriptive_interaction": -0.0017569661140441895,
+          "validation_macro_f1_descriptive_interaction": 8.452672935033156e-06
+        },
+        {
+          "seed": 114,
+          "validation_accuracy_descriptive_interaction": -0.0014641284942626953,
+          "validation_macro_f1_descriptive_interaction": 0.0014694314375468531
+        },
+        {
+          "seed": 115,
+          "validation_accuracy_descriptive_interaction": -0.000878453254699707,
+          "validation_macro_f1_descriptive_interaction": -0.0017150943353619885
+        }
+      ]
+    },
+    "Movies": {
+      "mean_accuracy": -0.00019997358322143555,
+      "mean_macro_f1": 0.0034315833736945356,
+      "per_seed": [
+        {
+          "seed": 113,
+          "validation_accuracy_descriptive_interaction": -0.0005998611450195312,
+          "validation_macro_f1_descriptive_interaction": 0.009339592033716704
+        },
+        {
+          "seed": 114,
+          "validation_accuracy_descriptive_interaction": 0.0011997818946838379,
+          "validation_macro_f1_descriptive_interaction": 0.0002401578909606017
+        },
+        {
+          "seed": 115,
+          "validation_accuracy_descriptive_interaction": -0.0011998414993286133,
+          "validation_macro_f1_descriptive_interaction": 0.0007150001964063013
+        }
+      ]
+    },
+    "Reddit-S": {
+      "mean_accuracy": -0.002306779225667318,
+      "mean_macro_f1": 0.0002478126338962457,
+      "per_seed": [
+        {
+          "seed": 113,
+          "validation_accuracy_descriptive_interaction": 0.0003145933151245117,
+          "validation_macro_f1_descriptive_interaction": 0.0056140388195931035
+        },
+        {
+          "seed": 114,
+          "validation_accuracy_descriptive_interaction": -0.004718482494354248,
+          "validation_macro_f1_descriptive_interaction": 0.00032714072465567234
+        },
+        {
+          "seed": 115,
+          "validation_accuracy_descriptive_interaction": -0.002516448497772217,
+          "validation_macro_f1_descriptive_interaction": -0.005197741642560039
+        }
+      ]
+    }
+  },
+  "final_protocol_source_commit": "d60cdedac91fbfbdf969377fe50f28b8eb035087",
+  "formal_cell_counts": {
+    "calibration_success": 162,
+    "confirmation_success": 54,
+    "total_success": 216
+  },
+  "implementation_versions": [
+    {
+      "cells": 36,
+      "models": [
+        "M0",
+        "M1",
+        "P0",
+        "P1"
+      ],
+      "protocol_lock_file": "protocol_lock_v3.json",
+      "protocol_lock_sha256": "4a710959c2a5dad34ab102d4f9a10ac046f6f6ab2818a7d7bdc230bb0f1694a9",
+      "source_commit": "deb7c5efac7e0e220302431cc9f36008f828c880"
+    },
+    {
+      "cells": 18,
+      "models": [
+        "A0",
+        "N0"
+      ],
+      "protocol_lock_file": "protocol_lock_v1.json",
+      "protocol_lock_sha256": "9f8b01c4e746b0a4e73f77e9717e044d6e24144697c50c78ee8923a61bafba5b",
+      "source_commit": "d1da4bbcfd6e660d4b4adef274eb2f5d524549b9"
+    }
+  ],
+  "macro_f1_zero_division": 0,
+  "paired_differences": {
+    "M0_vs_A0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.004405068026648627,
+      "equal_graph_mean_validation_macro_f1_delta": -0.004618337576356417,
+      "left": "M0",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.013762831687927246,
+              "validation_macro_f1_delta": 0.017183809120288607
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.02371889352798462,
+              "validation_macro_f1_delta": 0.028798486881929763
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.018448054790496826,
+              "validation_macro_f1_delta": 0.0050210376967074755
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.01864326000213623,
+          "validation_accuracy_delta_population_sd": 0.0040668882983390005,
+          "validation_macro_f1_delta_mean": 0.01700111123297528,
+          "validation_macro_f1_delta_population_sd": 0.009707962584994463
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0017996430397033691,
+              "validation_macro_f1_delta": 0.016371284532683883
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.003899216651916504,
+              "validation_macro_f1_delta": -0.025910323462303264
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0005998611450195312,
+              "validation_macro_f1_delta": -0.04206150150249771
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0004999041557312012,
+          "validation_accuracy_delta_population_sd": 0.0024530747010971013,
+          "validation_macro_f1_delta_mean": -0.01720018014403903,
+          "validation_macro_f1_delta_population_sd": 0.024637337091318066
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.004718422889709473,
+              "validation_macro_f1_delta": -0.009198409081080605
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.004718482494354248,
+              "validation_macro_f1_delta": -0.012100485925289561
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.005347549915313721,
+              "validation_macro_f1_delta": -0.019668936447646335
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.004928151766459147,
+          "validation_accuracy_delta_population_sd": 0.0002965592760704687,
+          "validation_macro_f1_delta_mean": -0.0136559438180055,
+          "validation_macro_f1_delta_population_sd": 0.004413809599843783
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.004405068026648628,
+      "pooled_same_seed_validation_macro_f1_delta_mean": -0.004618337576356417,
+      "right": "A0"
+    },
+    "M0_vs_N0": {
+      "equal_graph_mean_validation_accuracy_delta": 5.7260195414225116e-05,
+      "equal_graph_mean_validation_macro_f1_delta": -0.007840835817640033,
+      "left": "M0",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0017569661140441895,
+              "validation_macro_f1_delta": 0.0031140500711220875
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.0020498037338256836,
+              "validation_macro_f1_delta": 0.006937662823445434
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0005856752395629883,
+              "validation_macro_f1_delta": -0.0067957137130774115
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.0014641483624776204,
+          "validation_accuracy_delta_population_sd": 0.000632573968614139,
+          "validation_macro_f1_delta_mean": 0.0010853330604967033,
+          "validation_macro_f1_delta_population_sd": 0.0057872375278354045
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0032992959022521973,
+              "validation_macro_f1_delta": -0.032954467449226976
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.005398929119110107,
+              "validation_macro_f1_delta": 0.009251336381463915
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0,
+              "validation_macro_f1_delta": -0.04312620238737791
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.0006998777389526367,
+          "validation_accuracy_delta_population_sd": 0.003585354586618029,
+          "validation_macro_f1_delta_mean": -0.02227644448504699,
+          "validation_macro_f1_delta_population_sd": 0.022676960006256696
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.001258254051208496,
+              "validation_macro_f1_delta": -0.00198899905696992
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.0031456947326660156,
+              "validation_macro_f1_delta": -0.001990008266478327
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.0015727877616882324,
+              "validation_macro_f1_delta": -0.0030151807616611848
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0019922455151875815,
+          "validation_accuracy_delta_population_sd": 0.0008256579948676276,
+          "validation_macro_f1_delta_mean": -0.0023313960283698107,
+          "validation_macro_f1_delta_population_sd": 0.0004835089973225074
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 5.726019541422526e-05,
+      "pooled_same_seed_validation_macro_f1_delta_mean": -0.007840835817640033,
+      "right": "N0"
+    },
+    "M1_vs_A0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.005992763572269015,
+      "equal_graph_mean_validation_macro_f1_delta": 0.0024251710838378046,
+      "left": "M1",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.013469994068145752,
+              "validation_macro_f1_delta": 0.02413648686734937
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.020497798919677734,
+              "validation_macro_f1_delta": 0.022107564375588473
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.025183022022247314,
+              "validation_macro_f1_delta": 0.020593529465384064
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.019716938336690266,
+          "validation_accuracy_delta_population_sd": 0.004813596257888607,
+          "validation_macro_f1_delta_mean": 0.022279193569440636,
+          "validation_macro_f1_delta_population_sd": 0.0014514887123621154
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0011997222900390625,
+              "validation_macro_f1_delta": 0.01713098928176976
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.005098998546600342,
+              "validation_macro_f1_delta": -0.03136082261697276
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0011997818946838379,
+              "validation_macro_f1_delta": -0.00026418848962012076
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0008998314539591471,
+          "validation_accuracy_delta_population_sd": 0.002969259526641696,
+          "validation_macro_f1_delta_mean": -0.004831340608274374,
+          "validation_macro_f1_delta_population_sd": 0.020058383353965373
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0009436607360839844,
+              "validation_macro_f1_delta": -0.007008017312907899
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.00031453371047973633,
+              "validation_macro_f1_delta": -0.008982397550685639
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.001258254051208496,
+              "validation_macro_f1_delta": -0.014526604265365006
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0008388161659240723,
+          "validation_accuracy_delta_population_sd": 0.00039234025054393296,
+          "validation_macro_f1_delta_mean": -0.010172339709652848,
+          "validation_macro_f1_delta_population_sd": 0.0031826885067691036
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.005992763572269016,
+      "pooled_same_seed_validation_macro_f1_delta_mean": 0.0024251710838378046,
+      "right": "A0"
+    },
+    "M1_vs_M0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.0015876955456203886,
+      "equal_graph_mean_validation_macro_f1_delta": 0.00704350866019422,
+      "left": "M1",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.00029283761978149414,
+              "validation_macro_f1_delta": 0.006952677747060765
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.0032210946083068848,
+              "validation_macro_f1_delta": -0.00669092250634129
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.006734967231750488,
+              "validation_macro_f1_delta": 0.015572491768676588
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.0010736783345540364,
+          "validation_accuracy_delta_population_sd": 0.0041778236942896325,
+          "validation_macro_f1_delta_mean": 0.005278082336465355,
+          "validation_macro_f1_delta_population_sd": 0.00916580988009817
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0005999207496643066,
+              "validation_macro_f1_delta": 0.0007597047490858766
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.0011997818946838379,
+              "validation_macro_f1_delta": -0.005450499154669497
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0005999207496643066,
+              "validation_macro_f1_delta": 0.04179731301287759
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.000399927298227946,
+          "validation_accuracy_delta_population_sd": 0.0007482113950310643,
+          "validation_macro_f1_delta_mean": 0.012368839535764656,
+          "validation_macro_f1_delta_population_sd": 0.020962950595855366
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0037747621536254883,
+              "validation_macro_f1_delta": 0.002190391768172706
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.004403948783874512,
+              "validation_macro_f1_delta": 0.0031180883746039223
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.004089295864105225,
+              "validation_macro_f1_delta": 0.005142332182281328
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.004089335600535075,
+          "validation_accuracy_delta_population_sd": 0.00025686436771867006,
+          "validation_macro_f1_delta_mean": 0.0034836041083526523,
+          "validation_macro_f1_delta_population_sd": 0.0012325283947575273
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.0015876955456203884,
+      "pooled_same_seed_validation_macro_f1_delta_mean": 0.007043508660194221,
+      "right": "M0"
+    },
+    "P0_vs_A0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.004692210091484918,
+      "equal_graph_mean_validation_macro_f1_delta": -0.00442864383080098,
+      "left": "P0",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.015519797801971436,
+              "validation_macro_f1_delta": 0.014243370543556289
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.024597346782684326,
+              "validation_macro_f1_delta": 0.036082148283056115
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.018740832805633545,
+              "validation_macro_f1_delta": 0.006175067656431832
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.019619325796763103,
+          "validation_accuracy_delta_population_sd": 0.003757595536679294,
+          "validation_macro_f1_delta_mean": 0.01883352882768141,
+          "validation_macro_f1_delta_population_sd": 0.012633567263625986
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0008997917175292969,
+              "validation_macro_f1_delta": 0.016303193737448984
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.0032993555068969727,
+              "validation_macro_f1_delta": -0.025224904080732635
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0014997124671936035,
+              "validation_macro_f1_delta": -0.041807723179675904
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.00029995044072469074,
+          "validation_accuracy_delta_population_sd": 0.0021349940342936806,
+          "validation_macro_f1_delta_mean": -0.01690981117431985,
+          "validation_macro_f1_delta_population_sd": 0.024441429905919375
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.006605863571166992,
+              "validation_macro_f1_delta": -0.015019426414698334
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.00408935546875,
+              "validation_macro_f1_delta": -0.01292019603005845
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.005033016204833984,
+              "validation_macro_f1_delta": -0.017689324992536726
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.005242745081583659,
+          "validation_accuracy_delta_population_sd": 0.0010380086411617207,
+          "validation_macro_f1_delta_mean": -0.015209649145764503,
+          "validation_macro_f1_delta_population_sd": 0.0019516294526622244
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.004692210091484917,
+      "pooled_same_seed_validation_macro_f1_delta_mean": -0.004428643830800981,
+      "right": "A0"
+    },
+    "P0_vs_M0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.00028714206483629014,
+      "equal_graph_mean_validation_macro_f1_delta": 0.00018969374555543542,
+      "left": "P0",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.0017569661140441895,
+              "validation_macro_f1_delta": -0.0029404385767323182
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.000878453254699707,
+              "validation_macro_f1_delta": 0.007283661401126351
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.00029277801513671875,
+              "validation_macro_f1_delta": 0.0011540299597243564
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.0009760657946268717,
+          "validation_accuracy_delta_population_sd": 0.0006017241079923825,
+          "validation_macro_f1_delta_mean": 0.0018324175947061299,
+          "validation_macro_f1_delta_population_sd": 0.004201445182060139
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0008998513221740723,
+              "validation_macro_f1_delta": -6.809079523489858e-05
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.0005998611450195312,
+              "validation_macro_f1_delta": 0.0006854193815706289
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0008998513221740723,
+              "validation_macro_f1_delta": 0.0002537783228218071
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.0001999537150065104,
+          "validation_accuracy_delta_population_sd": 0.0007872639821784222,
+          "validation_macro_f1_delta_mean": 0.00029036896971917914,
+          "validation_macro_f1_delta_population_sd": 0.0003087054186087987
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0018874406814575195,
+              "validation_macro_f1_delta": -0.0058210173336177284
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.000629127025604248,
+              "validation_macro_f1_delta": -0.0008197101047688893
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.00031453371047973633,
+              "validation_macro_f1_delta": 0.001979611455109609
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0003145933151245117,
+          "validation_accuracy_delta_population_sd": 0.001119562077128305,
+          "validation_macro_f1_delta_mean": -0.001553705327759003,
+          "validation_macro_f1_delta_population_sd": 0.003226609584420326
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.00028714206483629014,
+      "pooled_same_seed_validation_macro_f1_delta_mean": 0.00018969374555543532,
+      "right": "M0"
+    },
+    "P1_vs_A0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.0049888160493638785,
+      "equal_graph_mean_validation_macro_f1_delta": 0.0038149734736034886,
+      "left": "P1",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.013469994068145752,
+              "validation_macro_f1_delta": 0.021204500963552086
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.019912123680114746,
+              "validation_macro_f1_delta": 0.030860657214261678
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.024597346782684326,
+              "validation_macro_f1_delta": 0.020032465089746432
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.01932648817698161,
+          "validation_accuracy_delta_population_sd": 0.004561558309418302,
+          "validation_macro_f1_delta_mean": 0.024032541089186732,
+          "validation_macro_f1_delta_population_sd": 0.004851858364620249
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.000299990177154541,
+              "validation_macro_f1_delta": 0.026402490520251565
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.0032993555068969727,
+              "validation_macro_f1_delta": -0.03043524534444153
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0008997917175292969,
+              "validation_macro_f1_delta": 0.0007045900296079877
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0008998513221740723,
+          "validation_accuracy_delta_population_sd": 0.0017659906375893423,
+          "validation_macro_f1_delta_mean": -0.0011093882648606594,
+          "validation_macro_f1_delta_population_sd": 0.023239333646438855
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.002516508102416992,
+              "validation_macro_f1_delta": -0.007214995826932524
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.004403889179229736,
+              "validation_macro_f1_delta": -0.009474966930798856
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.0034601688385009766,
+              "validation_macro_f1_delta": -0.017744734452815436
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.003460188706715902,
+          "validation_accuracy_delta_population_sd": 0.0007705200981907255,
+          "validation_macro_f1_delta_mean": -0.011478232403515606,
+          "validation_macro_f1_delta_population_sd": 0.004526120730308089
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.004988816049363878,
+      "pooled_same_seed_validation_macro_f1_delta_mean": 0.003814973473603489,
+      "right": "A0"
+    },
+    "P1_vs_P0": {
+      "equal_graph_mean_validation_accuracy_delta": 0.0002966059578789605,
+      "equal_graph_mean_validation_macro_f1_delta": 0.00824361730440447,
+      "left": "P1",
+      "per_graph": {
+        "Grocery": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0020498037338256836,
+              "validation_macro_f1_delta": 0.006961130419995798
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.00468522310256958,
+              "validation_macro_f1_delta": -0.005221491068794437
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.005856513977050781,
+              "validation_macro_f1_delta": 0.0138573974333146
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.00029283761978149414,
+          "validation_accuracy_delta_population_sd": 0.0044793788712562494,
+          "validation_macro_f1_delta_mean": 0.00519901226150532,
+          "validation_macro_f1_delta_population_sd": 0.00788795672411804
+        },
+        "Movies": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": -0.0011997818946838379,
+              "validation_macro_f1_delta": 0.01009929678280258
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": 0.0,
+              "validation_macro_f1_delta": -0.005210341263708895
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": -0.0005999207496643066,
+              "validation_macro_f1_delta": 0.04251231320928389
+            }
+          ],
+          "validation_accuracy_delta_mean": -0.0005999008814493815,
+          "validation_accuracy_delta_population_sd": 0.000489808907635651,
+          "validation_macro_f1_delta_mean": 0.015800422909459193,
+          "validation_macro_f1_delta_population_sd": 0.019895394221128997
+        },
+        "Reddit-S": {
+          "per_seed": [
+            {
+              "seed": 113,
+              "validation_accuracy_delta": 0.00408935546875,
+              "validation_macro_f1_delta": 0.007804430587765809
+            },
+            {
+              "seed": 114,
+              "validation_accuracy_delta": -0.00031453371047973633,
+              "validation_macro_f1_delta": 0.0034452290992595946
+            },
+            {
+              "seed": 115,
+              "validation_accuracy_delta": 0.0015728473663330078,
+              "validation_macro_f1_delta": -5.54094602787103e-05
+            }
+          ],
+          "validation_accuracy_delta_mean": 0.001782556374867757,
+          "validation_accuracy_delta_population_sd": 0.0018039851028449324,
+          "validation_macro_f1_delta_mean": 0.0037314167422488977,
+          "validation_macro_f1_delta_population_sd": 0.0032151411498782807
+        }
+      },
+      "pooled_same_seed_validation_accuracy_delta_mean": 0.00029660595787896053,
+      "pooled_same_seed_validation_macro_f1_delta_mean": 0.00824361730440447,
+      "right": "P0"
+    }
+  },
+  "primary_confirmation": [
+    {
+      "best_steps": [
+        36,
+        46,
+        41
+      ],
+      "dataset": "Movies",
+      "encoder_parameters": 893056,
+      "max_update_fraction": 0.0,
+      "model": "A0",
+      "selected": {
+        "attempt_id": "calibration_Movies_A0_seed112_cfg06",
+        "best_step": 41,
+        "config_index": 6,
+        "dataset": "Movies",
+        "lr": 0.003,
+        "model": "A0",
+        "validation_correct": 1800,
+        "validation_macro_f1": 0.44234374351664585,
+        "weight_decay": 0.0001
+      },
+      "task_head_parameters": 20560,
+      "total_parameters": 913616,
+      "train_accuracy_mean": 0.6978906194368998,
+      "train_accuracy_per_seed": [
+        0.6719983816146851,
+        0.7438768148422241,
+        0.6777966618537903
+      ],
+      "train_accuracy_population_sd": 0.032603196564399445,
+      "train_macro_f1_mean": 0.6469819300182175,
+      "train_macro_f1_per_seed": [
+        0.6095796051158651,
+        0.7093766253304582,
+        0.6219895596083292
+      ],
+      "train_macro_f1_population_sd": 0.04440964793793327,
+      "train_minus_validation_accuracy_mean": 0.1627976497014363,
+      "updates": [
+        200,
+        200,
+        200
+      ],
+      "validation_accuracy_mean": 0.5350929697354635,
+      "validation_accuracy_per_seed": [
+        0.5320935845375061,
+        0.5404918789863586,
+        0.5326934456825256
+      ],
+      "validation_accuracy_population_sd": 0.0038254519709333885,
+      "validation_macro_f1_mean": 0.43341228944339066,
+      "validation_macro_f1_per_seed": [
+        0.41391005008154363,
+        0.44643112171062427,
+        0.4398956965380041
+      ],
+      "validation_macro_f1_population_sd": 0.01404589977281178
+    },
+    {
+      "best_steps": [
+        56,
+        41,
+        41
+      ],
+      "dataset": "Movies",
+      "encoder_parameters": 744832,
+      "max_update_fraction": 0.0,
+      "model": "N0",
+      "selected": {
+        "attempt_id": "calibration_Movies_N0_seed112_cfg06",
+        "best_step": 46,
+        "config_index": 6,
+        "dataset": "Movies",
+        "lr": 0.003,
+        "model": "N0",
+        "validation_correct": 1804,
+        "validation_macro_f1": 0.4351794246444203,
+        "weight_decay": 0.0001
+      },
+      "task_head_parameters": 12820,
+      "total_parameters": 757652,
+      "train_accuracy_mean": 0.7538405060768127,
+      "train_accuracy_per_seed": [
+        0.8723382949829102,
+        0.6664000749588013,
+        0.7227831482887268
+      ],
+      "train_accuracy_population_sd": 0.08689479164007265,
+      "train_macro_f1_mean": 0.708760954146017,
+      "train_macro_f1_per_seed": [
+        0.8572726020030178,
+        0.6043715225484583,
+        0.664638737886575
+      ],
+      "train_macro_f1_population_sd": 0.10785736406029983,
+      "train_minus_validation_accuracy_mean": 0.21994731823603308,
+      "updates": [
+        206,
+        200,
+        200
+      ],
+      "validation_accuracy_mean": 0.5338931878407797,
+      "validation_accuracy_per_seed": [
+        0.5371925234794617,
+        0.531193733215332,
+        0.5332933068275452
+      ],
+      "validation_accuracy_population_sd": 0.0024854595927492006,
+      "validation_macro_f1_mean": 0.4384885537843986,
+      "validation_macro_f1_per_seed": [
+        0.4632358020634545,
+        0.4112694618668571,
+        0.4409603974228843
+      ],
+      "validation_macro_f1_population_sd": 0.021287048278033058
+    },
+    {
+      "best_steps": [
+        166,
+        146,
+        126
+      ],
+      "dataset": "Movies",
+      "encoder_parameters": 812048,
+      "max_update_fraction": 0.0,
+      "model": "M0",
+      "selected": {
+        "attempt_id": "calibration_Movies_M0_seed112_cfg01",
+        "best_step": 136,
+        "config_index": 1,
+        "dataset": "Movies",
+        "lr": 0.0003,
+        "model": "M0",
+        "validation_correct": 1798,
+        "validation_macro_f1": 0.4377712192374026,
+        "weight_decay": 0.001
+      },
+      "task_head_parameters": 12820,
+      "total_parameters": 824868,
+      "train_accuracy_mean": 0.7807990908622742,
+      "train_accuracy_per_seed": [
+        0.8599420189857483,
+        0.7624712586402893,
+        0.7199839949607849
+      ],
+      "train_accuracy_population_sd": 0.05858893068211763,
+      "train_macro_f1_mean": 0.7294667956185766,
+      "train_macro_f1_per_seed": [
+        0.8288217258794379,
+        0.710199359404333,
+        0.6493793015719589
+      ],
+      "train_macro_f1_population_sd": 0.07451318220752975,
+      "train_minus_validation_accuracy_mean": 0.24620602528254187,
+      "updates": [
+        316,
+        296,
+        276
+      ],
+      "validation_accuracy_mean": 0.5345930655797323,
+      "validation_accuracy_per_seed": [
+        0.5338932275772095,
+        0.5365926623344421,
+        0.5332933068275452
+      ],
+      "validation_accuracy_population_sd": 0.001434983533599871,
+      "validation_macro_f1_mean": 0.41621210929935165,
+      "validation_macro_f1_per_seed": [
+        0.4302813346142275,
+        0.420520798248321,
+        0.3978341950355064
+      ],
+      "validation_macro_f1_population_sd": 0.013592346303575434
+    },
+    {
+      "best_steps": [
+        161,
+        151,
+        181
+      ],
+      "dataset": "Movies",
+      "encoder_parameters": 812048,
+      "max_update_fraction": 0.0,
+      "model": "M1",
+      "selected": {
+        "attempt_id": "calibration_Movies_M1_seed112_cfg01",
+        "best_step": 126,
+        "config_index": 1,
+        "dataset": "Movies",
+        "lr": 0.0003,
+        "model": "M1",
+        "validation_correct": 1795,
+        "validation_macro_f1": 0.42825857952033053,
+        "weight_decay": 0.001
+      },
+      "task_head_parameters": 17980,
+      "total_parameters": 830028,
+      "train_accuracy_mean": 0.8412475983301798,
+      "train_accuracy_per_seed": [
+        0.8347495794296265,
+        0.7755672931671143,
+        0.9134259223937988
+      ],
+      "train_accuracy_population_sd": 0.05646779967550288,
+      "train_macro_f1_mean": 0.806976656565586,
+      "train_macro_f1_per_seed": [
+        0.802254834767804,
+        0.725362633015679,
+        0.893312501913275
+      ],
+      "train_macro_f1_population_sd": 0.06864649210021552,
+      "train_minus_validation_accuracy_mean": 0.30705446004867554,
+      "updates": [
+        311,
+        301,
+        331
+      ],
+      "validation_accuracy_mean": 0.5341931382815043,
+      "validation_accuracy_per_seed": [
+        0.5332933068275452,
+        0.5353928804397583,
+        0.5338932275772095
+      ],
+      "validation_accuracy_population_sd": 0.0008829919445417375,
+      "validation_macro_f1_mean": 0.42858094883511627,
+      "validation_macro_f1_per_seed": [
+        0.4310410393633134,
+        0.4150702990936515,
+        0.43963150804838397
+      ],
+      "validation_macro_f1_population_sd": 0.010176845627360877
+    },
+    {
+      "best_steps": [
+        166,
+        146,
+        126
+      ],
+      "dataset": "Movies",
+      "encoder_parameters": 814096,
+      "max_update_fraction": 0.0,
+      "model": "P0",
+      "selected": {
+        "attempt_id": "calibration_Movies_P0_seed112_cfg01",
+        "best_step": 136,
+        "config_index": 1,
+        "dataset": "Movies",
+        "lr": 0.0003,
+        "model": "P0",
+        "validation_correct": 1795,
+        "validation_macro_f1": 0.4372197196556268,
+        "weight_decay": 0.001
+      },
+      "task_head_parameters": 12820,
+      "total_parameters": 826916,
+      "train_accuracy_mean": 0.7809323867162069,
+      "train_accuracy_per_seed": [
+        0.8599420189857483,
+        0.7624712586402893,
+        0.720383882522583
+      ],
+      "train_accuracy_population_sd": 0.058450710293057685,
+      "train_macro_f1_mean": 0.7292489048153469,
+      "train_macro_f1_per_seed": [
+        0.8290777294854703,
+        0.7099445907638006,
+        0.64872439419677
+      ],
+      "train_macro_f1_population_sd": 0.07488357093154742,
+      "train_minus_validation_accuracy_mean": 0.24613936742146814,
+      "updates": [
+        316,
+        296,
+        276
+      ],
+      "validation_accuracy_mean": 0.5347930192947388,
+      "validation_accuracy_per_seed": [
+        0.5329933762550354,
+        0.5371925234794617,
+        0.5341931581497192
+      ],
+      "validation_accuracy_population_sd": 0.0017659906375893423,
+      "validation_macro_f1_mean": 0.4165024782690708,
+      "validation_macro_f1_per_seed": [
+        0.4302132438189926,
+        0.42120621762989163,
+        0.3980879733583282
+      ],
+      "validation_macro_f1_population_sd": 0.013530265420496157
+    },
+    {
+      "best_steps": [
+        171,
+        151,
+        181
+      ],
+      "dataset": "Movies",
+      "encoder_parameters": 814096,
+      "max_update_fraction": 0.0,
+      "model": "P1",
+      "selected": {
+        "attempt_id": "calibration_Movies_P1_seed112_cfg00",
+        "best_step": 126,
+        "config_index": 0,
+        "dataset": "Movies",
+        "lr": 0.0003,
+        "model": "P1",
+        "validation_correct": 1796,
+        "validation_macro_f1": 0.42839023019605565,
+        "weight_decay": 0.0001
+      },
+      "task_head_parameters": 17980,
+      "total_parameters": 832076,
+      "train_accuracy_mean": 0.8531773487726847,
+      "train_accuracy_per_seed": [
+        0.870138943195343,
+        0.7759671807289124,
+        0.9134259223937988
+      ],
+      "train_accuracy_population_sd": 0.05738465636412207,
+      "train_macro_f1_mean": 0.8207061066865348,
+      "train_macro_f1_per_seed": [
+        0.8427429360538519,
+        0.7267605514139541,
+        0.8926148325917984
+      ],
+      "train_macro_f1_population_sd": 0.06947962306882043,
+      "train_minus_validation_accuracy_mean": 0.31898423035939527,
+      "updates": [
+        321,
+        301,
+        331
+      ],
+      "validation_accuracy_mean": 0.5341931184132894,
+      "validation_accuracy_per_seed": [
+        0.5317935943603516,
+        0.5371925234794617,
+        0.5335932374000549
+      ],
+      "validation_accuracy_population_sd": 0.0022445492243541405,
+      "validation_macro_f1_mean": 0.43230290117853,
+      "validation_macro_f1_per_seed": [
+        0.4403125406017952,
+        0.41599587636618274,
+        0.4406002865676121
+      ],
+      "validation_macro_f1_population_sd": 0.011531406190865392
+    },
+    {
+      "best_steps": [
+        486,
+        141,
+        391
+      ],
+      "dataset": "Grocery",
+      "encoder_parameters": 893056,
+      "max_update_fraction": 0.0,
+      "model": "A0",
+      "selected": {
+        "attempt_id": "calibration_Grocery_A0_seed112_cfg04",
+        "best_step": 246,
+        "config_index": 4,
+        "dataset": "Grocery",
+        "lr": 0.001,
+        "model": "A0",
+        "validation_correct": 2787,
+        "validation_macro_f1": 0.7442783454949469,
+        "weight_decay": 0.001
+      },
+      "task_head_parameters": 20560,
+      "total_parameters": 913616,
+      "train_accuracy_mean": 0.9995444615681967,
+      "train_accuracy_per_seed": [
+        0.9998047947883606,
+        0.9989262223243713,
+        0.9999023675918579
+      ],
+      "train_accuracy_population_sd": 0.00043897223522664755,
+      "train_macro_f1_mean": 0.9996071097713367,
+      "train_macro_f1_per_seed": [
+        0.9998313770269741,
+        0.9990742816516407,
+        0.9999156706353954
+      ],
+      "train_macro_f1_population_sd": 0.0003783346904169161,
+      "train_minus_validation_accuracy_mean": 0.19251662492752075,
+      "updates": [
+        636,
+        291,
+        541
+      ],
+      "validation_accuracy_mean": 0.8070278366406759,
+      "validation_accuracy_per_seed": [
+        0.8117130398750305,
+        0.8035139441490173,
+        0.8058565258979797
+      ],
+      "validation_accuracy_population_sd": 0.0034482139650403006,
+      "validation_macro_f1_mean": 0.7356320277596335,
+      "validation_macro_f1_per_seed": [
+        0.7386780512849586,
+        0.7235557171992817,
+        0.7446623147946605
+      ],
+      "validation_macro_f1_population_sd": 0.0088818470301673
+    },
+    {
+      "best_steps": [
+        216,
+        216,
+        301
+      ],
+      "dataset": "Grocery",
+      "encoder_parameters": 744832,
+      "max_update_fraction": 0.0,
+      "model": "N0",
+      "selected": {
+        "attempt_id": "calibration_Grocery_N0_seed112_cfg08",
+        "best_step": 136,
+        "config_index": 8,
+        "dataset": "Grocery",
+        "lr": 0.003,
+        "model": "N0",
+        "validation_correct": 2784,
+        "validation_macro_f1": 0.7382797701564103,
+        "weight_decay": 0.01
+      },
+      "task_head_parameters": 12820,
+      "total_parameters": 757652,
+      "train_accuracy_mean": 0.999837319056193,
+      "train_accuracy_per_seed": [
+        0.9998047947883606,
+        0.9998047947883606,
+        0.9999023675918579
+      ],
+      "train_accuracy_population_sd": 4.5996260674889014e-05,
+      "train_macro_f1_mean": 0.9998594267184555,
+      "train_macro_f1_per_seed": [
+        0.9998312324929971,
+        0.9998313770269741,
+        0.9999156706353954
+      ],
+      "train_macro_f1_population_sd": 3.977049884083535e-05,
+      "train_minus_validation_accuracy_mean": 0.17563037077585852,
+      "updates": [
+        366,
+        366,
+        451
+      ],
+      "validation_accuracy_mean": 0.8242069482803345,
+      "validation_accuracy_per_seed": [
+        0.8237189054489136,
+        0.8251830339431763,
+        0.8237189054489136
+      ],
+      "validation_accuracy_population_sd": 0.0006901967912144007,
+      "validation_macro_f1_mean": 0.7515478059321122,
+      "validation_macro_f1_per_seed": [
+        0.7527478103341251,
+        0.745416541257766,
+        0.7564790662044454
+      ],
+      "validation_macro_f1_population_sd": 0.004595278190535266
+    },
+    {
+      "best_steps": [
+        311,
+        346,
+        161
+      ],
+      "dataset": "Grocery",
+      "encoder_parameters": 812048,
+      "max_update_fraction": 0.0,
+      "model": "M0",
+      "selected": {
+        "attempt_id": "calibration_Grocery_M0_seed112_cfg06",
+        "best_step": 291,
+        "config_index": 6,
+        "dataset": "Grocery",
+        "lr": 0.003,
+        "model": "M0",
+        "validation_correct": 2786,
+        "validation_macro_f1": 0.7371676290997655,
+        "weight_decay": 0.0001
+      },
+      "task_head_parameters": 12820,
+      "total_parameters": 824868,
+      "train_accuracy_mean": 0.9997722506523132,
+      "train_accuracy_per_seed": [
+        0.9998047947883606,
+        0.9998047947883606,
+        0.9997071623802185
+      ],
+      "train_accuracy_population_sd": 4.602435857389628e-05,
+      "train_macro_f1_mean": 0.9998032909507168,
+      "train_macro_f1_per_seed": [
+        0.9998313770269741,
+        0.9998313770269741,
+        0.9997471187982022
+      ],
+      "train_macro_f1_population_sd": 3.9719709956915824e-05,
+      "train_minus_validation_accuracy_mean": 0.1741011540095011,
+      "updates": [
+        461,
+        496,
+        311
+      ],
+      "validation_accuracy_mean": 0.8256710966428121,
+      "validation_accuracy_per_seed": [
+        0.8254758715629578,
+        0.827232837677002,
+        0.8243045806884766
+      ],
+      "validation_accuracy_population_sd": 0.001203399870246806,
+      "validation_macro_f1_mean": 0.7526331389926089,
+      "validation_macro_f1_per_seed": [
+        0.7558618604052472,
+        0.7523542040812115,
+        0.749683352491368
+      ],
+      "validation_macro_f1_population_sd": 0.0025300650220978077
+    },
+    {
+      "best_steps": [
+        161,
+        281,
+        481
+      ],
+      "dataset": "Grocery",
+      "encoder_parameters": 812048,
+      "max_update_fraction": 0.0,
+      "model": "M1",
+      "selected": {
+        "attempt_id": "calibration_Grocery_M1_seed112_cfg05",
+        "best_step": 701,
+        "config_index": 5,
+        "dataset": "Grocery",
+        "lr": 0.001,
+        "model": "M1",
+        "validation_correct": 2807,
+        "validation_macro_f1": 0.7486465648604239,
+        "weight_decay": 0.01
+      },
+      "task_head_parameters": 17980,
+      "total_parameters": 830028,
+      "train_accuracy_mean": 0.9997722109158834,
+      "train_accuracy_per_seed": [
+        0.9995118975639343,
+        0.9999023675918579,
+        0.9999023675918579
+      ],
+      "train_accuracy_population_sd": 0.00018406933639657786,
+      "train_macro_f1_mean": 0.9998032314825895,
+      "train_macro_f1_per_seed": [
+        0.9995783531769776,
+        0.9999156706353954,
+        0.9999156706353954
+      ],
+      "train_macro_f1_population_sd": 0.00015901297483989524,
+      "train_minus_validation_accuracy_mean": 0.17302743593851733,
+      "updates": [
+        311,
+        431,
+        631
+      ],
+      "validation_accuracy_mean": 0.8267447749773661,
+      "validation_accuracy_per_seed": [
+        0.8251830339431763,
+        0.8240117430686951,
+        0.831039547920227
+      ],
+      "validation_accuracy_population_sd": 0.0030742789454014986,
+      "validation_macro_f1_mean": 0.7579112213290742,
+      "validation_macro_f1_per_seed": [
+        0.7628145381523079,
+        0.7456632815748702,
+        0.7652558442600446
+      ],
+      "validation_macro_f1_population_sd": 0.008717760226299609
+    },
+    {
+      "best_steps": [
+        226,
+        506,
+        161
+      ],
+      "dataset": "Grocery",
+      "encoder_parameters": 814096,
+      "max_update_fraction": 0.0,
+      "model": "P0",
+      "selected": {
+        "attempt_id": "calibration_Grocery_P0_seed112_cfg08",
+        "best_step": 216,
+        "config_index": 8,
+        "dataset": "Grocery",
+        "lr": 0.003,
+        "model": "P0",
+        "validation_correct": 2786,
+        "validation_macro_f1": 0.734668094158076,
+        "weight_decay": 0.01
+      },
+      "task_head_parameters": 12820,
+      "total_parameters": 826916,
+      "train_accuracy_mean": 0.9998698433240255,
+      "train_accuracy_per_seed": [
+        0.9999023675918579,
+        0.9999023675918579,
+        0.9998047947883606
+      ],
+      "train_accuracy_population_sd": 4.5996260674889014e-05,
+      "train_macro_f1_mean": 0.9998875727659217,
+      "train_macro_f1_per_seed": [
+        0.9999156706353954,
+        0.9999156706353954,
+        0.9998313770269741
+      ],
+      "train_macro_f1_population_sd": 3.9736388083602235e-05,
+      "train_minus_validation_accuracy_mean": 0.17322268088658654,
+      "updates": [
+        376,
+        656,
+        311
+      ],
+      "validation_accuracy_mean": 0.826647162437439,
+      "validation_accuracy_per_seed": [
+        0.827232837677002,
+        0.8281112909317017,
+        0.8245973587036133
+      ],
+      "validation_accuracy_population_sd": 0.0014931379799106338,
+      "validation_macro_f1_mean": 0.754465556587315,
+      "validation_macro_f1_per_seed": [
+        0.7529214218285148,
+        0.7596378654823378,
+        0.7508373824510923
+      ],
+      "validation_macro_f1_population_sd": 0.003755031248055599
+    },
+    {
+      "best_steps": [
+        161,
+        256,
+        581
+      ],
+      "dataset": "Grocery",
+      "encoder_parameters": 814096,
+      "max_update_fraction": 0.0,
+      "model": "P1",
+      "selected": {
+        "attempt_id": "calibration_Grocery_P1_seed112_cfg04",
+        "best_step": 701,
+        "config_index": 4,
+        "dataset": "Grocery",
+        "lr": 0.001,
+        "model": "P1",
+        "validation_correct": 2811,
+        "validation_macro_f1": 0.7506694543195408,
+        "weight_decay": 0.001
+      },
+      "task_head_parameters": 17980,
+      "total_parameters": 832076,
+      "train_accuracy_mean": 0.9998047550519308,
+      "train_accuracy_per_seed": [
+        0.9995118975639343,
+        1.0,
+        0.9999023675918579
+      ],
+      "train_accuracy_population_sd": 0.00021088251545443583,
+      "train_macro_f1_mean": 0.999831341270791,
+      "train_macro_f1_per_seed": [
+        0.9995783531769776,
+        1.0,
+        0.9999156706353954
+      ],
+      "train_macro_f1_population_sd": 0.00018217224842101637,
+      "train_minus_validation_accuracy_mean": 0.1734504302342733,
+      "updates": [
+        311,
+        406,
+        731
+      ],
+      "validation_accuracy_mean": 0.8263543248176575,
+      "validation_accuracy_per_seed": [
+        0.8251830339431763,
+        0.8234260678291321,
+        0.8304538726806641
+      ],
+      "validation_accuracy_population_sd": 0.0029862408914091663,
+      "validation_macro_f1_mean": 0.7596645688488203,
+      "validation_macro_f1_per_seed": [
+        0.7598825522485106,
+        0.7544163744135434,
+        0.7646947798844069
+      ],
+      "validation_macro_f1_population_sd": 0.004198971487382349
+    },
+    {
+      "best_steps": [
+        166,
+        116,
+        246
+      ],
+      "dataset": "Reddit-S",
+      "encoder_parameters": 893056,
+      "max_update_fraction": 0.0,
+      "model": "A0",
+      "selected": {
+        "attempt_id": "calibration_Reddit_S_A0_seed112_cfg06",
+        "best_step": 311,
+        "config_index": 6,
+        "dataset": "Reddit-S",
+        "lr": 0.003,
+        "model": "A0",
+        "validation_correct": 3065,
+        "validation_macro_f1": 0.9285141473653982,
+        "weight_decay": 0.0001
+      },
+      "task_head_parameters": 20560,
+      "total_parameters": 913616,
+      "train_accuracy_mean": 0.9996854066848755,
+      "train_accuracy_per_seed": [
+        0.9996854066848755,
+        0.9996854066848755,
+        0.9996854066848755
+      ],
+      "train_accuracy_population_sd": 0.0,
+      "train_macro_f1_mean": 0.9992374261988721,
+      "train_macro_f1_per_seed": [
+        0.9992368522922082,
+        0.9992385740122,
+        0.9992368522922082
+      ],
+      "train_macro_f1_population_sd": 8.116265876701048e-07,
+      "train_minus_validation_accuracy_mean": 0.039320528507232666,
+      "updates": [
+        316,
+        266,
+        396
+      ],
+      "validation_accuracy_mean": 0.9603648781776428,
+      "validation_accuracy_per_seed": [
+        0.9609940052032471,
+        0.9584774971008301,
+        0.9616231322288513
+      ],
+      "validation_accuracy_population_sd": 0.0013590697064339114,
+      "validation_macro_f1_mean": 0.9234497263601161,
+      "validation_macro_f1_per_seed": [
+        0.9227150548272347,
+        0.9206809927674735,
+        0.9269531314856401
+      ],
+      "validation_macro_f1_population_sd": 0.0026127555978188682
+    },
+    {
+      "best_steps": [
+        486,
+        286,
+        206
+      ],
+      "dataset": "Reddit-S",
+      "encoder_parameters": 744832,
+      "max_update_fraction": 0.0,
+      "model": "N0",
+      "selected": {
+        "attempt_id": "calibration_Reddit_S_N0_seed112_cfg03",
+        "best_step": 771,
+        "config_index": 3,
+        "dataset": "Reddit-S",
+        "lr": 0.001,
+        "model": "N0",
+        "validation_correct": 3049,
+        "validation_macro_f1": 0.9132067501879553,
+        "weight_decay": 0.0001
+      },
+      "task_head_parameters": 12820,
+      "total_parameters": 757652,
+      "train_accuracy_mean": 0.9996854066848755,
+      "train_accuracy_per_seed": [
+        0.9996854066848755,
+        0.9996854066848755,
+        0.9996854066848755
+      ],
+      "train_accuracy_population_sd": 0.0,
+      "train_macro_f1_mean": 0.999236263222448,
+      "train_macro_f1_per_seed": [
+        0.9992350850829274,
+        0.9992368522922082,
+        0.9992368522922082
+      ],
+      "train_macro_f1_population_sd": 8.330704441533475e-07,
+      "train_minus_validation_accuracy_mean": 0.04225643475850427,
+      "updates": [
+        636,
+        436,
+        356
+      ],
+      "validation_accuracy_mean": 0.9574289719263712,
+      "validation_accuracy_per_seed": [
+        0.9575338363647461,
+        0.9569047093391418,
+        0.9578483700752258
+      ],
+      "validation_accuracy_population_sd": 0.0003923190105287569,
+      "validation_macro_f1_mean": 0.9121251785704804,
+      "validation_macro_f1_per_seed": [
+        0.915505644803124,
+        0.9105705151086623,
+        0.9102993757996549
+      ],
+      "validation_macro_f1_population_sd": 0.0023929121858459463
+    },
+    {
+      "best_steps": [
+        806,
+        266,
+        416
+      ],
+      "dataset": "Reddit-S",
+      "encoder_parameters": 812048,
+      "max_update_fraction": 0.0,
+      "model": "M0",
+      "selected": {
+        "attempt_id": "calibration_Reddit_S_M0_seed112_cfg00",
+        "best_step": 446,
+        "config_index": 0,
+        "dataset": "Reddit-S",
+        "lr": 0.0003,
+        "model": "M0",
+        "validation_correct": 3044,
+        "validation_macro_f1": 0.9110844153999954,
+        "weight_decay": 0.0001
+      },
+      "task_head_parameters": 12820,
+      "total_parameters": 824868,
+      "train_accuracy_mean": 0.9996504584948221,
+      "train_accuracy_per_seed": [
+        0.9996854066848755,
+        0.9995805621147156,
+        0.9996854066848755
+      ],
+      "train_accuracy_population_sd": 4.9424204353775065e-05,
+      "train_macro_f1_mean": 0.9991341494085617,
+      "train_macro_f1_per_seed": [
+        0.9992350850829274,
+        0.9989305108505494,
+        0.9992368522922082
+      ],
+      "train_macro_f1_population_sd": 0.00014399601265113174,
+      "train_minus_validation_accuracy_mean": 0.044213732083638435,
+      "updates": [
+        956,
+        416,
+        566
+      ],
+      "validation_accuracy_mean": 0.9554367264111837,
+      "validation_accuracy_per_seed": [
+        0.9562755823135376,
+        0.9537590146064758,
+        0.9562755823135376
+      ],
+      "validation_accuracy_population_sd": 0.001186321393985638,
+      "validation_macro_f1_mean": 0.9097937825421106,
+      "validation_macro_f1_per_seed": [
+        0.9135166457461541,
+        0.9085805068421839,
+        0.9072841950379937
+      ],
+      "validation_macro_f1_population_sd": 0.0026851305245042287
+    },
+    {
+      "best_steps": [
+        421,
+        371,
+        201
+      ],
+      "dataset": "Reddit-S",
+      "encoder_parameters": 812048,
+      "max_update_fraction": 0.0,
+      "model": "M1",
+      "selected": {
+        "attempt_id": "calibration_Reddit_S_M1_seed112_cfg08",
+        "best_step": 346,
+        "config_index": 8,
+        "dataset": "Reddit-S",
+        "lr": 0.003,
+        "model": "M1",
+        "validation_correct": 3044,
+        "validation_macro_f1": 0.9084775972774806,
+        "weight_decay": 0.01
+      },
+      "task_head_parameters": 17980,
+      "total_parameters": 830028,
+      "train_accuracy_mean": 0.9996854066848755,
+      "train_accuracy_per_seed": [
+        0.9996854066848755,
+        0.9996854066848755,
+        0.9996854066848755
+      ],
+      "train_accuracy_population_sd": 0.0,
+      "train_macro_f1_mean": 0.999237985129097,
+      "train_macro_f1_per_seed": [
+        0.999240250802875,
+        0.9992368522922082,
+        0.9992368522922082
+      ],
+      "train_macro_f1_population_sd": 1.6020732923263484e-06,
+      "train_minus_validation_accuracy_mean": 0.04015934467315674,
+      "updates": [
+        571,
+        521,
+        351
+      ],
+      "validation_accuracy_mean": 0.9595260620117188,
+      "validation_accuracy_per_seed": [
+        0.9600503444671631,
+        0.9581629633903503,
+        0.9603648781776428
+      ],
+      "validation_accuracy_population_sd": 0.0009723721003948296,
+      "validation_macro_f1_mean": 0.9132773866504632,
+      "validation_macro_f1_per_seed": [
+        0.9157070375143268,
+        0.9116985952167879,
+        0.9124265272202751
+      ],
+      "validation_macro_f1_population_sd": 0.0017435354390108104
+    },
+    {
+      "best_steps": [
+        231,
+        291,
+        451
+      ],
+      "dataset": "Reddit-S",
+      "encoder_parameters": 814096,
+      "max_update_fraction": 0.0,
+      "model": "P0",
+      "selected": {
+        "attempt_id": "calibration_Reddit_S_P0_seed112_cfg02",
+        "best_step": 581,
+        "config_index": 2,
+        "dataset": "Reddit-S",
+        "lr": 0.0003,
+        "model": "P0",
+        "validation_correct": 3044,
+        "validation_macro_f1": 0.9120320384305393,
+        "weight_decay": 0.01
+      },
+      "task_head_parameters": 12820,
+      "total_parameters": 826916,
+      "train_accuracy_mean": 0.9996155103047689,
+      "train_accuracy_per_seed": [
+        0.9995805621147156,
+        0.9995805621147156,
+        0.9996854066848755
+      ],
+      "train_accuracy_population_sd": 4.9424204353775065e-05,
+      "train_macro_f1_mean": 0.9990308726182513,
+      "train_macro_f1_per_seed": [
+        0.998927021921277,
+        0.998927021921277,
+        0.9992385740122
+      ],
+      "train_macro_f1_population_sd": 0.00014686706412296707,
+      "train_minus_validation_accuracy_mean": 0.04449337720870972,
+      "updates": [
+        381,
+        441,
+        601
+      ],
+      "validation_accuracy_mean": 0.9551221330960592,
+      "validation_accuracy_per_seed": [
+        0.9543881416320801,
+        0.9543881416320801,
+        0.9565901160240173
+      ],
+      "validation_accuracy_population_sd": 0.0010380206830253055,
+      "validation_macro_f1_mean": 0.9082400772143515,
+      "validation_macro_f1_per_seed": [
+        0.9076956284125364,
+        0.907760796737415,
+        0.9092638064931033
+      ],
+      "validation_macro_f1_population_sd": 0.0007243746520376793
+    },
+    {
+      "best_steps": [
+        631,
+        161,
+        551
+      ],
+      "dataset": "Reddit-S",
+      "encoder_parameters": 814096,
+      "max_update_fraction": 0.0,
+      "model": "P1",
+      "selected": {
+        "attempt_id": "calibration_Reddit_S_P1_seed112_cfg02",
+        "best_step": 916,
+        "config_index": 2,
+        "dataset": "Reddit-S",
+        "lr": 0.0003,
+        "model": "P1",
+        "validation_correct": 3046,
+        "validation_macro_f1": 0.9124427331245496,
+        "weight_decay": 0.01
+      },
+      "task_head_parameters": 17980,
+      "total_parameters": 832076,
+      "train_accuracy_mean": 0.9971336722373962,
+      "train_accuracy_per_seed": [
+        0.9996854066848755,
+        0.9920302033424377,
+        0.9996854066848755
+      ],
+      "train_accuracy_population_sd": 0.0036086974631997686,
+      "train_macro_f1_mean": 0.9940418910189236,
+      "train_macro_f1_per_seed": [
+        0.9992350850829274,
+        0.9836537356816353,
+        0.9992368522922082
+      ],
+      "train_macro_f1_population_sd": 0.007345535118445807,
+      "train_minus_validation_accuracy_mean": 0.04022898276646936,
+      "updates": [
+        781,
+        311,
+        701
+      ],
+      "validation_accuracy_mean": 0.9569046894709269,
+      "validation_accuracy_per_seed": [
+        0.9584774971008301,
+        0.9540736079216003,
+        0.9581629633903503
+      ],
+      "validation_accuracy_population_sd": 0.002005991013266689,
+      "validation_macro_f1_mean": 0.9119714939566004,
+      "validation_macro_f1_per_seed": [
+        0.9155000590003022,
+        0.9112060258366746,
+        0.9092083970328246
+      ],
+      "validation_macro_f1_population_sd": 0.002624970940819213
+    }
+  ],
+  "protocol_amendment": {
+    "baseline_protocol_lock": "protocol_lock_v1.json",
+    "baseline_protocol_lock_sha256": "9f8b01c4e746b0a4e73f77e9717e044d6e24144697c50c78ee8923a61bafba5b",
+    "calibration_audit_sha256": "22f1f26e571fd071bf5890a6ff24b3ad3db8691258324ec0d2a69c67bf56761b",
+    "calibration_selection_lock_sha256": "ccf4dbd4b4f10fc90feb8faea4d4dc969f21ccab879300eae713ccb21dd314c0",
+    "change_scope": "summary CSV line-ending normalization only; no training, audit, metric, data, split, or selection changes",
+    "prior_confirmation_lineage": {
+      "protocol_lock_v1_A0_N0": 18,
+      "protocol_lock_v3_routed_models": 36
+    },
+    "rerun_policy": "regenerate concise report artifacts only; retain all training and audit evidence unchanged",
+    "revision": 5,
+    "supersedes_protocol_lock": "protocol_lock_v4.json",
+    "supersedes_protocol_lock_sha256": "cce1cf37fa03c1487edc2b3d8f7e479b57c870e003a4b67709a30b4df1fe8366"
+  },
+  "real_lp_runs": 0,
+  "resource_summary_confirmation": {
+    "A0": {
+      "diagnostic_fraction_mean": 0.0017574785542056955,
+      "gpu_compute_processes_end": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 4226,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2206,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2132,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2088,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2036,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2130,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 4554,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2622,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2578,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_compute_processes_start": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 3296,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1206,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 794,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 374,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 714,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 746,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 3710,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1374,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1054,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_end_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 4320,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 29,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2300,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 28,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2226,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 30,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2182,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 22,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2130,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 17,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2224,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 32,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 4648,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 27,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 13,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2716,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 45,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 22,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2672,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 29,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 8,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "gpu_start_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3390,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 1300,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 27,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 888,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 468,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 7,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 808,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 16,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 840,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3804,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 4,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 13,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 1468,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 32,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 12,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 1148,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 9,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 23,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "max_update_count": 0,
+      "median_optimizer_update_seconds": 15.33108553314209,
+      "median_stable_update_ms": 51.164737701416016,
+      "peak_allocated_gib_max": 3.790177345275879,
+      "peak_reserved_gib_max": 4.138671875,
+      "runner_pids": [
+        1019541,
+        1019541,
+        1019541,
+        1019541,
+        1019541,
+        1019541,
+        1019541,
+        1019541,
+        1019541
+      ],
+      "runs": 9,
+      "total_cell_wall_seconds": 310.6247887806967,
+      "total_diagnostic_seconds": 0.2498983503319323,
+      "total_validation_seconds": 18.567553421948105
+    },
+    "M0": {
+      "diagnostic_fraction_mean": 0.0325790847679624,
+      "gpu_compute_processes_end": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2730,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2310,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2310,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2172,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2172,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2172,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2606,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2376,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2376,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_compute_processes_start": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2624,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2166,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2166,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 374,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2068,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2068,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2606,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2244,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2244,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_end_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2824,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 17,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2404,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 14,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 12,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2404,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 27,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 19,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2266,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 21,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2266,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 4,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2266,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 23,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 29,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2700,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2470,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 7,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2470,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 21,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "gpu_start_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2718,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 21,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2260,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2260,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 2,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 7,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 468,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 24,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2162,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 25,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2162,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 7,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2700,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2338,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 5,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 10,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2338,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 2,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 12,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "max_update_count": 0,
+      "median_optimizer_update_seconds": 28.39912685394287,
+      "median_stable_update_ms": 67.39519882202148,
+      "peak_allocated_gib_max": 1.8128595352172852,
+      "peak_reserved_gib_max": 2.357421875,
+      "runner_pids": [
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875
+      ],
+      "runs": 9,
+      "total_cell_wall_seconds": 501.97073738416657,
+      "total_diagnostic_seconds": 8.180583174340427,
+      "total_validation_seconds": 21.413804499898106
+    },
+    "M1": {
+      "diagnostic_fraction_mean": 0.03629839676613206,
+      "gpu_compute_processes_end": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2384,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2384,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2384,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2282,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2282,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2282,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2448,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2448,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2448,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_compute_processes_start": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2168,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2172,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2170,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2068,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2072,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2072,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2244,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2248,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2248,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_end_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2478,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 39,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 26,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2478,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 10,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 22,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2478,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 7,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 9,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2376,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 11,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 8,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2376,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 13,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2376,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 34,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2542,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 25,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 25,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2542,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 31,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2542,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 25,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "gpu_start_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2262,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 22,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2266,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 2,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 23,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2264,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 3,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 24,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2162,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 31,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2166,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 16,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2166,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 3,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2338,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 2,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2342,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 3,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 15,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2342,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 9,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "max_update_count": 0,
+      "median_optimizer_update_seconds": 25.43412647628784,
+      "median_stable_update_ms": 70.78963470458984,
+      "peak_allocated_gib_max": 1.887481689453125,
+      "peak_reserved_gib_max": 2.08203125,
+      "runner_pids": [
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875
+      ],
+      "runs": 9,
+      "total_cell_wall_seconds": 488.7040581391193,
+      "total_diagnostic_seconds": 9.233435853850096,
+      "total_validation_seconds": 19.725258284714073
+    },
+    "N0": {
+      "diagnostic_fraction_mean": 0.0219134259802546,
+      "gpu_compute_processes_end": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2082,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2082,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2082,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1960,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1960,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1952,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2068,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2060,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2060,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_compute_processes_start": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 838,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1974,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1974,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 670,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1856,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1820,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 2906,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1020,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1958,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 1958,
+            "pid": 1019541,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_end_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2176,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 24,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2176,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 28,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2176,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 29,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2054,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 15,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2054,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 35,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2046,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 11,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 39,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2162,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 30,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 4,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2154,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 30,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 27,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2154,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 22,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 23,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "gpu_start_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 932,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 15,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2068,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2068,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 764,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 17,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 1950,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 1914,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2921,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 1114,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 13,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 13,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2052,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 4,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2052,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 13,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "max_update_count": 0,
+      "median_optimizer_update_seconds": 12.711002172470092,
+      "median_stable_update_ms": 34.3001766204834,
+      "peak_allocated_gib_max": 1.5494866371154785,
+      "peak_reserved_gib_max": 1.724609375,
+      "runner_pids": [
+        1019541,
+        1019541,
+        1019541,
+        1019541,
+        1019541,
+        1019541,
+        1019541,
+        1019541,
+        1019541
+      ],
+      "runs": 9,
+      "total_cell_wall_seconds": 251.66684357030317,
+      "total_diagnostic_seconds": 2.213267482817173,
+      "total_validation_seconds": 11.450685697607696
+    },
+    "P0": {
+      "diagnostic_fraction_mean": 0.03335665787552032,
+      "gpu_compute_processes_end": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2710,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2710,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2710,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2588,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2622,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2622,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2742,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2742,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2742,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_compute_processes_start": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2170,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2602,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2602,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2072,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2484,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2518,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2248,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2642,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2642,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_end_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2804,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 27,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 29,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2804,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 9,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 12,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2804,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 26,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 12,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2682,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 32,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 18,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2716,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 26,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 38,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2716,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2836,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2836,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 21,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 24,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2836,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 30,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 49,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "gpu_start_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2264,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2696,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2696,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 12,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2166,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 22,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2578,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 4,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2612,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 27,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2342,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 3,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 30,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2736,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2736,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 12,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "max_update_count": 0,
+      "median_optimizer_update_seconds": 32.53068643951416,
+      "median_stable_update_ms": 76.50465393066406,
+      "peak_allocated_gib_max": 2.2247848510742188,
+      "peak_reserved_gib_max": 2.369140625,
+      "runner_pids": [
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875
+      ],
+      "runs": 9,
+      "total_cell_wall_seconds": 496.263650869485,
+      "total_diagnostic_seconds": 9.095007800962776,
+      "total_validation_seconds": 20.301814616192132
+    },
+    "P1": {
+      "diagnostic_fraction_mean": 0.04004514560229703,
+      "gpu_compute_processes_end": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2818,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2818,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2818,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2684,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2696,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2684,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2846,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2846,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2846,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_compute_processes_start": [
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2602,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2606,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2606,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2518,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2522,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2522,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3296,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2642,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2646,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ],
+        [
+          {
+            "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+            "memory_used_mib": 2646,
+            "pid": 1038875,
+            "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+          },
+          {
+            "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+            "memory_used_mib": 3854,
+            "pid": 730815,
+            "process_name": "python"
+          }
+        ]
+      ],
+      "gpu_end_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2912,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 12,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2912,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 44,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 14,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2912,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 47,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2778,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 22,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 33,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2790,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 40,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 33,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2778,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 26,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 36,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2940,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 17,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2940,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 28,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2940,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 41,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 28,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "gpu_start_snapshots": [
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2696,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 12,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2700,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 3,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 100,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2700,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 2,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 16,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2612,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 8,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2616,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2616,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 2,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3311,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 18,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2736,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 1,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 33,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2740,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 3,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 2740,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 3,
+            "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+          },
+          {
+            "index": 1,
+            "memory_total_mib": 24576,
+            "memory_used_mib": 3869,
+            "name": "NVIDIA GeForce RTX 3090",
+            "utilization_percent": 0,
+            "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+          }
+        ]
+      ],
+      "max_update_count": 0,
+      "median_optimizer_update_seconds": 27.101344062805175,
+      "median_stable_update_ms": 83.06537628173828,
+      "peak_allocated_gib_max": 2.298440933227539,
+      "peak_reserved_gib_max": 2.470703125,
+      "runner_pids": [
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875,
+        1038875
+      ],
+      "runs": 9,
+      "total_cell_wall_seconds": 606.2331983526237,
+      "total_diagnostic_seconds": 12.850529451388866,
+      "total_validation_seconds": 24.96152071468532
+    }
+  },
+  "study": "mvcge_coordinated_nc_v2",
+  "test_evaluations": 0,
+  "training_source_commits_present_in_audited_results": [
+    "d1da4bbcfd6e660d4b4adef274eb2f5d524549b9",
+    "deb7c5efac7e0e220302431cc9f36008f828c880"
+  ]
+}

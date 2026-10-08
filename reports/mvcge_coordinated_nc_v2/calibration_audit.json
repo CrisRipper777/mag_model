@@ -1,0 +1,994 @@
+{
+  "checks": [
+    "all expected cell statuses",
+    "train/validation ID hashes",
+    "saved train/validation argmax metrics",
+    "fixed-C macro-F1 and confusion matrices",
+    "source/protocol hashes",
+    "checkpoint/prediction/output evidence",
+    "runtime test/LP counters"
+  ],
+  "expected_cells": 162,
+  "independently_recomputed_train_validation_prediction_sets": 324,
+  "phase": "calibration",
+  "real_lp_runs": 0,
+  "results": [
+    {
+      "attempt_id": "calibration_Movies_A0_seed112_cfg00",
+      "prediction_sha256": "b4eb0f3a5cf8f661d26cc251f38ae7a9d224d6f600f44773dbccb1f0e4a3fe34",
+      "train_correct": 7483,
+      "validation_correct": 1752
+    },
+    {
+      "attempt_id": "calibration_Movies_A0_seed112_cfg01",
+      "prediction_sha256": "b4eb0f3a5cf8f661d26cc251f38ae7a9d224d6f600f44773dbccb1f0e4a3fe34",
+      "train_correct": 7483,
+      "validation_correct": 1752
+    },
+    {
+      "attempt_id": "calibration_Movies_A0_seed112_cfg02",
+      "prediction_sha256": "ca0f2cdf5e93ca150a0be7982941d946a377f94582ed773afeebb5c71402af3f",
+      "train_correct": 7485,
+      "validation_correct": 1752
+    },
+    {
+      "attempt_id": "calibration_Movies_A0_seed112_cfg03",
+      "prediction_sha256": "0b81ac4b25ba32365da246b824d1083c6f9cbeeb5837e3825075db8101e50b03",
+      "train_correct": 7375,
+      "validation_correct": 1771
+    },
+    {
+      "attempt_id": "calibration_Movies_A0_seed112_cfg04",
+      "prediction_sha256": "0b81ac4b25ba32365da246b824d1083c6f9cbeeb5837e3825075db8101e50b03",
+      "train_correct": 7375,
+      "validation_correct": 1771
+    },
+    {
+      "attempt_id": "calibration_Movies_A0_seed112_cfg05",
+      "prediction_sha256": "06ca3fa2fca4e2c4e52a54aa7d084c897368ef6915fd8e93effd8536672056fa",
+      "train_correct": 7375,
+      "validation_correct": 1772
+    },
+    {
+      "attempt_id": "calibration_Movies_A0_seed112_cfg06",
+      "prediction_sha256": "7b3acc9a6704a0f65fe5e23ca647bd20e0551a38089077d1983f067d41616cfc",
+      "train_correct": 6683,
+      "validation_correct": 1800
+    },
+    {
+      "attempt_id": "calibration_Movies_A0_seed112_cfg07",
+      "prediction_sha256": "6d1cbb61df0a335525f7de9e27fc493f669b25389f66be8e15c9b2f61c600a18",
+      "train_correct": 6682,
+      "validation_correct": 1800
+    },
+    {
+      "attempt_id": "calibration_Movies_A0_seed112_cfg08",
+      "prediction_sha256": "05d66e2f05bea63f6de6a2b44dda0b9b655c88e388b5ae3a9f5d5e12e340f7c2",
+      "train_correct": 6681,
+      "validation_correct": 1799
+    },
+    {
+      "attempt_id": "calibration_Movies_N0_seed112_cfg00",
+      "prediction_sha256": "9088289c8c5c1b103f819e2b7ecf27a52638e18aa3a2b0325d163f86b8c69b6d",
+      "train_correct": 8134,
+      "validation_correct": 1794
+    },
+    {
+      "attempt_id": "calibration_Movies_N0_seed112_cfg01",
+      "prediction_sha256": "9088289c8c5c1b103f819e2b7ecf27a52638e18aa3a2b0325d163f86b8c69b6d",
+      "train_correct": 8134,
+      "validation_correct": 1794
+    },
+    {
+      "attempt_id": "calibration_Movies_N0_seed112_cfg02",
+      "prediction_sha256": "c77ac4308993d7a619d988ea52873569b1e8de543dd1d3ea0750aa4f05621eab",
+      "train_correct": 8135,
+      "validation_correct": 1794
+    },
+    {
+      "attempt_id": "calibration_Movies_N0_seed112_cfg03",
+      "prediction_sha256": "18465433c8fe5e67ec385c5b745b2441e252d2b1adde0f1a6a8a3aa657f76ce1",
+      "train_correct": 7860,
+      "validation_correct": 1789
+    },
+    {
+      "attempt_id": "calibration_Movies_N0_seed112_cfg04",
+      "prediction_sha256": "18465433c8fe5e67ec385c5b745b2441e252d2b1adde0f1a6a8a3aa657f76ce1",
+      "train_correct": 7860,
+      "validation_correct": 1789
+    },
+    {
+      "attempt_id": "calibration_Movies_N0_seed112_cfg05",
+      "prediction_sha256": "89326393ec09d4dbc0c26ac97066b13585e4377fdfe8dd2d497557e4a3044bd9",
+      "train_correct": 7861,
+      "validation_correct": 1789
+    },
+    {
+      "attempt_id": "calibration_Movies_N0_seed112_cfg06",
+      "prediction_sha256": "a5e82b8540268b9cef75308d0c5d42454ef84b5b6cc93082d2e46b95cf8c37bb",
+      "train_correct": 7484,
+      "validation_correct": 1804
+    },
+    {
+      "attempt_id": "calibration_Movies_N0_seed112_cfg07",
+      "prediction_sha256": "7ebb24acd3bffd1fdf73fdfad6c0d0c4d0a1ea5ee6d746ab52177b163b70d18d",
+      "train_correct": 7484,
+      "validation_correct": 1802
+    },
+    {
+      "attempt_id": "calibration_Movies_N0_seed112_cfg08",
+      "prediction_sha256": "fe19a2d9c42eb1f0a0fb3cb32ce59e7e096f4ba5041cfd9a7c85a529c57de1dd",
+      "train_correct": 7487,
+      "validation_correct": 1800
+    },
+    {
+      "attempt_id": "calibration_Movies_M0_seed112_cfg00",
+      "prediction_sha256": "483fab50da31ff2cec2a4fedf3750978c001e254c91d935225ccfa99bde81bab",
+      "train_correct": 7409,
+      "validation_correct": 1795
+    },
+    {
+      "attempt_id": "calibration_Movies_M0_seed112_cfg01",
+      "prediction_sha256": "8516c1ded168b136bddc597805d86e1d9410a97d70ebd818d046e41a5a04a6ab",
+      "train_correct": 7410,
+      "validation_correct": 1798
+    },
+    {
+      "attempt_id": "calibration_Movies_M0_seed112_cfg02",
+      "prediction_sha256": "3b03a9dc5e37467fbc2b56f32c406e7574e6c0c5c0c8593c789c9d527303a7ec",
+      "train_correct": 7409,
+      "validation_correct": 1797
+    },
+    {
+      "attempt_id": "calibration_Movies_M0_seed112_cfg03",
+      "prediction_sha256": "bb8fc3cf3a4bd8a326b387b89056aabdddbe1b738a3237d46ee08ca25344cc9d",
+      "train_correct": 7014,
+      "validation_correct": 1789
+    },
+    {
+      "attempt_id": "calibration_Movies_M0_seed112_cfg04",
+      "prediction_sha256": "26408e1ecfc6877018b57a939c01ce3ccaf05bfe151b0e7440095f2bd6f14242",
+      "train_correct": 7015,
+      "validation_correct": 1789
+    },
+    {
+      "attempt_id": "calibration_Movies_M0_seed112_cfg05",
+      "prediction_sha256": "aac9e09518cd925f420d4d744a53b5427928950f2bf00d6d459d6d1f5921cf29",
+      "train_correct": 7016,
+      "validation_correct": 1789
+    },
+    {
+      "attempt_id": "calibration_Movies_M0_seed112_cfg06",
+      "prediction_sha256": "70ca3db474131583fd0e85e638908b052983adeb6d1578537ef1b7aff9b69089",
+      "train_correct": 7444,
+      "validation_correct": 1771
+    },
+    {
+      "attempt_id": "calibration_Movies_M0_seed112_cfg07",
+      "prediction_sha256": "77f8b0eada120c4a0890cb77f812065e638b7022fe2fbb88a8488c4f2688095f",
+      "train_correct": 7444,
+      "validation_correct": 1772
+    },
+    {
+      "attempt_id": "calibration_Movies_M0_seed112_cfg08",
+      "prediction_sha256": "7c1e75dc02ae5d4e69b1c68c92c8d15d9ba7e95f42cd33b89e3e978f293383dd",
+      "train_correct": 7441,
+      "validation_correct": 1773
+    },
+    {
+      "attempt_id": "calibration_Movies_M1_seed112_cfg00",
+      "prediction_sha256": "82ac187792c9b99dbf111f4c6631367040e46082e4856a080ca159b140bde265",
+      "train_correct": 7093,
+      "validation_correct": 1794
+    },
+    {
+      "attempt_id": "calibration_Movies_M1_seed112_cfg01",
+      "prediction_sha256": "37d56c88972e18283d9c4c88a40c2eb321818c6cbd7c57b74791ebf460e21b63",
+      "train_correct": 7093,
+      "validation_correct": 1795
+    },
+    {
+      "attempt_id": "calibration_Movies_M1_seed112_cfg02",
+      "prediction_sha256": "d2cdd6e2967cac6fe194580bb29a726315970d2e782d595771359d62e781925c",
+      "train_correct": 7096,
+      "validation_correct": 1794
+    },
+    {
+      "attempt_id": "calibration_Movies_M1_seed112_cfg03",
+      "prediction_sha256": "b4d388fac2b7e192b940a780a7b4b275e5369f3695e294a5551bd0a1b1385fbb",
+      "train_correct": 8695,
+      "validation_correct": 1782
+    },
+    {
+      "attempt_id": "calibration_Movies_M1_seed112_cfg04",
+      "prediction_sha256": "a78e2b49477b013b1be33e86a69059096c040cc326a7ebb4aa79f51f97a12090",
+      "train_correct": 8704,
+      "validation_correct": 1778
+    },
+    {
+      "attempt_id": "calibration_Movies_M1_seed112_cfg05",
+      "prediction_sha256": "0edb2ce9a489ff62bdac2c44a7918d28186404a35042b1b6f85a427253dc959d",
+      "train_correct": 8713,
+      "validation_correct": 1778
+    },
+    {
+      "attempt_id": "calibration_Movies_M1_seed112_cfg06",
+      "prediction_sha256": "64202f00650d5889227091c4ec89f40ad453fb4a13e98cb62ef35327998bd313",
+      "train_correct": 7369,
+      "validation_correct": 1760
+    },
+    {
+      "attempt_id": "calibration_Movies_M1_seed112_cfg07",
+      "prediction_sha256": "3c0cdd67f451ff7ac4aeec281dd883e8c2a6031ece03a5356d7af40f169c01c0",
+      "train_correct": 8703,
+      "validation_correct": 1762
+    },
+    {
+      "attempt_id": "calibration_Movies_M1_seed112_cfg08",
+      "prediction_sha256": "41560a7c7768afa4d78449b14ba1282039cb1df82451623ef492ef5e1bd74096",
+      "train_correct": 8785,
+      "validation_correct": 1763
+    },
+    {
+      "attempt_id": "calibration_Movies_P0_seed112_cfg00",
+      "prediction_sha256": "6c9e4b2f1e02462c620d4000378dc81e9453aa8e026f46303d50096227f1cb66",
+      "train_correct": 7415,
+      "validation_correct": 1795
+    },
+    {
+      "attempt_id": "calibration_Movies_P0_seed112_cfg01",
+      "prediction_sha256": "8bd4e5b7c5e8a1666cb218f090030dccecb7ff1656970c6e460077efe1c6fcfd",
+      "train_correct": 7413,
+      "validation_correct": 1795
+    },
+    {
+      "attempt_id": "calibration_Movies_P0_seed112_cfg02",
+      "prediction_sha256": "7e6aca27cc8a40a25315917e308e1dde188b2be45a264d05a6771b74ee113f54",
+      "train_correct": 7413,
+      "validation_correct": 1793
+    },
+    {
+      "attempt_id": "calibration_Movies_P0_seed112_cfg03",
+      "prediction_sha256": "00300a0e952b4d55e16220e4dead2d8ff03d610afc5b3a8360cddb0e7ba3e841",
+      "train_correct": 7017,
+      "validation_correct": 1787
+    },
+    {
+      "attempt_id": "calibration_Movies_P0_seed112_cfg04",
+      "prediction_sha256": "9889721237d48bcdcd822a468b2ced6465a7d97a8140a1c99639bb29974e768b",
+      "train_correct": 7018,
+      "validation_correct": 1788
+    },
+    {
+      "attempt_id": "calibration_Movies_P0_seed112_cfg05",
+      "prediction_sha256": "31fedbbecb5cba153ef3384d73b2f4b3218e3bb11941516fdc2e101a2bfc30db",
+      "train_correct": 7018,
+      "validation_correct": 1787
+    },
+    {
+      "attempt_id": "calibration_Movies_P0_seed112_cfg06",
+      "prediction_sha256": "55c306d3e7239b22d0925babc9efbab18c15355019ff5b0729b37b6705fd5207",
+      "train_correct": 7437,
+      "validation_correct": 1775
+    },
+    {
+      "attempt_id": "calibration_Movies_P0_seed112_cfg07",
+      "prediction_sha256": "804e6b8a91556dec3ed76fd6bd93a65192fb7d896f19e8abc98cf955822fba56",
+      "train_correct": 7438,
+      "validation_correct": 1776
+    },
+    {
+      "attempt_id": "calibration_Movies_P0_seed112_cfg08",
+      "prediction_sha256": "660fbe30809bc3cb6d69e2d55a4620aace62b25c8488cb97164e0fa57afd2d96",
+      "train_correct": 7438,
+      "validation_correct": 1777
+    },
+    {
+      "attempt_id": "calibration_Movies_P1_seed112_cfg00",
+      "prediction_sha256": "f26f6645ed0e1ef6af80fa8a384bc6b87f5577432022ea521d937d84a04448a9",
+      "train_correct": 7088,
+      "validation_correct": 1796
+    },
+    {
+      "attempt_id": "calibration_Movies_P1_seed112_cfg01",
+      "prediction_sha256": "c94f0476c38f8066d2c0b0af464228f22c406f7f52cc819d64087c76049abb53",
+      "train_correct": 7092,
+      "validation_correct": 1796
+    },
+    {
+      "attempt_id": "calibration_Movies_P1_seed112_cfg02",
+      "prediction_sha256": "9e594269ffcb28c2fd7a4ca447a4303bf118f9bf521f9fee9393cc26e481a89b",
+      "train_correct": 7089,
+      "validation_correct": 1796
+    },
+    {
+      "attempt_id": "calibration_Movies_P1_seed112_cfg03",
+      "prediction_sha256": "6b58d626df85d7222f0f329b1fda4f311ca12561c935f6a9c6fbb24ef4d433a9",
+      "train_correct": 8690,
+      "validation_correct": 1779
+    },
+    {
+      "attempt_id": "calibration_Movies_P1_seed112_cfg04",
+      "prediction_sha256": "be6d1e6cc0261498ea918ccbb76c3e186f8a3c107b024cbf865b51ebf3c7359c",
+      "train_correct": 8683,
+      "validation_correct": 1779
+    },
+    {
+      "attempt_id": "calibration_Movies_P1_seed112_cfg05",
+      "prediction_sha256": "52aa0d966ace74050d935f0c78aefe4a7745af849f419c7717ad6efff8aa7689",
+      "train_correct": 8680,
+      "validation_correct": 1779
+    },
+    {
+      "attempt_id": "calibration_Movies_P1_seed112_cfg06",
+      "prediction_sha256": "101a91e3febd4ee0127856ed8e75e47f65793a858192e4d284c621d754f7d47d",
+      "train_correct": 7408,
+      "validation_correct": 1769
+    },
+    {
+      "attempt_id": "calibration_Movies_P1_seed112_cfg07",
+      "prediction_sha256": "398efeb6f317fa55c10d1a7c9a5b88a5408ba7c6c5be822f46ed0b31a4de0cd0",
+      "train_correct": 7409,
+      "validation_correct": 1769
+    },
+    {
+      "attempt_id": "calibration_Movies_P1_seed112_cfg08",
+      "prediction_sha256": "4813632de0d8eea67dc4243abdeb915d454a384182376201ce1832ff56cbfbaf",
+      "train_correct": 7415,
+      "validation_correct": 1772
+    },
+    {
+      "attempt_id": "calibration_Grocery_A0_seed112_cfg00",
+      "prediction_sha256": "e7a0280bf434fdf8249f365376024e016fa88363769c6ead5564cb3e1f1e4d4f",
+      "train_correct": 10200,
+      "validation_correct": 2753
+    },
+    {
+      "attempt_id": "calibration_Grocery_A0_seed112_cfg01",
+      "prediction_sha256": "7cf0407f3ce5163f4d188e70d53b189311fb1b21b16c3ff6ef38b0c2a4ca32f0",
+      "train_correct": 10199,
+      "validation_correct": 2751
+    },
+    {
+      "attempt_id": "calibration_Grocery_A0_seed112_cfg02",
+      "prediction_sha256": "da5ac6b99474d7601c5ac7393aa502d083ea3570b2a50a9755de2b2d14b2691e",
+      "train_correct": 9459,
+      "validation_correct": 2754
+    },
+    {
+      "attempt_id": "calibration_Grocery_A0_seed112_cfg03",
+      "prediction_sha256": "7be66e51406fa5336e9da59eea58b4e141cc6ada825bf2775232a446ce6e69e2",
+      "train_correct": 10244,
+      "validation_correct": 2780
+    },
+    {
+      "attempt_id": "calibration_Grocery_A0_seed112_cfg04",
+      "prediction_sha256": "e2a832e7219ed1d66e92c2f0cfff177d474fd127847ceb6b7f148198074fd60e",
+      "train_correct": 10242,
+      "validation_correct": 2787
+    },
+    {
+      "attempt_id": "calibration_Grocery_A0_seed112_cfg05",
+      "prediction_sha256": "421d84b3f85ecc00d38e059e2f01e49e3625d6416848b92842f78f42f2b2f179",
+      "train_correct": 10243,
+      "validation_correct": 2787
+    },
+    {
+      "attempt_id": "calibration_Grocery_A0_seed112_cfg06",
+      "prediction_sha256": "fee2f9781bf0ae9a6878308e9f7d201217103a838a0470fb20b2dd4af042d56a",
+      "train_correct": 10242,
+      "validation_correct": 2778
+    },
+    {
+      "attempt_id": "calibration_Grocery_A0_seed112_cfg07",
+      "prediction_sha256": "fd6f4837dd24e516959feffb6d801f7caedda6d5305d1356c5a096dfcc242777",
+      "train_correct": 10243,
+      "validation_correct": 2775
+    },
+    {
+      "attempt_id": "calibration_Grocery_A0_seed112_cfg08",
+      "prediction_sha256": "adcdf5148a62a5c4b2513454c7fe5009539c05e267a8880c57222d0e5f3b0140",
+      "train_correct": 10244,
+      "validation_correct": 2783
+    },
+    {
+      "attempt_id": "calibration_Grocery_N0_seed112_cfg00",
+      "prediction_sha256": "55fb0eb3ef968e0e8b47c1132eb8e1fdb575036555171c738f05276f99cbb0b5",
+      "train_correct": 10243,
+      "validation_correct": 2781
+    },
+    {
+      "attempt_id": "calibration_Grocery_N0_seed112_cfg01",
+      "prediction_sha256": "55fb0eb3ef968e0e8b47c1132eb8e1fdb575036555171c738f05276f99cbb0b5",
+      "train_correct": 10243,
+      "validation_correct": 2781
+    },
+    {
+      "attempt_id": "calibration_Grocery_N0_seed112_cfg02",
+      "prediction_sha256": "55fb0eb3ef968e0e8b47c1132eb8e1fdb575036555171c738f05276f99cbb0b5",
+      "train_correct": 10243,
+      "validation_correct": 2781
+    },
+    {
+      "attempt_id": "calibration_Grocery_N0_seed112_cfg03",
+      "prediction_sha256": "18a9ed62444214ea345a5f1b0627352deebf388332e1989b17a97267a74cef93",
+      "train_correct": 10242,
+      "validation_correct": 2784
+    },
+    {
+      "attempt_id": "calibration_Grocery_N0_seed112_cfg04",
+      "prediction_sha256": "18a9ed62444214ea345a5f1b0627352deebf388332e1989b17a97267a74cef93",
+      "train_correct": 10242,
+      "validation_correct": 2784
+    },
+    {
+      "attempt_id": "calibration_Grocery_N0_seed112_cfg05",
+      "prediction_sha256": "18a9ed62444214ea345a5f1b0627352deebf388332e1989b17a97267a74cef93",
+      "train_correct": 10242,
+      "validation_correct": 2784
+    },
+    {
+      "attempt_id": "calibration_Grocery_N0_seed112_cfg06",
+      "prediction_sha256": "7df9dde236476c5ed86bc2a197b6b02204fa4610aabfbc3f20f1609e9dfb935f",
+      "train_correct": 10242,
+      "validation_correct": 2784
+    },
+    {
+      "attempt_id": "calibration_Grocery_N0_seed112_cfg07",
+      "prediction_sha256": "7df9dde236476c5ed86bc2a197b6b02204fa4610aabfbc3f20f1609e9dfb935f",
+      "train_correct": 10242,
+      "validation_correct": 2784
+    },
+    {
+      "attempt_id": "calibration_Grocery_N0_seed112_cfg08",
+      "prediction_sha256": "aa4f92e78f117fa9015d64e7ee73ef36100b9eaaa31abd389105f8ab067b5fbd",
+      "train_correct": 10240,
+      "validation_correct": 2784
+    },
+    {
+      "attempt_id": "calibration_Grocery_M0_seed112_cfg00",
+      "prediction_sha256": "3f4f159e14ec16813f4dc47fce80301b2fead93e72d99ce16396c0b6152a4629",
+      "train_correct": 10031,
+      "validation_correct": 2745
+    },
+    {
+      "attempt_id": "calibration_Grocery_M0_seed112_cfg01",
+      "prediction_sha256": "6bd0d1873c1d07df86ee6345f399a34e8684fd6e14641adfeeb8e49019c12dfd",
+      "train_correct": 10032,
+      "validation_correct": 2746
+    },
+    {
+      "attempt_id": "calibration_Grocery_M0_seed112_cfg02",
+      "prediction_sha256": "29805b15162257f441a3649f677ece480d3bf102854c30be446f59125eb9ec3f",
+      "train_correct": 10033,
+      "validation_correct": 2746
+    },
+    {
+      "attempt_id": "calibration_Grocery_M0_seed112_cfg03",
+      "prediction_sha256": "015bd3da8ba147ea36ea9398d4a8257953b48ca763425e26cf7224cec845a719",
+      "train_correct": 10243,
+      "validation_correct": 2773
+    },
+    {
+      "attempt_id": "calibration_Grocery_M0_seed112_cfg04",
+      "prediction_sha256": "c8f0672d103955b8ff50076f0ce521af73e519243aa443eb8c89811c4ca9fd57",
+      "train_correct": 10243,
+      "validation_correct": 2777
+    },
+    {
+      "attempt_id": "calibration_Grocery_M0_seed112_cfg05",
+      "prediction_sha256": "7bc4bc202862f53db0db2894a67b31283cdd21b8a795ef00cc4a8c1ffecbf8f9",
+      "train_correct": 10243,
+      "validation_correct": 2771
+    },
+    {
+      "attempt_id": "calibration_Grocery_M0_seed112_cfg06",
+      "prediction_sha256": "b5eb970ca83d80e3730a2c530d5e09486c850b92c6f2ecca8f225f4ee8a1e8db",
+      "train_correct": 10242,
+      "validation_correct": 2786
+    },
+    {
+      "attempt_id": "calibration_Grocery_M0_seed112_cfg07",
+      "prediction_sha256": "dcae2942706581cebcd3d21646bce8833533e2360b1957eec8ff8fb73589202a",
+      "train_correct": 10239,
+      "validation_correct": 2776
+    },
+    {
+      "attempt_id": "calibration_Grocery_M0_seed112_cfg08",
+      "prediction_sha256": "1e3449401a699ab1c8fb0ff7ffe8ab6faa5ffc356a4f9eae3147f69baa368a4f",
+      "train_correct": 10242,
+      "validation_correct": 2782
+    },
+    {
+      "attempt_id": "calibration_Grocery_M1_seed112_cfg00",
+      "prediction_sha256": "e7abdeffe85dd0ea6f41732698c4f3fdc03b653e98c6d86ac6d15c53faf5dbc0",
+      "train_correct": 10244,
+      "validation_correct": 2796
+    },
+    {
+      "attempt_id": "calibration_Grocery_M1_seed112_cfg01",
+      "prediction_sha256": "eaca55e88b176265fc0ad8574001915f15d3868e0f542b4e24436d120afe1287",
+      "train_correct": 10243,
+      "validation_correct": 2799
+    },
+    {
+      "attempt_id": "calibration_Grocery_M1_seed112_cfg02",
+      "prediction_sha256": "b06c91468812b982c0a6dfe66c421e2f96e074ca814f4a0bd43253345f08732a",
+      "train_correct": 10243,
+      "validation_correct": 2798
+    },
+    {
+      "attempt_id": "calibration_Grocery_M1_seed112_cfg03",
+      "prediction_sha256": "bb96a8c1ee2c7991c24c001a1d5b800ffcc85e468a3664ce3ff921b839868749",
+      "train_correct": 10243,
+      "validation_correct": 2796
+    },
+    {
+      "attempt_id": "calibration_Grocery_M1_seed112_cfg04",
+      "prediction_sha256": "7fa8c128b4ca0019d007107e2fc151980504e1cb6b0371b73907e8367280b214",
+      "train_correct": 10244,
+      "validation_correct": 2800
+    },
+    {
+      "attempt_id": "calibration_Grocery_M1_seed112_cfg05",
+      "prediction_sha256": "aa7f7f616f4e74ec375f3ab1ac8154b6589a806c17db5eb0f867090baaa98bb7",
+      "train_correct": 10244,
+      "validation_correct": 2807
+    },
+    {
+      "attempt_id": "calibration_Grocery_M1_seed112_cfg06",
+      "prediction_sha256": "1ab315f9569464fcdda07804a584e1d4315945cb5f55a4e1707687e95242cf27",
+      "train_correct": 10244,
+      "validation_correct": 2805
+    },
+    {
+      "attempt_id": "calibration_Grocery_M1_seed112_cfg07",
+      "prediction_sha256": "4c2c2f713da07e2ca4621939fca0c8b75e964c77f69f2eff2c9d453ae81b10ae",
+      "train_correct": 10241,
+      "validation_correct": 2801
+    },
+    {
+      "attempt_id": "calibration_Grocery_M1_seed112_cfg08",
+      "prediction_sha256": "6369c0c3104e9b7e16dd090dda22ee4f6fad257e3108ddcb20a479b7aa84f7ed",
+      "train_correct": 10243,
+      "validation_correct": 2805
+    },
+    {
+      "attempt_id": "calibration_Grocery_P0_seed112_cfg00",
+      "prediction_sha256": "3678ab05c4579d7291e094981be45e975f83dbcc3038157308f369a1385c3bed",
+      "train_correct": 10243,
+      "validation_correct": 2759
+    },
+    {
+      "attempt_id": "calibration_Grocery_P0_seed112_cfg01",
+      "prediction_sha256": "3a5da0fd9b230a2aaa05b0705d357815e61c7e609ec28085c7917df4fe3c6688",
+      "train_correct": 10024,
+      "validation_correct": 2743
+    },
+    {
+      "attempt_id": "calibration_Grocery_P0_seed112_cfg02",
+      "prediction_sha256": "7a5ce7e34f30a82b3f13690b1dd15ec893fd4b7c0234bf1e63818c11e4ce2cdb",
+      "train_correct": 10243,
+      "validation_correct": 2761
+    },
+    {
+      "attempt_id": "calibration_Grocery_P0_seed112_cfg03",
+      "prediction_sha256": "ed460a752162194c2115baf3405e0543d1c8ca7f7ac738d3c091edc8e1ebd82c",
+      "train_correct": 10241,
+      "validation_correct": 2771
+    },
+    {
+      "attempt_id": "calibration_Grocery_P0_seed112_cfg04",
+      "prediction_sha256": "1f9c6cdcd7af765e219b36c466aee22223314a8bf2572f5e028cdb024b4f210a",
+      "train_correct": 10244,
+      "validation_correct": 2777
+    },
+    {
+      "attempt_id": "calibration_Grocery_P0_seed112_cfg05",
+      "prediction_sha256": "ffb1d71e7693cc9ae11142c3014b5df9f849264d8b0eb030a92b33ae1e5733d3",
+      "train_correct": 10240,
+      "validation_correct": 2768
+    },
+    {
+      "attempt_id": "calibration_Grocery_P0_seed112_cfg06",
+      "prediction_sha256": "de2bd9a916f2c105f2aecd441c377ee205594a150771b0281f658b52cf491834",
+      "train_correct": 10242,
+      "validation_correct": 2781
+    },
+    {
+      "attempt_id": "calibration_Grocery_P0_seed112_cfg07",
+      "prediction_sha256": "c39b7bfb430e78816f21059a41d7fbc0da6ed8ecaedd3accc4b2db5ebd30fe4d",
+      "train_correct": 10242,
+      "validation_correct": 2783
+    },
+    {
+      "attempt_id": "calibration_Grocery_P0_seed112_cfg08",
+      "prediction_sha256": "61c1ebc224fc7f07ebb8f9169054a113a75322856b5fc9320a50fbc89ac21d77",
+      "train_correct": 10243,
+      "validation_correct": 2786
+    },
+    {
+      "attempt_id": "calibration_Grocery_P1_seed112_cfg00",
+      "prediction_sha256": "c4619eb7f5bef8f54fc9820dd4e629aa7e7db2e425490ff0ec436eaf39910770",
+      "train_correct": 10243,
+      "validation_correct": 2795
+    },
+    {
+      "attempt_id": "calibration_Grocery_P1_seed112_cfg01",
+      "prediction_sha256": "9fcf64ca457b75f4a1607265c0dc1669102a2a1f11b2b8c012b9659cc6addd6d",
+      "train_correct": 10243,
+      "validation_correct": 2802
+    },
+    {
+      "attempt_id": "calibration_Grocery_P1_seed112_cfg02",
+      "prediction_sha256": "bac8f62c83d021d648b2cdb3a72ca5d6f576c8feaeea2894f39800a9dc98bc71",
+      "train_correct": 10244,
+      "validation_correct": 2796
+    },
+    {
+      "attempt_id": "calibration_Grocery_P1_seed112_cfg03",
+      "prediction_sha256": "ec545b31912f9c324b96d0f9505b8dd7bfbfebe980e2beae5b401f3d12c07141",
+      "train_correct": 10243,
+      "validation_correct": 2802
+    },
+    {
+      "attempt_id": "calibration_Grocery_P1_seed112_cfg04",
+      "prediction_sha256": "b1f5544f05b84c84e1b6c9239af359263a9342d0f970d41ba57c048c79a9e860",
+      "train_correct": 10244,
+      "validation_correct": 2811
+    },
+    {
+      "attempt_id": "calibration_Grocery_P1_seed112_cfg05",
+      "prediction_sha256": "d775b6f128eadea5494bd2bf5739ea353b188aa2cb82f023a93422bc165b5ce1",
+      "train_correct": 10244,
+      "validation_correct": 2808
+    },
+    {
+      "attempt_id": "calibration_Grocery_P1_seed112_cfg06",
+      "prediction_sha256": "ccb41f956b20332f1bace2e789110e026f22217aa2f3d62eabdb57c7292283df",
+      "train_correct": 10243,
+      "validation_correct": 2804
+    },
+    {
+      "attempt_id": "calibration_Grocery_P1_seed112_cfg07",
+      "prediction_sha256": "56e36bde657ce4cd9e9f0485425f3d295436be98aeabb1421faa19848a932e33",
+      "train_correct": 10244,
+      "validation_correct": 2803
+    },
+    {
+      "attempt_id": "calibration_Grocery_P1_seed112_cfg08",
+      "prediction_sha256": "d01efb86b3d9d15dbd7efa2e16f01c6837370bb8637217072058aa0a85af1b5c",
+      "train_correct": 10244,
+      "validation_correct": 2803
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_A0_seed112_cfg00",
+      "prediction_sha256": "e2fac917d7973b7845848267710f81552933409336593738bbb472482723ddee",
+      "train_correct": 9533,
+      "validation_correct": 3053
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_A0_seed112_cfg01",
+      "prediction_sha256": "e2fac917d7973b7845848267710f81552933409336593738bbb472482723ddee",
+      "train_correct": 9533,
+      "validation_correct": 3053
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_A0_seed112_cfg02",
+      "prediction_sha256": "e2fac917d7973b7845848267710f81552933409336593738bbb472482723ddee",
+      "train_correct": 9533,
+      "validation_correct": 3053
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_A0_seed112_cfg03",
+      "prediction_sha256": "ee932e5617ead88b1da66b417afcf0d760981c99fc6cf9a33d337ebf7ae1d916",
+      "train_correct": 9532,
+      "validation_correct": 3058
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_A0_seed112_cfg04",
+      "prediction_sha256": "da7bbe6f7899215025dde3ef2d033612ddb76b379c973bcb776dce16163a7bb6",
+      "train_correct": 9533,
+      "validation_correct": 3056
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_A0_seed112_cfg05",
+      "prediction_sha256": "11f92aa53946e12a43ed72b2274b26cf09dd36b661b506236744a284e687c71c",
+      "train_correct": 9533,
+      "validation_correct": 3056
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_A0_seed112_cfg06",
+      "prediction_sha256": "2292dc01c960700253a79893426c0f08b460e0f1d53ec5808a3495cd8d25e987",
+      "train_correct": 9533,
+      "validation_correct": 3065
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_A0_seed112_cfg07",
+      "prediction_sha256": "427d42c9bc8baa1ef798b761838a8e9e97c4e3f25b39de74c5d41655da8fe26e",
+      "train_correct": 9533,
+      "validation_correct": 3063
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_A0_seed112_cfg08",
+      "prediction_sha256": "ada97e267ab62110b670104f2d95ed38093c9d042be727bc656d3538f59e92a0",
+      "train_correct": 9533,
+      "validation_correct": 3061
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_N0_seed112_cfg00",
+      "prediction_sha256": "fd30f6db9a0e32651cc77db9b448863eaf94eb26d71f3cc697e21d6fd1d156dd",
+      "train_correct": 9533,
+      "validation_correct": 3046
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_N0_seed112_cfg01",
+      "prediction_sha256": "fd30f6db9a0e32651cc77db9b448863eaf94eb26d71f3cc697e21d6fd1d156dd",
+      "train_correct": 9533,
+      "validation_correct": 3046
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_N0_seed112_cfg02",
+      "prediction_sha256": "fd30f6db9a0e32651cc77db9b448863eaf94eb26d71f3cc697e21d6fd1d156dd",
+      "train_correct": 9533,
+      "validation_correct": 3046
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_N0_seed112_cfg03",
+      "prediction_sha256": "b0a7883168501ac89380bf8acd64528cbcca60b6ce0468aa76ecbf837109af18",
+      "train_correct": 9533,
+      "validation_correct": 3049
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_N0_seed112_cfg04",
+      "prediction_sha256": "b0a7883168501ac89380bf8acd64528cbcca60b6ce0468aa76ecbf837109af18",
+      "train_correct": 9533,
+      "validation_correct": 3049
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_N0_seed112_cfg05",
+      "prediction_sha256": "e5c26b76ea486131342eaf01f4a615ec80971e37dc455729e65658f7346710d9",
+      "train_correct": 9533,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_N0_seed112_cfg06",
+      "prediction_sha256": "30af777113ef7d6603e1a70f08fe275a2bf659b9e9e3accff5f116243bf4bfcf",
+      "train_correct": 9533,
+      "validation_correct": 3040
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_N0_seed112_cfg07",
+      "prediction_sha256": "30af777113ef7d6603e1a70f08fe275a2bf659b9e9e3accff5f116243bf4bfcf",
+      "train_correct": 9533,
+      "validation_correct": 3040
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_N0_seed112_cfg08",
+      "prediction_sha256": "23144f9302d49847e14c37806e4ba716088a47c5b543258adb55b0390589bc48",
+      "train_correct": 9533,
+      "validation_correct": 3045
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M0_seed112_cfg00",
+      "prediction_sha256": "3f38e3828cebca49afb49ca2891a6d32440c864394161a824badc10cfd6ce41b",
+      "train_correct": 9533,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M0_seed112_cfg01",
+      "prediction_sha256": "6707fff9dbc8d1b11cd2ceb378a56cc6cdf788adb8f84e16f92779a2d6104c2b",
+      "train_correct": 9533,
+      "validation_correct": 3043
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M0_seed112_cfg02",
+      "prediction_sha256": "b20a2071a6a4f24b85c34fdd1bbff5dcddd958ac1ed376b1c74bd1d67242cc86",
+      "train_correct": 9533,
+      "validation_correct": 3043
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M0_seed112_cfg03",
+      "prediction_sha256": "f86c03311e84bf0926eb0f8cebcae883cf6ee9f161c06b2c134f8798cd6842db",
+      "train_correct": 9532,
+      "validation_correct": 3043
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M0_seed112_cfg04",
+      "prediction_sha256": "ce897b3a34f83765e453d44ccd80d8245651793a7f149989511f00ae4044f112",
+      "train_correct": 9532,
+      "validation_correct": 3042
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M0_seed112_cfg05",
+      "prediction_sha256": "ce897b3a34f83765e453d44ccd80d8245651793a7f149989511f00ae4044f112",
+      "train_correct": 9532,
+      "validation_correct": 3042
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M0_seed112_cfg06",
+      "prediction_sha256": "81e96a10e29903ab13a4aaa55407f7c62f20147564989ce129e6462ea32a6774",
+      "train_correct": 9533,
+      "validation_correct": 3043
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M0_seed112_cfg07",
+      "prediction_sha256": "461096ddf1bf7d36bbd1a1e271bf24145644121b3051b2aa4d0485adc53b4eae",
+      "train_correct": 9533,
+      "validation_correct": 3039
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M0_seed112_cfg08",
+      "prediction_sha256": "128e22c21951aef46e2369cb9a58f75192e0213e95a0120a48d8acd98b9c7ffd",
+      "train_correct": 9533,
+      "validation_correct": 3040
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M1_seed112_cfg00",
+      "prediction_sha256": "25f55e8c8fd7662412d061dee44aa7e10dd6ca9556aa7c9eac9e3803ce701fea",
+      "train_correct": 9532,
+      "validation_correct": 3043
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M1_seed112_cfg01",
+      "prediction_sha256": "25f55e8c8fd7662412d061dee44aa7e10dd6ca9556aa7c9eac9e3803ce701fea",
+      "train_correct": 9532,
+      "validation_correct": 3043
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M1_seed112_cfg02",
+      "prediction_sha256": "25f55e8c8fd7662412d061dee44aa7e10dd6ca9556aa7c9eac9e3803ce701fea",
+      "train_correct": 9532,
+      "validation_correct": 3043
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M1_seed112_cfg03",
+      "prediction_sha256": "3281ca0ce46d2e74669c5e1f2789e0236fdd2a91dda2a52d648fe565c4ea40da",
+      "train_correct": 9533,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M1_seed112_cfg04",
+      "prediction_sha256": "6edbe2dcf7149f55ae8ab942767c4bfab803a20e2539117e3598732f26a88671",
+      "train_correct": 9533,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M1_seed112_cfg05",
+      "prediction_sha256": "49b55892c11adef56cad4545b658089e4bf4ca0009d0ba5c75ee6c274c607151",
+      "train_correct": 9533,
+      "validation_correct": 3043
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M1_seed112_cfg06",
+      "prediction_sha256": "555784d5a6c3878764e20ede1456c05ee4510180704777efa8674e54469660af",
+      "train_correct": 9533,
+      "validation_correct": 3041
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M1_seed112_cfg07",
+      "prediction_sha256": "0c692f4259c3ad930f0485b2226b9533176cc508529b3cd4ad0494dddde34158",
+      "train_correct": 9533,
+      "validation_correct": 3040
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_M1_seed112_cfg08",
+      "prediction_sha256": "41a801393c2d38264da4073816de6567fe7497dc30dda370a4c7c02182a58a73",
+      "train_correct": 9533,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P0_seed112_cfg00",
+      "prediction_sha256": "06cf18e825f17d3fae138c24917275b0b27bda1184927bb521ee43677a3be644",
+      "train_correct": 9532,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P0_seed112_cfg01",
+      "prediction_sha256": "212525f9c58df770015f34e91eb29ad60a8607ab67656c77f1f2009f44845aa0",
+      "train_correct": 9533,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P0_seed112_cfg02",
+      "prediction_sha256": "eb6b8d2f40c4c142690ec0a813a59204610a3a59204b774eef8301a92abc600f",
+      "train_correct": 9533,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P0_seed112_cfg03",
+      "prediction_sha256": "27d5fa2b8ade02e800ed54fce3bfd84a1b406aa04159bf773be6466643cae90b",
+      "train_correct": 9532,
+      "validation_correct": 3041
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P0_seed112_cfg04",
+      "prediction_sha256": "aa18cc6bde9ca56605edb867f3376cc3ef8e86926e50bffbd7594300cd7c85a5",
+      "train_correct": 9532,
+      "validation_correct": 3043
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P0_seed112_cfg05",
+      "prediction_sha256": "a122d4da70a8baca9e6cc92023b5200f837cbc446fadfd8ab1dce1896b68bdcd",
+      "train_correct": 9532,
+      "validation_correct": 3042
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P0_seed112_cfg06",
+      "prediction_sha256": "b44f14f347d64a517e5ca4b92157f8d86671cd56de506d4e919aa4314e88c0d6",
+      "train_correct": 9533,
+      "validation_correct": 3039
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P0_seed112_cfg07",
+      "prediction_sha256": "45f25677fdd49f84fdafef447e4ec7b8e28a0e7b449c7cd524e5cf5db7851255",
+      "train_correct": 9533,
+      "validation_correct": 3040
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P0_seed112_cfg08",
+      "prediction_sha256": "01c30501e75a7b4ce4b543f288f5b85a1be7413eafe7577d7965665ad7addb6f",
+      "train_correct": 9533,
+      "validation_correct": 3039
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P1_seed112_cfg00",
+      "prediction_sha256": "62a2cb48f6bb31692883cb4d9e08d19c76d8bb4a39b13a044c789d769147d7f8",
+      "train_correct": 9533,
+      "validation_correct": 3045
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P1_seed112_cfg01",
+      "prediction_sha256": "cc656572080f63775144647f1d0161d70e53d701955883e687e2ae8a896f132a",
+      "train_correct": 9533,
+      "validation_correct": 3045
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P1_seed112_cfg02",
+      "prediction_sha256": "213da7c0673e60dfdc77e347a50475b3a61083c3ffdc811c0eb873470d790796",
+      "train_correct": 9533,
+      "validation_correct": 3046
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P1_seed112_cfg03",
+      "prediction_sha256": "6fe64c1d9848895b83334ed265d4f49533db4c97f079f38466c3aafb73c96ee8",
+      "train_correct": 9533,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P1_seed112_cfg04",
+      "prediction_sha256": "0ea86cbcdbc7969485acc4a6a60fd1db522e25b97c9656a2bba4ae1d4147357a",
+      "train_correct": 9533,
+      "validation_correct": 3045
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P1_seed112_cfg05",
+      "prediction_sha256": "1b42c3efe40ef8c9a133d9bdab1d2667c634721c053553dc2219c333a5f603a7",
+      "train_correct": 9533,
+      "validation_correct": 3044
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P1_seed112_cfg06",
+      "prediction_sha256": "2f10f34eaade759668f6500eaceb6c424cd8cb3173a81ea6d1bf7543d9b84f56",
+      "train_correct": 9533,
+      "validation_correct": 3042
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P1_seed112_cfg07",
+      "prediction_sha256": "53507eccc02d3e0ba7863375d8351917fd011b09f330b753cfa160c092fa285d",
+      "train_correct": 9533,
+      "validation_correct": 3040
+    },
+    {
+      "attempt_id": "calibration_Reddit_S_P1_seed112_cfg08",
+      "prediction_sha256": "c56f2432cc956528d2b36c4fa807243dba25a6894f61f3bd4a86180901dbbe3b",
+      "train_correct": 9533,
+      "validation_correct": 3042
+    }
+  ],
+  "self_audit_limitation": "The experiment implementer wrote this audit; it is not independent peer review.",
+  "status": "passed",
+  "study": "mvcge_coordinated_nc_v2",
+  "success_cells": 162,
+  "test_evaluations": 0
+}

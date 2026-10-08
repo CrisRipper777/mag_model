@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-10-08T07:17:45.318467+00:00",
+  "created_utc": "2026-10-08T11:20:22.728209+00:00",
   "functional_suite": {
     "command": "CUDA_VISIBLE_DEVICES=GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce /home/m3/miniconda3/envs/yhf_env/bin/python -m pytest -q tests/test_mvcge_coordinated_nc_v2.py",
     "covers": [
@@ -16,11 +16,14 @@
       "diagnostic RNG/.grad/mode preservation and shared-expert message-exit VJP reconstruction",
       "checkpoint replay and exact RNG/optimizer resume state",
       "historical A0 B1/task losses",
-      "synthetic CUDA forward/backward and deterministic clean evaluation"
+      "synthetic CUDA forward/backward and deterministic clean evaluation",
+      "None-gradient parameter slots are zero-filled and aligned for router gradient comparisons",
+      "retry IDs skip the base attempt and increment numeric retry suffixes only",
+      "confirmation audit expected slots use the immutable selected config indices"
     ],
     "exit_code": 0,
     "failed": 0,
-    "passed": 16,
+    "passed": 19,
     "skipped": 0,
     "warning": "One upstream PyG distributed deprecation warning; no test failures."
   },
