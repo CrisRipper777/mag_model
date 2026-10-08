@@ -64,7 +64,7 @@ def build_report() -> None:
         "total_cell_wall_seconds", "peak_allocated_gib", "peak_reserved_gib", "selected_lr_boundary", "selected_weight_decay_boundary",
     ]
     with summary_path.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=columns)
+        writer = csv.DictWriter(stream, fieldnames=columns, lineterminator="\n")
         writer.writeheader()
         for row in sorted(results, key=lambda item: (item["phase"], DATASETS.index(item["dataset"]), MODELS.index(item["model"]), int(item["training_seed"]), int(item.get("config_index", -1)))):
             selected = selection[f"{row['dataset']}/{row['model']}"] if row["phase"] == "confirmation" else None
@@ -164,8 +164,8 @@ def build_report() -> None:
         "primary_confirmation": primary_rows, "paired_differences": paired, "descriptive_auxiliary_by_PC_interaction": interactions,
         "resource_summary_confirmation": resource, "all_classes_macro_f1": True, "macro_f1_zero_division": 0,
         "test_evaluations": 0, "real_lp_runs": 0, "additional_datasets": 0,
-        "source_commit": protocol_lock["training_source_commit"],
-        "source_commits_present_in_audited_results": sorted({row["source_commit"] for row in confirmation}),
+        "final_protocol_source_commit": protocol_lock["training_source_commit"],
+        "training_source_commits_present_in_audited_results": sorted({row["source_commit"] for row in confirmation}),
         "implementation_versions": audit.get("implementation_versions", []),
         "protocol_amendment": protocol_lock.get("amendment"),
     }
@@ -228,8 +228,8 @@ def build_report() -> None:
     confirmation_audit_records = {row["attempt_id"]: row for row in audit["results"]}
     manifest = {
         "study": "mvcge_coordinated_nc_v2", "created_utc": datetime.now(timezone.utc).isoformat(),
-        "training_source_commit": summary["source_commit"], "protocol_lock_sha256": hashlib.sha256((ROOT / "docs" / "mvcge_coordinated_nc_v2" / "protocol_lock.json").read_bytes()).hexdigest(),
-        "source_commits_present_in_audited_results": summary["source_commits_present_in_audited_results"],
+        "final_protocol_source_commit": summary["final_protocol_source_commit"], "protocol_lock_sha256": hashlib.sha256((ROOT / "docs" / "mvcge_coordinated_nc_v2" / "protocol_lock.json").read_bytes()).hexdigest(),
+        "training_source_commits_present_in_audited_results": summary["training_source_commits_present_in_audited_results"],
         "implementation_versions": audit.get("implementation_versions", []),
         "calibration_audit_sha256": hashlib.sha256((REPORT / "calibration_audit.json").read_bytes()).hexdigest(),
         "confirmation_audit_sha256": hashlib.sha256((REPORT / "audit_result.json").read_bytes()).hexdigest(),

@@ -57,3 +57,7 @@ The retry ID parser now considers only numeric suffixes after `_retry`, with a r
 The retry-corrected training lock is preserved as `protocol_lock_v3.json` (SHA-256 `4a710959c2a5dad34ab102d4f9a10ac046f6f6ab2818a7d7bdc230bb0f1694a9`). All 54 final confirmation records exist: 18 A0/N0 records under v1 and 36 routed-model retry records under v3.
 
 The first confirmation-audit invocation after those runs constructed expected attempt IDs without the selected `config_index`, so it read the preinitialized `not_started` placeholders and wrote an incomplete audit status. It did not modify any run or change a model result. The audit now derives all 54 expected IDs from the immutable selection lock, permits only the recorded v1 A0/N0 and v3 routed-model lineages, and checks each result/checkpoint against its matching source and protocol hashes. This audit-only correction requires no training reruns; rerun the independent confirmation audit under the final source lock.
+
+## Protocol amendment 5: concise report CSV formatting
+
+The final audit source lock is preserved as `protocol_lock_v4.json` (SHA-256 `cce1cf37fa03c1487edc2b3d8f7e479b57c870e003a4b67709a30b4df1fe8366`). The report writer now emits `summary.csv` with LF line endings so rows with non-applicable calibration boundary fields remain clean in Git diffs. This changes only report serialization; no training, audit result, metric, or source data changes. Regenerate report artifacts only and retain all trained outputs and passed audits unchanged.

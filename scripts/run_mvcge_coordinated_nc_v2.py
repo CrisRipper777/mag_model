@@ -394,7 +394,12 @@ def freeze_protocol() -> None:
     if previous_lock_path.is_file():
         previous_lock = json.loads(previous_lock_path.read_text(encoding="utf-8"))
         revision = int(previous_lock.get("amendment", {}).get("revision", 1)) + 1
-        if revision >= 4:
+        if revision >= 5:
+            change_scope = "summary CSV line-ending normalization only; no training, audit, metric, data, split, or selection changes"
+            lineage = {"protocol_lock_v1_A0_N0": 18, "protocol_lock_v3_routed_models": 36}
+            rerun_policy = "regenerate concise report artifacts only; retain all training and audit evidence unchanged"
+            superseded_audit = None
+        elif revision == 4:
             change_scope = "confirmation audit expected-slot resolution and historical source/protocol verification only; no training, model, data, split, or selection changes"
             lineage = {"protocol_lock_v1_A0_N0": 18, "protocol_lock_v3_routed_models": 36}
             rerun_policy = "do not rerun training; audit the completed confirmation attempts against their exact source and protocol lock versions"
