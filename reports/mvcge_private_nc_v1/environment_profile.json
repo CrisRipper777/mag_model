@@ -1,0 +1,76 @@
+{
+  "created_utc": "2026-10-08T01:51:25.627928+00:00",
+  "cuda_available": true,
+  "cuda_visible_devices": "0",
+  "data_protocol": "MAGB Movies/Grocery/Reddit-S NC; canonical split seed 42; feature and graph loaders unchanged",
+  "determinism": {
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "use_deterministic_algorithms": false
+  },
+  "dgl": "2.4.0+cu121",
+  "hydra_core": "1.3.2",
+  "logical_cuda_devices": [
+    "NVIDIA GeForce RTX 3090"
+  ],
+  "logical_to_physical_gpu_mapping": [
+    {
+      "logical_index": 0,
+      "physical_index": 0,
+      "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+    }
+  ],
+  "numpy": "2.4.3",
+  "physical_gpu_snapshot": [
+    {
+      "memory_total_mib": 24576,
+      "memory_used_mib": 92,
+      "name": "NVIDIA GeForce RTX 3090",
+      "physical_index": 0,
+      "utilization_percent": 0,
+      "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+    },
+    {
+      "memory_total_mib": 24576,
+      "memory_used_mib": 1227,
+      "name": "NVIDIA GeForce RTX 3090",
+      "physical_index": 1,
+      "utilization_percent": 54,
+      "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+    }
+  ],
+  "planned_training_device": "cuda:0 with CUDA_VISIBLE_DEVICES=0",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "recorded_branch": "codex/mag-mvcge-private-nc-v1",
+  "recorded_head": "0e79a5a81cbe414016d7782c3e6e046e1ec2b920",
+  "scikit_learn": "1.8.0",
+  "source_hashes_at_prepare": {
+    "configs/config.yaml": "1b06934c68b88e931909de4cb65b1fa51725df94ff6139d127a6ba85355fe399",
+    "configs/dataset/Grocery.yaml": "18969c97a0f06ab33fd3094624d524f03de48139405159bb06d19cf107105e56",
+    "configs/dataset/Movies.yaml": "81b803b0ed79ad86d483aee5dceadac149ca9ba2263e31160b22951a7812f5c8",
+    "configs/dataset/Reddit-S.yaml": "010129b2a4b7de2969286de9a74108a7cd08a481feaac067dc5cae62db36246a",
+    "configs/model/mag_collab_adapt.yaml": "5e4ef8260bf7ed5ed3aa7ccfc6adf84738030e7bf678e2bfbcd212b1d6ead7b8",
+    "configs/task/nc.yaml": "f959a73d5256d2e51b2ce3600c4f7252e7d79122c267aa70dc84abeddedb3852",
+    "scripts/run_mvcge_private_nc_v1.py": "128abdfc7098196cce9ed9b621984d14522a1eb166dc744ddcb5d9adcba224bc",
+    "src/data/__init__.py": "732a246f7862812c798d32cd42da38c23c8f72c41f7e6b5f2213fdb457aa285d",
+    "src/data/graph_utils.py": "8fa1c35c1897e25f2f30628ddc0312598fe9e581692a48cccb131a12a50f10df",
+    "src/data/loaders.py": "08fe47584069a8f690d87d20a2b892d008c43a1dad6bdb3d08bb2f7e22ddd173",
+    "src/data/splits.py": "b352a1c558752cc82075e7405723d42a408cb416386ad412669f0339aacd1d22",
+    "src/data/types.py": "531968f22725acc211d5906c66bf0189d35857cbbdb972d12ee4ebdd29d3d2f8",
+    "src/models/mag_collab_adapt.py": "298a59191cb044761941c348d4528ad06df0e208176fd3e449b06c1b9e26bf73",
+    "src/models/mag_collab_nc.py": "6dac70b8d843953797566ff37a10a0f701153e7d40f919c906d9c8806f7559a2",
+    "src/models/mvcge_private_nc_v1.py": "9228633d53135c01508a0babfd6a240a49f7f5bd1efb8705faad47ba03bf0560",
+    "src/models/predictor.py": "4d173246fb2418dd7728c9853283070d901b7e57fdd2cdcebaf05d0563f5b21b",
+    "src/tasks/collab_nc_pilot.py": "31d96b6419bcede97d6ad769669d0b6ff9c4bb34afe420ed4537a8a36a50c9b4",
+    "src/tasks/prior_context_pilot.py": "1add0aecb7934c9695bda2645c30979cc10840749d091a383fd6cac09996191e",
+    "tests/test_mvcge_private_nc_v1.py": "a5b3df7060dd50d9866aac6d31ca7550f2202b7acb8fa343917fa8848f370c31"
+  },
+  "tf32": {
+    "cudnn": true,
+    "matmul": false
+  },
+  "torch": "2.4.0+cu121",
+  "torch_cuda": "12.1",
+  "torch_geometric": "2.7.0"
+}

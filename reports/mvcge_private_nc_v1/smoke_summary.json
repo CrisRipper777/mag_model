@@ -1,0 +1,339 @@
+{
+  "runs": [
+    {
+      "dataset": "Movies",
+      "losses": [
+        {
+          "balance": 2.6975912987836637e-05,
+          "ce": 4.0440354347229,
+          "gradient_norm": 13.601517677307129,
+          "step": 1,
+          "total": 4.044035911560059
+        },
+        {
+          "balance": 0.0001986073184525594,
+          "ce": 3.204073667526245,
+          "gradient_norm": 13.884090423583984,
+          "step": 2,
+          "total": 3.204075574874878
+        },
+        {
+          "balance": 0.00044341757893562317,
+          "ce": 2.562822103500366,
+          "gradient_norm": 4.725775241851807,
+          "step": 3,
+          "total": 2.562826633453369
+        }
+      ],
+      "median_step_ms": 81.28648390993476,
+      "model": "G0",
+      "peak_allocated_bytes": 2225492992,
+      "peak_reserved_bytes": 2566914048,
+      "real_lp_runs": 0,
+      "seed": 88000,
+      "status": "success",
+      "test_task_head_calls": 0,
+      "train_only": true,
+      "updates": 3,
+      "validation_called": false
+    },
+    {
+      "dataset": "Movies",
+      "losses": [
+        {
+          "balance": 8.863794209901243e-05,
+          "ce": 3.743685007095337,
+          "gradient_norm": 13.333431243896484,
+          "step": 1,
+          "total": 3.7436859607696533
+        },
+        {
+          "balance": 0.0002891095355153084,
+          "ce": 3.720710039138794,
+          "gradient_norm": 16.543224334716797,
+          "step": 2,
+          "total": 3.720712900161743
+        },
+        {
+          "balance": 0.0007084679091349244,
+          "ce": 2.6456007957458496,
+          "gradient_norm": 3.39872407913208,
+          "step": 3,
+          "total": 2.6456079483032227
+        }
+      ],
+      "median_step_ms": 63.833585008978844,
+      "model": "G1",
+      "peak_allocated_bytes": 2314635776,
+      "peak_reserved_bytes": 2659188736,
+      "real_lp_runs": 0,
+      "seed": 88001,
+      "status": "success",
+      "test_task_head_calls": 0,
+      "train_only": true,
+      "updates": 3,
+      "validation_called": false
+    },
+    {
+      "dataset": "Movies",
+      "losses": [
+        {
+          "balance": 0.0,
+          "ce": 3.340453624725342,
+          "gradient_norm": 8.83285140991211,
+          "step": 1,
+          "total": 3.340453624725342
+        },
+        {
+          "balance": 0.0,
+          "ce": 3.7979702949523926,
+          "gradient_norm": 17.351558685302734,
+          "step": 2,
+          "total": 3.7979702949523926
+        },
+        {
+          "balance": 0.0,
+          "ce": 2.7585031986236572,
+          "gradient_norm": 6.29380464553833,
+          "step": 3,
+          "total": 2.7585031986236572
+        }
+      ],
+      "median_step_ms": 51.32095608860254,
+      "model": "U1",
+      "peak_allocated_bytes": 1764369408,
+      "peak_reserved_bytes": 2080374784,
+      "real_lp_runs": 0,
+      "seed": 88002,
+      "status": "success",
+      "test_task_head_calls": 0,
+      "train_only": true,
+      "updates": 3,
+      "validation_called": false
+    },
+    {
+      "dataset": "Grocery",
+      "losses": [
+        {
+          "balance": 0.00011562556028366089,
+          "ce": 3.684821128845215,
+          "gradient_norm": 8.049995422363281,
+          "step": 1,
+          "total": 3.6848223209381104
+        },
+        {
+          "balance": 8.121050632325932e-05,
+          "ce": 3.6652629375457764,
+          "gradient_norm": 15.623597145080566,
+          "step": 2,
+          "total": 3.6652636528015137
+        },
+        {
+          "balance": 8.781054930295795e-05,
+          "ce": 3.1339504718780518,
+          "gradient_norm": 6.5219340324401855,
+          "step": 3,
+          "total": 3.133951425552368
+        }
+      ],
+      "median_step_ms": 61.03010196238756,
+      "model": "G0",
+      "peak_allocated_bytes": 2301024768,
+      "peak_reserved_bytes": 2738880512,
+      "real_lp_runs": 0,
+      "seed": 88010,
+      "status": "success",
+      "test_task_head_calls": 0,
+      "train_only": true,
+      "updates": 3,
+      "validation_called": false
+    },
+    {
+      "dataset": "Grocery",
+      "losses": [
+        {
+          "balance": 6.15595854469575e-05,
+          "ce": 3.7653610706329346,
+          "gradient_norm": 7.658502578735352,
+          "step": 1,
+          "total": 3.765361785888672
+        },
+        {
+          "balance": 0.0003591432177927345,
+          "ce": 3.6244852542877197,
+          "gradient_norm": 13.604742050170898,
+          "step": 2,
+          "total": 3.6244888305664062
+        },
+        {
+          "balance": 0.0006989503744989634,
+          "ce": 3.2855074405670166,
+          "gradient_norm": 6.61026668548584,
+          "step": 3,
+          "total": 3.2855143547058105
+        }
+      ],
+      "median_step_ms": 64.40394092351198,
+      "model": "G1",
+      "peak_allocated_bytes": 2365655552,
+      "peak_reserved_bytes": 2715811840,
+      "real_lp_runs": 0,
+      "seed": 88011,
+      "status": "success",
+      "test_task_head_calls": 0,
+      "train_only": true,
+      "updates": 3,
+      "validation_called": false
+    },
+    {
+      "dataset": "Grocery",
+      "losses": [
+        {
+          "balance": 0.0,
+          "ce": 4.062272548675537,
+          "gradient_norm": 9.251907348632812,
+          "step": 1,
+          "total": 4.062272548675537
+        },
+        {
+          "balance": 0.0,
+          "ce": 3.1619374752044678,
+          "gradient_norm": 4.537534713745117,
+          "step": 2,
+          "total": 3.1619374752044678
+        },
+        {
+          "balance": 0.0,
+          "ce": 2.8875832557678223,
+          "gradient_norm": 3.2274856567382812,
+          "step": 3,
+          "total": 2.8875832557678223
+        }
+      ],
+      "median_step_ms": 51.08547816053033,
+      "model": "U1",
+      "peak_allocated_bytes": 1807908352,
+      "peak_reserved_bytes": 2105540608,
+      "real_lp_runs": 0,
+      "seed": 88012,
+      "status": "success",
+      "test_task_head_calls": 0,
+      "train_only": true,
+      "updates": 3,
+      "validation_called": false
+    },
+    {
+      "dataset": "Reddit-S",
+      "losses": [
+        {
+          "balance": 7.511609874200076e-05,
+          "ce": 3.7818381786346436,
+          "gradient_norm": 8.334458351135254,
+          "step": 1,
+          "total": 3.781838893890381
+        },
+        {
+          "balance": 0.00013731438957620412,
+          "ce": 2.9573042392730713,
+          "gradient_norm": 5.800849914550781,
+          "step": 2,
+          "total": 2.957305669784546
+        },
+        {
+          "balance": 0.00042919826228171587,
+          "ce": 2.536640167236328,
+          "gradient_norm": 4.661648273468018,
+          "step": 3,
+          "total": 2.536644458770752
+        }
+      ],
+      "median_step_ms": 63.168827909976244,
+      "model": "G0",
+      "peak_allocated_bytes": 2175567360,
+      "peak_reserved_bytes": 2566914048,
+      "real_lp_runs": 0,
+      "seed": 88020,
+      "status": "success",
+      "test_task_head_calls": 0,
+      "train_only": true,
+      "updates": 3,
+      "validation_called": false
+    },
+    {
+      "dataset": "Reddit-S",
+      "losses": [
+        {
+          "balance": 0.00014425425615627319,
+          "ce": 3.905144453048706,
+          "gradient_norm": 7.134350776672363,
+          "step": 1,
+          "total": 3.9051458835601807
+        },
+        {
+          "balance": 0.00042935743113048375,
+          "ce": 2.89107346534729,
+          "gradient_norm": 5.385944366455078,
+          "step": 2,
+          "total": 2.891077756881714
+        },
+        {
+          "balance": 0.0006132767302915454,
+          "ce": 2.40158748626709,
+          "gradient_norm": 3.9337570667266846,
+          "step": 3,
+          "total": 2.4015936851501465
+        }
+      ],
+      "median_step_ms": 64.48713410645723,
+      "model": "G1",
+      "peak_allocated_bytes": 2229865472,
+      "peak_reserved_bytes": 2623537152,
+      "real_lp_runs": 0,
+      "seed": 88021,
+      "status": "success",
+      "test_task_head_calls": 0,
+      "train_only": true,
+      "updates": 3,
+      "validation_called": false
+    },
+    {
+      "dataset": "Reddit-S",
+      "losses": [
+        {
+          "balance": 0.0,
+          "ce": 3.8823487758636475,
+          "gradient_norm": 7.657688617706299,
+          "step": 1,
+          "total": 3.8823487758636475
+        },
+        {
+          "balance": 0.0,
+          "ce": 2.9053847789764404,
+          "gradient_norm": 6.341315269470215,
+          "step": 2,
+          "total": 2.9053847789764404
+        },
+        {
+          "balance": 0.0,
+          "ce": 2.457291603088379,
+          "gradient_norm": 5.744193077087402,
+          "step": 3,
+          "total": 2.457291603088379
+        }
+      ],
+      "median_step_ms": 54.612761829048395,
+      "model": "U1",
+      "peak_allocated_bytes": 1701494272,
+      "peak_reserved_bytes": 2105540608,
+      "real_lp_runs": 0,
+      "seed": 88022,
+      "status": "success",
+      "test_task_head_calls": 0,
+      "train_only": true,
+      "updates": 3,
+      "validation_called": false
+    }
+  ],
+  "status": "success",
+  "study": "mvcge_private_nc_v1"
+}

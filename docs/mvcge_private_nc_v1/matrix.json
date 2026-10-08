@@ -1,0 +1,1394 @@
+{
+  "calibration_candidates": [
+    {
+      "config_index": 0,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Movies",
+      "historical_s0_selected_config": "in_grid",
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Movies",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": "in_grid",
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Grocery",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": "in_grid",
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "A0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "G0",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "G1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 0,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 1,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 2,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.01,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 3,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.0001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 4,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 5,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 6,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 7,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    },
+    {
+      "config_index": 8,
+      "dataset": "Reddit-S",
+      "historical_s0_selected_config": null,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "model": "U1",
+      "phase": "calibration",
+      "seed": 102
+    }
+  ],
+  "calibration_count": 108,
+  "calibration_seed": 102,
+  "candidate_config_order": "dataset, model, then LR major/WDecay minor, each ascending",
+  "confirmation_count": 36,
+  "confirmation_seeds": [
+    103,
+    104,
+    105
+  ],
+  "confirmation_slots": [
+    {
+      "dataset": "Movies",
+      "model": "A0",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Movies/A0"
+    },
+    {
+      "dataset": "Movies",
+      "model": "A0",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Movies/A0"
+    },
+    {
+      "dataset": "Movies",
+      "model": "A0",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Movies/A0"
+    },
+    {
+      "dataset": "Movies",
+      "model": "G0",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Movies/G0"
+    },
+    {
+      "dataset": "Movies",
+      "model": "G0",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Movies/G0"
+    },
+    {
+      "dataset": "Movies",
+      "model": "G0",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Movies/G0"
+    },
+    {
+      "dataset": "Movies",
+      "model": "G1",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Movies/G1"
+    },
+    {
+      "dataset": "Movies",
+      "model": "G1",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Movies/G1"
+    },
+    {
+      "dataset": "Movies",
+      "model": "G1",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Movies/G1"
+    },
+    {
+      "dataset": "Movies",
+      "model": "U1",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Movies/U1"
+    },
+    {
+      "dataset": "Movies",
+      "model": "U1",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Movies/U1"
+    },
+    {
+      "dataset": "Movies",
+      "model": "U1",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Movies/U1"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "A0",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Grocery/A0"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "A0",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Grocery/A0"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "A0",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Grocery/A0"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "G0",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Grocery/G0"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "G0",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Grocery/G0"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "G0",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Grocery/G0"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "G1",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Grocery/G1"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "G1",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Grocery/G1"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "G1",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Grocery/G1"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "U1",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Grocery/U1"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "U1",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Grocery/U1"
+    },
+    {
+      "dataset": "Grocery",
+      "model": "U1",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Grocery/U1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "A0",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Reddit-S/A0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "A0",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Reddit-S/A0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "A0",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Reddit-S/A0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "G0",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Reddit-S/G0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "G0",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Reddit-S/G0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "G0",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Reddit-S/G0"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "G1",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Reddit-S/G1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "G1",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Reddit-S/G1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "G1",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Reddit-S/G1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "U1",
+      "phase": "confirmation",
+      "seed": 103,
+      "selection_key": "Reddit-S/U1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "U1",
+      "phase": "confirmation",
+      "seed": 104,
+      "selection_key": "Reddit-S/U1"
+    },
+    {
+      "dataset": "Reddit-S",
+      "model": "U1",
+      "phase": "confirmation",
+      "seed": 105,
+      "selection_key": "Reddit-S/U1"
+    }
+  ],
+  "created_utc": "2026-10-08T01:51:24.279894+00:00",
+  "datasets": [
+    "Movies",
+    "Grocery",
+    "Reddit-S"
+  ],
+  "early_stop_patience_optimizer_updates": 150,
+  "historical_s0_configs": {
+    "Grocery": {
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001
+    },
+    "Movies": {
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001
+    },
+    "Reddit-S": {
+      "lr": 0.001,
+      "matrix_weight_decay": 0.001
+    }
+  },
+  "historical_s0_configs_all_in_current_grid": true,
+  "historical_s0_configs_cited_from": "reports/collab_adapt_nc_v2/s_selection_lock.json",
+  "historical_s0_selection_lock_sha256": "2f60d2cc3b3cfc6ad9b41a0d47eca96a7c28d783293b827185419f30eadd8f0d",
+  "lr_grid": [
+    0.0003,
+    0.001,
+    0.003
+  ],
+  "matrix_weight_decay_grid": [
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "max_updates": 800,
+  "min_updates": 200,
+  "models": [
+    "A0",
+    "G0",
+    "G1",
+    "U1"
+  ],
+  "selection_rule": "validation correct node count descending, fixed-C Macro-F1 descending, then lower config_index",
+  "split_seed": 42,
+  "study": "mvcge_private_nc_v1",
+  "validation_first_step": 21,
+  "validation_interval": 5
+}

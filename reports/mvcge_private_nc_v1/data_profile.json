@@ -1,0 +1,200 @@
+{
+  "Grocery": {
+    "availability": {
+      "counts": [
+        17074,
+        17074
+      ],
+      "doubly_missing_nodes": 0,
+      "source": "no missing-modality metadata in MAGData; canonical protocol all modalities present"
+    },
+    "canonical_loader_graph": {
+      "config_add_self_loops": false,
+      "config_make_undirected": true,
+      "duplicate_nonself_directed_rows": 0,
+      "edge_rows": 142262,
+      "reverse_edge_coverage": 1.0,
+      "self_loop_rows": 0,
+      "unique_nonself_directed_pairs": 142262,
+      "weights_exposed_by_MAGData": false
+    },
+    "feature_files": {
+      "graph": "/hdd1/DataInHere/YHF/data/Grocery/GroceryGraph.pt",
+      "image": "/hdd1/DataInHere/YHF/data/Grocery/ImageFeature/Grocery_openai_clip-vit-large-patch14.npy",
+      "split": "/hdd1/DataInHere/YHF/data/MAGB_split/Grocery_nc_seed42_train0.6_val0.2.pt",
+      "text": "/hdd1/DataInHere/YHF/data/Grocery/TextFeature/Grocery_roberta_base_256_mean.npy"
+    },
+    "feature_finiteness_and_zero_row_diagnostic": {
+      "image_all_finite": true,
+      "image_all_zero_rows_diagnostic_only": 0,
+      "text_all_finite": true,
+      "text_all_zero_rows_diagnostic_only": 0
+    },
+    "feature_preprocessing": {
+      "additional_normalization": "none",
+      "image": "Grocery_openai_clip-vit-large-patch14.npy",
+      "loader_cast": "float32",
+      "text": "Grocery_roberta_base_256_mean.npy"
+    },
+    "graph": {
+      "loader_uses_edge_weights": false,
+      "raw_directed_edge_rows": 85670,
+      "raw_duplicate_directed_rows": 0,
+      "raw_edata_keys": [],
+      "raw_nodes": 17074,
+      "raw_self_loop_rows": 1,
+      "raw_weight_fields": [],
+      "reverse_edge_coverage": 0.3394070267677307
+    },
+    "image_dim": 768,
+    "input_sha256": {
+      "graph": "af203035d655275a20da353f481e67f4b595eeb73ef1d397d0d9b603cefc70d7",
+      "image_features": "ac50f63312488f3e94271532e7fd863c27a332c6ca8a4b9cc801afb9ce0b2470",
+      "nc_split": "3ca4581592fcb705b42672b18412375d33bf6109c72e4714786066878a54d58e",
+      "text_features": "b67ab7600b842807b53805e31b9d969d860e9c48b1a56f76799d44367f33c516"
+    },
+    "loader_edge_rows": 142262,
+    "num_classes": 20,
+    "num_nodes": 17074,
+    "split_hashes_train_validation_only": {
+      "train_ids": "78a7ffae928464c7ea90fc9e25f97c5ab26bab855121a5cbf5aedd47cb7bda78",
+      "validation_ids": "cb95fb79d273739e1e38037edddc536481294c23c471ae26987851ae38966d22"
+    },
+    "test_size": 3415,
+    "text_dim": 768,
+    "train_size": 10244,
+    "validation_size": 3415
+  },
+  "Movies": {
+    "availability": {
+      "counts": [
+        16672,
+        16672
+      ],
+      "doubly_missing_nodes": 0,
+      "source": "no missing-modality metadata in MAGData; canonical protocol all modalities present"
+    },
+    "canonical_loader_graph": {
+      "config_add_self_loops": false,
+      "config_make_undirected": true,
+      "duplicate_nonself_directed_rows": 0,
+      "edge_rows": 160802,
+      "reverse_edge_coverage": 1.0,
+      "self_loop_rows": 0,
+      "unique_nonself_directed_pairs": 160802,
+      "weights_exposed_by_MAGData": false
+    },
+    "feature_files": {
+      "graph": "/hdd1/DataInHere/YHF/data/Movies/MoviesGraph.pt",
+      "image": "/hdd1/DataInHere/YHF/data/Movies/ImageFeature/Movies_openai_clip-vit-large-patch14.npy",
+      "split": "/hdd1/DataInHere/YHF/data/MAGB_split/Movies_nc_seed42_train0.6_val0.2.pt",
+      "text": "/hdd1/DataInHere/YHF/data/Movies/TextFeature/Movies_roberta_base_512_mean.npy"
+    },
+    "feature_finiteness_and_zero_row_diagnostic": {
+      "image_all_finite": true,
+      "image_all_zero_rows_diagnostic_only": 0,
+      "text_all_finite": true,
+      "text_all_zero_rows_diagnostic_only": 0
+    },
+    "feature_preprocessing": {
+      "additional_normalization": "none",
+      "image": "Movies_openai_clip-vit-large-patch14.npy",
+      "loader_cast": "float32",
+      "text": "Movies_roberta_base_512_mean.npy"
+    },
+    "graph": {
+      "loader_uses_edge_weights": false,
+      "raw_directed_edge_rows": 109195,
+      "raw_duplicate_directed_rows": 0,
+      "raw_edata_keys": [],
+      "raw_nodes": 16672,
+      "raw_self_loop_rows": 0,
+      "raw_weight_fields": [],
+      "reverse_edge_coverage": 0.5273867845535278
+    },
+    "image_dim": 768,
+    "input_sha256": {
+      "graph": "f6798e6951f29b1d76aa7938684f44d502600c31f3a5987722f5bc450511700f",
+      "image_features": "c422191f1a7cdc85598f00b52e0f60a02f65d6a48548e9c42a8530b3e572dfeb",
+      "nc_split": "9089d5eb1d5a3edeae46bd9296e4f85815fccf8e489452bc87a2126a88546211",
+      "text_features": "38cc09ef3192eac8a022303fd48a9954bea9c3064078846aa5d2db31e137eece"
+    },
+    "loader_edge_rows": 160802,
+    "num_classes": 20,
+    "num_nodes": 16672,
+    "split_hashes_train_validation_only": {
+      "train_ids": "260d595d024da09e8a1b6180c1a28ec4dc1991bace34dcc4c880813da14746e1",
+      "validation_ids": "c875f204548401feffe16b7ef2b8dbe40ef6c2e45b15abbbc2cea7d8fa078c75"
+    },
+    "test_size": 3335,
+    "text_dim": 768,
+    "train_size": 10003,
+    "validation_size": 3334
+  },
+  "Reddit-S": {
+    "availability": {
+      "counts": [
+        15894,
+        15894
+      ],
+      "doubly_missing_nodes": 0,
+      "source": "no missing-modality metadata in MAGData; canonical protocol all modalities present"
+    },
+    "canonical_loader_graph": {
+      "config_add_self_loops": false,
+      "config_make_undirected": true,
+      "duplicate_nonself_directed_rows": 0,
+      "edge_rows": 283080,
+      "reverse_edge_coverage": 1.0,
+      "self_loop_rows": 0,
+      "unique_nonself_directed_pairs": 283080,
+      "weights_exposed_by_MAGData": false
+    },
+    "feature_files": {
+      "graph": "/hdd1/DataInHere/YHF/data/Reddit-S/RedditSGraph.pt",
+      "image": "/hdd1/DataInHere/YHF/data/Reddit-S/ImageFeature/RedditS_openai_clip-vit-large-patch14.npy",
+      "split": "/hdd1/DataInHere/YHF/data/MAGB_split/Reddit-S_nc_seed42_train0.6_val0.2.pt",
+      "text": "/hdd1/DataInHere/YHF/data/Reddit-S/TextFeature/RedditS_roberta_base_100_mean.npy"
+    },
+    "feature_finiteness_and_zero_row_diagnostic": {
+      "image_all_finite": true,
+      "image_all_zero_rows_diagnostic_only": 0,
+      "text_all_finite": true,
+      "text_all_zero_rows_diagnostic_only": 0
+    },
+    "feature_preprocessing": {
+      "additional_normalization": "none",
+      "image": "RedditS_openai_clip-vit-large-patch14.npy",
+      "loader_cast": "float32",
+      "text": "RedditS_roberta_base_100_mean.npy"
+    },
+    "graph": {
+      "loader_uses_edge_weights": false,
+      "raw_directed_edge_rows": 283080,
+      "raw_duplicate_directed_rows": 0,
+      "raw_edata_keys": [],
+      "raw_nodes": 15894,
+      "raw_self_loop_rows": 0,
+      "raw_weight_fields": [],
+      "reverse_edge_coverage": 1.0
+    },
+    "image_dim": 768,
+    "input_sha256": {
+      "graph": "06af9e010df31f5a6537afa5c96f5cbdb9687b5722c1a1acc80d094bd216309b",
+      "image_features": "936191dcf3c06e367674cfedd2e80fd87e3120485a9f45acb8ff48e7b3bad58b",
+      "nc_split": "2154e82ef061de9d3c018aa19674ea6e2220953f272bedebb1559396e43750a5",
+      "text_features": "da41d78a8b65902ee902295949da437228d7b6d6de303a748f6c324072d65abd"
+    },
+    "loader_edge_rows": 283080,
+    "num_classes": 20,
+    "num_nodes": 15894,
+    "split_hashes_train_validation_only": {
+      "train_ids": "6a1281bfdcbb32c3c9b353e2aa1b1e6521a26a1cd4fef69cc0baaf140347ae44",
+      "validation_ids": "8bbd32a9eaf05b1173bd827e1f10ec46ec347123c4ef9e93d79635fdfc24a7fa"
+    },
+    "test_size": 3179,
+    "text_dim": 768,
+    "train_size": 9536,
+    "validation_size": 3179
+  }
+}

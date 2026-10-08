@@ -1,0 +1,40 @@
+{
+  "study": "mvcge_private_nc_v1",
+  "updated_utc": "2026-10-08T01:51:46+00:00",
+  "functional_test_command": "/home/m3/miniconda3/envs/yhf_env/bin/python -m pytest -q tests/test_mvcge_private_nc_v1.py",
+  "functional_test_passed": 16,
+  "functional_test_failed": 0,
+  "functional_test_status": "passed",
+  "coverage": [
+    "encoder output, NC head and synthetic existing endpoint-product LP decoder shapes/gradients",
+    "sparse PC basis versus dense graph calculation through order Q=3",
+    "PC transform full rank and initialization responses",
+    "shared-basis versus projection-then-filter output and gradients",
+    "mask, duplicate collapse, self-loops, isolated nodes and node permutation",
+    "top-2 gate cardinality and normalization; differentiable expected-load gradients",
+    "task-only router-logit gradient and adapter/expert/private FFN gradients",
+    "G0/G1 identical public initialization and exactly 33,408 private FFN parameters",
+    "explicit learned own-semantic path in final readout",
+    "synchronous context from both pre-update modality states",
+    "deterministic eval and unchanged model state",
+    "optimizer parameter groups have no duplicates or omissions and use the locked decay rules",
+    "U1 has no router/context parameters and uses uniform gates",
+    "missing-node masks yield finite outputs and zero masked states",
+    "router sigma initialization and deterministic explicit noise stream",
+    "historical S0 B1 backbone, 768-D head and task-loss interface"
+  ],
+  "smoke": {
+    "status": "passed",
+    "cells": 9,
+    "updates_per_cell": 3,
+    "all_train_only": true,
+    "validation_called": false,
+    "test_task_head_calls": 0,
+    "real_lp_runs": 0,
+    "oom_count": 0,
+    "device": "CUDA_VISIBLE_DEVICES=0, logical cuda:0",
+    "physical_gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+  },
+  "formal_runs_started": 0,
+  "warning": "PyTorch Geometric emitted an unrelated distributed-package deprecation warning during pytest collection."
+}
