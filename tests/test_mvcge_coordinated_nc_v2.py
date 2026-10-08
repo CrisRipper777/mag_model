@@ -9,6 +9,7 @@ from omegaconf import OmegaConf
 
 from scripts.run_mvcge_coordinated_nc_v2 import (
     _grad_pair,
+    _next_retry_id,
     _restore_rng,
     _save_resume,
     build_modules,
@@ -358,6 +359,12 @@ def test_grad_pair_zero_fills_unused_parameter_slots_before_comparison():
     assert result["cosine"] == pytest.approx(0.0)
     assert result["norm_ratio"] == pytest.approx((29.0 / 26.0) ** 0.5)
     assert _grad_pair((None, None), (None, None))["cosine"] is None
+
+
+def test_retry_id_sequence_ignores_base_attempt_and_preserves_existing_retries():
+    base = "confirmation_Movies_M0_seed113_cfg01"
+    assert _next_retry_id({base: {}, base + "_retry1": {}, base + "_retry3": {}}, base) == base + "_retry4"
+    assert _next_retry_id({base: {}}, base) == base + "_retry1"
 
 
 def test_best_checkpoint_replay_and_exact_rng_resume_state(tmp_path):

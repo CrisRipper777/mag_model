@@ -388,16 +388,21 @@ def freeze_protocol() -> None:
         "train_validation_split_hashes": {name: item["train_validation_id_hashes"] for name, item in data_profile["datasets"].items()},
         "assertions": {"calibration_cells": 162, "confirmation_cells": 54, "total_cells": 216, "test_evaluations": 0, "real_lp_runs": 0, "dataset_count": 3},
     }
-    previous_lock_path = DOC_ROOT / "protocol_lock_v1.json"
+    baseline_lock_path = DOC_ROOT / "protocol_lock_v1.json"
+    previous_lock_path = DOC_ROOT / "protocol_lock_v2.json" if (DOC_ROOT / "protocol_lock_v2.json").is_file() else baseline_lock_path
     if previous_lock_path.is_file():
+        previous_lock = json.loads(previous_lock_path.read_text(encoding="utf-8"))
         lock["amendment"] = {
-            "revision": 2,
+            "revision": int(previous_lock.get("amendment", {}).get("revision", 1)) + 1,
             "supersedes_protocol_lock": previous_lock_path.name,
             "supersedes_protocol_lock_sha256": sha256_file(previous_lock_path),
+            "baseline_protocol_lock": baseline_lock_path.name,
+            "baseline_protocol_lock_sha256": sha256_file(baseline_lock_path),
             "calibration_selection_lock_sha256": sha256_file(REPORT_ROOT / "selection_lock.json"),
             "calibration_audit_sha256": sha256_file(REPORT_ROOT / "calibration_audit.json"),
-            "change_scope": "diagnostic gradient-vector aggregation only; no model, forward, loss, optimizer, data, split, or calibration-selection changes",
+            "change_scope": "diagnostic gradient-vector aggregation and retry-attempt ID dispatch only; no model, forward, loss, optimizer, data, split, or calibration-selection changes",
             "initial_confirmation_attempts": {"successful_unaffected_A0_N0": 18, "failed_routed_diagnostic_aggregation": 36},
+            "superseded_retry_dispatch": {"protocol_lock": "protocol_lock_v2.json", "training_attempts_started": 0, "reason": "base attempt IDs were parsed as retry suffixes; failure occurred before model construction"},
             "rerun_policy": "preserve the original failed attempts and retry the 36 routed confirmation slots under this source revision",
         }
     write_json(LOCK_PATH, lock)
@@ -432,6 +437,18 @@ def _select_attempt(registry: dict[str, Any], base: str) -> tuple[str, dict[str,
         return base, None
     related.sort(key=lambda pair: (0 if pair[0] == base else int(pair[0].rsplit("retry", 1)[-1])))
     return related[-1]
+
+
+def _next_retry_id(attempt_ids, base: str) -> str:
+    prefix = base + "_retry"
+    retry_numbers = []
+    for key in attempt_ids:
+        if not key.startswith(prefix):
+            continue
+        suffix = key[len(prefix):]
+        if suffix.isdecimal():
+            retry_numbers.append(int(suffix))
+    return f"{base}_retry{max(retry_numbers, default=0) + 1}"
 
 
 def initialize_head(seed: int, classes: int, model: str, device: torch.device):
@@ -802,8 +819,7 @@ def run_cell(phase: str, data: dict[str, Any], model_name: str, seed: int, confi
     if previous and previous.get("status") == "failed" and not retry_failed:
         return previous
     if previous and previous.get("status") == "failed" and retry_failed:
-        retry_num = 1 + max([int(key.rsplit("retry", 1)[-1]) for key in registry["attempts"] if key == base_id or key.startswith(base_id + "_retry")] or [0])
-        run_id = f"{base_id}_retry{retry_num}"
+        run_id = _next_retry_id(registry["attempts"], base_id)
         previous = None
     output_dir = OUTPUT_ROOT / phase / data["dataset"] / model_name / run_id
     output_dir.mkdir(parents=True, exist_ok=True)
