@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-08T07:17:32.454712+00:00",
+  "cuda_available": true,
+  "cuda_runtime": "12.1",
+  "cuda_visible_devices_at_intake": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+  "cwd": "/hdd1/DataInHere/YHF/mag_model",
+  "git_branch": "codex/mag-mvcge-coordinated-nc-v2",
+  "git_head_at_intake": "deb15363debd7260234964861446ec0d06938b11",
+  "gpu_compute_processes": [
+    {
+      "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+      "memory_used_mib": 2906,
+      "pid": 730815,
+      "process_name": "python"
+    }
+  ],
+  "gpu_snapshot": [
+    {
+      "index": 0,
+      "memory_total_mib": 24576,
+      "memory_used_mib": 91,
+      "name": "NVIDIA GeForce RTX 3090",
+      "utilization_percent": 0,
+      "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+    },
+    {
+      "index": 1,
+      "memory_total_mib": 24576,
+      "memory_used_mib": 2921,
+      "name": "NVIDIA GeForce RTX 3090",
+      "utilization_percent": 100,
+      "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+    }
+  ],
+  "packages": {
+    "dgl": "2.4.0+cu121",
+    "hydra-core": "1.3.2",
+    "numpy": "2.4.3",
+    "scikit-learn": "1.8.0",
+    "torch-geometric": "2.7.0"
+  },
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "selected_gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+  "torch": "2.4.0+cu121"
+}

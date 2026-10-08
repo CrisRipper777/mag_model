@@ -1,0 +1,191 @@
+{
+  "created_utc": "2026-10-08T07:16:34.960031+00:00",
+  "gpu_compute_processes_after": [
+    {
+      "gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+      "memory_used_mib": 1020,
+      "pid": 948571,
+      "process_name": "/home/m3/miniconda3/envs/yhf_env/bin/python"
+    },
+    {
+      "gpu_uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6",
+      "memory_used_mib": 2906,
+      "pid": 730815,
+      "process_name": "python"
+    }
+  ],
+  "gpu_snapshot_after": [
+    {
+      "index": 0,
+      "memory_total_mib": 24576,
+      "memory_used_mib": 1114,
+      "name": "NVIDIA GeForce RTX 3090",
+      "utilization_percent": 24,
+      "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+    },
+    {
+      "index": 1,
+      "memory_total_mib": 24576,
+      "memory_used_mib": 2921,
+      "name": "NVIDIA GeForce RTX 3090",
+      "utilization_percent": 100,
+      "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+    }
+  ],
+  "gpu_snapshot_before": [
+    {
+      "index": 0,
+      "memory_total_mib": 24576,
+      "memory_used_mib": 91,
+      "name": "NVIDIA GeForce RTX 3090",
+      "utilization_percent": 0,
+      "uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+    },
+    {
+      "index": 1,
+      "memory_total_mib": 24576,
+      "memory_used_mib": 2921,
+      "name": "NVIDIA GeForce RTX 3090",
+      "utilization_percent": 100,
+      "uuid": "GPU-84aac143-953d-a98f-a8ff-8ebf88d076b6"
+    }
+  ],
+  "runs": [
+    {
+      "actual_optimizer_updates": 5,
+      "cuda_peak_allocated_bytes": 1675488256,
+      "dataset": "Movies",
+      "losses": [
+        3.970149517059326,
+        5.023428916931152,
+        3.1333415508270264,
+        3.651819944381714,
+        3.3942830562591553
+      ],
+      "median_step_seconds": 0.037055118940770626,
+      "model": "M0",
+      "neighbor_weight_gradient_norm_after_final_smoke_update": 0.17123107612133026,
+      "simulated_schedule_steps": [
+        1,
+        50,
+        75,
+        100,
+        101
+      ]
+    },
+    {
+      "actual_optimizer_updates": 5,
+      "cuda_peak_allocated_bytes": 2084916224,
+      "dataset": "Movies",
+      "losses": [
+        3.970149517059326,
+        5.027629852294922,
+        3.134127616882324,
+        3.6547634601593018,
+        3.3975234031677246
+      ],
+      "median_step_seconds": 0.04749552998691797,
+      "model": "P0",
+      "neighbor_weight_gradient_norm_after_final_smoke_update": 0.1709083616733551,
+      "simulated_schedule_steps": [
+        1,
+        50,
+        75,
+        100,
+        101
+      ]
+    },
+    {
+      "actual_optimizer_updates": 5,
+      "cuda_peak_allocated_bytes": 1832292352,
+      "dataset": "Grocery",
+      "losses": [
+        3.768838882446289,
+        4.032650470733643,
+        3.819689989089966,
+        3.493736743927002,
+        3.047943353652954
+      ],
+      "median_step_seconds": 0.03596909111365676,
+      "model": "M0",
+      "neighbor_weight_gradient_norm_after_final_smoke_update": 0.12647761404514313,
+      "simulated_schedule_steps": [
+        1,
+        50,
+        75,
+        100,
+        101
+      ]
+    },
+    {
+      "actual_optimizer_updates": 5,
+      "cuda_peak_allocated_bytes": 2254556672,
+      "dataset": "Grocery",
+      "losses": [
+        3.768838882446289,
+        4.03522253036499,
+        3.821218729019165,
+        3.495380163192749,
+        3.0490989685058594
+      ],
+      "median_step_seconds": 0.047434772830456495,
+      "model": "P0",
+      "neighbor_weight_gradient_norm_after_final_smoke_update": 0.12646807730197906,
+      "simulated_schedule_steps": [
+        1,
+        50,
+        75,
+        100,
+        101
+      ]
+    },
+    {
+      "actual_optimizer_updates": 5,
+      "cuda_peak_allocated_bytes": 1857333248,
+      "dataset": "Reddit-S",
+      "losses": [
+        3.8501389026641846,
+        3.2456657886505127,
+        2.615717887878418,
+        2.1733009815216064,
+        1.689408302307129
+      ],
+      "median_step_seconds": 0.036246245726943016,
+      "model": "M0",
+      "neighbor_weight_gradient_norm_after_final_smoke_update": 0.1001516729593277,
+      "simulated_schedule_steps": [
+        1,
+        50,
+        75,
+        100,
+        101
+      ]
+    },
+    {
+      "actual_optimizer_updates": 5,
+      "cuda_peak_allocated_bytes": 2235284992,
+      "dataset": "Reddit-S",
+      "losses": [
+        3.8501389026641846,
+        3.2467119693756104,
+        2.616382122039795,
+        2.173600196838379,
+        1.6892921924591064
+      ],
+      "median_step_seconds": 0.0501985140144825,
+      "model": "P0",
+      "neighbor_weight_gradient_norm_after_final_smoke_update": 0.10008563101291656,
+      "simulated_schedule_steps": [
+        1,
+        50,
+        75,
+        100,
+        101
+      ]
+    }
+  ],
+  "scope": "six real-graph five-update smoke cells; no validation/test evaluation or formal score",
+  "selected_device": "cuda:0",
+  "selected_gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+  "study": "mvcge_coordinated_nc_v2"
+}

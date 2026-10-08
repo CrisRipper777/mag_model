@@ -1,0 +1,8 @@
+name: mvcge_coordinated_nc_v2
+variant: M0
+dropout: 0.2
+latent_dim: 128
+num_layers: 2
+num_experts: 4
+top_k: 2
+out_dim: 640
