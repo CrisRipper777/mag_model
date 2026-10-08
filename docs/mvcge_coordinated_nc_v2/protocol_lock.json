@@ -1,16 +1,23 @@
 {
   "amendment": {
+    "baseline_protocol_lock": "protocol_lock_v1.json",
+    "baseline_protocol_lock_sha256": "9f8b01c4e746b0a4e73f77e9717e044d6e24144697c50c78ee8923a61bafba5b",
     "calibration_audit_sha256": "22f1f26e571fd071bf5890a6ff24b3ad3db8691258324ec0d2a69c67bf56761b",
     "calibration_selection_lock_sha256": "ccf4dbd4b4f10fc90feb8faea4d4dc969f21ccab879300eae713ccb21dd314c0",
-    "change_scope": "diagnostic gradient-vector aggregation only; no model, forward, loss, optimizer, data, split, or calibration-selection changes",
+    "change_scope": "diagnostic gradient-vector aggregation and retry-attempt ID dispatch only; no model, forward, loss, optimizer, data, split, or calibration-selection changes",
     "initial_confirmation_attempts": {
       "failed_routed_diagnostic_aggregation": 36,
       "successful_unaffected_A0_N0": 18
     },
     "rerun_policy": "preserve the original failed attempts and retry the 36 routed confirmation slots under this source revision",
-    "revision": 2,
-    "supersedes_protocol_lock": "protocol_lock_v1.json",
-    "supersedes_protocol_lock_sha256": "9f8b01c4e746b0a4e73f77e9717e044d6e24144697c50c78ee8923a61bafba5b"
+    "revision": 3,
+    "superseded_retry_dispatch": {
+      "protocol_lock": "protocol_lock_v2.json",
+      "reason": "base attempt IDs were parsed as retry suffixes; failure occurred before model construction",
+      "training_attempts_started": 0
+    },
+    "supersedes_protocol_lock": "protocol_lock_v2.json",
+    "supersedes_protocol_lock_sha256": "29b91a6e03cd1fd9458e4a049c9ba8478d51b539039ee7192c4e48e027dc85ae"
   },
   "assertions": {
     "calibration_cells": 162,
@@ -20,7 +27,7 @@
     "test_evaluations": 0,
     "total_cells": 216
   },
-  "created_utc": "2026-10-08T10:34:52.333477+00:00",
+  "created_utc": "2026-10-08T10:37:26.231074+00:00",
   "dataset_input_hashes": {
     "Grocery": {
       "graph": "af203035d655275a20da353f481e67f4b595eeb73ef1d397d0d9b603cefc70d7",
@@ -43,7 +50,7 @@
   },
   "matrix_sha256": "0de5fede6027aba0ee2678c9124b2a300c47fa4026057e95ba93a7bb6c5d101d",
   "model_spec_sha256": "fe3ca57f2f2d63ee3d737f98e969e893f29a1f67276d714d3dd8f2e84e43027e",
-  "protocol_sha256": "653513114d3dd4f2a190e69fe2b5a465a469c241122a48d23931b064223862ac",
+  "protocol_sha256": "7f3d988f150b00ce616384ce25c0eaa3cd15a92bce7f33e5e8a32393be202bb0",
   "source_hashes": {
     "configs/config.yaml": "1b06934c68b88e931909de4cb65b1fa51725df94ff6139d127a6ba85355fe399",
     "configs/dataset/Grocery.yaml": "18969c97a0f06ab33fd3094624d524f03de48139405159bb06d19cf107105e56",
@@ -54,10 +61,10 @@
     "configs/task/nc.yaml": "f959a73d5256d2e51b2ce3600c4f7252e7d79122c267aa70dc84abeddedb3852",
     "docs/mvcge_coordinated_nc_v2/matrix.json": "0de5fede6027aba0ee2678c9124b2a300c47fa4026057e95ba93a7bb6c5d101d",
     "docs/mvcge_coordinated_nc_v2/model_spec.md": "fe3ca57f2f2d63ee3d737f98e969e893f29a1f67276d714d3dd8f2e84e43027e",
-    "docs/mvcge_coordinated_nc_v2/protocol.md": "653513114d3dd4f2a190e69fe2b5a465a469c241122a48d23931b064223862ac",
+    "docs/mvcge_coordinated_nc_v2/protocol.md": "7f3d988f150b00ce616384ce25c0eaa3cd15a92bce7f33e5e8a32393be202bb0",
     "scripts/audit_mvcge_coordinated_nc_v2.py": "5fd1ecf29ba3c8d78d7f550a82c7ef4015b0b936ef4b6a11c6199739cf482cc0",
-    "scripts/report_mvcge_coordinated_nc_v2.py": "ce8fe9fb6346e072cca038fef0b9184cb3870124db1d310d7088f69d9ba9f3dc",
-    "scripts/run_mvcge_coordinated_nc_v2.py": "d0992e8044866b901e3374e476565265dcc78bce0a5c2b34e041bb99b7ec2882",
+    "scripts/report_mvcge_coordinated_nc_v2.py": "b18f03f6000d1e78e179d3bf73d108f3f31702661d6ae02b0f6e2ebd26e793e6",
+    "scripts/run_mvcge_coordinated_nc_v2.py": "1759bd783fc6f1909a8fb9dba8ae65a641e5c31c760e5bcaff3326a4380fd37f",
     "src/data/__init__.py": "732a246f7862812c798d32cd42da38c23c8f72c41f7e6b5f2213fdb457aa285d",
     "src/data/graph_utils.py": "8fa1c35c1897e25f2f30628ddc0312598fe9e581692a48cccb131a12a50f10df",
     "src/data/loaders.py": "08fe47584069a8f690d87d20a2b892d008c43a1dad6bdb3d08bb2f7e22ddd173",
@@ -70,7 +77,7 @@
     "src/tasks/collab_nc_pilot.py": "31d96b6419bcede97d6ad769669d0b6ff9c4bb34afe420ed4537a8a36a50c9b4",
     "src/tasks/mvcge_coordinated_nc_v2.py": "435d5e0951828fd9c422a5f34ec8c2305abc6a3f34ec35b3c7bc4e6222ebbfa5",
     "src/tasks/prior_context_pilot.py": "1add0aecb7934c9695bda2645c30979cc10840749d091a383fd6cac09996191e",
-    "tests/test_mvcge_coordinated_nc_v2.py": "38aa9277e6d7cf2383a5a923cc29bc2bea66178857ff2cec4ab9e9e696ee69af"
+    "tests/test_mvcge_coordinated_nc_v2.py": "b2156220701657cd30f58a089ab21b695fa605471fd765cdcf20f8a23e1adce2"
   },
   "starting_head": "deb15363debd7260234964861446ec0d06938b11",
   "study": "mvcge_coordinated_nc_v2",
@@ -88,6 +95,6 @@
       "validation_ids": "8bbd32a9eaf05b1173bd827e1f10ec46ec347123c4ef9e93d79635fdfc24a7fa"
     }
   },
-  "training_source_commit": "c01f9164c597d8182f8ee7ffd6acad7d59233072",
-  "training_source_tree": "58f6becb574b53fd3058ac4427164775b059ed1b"
+  "training_source_commit": "deb7c5efac7e0e220302431cc9f36008f828c880",
+  "training_source_tree": "7a5c01ffae7425b0cb85179de8fb385b3c123c21"
 }
