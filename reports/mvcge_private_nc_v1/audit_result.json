@@ -1,0 +1,322 @@
+{
+  "argmax_files_recomputed": 144,
+  "calibration_max_updates": 20,
+  "calibration_wall_hours": 1.7070241796355954,
+  "confirmation_max_updates": 0,
+  "confirmation_routing_summary": {
+    "G0": {
+      "layer_modality_profiles": 36,
+      "max_dominant_top2_pair_share": 0.999940019193858,
+      "mean_dominant_top2_pair_share": 0.7857930761989604,
+      "mean_max_expert_usage": 0.458090689447191,
+      "profiles_with_any_expert_below_1pct": 12
+    },
+    "G1": {
+      "layer_modality_profiles": 36,
+      "max_dominant_top2_pair_share": 0.9997483327041651,
+      "mean_dominant_top2_pair_share": 0.7502614523579313,
+      "mean_max_expert_usage": 0.44352875567144817,
+      "profiles_with_any_expert_below_1pct": 12
+    }
+  },
+  "confirmation_wall_hours": 0.46623643275815996,
+  "contrasts": [
+    {
+      "accuracy_delta_pp": -0.25994976361592137,
+      "contrast": "G1-A0",
+      "dataset": "Movies",
+      "macro_f1_delta_pp": 1.16622580845479
+    },
+    {
+      "accuracy_delta_pp": 0.3399312496185303,
+      "contrast": "G1-G0",
+      "dataset": "Movies",
+      "macro_f1_delta_pp": 1.8047673590188467
+    },
+    {
+      "accuracy_delta_pp": 0.7598459720611572,
+      "contrast": "G1-U1",
+      "dataset": "Movies",
+      "macro_f1_delta_pp": 2.4229477115746647
+    },
+    {
+      "accuracy_delta_pp": 0.29282768567402684,
+      "contrast": "G1-A0",
+      "dataset": "Grocery",
+      "macro_f1_delta_pp": 0.647122679885598
+    },
+    {
+      "accuracy_delta_pp": -0.4294772942861016,
+      "contrast": "G1-G0",
+      "dataset": "Grocery",
+      "macro_f1_delta_pp": -0.923844971289526
+    },
+    {
+      "accuracy_delta_pp": 0.06832679112751805,
+      "contrast": "G1-U1",
+      "dataset": "Grocery",
+      "macro_f1_delta_pp": -0.47068055689382504
+    },
+    {
+      "accuracy_delta_pp": -1.3106842835744175,
+      "contrast": "G1-A0",
+      "dataset": "Reddit-S",
+      "macro_f1_delta_pp": -2.78620815896177
+    },
+    {
+      "accuracy_delta_pp": -0.26213526725769043,
+      "contrast": "G1-G0",
+      "dataset": "Reddit-S",
+      "macro_f1_delta_pp": -0.3644075193632972
+    },
+    {
+      "accuracy_delta_pp": 0.3040790557861328,
+      "contrast": "G1-U1",
+      "dataset": "Reddit-S",
+      "macro_f1_delta_pp": 0.4502697334403791
+    },
+    {
+      "accuracy_delta_pp": -0.4259354538387707,
+      "contrast": "G1-A0",
+      "dataset": "equal-graph mean",
+      "macro_f1_delta_pp": -0.32428655687379404
+    },
+    {
+      "accuracy_delta_pp": -0.11722710397508725,
+      "contrast": "G1-G0",
+      "dataset": "equal-graph mean",
+      "macro_f1_delta_pp": 0.17217162278867448
+    },
+    {
+      "accuracy_delta_pp": 0.3774172729916027,
+      "contrast": "G1-U1",
+      "dataset": "equal-graph mean",
+      "macro_f1_delta_pp": 0.8008456293737396
+    }
+  ],
+  "expected_calibration_units": 108,
+  "expected_confirmation_units": 36,
+  "failed_attempts": 0,
+  "metrics_match": true,
+  "real_lp_runs": 0,
+  "retry_attempts": 0,
+  "selected_config_max_updates": [
+    "Grocery/G0",
+    "Grocery/G1",
+    "Reddit-S/U1"
+  ],
+  "source_commit": "d8d4e45b2d511363defea256e1796b48fd5ae3d2",
+  "source_hash_manifest_count": 19,
+  "successful_attempts_including_retries": 144,
+  "successful_calibration_units": 108,
+  "successful_confirmation_units": 36,
+  "summary_rows": [
+    {
+      "accuracy_mean_percent": 53.43931118647257,
+      "accuracy_sd_percent": 0.3684380107591603,
+      "active_backbone_parameters": 893056,
+      "active_task_head_parameters": 20560,
+      "calibration_wall_hours": 0.038960390825005665,
+      "confirmation_wall_hours": 0.012243822495220229,
+      "dataset": "Movies",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 42.98129920743357,
+      "macro_f1_sd_percent": 2.3200022960665536,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 37.02925936381022,
+      "model": "A0",
+      "peak_allocated_gib_max": 1.5038971900939941,
+      "total_formal_wall_hours": 0.05120421332022589
+    },
+    {
+      "accuracy_mean_percent": 52.83943017323812,
+      "accuracy_sd_percent": 0.19794969850616564,
+      "active_backbone_parameters": 868940,
+      "active_task_head_parameters": 5140,
+      "calibration_wall_hours": 0.0659447833245051,
+      "confirmation_wall_hours": 0.03569259488890465,
+      "dataset": "Movies",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 42.342757656869516,
+      "macro_f1_sd_percent": 1.3906371884773439,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 94.58440653483073,
+      "model": "G0",
+      "peak_allocated_gib_max": 2.0963821411132812,
+      "total_formal_wall_hours": 0.10163737821340975
+    },
+    {
+      "accuracy_mean_percent": 53.17936142285665,
+      "accuracy_sd_percent": 0.14896776327723882,
+      "active_backbone_parameters": 902348,
+      "active_task_head_parameters": 5140,
+      "calibration_wall_hours": 0.08302372974537624,
+      "confirmation_wall_hours": 0.051479178947241355,
+      "dataset": "Movies",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 44.14752501588836,
+      "macro_f1_sd_percent": 0.8952156458465554,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 96.8042386372884,
+      "model": "G1",
+      "peak_allocated_gib_max": 2.194395065307617,
+      "total_formal_wall_hours": 0.1345029086926176
+    },
+    {
+      "accuracy_mean_percent": 52.419515450795494,
+      "accuracy_sd_percent": 0.33069235681338216,
+      "active_backbone_parameters": 732288,
+      "active_task_head_parameters": 5140,
+      "calibration_wall_hours": 0.06315230304815082,
+      "confirmation_wall_hours": 0.03217013658671122,
+      "dataset": "Movies",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 41.7245773043137,
+      "macro_f1_sd_percent": 1.7430197920627126,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 74.32159678141277,
+      "model": "U1",
+      "peak_allocated_gib_max": 1.6478724479675293,
+      "total_formal_wall_hours": 0.09532243963486205
+    },
+    {
+      "accuracy_mean_percent": 80.58565258979797,
+      "accuracy_sd_percent": 0.1724133978143537,
+      "active_backbone_parameters": 893056,
+      "active_task_head_parameters": 20560,
+      "calibration_wall_hours": 0.04740903629817896,
+      "confirmation_wall_hours": 0.018460744660632272,
+      "dataset": "Grocery",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 72.911205008843,
+      "macro_f1_sd_percent": 0.7706595847746386,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 36.90660285949707,
+      "model": "A0",
+      "peak_allocated_gib_max": 1.6874046325683594,
+      "total_formal_wall_hours": 0.06586978095881124
+    },
+    {
+      "accuracy_mean_percent": 81.3079575697581,
+      "accuracy_sd_percent": 0.27916646386605987,
+      "active_backbone_parameters": 868940,
+      "active_task_head_parameters": 5140,
+      "calibration_wall_hours": 0.23098831661666433,
+      "confirmation_wall_hours": 0.06061610085747412,
+      "dataset": "Grocery",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 74.48217266001812,
+      "macro_f1_sd_percent": 0.3257841886117246,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 96.16003799438477,
+      "model": "G0",
+      "peak_allocated_gib_max": 2.333861827850342,
+      "total_formal_wall_hours": 0.29160441747413846
+    },
+    {
+      "accuracy_mean_percent": 80.878480275472,
+      "accuracy_sd_percent": 0.21251015019603872,
+      "active_backbone_parameters": 902348,
+      "active_task_head_parameters": 5140,
+      "calibration_wall_hours": 0.2979817233774035,
+      "confirmation_wall_hours": 0.04430094989650469,
+      "dataset": "Grocery",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 73.5583276887286,
+      "macro_f1_sd_percent": 0.6644305017617869,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 86.70933151245117,
+      "model": "G1",
+      "peak_allocated_gib_max": 2.4339070320129395,
+      "total_formal_wall_hours": 0.34228267327390816
+    },
+    {
+      "accuracy_mean_percent": 80.81015348434448,
+      "accuracy_sd_percent": 0.29217393184091167,
+      "active_backbone_parameters": 732288,
+      "active_task_head_parameters": 5140,
+      "calibration_wall_hours": 0.19598417047049022,
+      "confirmation_wall_hours": 0.04411715630674735,
+      "dataset": "Grocery",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 74.02900824562242,
+      "macro_f1_sd_percent": 0.6449000316827235,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 74.32672754923503,
+      "model": "U1",
+      "peak_allocated_gib_max": 1.8837471008300781,
+      "total_formal_wall_hours": 0.24010132677723756
+    },
+    {
+      "accuracy_mean_percent": 95.85823615392049,
+      "accuracy_sd_percent": 0.03923190105287569,
+      "active_backbone_parameters": 893056,
+      "active_task_head_parameters": 20560,
+      "calibration_wall_hours": 0.09971925619976699,
+      "confirmation_wall_hours": 0.026911619868284713,
+      "dataset": "Reddit-S",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 92.28773327133842,
+      "macro_f1_sd_percent": 0.014310692412608341,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 36.61662356058756,
+      "model": "A0",
+      "peak_allocated_gib_max": 2.0947747230529785,
+      "total_formal_wall_hours": 0.1266308760680517
+    },
+    {
+      "accuracy_mean_percent": 94.80968713760376,
+      "accuracy_sd_percent": 0.0889719972064973,
+      "active_backbone_parameters": 868940,
+      "active_task_head_parameters": 5140,
+      "calibration_wall_hours": 0.16306653095952545,
+      "confirmation_wall_hours": 0.05301299099810421,
+      "dataset": "Reddit-S",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 89.86593263173995,
+      "macro_f1_sd_percent": 0.48920147013531157,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 100.23296610514323,
+      "model": "G0",
+      "peak_allocated_gib_max": 2.4094462394714355,
+      "total_formal_wall_hours": 0.21607952195762967
+    },
+    {
+      "accuracy_mean_percent": 94.54755187034607,
+      "accuracy_sd_percent": 0.06463536822040405,
+      "active_backbone_parameters": 902348,
+      "active_task_head_parameters": 5140,
+      "calibration_wall_hours": 0.20591489151960962,
+      "confirmation_wall_hours": 0.047897835551088466,
+      "dataset": "Reddit-S",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 89.50152511237665,
+      "macro_f1_sd_percent": 0.21716760792966527,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 105.1721928914388,
+      "model": "G1",
+      "peak_allocated_gib_max": 2.5043063163757324,
+      "total_formal_wall_hours": 0.2538127270706981
+    },
+    {
+      "accuracy_mean_percent": 94.24347281455994,
+      "accuracy_sd_percent": 0.1779439944129946,
+      "active_backbone_parameters": 732288,
+      "active_task_head_parameters": 5140,
+      "calibration_wall_hours": 0.21487904725091841,
+      "confirmation_wall_hours": 0.03933330170124666,
+      "dataset": "Reddit-S",
+      "early_stopped": 3,
+      "macro_f1_mean_percent": 89.05125537893628,
+      "macro_f1_sd_percent": 0.3029612689439132,
+      "max_updates_reached": 0,
+      "median_step_ms_mean": 79.86538060506184,
+      "model": "U1",
+      "peak_allocated_gib_max": 1.9843950271606445,
+      "total_formal_wall_hours": 0.25421234895216505
+    }
+  ],
+  "test_task_head_calls": 0,
+  "unrun_calibration_units": 0,
+  "unrun_confirmation_units": 0
+}

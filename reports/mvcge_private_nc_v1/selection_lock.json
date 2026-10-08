@@ -1,0 +1,134 @@
+{
+  "calibration_seed": 102,
+  "complete": true,
+  "created_utc": "2026-10-08T03:35:18.747832+00:00",
+  "matrix_sha256": "a0c5a32f6edaa640ac141350c0d5c1bfa52b9be89e8ca90cbbc60147c3663b9e",
+  "missing_or_failed_attempts": [],
+  "rule": "validation correct count descending, fixed-C Macro-F1 descending, lower config_index",
+  "selection_uses_confirmation": false,
+  "stage": "calibration_selection",
+  "study": "mvcge_private_nc_v1",
+  "successful_selections": {
+    "Grocery/A0": {
+      "best_step": 116,
+      "calibration_attempt_id": "calibration_Grocery_A0_seed102_cfg07",
+      "config_index": 7,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "validation_accuracy": 0.8079063296318054,
+      "validation_correct": 2759,
+      "validation_macro_f1": 0.7337050573215185
+    },
+    "Grocery/G0": {
+      "best_step": 726,
+      "calibration_attempt_id": "calibration_Grocery_G0_seed102_cfg08",
+      "config_index": 8,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "validation_accuracy": 0.812591552734375,
+      "validation_correct": 2775,
+      "validation_macro_f1": 0.7399967100526117
+    },
+    "Grocery/G1": {
+      "best_step": 666,
+      "calibration_attempt_id": "calibration_Grocery_G1_seed102_cfg06",
+      "config_index": 6,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "validation_accuracy": 0.8178623914718628,
+      "validation_correct": 2793,
+      "validation_macro_f1": 0.7463374042892056
+    },
+    "Grocery/U1": {
+      "best_step": 211,
+      "calibration_attempt_id": "calibration_Grocery_U1_seed102_cfg08",
+      "config_index": 8,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "validation_accuracy": 0.8131771683692932,
+      "validation_correct": 2777,
+      "validation_macro_f1": 0.743303523329792
+    },
+    "Movies/A0": {
+      "best_step": 36,
+      "calibration_attempt_id": "calibration_Movies_A0_seed102_cfg06",
+      "config_index": 6,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "validation_accuracy": 0.5371925234794617,
+      "validation_correct": 1791,
+      "validation_macro_f1": 0.4373822891986944
+    },
+    "Movies/G0": {
+      "best_step": 71,
+      "calibration_attempt_id": "calibration_Movies_G0_seed102_cfg05",
+      "config_index": 5,
+      "lr": 0.001,
+      "matrix_weight_decay": 0.01,
+      "validation_accuracy": 0.526694655418396,
+      "validation_correct": 1756,
+      "validation_macro_f1": 0.4113294428766577
+    },
+    "Movies/G1": {
+      "best_step": 66,
+      "calibration_attempt_id": "calibration_Movies_G1_seed102_cfg06",
+      "config_index": 6,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.0001,
+      "validation_accuracy": 0.526694655418396,
+      "validation_correct": 1756,
+      "validation_macro_f1": 0.3828437990024667
+    },
+    "Movies/U1": {
+      "best_step": 61,
+      "calibration_attempt_id": "calibration_Movies_U1_seed102_cfg08",
+      "config_index": 8,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "validation_accuracy": 0.5236952304840088,
+      "validation_correct": 1746,
+      "validation_macro_f1": 0.3787668557334013
+    },
+    "Reddit-S/A0": {
+      "best_step": 596,
+      "calibration_attempt_id": "calibration_Reddit-S_A0_seed102_cfg00",
+      "config_index": 0,
+      "lr": 0.0003,
+      "matrix_weight_decay": 0.0001,
+      "validation_accuracy": 0.9603648781776428,
+      "validation_correct": 3053,
+      "validation_macro_f1": 0.9266997613497528
+    },
+    "Reddit-S/G0": {
+      "best_step": 351,
+      "calibration_attempt_id": "calibration_Reddit-S_G0_seed102_cfg08",
+      "config_index": 8,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.01,
+      "validation_accuracy": 0.9458949565887451,
+      "validation_correct": 3007,
+      "validation_macro_f1": 0.8923824111320625
+    },
+    "Reddit-S/G1": {
+      "best_step": 506,
+      "calibration_attempt_id": "calibration_Reddit-S_G1_seed102_cfg07",
+      "config_index": 7,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "validation_accuracy": 0.9465240836143494,
+      "validation_correct": 3009,
+      "validation_macro_f1": 0.8975713976054314
+    },
+    "Reddit-S/U1": {
+      "best_step": 756,
+      "calibration_attempt_id": "calibration_Reddit-S_U1_seed102_cfg07",
+      "config_index": 7,
+      "lr": 0.003,
+      "matrix_weight_decay": 0.001,
+      "validation_accuracy": 0.9462094902992249,
+      "validation_correct": 3008,
+      "validation_macro_f1": 0.8934164877748497
+    }
+  },
+  "training_source_commit": "d8d4e45b2d511363defea256e1796b48fd5ae3d2"
+}

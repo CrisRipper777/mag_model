@@ -100,6 +100,13 @@ def verify_cells(matrix: dict[str, Any], registry: dict[str, Any], selection: di
         assert float(record["matrix_weight_decay"]) == float(chosen["matrix_weight_decay"])
         assert int(record["training_seed"]) in CONFIRMATION_SEEDS
 
+    calibration_runs = [r for r in successes if r["phase"] == "calibration"]
+    confirmation_runs = [r for r in successes if r["phase"] == "confirmation"]
+    selection_budget_limited = [
+        key for key, chosen in selected.items()
+        if int(by_attempt[chosen["calibration_attempt_id"]]["updates"]) >= 800
+    ]
+
     audited: list[dict[str, Any]] = []
     current_data: dict[str, dict[str, Any]] = {}
     source_commits = set()
@@ -149,12 +156,40 @@ def verify_cells(matrix: dict[str, Any], registry: dict[str, Any], selection: di
 
     failures = [r for r in registry["attempts"].values() if r.get("phase") in {"calibration", "confirmation"} and r.get("status") == "failed"]
     retries = [r for r in registry["attempts"].values() if "_retry" in r.get("attempt_id", "")]
+    routing_profiles: dict[str, list[dict[str, float]]] = defaultdict(list)
+    for record in confirmation_runs:
+        if record["model"] not in {"G0", "G1"}:
+            continue
+        for layer in record.get("diagnostics", {}).get("routing", []):
+            for modality in layer.get("modalities", []):
+                usage = [float(value) for value in modality["clean_expert_usage"]]
+                pair_share = max(modality["clean_top2_combinations"].values()) / max(int(modality["valid_tokens"]), 1)
+                routing_profiles[record["model"]].append({
+                    "minimum_expert_usage": min(usage), "maximum_expert_usage": max(usage),
+                    "dominant_top2_pair_share": float(pair_share),
+                })
+    routing_summary = {
+        model: {
+            "layer_modality_profiles": len(profiles),
+            "profiles_with_any_expert_below_1pct": sum(p["minimum_expert_usage"] < 0.01 for p in profiles),
+            "mean_max_expert_usage": float(np.mean([p["maximum_expert_usage"] for p in profiles])) if profiles else None,
+            "mean_dominant_top2_pair_share": float(np.mean([p["dominant_top2_pair_share"] for p in profiles])) if profiles else None,
+            "max_dominant_top2_pair_share": max((p["dominant_top2_pair_share"] for p in profiles), default=None),
+        }
+        for model, profiles in routing_profiles.items()
+    }
     return {
         "expected_calibration_units": expected_cal, "successful_calibration_units": len(unique_cal),
         "expected_confirmation_units": expected_conf, "successful_confirmation_units": len(unique_conf),
         "successful_attempts_including_retries": len(successes), "failed_attempts": len(failures),
         "retry_attempts": len(retries),
         "unrun_calibration_units": expected_cal - len(unique_cal), "unrun_confirmation_units": expected_conf - len(unique_conf),
+        "calibration_max_updates": sum(int(r["updates"]) >= 800 for r in calibration_runs),
+        "confirmation_max_updates": sum(int(r["updates"]) >= 800 for r in confirmation_runs),
+        "selected_config_max_updates": selection_budget_limited,
+        "calibration_wall_hours": sum(float(r["total_training_wall_seconds"]) for r in calibration_runs) / 3600,
+        "confirmation_wall_hours": sum(float(r["total_training_wall_seconds"]) for r in confirmation_runs) / 3600,
+        "confirmation_routing_summary": routing_summary,
         "source_commit": next(iter(source_commits), None), "source_hash_manifest_count": len(next(iter(source_hash_maps), ())),
         "argmax_files_recomputed": len(audited), "metrics_match": True,
         "test_task_head_calls": sum(int(r.get("test_task_head_calls", 0)) for r in registry["attempts"].values()),
@@ -168,6 +203,10 @@ def aggregate_confirmation(successes: list[dict[str, Any]]) -> tuple[list[dict[s
     summary = []
     per_seed = []
     by_group: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
+    calibration_by_group: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
+    for row in successes:
+        if row["phase"] == "calibration":
+            calibration_by_group[(row["dataset"], row["model"])].append(row)
     for row in rows:
         by_group[(row["dataset"], row["model"])].append(row)
         per_seed.append({
@@ -188,6 +227,8 @@ def aggregate_confirmation(successes: list[dict[str, Any]]) -> tuple[list[dict[s
                 continue
             acc = np.array([100 * r["validation"]["accuracy"] for r in group], dtype=np.float64)
             f1 = np.array([100 * r["validation"]["macro_f1"] for r in group], dtype=np.float64)
+            calibration_wall_hours = float(sum(r["total_training_wall_seconds"] for r in calibration_by_group[(dataset, model)]) / 3600)
+            confirmation_wall_hours = float(sum(r["total_training_wall_seconds"] for r in group) / 3600)
             summary.append({
                 "dataset": dataset, "model": model,
                 "accuracy_mean_percent": float(acc.mean()), "accuracy_sd_percent": float(acc.std(ddof=0)),
@@ -196,7 +237,9 @@ def aggregate_confirmation(successes: list[dict[str, Any]]) -> tuple[list[dict[s
                 "active_task_head_parameters": int(group[0]["active_task_head_parameters"]),
                 "median_step_ms_mean": float(np.mean([r["median_step_ms"] for r in group])),
                 "peak_allocated_gib_max": float(max(r["peak_allocated_bytes"] or 0 for r in group)) / (1024 ** 3),
-                "total_wall_hours": float(sum(r["total_training_wall_seconds"] for r in group)) / 3600,
+                "calibration_wall_hours": calibration_wall_hours,
+                "confirmation_wall_hours": confirmation_wall_hours,
+                "total_formal_wall_hours": calibration_wall_hours + confirmation_wall_hours,
                 "max_updates_reached": sum(int(r["updates"]) >= 800 for r in group),
                 "early_stopped": sum(str(r["early_stop_reason"]).startswith("early_stop") for r in group),
             })
@@ -228,12 +271,21 @@ def write_summary_csv(path: Path, rows: list[dict[str, Any]]) -> None:
         return
     fields = list(rows[0].keys())
     with path.open("w", encoding="utf-8", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
         writer.writeheader(); writer.writerows(rows)
 
 
 def report_text(summary: list[dict[str, Any]], per_seed: list[dict[str, Any]], contrast_block: dict[str, Any], audit: dict[str, Any], selection: dict[str, Any], smoke: dict[str, Any], test_record: dict[str, Any]) -> str:
     summary_map = {(row["dataset"], row["model"]): row for row in summary}
+    calibration_wall_hours = sum(row["calibration_wall_hours"] for row in summary)
+    confirmation_wall_hours = sum(row["confirmation_wall_hours"] for row in summary)
+    equal_graph_contrasts = {row["contrast"]: row for row in contrast_block["contrasts"] if row["dataset"] == "equal-graph mean"}
+    selected_budget_limited = ", ".join(audit["selected_config_max_updates"]) or "none"
+    routing = audit["confirmation_routing_summary"]
+    routing_note = " ".join(
+        f"{model}: {routing[model]['profiles_with_any_expert_below_1pct']}/{routing[model]['layer_modality_profiles']} layer-modality profiles used some expert on <1% of nodes; the most common top-2 pair covered {routing[model]['mean_dominant_top2_pair_share'] * 100:.1f}% of nodes on average."
+        for model in ("G0", "G1") if model in routing
+    )
     lines = [
         "# MVCGE private NC v1 results", "",
         "## Scope and execution", "",
@@ -241,10 +293,12 @@ def report_text(summary: list[dict[str, Any]], per_seed: list[dict[str, Any]], c
         f"- Training source commit: `{audit['source_commit']}`.",
         f"- Formal cells: {audit['successful_calibration_units']}/{audit['expected_calibration_units']} calibration and {audit['successful_confirmation_units']}/{audit['expected_confirmation_units']} confirmation.",
         f"- Failed attempts: {audit['failed_attempts']}; retries: {audit['retry_attempts']}; unrun formal cells: {audit['unrun_calibration_units'] + audit['unrun_confirmation_units']}.",
+        f"- Update budget: {audit['calibration_max_updates']}/108 calibration cells reached 800 updates; {audit['confirmation_max_updates']}/36 confirmation cells reached 800. Selected calibration configs at the limit: {selected_budget_limited}.",
+        f"- Recorded GPU training wall time: {calibration_wall_hours:.2f} h for calibration, {confirmation_wall_hours:.2f} h for confirmation, {calibration_wall_hours + confirmation_wall_hours:.2f} h total.",
         f"- Train-only smoke: {sum(r['status'] == 'success' for r in smoke['runs'])}/9; test task-head calls {audit['test_task_head_calls']}; real LP runs {audit['real_lp_runs']}.",
         "- Metrics use the fixed class set 0–19 with `zero_division=0`; summary SD is population SD (`ddof=0`).", "",
         "## Confirmation results", "",
-        "| Dataset | Model | Validation Acc (%) | Macro-F1 (%) | Backbone/task head params | Mean median step (ms) | Max peak allocated (GiB) | Confirm wall (h) |",
+        "| Dataset | Model | Validation Acc (%) | Macro-F1 (%) | Backbone/task head params | Mean median step (ms) | Max peak allocated (GiB) | Cal/confirm/total wall (h) |",
         "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for dataset in DATASETS:
@@ -256,7 +310,8 @@ def report_text(summary: list[dict[str, Any]], per_seed: list[dict[str, Any]], c
                 f"| {dataset} | {model} | {row['accuracy_mean_percent']:.2f} ± {row['accuracy_sd_percent']:.2f} | "
                 f"{row['macro_f1_mean_percent']:.2f} ± {row['macro_f1_sd_percent']:.2f} | "
                 f"{row['active_backbone_parameters']:,}/{row['active_task_head_parameters']:,} | "
-                f"{row['median_step_ms_mean']:.2f} | {row['peak_allocated_gib_max']:.2f} | {row['total_wall_hours']:.2f} |"
+                f"{row['median_step_ms_mean']:.2f} | {row['peak_allocated_gib_max']:.2f} | "
+                f"{row['calibration_wall_hours']:.2f}/{row['confirmation_wall_hours']:.2f}/{row['total_formal_wall_hours']:.2f} |"
             )
     lines.extend(["", "### Confirmation seed records", "", "| Dataset | Model | Seed | LR/WD | Best step | Validation Acc/Macro-F1 (%) | Mean step (ms) |", "|---|---:|---:|---:|---:|---:|---:|"])
     for row in per_seed:
@@ -274,15 +329,17 @@ def report_text(summary: list[dict[str, Any]], per_seed: list[dict[str, Any]], c
         "", "## Training and routing diagnostics", "",
         "Calibration seed 102 is excluded from the confirmation table. Each result uses the checkpoint selected by validation correct count, then Macro-F1, then earlier step. Confirmation means compare independently selected LR/WD recipes; the contrasts are descriptive and do not isolate a single mechanism. U1 lacks the router/context parameters and is not capacity-matched to G1.", "",
         f"Across the smoke set, all {len(smoke['runs'])} runs completed three train-only updates. Allocated memory ranged from {min(r['peak_allocated_bytes'] for r in smoke['runs']) / (1024**3):.2f} to {max(r['peak_allocated_bytes'] for r in smoke['runs']) / (1024**3):.2f} GiB. No validation, test head, or real LP call occurred in smoke.", "",
-        "Router usage, noise, entropy, σ, polynomial coefficient magnitudes, and task-only router gradients are recorded per run in `run_registry.json`. These diagnostics describe the fitted training recipe and are not evidence of recovered semantic roles or causal specialization. Reaching 800 updates while validation continues to improve is flagged as a possibly insufficient budget; it is not interpreted as model failure.", "",
+        "Router usage, noise, entropy, σ, polynomial coefficient magnitudes, and task-only router gradients are recorded per run in `run_registry.json`. These diagnostics describe the fitted training recipe and are not evidence of recovered semantic roles or causal specialization. Cells reaching 800 updates are flagged as possibly budget-limited; they are not interpreted as model failure.", "",
+        f"Confirmation routing concentration: {routing_note} Top-2 concentration is a warning to inspect expert utility; it does not establish that an expert is functionally dead because every expert is computed and the summary does not ablate experts.", "",
         "## Implementation facts and protocol differences", "",
         "A0 reuses the previous S0 B1 model, 768-D padded readout, path CE, reconstruction and pair losses. The selected S0 calibration LR/WD values were verified from its committed selection lock and already lie in the new grid. The current common optimizer protocol uses gradient clip 5, while the previous v2 S-stage used clip 1; this round therefore reports a fresh A0 recipe, not a bitwise reproduction of historical checkpoints.", "",
         "The new encoders use sparse P-derived basis operators built once from the canonical loop-free loader edge list, then add one self-loop for their own normalized propagation. All 768-D frozen features are used as loaded. The loader exposes no edge weights or missing-modality metadata; all observed nodes are treated as having both modalities. No missingness performance is established.", "",
         "## Self-audit", "",
         f"The saved train/validation argmax files were independently re-read by this audit script and their sample counts, correct counts, full 20×20 confusion matrices, accuracy and Macro-F1 matched the registry (float metrics tolerance 1e-7). Prediction and checkpoint hashes, split IDs, source commit/hashes and calibration selection were checked. Result: `{audit['metrics_match']}`.", "",
         "The runtime call path invokes the task head only with train IDs for loss and validation IDs for selection; final evaluation uses train and validation IDs separately. The NC runner loads `task=nc`; there is no real LP task call. A synthetic `LinkPredictor.score_pairs` test only verifies the encoder/decoder interface.", "",
-        f"Functional suite: {test_record.get('passed', 'unknown')} passed, {test_record.get('failed', 'unknown')} failed. This is the authors' self-audit, not an independent review.", "",
+        f"Functional suite: {test_record.get('functional_test_passed', 'unknown')} passed, {test_record.get('functional_test_failed', 'unknown')} failed. This is the authors' self-audit, not an independent review.", "",
         "## Interpretation", "",
+        f"**Development decision: evidence insufficient to expand G1 unchanged.** Equal-graph confirmation differences are G1−A0 {equal_graph_contrasts['G1-A0']['accuracy_delta_pp']:+.2f} pp Acc / {equal_graph_contrasts['G1-A0']['macro_f1_delta_pp']:+.2f} pp Macro-F1; G1−G0 {equal_graph_contrasts['G1-G0']['accuracy_delta_pp']:+.2f}/{equal_graph_contrasts['G1-G0']['macro_f1_delta_pp']:+.2f} pp; and G1−U1 {equal_graph_contrasts['G1-U1']['accuracy_delta_pp']:+.2f}/{equal_graph_contrasts['G1-U1']['macro_f1_delta_pp']:+.2f} pp. Per-graph reversals and prior validation exposure limit a broad conclusion; the results do not identify one mechanism for a targeted correction.", "",
         "The evidence supports only a decision about whether these complete training recipes merit another bounded development round. It does not establish NC/LP unified performance, independent generalization, semantic disentanglement, or statistical significance. Interpret the per-graph results, stability, resource use and router gradient diagnostics together; do not infer the mechanism from a single gate or fit statistic.",
     ])
     return "\n".join(lines) + "\n"
@@ -309,6 +366,7 @@ def run_audit() -> dict[str, Any]:
             "expected_calibration_units", "successful_calibration_units", "expected_confirmation_units",
             "successful_confirmation_units", "successful_attempts_including_retries", "failed_attempts",
             "retry_attempts", "unrun_calibration_units", "unrun_confirmation_units",
+            "calibration_max_updates", "confirmation_max_updates", "selected_config_max_updates",
         )},
         "attempt_status_counts": dict(attempt_status),
         "metrics_from_argmax": audit["metrics_match"], "argmax_run_count": audit["argmax_files_recomputed"],
@@ -362,7 +420,8 @@ def run_audit() -> dict[str, Any]:
     write_json(REPORT_ROOT / "manifest.json", manifest)
     audit["summary_rows"] = summary
     audit["contrasts"] = contrast_block["contrasts"]
-    write_json(REPORT_ROOT / "audit_result.json", audit)
+    persisted_audit = {key: value for key, value in audit.items() if key != "audited_runs"}
+    write_json(REPORT_ROOT / "audit_result.json", persisted_audit)
     return audit
 
 

@@ -1,10 +1,44 @@
 {
-  "study": "mvcge_private_nc_v1",
-  "updated_utc": "2026-10-08T01:51:46+00:00",
-  "functional_test_command": "/home/m3/miniconda3/envs/yhf_env/bin/python -m pytest -q tests/test_mvcge_private_nc_v1.py",
-  "functional_test_passed": 16,
-  "functional_test_failed": 0,
-  "functional_test_status": "passed",
+  "audit": {
+    "argmax_run_count": 144,
+    "attempt_status_counts": {
+      "success": 144
+    },
+    "confirmation_configuration_lock": "passed",
+    "eval_clean_and_state_immutability": "covered_by_functional_test_suite",
+    "independent_reviewer": false,
+    "metrics_from_argmax": true,
+    "parameter_groups_and_gradients": "covered_by_functional_test_suite",
+    "prediction_and_checkpoint_hashes": "passed",
+    "real_lp_runs": 0,
+    "run_matrix": {
+      "calibration_max_updates": 20,
+      "confirmation_max_updates": 0,
+      "expected_calibration_units": 108,
+      "expected_confirmation_units": 36,
+      "failed_attempts": 0,
+      "retry_attempts": 0,
+      "selected_config_max_updates": [
+        "Grocery/G0",
+        "Grocery/G1",
+        "Reddit-S/U1"
+      ],
+      "successful_attempts_including_retries": 144,
+      "successful_calibration_units": 108,
+      "successful_confirmation_units": 36,
+      "unrun_calibration_units": 0,
+      "unrun_confirmation_units": 0
+    },
+    "runtime_task_head_indices": [
+      "train_idx",
+      "val_idx"
+    ],
+    "selection_lock_recomputed": "passed",
+    "source_commit_and_source_hashes_singleton": "passed",
+    "split_id_and_input_hashes": "passed",
+    "test_metric_calls": 0
+  },
+  "audited_utc": "2026-10-08T04:08:47.131185+00:00",
   "coverage": [
     "encoder output, NC head and synthetic existing endpoint-product LP decoder shapes/gradients",
     "sparse PC basis versus dense graph calculation through order Q=3",
@@ -23,18 +57,38 @@
     "router sigma initialization and deterministic explicit noise stream",
     "historical S0 B1 backbone, 768-D head and task-loss interface"
   ],
-  "smoke": {
-    "status": "passed",
-    "cells": 9,
-    "updates_per_cell": 3,
-    "all_train_only": true,
-    "validation_called": false,
-    "test_task_head_calls": 0,
-    "real_lp_runs": 0,
-    "oom_count": 0,
+  "formal_runs": {
+    "calibration_expected": 108,
+    "calibration_successful": 108,
+    "confirmation_expected": 36,
+    "confirmation_successful": 36,
     "device": "CUDA_VISIBLE_DEVICES=0, logical cuda:0",
-    "physical_gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce"
+    "failed_attempts": 0,
+    "physical_gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+    "real_lp_runs": 0,
+    "retry_attempts": 0,
+    "test_task_head_calls": 0,
+    "unrun_units": 0
   },
-  "formal_runs_started": 0,
+  "formal_runs_started": 144,
+  "functional_test_command": "/home/m3/miniconda3/envs/yhf_env/bin/python -m pytest -q tests/test_mvcge_private_nc_v1.py",
+  "functional_test_failed": 0,
+  "functional_test_passed": 16,
+  "functional_test_status": "passed",
+  "passed_audit": true,
+  "smoke": {
+    "all_train_only": true,
+    "cells": 9,
+    "device": "CUDA_VISIBLE_DEVICES=0, logical cuda:0",
+    "oom_count": 0,
+    "physical_gpu_uuid": "GPU-28bf6c52-0671-4e90-e88b-4e47457b7cce",
+    "real_lp_runs": 0,
+    "status": "passed",
+    "test_task_head_calls": 0,
+    "updates_per_cell": 3,
+    "validation_called": false
+  },
+  "study": "mvcge_private_nc_v1",
+  "updated_utc": "2026-10-08T04:07:34+00:00",
   "warning": "PyTorch Geometric emitted an unrelated distributed-package deprecation warning during pytest collection."
 }

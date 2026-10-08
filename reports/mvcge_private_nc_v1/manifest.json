@@ -1,0 +1,626 @@
+{
+  "dataset_inputs": {
+    "Grocery": {
+      "graph": "af203035d655275a20da353f481e67f4b595eeb73ef1d397d0d9b603cefc70d7",
+      "image_features": "ac50f63312488f3e94271532e7fd863c27a332c6ca8a4b9cc801afb9ce0b2470",
+      "nc_split": "3ca4581592fcb705b42672b18412375d33bf6109c72e4714786066878a54d58e",
+      "text_features": "b67ab7600b842807b53805e31b9d969d860e9c48b1a56f76799d44367f33c516"
+    },
+    "Movies": {
+      "graph": "f6798e6951f29b1d76aa7938684f44d502600c31f3a5987722f5bc450511700f",
+      "image_features": "c422191f1a7cdc85598f00b52e0f60a02f65d6a48548e9c42a8530b3e572dfeb",
+      "nc_split": "9089d5eb1d5a3edeae46bd9296e4f85815fccf8e489452bc87a2126a88546211",
+      "text_features": "38cc09ef3192eac8a022303fd48a9954bea9c3064078846aa5d2db31e137eece"
+    },
+    "Reddit-S": {
+      "graph": "06af9e010df31f5a6537afa5c96f5cbdb9687b5722c1a1acc80d094bd216309b",
+      "image_features": "936191dcf3c06e367674cfedd2e80fd87e3120485a9f45acb8ff48e7b3bad58b",
+      "nc_split": "2154e82ef061de9d3c018aa19674ea6e2220953f272bedebb1559396e43750a5",
+      "text_features": "da41d78a8b65902ee902295949da437228d7b6d6de303a748f6c324072d65abd"
+    }
+  },
+  "files": {
+    "docs/mvcge_private_nc_v1/intake.md": "dec40e980ea00566c0e75f3f4e4bc74ebc9d6f629699b67642b04afca805e3b0",
+    "docs/mvcge_private_nc_v1/matrix.json": "a0c5a32f6edaa640ac141350c0d5c1bfa52b9be89e8ca90cbbc60147c3663b9e",
+    "docs/mvcge_private_nc_v1/model_spec.md": "ad90d59566974473bc16e3b1e625a03acf42c65280db39499e67e37cc528aa93",
+    "docs/mvcge_private_nc_v1/protocol.md": "43b15cdd81fd98afc06e92307f94c53e4a077c6af30789572baeac020d54c698",
+    "reports/mvcge_private_nc_v1/data_profile.json": "a633d03b36a8421771383d0f77042f1365ec68d5cd1918e3c9460434b0521f59",
+    "reports/mvcge_private_nc_v1/environment_profile.json": "02b2f49998dd89b0cb9c1c635bf0679407af9bf49dd85269c5fae18c1350f86f",
+    "reports/mvcge_private_nc_v1/report.md": "3ad0616b360b47ad403ecc63f7b95008620bcbf5a36877c5c7c2e243cd802bd6",
+    "reports/mvcge_private_nc_v1/review.md": "1a8451ac9f5d5537e89e08e29664cb7f806c354448b38969a676b492b8ac0daf",
+    "reports/mvcge_private_nc_v1/run_registry.json": "c2a7852bbdf8c63e6ef1194bb028925350336f8b6b2d0c63c4dbaea7a47795ef",
+    "reports/mvcge_private_nc_v1/run_results.jsonl": "4ca8d8ebfa8fd20afcda329f44fc49f79aaa25fb88667537d125bd06539f2824",
+    "reports/mvcge_private_nc_v1/selection_lock.json": "7bece7f6e5cb64db129d543189715af32201c899d39dce2cacb7e7f3166b9cca",
+    "reports/mvcge_private_nc_v1/smoke_summary.json": "efb5c1141bdfd49383fc29a8bc9de22297a700cf2573dd8de775894b5e55caf5",
+    "reports/mvcge_private_nc_v1/summary.csv": "4e3be0c247fd755814668e50eda617d49563ff4a026cb21581fb7302004c3f61",
+    "reports/mvcge_private_nc_v1/test_record.json": "52e721b2ac655d8fd6e9e9a0b1fad323c39cba1174db9a068e44e12f115868c6",
+    "scripts/audit_mvcge_private_nc_v1.py": "3edbba363089da0df5a70642a2473d745b0dd3ac8bcac35976ee36676359e893",
+    "scripts/run_mvcge_private_nc_v1.py": "128abdfc7098196cce9ed9b621984d14522a1eb166dc744ddcb5d9adcba224bc",
+    "src/models/mvcge_private_nc_v1.py": "9228633d53135c01508a0babfd6a240a49f7f5bd1efb8705faad47ba03bf0560",
+    "tests/test_mvcge_private_nc_v1.py": "a5b3df7060dd50d9866aac6d31ca7550f2202b7acb8fa343917fa8848f370c31"
+  },
+  "final_head_at_audit": "d8d4e45b2d511363defea256e1796b48fd5ae3d2",
+  "no_data_or_checkpoint_files_staged_by_manifest": true,
+  "output_artifacts": {
+    "calibration_Grocery_A0_seed102_cfg00": {
+      "checkpoint_sha256": "2bc380578fe69c5f325bdae04ff7941c3e44164d8de6ec1b04fc2cb52206e04e",
+      "prediction_sha256": "50d9d116bfe1520b844379d1d4d040d9de456e09c7053a6d035c7b7160ce4e04"
+    },
+    "calibration_Grocery_A0_seed102_cfg01": {
+      "checkpoint_sha256": "34659195bfd106e2681a978090f99fc3e06fba1f31c310dfe1de3d72d3978358",
+      "prediction_sha256": "d84e964b4d2010207aa8cfb825075c5ea14852575151ef424edb2cfbfcf7c939"
+    },
+    "calibration_Grocery_A0_seed102_cfg02": {
+      "checkpoint_sha256": "ee42109f1d8d7149d99d7c89f46a37fc7f39a4790f2799ba89f7bdbfb90f2f29",
+      "prediction_sha256": "07f8c1b614fbdbd39eea98f95d9ef0e0e99d3bd234a9db3a4a83582bab8e10f4"
+    },
+    "calibration_Grocery_A0_seed102_cfg03": {
+      "checkpoint_sha256": "4e750f68cce25f2adbcb9241776e0eae40c05da36dbc528486817f99f0d8ba90",
+      "prediction_sha256": "75cf06618570e6907cb29bc28b40c8d01b40ac25f12e1d4ff6482f5992df6049"
+    },
+    "calibration_Grocery_A0_seed102_cfg04": {
+      "checkpoint_sha256": "a37207dc0868973f7c9d66237b64e4aa4315bd4847c8036cfd826e2b5cd465a8",
+      "prediction_sha256": "133731188490bb5ec2854b2b399dd247e5fa8002d9c14dcb17621b75c0e3d96b"
+    },
+    "calibration_Grocery_A0_seed102_cfg05": {
+      "checkpoint_sha256": "2740e492b95179a01b5fa22e85555d05034ee1ef38735ac071d7184c6650393e",
+      "prediction_sha256": "bae781c8624b4663e005d3127a44c77e4547fbdcbf01b2c1f2ddcf879e9f5054"
+    },
+    "calibration_Grocery_A0_seed102_cfg06": {
+      "checkpoint_sha256": "cc0d499e3117df5db86931bf122bacbe389d15acfd60f5063525f023b60e00f6",
+      "prediction_sha256": "5fefb6799a4246dfeda60074114c149d78eccba36a6b28937be2635f932bf556"
+    },
+    "calibration_Grocery_A0_seed102_cfg07": {
+      "checkpoint_sha256": "330b96d474345212dbf793206e035c10fffdb77aae1729887be15ae573ef9e7f",
+      "prediction_sha256": "fab1a522171918b8a09070aa72b266964055612a48ea2ab84a7decce7f9aa504"
+    },
+    "calibration_Grocery_A0_seed102_cfg08": {
+      "checkpoint_sha256": "909825a8b4f96818d5064703a96510e9b674f3b42775e15e8ee8f4f7129cf11d",
+      "prediction_sha256": "2131529f39f2e5790af95f7efb4ae81996bda65f994bbacd177f4a5725004d8f"
+    },
+    "calibration_Grocery_G0_seed102_cfg00": {
+      "checkpoint_sha256": "297f8a1a5824d423af3a786dada4bbb1380bf6f4a7b5ba95f7f202f33de66d6a",
+      "prediction_sha256": "a0d3826ec7960eee43d49debc49b4a235640b475b189fd992cad4987e0761a57"
+    },
+    "calibration_Grocery_G0_seed102_cfg01": {
+      "checkpoint_sha256": "3cfbab25dc10c9a270577e38c4f2298e8e4aab853b4ed4399c96e59bf2211beb",
+      "prediction_sha256": "dfb912085a97593643fa56465cefd4c3c39ac77d8b2a5109f92b03c6341606ea"
+    },
+    "calibration_Grocery_G0_seed102_cfg02": {
+      "checkpoint_sha256": "8de61a39c26579831b936849c3da1444dc4d17b794f914cc5fb4e7f41d99d2e4",
+      "prediction_sha256": "5dbbb18b9a043f6b8e83a7bb19f9ed8a2f7ea8ed9dc630b2fd6263261b4fd87e"
+    },
+    "calibration_Grocery_G0_seed102_cfg03": {
+      "checkpoint_sha256": "f4f7efbc9a6bfb86c9921f6dd054cc3bd7d765675fc28085d8fef782d2ef0694",
+      "prediction_sha256": "2743e3a9a3153faad50d4c840e786ae848b8c64d23924215ee514d7f0d23d144"
+    },
+    "calibration_Grocery_G0_seed102_cfg04": {
+      "checkpoint_sha256": "c8fb583861844a54e617ebcba307c8d77385181c054e3f2f7b7164b0f51ad1e1",
+      "prediction_sha256": "74adf03b81c7daf22f52b79563f8993352e755a263b120d405de01d4f7584a60"
+    },
+    "calibration_Grocery_G0_seed102_cfg05": {
+      "checkpoint_sha256": "899c07b886abb1522a60aebc4330b2b7ceeef445bb4fe77868261e6e5484759a",
+      "prediction_sha256": "daa9e683fd6f551752452ecdaf01a337811d4abf291ebfc79ac6fbedc2876f81"
+    },
+    "calibration_Grocery_G0_seed102_cfg06": {
+      "checkpoint_sha256": "5c52e079e7480fa8cfb9474d01414308e8d46e9fea2d6bd0505e0c335dd32dcb",
+      "prediction_sha256": "da284932f6ee0c3672c9ce223bdec50dbae7bc57b3976dd56c081a04cc209746"
+    },
+    "calibration_Grocery_G0_seed102_cfg07": {
+      "checkpoint_sha256": "d5fdced034d2d36b966cab138cfebb3412e10164701c29a193c7f48cb5343bf4",
+      "prediction_sha256": "e08246b19a554b303f9a4d4bc306d2a9420779fb2598ba98ad4665ca7938f303"
+    },
+    "calibration_Grocery_G0_seed102_cfg08": {
+      "checkpoint_sha256": "313ddb4ea904651bb6de1885bf56564a0b41fa69457c215d86d783a1ea1b6975",
+      "prediction_sha256": "15648ca8c5b0803f44ce86d719843111ed9e150abf7d0cbff1d47f9f1aa71624"
+    },
+    "calibration_Grocery_G1_seed102_cfg00": {
+      "checkpoint_sha256": "9ccfd43399e3f0b62246672dc5038e7b2f0d131d487a86680b36b5886882f551",
+      "prediction_sha256": "4a740708904f908c7f96f646c3aed9a6339cd06a51fad3c08fa0c8e407b0e7e7"
+    },
+    "calibration_Grocery_G1_seed102_cfg01": {
+      "checkpoint_sha256": "98d31ba9cb4475f8ffbef2d4c8219b89721fd469e7e30b8760e7f69ccfc5a6da",
+      "prediction_sha256": "9e8820960e827fc7d7a46a81ed64b1f80b02c0438552c9c8079d52a867004df8"
+    },
+    "calibration_Grocery_G1_seed102_cfg02": {
+      "checkpoint_sha256": "f062664d2ea392d2fa9775597812bcdb10d42a7315c7d7e0a0ddcd0e744e4636",
+      "prediction_sha256": "67414e86d669cdeed6bfda8a8bc0191508cc78f41634461daa0bb671092458b3"
+    },
+    "calibration_Grocery_G1_seed102_cfg03": {
+      "checkpoint_sha256": "3347f298f311a0fc448dac4d6c207be8698a37a9ed747f7290a039d0649eb0a6",
+      "prediction_sha256": "c87033ce410ef166531645fa63f69c10c85d48adfe1d0c2a573b4d89752de64c"
+    },
+    "calibration_Grocery_G1_seed102_cfg04": {
+      "checkpoint_sha256": "af611d0257c9f864d3dc8889c7ffca5bedd6eaeba5e15544135e96d8adb41b3c",
+      "prediction_sha256": "4b2d8248abf0dc48a284b044534cab4920282e2a765914d51b1a371f5a0dcdc2"
+    },
+    "calibration_Grocery_G1_seed102_cfg05": {
+      "checkpoint_sha256": "e526112f787b86a05b2323f86f0f9c0c5fecc05498d4239ad819c2a6afe72a04",
+      "prediction_sha256": "f8c1a19e1e0c39a324c6731e04225cfa8eeb60333fe7d29a26e81d9fc0d06674"
+    },
+    "calibration_Grocery_G1_seed102_cfg06": {
+      "checkpoint_sha256": "1e7d13adfe2faabf04434809bbe7bf33975faddfc4cc92d51feff8e0547a0c53",
+      "prediction_sha256": "bde916c512aabc575fb39bbc197f3da41853e1e7491aca46d1a24b63d717aeec"
+    },
+    "calibration_Grocery_G1_seed102_cfg07": {
+      "checkpoint_sha256": "85994ec8039340fcafab8d1668678a12ad1301035390852b75d8e00522039543",
+      "prediction_sha256": "b1564639bd45319984ee72aa7ffdb281115c1ff9d016e30bc3262e2a22bdd503"
+    },
+    "calibration_Grocery_G1_seed102_cfg08": {
+      "checkpoint_sha256": "a2ca2bf78e6f4cbdf480719dd420aa9a617035319c2887de527ec27024950ea6",
+      "prediction_sha256": "33a7adcb3d350dff969841eb406f0785adc41553cd9ed8164c42700890d43af2"
+    },
+    "calibration_Grocery_U1_seed102_cfg00": {
+      "checkpoint_sha256": "78ad5cc9da3000b1ffb6a155cc82e0c662eacdb1dfd3f3885f478fffb89ee4a4",
+      "prediction_sha256": "ab1577bc10260fa4556ba544fca4be4c23c1740e35a6e476c04299a6289f200c"
+    },
+    "calibration_Grocery_U1_seed102_cfg01": {
+      "checkpoint_sha256": "e6a57f3a2206f64237edb72f43612a1e0403a8be91fdd47fc72ce293be9967b2",
+      "prediction_sha256": "ab1577bc10260fa4556ba544fca4be4c23c1740e35a6e476c04299a6289f200c"
+    },
+    "calibration_Grocery_U1_seed102_cfg02": {
+      "checkpoint_sha256": "7eb294208849678290dc4e0a78989b089cedbc59cc734779e400da96aae57b45",
+      "prediction_sha256": "ab1577bc10260fa4556ba544fca4be4c23c1740e35a6e476c04299a6289f200c"
+    },
+    "calibration_Grocery_U1_seed102_cfg03": {
+      "checkpoint_sha256": "19c284541a72669f0ad902ef9b7b7889b04debe772c6ff3b553459c9cfd1f349",
+      "prediction_sha256": "a15f4b4ff2e6a2cf592d99f4bb90cea2067d8efa8b61222090f3ac8c85643deb"
+    },
+    "calibration_Grocery_U1_seed102_cfg04": {
+      "checkpoint_sha256": "0224e44004f1dd9abbc8aedce95be57b8959bb2be67fa0203a1b7db265366558",
+      "prediction_sha256": "a15f4b4ff2e6a2cf592d99f4bb90cea2067d8efa8b61222090f3ac8c85643deb"
+    },
+    "calibration_Grocery_U1_seed102_cfg05": {
+      "checkpoint_sha256": "e62e7b77f3b345869bc25dc69ecc8578973b7a7f2dac0a7f8271403a305edb47",
+      "prediction_sha256": "a15f4b4ff2e6a2cf592d99f4bb90cea2067d8efa8b61222090f3ac8c85643deb"
+    },
+    "calibration_Grocery_U1_seed102_cfg06": {
+      "checkpoint_sha256": "522c1162ee5315db6f4cdd38adc757880f0f820a0a3f03d23570913c843db57c",
+      "prediction_sha256": "6c07afdeeec8d6946c27e0468db2ae7cc04f0252082f87dad27925f6bf914eff"
+    },
+    "calibration_Grocery_U1_seed102_cfg07": {
+      "checkpoint_sha256": "b54614d79bcf95bedf5fe6127fca5b61ad6e1a7c977c9fc36a64d6bf73bea956",
+      "prediction_sha256": "b70f509b2d6d77cab820c245550bb0e3a66c9bed8519823cd6c8412d358fcaa5"
+    },
+    "calibration_Grocery_U1_seed102_cfg08": {
+      "checkpoint_sha256": "7e5ca7c956754b448635c8eb0fcdb31df939ccac05f71b2e73f9ab92e895a3c2",
+      "prediction_sha256": "830f85e43bd14924fac5f451f63432fa1927cbdeafa0d7e54e0ff890b887933b"
+    },
+    "calibration_Movies_A0_seed102_cfg00": {
+      "checkpoint_sha256": "5398e2487e5972de8e4070e8a903ff88c44f62565e20d9460c21cadb11778444",
+      "prediction_sha256": "9957c5611bfa95bbbd98cb12fc10d85b067928a08740d4495f30d5f3e077616e"
+    },
+    "calibration_Movies_A0_seed102_cfg01": {
+      "checkpoint_sha256": "26355ac8f82455523ee194e5a36d2c9cf85002dfe882150fbffe0fbeb408ad50",
+      "prediction_sha256": "9957c5611bfa95bbbd98cb12fc10d85b067928a08740d4495f30d5f3e077616e"
+    },
+    "calibration_Movies_A0_seed102_cfg02": {
+      "checkpoint_sha256": "44bf3011916b9b7ae83af8dd01ed320d0b63061bc6e0324ad15016204f41d470",
+      "prediction_sha256": "c5b7e8d5bf49ae3919d6de9c8acebdd0142d92fb011fa66ae2dd395d6881e690"
+    },
+    "calibration_Movies_A0_seed102_cfg03": {
+      "checkpoint_sha256": "17b0f617884b379a84fe64e986be1926b655048cfa729225066cf83409b8cc6a",
+      "prediction_sha256": "9eb9411eabc70672317be9fb690dd07e4542441899d7fb38a3a799b79406ba6d"
+    },
+    "calibration_Movies_A0_seed102_cfg04": {
+      "checkpoint_sha256": "d251cc5121199cb584d0646d619cb8ece4c9a24a3a76008d907f9705aef27b35",
+      "prediction_sha256": "9eb9411eabc70672317be9fb690dd07e4542441899d7fb38a3a799b79406ba6d"
+    },
+    "calibration_Movies_A0_seed102_cfg05": {
+      "checkpoint_sha256": "8fe20c3e2d8b5564f834a022726459dd9e3636acbd4a3a5a9d9c24dd53036587",
+      "prediction_sha256": "06bac3055c33c2a80c02e59b2af2f8f5926c849b1596f277a4e5c723610397ae"
+    },
+    "calibration_Movies_A0_seed102_cfg06": {
+      "checkpoint_sha256": "e1006d63586f09bf698d16f33a4e4d95c51d8ee0aa7871894403d2646447e556",
+      "prediction_sha256": "6350664a6b25d1bda3e3aabc6a6044d1b486aa6b91395135d952fbf4d611dba1"
+    },
+    "calibration_Movies_A0_seed102_cfg07": {
+      "checkpoint_sha256": "888ef7b09951fafa046908ef2916a5c4111c21a4d1a4d79117d2e0f15a37246a",
+      "prediction_sha256": "b7a6f99b08a9c9a86c32cb0a5c0762798f8a66c98dd2f82b7b153d8538d12341"
+    },
+    "calibration_Movies_A0_seed102_cfg08": {
+      "checkpoint_sha256": "4dec62072aa32673a486175a0d4a30957b91f1a75ec29cc28216b77f375c7a6f",
+      "prediction_sha256": "eab445e1648c03a58e40bbfde1347753298a360527710040486557c8ca40325e"
+    },
+    "calibration_Movies_G0_seed102_cfg00": {
+      "checkpoint_sha256": "744c25dee87da310a9dbae66a05ca7b546ae7d8e60237d2706a42b3aa250d716",
+      "prediction_sha256": "186ceeb4590f0c0cf60a2cfcc42ee2c21dba8e27adf41e03d63b9f9845e17543"
+    },
+    "calibration_Movies_G0_seed102_cfg01": {
+      "checkpoint_sha256": "cc2c45386e0221d417937dd93a31152c27f5ee8a56fdffda101ccb5f47398237",
+      "prediction_sha256": "fb598e1bea78d50132a43ca05be99391a738df2798f109bc25807c3b3f460197"
+    },
+    "calibration_Movies_G0_seed102_cfg02": {
+      "checkpoint_sha256": "1e17acc5c85aba74f640d38243c0d62da0a4d0a5e97a2f03085ed63cef7ab657",
+      "prediction_sha256": "8d883020a15fcff3c65ada6d9e23627406f03791a6f73e25b1cdfe226b2e40fd"
+    },
+    "calibration_Movies_G0_seed102_cfg03": {
+      "checkpoint_sha256": "f3640b61e84eb73ed381a9560843a511718ea575ef8357089cd127f05f045719",
+      "prediction_sha256": "d56e6087b4fdb39ce16b1c759356502b576f19f8e002996a3a0564ced6bdaa58"
+    },
+    "calibration_Movies_G0_seed102_cfg04": {
+      "checkpoint_sha256": "56a51dc7199bd0a4b79c4198327bc05f233fbb9cb58f226e0db192fc5226a796",
+      "prediction_sha256": "16c14cf7c4a52f30c429eb7103d233413f973be91d26f566b746c0494cf81f7d"
+    },
+    "calibration_Movies_G0_seed102_cfg05": {
+      "checkpoint_sha256": "26bcba2032fe3ee44aaa6554962936ee1c1098dc9cc58082ed4d20f50e0786fa",
+      "prediction_sha256": "5db6c2fc1b585c4904906107c17af7fd99e2a73407b81b3630649d7039430828"
+    },
+    "calibration_Movies_G0_seed102_cfg06": {
+      "checkpoint_sha256": "46f9e12229856d88049275a6754372c5671eea394944cf0d0185e8a6ee23a7f9",
+      "prediction_sha256": "ec21bbb785f564a8c24580ac79b0cca391bc035e0091f90a34cac2d7c4813864"
+    },
+    "calibration_Movies_G0_seed102_cfg07": {
+      "checkpoint_sha256": "f631a3d13ba0bde4bccecb1728d3e34d0be036e9b3c30e3a5646dea6c81a8d22",
+      "prediction_sha256": "4889710a72b453616b363572d4516e76a6e73a2a8615667c800dd337adc86444"
+    },
+    "calibration_Movies_G0_seed102_cfg08": {
+      "checkpoint_sha256": "46b7c367a692b2146de556323ae21a14b7b2fe5121cd3ff30fbeb696abcd7a8c",
+      "prediction_sha256": "0192ee5d0fc8b2de7cd1e0c7d646ee4ce06af3c8de7a1336f622de0ed4983f96"
+    },
+    "calibration_Movies_G1_seed102_cfg00": {
+      "checkpoint_sha256": "33880533fb710f8f327eef77e846afa263ea0932f9c152cfb909123c056ddee3",
+      "prediction_sha256": "f4aeaeddd6c49481c4ca4fd9be2c4391be16da40d45fb47388a199b21cbfd9e0"
+    },
+    "calibration_Movies_G1_seed102_cfg01": {
+      "checkpoint_sha256": "4e13ba5e5fb9881dd824411a74fd94a728f98cc8e6eab432ec0cf65a158057aa",
+      "prediction_sha256": "49cc806c0ac31b16c9337d3fbd27767e66c6cba147bf46519983d89210e1e368"
+    },
+    "calibration_Movies_G1_seed102_cfg02": {
+      "checkpoint_sha256": "2d47b4b1bd00c63f3e6a2ef1a96dedd5a724adb0c62a05b270f04c4a263ed5d6",
+      "prediction_sha256": "75c8ed0a823a7138acdad5816b7d4e0935b87658e0dac092c6adbab9770bf25f"
+    },
+    "calibration_Movies_G1_seed102_cfg03": {
+      "checkpoint_sha256": "fed403e2388f601902f40a6ca11e0b590e68a9aecb2e4fa4fbe68b9004a4f5a8",
+      "prediction_sha256": "acaffcea326e78d3fadda9520478253a1289fed3ae53237e1d72d44c54a1ffea"
+    },
+    "calibration_Movies_G1_seed102_cfg04": {
+      "checkpoint_sha256": "b34f1ba2b8e9283fce4eb759cd8c6d5f65a2a87f9dc432405c8abf76331af3f4",
+      "prediction_sha256": "ed708fa82f3c024a630f2fadb0d83b92c81d8e7b6e92d6a961a142321bf4a7fd"
+    },
+    "calibration_Movies_G1_seed102_cfg05": {
+      "checkpoint_sha256": "e0a4ddcc8269e5dd6e2a272699315032b7ff5ff6ee5d9587b9dec4d12546a1ca",
+      "prediction_sha256": "192533e8fadb12199bf52ff152edb1f0e5873312974f85698ce28afe4283b728"
+    },
+    "calibration_Movies_G1_seed102_cfg06": {
+      "checkpoint_sha256": "5411015420d79283c4e48f502f2a026c6016e5699ceff135c8642e6a7ef3fc31",
+      "prediction_sha256": "037d400446cfa87ea936ede17c34a0c16084bf9ff2997f9a4179cde3812ae232"
+    },
+    "calibration_Movies_G1_seed102_cfg07": {
+      "checkpoint_sha256": "2c67fd3a2c3630de145c78f53a687367823a0a6134d9d0b70dc3e03f4c1945b9",
+      "prediction_sha256": "71e0bcd1633f64f26bb1f4a1060fc156bfe6c73e0ce7caa8db567bd3003ac982"
+    },
+    "calibration_Movies_G1_seed102_cfg08": {
+      "checkpoint_sha256": "65616139e2e3bd5895afa0875ef4b7657e53c61c087dc90ab62ba0046889cb99",
+      "prediction_sha256": "5138a0806cd65b9d2ebf1fc401851a8340e21169660d57948ef1f419ded802cc"
+    },
+    "calibration_Movies_U1_seed102_cfg00": {
+      "checkpoint_sha256": "a53e9c036bf28b48afa7bab45626070667472ec12f132f658de489bb34fd08f0",
+      "prediction_sha256": "b0584b8b570e03807e6e1cd113b89c155fd61dd6edd17ec78d61506a0759b1e4"
+    },
+    "calibration_Movies_U1_seed102_cfg01": {
+      "checkpoint_sha256": "cfdec6aa38c689bc34326eab0b656364d86fb30760f0517c2259f7b65a76e0c5",
+      "prediction_sha256": "b0584b8b570e03807e6e1cd113b89c155fd61dd6edd17ec78d61506a0759b1e4"
+    },
+    "calibration_Movies_U1_seed102_cfg02": {
+      "checkpoint_sha256": "bdc822cfa444be28c3a4eaaefc21399487eeeef072c62b75da3c27102e83f87c",
+      "prediction_sha256": "b8dbae4f75fbc406d2c99af7a2d0f4d46c2a9a101cc4d6c0f26b9f7dcde746be"
+    },
+    "calibration_Movies_U1_seed102_cfg03": {
+      "checkpoint_sha256": "257de5ba619d42393d47ac1715c98bb48dc6eb952e471ec80e0530069e88b97b",
+      "prediction_sha256": "a00bd51f3aafe3a1bb610f7cbeb6cce258966424346ed15fb6670adadea30429"
+    },
+    "calibration_Movies_U1_seed102_cfg04": {
+      "checkpoint_sha256": "c874d6dfe9fc5a60e5e8f8e3e54541a1069f97615e0c30ff6ff8de95904954db",
+      "prediction_sha256": "192b508ebf8b23f829a253f8fbd4ac644c1fbc3f2005160bcf754c2726bcdd7e"
+    },
+    "calibration_Movies_U1_seed102_cfg05": {
+      "checkpoint_sha256": "e2cf368632a38fa194fe143b5f78e1cd5ae9a8614c441b264a0e5f5cb42d6438",
+      "prediction_sha256": "bc62ab12b7a61dbea831df2b380db9298d8b2864d0a414943e0354cf5f0d0d4c"
+    },
+    "calibration_Movies_U1_seed102_cfg06": {
+      "checkpoint_sha256": "98d314064b1f2e5680976d9b547ba099c369226f88b11ba604b359f8c15aa383",
+      "prediction_sha256": "92c2f3d545d20bbb5690e2aefa18e4d8f09d220dfd161d7e672e828e0ec0c4ca"
+    },
+    "calibration_Movies_U1_seed102_cfg07": {
+      "checkpoint_sha256": "1dcf75cf605d0854f4a87ccbe37ca124ebdf12d9153f5d5099bb1181f2f73a34",
+      "prediction_sha256": "7da23055d84755fa083444f4abc1e09fb80727e2b970d85c13222cf44e69c148"
+    },
+    "calibration_Movies_U1_seed102_cfg08": {
+      "checkpoint_sha256": "60f3f1feda85b5af4ad3d3db364ee21a8080d6dffe153eb63f025cdf9c4ce233",
+      "prediction_sha256": "7e03fc2750c71e682a7f392b3c508aaecef163a4bd3950adfa4e01e198a1fe6e"
+    },
+    "calibration_Reddit-S_A0_seed102_cfg00": {
+      "checkpoint_sha256": "c824659bfffba01083e0a3dcf2a5b2eb8d74844402416352d3ac4bc27771f69d",
+      "prediction_sha256": "fc7300d58a4708d3d503f33d91d5751523d20b126859d566ed3628a31abab8e8"
+    },
+    "calibration_Reddit-S_A0_seed102_cfg01": {
+      "checkpoint_sha256": "8fabc115d4ecd4fa09b89e0e33ef61d9f1b2429c10081a15e11be2f768135e0c",
+      "prediction_sha256": "fc7300d58a4708d3d503f33d91d5751523d20b126859d566ed3628a31abab8e8"
+    },
+    "calibration_Reddit-S_A0_seed102_cfg02": {
+      "checkpoint_sha256": "6a07faab41f3d5b19671178d00bc49a34d54d7179e27fef7e66c0bc6e921da10",
+      "prediction_sha256": "fc7300d58a4708d3d503f33d91d5751523d20b126859d566ed3628a31abab8e8"
+    },
+    "calibration_Reddit-S_A0_seed102_cfg03": {
+      "checkpoint_sha256": "7e3e5069f3c9ff54fd54e87c4961154cef08caa3e5d798ea81dba7f486356fed",
+      "prediction_sha256": "1906044ddef3e690c6e8b047c7c3a571805e3ec769587f2971b1af5bb91b0207"
+    },
+    "calibration_Reddit-S_A0_seed102_cfg04": {
+      "checkpoint_sha256": "86b02cd5605498438318d9afaf431b989b1750d302ad145bea428563be172cca",
+      "prediction_sha256": "1906044ddef3e690c6e8b047c7c3a571805e3ec769587f2971b1af5bb91b0207"
+    },
+    "calibration_Reddit-S_A0_seed102_cfg05": {
+      "checkpoint_sha256": "6e30bc66b8bbf3b4edcb755e75f994e3340defb74e624b45d9c895d8eaeccb98",
+      "prediction_sha256": "93da9545d5c896c85424d8d3f9ba78f60b178303878212459059e2dc5d0f6909"
+    },
+    "calibration_Reddit-S_A0_seed102_cfg06": {
+      "checkpoint_sha256": "c4a2baac54de58d29391d8fdcd9d28df192675377150dbaf107f60ebab5f735a",
+      "prediction_sha256": "240b0ef30216b878cacc03eb86b80d2a0cdf2f627000ee22626c0d1a463c6328"
+    },
+    "calibration_Reddit-S_A0_seed102_cfg07": {
+      "checkpoint_sha256": "c24e8cceccff51b436f333200e17c4ef11b00f3ca3922b67899650b97dfcd1b2",
+      "prediction_sha256": "d20bfa245db659fe7068a93607c5b6bf7a10e4a462f6fb6db66eec03add9e76f"
+    },
+    "calibration_Reddit-S_A0_seed102_cfg08": {
+      "checkpoint_sha256": "46f17446d02a558b39a05ad77a5cb10f96529b58bfe29f004a12d3288bacf54e",
+      "prediction_sha256": "61ef145eb6cae3f36e89dddf75913d4e7f71eccf362c9676ef226cac806043c5"
+    },
+    "calibration_Reddit-S_G0_seed102_cfg00": {
+      "checkpoint_sha256": "710715404b6c52ea1daa9afa840b6addd7e966acbc00153630f030bde798cbff",
+      "prediction_sha256": "60a22443ee2663a6420948b2db211cc918be911e3b05525511b9b2afb81fd0e8"
+    },
+    "calibration_Reddit-S_G0_seed102_cfg01": {
+      "checkpoint_sha256": "76a41df05c0d471e9419f01d369d76250581b061402c0f36a059867a2ef8481e",
+      "prediction_sha256": "60a22443ee2663a6420948b2db211cc918be911e3b05525511b9b2afb81fd0e8"
+    },
+    "calibration_Reddit-S_G0_seed102_cfg02": {
+      "checkpoint_sha256": "ebd92dbbf8c3c22ca265164bef46e80658c5cda0089ced76239f9c39ac8f37fc",
+      "prediction_sha256": "60a22443ee2663a6420948b2db211cc918be911e3b05525511b9b2afb81fd0e8"
+    },
+    "calibration_Reddit-S_G0_seed102_cfg03": {
+      "checkpoint_sha256": "edf963acc8dfc178dfb00e4022a6904da4626517a785a6a7f3e8ed62a20999de",
+      "prediction_sha256": "913f6202b96d1d56e7359e77ca687d4e9de6c1db42b422914d1e165e67faacbb"
+    },
+    "calibration_Reddit-S_G0_seed102_cfg04": {
+      "checkpoint_sha256": "739067b6a401cc0d8e400c5d0f111671bc1508dcaf675fe573df7335d5944dbb",
+      "prediction_sha256": "f1318be0dd29f7c921450278e0bda90e9062a71372b0e5303b0c18900b3fc5d0"
+    },
+    "calibration_Reddit-S_G0_seed102_cfg05": {
+      "checkpoint_sha256": "4c7c5072fa574b78371f7cbe7fd123a5951f78c5462ac2e5c09218e79220dcee",
+      "prediction_sha256": "da1aa5b4530efea3d70f7ce370573595f13d77ca7789d969432c87612f9fd548"
+    },
+    "calibration_Reddit-S_G0_seed102_cfg06": {
+      "checkpoint_sha256": "c688144b27cee67487e9e0241b43e25470934c81ed40021ae5dff6d5428380b8",
+      "prediction_sha256": "53f9f6df00b903e955f1272a3dd1e624776708aeac938042741f595142286f65"
+    },
+    "calibration_Reddit-S_G0_seed102_cfg07": {
+      "checkpoint_sha256": "17fd1d5e1f2261796f2171315cda13d619db06e96721598a1fa69fcc43229177",
+      "prediction_sha256": "2905046f9804f92a48a6344308e9541c8113387ec4b4561185fdcedc02803abb"
+    },
+    "calibration_Reddit-S_G0_seed102_cfg08": {
+      "checkpoint_sha256": "1cbb2ea3b6fd730b129d39d1d1f7342804ebb8dece4cbae97fba9386e1580585",
+      "prediction_sha256": "920506d464fb19472c21116c83f2b8786d4cf015f5d0d8d2be18e803566bd159"
+    },
+    "calibration_Reddit-S_G1_seed102_cfg00": {
+      "checkpoint_sha256": "b8f7f066d3bd25bfb99204bcedf0870cdcb704f992d824229e667dfa7a8bb3ac",
+      "prediction_sha256": "26e016078a242c11c2663aabf80f4ab5f6c1d33ee8b22cb5620d717142c444fb"
+    },
+    "calibration_Reddit-S_G1_seed102_cfg01": {
+      "checkpoint_sha256": "67419eb67f52de7c259e667bf36399a2d92321091aa31db0c636f14a54930ef9",
+      "prediction_sha256": "26e016078a242c11c2663aabf80f4ab5f6c1d33ee8b22cb5620d717142c444fb"
+    },
+    "calibration_Reddit-S_G1_seed102_cfg02": {
+      "checkpoint_sha256": "42d7b7d7a054e8302b7f49f5b238e32ac8868fa42c5031b0f1fad7f3217e1f71",
+      "prediction_sha256": "26e016078a242c11c2663aabf80f4ab5f6c1d33ee8b22cb5620d717142c444fb"
+    },
+    "calibration_Reddit-S_G1_seed102_cfg03": {
+      "checkpoint_sha256": "aade7f11435282799f3d5464dbf987cb4057253d2e3582a91ecf28fa01d0cce8",
+      "prediction_sha256": "f389205c265ef0bb169fe5a79adb841775d66a9ee3158ad5a2fbeaf0262031c7"
+    },
+    "calibration_Reddit-S_G1_seed102_cfg04": {
+      "checkpoint_sha256": "6192f23276d2b0b341de817ad88bab1dd3ba4b668b3b137901c392a887770164",
+      "prediction_sha256": "746777890717c3558f122bf73e8decafef8bd3d08c11b355e971d036592e8123"
+    },
+    "calibration_Reddit-S_G1_seed102_cfg05": {
+      "checkpoint_sha256": "d8988f10b0781ce0f584ba0eb849acb8b30227e7a2f11ab94921799e1693e798",
+      "prediction_sha256": "38bbe260e830f3d63515a29158bb5e01759564a36f3b5601fef80cec1a5fa6fb"
+    },
+    "calibration_Reddit-S_G1_seed102_cfg06": {
+      "checkpoint_sha256": "08671b7fb111fec614ec517848d0bf977a824956a940727cab25eac27493f045",
+      "prediction_sha256": "f86e58a41bb1f801ae9e61cb7be047fb431d84fb415f8e3c8a16d83753533a1b"
+    },
+    "calibration_Reddit-S_G1_seed102_cfg07": {
+      "checkpoint_sha256": "050550169f347d128b78ce23d8a0575e7cb029e58cb58c49f5c22a2486d57d5b",
+      "prediction_sha256": "f1518346077556455d01af59ebbc7f8d60257c594ae11e97290ead45766fa074"
+    },
+    "calibration_Reddit-S_G1_seed102_cfg08": {
+      "checkpoint_sha256": "9a41a89e9afe295aa2889565b8944ce79cc1677a84571a3dff765a2db6b43253",
+      "prediction_sha256": "4ee2af2ae51a95f299aa827b7df7ee5137ed32bb3f17fd6f0344884bbb74731c"
+    },
+    "calibration_Reddit-S_U1_seed102_cfg00": {
+      "checkpoint_sha256": "c1ef44c20279d1e85e93d115f99966d529bb91838cfe700f421e72a2aac2c446",
+      "prediction_sha256": "5ec0c1be833366ff273067765a5248937b0b735e21c2630adec66be01027c118"
+    },
+    "calibration_Reddit-S_U1_seed102_cfg01": {
+      "checkpoint_sha256": "effb4f0719ab1a9a66646c12618e1d5f96a0a5d5957275c91b7feefdd09f69a5",
+      "prediction_sha256": "5ec0c1be833366ff273067765a5248937b0b735e21c2630adec66be01027c118"
+    },
+    "calibration_Reddit-S_U1_seed102_cfg02": {
+      "checkpoint_sha256": "668e75ee48b2264180428a37e36e5e8d3a6773c06af8822167ae9f3a4c9efeca",
+      "prediction_sha256": "0800505b1a5b382938973c50ee489d7a521bd36f488af35678e8580b37e4584f"
+    },
+    "calibration_Reddit-S_U1_seed102_cfg03": {
+      "checkpoint_sha256": "1fbe62b2d7d302abb0e6bd0343676358d7331fbf8487f416ed92ff96d3cef87d",
+      "prediction_sha256": "14661e319c8514f9b38edc93870665e26e09e55b27b1a55a066d039fc9d3f8a2"
+    },
+    "calibration_Reddit-S_U1_seed102_cfg04": {
+      "checkpoint_sha256": "63efa18fa30ed8f5da8af7200b48e9139466f05d6bfc4cdfa66803fa1dd26534",
+      "prediction_sha256": "14661e319c8514f9b38edc93870665e26e09e55b27b1a55a066d039fc9d3f8a2"
+    },
+    "calibration_Reddit-S_U1_seed102_cfg05": {
+      "checkpoint_sha256": "a98cfaa07bee1bac96cf83e7653933371119e1cbeb71979fa2ff80342c672898",
+      "prediction_sha256": "14661e319c8514f9b38edc93870665e26e09e55b27b1a55a066d039fc9d3f8a2"
+    },
+    "calibration_Reddit-S_U1_seed102_cfg06": {
+      "checkpoint_sha256": "560f830cb5f3b26b371f259d1423ae7400131f0301df5da3caa4c6ed9b128480",
+      "prediction_sha256": "8b0ad19b6b9714d5702828f03f44a653498426cc8d6bd6e8d974e03aca15b97f"
+    },
+    "calibration_Reddit-S_U1_seed102_cfg07": {
+      "checkpoint_sha256": "0eb8dcc3853e225616d1402bbf8b4f1401be2f50e1dcbb0d70806a6f48a09715",
+      "prediction_sha256": "a4048443ceaceaf5e5b1fa93df92a516126f969355dfd21742640058c3999d5c"
+    },
+    "calibration_Reddit-S_U1_seed102_cfg08": {
+      "checkpoint_sha256": "de3385b3dd0f533a15aac85e3da25b862d66ea4ba6a1d357f7cbe96ed210067e",
+      "prediction_sha256": "0aaa3979c79838336df3100b73e9d9469e859529164b86ecce5ec20f8d9754df"
+    },
+    "confirmation_Grocery_A0_seed103_cfg07": {
+      "checkpoint_sha256": "1b903b363836ef593a382e73acc5745303e1e6a01db297400ff9189183e11a26",
+      "prediction_sha256": "3b1d30551a501d2ab2e1bc5e0e078d8e38eca26bc0609d001efff29d104860c7"
+    },
+    "confirmation_Grocery_A0_seed104_cfg07": {
+      "checkpoint_sha256": "23affeccedd87732e9bc45e9d56cf837559394be08a6b393b6de187e801e3a34",
+      "prediction_sha256": "18be3ff4ef6c9c83cef139a25abd430c1c6c199a088302e7497d1f9c3989697f"
+    },
+    "confirmation_Grocery_A0_seed105_cfg07": {
+      "checkpoint_sha256": "f219f28f94affc03d28517387ccfdff8ca3bc3e8d847f6a94db8fa05ec174d5d",
+      "prediction_sha256": "8aff52998cc0a437212eb505c910d599c13910535c4f4ac25ff56ca1564c07e3"
+    },
+    "confirmation_Grocery_G0_seed103_cfg08": {
+      "checkpoint_sha256": "b6b22b57d2e41cd52fd3e1a832ddbd4051453d968e06881711fd05a9bc2e1ab3",
+      "prediction_sha256": "ba6bd5cf55b97bb553d6a350dd5734689a6b77e5bc29d6ff856b7bcbefd7c67c"
+    },
+    "confirmation_Grocery_G0_seed104_cfg08": {
+      "checkpoint_sha256": "589d9e406fec83048d60ae0e9cd8e9df9b83cf17cc5eb36e46053ff4ae13a815",
+      "prediction_sha256": "6a17705cdf62a2ba80518f790f8d67d671155d1f28aca808ac9961503b0d8805"
+    },
+    "confirmation_Grocery_G0_seed105_cfg08": {
+      "checkpoint_sha256": "b5e303b272f3a8e3ac6ca3aaa394894174183e73113d1c1159ad38d957b32858",
+      "prediction_sha256": "eaa8f283800468b9b1ac7ba2b8c5fdfbe9e26a858c3ec3c33560aa739bf65906"
+    },
+    "confirmation_Grocery_G1_seed103_cfg06": {
+      "checkpoint_sha256": "9944d9142bd0636812d3fb3577b90ec11f41cd8420873d7774a5aa9dce03e0d8",
+      "prediction_sha256": "8861341bb0890380b490ad64dcbaf08de3424a5803eebc400c8857925a315387"
+    },
+    "confirmation_Grocery_G1_seed104_cfg06": {
+      "checkpoint_sha256": "cd2c8420f8ca5029d8b2289620247448c8ad84f74cb2d7c6e9228d1a63f68b60",
+      "prediction_sha256": "4743530c066e04dd8a49eec4a5943aa44468a14dec18489d42f5f6098875facd"
+    },
+    "confirmation_Grocery_G1_seed105_cfg06": {
+      "checkpoint_sha256": "582b1d07a260a294949dbd0fa9a3a5348c69b81b2bcb73dc4b8fd1a2084c1fef",
+      "prediction_sha256": "6e0c537d5eeca9f1dc4a6dcf9fde4d5ed57ce00db79e51aab518dcd0bbc11dae"
+    },
+    "confirmation_Grocery_U1_seed103_cfg08": {
+      "checkpoint_sha256": "368193126aed770e8029e1e77ce40feaedb6e6054d49905460a24f9a05bfb3d2",
+      "prediction_sha256": "f4e88dd0c8ec056999df4b7487bb404d7b8b6021b4d9b12e6ac52affba8ceb30"
+    },
+    "confirmation_Grocery_U1_seed104_cfg08": {
+      "checkpoint_sha256": "0bbb1672cba32d54df5048cbbdd8f80c0c6ab3fc247f0f560366318f548ab417",
+      "prediction_sha256": "183bb07f988e95b7d692c76e06ae69e849744caece21ba0430b94d533caa122e"
+    },
+    "confirmation_Grocery_U1_seed105_cfg08": {
+      "checkpoint_sha256": "9f843d0370c3ee288bf84547d82577030933e0b913f1cdd1ed8bd9d6bc67532e",
+      "prediction_sha256": "0ad861d0d62def08bd5805bb5a2a3e186ceefeec764b8284ea824021f1d1a2d0"
+    },
+    "confirmation_Movies_A0_seed103_cfg06": {
+      "checkpoint_sha256": "d93864c8cb31fb016ec059f4d241c0512c42a6e406c64660a90a60c5592b91fc",
+      "prediction_sha256": "9378f564fa5e0716551be3e1623b7bcb0ebe7ba30ddb12f4c9c24d8ca810fa93"
+    },
+    "confirmation_Movies_A0_seed104_cfg06": {
+      "checkpoint_sha256": "b0ea48a8f0d6965796e20decd1e3c0e67267d7df5b8ac974c6ddaed4788d0f49",
+      "prediction_sha256": "a8be44660b1490eed5add566aeef106d85c868e4038b4beafd581e2c1dc37e0b"
+    },
+    "confirmation_Movies_A0_seed105_cfg06": {
+      "checkpoint_sha256": "b8d7564594c30f0ad9aa6bd2a0263b6d15787f5297888a440a65ce904e287294",
+      "prediction_sha256": "bf755b15a267b9028775257fba95ac69c9f7f4af1ac22db008ea4d284503f5f0"
+    },
+    "confirmation_Movies_G0_seed103_cfg05": {
+      "checkpoint_sha256": "c6a25063f2dbf603a6fa9a2d8ceb8e2360b6bcbe1efa28743dadb763d67c6125",
+      "prediction_sha256": "b184a9d8d65f61125e830520c7a30bb384cd184ecb02430c1d3fd18c0ac97d6e"
+    },
+    "confirmation_Movies_G0_seed104_cfg05": {
+      "checkpoint_sha256": "cce20a9160e017e152f33d76d9701c12d03de8f0c79a7e62de84d4eae9ea0a78",
+      "prediction_sha256": "e7681329e48497f3b5977d862fda9763620b21aa213617cf3ed4cdc2cf18ebae"
+    },
+    "confirmation_Movies_G0_seed105_cfg05": {
+      "checkpoint_sha256": "8e81d46461d8c8f8cf35d7f3b9350bc901ea183f637bba70c7afbd0966817a8e",
+      "prediction_sha256": "18f44c856ccb5e2260e9fd9b701941ab1e9846f29c7b188ea34bc5362346bc21"
+    },
+    "confirmation_Movies_G1_seed103_cfg06": {
+      "checkpoint_sha256": "f13bbe4960c016c0ea162685cc25f56069d15d518d5ab17b08a090d34e44bc34",
+      "prediction_sha256": "acb97e3661f058ca1d49d0b231ba85b9b4d06550169a298bba557dc9431eae16"
+    },
+    "confirmation_Movies_G1_seed104_cfg06": {
+      "checkpoint_sha256": "f3c91d7d8a4171e4c62c8f454b2f4008806a4fdb5d21a2d8030aaa5efd2593f0",
+      "prediction_sha256": "74326706c193e1f3b29ae604ad3a0fe8984cb729f3200077c654e6adea4cd266"
+    },
+    "confirmation_Movies_G1_seed105_cfg06": {
+      "checkpoint_sha256": "a4d24550ae966017f31a899585100f9b2c62e371dfebb412892b7b0d157bba8a",
+      "prediction_sha256": "30e40c90316c71bf2c92bdd5a46e42b4adcf623266313b5ca6aee670e8856af8"
+    },
+    "confirmation_Movies_U1_seed103_cfg08": {
+      "checkpoint_sha256": "068d8dbb155de9a849449265e54bd0492c38a0469aee7d926185940237fe1198",
+      "prediction_sha256": "839c3363496901b368242db18432b64cd8397b1e115527022736c49f5d923bd5"
+    },
+    "confirmation_Movies_U1_seed104_cfg08": {
+      "checkpoint_sha256": "16b397b895169ee82e646f32b7f0433fadce54432aaca1917060d56d5a1b263d",
+      "prediction_sha256": "088e08fbbf46a9eedf742b9aed1032d01f817c5cc942f08d36d2c865e7ec96b7"
+    },
+    "confirmation_Movies_U1_seed105_cfg08": {
+      "checkpoint_sha256": "5d1cb4e172f03e48bcff3774623639a00e0a884bdc2d91bd25cbe6f9907c18a6",
+      "prediction_sha256": "524e947fe83260758c93e02843627d047f6d91276b31dca7995477cbc6491929"
+    },
+    "confirmation_Reddit-S_A0_seed103_cfg00": {
+      "checkpoint_sha256": "90c2dd063bcc81e2d67291c62e375fe58725c78e00ac0b5be6fa467408e67a36",
+      "prediction_sha256": "855aa202e5e2a5307d9130745164a2c858770420ac25d4abeb97dabcb490c3ca"
+    },
+    "confirmation_Reddit-S_A0_seed104_cfg00": {
+      "checkpoint_sha256": "a104fafc60550b5675422de91febb370dc42c2b4cc21b62dfc444aa8f44b7b3e",
+      "prediction_sha256": "8b03287e9b6400bb76db157f1af481341bc2f673d73b180a43496df8d43e0f6f"
+    },
+    "confirmation_Reddit-S_A0_seed105_cfg00": {
+      "checkpoint_sha256": "1698de8f6b817aca5ec3cb053579788c3a90d5429637cd347705158f633f4906",
+      "prediction_sha256": "1da6b5b692ae6b135da8e66fee021554b04408af9f9cd24abc8a240142b869db"
+    },
+    "confirmation_Reddit-S_G0_seed103_cfg08": {
+      "checkpoint_sha256": "09ab64a2f45a7500a1ce3abe38b9db1882aee01f6bea5626c52abc41b1062774",
+      "prediction_sha256": "b1418409ff5cf2de835cd3aa0c9e22624a42cb4577dcf07d84235b145a4ea309"
+    },
+    "confirmation_Reddit-S_G0_seed104_cfg08": {
+      "checkpoint_sha256": "5af4dc9da3a42418bcb79aac8db43a354f7bd391eda24227068c612ea40ff5f7",
+      "prediction_sha256": "58d3154f3f0d1146da77f066eee14fcb356dc60e062e857bdba35cfc557fa862"
+    },
+    "confirmation_Reddit-S_G0_seed105_cfg08": {
+      "checkpoint_sha256": "2d03c56b60580ca80c956158c0199b73a296fb0348d51f51294be8d05b78bc62",
+      "prediction_sha256": "227a46e4d56577575ad9aaf2a1d621e379ebee925ac4c2cf8d62c83db67e60fc"
+    },
+    "confirmation_Reddit-S_G1_seed103_cfg07": {
+      "checkpoint_sha256": "6f8afa9c15e7ff268c8761b7135eb0c6d7758f3f5cd64f5d66fa34fdaea33ff3",
+      "prediction_sha256": "18f740217ca41477519f88ca55a4aa3d80b9163d52b133f709768489ba20b223"
+    },
+    "confirmation_Reddit-S_G1_seed104_cfg07": {
+      "checkpoint_sha256": "96eaf1e10e2fcc099268a1df5cbb19ee049c0413baac77b3db79fd57fe3fbf03",
+      "prediction_sha256": "bf35938e17d8dc7c9d5d09fd175bd7277260ed9b47f3d7a05085e720e520ae9b"
+    },
+    "confirmation_Reddit-S_G1_seed105_cfg07": {
+      "checkpoint_sha256": "8941dc28e176828056aee76080d15641ac96de64d27aa536a17a3b2333f636d6",
+      "prediction_sha256": "0fe4cd9360300f55ff3aae77bb3867b6c22f864b5de1fbb2d71fc471ca6933ad"
+    },
+    "confirmation_Reddit-S_U1_seed103_cfg07": {
+      "checkpoint_sha256": "b4961d30d26c79a4c66f3c042a2336841935cb41bbc7df4d657e47b65be6ec92",
+      "prediction_sha256": "76f4959fe4e6f7c37c4cd6769080abad0d76fefaa1ef913095a0c169a39b180e"
+    },
+    "confirmation_Reddit-S_U1_seed104_cfg07": {
+      "checkpoint_sha256": "c723d7c74116260734ea632969914addd3fc5a2f1d3ccff5af11f8da9362779b",
+      "prediction_sha256": "1a75159e9fba59b02904a0143b8c965946aea697689d20467fc969fa88c9f592"
+    },
+    "confirmation_Reddit-S_U1_seed105_cfg07": {
+      "checkpoint_sha256": "c747631a37b5e15e766678d8955ce62dbb7ca83981f9a14b3f9a9e532bd64b13",
+      "prediction_sha256": "a4a16a6de3c68469eff6e6e23a9d747afcca2cca21aa6f01e9f0b781c93aa5a4"
+    }
+  },
+  "study": "mvcge_private_nc_v1",
+  "successful_runs": 144,
+  "task_branch": "codex/mag-mvcge-private-nc-v1",
+  "training_source_commit": "d8d4e45b2d511363defea256e1796b48fd5ae3d2"
+}
