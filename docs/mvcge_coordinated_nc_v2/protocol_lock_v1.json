@@ -1,0 +1,80 @@
+{
+  "assertions": {
+    "calibration_cells": 162,
+    "confirmation_cells": 54,
+    "dataset_count": 3,
+    "real_lp_runs": 0,
+    "test_evaluations": 0,
+    "total_cells": 216
+  },
+  "created_utc": "2026-10-08T07:18:49.386261+00:00",
+  "dataset_input_hashes": {
+    "Grocery": {
+      "graph": "af203035d655275a20da353f481e67f4b595eeb73ef1d397d0d9b603cefc70d7",
+      "image_features": "ac50f63312488f3e94271532e7fd863c27a332c6ca8a4b9cc801afb9ce0b2470",
+      "nc_split": "3ca4581592fcb705b42672b18412375d33bf6109c72e4714786066878a54d58e",
+      "text_features": "b67ab7600b842807b53805e31b9d969d860e9c48b1a56f76799d44367f33c516"
+    },
+    "Movies": {
+      "graph": "f6798e6951f29b1d76aa7938684f44d502600c31f3a5987722f5bc450511700f",
+      "image_features": "c422191f1a7cdc85598f00b52e0f60a02f65d6a48548e9c42a8530b3e572dfeb",
+      "nc_split": "9089d5eb1d5a3edeae46bd9296e4f85815fccf8e489452bc87a2126a88546211",
+      "text_features": "38cc09ef3192eac8a022303fd48a9954bea9c3064078846aa5d2db31e137eece"
+    },
+    "Reddit-S": {
+      "graph": "06af9e010df31f5a6537afa5c96f5cbdb9687b5722c1a1acc80d094bd216309b",
+      "image_features": "936191dcf3c06e367674cfedd2e80fd87e3120485a9f45acb8ff48e7b3bad58b",
+      "nc_split": "2154e82ef061de9d3c018aa19674ea6e2220953f272bedebb1559396e43750a5",
+      "text_features": "da41d78a8b65902ee902295949da437228d7b6d6de303a748f6c324072d65abd"
+    }
+  },
+  "matrix_sha256": "0de5fede6027aba0ee2678c9124b2a300c47fa4026057e95ba93a7bb6c5d101d",
+  "model_spec_sha256": "fe3ca57f2f2d63ee3d737f98e969e893f29a1f67276d714d3dd8f2e84e43027e",
+  "protocol_sha256": "7e8a04f73c697729da27af59d520bf1227be4bee9ecb81573924330d8f7d6e56",
+  "source_hashes": {
+    "configs/config.yaml": "1b06934c68b88e931909de4cb65b1fa51725df94ff6139d127a6ba85355fe399",
+    "configs/dataset/Grocery.yaml": "18969c97a0f06ab33fd3094624d524f03de48139405159bb06d19cf107105e56",
+    "configs/dataset/Movies.yaml": "81b803b0ed79ad86d483aee5dceadac149ca9ba2263e31160b22951a7812f5c8",
+    "configs/dataset/Reddit-S.yaml": "010129b2a4b7de2969286de9a74108a7cd08a481feaac067dc5cae62db36246a",
+    "configs/model/mag_collab_adapt.yaml": "5e4ef8260bf7ed5ed3aa7ccfc6adf84738030e7bf678e2bfbcd212b1d6ead7b8",
+    "configs/model/mvcge_coordinated_nc_v2.yaml": "2165c4223ceb6f4414f573d080eb4c51087945f0d499e9ad0d4dd387863073d5",
+    "configs/task/nc.yaml": "f959a73d5256d2e51b2ce3600c4f7252e7d79122c267aa70dc84abeddedb3852",
+    "docs/mvcge_coordinated_nc_v2/matrix.json": "0de5fede6027aba0ee2678c9124b2a300c47fa4026057e95ba93a7bb6c5d101d",
+    "docs/mvcge_coordinated_nc_v2/model_spec.md": "fe3ca57f2f2d63ee3d737f98e969e893f29a1f67276d714d3dd8f2e84e43027e",
+    "docs/mvcge_coordinated_nc_v2/protocol.md": "7e8a04f73c697729da27af59d520bf1227be4bee9ecb81573924330d8f7d6e56",
+    "scripts/audit_mvcge_coordinated_nc_v2.py": "f90117f64da77a461bbb42df83d7c8e010a4ddeb4c720d88558887cc478751c8",
+    "scripts/report_mvcge_coordinated_nc_v2.py": "6a1f68f915f89f8c21a7598d85bba28e16acfe01dd579518aaa5cc728810ed73",
+    "scripts/run_mvcge_coordinated_nc_v2.py": "f404e82aafd441a1e84354febef1204400da384ef4702977f42215d6ce6f4355",
+    "src/data/__init__.py": "732a246f7862812c798d32cd42da38c23c8f72c41f7e6b5f2213fdb457aa285d",
+    "src/data/graph_utils.py": "8fa1c35c1897e25f2f30628ddc0312598fe9e581692a48cccb131a12a50f10df",
+    "src/data/loaders.py": "08fe47584069a8f690d87d20a2b892d008c43a1dad6bdb3d08bb2f7e22ddd173",
+    "src/data/splits.py": "b352a1c558752cc82075e7405723d42a408cb416386ad412669f0339aacd1d22",
+    "src/data/types.py": "531968f22725acc211d5906c66bf0189d35857cbbdb972d12ee4ebdd29d3d2f8",
+    "src/models/factory.py": "018ed8270319dc179831e598673f89550dca7473d322daf6c14654f9fb9bea0b",
+    "src/models/mag_collab_adapt.py": "298a59191cb044761941c348d4528ad06df0e208176fd3e449b06c1b9e26bf73",
+    "src/models/mvcge_coordinated_nc_v2.py": "b8f66912820f140c6b501adc6702e835d58f8ee3f100a3bef478fbbf54620fc6",
+    "src/models/predictor.py": "4d173246fb2418dd7728c9853283070d901b7e57fdd2cdcebaf05d0563f5b21b",
+    "src/tasks/collab_nc_pilot.py": "31d96b6419bcede97d6ad769669d0b6ff9c4bb34afe420ed4537a8a36a50c9b4",
+    "src/tasks/mvcge_coordinated_nc_v2.py": "435d5e0951828fd9c422a5f34ec8c2305abc6a3f34ec35b3c7bc4e6222ebbfa5",
+    "src/tasks/prior_context_pilot.py": "1add0aecb7934c9695bda2645c30979cc10840749d091a383fd6cac09996191e",
+    "tests/test_mvcge_coordinated_nc_v2.py": "8851d360871a3b48057d09b159f5acaad8f70bb7200609c6c227afe9ffed2746"
+  },
+  "starting_head": "deb15363debd7260234964861446ec0d06938b11",
+  "study": "mvcge_coordinated_nc_v2",
+  "train_validation_split_hashes": {
+    "Grocery": {
+      "train_ids": "78a7ffae928464c7ea90fc9e25f97c5ab26bab855121a5cbf5aedd47cb7bda78",
+      "validation_ids": "cb95fb79d273739e1e38037edddc536481294c23c471ae26987851ae38966d22"
+    },
+    "Movies": {
+      "train_ids": "260d595d024da09e8a1b6180c1a28ec4dc1991bace34dcc4c880813da14746e1",
+      "validation_ids": "c875f204548401feffe16b7ef2b8dbe40ef6c2e45b15abbbc2cea7d8fa078c75"
+    },
+    "Reddit-S": {
+      "train_ids": "6a1281bfdcbb32c3c9b353e2aa1b1e6521a26a1cd4fef69cc0baaf140347ae44",
+      "validation_ids": "8bbd32a9eaf05b1173bd827e1f10ec46ec347123c4ef9e93d79635fdfc24a7fa"
+    }
+  },
+  "training_source_commit": "d1da4bbcfd6e660d4b4adef274eb2f5d524549b9",
+  "training_source_tree": "efbe87261bf807e6e26f81cdfe4f711a151989c5"
+}

@@ -37,3 +37,11 @@ Include selected LR/WD, best updates, budget-hit counts, train-validation gaps, 
 ## Git delivery
 
 Freeze this protocol, model spec, matrix, source/tests/config hashes, input hashes, and split hashes before formal runs; commit that source package first. Commit only explicit v2 source, tests, configs, docs, and concise reports. Never stage output arrays, checkpoints, raw predictions, step logs, dataset files, credentials, or original user workspace edits. Push the authorized branch without force, verify the remote branch SHA, then stop for review.
+
+## Protocol amendment 2: gradient diagnostic aggregation
+
+The original pretraining lock is preserved as `protocol_lock_v1.json` (SHA-256 `9f8b01c4e746b0a4e73f77e9717e044d6e24144697c50c78ee8923a61bafba5b`). Calibration completed and passed its 162-cell prediction audit under that lock; the immutable 18-recipe selection lock and its choices are retained unchanged.
+
+During the first confirmation pass, all 36 M0/M1/P0/P1 attempts completed their training loop and reached best-checkpoint reporting, then failed when the router gradient comparison concatenated only non-`None` gradients. The two objective gradients can use different parameter subsets, so omitting those slots produced vectors of unequal lengths. A0/N0 are unaffected. The amended implementation inserts zero tensors for unused slots while preserving parameter order, and a regression test covers this case. This is a diagnostic-only correction: it does not change model forwards, losses, optimizer steps, random-number use, data, split IDs, or the locked selection recipes.
+
+The failed first attempts remain in the ignored run registry and output directory. Retry only those 36 routed confirmation slots under the amended source and protocol lock. Retain the 18 successful A0/N0 confirmation records from the original lock. The confirmation audit must accept these two explicit lineages and verify each result and checkpoint against its matching lock; no other historical source version is permitted. Record both commits and lock hashes in the concise final report and manifest.

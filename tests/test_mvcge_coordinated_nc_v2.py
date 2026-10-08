@@ -8,6 +8,7 @@ import torch.nn.functional as F
 from omegaconf import OmegaConf
 
 from scripts.run_mvcge_coordinated_nc_v2 import (
+    _grad_pair,
     _restore_rng,
     _save_resume,
     build_modules,
@@ -346,6 +347,17 @@ def test_diagnostics_leave_rng_gradients_and_model_mode_unchanged_and_vjp_sums()
     assert model.training and head.training
     assert diag["clean_routing"] and diag["noisy_routing"]
     assert all(parameter.grad is None for parameter in list(model.parameters()) + list(head.parameters()))
+
+
+def test_grad_pair_zero_fills_unused_parameter_slots_before_comparison():
+    left = (torch.tensor([3.0, 4.0]), None, torch.tensor([1.0]))
+    right = (torch.tensor([0.0, 0.0]), torch.tensor([2.0, 5.0]), None)
+    result = _grad_pair(left, right)
+    assert result["left_norm"] == pytest.approx(26.0**0.5)
+    assert result["right_norm"] == pytest.approx(29.0**0.5)
+    assert result["cosine"] == pytest.approx(0.0)
+    assert result["norm_ratio"] == pytest.approx((29.0 / 26.0) ** 0.5)
+    assert _grad_pair((None, None), (None, None))["cosine"] is None
 
 
 def test_best_checkpoint_replay_and_exact_rng_resume_state(tmp_path):

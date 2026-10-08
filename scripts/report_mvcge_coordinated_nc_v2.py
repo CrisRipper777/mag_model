@@ -46,6 +46,7 @@ def build_report() -> None:
     registry = _read_json(REPORT / "run_registry.json")["attempts"]
     selection = _read_json(REPORT / "selection_lock.json")["selections"]
     profile = _read_json(REPORT / "data_profile.json")
+    protocol_lock = _read_json(ROOT / "docs" / "mvcge_coordinated_nc_v2" / "protocol_lock.json")
     results = [row for row in registry.values() if row.get("status") == "success"]
     confirmation = [row for row in results if row["phase"] == "confirmation"]
     calibration = [row for row in results if row["phase"] == "calibration"]
@@ -163,7 +164,10 @@ def build_report() -> None:
         "primary_confirmation": primary_rows, "paired_differences": paired, "descriptive_auxiliary_by_PC_interaction": interactions,
         "resource_summary_confirmation": resource, "all_classes_macro_f1": True, "macro_f1_zero_division": 0,
         "test_evaluations": 0, "real_lp_runs": 0, "additional_datasets": 0,
-        "source_commit": confirmation[0]["source_commit"],
+        "source_commit": protocol_lock["training_source_commit"],
+        "source_commits_present_in_audited_results": sorted({row["source_commit"] for row in confirmation}),
+        "implementation_versions": audit.get("implementation_versions", []),
+        "protocol_amendment": protocol_lock.get("amendment"),
     }
     write_json(REPORT / "summary.json", summary)
     write_json(REPORT / "paired_differences.json", {"comparisons": paired, "descriptive_interactions": interactions})
@@ -171,6 +175,9 @@ def build_report() -> None:
     lines = [
         "# Coordinated graph experts: results", "",
         f"The frozen matrix completed {len(calibration)} calibration and {len(confirmation)} confirmation cells ({len(results)} total). Results below use only confirmation seeds 113-115; calibration performance is reported separately in `summary.csv` and the selection lock.",
+        "", "## Protocol amendment and implementation provenance", "",
+        "Calibration and its 18-entry selection lock were completed under `protocol_lock_v1.json`. The first confirmation pass completed all training updates, but 36 routed-model cells could not finalize because the gradient summary omitted unused parameter slots before comparing vectors. The 18 A0/N0 cells were unaffected and remain under the original lock. The diagnostic now fills unused slots with zeros in parameter order; the 36 routed cells were rerun as retained retry attempts under the amended lock. The amendment changes diagnostic aggregation only; model computation, losses, optimizer updates, seeds, data, splits, and selected recipes are unchanged.",
+        "", "The audit records each successful cell's source commit and lock hash in `audit_result.json`; `protocol_lock_v1.json` preserves the original frozen provenance. The final 54-cell confirmation set therefore has 18 valid v1 records and 36 v2 retry records.",
         "", "Validation is the repeatedly used development split, not an independent benchmark. Differences are descriptive across three seeds; no significance, generalization, or causal claim is made.",
         "", "## Confirmation results", "",
         "Acc and macro-F1 are mean ± population SD over the three training seeds. Train means describe fit only.",
@@ -204,8 +211,8 @@ def build_report() -> None:
     review = [
         "# Implementer review", "", "## Checks completed", "",
         "- Calibration: all 162 required cells succeeded; fixed-grid selection rules were applied after prediction recomputation.",
-        "- Confirmation: all 54 required cells succeeded using the immutable 18-entry selection lock.",
-        "- Audit: train/validation predictions, metrics, confusions, IDs, source and protocol hashes, output files, and runtime test/LP counters were checked.",
+        "- Confirmation: all 54 required cells succeeded using the immutable 18-entry selection lock; 36 routed cells were retried under a diagnostic-only protocol amendment after the initial attempts failed in result finalization.",
+        "- Audit: train/validation predictions, metrics, confusions, IDs, both permitted source/protocol lineages, output files, and runtime test/LP counters were checked.",
         "- No test evaluator, real LP workload, or dataset expansion was run.",
         "", "## Items requiring reviewer attention", "",
         "- Validation is repeatedly used during development and checkpoint selection; it is not independent test evidence.",
@@ -222,6 +229,8 @@ def build_report() -> None:
     manifest = {
         "study": "mvcge_coordinated_nc_v2", "created_utc": datetime.now(timezone.utc).isoformat(),
         "training_source_commit": summary["source_commit"], "protocol_lock_sha256": hashlib.sha256((ROOT / "docs" / "mvcge_coordinated_nc_v2" / "protocol_lock.json").read_bytes()).hexdigest(),
+        "source_commits_present_in_audited_results": summary["source_commits_present_in_audited_results"],
+        "implementation_versions": audit.get("implementation_versions", []),
         "calibration_audit_sha256": hashlib.sha256((REPORT / "calibration_audit.json").read_bytes()).hexdigest(),
         "confirmation_audit_sha256": hashlib.sha256((REPORT / "audit_result.json").read_bytes()).hexdigest(),
         "summary_csv_sha256": hashlib.sha256(summary_path.read_bytes()).hexdigest(),

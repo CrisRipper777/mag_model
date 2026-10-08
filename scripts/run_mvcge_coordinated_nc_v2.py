@@ -388,6 +388,18 @@ def freeze_protocol() -> None:
         "train_validation_split_hashes": {name: item["train_validation_id_hashes"] for name, item in data_profile["datasets"].items()},
         "assertions": {"calibration_cells": 162, "confirmation_cells": 54, "total_cells": 216, "test_evaluations": 0, "real_lp_runs": 0, "dataset_count": 3},
     }
+    previous_lock_path = DOC_ROOT / "protocol_lock_v1.json"
+    if previous_lock_path.is_file():
+        lock["amendment"] = {
+            "revision": 2,
+            "supersedes_protocol_lock": previous_lock_path.name,
+            "supersedes_protocol_lock_sha256": sha256_file(previous_lock_path),
+            "calibration_selection_lock_sha256": sha256_file(REPORT_ROOT / "selection_lock.json"),
+            "calibration_audit_sha256": sha256_file(REPORT_ROOT / "calibration_audit.json"),
+            "change_scope": "diagnostic gradient-vector aggregation only; no model, forward, loss, optimizer, data, split, or calibration-selection changes",
+            "initial_confirmation_attempts": {"successful_unaffected_A0_N0": 18, "failed_routed_diagnostic_aggregation": 36},
+            "rerun_policy": "preserve the original failed attempts and retry the 36 routed confirmation slots under this source revision",
+        }
     write_json(LOCK_PATH, lock)
     print(f"Protocol lock written: {LOCK_PATH}")
 
@@ -531,8 +543,22 @@ def _grad_norm(grads) -> torch.Tensor:
 
 
 def _grad_pair(left, right) -> dict[str, Any]:
-    a = torch.cat([g.detach().float().reshape(-1) for g in left if g is not None]) if any(g is not None for g in left) else torch.empty((0,))
-    b = torch.cat([g.detach().float().reshape(-1) for g in right if g is not None]) if any(g is not None for g in right) else torch.empty((0,))
+    if len(left) != len(right):
+        raise ValueError(f"gradient tuples must align by parameter: {len(left)} != {len(right)}")
+    aligned_left, aligned_right = [], []
+    for grad_left, grad_right in zip(left, right):
+        if grad_left is None and grad_right is None:
+            continue
+        reference = grad_left if grad_left is not None else grad_right
+        assert reference is not None
+        if grad_left is not None and grad_left.shape != reference.shape:
+            raise ValueError("left gradient shape differs for the same parameter")
+        if grad_right is not None and grad_right.shape != reference.shape:
+            raise ValueError("right gradient shape differs for the same parameter")
+        aligned_left.append((torch.zeros_like(reference) if grad_left is None else grad_left).detach().float().reshape(-1))
+        aligned_right.append((torch.zeros_like(reference) if grad_right is None else grad_right).detach().float().reshape(-1))
+    a = torch.cat(aligned_left) if aligned_left else torch.empty((0,))
+    b = torch.cat(aligned_right) if aligned_right else torch.empty((0,))
     if a.numel() == 0 or b.numel() == 0:
         return {"left_norm": float(_grad_norm(left)), "right_norm": float(_grad_norm(right)), "norm_ratio": None, "cosine": None}
     an, bn = a.norm(), b.norm()

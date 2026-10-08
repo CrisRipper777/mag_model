@@ -47,7 +47,7 @@ def _compare_metric(observed: float, recorded: float, name: str, tolerance: floa
         raise AssertionError(f"{name} differs: saved predictions={observed}, run result={recorded}, tolerance={tolerance}")
 
 
-def _audit_predictions(result: dict[str, Any], data_profile: dict[str, Any], source_lock: dict[str, Any]) -> dict[str, Any]:
+def _audit_predictions(result: dict[str, Any], data_profile: dict[str, Any], source_lock: dict[str, Any], protocol_lock_sha256: str) -> dict[str, Any]:
     dataset, model = result["dataset"], result["model"]
     classes = int(data_profile["datasets"][dataset]["num_classes"])
     for split, metric_key in (("train", "train"), ("validation", "validation")):
@@ -81,7 +81,7 @@ def _audit_predictions(result: dict[str, Any], data_profile: dict[str, Any], sou
         raise AssertionError(f"dynamic evaluator counters missing for {result['attempt_id']}")
     if result.get("source_hashes") != source_lock["source_hashes"]:
         raise AssertionError(f"source hash map differs from protocol lock for {result['attempt_id']}")
-    if result.get("protocol_lock_sha256") != sha256_file(ROOT / "docs" / STUDY / "protocol_lock.json"):
+    if result.get("protocol_lock_sha256") != protocol_lock_sha256:
         raise AssertionError(f"protocol lock hash differs for {result['attempt_id']}")
     output_dir = Path(result["output_dir"])
     prediction = Path(result["prediction_file"])
@@ -133,7 +133,14 @@ def audit(phase: str) -> None:
     registry_path = REPORT_ROOT / "run_registry.json"
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     data_profile = json.loads((REPORT_ROOT / "data_profile.json").read_text(encoding="utf-8"))
-    source_lock = json.loads((ROOT / "docs" / STUDY / "protocol_lock.json").read_text(encoding="utf-8"))
+    current_lock_path = ROOT / "docs" / STUDY / "protocol_lock.json"
+    current_lock = json.loads(current_lock_path.read_text(encoding="utf-8"))
+    protocol_versions = {sha256_file(current_lock_path): current_lock}
+    prior_lock = None
+    prior_lock_path = ROOT / "docs" / STUDY / "protocol_lock_v1.json"
+    if prior_lock_path.is_file():
+        prior_lock = json.loads(prior_lock_path.read_text(encoding="utf-8"))
+        protocol_versions[sha256_file(prior_lock_path)] = prior_lock
     expected = _configured_expected(phase)
     results = []
     missing, unsuccessful = [], []
@@ -152,7 +159,26 @@ def audit(phase: str) -> None:
         partial = {"study": STUDY, "phase": phase, "status": "incomplete", "expected": len(expected), "successful": len(results), "missing": missing, "unsuccessful": unsuccessful, "checked_utc": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()}
         write_json(REPORT_ROOT / ("calibration_audit.json" if phase == "calibration" else "audit_result.json"), partial)
         raise RuntimeError(f"cannot pass {phase} audit: {len(results)}/{len(expected)} successful, {len(missing)} missing, {len(unsuccessful)} unsuccessful")
-    audited = [_audit_predictions(result, data_profile, source_lock) for result in results]
+    result_versions = {}
+    for result in results:
+        lock_sha = result.get("protocol_lock_sha256")
+        source_lock = protocol_versions.get(lock_sha)
+        if source_lock is None or result.get("source_hashes") != source_lock.get("source_hashes"):
+            raise AssertionError(f"no matching frozen source/protocol version for {result['attempt_id']}")
+        if lock_sha != sha256_file(current_lock_path):
+            permitted_historical = (
+                phase == "confirmation"
+                and result.get("model") in {"A0", "N0"}
+                and prior_lock is not None
+                and source_lock.get("training_source_commit") == prior_lock.get("training_source_commit")
+            )
+            if not permitted_historical:
+                raise AssertionError(f"historical protocol version is not permitted for {result['attempt_id']}")
+        result_versions[result["attempt_id"]] = lock_sha
+    audited = [
+        _audit_predictions(result, data_profile, protocol_versions[result_versions[result["attempt_id"]]], result_versions[result["attempt_id"]])
+        for result in results
+    ]
     if len({row["attempt_id"] for row in audited}) != len(expected):
         raise AssertionError("duplicate/omitted attempts in audit selection")
     common = {
@@ -204,6 +230,18 @@ def audit(phase: str) -> None:
         common["confirmation_success_cells"] = 54
         common["total_success_cells"] = 216
         common["confirmation_configuration_lock_verified"] = True
+        version_summary = {}
+        for result in results:
+            lock_sha = result_versions[result["attempt_id"]]
+            version_summary.setdefault(lock_sha, {"protocol_lock_sha256": lock_sha, "source_commit": result["source_commit"], "cells": 0, "models": set()})
+            version_summary[lock_sha]["cells"] += 1
+            version_summary[lock_sha]["models"].add(result["model"])
+        common["implementation_versions"] = [
+            {**value, "models": sorted(value["models"])}
+            for _, value in sorted(version_summary.items())
+        ]
+        if current_lock.get("amendment"):
+            common["protocol_amendment"] = current_lock["amendment"]
         write_json(REPORT_ROOT / "audit_result.json", common)
     print(f"{phase} audit passed: {len(results)} cells, {len(audited) * 2} prediction sets recomputed")
 
