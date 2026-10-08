@@ -123,10 +123,15 @@ def _result_with_arrays(run: dict[str, Any]) -> dict[str, Any]:
     return value
 
 
-def _configured_expected(phase: str) -> list[tuple[str, str, int, int | None]]:
+def _configured_expected(phase: str, selection: dict[str, Any] | None = None) -> list[tuple[str, str, int, int | None]]:
     if phase == "calibration":
         return [(dataset, model, CALIBRATION_SEED, index) for dataset in DATASETS for model in MODELS for index in range(9)]
-    return [(dataset, model, seed, None) for dataset in DATASETS for model in MODELS for seed in CONFIRMATION_SEEDS]
+    if selection is None:
+        selection = json.loads(SELECTION_PATH.read_text(encoding="utf-8"))["selections"]
+    return [
+        (dataset, model, seed, int(selection[f"{dataset}/{model}"]["config_index"]))
+        for dataset in DATASETS for model in MODELS for seed in CONFIRMATION_SEEDS
+    ]
 
 
 def audit(phase: str) -> None:
@@ -135,13 +140,19 @@ def audit(phase: str) -> None:
     data_profile = json.loads((REPORT_ROOT / "data_profile.json").read_text(encoding="utf-8"))
     current_lock_path = ROOT / "docs" / STUDY / "protocol_lock.json"
     current_lock = json.loads(current_lock_path.read_text(encoding="utf-8"))
-    protocol_versions = {sha256_file(current_lock_path): current_lock}
-    prior_lock = None
-    prior_lock_path = ROOT / "docs" / STUDY / "protocol_lock_v1.json"
-    if prior_lock_path.is_file():
-        prior_lock = json.loads(prior_lock_path.read_text(encoding="utf-8"))
-        protocol_versions[sha256_file(prior_lock_path)] = prior_lock
-    expected = _configured_expected(phase)
+    current_lock_sha = sha256_file(current_lock_path)
+    protocol_versions = {current_lock_sha: current_lock}
+    protocol_names = {current_lock_sha: current_lock_path.name}
+    for prior_lock_path in sorted((ROOT / "docs" / STUDY).glob("protocol_lock_v*.json")):
+        prior_hash = sha256_file(prior_lock_path)
+        protocol_versions[prior_hash] = json.loads(prior_lock_path.read_text(encoding="utf-8"))
+        protocol_names[prior_hash] = prior_lock_path.name
+    selection = None
+    if phase == "confirmation":
+        if not SELECTION_PATH.is_file():
+            raise FileNotFoundError("confirmation audit requires the immutable calibration selection lock")
+        selection = json.loads(SELECTION_PATH.read_text(encoding="utf-8"))
+    expected = _configured_expected(phase, None if selection is None else selection["selections"])
     results = []
     missing, unsuccessful = [], []
     for dataset, model, seed, config in expected:
@@ -165,12 +176,13 @@ def audit(phase: str) -> None:
         source_lock = protocol_versions.get(lock_sha)
         if source_lock is None or result.get("source_hashes") != source_lock.get("source_hashes"):
             raise AssertionError(f"no matching frozen source/protocol version for {result['attempt_id']}")
-        if lock_sha != sha256_file(current_lock_path):
-            permitted_historical = (
-                phase == "confirmation"
-                and result.get("model") in {"A0", "N0"}
-                and prior_lock is not None
-                and source_lock.get("training_source_commit") == prior_lock.get("training_source_commit")
+        if result.get("source_commit") != source_lock.get("training_source_commit"):
+            raise AssertionError(f"source commit differs from its frozen protocol lock for {result['attempt_id']}")
+        if lock_sha != current_lock_sha:
+            lock_name = protocol_names[lock_sha]
+            permitted_historical = phase == "confirmation" and (
+                (lock_name == "protocol_lock_v1.json" and result.get("model") in {"A0", "N0"})
+                or (lock_name == "protocol_lock_v3.json" and result.get("model") in {"M0", "M1", "P0", "P1"})
             )
             if not permitted_historical:
                 raise AssertionError(f"historical protocol version is not permitted for {result['attempt_id']}")
@@ -213,9 +225,6 @@ def audit(phase: str) -> None:
         selection_lock["calibration_audit_sha256"] = sha256_file(REPORT_ROOT / "calibration_audit.json")
         write_json(SELECTION_PATH, selection_lock)
     else:
-        if not SELECTION_PATH.is_file():
-            raise FileNotFoundError("confirmation audit requires the immutable calibration selection lock")
-        selection = json.loads(SELECTION_PATH.read_text(encoding="utf-8"))
         for run in results:
             key = f"{run['dataset']}/{run['model']}"
             picked = selection["selections"][key]
@@ -233,7 +242,7 @@ def audit(phase: str) -> None:
         version_summary = {}
         for result in results:
             lock_sha = result_versions[result["attempt_id"]]
-            version_summary.setdefault(lock_sha, {"protocol_lock_sha256": lock_sha, "source_commit": result["source_commit"], "cells": 0, "models": set()})
+            version_summary.setdefault(lock_sha, {"protocol_lock_file": protocol_names[lock_sha], "protocol_lock_sha256": lock_sha, "source_commit": result["source_commit"], "cells": 0, "models": set()})
             version_summary[lock_sha]["cells"] += 1
             version_summary[lock_sha]["models"].add(result["model"])
         common["implementation_versions"] = [

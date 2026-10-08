@@ -7,6 +7,7 @@ import torch
 import torch.nn.functional as F
 from omegaconf import OmegaConf
 
+from scripts.audit_mvcge_coordinated_nc_v2 import _configured_expected
 from scripts.run_mvcge_coordinated_nc_v2 import (
     _grad_pair,
     _next_retry_id,
@@ -365,6 +366,15 @@ def test_retry_id_sequence_ignores_base_attempt_and_preserves_existing_retries()
     base = "confirmation_Movies_M0_seed113_cfg01"
     assert _next_retry_id({base: {}, base + "_retry1": {}, base + "_retry3": {}}, base) == base + "_retry4"
     assert _next_retry_id({base: {}}, base) == base + "_retry1"
+
+
+def test_confirmation_audit_slots_use_the_locked_config_indices():
+    selection = {f"{dataset}/{model}": {"config_index": index} for dataset in ("Movies", "Grocery", "Reddit-S") for model, index in zip(("A0", "N0", "M0", "M1", "P0", "P1"), range(6))}
+    expected = _configured_expected("confirmation", selection)
+    assert len(expected) == 54
+    assert expected[0] == ("Movies", "A0", 113, 0)
+    assert expected[6] == ("Movies", "M0", 113, 2)
+    assert expected[-1] == ("Reddit-S", "P1", 115, 5)
 
 
 def test_best_checkpoint_replay_and_exact_rng_resume_state(tmp_path):

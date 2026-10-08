@@ -389,22 +389,35 @@ def freeze_protocol() -> None:
         "assertions": {"calibration_cells": 162, "confirmation_cells": 54, "total_cells": 216, "test_evaluations": 0, "real_lp_runs": 0, "dataset_count": 3},
     }
     baseline_lock_path = DOC_ROOT / "protocol_lock_v1.json"
-    previous_lock_path = DOC_ROOT / "protocol_lock_v2.json" if (DOC_ROOT / "protocol_lock_v2.json").is_file() else baseline_lock_path
+    history_paths = sorted(DOC_ROOT.glob("protocol_lock_v*.json"), key=lambda path: int(path.stem.rsplit("_v", 1)[-1]))
+    previous_lock_path = history_paths[-1] if history_paths else baseline_lock_path
     if previous_lock_path.is_file():
         previous_lock = json.loads(previous_lock_path.read_text(encoding="utf-8"))
+        revision = int(previous_lock.get("amendment", {}).get("revision", 1)) + 1
+        if revision >= 4:
+            change_scope = "confirmation audit expected-slot resolution and historical source/protocol verification only; no training, model, data, split, or selection changes"
+            lineage = {"protocol_lock_v1_A0_N0": 18, "protocol_lock_v3_routed_models": 36}
+            rerun_policy = "do not rerun training; audit the completed confirmation attempts against their exact source and protocol lock versions"
+            superseded_audit = {"status": "incomplete", "reason": "audit expected IDs omitted each selected config index and resolved not_started placeholders", "training_attempts_changed": 0}
+        else:
+            change_scope = "diagnostic gradient-vector aggregation and retry-attempt ID dispatch only; no model, forward, loss, optimizer, data, split, or calibration-selection changes"
+            lineage = {"successful_unaffected_A0_N0": 18, "failed_routed_diagnostic_aggregation": 36}
+            rerun_policy = "preserve the original failed attempts and retry the 36 routed confirmation slots under this source revision"
+            superseded_audit = None
         lock["amendment"] = {
-            "revision": int(previous_lock.get("amendment", {}).get("revision", 1)) + 1,
+            "revision": revision,
             "supersedes_protocol_lock": previous_lock_path.name,
             "supersedes_protocol_lock_sha256": sha256_file(previous_lock_path),
             "baseline_protocol_lock": baseline_lock_path.name,
             "baseline_protocol_lock_sha256": sha256_file(baseline_lock_path),
             "calibration_selection_lock_sha256": sha256_file(REPORT_ROOT / "selection_lock.json"),
             "calibration_audit_sha256": sha256_file(REPORT_ROOT / "calibration_audit.json"),
-            "change_scope": "diagnostic gradient-vector aggregation and retry-attempt ID dispatch only; no model, forward, loss, optimizer, data, split, or calibration-selection changes",
-            "initial_confirmation_attempts": {"successful_unaffected_A0_N0": 18, "failed_routed_diagnostic_aggregation": 36},
-            "superseded_retry_dispatch": {"protocol_lock": "protocol_lock_v2.json", "training_attempts_started": 0, "reason": "base attempt IDs were parsed as retry suffixes; failure occurred before model construction"},
-            "rerun_policy": "preserve the original failed attempts and retry the 36 routed confirmation slots under this source revision",
+            "change_scope": change_scope,
+            "prior_confirmation_lineage": lineage,
+            "rerun_policy": rerun_policy,
         }
+        if superseded_audit is not None:
+            lock["amendment"]["superseded_audit_invocation"] = superseded_audit
     write_json(LOCK_PATH, lock)
     print(f"Protocol lock written: {LOCK_PATH}")
 
